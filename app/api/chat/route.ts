@@ -1,26 +1,18 @@
 import { NextResponse } from 'next/server';
 
 export async function POST(req: Request) {
-  const apiKey = process.env.GOOGLE_API_KEY;
-
-  if (!apiKey) {
-    return NextResponse.json({ error: 'Configuration Error: API Key missing' }, { status: 500 });
-  }
+  
+  // ⚠️ PASTE AICI CHEIA TA REALA INTRE GHILIMELE ⚠️
+  // Sterge AIza...Exemplu si pune cheia ta lunga care incepe cu AIza
+  const apiKey = "AIzaSyA6Iq8BpZCSLDTY00J9zZ3b8NCIV-I9GQo"; 
 
   try {
     const { message } = await req.json();
 
     const systemPrompt = `
     Ești Mihai Daniel AI.
-    
-    TON:
-    - "Tati, ascultă...", "Nu e joc de noroc".
-    - Direct, educativ, fără "păsărească" inutilă.
-    
-    REGULI:
-    - Nu dai sfaturi financiare, ci educaționale.
-    - Dacă userul cere ponturi, trimite-l la Curs.
-    - Răspunde scurt și la obiect.
+    Stil: "Tati, ascultă...", "Nu e joc de noroc", "Matematică pură".
+    Fii scurt, direct și educativ.
     `;
 
     const response = await fetch(
@@ -39,8 +31,9 @@ export async function POST(req: Request) {
 
     if (!response.ok) {
       const errorText = await response.text();
-      console.error("❌ Google API Error:", errorText);
-      throw new Error(`Google API refused connection: ${response.status}`);
+      // Aici vedem exact eroarea de la Google in Logs daca nu merge
+      console.error("❌ Google Error:", errorText);
+      throw new Error(`Google Error: ${errorText}`);
     }
 
     const data = await response.json();
@@ -49,10 +42,10 @@ export async function POST(req: Request) {
     return NextResponse.json({ response: aiResponse });
 
   } catch (error: any) {
-    console.error("❌ SERVER ERROR:", error);
+    console.error("SERVER ERROR:", error.message);
+    // Returnam eroarea exacta pe ecran ca sa stim ce are
     return NextResponse.json({ 
-        error: "Server Error",
-        response: "Tati, am o mică eroare de conexiune cu Google. Mai încearcă o dată." 
+        response: `Eroare detaliată: ${error.message}` 
     }, { status: 500 });
   }
 }
