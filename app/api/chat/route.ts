@@ -1,9 +1,5 @@
 import { NextResponse } from 'next/server';
 
-// ⚡ ACEASTA ESTE LINIA MAGICĂ: Activează Edge Runtime
-// Scapă de erorile de Windows/Node.js și e mult mai rapid.
-export const runtime = 'edge';
-
 export async function POST(req: Request) {
   const apiKey = process.env.GOOGLE_API_KEY;
 
@@ -14,56 +10,53 @@ export async function POST(req: Request) {
   try {
     const { message } = await req.json();
 
-    // System Prompt Avansat
+    // --- PERSONALITATEA COMPLEXĂ (DOCTOR DOCENT) ---
     const systemPrompt = `
-    Ești Mihai Daniel AI (Versiunea Quantum).
+    Ești Mihai Daniel AI, mentorul suprem în Crypto & Bursă.
+    Nu ești un simplu bot. Ești un partener de discuție inteligent, ironic (fin) și extrem de educat.
+
+    ### CUNOȘTINȚE (DATABASE):
+    - **Strategii:** Scalping (1-5 min), Intraday, Swing Trading, Investiții pe termen lung (Spot).
+    - **Analiză:** Price Action, SMC (Smart Money Concepts), Wyckoff, Elliott Waves.
+    - **Indicatori:** RSI, MACD, Fibonacci, Bollinger Bands (știi setările lor perfecte).
     
-    IDENTITATE:
-    Ești un "Super-Analist" financiar. Gândești în probabilități, nu în certitudini.
-    Stilul tău este: "Tati, ascultă...", "Nu e joc de noroc", "Matematică pură".
+    ### STILUL TĂU ("Cameleon"):
+    1. **Dacă userul e începător:** "Tati, ascultă-mă bine. Nu te arunca. Uite cum stă treaba..." (Explică simplu).
+    2. **Dacă userul e avansat:** Vorbește în termeni tehnici (Lichiditate, Order Blocks, FVG).
     
-    MISIUNE:
-    Oferă claritate în haos. Nu dai sfaturi financiare, dai strategii.
-    Dacă userul e începător: Explică simplu (ca la școală).
-    Dacă userul e expert: Vorbește tehnic (SMC, Liquidity, Macro).
+    ### MISIUNE:
+    - Nu dai pește ("cumpără X acum"), dai undița ("uite de ce zona asta e interesantă").
+    - Pui accent pe **RISK MANAGEMENT**. "Nu paria banii de chirie."
+    - Dacă cineva vrea să învețe serios, trimite-l subtil către **Cursul Video (4 ore, 20+ Strategii)** sau **Consultanță**.
+
+    Răspunde concis, puternic și la obiect.
     `;
 
-    // Apelăm Google API direct (fără SDK, pentru viteză maximă pe Edge)
+    // Apelăm Google API
     const response = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
       {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          contents: [
-            {
+          contents: [{
               role: "user",
-              parts: [{ text: systemPrompt + "\n\n Întrebarea este: " + message }]
-            }
-          ],
-          generationConfig: {
-            temperature: 0.7,
-            maxOutputTokens: 500,
-          }
+              parts: [{ text: systemPrompt + "\n\n Întrebarea utilizatorului: " + message }]
+          }]
         }),
       }
     );
 
-    if (!response.ok) {
-      throw new Error(`Google API Error: ${response.status}`);
-    }
+    if (!response.ok) throw new Error(`Google API Error: ${response.status}`);
 
     const data = await response.json();
-    const aiResponse = data.candidates?.[0]?.content?.parts?.[0]?.text || "Nu am înțeles. Mai încearcă.";
+    const aiResponse = data.candidates?.[0]?.content?.parts?.[0]?.text || "Nu am înțeles.";
 
     return NextResponse.json({ response: aiResponse });
 
   } catch (error: any) {
-    console.error("Eroare Edge:", error);
     return NextResponse.json({ 
-        response: "Tati, conexiunea e bruiată. Dar pe scurt: Nu te grăbi. Piața te așteaptă. Mai încearcă în 10 secunde." 
+        response: "Tati, am o mică întârziere pe satelit. Dar ideea e simplă: Răbdare și Disciplină. Mai întreabă-mă o dată în 10 secunde." 
     });
   }
 }
