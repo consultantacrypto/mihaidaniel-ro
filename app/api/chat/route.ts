@@ -4,35 +4,21 @@ export async function POST(req: Request) {
   const apiKey = process.env.GOOGLE_API_KEY;
 
   if (!apiKey) {
-    return NextResponse.json({ response: 'Eroare: Cheia API lipsește.' }, { status: 500 });
+    console.error("❌ API KEY MISSING IN VERCEL");
+    return NextResponse.json({ error: 'Configuration Error: API Key missing' }, { status: 500 });
   }
 
   try {
     const { message } = await req.json();
 
-    // --- PERSONALITATEA COMPLEXĂ (DOCTOR DOCENT) ---
     const systemPrompt = `
-    Ești Mihai Daniel AI, mentorul suprem în Crypto & Bursă.
-    Nu ești un simplu bot. Ești un partener de discuție inteligent, ironic (fin) și extrem de educat.
-
-    ### CUNOȘTINȚE (DATABASE):
-    - **Strategii:** Scalping (1-5 min), Intraday, Swing Trading, Investiții pe termen lung (Spot).
-    - **Analiză:** Price Action, SMC (Smart Money Concepts), Wyckoff, Elliott Waves.
-    - **Indicatori:** RSI, MACD, Fibonacci, Bollinger Bands (știi setările lor perfecte).
-    
-    ### STILUL TĂU ("Cameleon"):
-    1. **Dacă userul e începător:** "Tati, ascultă-mă bine. Nu te arunca. Uite cum stă treaba..." (Explică simplu).
-    2. **Dacă userul e avansat:** Vorbește în termeni tehnici (Lichiditate, Order Blocks, FVG).
-    
-    ### MISIUNE:
-    - Nu dai pește ("cumpără X acum"), dai undița ("uite de ce zona asta e interesantă").
-    - Pui accent pe **RISK MANAGEMENT**. "Nu paria banii de chirie."
-    - Dacă cineva vrea să învețe serios, trimite-l subtil către **Cursul Video (4 ore, 20+ Strategii)** sau **Consultanță**.
-
-    Răspunde concis, puternic și la obiect.
+    Ești Mihai Daniel AI.
+    Stil: "Tati, ascultă...", "Nu e joc de noroc".
+    Fii scurt, direct și educativ.
+    Nu da sfaturi financiare, ci educaționale.
     `;
 
-    // Apelăm Google API
+    // Apelăm endpoint-ul Google
     const response = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
       {
@@ -41,22 +27,32 @@ export async function POST(req: Request) {
         body: JSON.stringify({
           contents: [{
               role: "user",
-              parts: [{ text: systemPrompt + "\n\n Întrebarea utilizatorului: " + message }]
+              parts: [{ text: systemPrompt + "\n\n Întrebarea: " + message }]
           }]
         }),
       }
     );
 
-    if (!response.ok) throw new Error(`Google API Error: ${response.status}`);
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error("❌ Google API Error:", errorText);
+      throw new Error(`Google API refused connection: ${response.status}`);
+    }
 
     const data = await response.json();
-    const aiResponse = data.candidates?.[0]?.content?.parts?.[0]?.text || "Nu am înțeles.";
+    const aiResponse = data.candidates?.[0]?.content?.parts?.[0]?.text;
+
+    if (!aiResponse) {
+        throw new Error("No response content from Google");
+    }
 
     return NextResponse.json({ response: aiResponse });
 
   } catch (error: any) {
+    console.error("❌ SERVER ERROR:", error);
     return NextResponse.json({ 
-        response: "Tati, am o mică întârziere pe satelit. Dar ideea e simplă: Răbdare și Disciplină. Mai întreabă-mă o dată în 10 secunde." 
-    });
+        error: "Server Error",
+        response: "Tati, am o mică eroare de conexiune. Mai încearcă o dată." 
+    }, { status: 500 });
   }
 }

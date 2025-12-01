@@ -1,25 +1,29 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { Send, Loader2, Sparkles, Activity, Shield, Zap, TrendingUp, BrainCircuit } from 'lucide-react';
+import { Send, Loader2, Activity, Shield, Zap, TrendingUp, Sparkles, BrainCircuit, Terminal } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function AiTerminal() {
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState<{ role: 'user' | 'ai'; text: string }[]>([
-    { role: 'ai', text: 'Salut! Sunt Mihai Daniel Intelligence 🟢.\n\nNu paria. Investește informat.\nCe analizăm astăzi?' }
+    { role: 'ai', text: 'Salutare! Sunt Mihai Daniel Intelligence 🟢.\n\nNu paria. Investește informat.\nCe analizăm astăzi?' }
   ]);
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const [hasInteracted, setHasInteracted] = useState(false); // Fix pentru scroll la inceput
 
-  // Scroll fin la mesaje noi
+  // FIX: Scroll doar dacă userul a început să scrie, NU la încărcarea site-ului
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
+    if (hasInteracted && messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [messages, hasInteracted]);
 
   const handleSend = async (text: string) => {
     if (!text.trim() || isLoading) return;
 
+    setHasInteracted(true); // Acum activăm scroll-ul automat
     const userMessage = text;
     setInput('');
     setMessages(prev => [...prev, { role: 'user', text: userMessage }]);
@@ -33,9 +37,12 @@ export default function AiTerminal() {
       });
 
       const data = await response.json();
+      
+      if (!response.ok) throw new Error(data.error || 'Network error');
+      
       setMessages(prev => [...prev, { role: 'ai', text: data.response }]);
     } catch (error) {
-      setMessages(prev => [...prev, { role: 'ai', text: '⚠️ Tati, verifică netul.' }]);
+      setMessages(prev => [...prev, { role: 'ai', text: '⚠️ Tati, a apărut o eroare tehnică. Mai încearcă o dată.' }]);
     } finally {
       setIsLoading(false);
     }
@@ -49,20 +56,20 @@ export default function AiTerminal() {
         <div className="container mx-auto px-4 md:px-6 relative z-10">
             
             <div className="text-center mb-12">
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-300 text-xs font-bold tracking-widest mb-4 uppercase">
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-300 text-xs font-bold tracking-widest mb-4 uppercase shadow-lg shadow-blue-500/20">
                     <Activity size={14} className="animate-pulse"/> Neural Network v2.0
                 </div>
                 <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-                    Mihai Daniel <span className="text-blue-500">AI CORE</span>
+                    Mihai Daniel <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">AI CORE</span>
                 </h2>
                 <p className="text-gray-400 text-lg max-w-2xl mx-auto font-light">
                     Sistem neural antrenat pe strategiile mele.
                 </p>
             </div>
 
-            <div className="max-w-6xl mx-auto bg-[#0a0f1e] border border-white/10 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row h-[700px]">
+            <div className="max-w-6xl mx-auto bg-[#0a0f1e] border border-white/10 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row h-[700px] ring-1 ring-white/5">
                 
-                {/* LEFT PANEL */}
+                {/* LEFT PANEL - STATIC */}
                 <div className="w-full md:w-[320px] bg-[#050810] border-r border-white/5 p-6 flex flex-col shrink-0">
                     <div className="relative w-40 h-40 mx-auto mb-6 rounded-full border-2 border-blue-500/20 p-1 group">
                         <div className="absolute inset-0 rounded-full border border-blue-500/30 animate-spin-slow"></div>
@@ -91,8 +98,8 @@ export default function AiTerminal() {
                         </div>
                     </div>
 
-                    {/* Messages */}
-                    <div className="flex-1 p-6 overflow-y-auto space-y-4 scrollbar-thin scrollbar-thumb-blue-900/30">
+                    {/* Messages Area - FIX SCROLL JUMPING */}
+                    <div className="flex-1 p-6 overflow-y-auto space-y-4 scrollbar-thin scrollbar-thumb-blue-900/30 scrollbar-track-transparent !overflow-anchor-none">
                         <AnimatePresence>
                         {messages.map((msg, idx) => (
                             <motion.div 
@@ -124,7 +131,7 @@ export default function AiTerminal() {
                         <div ref={messagesEndRef} />
                     </div>
 
-                    {/* Input */}
+                    {/* Input Area */}
                     <div className="p-4 border-t border-white/5 bg-[#0a0f1e] z-20">
                         <div className="flex gap-2 relative">
                             <input 
