@@ -6,15 +6,21 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 export default function AiTerminal() {
   const [input, setInput] = useState('');
-  // Mesajul initial de intampinare
   const [messages, setMessages] = useState<{ role: 'user' | 'ai'; text: string }[]>([
     { role: 'ai', text: 'Salutare! Sunt Mihai Daniel Intelligence 🟢.\n\nSunt conectat la piață. Nu paria, investește informat.\n\nCe analizăm astăzi?' }
   ]);
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const isFirstRender = useRef(true); // Ref pentru a detecta prima încărcare
 
-  // FIX SCROLL: Scroll doar cand apar mesaje NOI (nu la incarcarea paginii)
+  // FIX SCROLL: Scroll doar când apar mesaje NOI, ignorând prima randare
   useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return; // Nu facem scroll la prima încărcare
+    }
+    
+    // Scroll fin doar dacă userul a interacționat deja
     if (messages.length > 1) {
       messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
     }
@@ -102,7 +108,7 @@ export default function AiTerminal() {
                         </div>
                     </div>
 
-                    {/* Messages Area - FIX SCROLL JUMPING */}
+                    {/* Messages Area */}
                     <div className="flex-1 p-6 overflow-y-auto space-y-4 scrollbar-thin scrollbar-thumb-blue-900/30 scrollbar-track-transparent">
                         <AnimatePresence>
                         {messages.map((msg, idx) => (
@@ -132,7 +138,8 @@ export default function AiTerminal() {
                                 </div>
                             </div>
                         )}
-                        <div ref={messagesEndRef} />
+                        {/* AICI ESTE PUNCTUL DE SCROLL */}
+                        <div ref={messagesEndRef} className="h-1" />
                     </div>
 
                     {/* Input Area */}
