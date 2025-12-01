@@ -7,24 +7,17 @@ import { motion, AnimatePresence } from 'framer-motion';
 export default function AiTerminal() {
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState<{ role: 'user' | 'ai'; text: string }[]>([
-    { role: 'ai', text: 'Salutare! Sunt Mihai Daniel Intelligence 🟢.\n\nSunt conectat la piață. Nu paria, investește informat.\n\nCe analizăm astăzi?' }
+    { role: 'ai', text: 'Salutare! Sunt Mihai Daniel Intelligence 🟢.\n\nSunt conectat. Nu paria, investește informat.\n\nCe analizăm astăzi?' }
   ]);
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const isFirstRender = useRef(true); // Ref pentru a detecta prima încărcare
 
-  // FIX SCROLL: Scroll doar când apar mesaje NOI, ignorând prima randare
+  // FIX SCROLL: Scroll fin DOAR când se adaugă un mesaj nou, nu când scrii
   useEffect(() => {
-    if (isFirstRender.current) {
-      isFirstRender.current = false;
-      return; // Nu facem scroll la prima încărcare
-    }
-    
-    // Scroll fin doar dacă userul a interacționat deja
     if (messages.length > 1) {
-      messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+      messagesEndRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
-  }, [messages]);
+  }, [messages.length]); // Dependința e doar lungimea array-ului, nu input-ul
 
   const handleSend = async (text: string) => {
     if (!text.trim() || isLoading) return;
@@ -42,15 +35,9 @@ export default function AiTerminal() {
       });
 
       const data = await response.json();
-      
-      if (!response.ok) {
-        throw new Error(data.error || 'Eroare la server');
-      }
-
       setMessages(prev => [...prev, { role: 'ai', text: data.response }]);
     } catch (error) {
-      console.error("AI Error:", error);
-      setMessages(prev => [...prev, { role: 'ai', text: '⚠️ Tati, verifică setările API Key în Vercel (Settings -> Environment Variables).' }]);
+      setMessages(prev => [...prev, { role: 'ai', text: '⚠️ Eroare de conexiune. Verifică netul.' }]);
     } finally {
       setIsLoading(false);
     }
@@ -58,7 +45,6 @@ export default function AiTerminal() {
 
   return (
     <section id="ai" className="py-24 relative bg-[#020617] overflow-hidden min-h-[900px] flex items-center">
-        {/* Background Fix - Static */}
         <div className="absolute inset-0 bg-[#020617] z-0"></div>
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
 
@@ -76,7 +62,6 @@ export default function AiTerminal() {
                 </p>
             </div>
 
-            {/* INTERFACE CONTAINER */}
             <div className="max-w-6xl mx-auto bg-[#0a0f1e] border border-white/10 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row h-[700px] ring-1 ring-white/5">
                 
                 {/* LEFT PANEL */}
@@ -108,8 +93,8 @@ export default function AiTerminal() {
                         </div>
                     </div>
 
-                    {/* Messages Area */}
-                    <div className="flex-1 p-6 overflow-y-auto space-y-4 scrollbar-thin scrollbar-thumb-blue-900/30 scrollbar-track-transparent">
+                    {/* Messages Area - CSS FIX PENTRU SARITURA */}
+                    <div className="flex-1 p-6 overflow-y-auto space-y-4 scrollbar-thin scrollbar-thumb-blue-900/30 scrollbar-track-transparent" style={{ overflowAnchor: 'none' }}>
                         <AnimatePresence>
                         {messages.map((msg, idx) => (
                             <motion.div 
@@ -138,7 +123,6 @@ export default function AiTerminal() {
                                 </div>
                             </div>
                         )}
-                        {/* AICI ESTE PUNCTUL DE SCROLL */}
                         <div ref={messagesEndRef} className="h-1" />
                     </div>
 
