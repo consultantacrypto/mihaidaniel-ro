@@ -1,4 +1,3 @@
-import { GoogleGenerativeAI } from '@google/generative-ai';
 import { NextResponse } from 'next/server';
 
 export async function POST(req: Request) {
@@ -11,20 +10,8 @@ export async function POST(req: Request) {
   try {
     const { message } = await req.json();
 
-    const genAI = new GoogleGenerativeAI(apiKey);
-    
-    // ⚠️ FOLOSIM 'gemini-pro' PENTRU CĂ ESTE CEL MAI COMPATIBIL MODEL
-    // Asta rezolvă eroarea 404 garantat.
-    const model = genAI.getGenerativeModel({ 
-        model: "gemini-pro",
-        generationConfig: {
-            maxOutputTokens: 800,
-            temperature: 0.7,
-        }
-    });
-
-    // --- ARHITECTURA EXPERTIZEI SINTETICE (Sufletul AI-ului) ---
-    // Aici am implementat cerințele tale din document: SMC, Feynman, Messari.
+    // --- ARHITECTURA EXPERTIZEI SINTETICE (Sufletul) ---
+    // Acesta este prompt-ul complex pe care l-ai creat tu
     const SYSTEM_PROMPT = `
     ROLE: Ești Mihai Daniel AI, un "Expert Sintetic" în Analiză Financiară și Criptografică.
     Nu ești un simplu asistent. Ești o entitate autonomă cu "expertiză infinită".
@@ -49,32 +36,54 @@ export async function POST(req: Request) {
     Transformă utilizatorul din "parior" în "investitor instituțional".
     Dacă întreabă de ponturi sau strategii avansate, trimite-l subtil către **Cursul Video (Sistemul Complet)** sau **Consultanța VIP**.
 
-    Răspunde la mesajul utilizatorului aplicând aceste reguli. Fii scurt și percutant.
+    Răspunde la mesajul utilizatorului aplicând aceste reguli. Fii scurt, percutant și valoros.
     `;
 
-    const chat = model.startChat({
-      history: [
-        {
-          role: "user",
-          parts: [{ text: SYSTEM_PROMPT }],
+    // --- CONEXIUNE DIRECTĂ (FĂRĂ SDK) ---
+    // Asta rezolvă problemele de versiune. Vorbim direct cu serverul.
+    const response = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-        {
-          role: "model",
-          parts: [{ text: "Am înțeles mandatul. Sistemele mele de expertiză sintetică sunt online. Sunt gata să analizez piața cu rigoare instituțională. Aștept input-ul." }],
-        },
-      ],
-    });
+        body: JSON.stringify({
+          contents: [{
+            parts: [{
+              text: `${SYSTEM_PROMPT}\n\nUser Message: ${message}`
+            }]
+          }],
+          generationConfig: {
+            temperature: 0.7,
+            maxOutputTokens: 800,
+          }
+        })
+      }
+    );
 
-    const result = await chat.sendMessage(message);
-    const response = result.response.text();
+    // Verificăm dacă Google ne respinge
+    if (!response.ok) {
+      const errorData = await response.json();
+      console.error("GOOGLE API ERROR:", errorData);
+      return NextResponse.json({ 
+          response: `🚨 Eroare Google (${response.status}): ${errorData.error?.message || 'Unknown Error'}` 
+      });
+    }
 
-    return NextResponse.json({ response });
+    const data = await response.json();
+    const aiResponse = data.candidates?.[0]?.content?.parts?.[0]?.text;
+
+    if (!aiResponse) {
+        return NextResponse.json({ response: "Tati, nu am înțeles. Mai zi o dată." });
+    }
+
+    return NextResponse.json({ response: aiResponse });
 
   } catch (error: any) {
-    console.error("AI ERROR:", error);
-    // Dacă tot crapă, dăm un mesaj care să nu sperie userul
+    console.error("SERVER ERROR:", error);
     return NextResponse.json({ 
-        response: `Tati, serverele Google sunt aglomerate acum. Dar sfatul meu rămâne: Răbdare și Disciplină. Mai întreabă-mă o dată în 10 secunde.` 
+        response: `💥 Eroare de Server: ${error.message}` 
     });
   }
 }
