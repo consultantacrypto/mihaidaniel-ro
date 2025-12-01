@@ -7,23 +7,19 @@ import { motion, AnimatePresence } from 'framer-motion';
 export default function AiTerminal() {
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState<{ role: 'user' | 'ai'; text: string }[]>([
-    { role: 'ai', text: 'Salutare! Sunt Mihai Daniel Intelligence 🟢.\n\nNu paria. Investește informat.\nCe analizăm astăzi?' }
+    { role: 'ai', text: 'Salutare! Sunt Mihai Daniel Intelligence 🟢.\n\nSunt conectat la piață. Nu paria, investește informat.\n\nCe analizăm astăzi?' }
   ]);
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const [hasInteracted, setHasInteracted] = useState(false); // Fix pentru scroll la inceput
 
-  // FIX: Scroll doar dacă userul a început să scrie, NU la încărcarea site-ului
+  // FIX SCROLL: Doar cand lista de mesaje se lungeste
   useEffect(() => {
-    if (hasInteracted && messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [messages, hasInteracted]);
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
 
   const handleSend = async (text: string) => {
     if (!text.trim() || isLoading) return;
 
-    setHasInteracted(true); // Acum activăm scroll-ul automat
     const userMessage = text;
     setInput('');
     setMessages(prev => [...prev, { role: 'user', text: userMessage }]);
@@ -38,11 +34,15 @@ export default function AiTerminal() {
 
       const data = await response.json();
       
-      if (!response.ok) throw new Error(data.error || 'Network error');
-      
+      // Verificam daca serverul a dat eroare
+      if (!response.ok) {
+        throw new Error(data.error || 'Eroare necunoscuta');
+      }
+
       setMessages(prev => [...prev, { role: 'ai', text: data.response }]);
     } catch (error) {
-      setMessages(prev => [...prev, { role: 'ai', text: '⚠️ Tati, a apărut o eroare tehnică. Mai încearcă o dată.' }]);
+      console.error("AI Error:", error);
+      setMessages(prev => [...prev, { role: 'ai', text: '⚠️ Tati, verifică setările API Key în Vercel.' }]);
     } finally {
       setIsLoading(false);
     }
@@ -50,8 +50,9 @@ export default function AiTerminal() {
 
   return (
     <section id="ai" className="py-24 relative bg-[#020617] overflow-hidden min-h-[900px] flex items-center">
-        <div className="absolute inset-0 bg-[#020617]"></div>
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+        {/* Background Fix - Static pentru a nu cauza reflow */}
+        <div className="absolute inset-0 bg-[#020617] z-0"></div>
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
             
@@ -67,6 +68,7 @@ export default function AiTerminal() {
                 </p>
             </div>
 
+            {/* INTERFACE CONTAINER - FIXED HEIGHT */}
             <div className="max-w-6xl mx-auto bg-[#0a0f1e] border border-white/10 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row h-[700px] ring-1 ring-white/5">
                 
                 {/* LEFT PANEL - STATIC */}
@@ -99,7 +101,7 @@ export default function AiTerminal() {
                     </div>
 
                     {/* Messages Area - FIX SCROLL JUMPING */}
-                    <div className="flex-1 p-6 overflow-y-auto space-y-4 scrollbar-thin scrollbar-thumb-blue-900/30 scrollbar-track-transparent !overflow-anchor-none">
+                    <div className="flex-1 p-6 overflow-y-auto space-y-4 scrollbar-thin scrollbar-thumb-blue-900/30 scrollbar-track-transparent">
                         <AnimatePresence>
                         {messages.map((msg, idx) => (
                             <motion.div 
@@ -128,10 +130,10 @@ export default function AiTerminal() {
                                 </div>
                             </div>
                         )}
-                        <div ref={messagesEndRef} />
+                        <div ref={messagesEndRef} className="h-1" />
                     </div>
 
-                    {/* Input Area */}
+                    {/* Input Area - FIXED BOTTOM */}
                     <div className="p-4 border-t border-white/5 bg-[#0a0f1e] z-20">
                         <div className="flex gap-2 relative">
                             <input 
@@ -140,12 +142,13 @@ export default function AiTerminal() {
                                 onChange={(e) => setInput(e.target.value)}
                                 onKeyDown={(e) => e.key === 'Enter' && handleSend(input)}
                                 placeholder="Scrie întrebarea ta..."
-                                className="w-full bg-[#050810] text-white rounded-xl pl-4 pr-12 py-3 border border-white/10 focus:border-blue-500/50 outline-none transition-all placeholder:text-gray-600 font-mono text-sm"
+                                // AM SCOS AUTO-FOCUS PENTRU A EVITA SCROLL-UL NEDORIT
+                                className="w-full bg-[#050810] text-white rounded-xl pl-4 pr-12 py-3 border border-white/10 focus:border-blue-500/50 outline-none transition-all placeholder:text-gray-600 font-mono text-sm shadow-inner"
                             />
                             <button 
                                 onClick={() => handleSend(input)}
                                 disabled={isLoading || !input.trim()}
-                                className="absolute right-2 top-1.5 bottom-1.5 bg-blue-600 hover:bg-blue-500 text-white p-2 rounded-lg transition-all disabled:opacity-50 flex items-center justify-center"
+                                className="absolute right-2 top-1.5 bottom-1.5 bg-blue-600 hover:bg-blue-500 text-white p-2 rounded-lg transition-all disabled:opacity-50 hover:scale-105 active:scale-95 flex items-center justify-center"
                             >
                                 <Send size={18} />
                             </button>

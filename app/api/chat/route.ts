@@ -1,24 +1,16 @@
 import { NextResponse } from 'next/server';
 
 export async function POST(req: Request) {
+  // Aici preluam cheia setata in Vercel
   const apiKey = process.env.GOOGLE_API_KEY;
 
   if (!apiKey) {
-    console.error("❌ API KEY MISSING IN VERCEL");
-    return NextResponse.json({ error: 'Configuration Error: API Key missing' }, { status: 500 });
+    return NextResponse.json({ error: 'Cheia API nu este setată în Vercel.' }, { status: 500 });
   }
 
   try {
     const { message } = await req.json();
 
-    const systemPrompt = `
-    Ești Mihai Daniel AI.
-    Stil: "Tati, ascultă...", "Nu e joc de noroc".
-    Fii scurt, direct și educativ.
-    Nu da sfaturi financiare, ci educaționale.
-    `;
-
-    // Apelăm endpoint-ul Google
     const response = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
       {
@@ -26,33 +18,26 @@ export async function POST(req: Request) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           contents: [{
-              role: "user",
-              parts: [{ text: systemPrompt + "\n\n Întrebarea: " + message }]
+            parts: [{
+              text: `Ești Mihai Daniel AI. Răspunde scurt și la obiect în română.
+              User întreabă: ${message}`
+            }]
           }]
-        }),
+        })
       }
     );
 
     if (!response.ok) {
-      const errorText = await response.text();
-      console.error("❌ Google API Error:", errorText);
-      throw new Error(`Google API refused connection: ${response.status}`);
+      throw new Error(`Google API Error: ${response.status}`);
     }
 
     const data = await response.json();
-    const aiResponse = data.candidates?.[0]?.content?.parts?.[0]?.text;
+    const text = data.candidates?.[0]?.content?.parts?.[0]?.text || "Nu am înțeles.";
 
-    if (!aiResponse) {
-        throw new Error("No response content from Google");
-    }
+    return NextResponse.json({ response: text });
 
-    return NextResponse.json({ response: aiResponse });
-
-  } catch (error: any) {
-    console.error("❌ SERVER ERROR:", error);
-    return NextResponse.json({ 
-        error: "Server Error",
-        response: "Tati, am o mică eroare de conexiune. Mai încearcă o dată." 
-    }, { status: 500 });
+  } catch (error) {
+    console.error(error);
+    return NextResponse.json({ response: "Eroare de conexiune cu Google." }, { status: 500 });
   }
 }
