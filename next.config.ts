@@ -1,24 +1,20 @@
 import type { NextConfig } from "next";
 
-const nextConfig: any = {
-  /* Config options here */
+const nextConfig: NextConfig = {
   typescript: {
-    // Ignoră erorile de TS la build (ne trebuie viteză acum)
+    // Ignoră erorile de TS la build
     ignoreBuildErrors: true,
   },
-  eslint: {
-    // Ignoră erorile de stil
-    ignoreDuringBuilds: true,
-  },
-  // AICI E FIX-UL PENTRU PIERDEREA DE MODULE WALLETCONNECT
+  // Fix pentru WalletConnect (module lipsă)
   webpack: (config: any) => {
     config.externals.push(
       "pino-pretty",
       "lokijs",
       "encoding",
-      "tap",        // Astea sunt cele care dadeau eroare in log
+      "tap",
       "desm",
-      "fastbench"
+      "fastbench",
+      "why-is-node-running"
     );
     return config;
   },
