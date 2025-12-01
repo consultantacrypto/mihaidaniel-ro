@@ -6,15 +6,18 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 export default function AiTerminal() {
   const [input, setInput] = useState('');
+  // Mesajul initial de intampinare
   const [messages, setMessages] = useState<{ role: 'user' | 'ai'; text: string }[]>([
     { role: 'ai', text: 'Salutare! Sunt Mihai Daniel Intelligence 🟢.\n\nSunt conectat la piață. Nu paria, investește informat.\n\nCe analizăm astăzi?' }
   ]);
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  // FIX SCROLL: Doar cand lista de mesaje se lungeste
+  // FIX SCROLL: Scroll doar cand apar mesaje NOI (nu la incarcarea paginii)
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (messages.length > 1) {
+      messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
   }, [messages]);
 
   const handleSend = async (text: string) => {
@@ -34,15 +37,14 @@ export default function AiTerminal() {
 
       const data = await response.json();
       
-      // Verificam daca serverul a dat eroare
       if (!response.ok) {
-        throw new Error(data.error || 'Eroare necunoscuta');
+        throw new Error(data.error || 'Eroare la server');
       }
 
       setMessages(prev => [...prev, { role: 'ai', text: data.response }]);
     } catch (error) {
       console.error("AI Error:", error);
-      setMessages(prev => [...prev, { role: 'ai', text: '⚠️ Tati, verifică setările API Key în Vercel.' }]);
+      setMessages(prev => [...prev, { role: 'ai', text: '⚠️ Tati, verifică setările API Key în Vercel (Settings -> Environment Variables).' }]);
     } finally {
       setIsLoading(false);
     }
@@ -50,7 +52,7 @@ export default function AiTerminal() {
 
   return (
     <section id="ai" className="py-24 relative bg-[#020617] overflow-hidden min-h-[900px] flex items-center">
-        {/* Background Fix - Static pentru a nu cauza reflow */}
+        {/* Background Fix - Static */}
         <div className="absolute inset-0 bg-[#020617] z-0"></div>
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
 
@@ -68,10 +70,10 @@ export default function AiTerminal() {
                 </p>
             </div>
 
-            {/* INTERFACE CONTAINER - FIXED HEIGHT */}
+            {/* INTERFACE CONTAINER */}
             <div className="max-w-6xl mx-auto bg-[#0a0f1e] border border-white/10 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row h-[700px] ring-1 ring-white/5">
                 
-                {/* LEFT PANEL - STATIC */}
+                {/* LEFT PANEL */}
                 <div className="w-full md:w-[320px] bg-[#050810] border-r border-white/5 p-6 flex flex-col shrink-0">
                     <div className="relative w-40 h-40 mx-auto mb-6 rounded-full border-2 border-blue-500/20 p-1 group">
                         <div className="absolute inset-0 rounded-full border border-blue-500/30 animate-spin-slow"></div>
@@ -92,7 +94,7 @@ export default function AiTerminal() {
                     </div>
                 </div>
 
-                {/* RIGHT PANEL - CHAT */}
+                {/* RIGHT PANEL */}
                 <div className="flex-1 flex flex-col bg-[#0a0f1e] relative min-w-0">
                     <div className="h-14 border-b border-white/5 flex items-center justify-between px-6 bg-[#0a0f1e]">
                         <div className="flex items-center gap-2 text-xs font-mono text-blue-400">
@@ -130,10 +132,10 @@ export default function AiTerminal() {
                                 </div>
                             </div>
                         )}
-                        <div ref={messagesEndRef} className="h-1" />
+                        <div ref={messagesEndRef} />
                     </div>
 
-                    {/* Input Area - FIXED BOTTOM */}
+                    {/* Input Area */}
                     <div className="p-4 border-t border-white/5 bg-[#0a0f1e] z-20">
                         <div className="flex gap-2 relative">
                             <input 
@@ -142,7 +144,6 @@ export default function AiTerminal() {
                                 onChange={(e) => setInput(e.target.value)}
                                 onKeyDown={(e) => e.key === 'Enter' && handleSend(input)}
                                 placeholder="Scrie întrebarea ta..."
-                                // AM SCOS AUTO-FOCUS PENTRU A EVITA SCROLL-UL NEDORIT
                                 className="w-full bg-[#050810] text-white rounded-xl pl-4 pr-12 py-3 border border-white/10 focus:border-blue-500/50 outline-none transition-all placeholder:text-gray-600 font-mono text-sm shadow-inner"
                             />
                             <button 
