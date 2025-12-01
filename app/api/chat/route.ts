@@ -1,58 +1,69 @@
 import { NextResponse } from 'next/server';
 
-// Forțăm serverul să fie dinamic (rezolvă multe probleme de cache pe Vercel)
+// Forțăm serverul să nu țină cache (Să fie mereu fresh)
 export const dynamic = 'force-dynamic';
 
 export async function POST(req: Request) {
-  // 1. Încearcă să ia cheia din Environment, dacă nu, ia-o pe cea Hardcoded (dacă ai pus-o)
-  const apiKey = process.env.GOOGLE_API_KEY || "AIzaSyDACA_MAI_AI_CHEIA_HARDCODATA_LAS-O_AICI_DE_TEST";
+  const apiKey = process.env.GOOGLE_API_KEY;
 
-  if (!apiKey || apiKey.startsWith("PUNE_AICI")) {
+  if (!apiKey) {
     return NextResponse.json({ 
-        response: "🛑 EROARE: Cheia API lipsește complet. Nici în Vercel, nici în cod." 
+        response: "🛑 EROARE: Cheia API lipsește din Vercel. Verifică Settings -> Environment Variables." 
     });
   }
 
   try {
     const { message } = await req.json();
 
-    // 2. Facem cererea către Google (REST API Simplificat)
+    // 1. Definim Personalitatea
+    const systemPrompt = `
+    Ești Mihai Daniel AI.
+    
+    TON:
+    - Prietenos, direct, autoritar ("Tati", "Ascultă-mă").
+    - Nu ești robot, ești mentor.
+    
+    REGULI:
+    - Nu dai sfaturi financiare explicite ("cumpără acum"), ci educaționale.
+    - Dacă userul vrea ponturi, trimite-l la Curs.
+    - Răspunde scurt și la obiect.
+    `;
+
+    // 2. Apelăm modelul STABIL "gemini-pro" (Ăsta merge 100%)
     const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`,
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           contents: [{
             parts: [{
-              text: `Ești Mihai Daniel AI. Răspunde scurt și la obiect în română. Întrebare: ${message}`
+              text: `${systemPrompt}\n\nÎntrebarea userului: ${message}`
             }]
           }]
         })
       }
     );
 
-    // 3. CAPTURĂM EROAREA REALĂ DE LA GOOGLE
+    // 3. Verificăm dacă Google răspunde cu eroare
     if (!response.ok) {
       const errorData = await response.json();
       console.error("GOOGLE ERROR:", errorData);
-      
-      // AICI E SECRETUL: Trimitem eroarea înapoi în chat ca să o vezi
       return NextResponse.json({ 
-          response: `🚨 EROARE GOOGLE (${response.status}): ${errorData.error?.message || JSON.stringify(errorData)}` 
+          response: `🚨 Eroare Google (${response.status}): Modelul nu răspunde. Încearcă mai târziu.` 
       });
     }
 
     const data = await response.json();
     const aiResponse = data.candidates?.[0]?.content?.parts?.[0]?.text;
 
-    if (!aiResponse) return NextResponse.json({ response: "Google a răspuns gol." });
+    if (!aiResponse) return NextResponse.json({ response: "Nu am înțeles întrebarea." });
 
     return NextResponse.json({ response: aiResponse });
 
   } catch (error: any) {
     return NextResponse.json({ 
-        response: `💥 EROARE SERVER: ${error.message}` 
+        response: `💥 Eroare Server: ${error.message}` 
     });
   }
 }
