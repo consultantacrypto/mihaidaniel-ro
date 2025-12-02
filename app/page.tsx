@@ -4,6 +4,7 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import SocialStats from '@/components/SocialStats';
+import CelebrityInterviews from '@/components/CelebrityInterviews'; // <--- NOU
 import AiTerminal from '@/components/AiTerminal';
 import Consultancy from '@/components/Consultancy';
 import Course from '@/components/Course';
@@ -16,6 +17,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <SocialStats />
+      
+      {/* SECTIUNEA NOUA - CELEBRITY INTERVIEWS */}
+      <CelebrityInterviews />
       
       {/* Consultanța e pusă înainte de AI pentru impact comercial */}
       <Consultancy />

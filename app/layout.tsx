@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google"; // Fontul viitorului
+import { Space_Grotesk } from "next/font/google"; 
 import "./globals.css";
 import { Providers } from "./providers";
 
-// Configuram fontul
 const spaceGrotesk = Space_Grotesk({ 
   subsets: ["latin"],
   weight: ['300', '400', '500', '600', '700'],
@@ -11,8 +10,15 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Mihai Daniel | Future Finance",
-  description: "Investitii, Crypto si Educatie Financiara 2026",
+  title: "Mihai Daniel | Web3 Investor & Crypto Mentor",
+  description: "Învață trading și investiții crypto de la Mihai Daniel. Cursuri premium, consultanță 1-la-1 și analiză de piață cu AI.",
+  keywords: ["crypto", "bitcoin", "curs trading", "mihai daniel", "investitii", "blockchain", "binance cto", "mmcrypto"],
+  openGraph: {
+    title: "Mihai Daniel - Expert Crypto",
+    description: "Educație financiară de top. Scapă de mentalitatea de parior.",
+    type: "website",
+    locale: "ro_RO",
+  },
 };
 
 export default function RootLayout({
