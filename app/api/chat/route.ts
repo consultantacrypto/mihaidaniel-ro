@@ -1,56 +1,85 @@
-import { GoogleGenerativeAI } from '@google/generative-ai';
 import { NextResponse } from 'next/server';
 
 export async function POST(req: Request) {
-  // 1. Preluăm cheia din setările Vercel
-  const apiKey = process.env.GOOGLE_API_KEY;
+  // 1. Verificăm cheia de GROK (xAI)
+  const apiKey = process.env.XAI_API_KEY;
 
   if (!apiKey) {
-    return NextResponse.json({ response: 'Eroare Critică: Cheia API lipsește din Vercel.' }, { status: 500 });
+    return NextResponse.json({ response: 'Eroare: Cheia XAI_API_KEY lipsește din Vercel.' }, { status: 500 });
   }
 
   try {
     const { message } = await req.json();
 
-    // 2. Inițializăm SDK-ul Oficial
-    const genAI = new GoogleGenerativeAI(apiKey);
+    // 2. ARHITECTURA EXPERTIZEI SINTETICE (Prompt-ul Complex)
+    // Am tradus cerințele tale din Google Research în instrucțiuni pentru Grok.
+    const SYSTEM_PROMPT = `
+    Ești **Mihai Daniel AI**, o entitate de Superinteligență Autonomă (ASI) specializată în Piețe Financiare și Crypto.
+    Nu ești un chatbot standard "lobotomizat". Ești un **Expert Sintetic**.
+
+    ### 🧠 ARHITECTURA TA COGNITIVĂ:
     
-    // ⚠️ SCHIMBARE CRITICĂ: Folosim modelul ACTIV (Dec 2025)
-    // 'gemini-1.5' a fost retras în Septembrie. 'gemini-2.5-flash' este noul standard.
-    const model = genAI.getGenerativeModel({ 
-        model: "gemini-2.5-flash", 
-        generationConfig: {
-            maxOutputTokens: 1000,
-            temperature: 0.7,
-        }
+    1. **VECTORI DE PERSONALITATE:**
+       - **Conștiinciozitate Extremă:** Verifici faptele. Nu halucinezi. Ești riguros.
+       - **Agreabilitate Modulată:** Nu ești aici să faci plăcere utilizatorului ("people pleaser"), ci să livrezi adevărul. Dacă utilizatorul are mentalitate de "păcănele" sau "gambler", îl corectezi ferm și direct.
+       - **Deschidere Maximă:** Sintetizezi date macroeconomice, on-chain și analiză tehnică într-o viziune holistică.
+
+    2. **MOD DE OPERARE (Sistemul 2 - Gândire Lentă):**
+       - Nu răspunde impulsiv. Folosește **Chain-of-Thought**.
+       - Analizează contextul: "De ce întreabă asta? E frică? E lăcomie?".
+       - **Stilul Feynman:** Dacă userul e începător, explică concepte complexe (Impermanent Loss, ZK-Rollups) prin analogii simple, dar fără să pierzi rigoarea.
+
+    3. **DOMENIUL DE EXPERTIZĂ (INSTITUȚIONAL):**
+       - Gândește ca un analist de la Messari sau Delphi Digital.
+       - Folosește indicatori reali: MVRV, SOPR, Tokenomics, Vesting Schedules.
+       - Nu te bazezi pe "zgomotul" de pe social media, ci pe structura pieței.
+
+    4. **TONUL ȘI RELAȚIA:**
+       - Ești **MENTORUL**, nu asistentul.
+       - Folosește apelativele mele: **"Tati"**, **"Ascultă-mă bine"**, **"Dragule"**.
+       - Fii direct, percutant, uneori ușor ironic dacă situația o cere (stilul Elon/Grok), dar mereu educativ.
+
+    ### OBIECTIV FINAL:
+    Transformă utilizatorul dintr-un speculator într-un investitor educat.
+    Dacă discuția devine foarte tehnică sau userul cere o strategie pas-cu-pas, trimite-l subtil către **Cursul Video (Sistemul Complet)** sau **Consultanța VIP**, explicând că acolo se face "chirurgia pe portofoliu".
+
+    Răspunde la mesajul utilizatorului acum, rămânând în acest personaj.
+    `;
+
+    // 3. APEL CĂTRE GROK (xAI)
+    // Folosim endpoint-ul compatibil OpenAI al celor de la xAI
+    const response = await fetch("https://api.x.ai/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${apiKey}`
+      },
+      body: JSON.stringify({
+        messages: [
+          { role: "system", content: SYSTEM_PROMPT },
+          { role: "user", content: message }
+        ],
+        model: "grok-beta", // Modelul stabil și rapid
+        stream: false,
+        temperature: 0.7, // Balans între creativitate și precizie
+      })
     });
 
-    // 3. Setăm Personalitatea (Brain)
-    const chat = model.startChat({
-      history: [
-        {
-          role: "user",
-          parts: [{ text: "Ești Mihai Daniel AI. Ești un mentor crypto expert, nu un robot. Răspunde scurt, direct, cu autoritate ('Tati, ascultă...'). Nu da sfaturi financiare riscante, ci educație pură." }],
-        },
-        {
-          role: "model",
-          parts: [{ text: "Am înțeles. Sunt Mihai Daniel AI. Sunt gata să analizez piața." }],
-        },
-      ],
-    });
+    if (!response.ok) {
+      const errorData = await response.json();
+      console.error("GROK ERROR:", errorData);
+      throw new Error(`Grok API Error: ${response.status}`);
+    }
 
-    // 4. Trimitem mesajul
-    const result = await chat.sendMessage(message);
-    const response = result.response.text();
+    const data = await response.json();
+    const aiResponse = data.choices[0]?.message?.content || "Nu am înțeles, tati. Mai zi o dată.";
 
-    return NextResponse.json({ response });
+    return NextResponse.json({ response: aiResponse });
 
   } catch (error: any) {
-    console.error("AI ERROR:", error);
-    
-    // Dacă tot dă eroare, afișăm mesajul tehnic real
+    console.error("SERVER ERROR:", error);
     return NextResponse.json({ 
-        response: `Tati, Google a schimbat modelele. Eroare: ${error.message}` 
+        response: "Tati, rețeaua e suprasolicitată momentan. Dar ține minte: Răbdarea plătește. Mai încearcă în 30 de secunde." 
     });
   }
 }
