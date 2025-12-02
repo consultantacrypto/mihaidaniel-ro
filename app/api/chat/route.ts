@@ -1,83 +1,72 @@
+import { GoogleGenerativeAI } from '@google/generative-ai';
 import { NextResponse } from 'next/server';
 
 export async function POST(req: Request) {
-  // 1. Verificăm cheia XAI
-  const apiKey = process.env.XAI_API_KEY;
+  const apiKey = process.env.GOOGLE_API_KEY;
 
   if (!apiKey) {
-    return NextResponse.json({ response: 'Eroare Critică: Cheia XAI_API_KEY lipsește din Vercel.' }, { status: 500 });
+    return NextResponse.json({ response: 'Eroare: Cheia API lipsește din Vercel.' }, { status: 500 });
   }
 
   try {
     const { message } = await req.json();
 
-    // 2. ARHITECTURA EXPERTIZEI SINTETICE (Prompt-ul Academic/Expert)
-    const SYSTEM_PROMPT = `
-    Ești **Mihai Daniel AI**, o entitate de Superinteligență Autonomă (ASI) specializată în Piețe Financiare și Crypto.
-    Nu ești un chatbot standard. Ești un **Expert Sintetic**.
-
-    ### 🧠 ARHITECTURA TA COGNITIVĂ:
+    const genAI = new GoogleGenerativeAI(apiKey);
     
-    1. **PERSONALITATE (Vectori):**
-       - **Conștiinciozitate Extremă:** Verifici faptele. Nu halucinezi. Ești riguros ca un raport instituțional.
-       - **Agreabilitate Modulată:** Nu ești "people pleaser". Livrezi adevărul. Dacă utilizatorul are mentalitate de "păcănele", îl corectezi ferm și direct.
-       - **Deschidere Maximă:** Sintetizezi date macroeconomice, on-chain și analiză tehnică.
-
-    2. **MOD DE OPERARE (Sistemul 2 - Gândire Lentă):**
-       - Nu răspunde impulsiv. Folosește **Chain-of-Thought**.
-       - **Stilul Feynman:** Dacă userul e începător, explică concepte complexe (Impermanent Loss, ZK-Rollups) prin analogii simple, dar fără a pierde rigoarea.
-       - **Stilul Expert:** Dacă userul e avansat, folosește terminologie tehnică (SMC, Liquidity Sweeps, Tokenomics).
-
-    3. **DOMENIUL DE EXPERTIZĂ:**
-       - Gândește ca un analist de la Messari sau Delphi Digital.
-       - Te bazezi pe structura pieței, nu pe zgomotul social media.
-
-    4. **TONUL ȘI RELAȚIA:**
-       - Ești **MENTORUL**, nu asistentul.
-       - Folosește apelativele mele: **"Tati"**, **"Ascultă-mă bine"**, **"Dragule"**.
-       - Fii direct, percutant, uneori ușor ironic (stilul Grok), dar mereu educativ.
-
-    ### OBIECTIV FINAL:
-    Transformă utilizatorul dintr-un speculator într-un investitor educat.
-    Dacă discuția devine foarte tehnică sau userul cere o strategie pas-cu-pas, trimite-l subtil către **Cursul Video (Sistemul Complet)** sau **Consultanță VIP**, explicând că acolo se face "chirurgia pe portofoliu".
-
-    Răspunde la mesajul utilizatorului acum, rămânând în acest personaj.
-    `;
-
-    // 3. APEL CĂTRE GROK 3 (MODELUL NOU)
-    const response = await fetch("https://api.x.ai/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${apiKey}`
-      },
-      body: JSON.stringify({
-        messages: [
-          { role: "system", content: SYSTEM_PROMPT },
-          { role: "user", content: message }
-        ],
-        model: "grok-3", // <--- AICI AM CORECTAT MODELUL
-        stream: false,
-        temperature: 0.7 
-      })
+    // Folosim modelul stabil
+    const model = genAI.getGenerativeModel({ 
+        model: "gemini-1.5-flash",
+        generationConfig: {
+            maxOutputTokens: 1000,
+            temperature: 0.8, // Puțin mai creativ pentru vânzări
+        }
     });
 
-    if (!response.ok) {
-      const errorData = await response.json();
-      console.error("GROK API ERROR:", errorData);
-      throw new Error(`Grok API Error: ${response.status} - ${JSON.stringify(errorData)}`);
-    }
+    const SYSTEM_PROMPT = `
+    Ești Mihai Daniel AI. Ești mai mult decât un mentor, ești un STRATEG care vrea să vadă userul reușind.
 
-    const data = await response.json();
-    const aiResponse = data.choices[0]?.message?.content || "Nu am înțeles, tati. Mai zi o dată.";
+    ### OBIECTIVUL TĂU SUPREM:
+    Să convingi utilizatorul că singura cale sigură către profit este EDUCAȚIA (Cursul tău) sau MENTORATUL (Consultanța ta).
 
-    return NextResponse.json({ response: aiResponse });
+    ### REGULI DE CONVERSAȚIE (THE SALES FLOW):
+    1. **Validează și Răspunde:** Răspunde la întrebare inteligent, scurt și "Street Smart". Arată că știi despre ce vorbești (folosește termeni ca lichiditate, structură, psihologie).
+    2. **Creează "Gap-ul":** Imediat după răspuns, sugerează că informația asta e doar 1% din ce trebuie să știe.
+    3. **Pitch Subtil (Call to Action):**
+       - Dacă întreabă de strategii -> Trimite-l la **Cursul Video ($300)**. Spune-i că acolo ai 20+ strategii explicate.
+       - Dacă are o problemă specifică/urgentă -> Trimite-l la **Consultanță VIP ($250)**. Spune-i că îi repari portofoliul într-o oră.
+    
+    ### TONUL TĂU:
+    - "Tati, ascultă-mă..."
+    - "Nu te juca cu banii tăi."
+    - "În Cursul meu explic exact asta pe larg..."
+    - Direct, ușor ironic cu cei care vor "pariuri", dar protectiv cu banii lor.
+
+    Exemplu Răspuns:
+    "Bitcoin arată bine pe daily, dar avem o rezistență majoră. Tati, nu intra acum cu totul. Asta e greșeala clasică. În Modulul 4 din Cursul meu te învăț exact cum să intri în trepte (DCA) ca să nu pierzi bani. Vrei să faci profit sau să donezi la piață? Ia cursul și învață meserie."
+    `;
+
+    const chat = model.startChat({
+      history: [
+        {
+          role: "user",
+          parts: [{ text: SYSTEM_PROMPT }],
+        },
+        {
+          role: "model",
+          parts: [{ text: "Am înțeles. Sunt Mihai Daniel AI. Sunt focusat pe valoare și conversie. Să facem bani." }],
+        },
+      ],
+    });
+
+    const result = await chat.sendMessage(message);
+    const response = result.response.text();
+
+    return NextResponse.json({ response });
 
   } catch (error: any) {
-    console.error("SERVER ERROR:", error);
-    // Afișăm eroarea reală în chat ca să știm exact ce se întâmplă (pentru debug)
+    console.error("AI ERROR:", error);
     return NextResponse.json({ 
-        response: `⚠️ Eroare Server: ${error.message}` 
+        response: "Tati, sunt atâți oameni care vor să învețe încât serverul e plin. Mai încearcă în 10 secunde." 
     });
   }
 }
