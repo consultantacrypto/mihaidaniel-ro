@@ -3,16 +3,40 @@
 import { useState } from 'react';
 import { Play, Star, Tv, ExternalLink } from 'lucide-react';
 
-// LISTA CLIPURILOR TALE (IDs extrase din link-uri)
+// LISTA VIDEO OFICIALĂ (Ordinea Importanței stabilită de tine)
 const VIDEOS = [
-  { id: 'IMNUP11X93w', title: 'Interviu Exclusiv: Rohit Wad (Binance CTO)' },
-  { id: 'zcZ-SKhJhqM', title: 'Bitcoin la $5M? Dezbatere cu MMCrypto' },
-  { id: 'e6fT2y3DkqI', title: 'Dialoguri Crypto la Nivel Înalt' },
-  { id: '59HJsgv8lbI', title: 'Analiză de Piață & Predicții' },
-  { id: 'cQx2EFPN2ZI', title: 'Secretele Investitorilor Mari' },
-  { id: 'SVcy0DJEuoQ', title: 'Viitorul Tehnologiei Blockchain' },
-  { id: 'BJ-qiaGsIaY', title: 'Strategii Avansate de Trading' },
-  { id: 'CdBYX3NPfbA', title: 'Sesiune Specială Q&A' },
+  { 
+    id: 'e6fT2y3DkqI', 
+    title: '💥 Ben Zhou, Bybit Founder - Bear Market Is Over! 🌟 Interviu cu fondatorul Bybit' 
+  },
+  { 
+    id: '59HJsgv8lbI', 
+    title: 'Super Interviu cu Rohit Wad (Binance CTO) - Directorul de Tehnologie Binance' 
+  },
+  { 
+    id: 'IMNUP11X93w', 
+    title: "Binance's Top Manager Kyrylo Khomiakov (Regional Head CEE) - Interviu Exclusiv" 
+  },
+  { 
+    id: 'cQx2EFPN2ZI', 
+    title: 'Mike Silagadze, Founder and CEO of Ether.fi - Restaking Revolution' 
+  },
+  { 
+    id: 'BJ-qiaGsIaY', 
+    title: 'Podcast - Dmitry Buterin (Vitalik Buterin Father) - Ethereum Roots' 
+  },
+  { 
+    id: 'CdBYX3NPfbA', 
+    title: 'Bitcoin va valora 5.000.000$! Asta este părerea lui MMCrypto' 
+  },
+  { 
+    id: 'SVcy0DJEuoQ', 
+    title: 'Usual CEO Pierre Person interview just after project got listed on Binance' 
+  },
+  { 
+    id: 'zcZ-SKhJhqM', 
+    title: 'Super Podcast cu Davinci Jeremie - Bitcoin OG' 
+  },
 ];
 
 const VideoCard = ({ id, title }: { id: string, title: string }) => {
@@ -44,8 +68,8 @@ const VideoCard = ({ id, title }: { id: string, title: string }) => {
           </div>
           
           {/* Titlu Overlay */}
-          <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/90 via-black/60 to-transparent">
-            <h3 className="text-white font-bold text-sm md:text-base line-clamp-2 leading-tight">{title}</h3>
+          <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/95 via-black/70 to-transparent">
+            <h3 className="text-white font-bold text-sm md:text-base line-clamp-2 leading-snug">{title}</h3>
           </div>
         </div>
       ) : (
@@ -64,43 +88,44 @@ const VideoCard = ({ id, title }: { id: string, title: string }) => {
 
 export default function CelebrityInterviews() {
   return (
-    <section className="py-24 relative bg-[#020617] border-t border-white/5">
+    <section className="py-20 relative bg-[#020617] border-t border-white/5">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-purple-900/5 blur-[100px] pointer-events-none"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         
-        {/* Header Section */}
-        <div className="text-center mb-16">
+        {/* Header Section - TEXT ACTUALIZAT PENTRU IMPACT MAXIM */}
+        <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 text-xs font-bold tracking-widest mb-4 uppercase shadow-lg shadow-purple-500/10">
-                <Star size={14} className="text-yellow-400 fill-yellow-400"/> Hall of Fame
+                <Star size={14} className="text-yellow-400 fill-yellow-400"/> Hall of Fame Interviews
             </div>
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white">
-                Discuții cu <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Liderii Industriei</span>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
+                Discuții cu <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Giganții Industriei</span>
             </h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                Nu vorbesc din cărți. Dezbat viitorul crypto direct cu oamenii care îl construiesc. 
-                De la CTO-ul Binance la analiști de top.
+            <p className="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed">
+                Nu vorbesc din cărți. Am acces direct la masa deciziilor. <br className="hidden md:block"/>
+                De la <b className="text-white">CEO-ul Bybit</b> și <b className="text-white">Executivii Binance</b>, 
+                la fondatorul <b className="text-white">Ether.fi</b> și <b className="text-white">Dmitry Buterin</b>.
             </p>
         </div>
 
-        {/* GRID VIDEO - Responsive Perfect (1 pe mobil, 2 tabletă, 4 pe ecrane mari) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {/* GRID VIDEO - 4 Coloane pe ecrane mari pentru impact maxim */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {VIDEOS.map((video) => (
                 <VideoCard key={video.id} id={video.id} title={video.title} />
             ))}
         </div>
 
         {/* Social Proof Footer */}
-        <div className="mt-16 text-center">
+        <div className="mt-12 text-center">
             <a 
               href="https://www.youtube.com/@DanielMihaiCrypto" 
               target="_blank"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-white font-bold transition-all group"
+              className="inline-flex items-center gap-2 px-8 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-white font-medium transition-all group text-sm"
             >
-                <Tv size={20} className="text-red-500"/> 
-                Vezi toate cele 500+ video-uri pe YouTube
-                <ExternalLink size={16} className="text-gray-500 group-hover:text-white transition-colors"/>
+                <Tv size={18} className="text-red-500"/> 
+                Vezi toate interviurile pe YouTube
+                <ExternalLink size={14} className="text-gray-500 group-hover:text-white transition-colors"/>
             </a>
         </div>
 
