@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Play, Star, Tv, ExternalLink } from 'lucide-react';
 
-// LISTA VIDEO OFICIALĂ (Ordinea Importanței stabilită de tine)
+// LISTA VIDEO OFICIALĂ (Conținut verificat)
 const VIDEOS = [
   { 
     id: 'e6fT2y3DkqI', 
@@ -43,19 +43,23 @@ const VideoCard = ({ id, title }: { id: string, title: string }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <div className="relative group rounded-2xl overflow-hidden border border-white/10 bg-[#0a0f1e] shadow-lg aspect-video hover:border-purple-500/50 transition-all duration-300">
+    <article className="relative group rounded-2xl overflow-hidden border border-white/10 bg-[#0a0f1e] shadow-lg aspect-video hover:border-purple-500/50 transition-all duration-300">
       {!isPlaying ? (
-        // --- LITE MODE (Doar Poza - Se încarcă instant) ---
+        // --- LITE MODE (Doar Poza - Se încarcă instant pentru Page Speed 100) ---
         <div 
           className="cursor-pointer relative w-full h-full"
           onClick={() => setIsPlaying(true)}
+          role="button"
+          aria-label={`Redă video: ${title}`}
         >
           {/* Thumbnail High-Res de la YouTube */}
           <img 
             src={`https://img.youtube.com/vi/${id}/maxresdefault.jpg`} 
-            alt={title}
+            alt={`Thumbnail pentru video: ${title}`}
             className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
             loading="lazy"
+            width={1280}
+            height={720}
           />
           
           {/* Buton Play Custom */}
@@ -73,7 +77,7 @@ const VideoCard = ({ id, title }: { id: string, title: string }) => {
           </div>
         </div>
       ) : (
-        // --- HEAVY MODE (Iframe real) - Se încarcă doar la click ---
+        // --- HEAVY MODE (Iframe real) - Se încarcă DOAR la click ---
         <iframe 
           src={`https://www.youtube.com/embed/${id}?autoplay=1&rel=0&modestbranding=1`} 
           title={title}
@@ -82,7 +86,7 @@ const VideoCard = ({ id, title }: { id: string, title: string }) => {
           className="w-full h-full absolute inset-0"
         ></iframe>
       )}
-    </div>
+    </article>
   );
 };
 
@@ -109,8 +113,8 @@ export default function CelebrityInterviews() {
             </p>
         </div>
 
-        {/* GRID VIDEO - 4 Coloane pe ecrane mari pentru impact maxim */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* GRID VIDEO - RESPONSIVE PERFECT (1 -> 2 -> 3 -> 4 coloane) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {VIDEOS.map((video) => (
                 <VideoCard key={video.id} id={video.id} title={video.title} />
             ))}
@@ -121,6 +125,7 @@ export default function CelebrityInterviews() {
             <a 
               href="https://www.youtube.com/@DanielMihaiCrypto" 
               target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-white font-medium transition-all group text-sm"
             >
                 <Tv size={18} className="text-red-500"/> 
