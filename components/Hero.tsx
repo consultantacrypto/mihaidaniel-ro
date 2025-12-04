@@ -2,7 +2,6 @@
 
 import { ArrowRight, PlayCircle, TrendingUp, ShieldCheck, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
-// 1. IMPORTĂM COMPONENTA DE IMAGINE NEXT.JS
 import Image from 'next/image';
 
 export default function Hero() {
@@ -14,7 +13,7 @@ export default function Hero() {
         
         <div className="container mx-auto px-6 flex flex-col-reverse lg:flex-row items-center gap-16 lg:gap-24">
             
-            {/* TEXT */}
+            {/* TEXT (Rămâne animat, nu afectează LCP-ul negativ) */}
             <div className="flex-1 text-center lg:text-left z-10">
                 <motion.div 
                     initial={{ opacity: 0, y: 10 }}
@@ -56,18 +55,10 @@ export default function Hero() {
                 </div>
             </div>
 
-            {/* IMAGINE HERO (OPTIMIZATĂ LCP) */}
-            <motion.div 
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8 }}
-                className="flex-1 relative w-full max-w-[480px]"
-            >
+            {/* IMAGINE HERO - HTML PUR (MODIFICAT: Am scos motion.div) */}
+            {/* Asta va face ca poza să apară INSTANT, rezolvând render delay-ul */}
+            <div className="flex-1 relative w-full max-w-[480px]">
                 <div className="relative z-10 rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-blue-900/20 bg-[#0a0f1e] aspect-[4/5] group">
-                    {/* MODIFICAREA CRITICĂ: Folosim <Image /> cu priority.
-                        'fill' face poza să umple containerul părinte.
-                        'priority' o încarcă prima (reduce LCP drastic).
-                    */}
                     <Image 
                         src="/mihai-daniel-icon.jpg" 
                         alt="Mihai Daniel"
@@ -83,7 +74,7 @@ export default function Hero() {
                         <div className="text-xs text-gray-400 uppercase tracking-widest mt-1">Mentor & Investitor</div>
                     </div>
                 </div>
-            </motion.div>
+            </div>
         </div>
     </section>
   );

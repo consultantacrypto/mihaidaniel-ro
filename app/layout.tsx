@@ -39,12 +39,12 @@ export default function RootLayout({
     <html lang="ro">
       <body className={`${spaceGrotesk.variable} font-sans antialiased`}>
         
-        {/* Google Analytics GA4 */}
+        {/* Google Analytics GA4 - MODIFICAT: strategy="lazyOnload" */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-ZYYJ251HYH"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
