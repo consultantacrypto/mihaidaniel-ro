@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google"; 
 import "./globals.css";
 import { Providers } from "./providers";
+import Script from "next/script";
 
 const spaceGrotesk = Space_Grotesk({ 
   subsets: ["latin"],
@@ -20,14 +21,13 @@ export const metadata: Metadata = {
     locale: "ro_RO",
     images: [
       {
-        url: '/mihai-daniel-icon.jpg', // Asta rămâne pentru share pe Facebook/WhatsApp
+        url: '/mihai-daniel-icon.jpg',
         width: 800,
         height: 800,
         alt: 'Mihai Daniel',
       },
     ],
   },
-  // AM SCOS SECȚIUNEA 'icons' PENTRU CĂ FIȘIERUL app/icon.jpg O FACE AUTOMAT
 };
 
 export default function RootLayout({
@@ -38,6 +38,22 @@ export default function RootLayout({
   return (
     <html lang="ro">
       <body className={`${spaceGrotesk.variable} font-sans antialiased`}>
+        
+        {/* Google Analytics GA4 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-ZYYJ251HYH"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-ZYYJ251HYH');
+          `}
+        </Script>
+
         <Providers>
           {children}
         </Providers>
