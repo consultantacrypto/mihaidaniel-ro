@@ -3,7 +3,8 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import SocialStats from '@/components/SocialStats';
-import NewsFeed from '@/components/NewsFeed'; // Importul exista deja
+// Importăm TOATE componentele
+import NewsFeed from '@/components/NewsFeed'; 
 import CelebrityInterviews from '@/components/CelebrityInterviews';
 import AiTerminal from '@/components/AiTerminal';
 import Consultancy from '@/components/Consultancy';
@@ -14,7 +15,7 @@ export default function Home() {
   return (
     <main className="min-h-screen flex flex-col bg-[#020617] text-white font-sans selection:bg-blue-500/30 overflow-x-hidden">
       
-      {/* 1. Navigația */}
+      {/* 1. Navigatia */}
       <Navbar />
       
       {/* 2. Zona Hero (Tu și Mesajul Principal) */}
@@ -23,7 +24,7 @@ export default function Home() {
       {/* 3. Cifrele (Social Proof) */}
       <SocialStats />
       
-      {/* 4. Știri Crypto Explicate (AICI LIPSEA) */}
+      {/* 4. Știri Crypto Explicate (AICI LIPSEA ÎNAINTE) */}
       <NewsFeed />
 
       {/* 5. Interviuri cu Celebrități (Hall of Fame) */}
