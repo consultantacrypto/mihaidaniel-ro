@@ -62,8 +62,9 @@ export default function Hero() {
                 className="flex-1 relative w-full max-w-[480px]"
             >
                 <div className="relative z-10 rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-blue-900/20 bg-[#0a0f1e] aspect-[4/5] group">
+                    {/* AICI E POZA NOUA */}
                     <img 
-                        src="/hero-mihai.jpg" 
+                        src="/mihai-daniel-icon.jpg" 
                         alt="Mihai Daniel" 
                         className="object-cover w-full h-full opacity-100 group-hover:scale-105 transition-transform duration-1000"
                     />
