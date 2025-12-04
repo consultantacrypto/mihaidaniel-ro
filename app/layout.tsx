@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description: "Învață trading și investiții crypto de la Mihai Daniel. Cursuri premium, consultanță 1-la-1 și analiză de piață cu AI.",
   keywords: ["crypto", "bitcoin", "curs trading", "mihai daniel", "investitii", "blockchain", "binance cto", "mmcrypto"],
   icons: {
-    icon: '/mihai-daniel-icon.jpg',    // <--- Poza ta din public
+    icon: '/mihai-daniel-icon.jpg', 
     shortcut: '/mihai-daniel-icon.jpg',
     apple: '/mihai-daniel-icon.jpg',
   },

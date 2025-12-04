@@ -62,7 +62,7 @@ export default function Hero() {
                 className="flex-1 relative w-full max-w-[480px]"
             >
                 <div className="relative z-10 rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-blue-900/20 bg-[#0a0f1e] aspect-[4/5] group">
-                    {/* AICI E POZA NOUA */}
+                    {/* Asigura-te ca poza e in public/mihai-daniel-icon.jpg */}
                     <img 
                         src="/mihai-daniel-icon.jpg" 
                         alt="Mihai Daniel" 
