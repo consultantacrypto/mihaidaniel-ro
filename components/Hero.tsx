@@ -2,6 +2,8 @@
 
 import { ArrowRight, PlayCircle, TrendingUp, ShieldCheck, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
+// 1. IMPORTĂM COMPONENTA DE IMAGINE NEXT.JS
+import Image from 'next/image';
 
 export default function Hero() {
   return (
@@ -54,7 +56,7 @@ export default function Hero() {
                 </div>
             </div>
 
-            {/* IMAGINE HERO (CLEAN) */}
+            {/* IMAGINE HERO (OPTIMIZATĂ LCP) */}
             <motion.div 
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -62,15 +64,21 @@ export default function Hero() {
                 className="flex-1 relative w-full max-w-[480px]"
             >
                 <div className="relative z-10 rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-blue-900/20 bg-[#0a0f1e] aspect-[4/5] group">
-                    {/* Asigura-te ca poza e in public/mihai-daniel-icon.jpg */}
-                    <img 
+                    {/* MODIFICAREA CRITICĂ: Folosim <Image /> cu priority.
+                        'fill' face poza să umple containerul părinte.
+                        'priority' o încarcă prima (reduce LCP drastic).
+                    */}
+                    <Image 
                         src="/mihai-daniel-icon.jpg" 
-                        alt="Mihai Daniel" 
+                        alt="Mihai Daniel"
+                        fill
+                        priority={true}
                         className="object-cover w-full h-full opacity-100 group-hover:scale-105 transition-transform duration-1000"
+                        sizes="(max-width: 768px) 100vw, 500px"
                     />
                     
                     {/* Badge simplu de Brand */}
-                    <div className="absolute bottom-6 left-6 right-6 bg-black/60 backdrop-blur-md border border-white/10 p-4 rounded-xl">
+                    <div className="absolute bottom-6 left-6 right-6 bg-black/60 backdrop-blur-md border border-white/10 p-4 rounded-xl z-20">
                         <div className="text-white font-bold text-lg">Mihai Daniel</div>
                         <div className="text-xs text-gray-400 uppercase tracking-widest mt-1">Mentor & Investitor</div>
                     </div>
