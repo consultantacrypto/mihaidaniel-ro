@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import { Crown, ArrowRight, FileText, Zap, BookOpen, Star } from 'lucide-react';
 import CryptoPaymentModal from './CryptoPaymentModal';
+// ✅ IMPORT OPTIMIZARE IMAGINE
+import Image from 'next/image';
 
 export default function Consultancy() {
   const [isPaymentOpen, setPaymentOpen] = useState(false);
@@ -74,10 +76,13 @@ export default function Consultancy() {
                 {/* PARTEA DREAPTA: Imagine */}
                 <div className="flex-1 relative w-full lg:max-w-[480px]">
                     <div className="relative rounded-2xl overflow-hidden border border-yellow-500/30 shadow-2xl group aspect-[3/4]">
-                        <img 
+                         {/* ✅ FIX IMAGINE: Folosim Image + sizes */}
+                        <Image 
                             src="/mihai-daniel-consultanta.jpg" 
                             alt="Consultanță Mihai Daniel" 
+                            fill
                             className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-1000"
+                            sizes="(max-width: 768px) 100vw, 500px"
                         />
                         <div className="absolute bottom-6 right-6 left-6 bg-[#0a0f1e]/90 backdrop-blur-md p-4 rounded-xl border border-yellow-500/20">
                             <div className="flex text-yellow-500 mb-1">

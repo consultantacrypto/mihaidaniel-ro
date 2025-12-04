@@ -1,8 +1,10 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { Send, Loader2, BrainCircuit, Sparkles, GraduationCap, Briefcase, TrendingUp, Cpu, Wifi, Activity, Terminal, Shield, Zap } from 'lucide-react';
+import { Send, Loader2, BrainCircuit, Sparkles, GraduationCap, Briefcase, TrendingUp, Cpu, Wifi, Activity } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+// ✅ IMPORT OPTIMIZARE IMAGINE
+import Image from 'next/image';
 
 export default function AiTerminal() {
   const [input, setInput] = useState('');
@@ -58,12 +60,10 @@ export default function AiTerminal() {
             </div>
 
             {/* --- THE HOLOGRAPHIC TERMINAL --- */}
-            {/* ADAPTAT PENTRU TV (max-w-2xl pt ecrane mari) */}
             <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto relative group">
-                {/* Glowing Borders & Scanlines */}
+                {/* Glowing Borders */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 rounded-[30px] lg:rounded-[40px] blur-xl opacity-30 group-hover:opacity-50 transition duration-1000 animate-gradient-xy"></div>
                 
-                {/* FIX: h-auto pe mobil, h-[800px] pe desktop */}
                 <div className="bg-[#030712]/95 backdrop-blur-3xl border border-blue-500/20 rounded-[30px] lg:rounded-[40px] overflow-hidden shadow-2xl flex flex-col lg:flex-row h-auto lg:h-[800px] relative z-10 ring-1 ring-blue-400/10">
                     
                     {/* LEFT PANEL: HOLOGRAPHIC CORE CONTROL */}
@@ -75,12 +75,19 @@ export default function AiTerminal() {
                             <motion.div animate={{ rotate: -360 }} transition={{ duration: 15, repeat: Infinity, ease: "linear" }} className="absolute inset-4 rounded-full border border-cyan-400/40"></motion.div>
                             
                             <div className="relative w-28 h-28 lg:w-40 lg:h-40 rounded-full overflow-hidden border-4 border-blue-500/50 shadow-[0_0_50px_rgba(59,130,246,0.5)] z-10 animate-pulse-slow">
-                                <img src="/mihai-daniel-icon.jpg" alt="AI Core" className="w-full h-full object-cover opacity-80 mix-blend-luminosity scale-110"/>
+                                {/* ✅ FIX IMAGINE: Folosim width/height explicit mic pentru a forța thumbnail */}
+                                <Image 
+                                    src="/mihai-daniel-icon.jpg" 
+                                    alt="AI Core" 
+                                    width={200}
+                                    height={200}
+                                    className="object-cover w-full h-full opacity-80 mix-blend-luminosity scale-110"
+                                />
                                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-transparent to-transparent"></div>
                             </div>
                         </div>
 
-                        {/* Quick Action Triggers - Scrollabil orizontal pe mobil dacă e nevoie, dar aici e vertical */}
+                        {/* Quick Action Triggers */}
                         <div className="flex-1 space-y-3 lg:space-y-4 overflow-y-auto pr-2 custom-scrollbar z-10 max-h-[200px] lg:max-h-none">
                             <p className="text-xs text-blue-300/50 font-mono uppercase tracking-[0.2em] mb-2 lg:mb-4 pl-2 text-center lg:text-left">/// QUICK_ACCESS</p>
                             
