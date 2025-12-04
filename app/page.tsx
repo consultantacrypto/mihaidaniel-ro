@@ -1,10 +1,10 @@
 'use client';
 
-// Importam componentele Monumentale
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import SocialStats from '@/components/SocialStats';
-import CelebrityInterviews from '@/components/CelebrityInterviews'; // <--- NOU
+// NewsFeed a fost scos pentru a nu aglomera
+import CelebrityInterviews from '@/components/CelebrityInterviews';
 import AiTerminal from '@/components/AiTerminal';
 import Consultancy from '@/components/Consultancy';
 import Course from '@/components/Course';
@@ -14,21 +14,28 @@ export default function Home() {
   return (
     <main className="min-h-screen flex flex-col bg-[#020617] text-white font-sans selection:bg-blue-500/30 overflow-x-hidden">
       
+      {/* 1. Navigatia */}
       <Navbar />
+      
+      {/* 2. Zona Hero (Tu și Mesajul Principal) */}
       <Hero />
+      
+      {/* 3. Cifrele (Social Proof) */}
       <SocialStats />
       
-      {/* SECTIUNEA NOUA - CELEBRITY INTERVIEWS */}
+      {/* 4. Interviuri cu Celebrități (Hall of Fame) - Urcat mai sus pentru autoritate */}
       <CelebrityInterviews />
       
-      {/* Consultanța e pusă înainte de AI pentru impact comercial */}
+      {/* 5. Consultanță (Produs High Ticket) */}
       <Consultancy />
       
+      {/* 6. AI Terminal (Tehnologie) */}
       <AiTerminal />
       
+      {/* 7. Cursul (Produs Volum) */}
       <Course />
 
-      {/* --- FOOTER --- */}
+      {/* 8. Footer */}
       <footer className="border-t border-white/5 py-12 bg-black/50">
           <div className="container mx-auto px-6 text-center">
               <div className="font-bold text-2xl text-white tracking-wider mb-4">MIHAI DANIEL</div>
