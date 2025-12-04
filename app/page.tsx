@@ -66,10 +66,11 @@ export default function Home() {
           <div className="container mx-auto px-6 text-center">
               <div className="font-bold text-2xl text-white tracking-wider mb-4">MIHAI DANIEL</div>
               <div className="flex justify-center gap-6 mb-8">
-                  <a href="https://x.com/MIhaiDanielWeb3" target="_blank" className="text-gray-500 hover:text-white transition-colors"><Twitter/></a>
-                  <a href="https://www.youtube.com/@DanielMihaiCrypto" target="_blank" className="text-gray-500 hover:text-red-500 transition-colors"><Youtube/></a>
-                  <a href="https://www.linkedin.com/in/mihaidanielmarius/" target="_blank" className="text-gray-500 hover:text-blue-500 transition-colors"><Linkedin/></a>
-                  <a href="https://www.tiktok.com/@mihaidanielmarius?_r=1&_t=ZN-91pjNtkxoO3" target="_blank" className="text-gray-500 hover:text-pink-500 transition-colors"><Video/></a>
+                  {/* ✅ FIX ACCESIBILITATE: Am adăugat aria-label */}
+                  <a href="https://x.com/MIhaiDanielWeb3" target="_blank" className="text-gray-500 hover:text-white transition-colors" aria-label="Vizitează profilul de Twitter (X)"><Twitter/></a>
+                  <a href="https://www.youtube.com/@DanielMihaiCrypto" target="_blank" className="text-gray-500 hover:text-red-500 transition-colors" aria-label="Vizitează canalul de YouTube"><Youtube/></a>
+                  <a href="https://www.linkedin.com/in/mihaidanielmarius/" target="_blank" className="text-gray-500 hover:text-blue-500 transition-colors" aria-label="Vizitează profilul de LinkedIn"><Linkedin/></a>
+                  <a href="https://www.tiktok.com/@mihaidanielmarius?_r=1&_t=ZN-91pjNtkxoO3" target="_blank" className="text-gray-500 hover:text-pink-500 transition-colors" aria-label="Vizitează profilul de TikTok"><Video/></a>
               </div>
               <p className="text-sm text-gray-600">© 2026 Toate drepturile rezervate. <br/> Disclaimer: Educație Financiară. Nu este sfat de investiții.</p>
           </div>

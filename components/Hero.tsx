@@ -13,7 +13,7 @@ export default function Hero() {
         
         <div className="container mx-auto px-6 flex flex-col-reverse lg:flex-row items-center gap-16 lg:gap-24">
             
-            {/* TEXT (Rămâne animat, nu afectează LCP-ul negativ) */}
+            {/* TEXT */}
             <div className="flex-1 text-center lg:text-left z-10">
                 <motion.div 
                     initial={{ opacity: 0, y: 10 }}
@@ -45,7 +45,8 @@ export default function Hero() {
                     </a>
                 </div>
 
-                <div className="mt-12 flex items-center justify-center lg:justify-start gap-8 text-sm text-gray-500 font-medium">
+                {/* ✅ FIX CONTRAST: Schimbat text-gray-500 -> text-gray-400 */}
+                <div className="mt-12 flex items-center justify-center lg:justify-start gap-8 text-sm text-gray-400 font-medium">
                     <div className="flex items-center gap-2">
                         <TrendingUp size={18} className="text-green-500"/> Strategii Validate
                     </div>
@@ -55,20 +56,20 @@ export default function Hero() {
                 </div>
             </div>
 
-            {/* IMAGINE HERO - HTML PUR (MODIFICAT: Am scos motion.div) */}
-            {/* Asta va face ca poza să apară INSTANT, rezolvând render delay-ul */}
+            {/* IMAGINE HERO */}
             <div className="flex-1 relative w-full max-w-[480px]">
                 <div className="relative z-10 rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-blue-900/20 bg-[#0a0f1e] aspect-[4/5] group">
+                    {/* ✅ FIX LCP: fetchPriority="high" adăugat */}
                     <Image 
                         src="/mihai-daniel-icon.jpg" 
                         alt="Mihai Daniel"
                         fill
                         priority={true}
+                        fetchPriority="high"
                         className="object-cover w-full h-full opacity-100 group-hover:scale-105 transition-transform duration-1000"
                         sizes="(max-width: 768px) 100vw, 500px"
                     />
                     
-                    {/* Badge simplu de Brand */}
                     <div className="absolute bottom-6 left-6 right-6 bg-black/60 backdrop-blur-md border border-white/10 p-4 rounded-xl z-20">
                         <div className="text-white font-bold text-lg">Mihai Daniel</div>
                         <div className="text-xs text-gray-400 uppercase tracking-widest mt-1">Mentor & Investitor</div>
