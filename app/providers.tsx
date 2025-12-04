@@ -7,14 +7,14 @@ import { RainbowKitProvider, getDefaultConfig, darkTheme } from '@rainbow-me/rai
 import { mainnet, bsc, polygon, arbitrum, base } from 'wagmi/chains';
 import '@rainbow-me/rainbowkit/styles.css';
 
-// ⚠️ IMPORTANT: Înlocuiește textul de mai jos cu ID-ul copiat din Reown Cloud
-const projectId = 'AICI_LIPESTI_ID_UL_NOU_DE_LA_REOWN';
+// ✅ ID-ul tău corect de la Reown
+const projectId = 'f09e5e3fbd7859c34fa66ef408846d75';
 
 const config = getDefaultConfig({
   appName: 'Mihai Daniel Website',
   projectId: projectId,
   chains: [mainnet, bsc, polygon, arbitrum, base],
-  ssr: true, // Server Side Rendering activat pentru Next.js
+  ssr: true, // Server Side Rendering activat
 });
 
 const queryClient = new QueryClient();

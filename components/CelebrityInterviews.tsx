@@ -2,8 +2,10 @@
 
 import { useState } from 'react';
 import { Play, Star, Tv, ExternalLink } from 'lucide-react';
+// 1. IMPORTĂM COMPONENTA DE IMAGINE NEXT.JS
+import Image from 'next/image';
 
-// LISTA VIDEO OFICIALĂ (Conținut verificat)
+// LISTA VIDEO OFICIALĂ
 const VIDEOS = [
   { 
     id: 'e6fT2y3DkqI', 
@@ -45,21 +47,23 @@ const VideoCard = ({ id, title }: { id: string, title: string }) => {
   return (
     <article className="relative group rounded-2xl overflow-hidden border border-white/10 bg-[#0a0f1e] shadow-lg aspect-video hover:border-purple-500/50 transition-all duration-300">
       {!isPlaying ? (
-        // --- LITE MODE (Doar Poza - Se încarcă instant pentru Page Speed 100) ---
+        // --- LITE MODE (Imagine Optimizată Next.js) ---
         <div 
           className="cursor-pointer relative w-full h-full"
           onClick={() => setIsPlaying(true)}
           role="button"
           aria-label={`Redă video: ${title}`}
         >
-          {/* Thumbnail High-Res de la YouTube */}
-          <img 
+          {/* ✅ OPTIMIZARE MAJORĂ:
+             Folosim <Image /> care taie automat dimensiunea pozei.
+             'sizes' spune browserului cât loc ocupă pe ecran, ca să nu descarce poza full HD pe mobil.
+          */}
+          <Image 
             src={`https://img.youtube.com/vi/${id}/maxresdefault.jpg`} 
             alt={`Thumbnail pentru video: ${title}`}
-            className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
-            loading="lazy"
-            width={1280}
-            height={720}
+            className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
           />
           
           {/* Buton Play Custom */}
@@ -77,7 +81,7 @@ const VideoCard = ({ id, title }: { id: string, title: string }) => {
           </div>
         </div>
       ) : (
-        // --- HEAVY MODE (Iframe real) - Se încarcă DOAR la click ---
+        // --- HEAVY MODE (Iframe real) - Se activează doar la click ---
         <iframe 
           src={`https://www.youtube.com/embed/${id}?autoplay=1&rel=0&modestbranding=1`} 
           title={title}
@@ -98,7 +102,7 @@ export default function CelebrityInterviews() {
       
       <div className="container mx-auto px-6 relative z-10">
         
-        {/* Header Section - TEXT ACTUALIZAT PENTRU IMPACT MAXIM */}
+        {/* Header Section */}
         <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 text-xs font-bold tracking-widest mb-4 uppercase shadow-lg shadow-purple-500/10">
                 <Star size={14} className="text-yellow-400 fill-yellow-400"/> Hall of Fame Interviews
@@ -113,7 +117,7 @@ export default function CelebrityInterviews() {
             </p>
         </div>
 
-        {/* GRID VIDEO - RESPONSIVE PERFECT (1 -> 2 -> 3 -> 4 coloane) */}
+        {/* GRID VIDEO */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {VIDEOS.map((video) => (
                 <VideoCard key={video.id} id={video.id} title={video.title} />
