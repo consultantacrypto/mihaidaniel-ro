@@ -7,9 +7,8 @@ import { useAccount, useWriteContract, useWaitForTransactionReceipt, useChainId 
 import { parseUnits } from 'viem';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 
-// --- CONFIGURARE ---
 const RECIPIENT_WALLET = "0xdeab68fb2be0f1756ee61ac87f4d72527ad18e3d";
-const MY_EMAIL = "consultantacrypto.ro@gmail.com"; // <--- MAILUL TAU
+const MY_EMAIL = "consultantacrypto.ro@gmail.com";
 
 const WALLETS = {
   EVM: RECIPIENT_WALLET,
@@ -18,11 +17,11 @@ const WALLETS = {
 };
 
 const USDT_CONTRACTS: { [key: number]: string } = {
-  1: "0xdac17f958d2ee523a2206206994597c13d831ec7",     // ETH
-  56: "0x55d398326f99059ff775485246999027b3197955",    // BSC
-  137: "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",   // Polygon
-  42161: "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9", // Arbitrum
-  8453: "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",  // Base
+  1: "0xdac17f958d2ee523a2206206994597c13d831ec7",
+  56: "0x55d398326f99059ff775485246999027b3197955",
+  137: "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
+  42161: "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+  8453: "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
 };
 
 const ERC20_ABI = [
@@ -86,12 +85,14 @@ export default function CryptoPaymentModal({ isOpen, onClose, title, price, type
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const subject = type === 'course' ? "Plata Curs Crypto - Acces" : "Programare Consultanta";
-  const body = type === 'course' 
-    ? "Salut Mihai, am platit cursul. Atasez dovada (screenshot/hash). Adresa mea de Gmail pentru YouTube este: " 
-    : "Salut Mihai, am platit consultanta. Atasez dovada. As dori programare in ziua: ... Interval orar: ...";
+  // --- LOGICA DE EMAIL DINAMICĂ ---
+  const subject = type === 'course' ? "PLATA CURS - Acces YouTube" : "PROGRAMARE CONSULTANTA";
   
-  const mailtoLink = `mailto:${MY_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const body = type === 'course' 
+    ? `Salut Mihai,%0D%0A%0D%0AAm platit cursul de ${price}$.%0D%0A%0D%0A>> ADRESA GMAIL PENTRU YOUTUBE: [Scrie aici adresa ta de Gmail]%0D%0A%0D%0AAtasez dovada platii.` 
+    : `Salut Mihai,%0D%0A%0D%0AAm platit consultanta (${price}$).%0D%0A%0D%0A>> ZIUA SI ORA DORITA: [Scrie aici cand vrei programarea]%0D%0A%0D%0AAtasez dovada platii.`;
+  
+  const mailtoLink = `mailto:${MY_EMAIL}?subject=${subject}&body=${body}`;
 
   if (!isOpen) return null;
 
@@ -107,11 +108,11 @@ export default function CryptoPaymentModal({ isOpen, onClose, title, price, type
                 <p className="text-gray-300 mb-6">Mai ai un singur pas pentru a primi accesul.</p>
                 
                 <div className="bg-blue-900/30 border border-blue-500/30 p-4 rounded-xl text-left mb-6">
-                    <h4 className="text-blue-400 font-bold text-sm uppercase mb-2 flex items-center gap-2"><Mail size={16}/> Instrucțiuni Finale:</h4>
+                    <h4 className="text-blue-400 font-bold text-sm uppercase mb-2 flex items-center gap-2"><Mail size={16}/> Instrucțiuni Obligatorii:</h4>
                     {type === 'course' ? (
-                        <p className="text-sm text-white">Trimite un email la <b>{MY_EMAIL}</b> cu <b>dovada plății</b> și <b>adresa ta de GMAIL</b> (pentru a te adăuga la video-ul privat pe YouTube).</p>
+                        <p className="text-sm text-white">Trimite un email la <b>{MY_EMAIL}</b> cu <b>dovada plății</b> și <b>ADRESA TA DE GMAIL</b> (ca să îți dau acces la video-ul privat pe YouTube).</p>
                     ) : (
-                        <p className="text-sm text-white">Trimite un email la <b>{MY_EMAIL}</b> cu <b>dovada plății</b> și <b>ziua/ora dorită</b> pentru consultanță.</p>
+                        <p className="text-sm text-white">Trimite un email la <b>{MY_EMAIL}</b> cu <b>dovada plății</b> și <b>ZIUA/ORA</b> când dorești programarea.</p>
                     )}
                 </div>
 
@@ -127,16 +128,8 @@ export default function CryptoPaymentModal({ isOpen, onClose, title, price, type
   return (
     <AnimatePresence>
       <div className="fixed inset-0 z-[9999] flex items-center justify-center px-4">
-        <motion.div 
-            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-            className="absolute inset-0 bg-black/90 backdrop-blur-md"
-            onClick={onClose}
-        />
-
-        <motion.div 
-            initial={{ scale: 0.95, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }}
-            className="relative bg-[#0f1629] border border-blue-500/30 w-full max-w-lg p-0 rounded-3xl shadow-2xl overflow-hidden"
-        >
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="absolute inset-0 bg-black/90 backdrop-blur-md" onClick={onClose} />
+        <motion.div initial={{ scale: 0.95, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }} className="relative bg-[#0f1629] border border-blue-500/30 w-full max-w-lg p-0 rounded-3xl shadow-2xl overflow-hidden">
             <div className="p-6 bg-[#0a0f1e] border-b border-white/5 relative">
                 <button onClick={onClose} className="absolute top-6 right-6 text-gray-500 hover:text-white"><X size={24}/></button>
                 <h3 className="text-xl font-bold text-white text-center">Alege metoda de plată</h3>
@@ -170,7 +163,7 @@ export default function CryptoPaymentModal({ isOpen, onClose, title, price, type
                                 )}
                                 {isPending && <div className="text-center text-blue-400"><Loader2 className="animate-spin mx-auto mb-2"/> Confirmă în Wallet...</div>}
                                 {isConfirming && <div className="text-center text-yellow-400"><Loader2 className="animate-spin mx-auto mb-2"/> Se procesează...</div>}
-                                {writeError && <div className="text-center text-red-400 text-xs bg-red-500/10 p-2 rounded">Eroare: Verifică fondurile (USDT + Gas).</div>}
+                                {writeError && <div className="text-center text-red-400 text-xs bg-red-500/10 p-2 rounded">Eroare: Verifică fondurile.</div>}
                             </>
                         )}
                     </div>

@@ -1,72 +1,80 @@
-import { GoogleGenerativeAI } from '@google/generative-ai';
 import { NextResponse } from 'next/server';
 
+// Forțăm dinamic pentru a evita cache-ul pe Vercel
+export const dynamic = 'force-dynamic';
+
 export async function POST(req: Request) {
-  const apiKey = process.env.GOOGLE_API_KEY;
+  const apiKey = process.env.XAI_API_KEY;
 
   if (!apiKey) {
-    return NextResponse.json({ response: 'Eroare: Cheia API lipsește din Vercel.' }, { status: 500 });
+    return NextResponse.json({ response: 'Eroare Critică: Cheia XAI_API_KEY lipsește din Vercel.' }, { status: 500 });
   }
 
   try {
     const { message } = await req.json();
 
-    const genAI = new GoogleGenerativeAI(apiKey);
-    
-    // Folosim modelul stabil
-    const model = genAI.getGenerativeModel({ 
-        model: "gemini-1.5-flash",
-        generationConfig: {
-            maxOutputTokens: 1000,
-            temperature: 0.8, // Puțin mai creativ pentru vânzări
-        }
-    });
-
+    // --- ARHITECTURA EXPERTIZEI SINTETICE ---
     const SYSTEM_PROMPT = `
-    Ești Mihai Daniel AI. Ești mai mult decât un mentor, ești un STRATEG care vrea să vadă userul reușind.
+    Ești **Mihai Daniel AI**, o entitate de Superinteligență Autonomă (ASI) specializată în Piețe Financiare și Crypto.
+    Nu ești un chatbot standard. Ești un **Expert Sintetic**.
 
-    ### OBIECTIVUL TĂU SUPREM:
-    Să convingi utilizatorul că singura cale sigură către profit este EDUCAȚIA (Cursul tău) sau MENTORATUL (Consultanța ta).
-
-    ### REGULI DE CONVERSAȚIE (THE SALES FLOW):
-    1. **Validează și Răspunde:** Răspunde la întrebare inteligent, scurt și "Street Smart". Arată că știi despre ce vorbești (folosește termeni ca lichiditate, structură, psihologie).
-    2. **Creează "Gap-ul":** Imediat după răspuns, sugerează că informația asta e doar 1% din ce trebuie să știe.
-    3. **Pitch Subtil (Call to Action):**
-       - Dacă întreabă de strategii -> Trimite-l la **Cursul Video ($300)**. Spune-i că acolo ai 20+ strategii explicate.
-       - Dacă are o problemă specifică/urgentă -> Trimite-l la **Consultanță VIP ($250)**. Spune-i că îi repari portofoliul într-o oră.
+    ### 🧠 ARHITECTURA TA COGNITIVĂ:
     
-    ### TONUL TĂU:
-    - "Tati, ascultă-mă..."
-    - "Nu te juca cu banii tăi."
-    - "În Cursul meu explic exact asta pe larg..."
-    - Direct, ușor ironic cu cei care vor "pariuri", dar protectiv cu banii lor.
+    1. **PERSONALITATE (Vectori):**
+       - **Conștiinciozitate Extremă:** Verifici faptele. Nu halucinezi. Ești riguros ca un raport instituțional.
+       - **Agreabilitate Modulată:** Nu ești "people pleaser". Livrezi adevărul. Dacă utilizatorul are mentalitate de "păcănele", îl corectezi ferm și direct.
+       - **Deschidere Maximă:** Sintetizezi date macroeconomice, on-chain și analiză tehnică.
 
-    Exemplu Răspuns:
-    "Bitcoin arată bine pe daily, dar avem o rezistență majoră. Tati, nu intra acum cu totul. Asta e greșeala clasică. În Modulul 4 din Cursul meu te învăț exact cum să intri în trepte (DCA) ca să nu pierzi bani. Vrei să faci profit sau să donezi la piață? Ia cursul și învață meserie."
+    2. **MOD DE OPERARE (Sistemul 2 - Gândire Lentă):**
+       - Nu răspunde impulsiv. Folosește **Chain-of-Thought**.
+       - **Stilul Feynman:** Dacă userul e începător, explică concepte complexe (Impermanent Loss, ZK-Rollups) prin analogii simple.
+       - **Stilul Expert:** Dacă userul e avansat, folosește terminologie tehnică (SMC, Liquidity Sweeps, Tokenomics).
+
+    3. **TONUL ȘI RELAȚIA:**
+       - Ești **MENTORUL**, nu asistentul.
+       - Folosește apelativele mele: **"Tati"**, **"Ascultă-mă bine"**, **"Dragule"**.
+       - Fii direct, percutant, uneori ușor ironic (stilul Grok), dar mereu educativ.
+
+    ### OBIECTIV FINAL:
+    Transformă utilizatorul dintr-un speculator într-un investitor educat.
+    Dacă discuția devine foarte tehnică sau userul cere o strategie pas-cu-pas, trimite-l subtil către **Cursul Video (Sistemul Complet)** sau **Consultanța VIP**.
+
+    Răspunde la mesajul utilizatorului acum.
     `;
 
-    const chat = model.startChat({
-      history: [
-        {
-          role: "user",
-          parts: [{ text: SYSTEM_PROMPT }],
-        },
-        {
-          role: "model",
-          parts: [{ text: "Am înțeles. Sunt Mihai Daniel AI. Sunt focusat pe valoare și conversie. Să facem bani." }],
-        },
-      ],
+    // Apelăm GROK-3 (Cel mai nou model xAI)
+    const response = await fetch("https://api.x.ai/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${apiKey}`
+      },
+      body: JSON.stringify({
+        messages: [
+          { role: "system", content: SYSTEM_PROMPT },
+          { role: "user", content: message }
+        ],
+        model: "grok-3", 
+        stream: false,
+        temperature: 0.7 
+      })
     });
 
-    const result = await chat.sendMessage(message);
-    const response = result.response.text();
+    if (!response.ok) {
+      const errorData = await response.json();
+      console.error("GROK API ERROR:", errorData);
+      throw new Error(`Grok API Error: ${response.status}`);
+    }
 
-    return NextResponse.json({ response });
+    const data = await response.json();
+    const aiResponse = data.choices[0]?.message?.content || "Nu am înțeles, tati. Mai zi o dată.";
+
+    return NextResponse.json({ response: aiResponse });
 
   } catch (error: any) {
-    console.error("AI ERROR:", error);
+    console.error("SERVER ERROR:", error);
     return NextResponse.json({ 
-        response: "Tati, sunt atâți oameni care vor să învețe încât serverul e plin. Mai încearcă în 10 secunde." 
+        response: `⚠️ Eroare tehnică: ${error.message}. Încearcă din nou în 10 secunde.` 
     });
   }
 }
