@@ -1,13 +1,39 @@
 'use client';
 
+// 1. Importăm funcția dynamic pentru Lazy Loading
+import dynamic from 'next/dynamic';
+
+// 2. Componentele CRITICE (rămân importate normal pentru a apărea instantaneu)
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import SocialStats from '@/components/SocialStats';
-// NewsFeed a fost scos pentru a nu aglomera
-import CelebrityInterviews from '@/components/CelebrityInterviews';
-import AiTerminal from '@/components/AiTerminal';
-import Consultancy from '@/components/Consultancy';
-import Course from '@/components/Course';
+
+// 3. Componentele care pot aștepta puțin (le încărcăm dinamic pentru viteză)
+// SocialStats e ușor, dar ajută să nu blocheze randarea inițială
+const SocialStats = dynamic(() => import('@/components/SocialStats'), { 
+  ssr: true 
+});
+
+// CelebrityInterviews are multe poze, îl încărcăm cu un placeholder (spațiu gol) ca să nu sară pagina
+const CelebrityInterviews = dynamic(() => import('@/components/CelebrityInterviews'), { 
+  ssr: true,
+  loading: () => <div className="h-96 w-full bg-[#020617]/50 animate-pulse rounded-3xl" />
+});
+
+const Consultancy = dynamic(() => import('@/components/Consultancy'), { 
+  ssr: true 
+});
+
+// AiTerminal e cel mai greu (logică multă). Îl încărcăm doar pe client (ssr: false) pentru performanță maximă
+const AiTerminal = dynamic(() => import('@/components/AiTerminal'), { 
+  ssr: false, 
+  loading: () => <div className="min-h-[600px] w-full bg-[#01030c] animate-pulse" />
+});
+
+const Course = dynamic(() => import('@/components/Course'), { 
+  ssr: true 
+});
+
+// Importăm iconițele pentru Footer
 import { Twitter, Youtube, Linkedin, Video } from 'lucide-react';
 
 export default function Home() {
@@ -17,22 +43,22 @@ export default function Home() {
       {/* 1. Navigatia */}
       <Navbar />
       
-      {/* 2. Zona Hero (Tu și Mesajul Principal) */}
+      {/* 2. Zona Hero (Tu și Mesajul Principal) - SE ÎNCARCĂ PRIMA */}
       <Hero />
       
-      {/* 3. Cifrele (Social Proof) */}
+      {/* 3. Cifrele (Social Proof) - Se încarcă imediat după */}
       <SocialStats />
       
-      {/* 4. Interviuri cu Celebrități (Hall of Fame) - Urcat mai sus pentru autoritate */}
+      {/* 4. Interviuri cu Celebrități */}
       <CelebrityInterviews />
       
-      {/* 5. Consultanță (Produs High Ticket) */}
+      {/* 5. Consultanță */}
       <Consultancy />
       
-      {/* 6. AI Terminal (Tehnologie) */}
+      {/* 6. AI Terminal */}
       <AiTerminal />
       
-      {/* 7. Cursul (Produs Volum) */}
+      {/* 7. Cursul */}
       <Course />
 
       {/* 8. Footer */}
