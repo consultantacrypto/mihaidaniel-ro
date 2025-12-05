@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-// 1. IMPORTĂM SI INTER AICI
 import { Space_Grotesk, Inter } from "next/font/google"; 
 import "./globals.css";
 import { Providers } from "./providers";
 import Script from "next/script";
 
-// Fontul existent (Titluri) - RĂMÂNE LA FEL
+// 1. Configurare Fonturi (Cu display: swap pentru viteză)
 const spaceGrotesk = Space_Grotesk({ 
   subsets: ["latin"],
   weight: ['300', '400', '500', '600', '700'],
@@ -13,17 +12,23 @@ const spaceGrotesk = Space_Grotesk({
   display: 'swap', 
 });
 
-// ✅ FONTUL NOU (Articole) - SE ADAUGĂ
 const inter = Inter({ 
   subsets: ["latin"],
   variable: '--font-inter',
   display: 'swap', 
 });
 
+// 2. Metadata completă (SEO + Social + Verificare)
 export const metadata: Metadata = {
   title: "Mihai Daniel | Web3 Investor & Crypto Mentor",
   description: "Învață trading și investiții crypto de la Mihai Daniel. Cursuri premium, consultanță 1-la-1 și analiză de piață cu AI.",
   keywords: ["crypto", "bitcoin", "curs trading", "mihai daniel", "investitii", "blockchain", "binance cto", "mmcrypto"],
+  
+  // ✅ CODUL DE VERIFICARE GOOGLE SEARCH CONSOLE
+  verification: {
+    google: 'vHIFda0TK5EKXwxKHpAN_eJr2vG6fbPR6uIGvFOZn6o',
+  },
+
   openGraph: {
     title: "Mihai Daniel - Expert Crypto",
     description: "Educație financiară de top. Scapă de mentalitatea de parior.",
@@ -47,9 +52,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ro">
-      {/* 2. ADĂUGĂM VARIABILA INTER AICI: ${inter.variable} */}
+      {/* 3. Aplicăm ambele fonturi variabile în Body */}
       <body className={`${spaceGrotesk.variable} ${inter.variable} font-sans antialiased`}>
         
+        {/* Google Analytics - Optimizat (se încarcă în fundal) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-ZYYJ251HYH"
           strategy="lazyOnload"
