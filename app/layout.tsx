@@ -4,10 +4,12 @@ import "./globals.css";
 import { Providers } from "./providers";
 import Script from "next/script";
 
+// ✅ MODIFICARE AICI: Adăugat display: 'swap'
 const spaceGrotesk = Space_Grotesk({ 
   subsets: ["latin"],
   weight: ['300', '400', '500', '600', '700'],
   variable: '--font-space',
+  display: 'swap', 
 });
 
 export const metadata: Metadata = {
@@ -39,7 +41,7 @@ export default function RootLayout({
     <html lang="ro">
       <body className={`${spaceGrotesk.variable} font-sans antialiased`}>
         
-        {/* Google Analytics GA4 - MODIFICAT: strategy="lazyOnload" */}
+        {/* Google Analytics - Rămâne optimizat lazyOnload */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-ZYYJ251HYH"
           strategy="lazyOnload"

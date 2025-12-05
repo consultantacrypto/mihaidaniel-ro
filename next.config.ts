@@ -1,7 +1,18 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // ✅ AICI ESTE FIX-UL PENTRU IMAGINI (YouTube)
+  // ✅ 1. OPTIMIZARE JS: Activăm Tree-Shaking agresiv pentru bibliotecile grele
+  experimental: {
+    optimizePackageImports: [
+      'lucide-react', 
+      'framer-motion', 
+      '@rainbow-me/rainbowkit', 
+      'wagmi', 
+      'viem'
+    ],
+  },
+
+  // ✅ 2. IMAGINI (Păstrat din codul tău)
   images: {
     remotePatterns: [
       {
@@ -24,7 +35,7 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
   
-  // Fix pentru WalletConnect (module lipsă)
+  // ✅ 3. FIX WALLET CONNECT (Păstrat din codul tău)
   webpack: (config: any) => {
     config.externals.push(
       "pino-pretty",
