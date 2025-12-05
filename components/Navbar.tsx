@@ -10,7 +10,7 @@ export default function Navbar() {
 
   return (
     <nav className="w-full px-6 py-4 flex justify-between items-center border-b border-white/5 bg-[#020617]/90 backdrop-blur-xl sticky top-0 z-50 transition-all duration-300">
-      <Link href="/" className="flex items-center gap-3 group cursor-pointer">
+      <Link href="/" className="flex items-center gap-3 group cursor-pointer" aria-label="Mihai Daniel Home">
           <div className="relative w-12 h-12 flex items-center justify-center">
               <div className="absolute inset-0 bg-gradient-to-tr from-blue-600 to-purple-600 rounded-xl skew-x-[-10deg] shadow-[0_0_20px_rgba(37,99,235,0.3)] group-hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] transition-all duration-500"></div>
               <div className="absolute inset-[2px] bg-[#020617] rounded-[10px] skew-x-[-10deg]"></div>
@@ -43,7 +43,7 @@ export default function Navbar() {
           </a>
           <a href="/#curs" className="hover:text-white transition-colors">Curs Premium</a>
           
-          <a href="https://www.youtube.com/@DanielMihaiCrypto" target="_blank" className="flex items-center gap-2 text-red-400 bg-red-500/10 px-3 py-1 rounded-full border border-red-500/20 text-xs hover:bg-red-500/20 transition-all cursor-pointer">
+          <a href="https://www.youtube.com/@DanielMihaiCrypto" target="_blank" className="flex items-center gap-2 text-red-400 bg-red-500/10 px-3 py-1 rounded-full border border-red-500/20 text-xs hover:bg-red-500/20 transition-all cursor-pointer" aria-label="Canal YouTube Mihai Daniel">
               <Youtube size={14}/> 
               <span className="font-mono font-bold">96.6K</span>
           </a>
@@ -51,7 +51,8 @@ export default function Navbar() {
 
       <div className="flex items-center gap-4">
         <ConnectButton showBalance={false} chainStatus="icon" accountStatus="avatar" />
-        <button className="lg:hidden text-white" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+        {/* ✅ FIX ACCESIBILITATE: aria-label adăugat */}
+        <button className="lg:hidden text-white p-2" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label={mobileMenuOpen ? "Închide meniu" : "Deschide meniu"}>
             {mobileMenuOpen ? <X/> : <Menu/>}
         </button>
       </div>
