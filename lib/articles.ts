@@ -1,10 +1,46 @@
 export const articles = [ 
+  // ✅ ARTICOL NOU: ATAC 27M (PRIMA POZIȚIE)
+  {
+    slug: "atac-27-milioane-link-malitios",
+    title: "ALERTA: Cum să pierzi 27.000.000$ într-o secundă. Pericolul invizibil din buzunarul tău",
+    date: "05 Dec 2025",
+    category: "SECURITATE",
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1000&auto=format&fit=crop", // Imagine Hacker/Cybersecurity
+    impact: "bearish", 
+    summary: "Un investitor experimentat a pierdut o avere printr-un singur click pe telefon. Nu a fost un hack complex, ci o manipulare psihologică. Învață cum să nu fii următoarea victimă.",
+    mihaiTake: "Tati, reține o regulă de aur: În crypto, paranoia este cel mai bun prieten al tău. Nu pierzi bani când ești speriat, pierzi bani când te simți 'sigur' și 'experimentat'. Telefonul de pe care faci tranzacții NU are ce căuta pe link-uri dubioase de pe Telegram.",
+    content: `
+      <p>Astăzi analizăm un caz de groază care a zguduit comunitatea crypto. Cineva tocmai a fost golit de <strong>27.000.000 USD</strong>. </p>
+      <p>Partea cea mai înfricoșătoare? Nu a fost un atac sofisticat asupra unui bridge. Nu i-a fost spartă parola. Nu a descărcat un virus în mod conștient. <strong>A dat un singur click.</strong></p>
+
+      <h3>Cum s-a întâmplat "imposibilul"?</h3>
+      <p>Povestea este un manual de "Inginerie Socială":</p>
+      <ul>
+        <li>Atacatorul a început prin șantaj. Victima, în loc să ignore, a devenit curioasă.</li>
+        <li>Au vorbit zile întregi. Atacatorul i-a câștigat încrederea trimițându-i informații reale și link-uri sigure timp de câteva zile.</li>
+        <li>Victima a lăsat garda jos. Gândul fatal a fost: <em>"Sunt experimentat, știu la ce să mă uit, sunt în siguranță."</em></li>
+      </ul>
+
+      <h3>Secunda Fatală</h3>
+      <p>Atacatorul a trimis un link care arăta <strong>exact ca un link de Etherscan</strong> (exploratorul de blocuri Ethereum). Victima l-a deschis de pe telefon.</p>
+      <p>Site-ul a executat instantaneu un cod malițios. Fără pop-up. Fără avertisment. Fără să ceară permisiuni.</p>
+      <p>Telefonul respectiv era folosit ca "Semnatar" (Signer) pentru un portofel Multisig. Atacatorul a extras metadatele și accesul necesar din telefon într-o fracțiune de secundă.</p>
+
+      <h3>Lecțiile Cruciale pentru Tine:</h3>
+      <ol>
+        <li><strong>Separarea Dispozitivelor:</strong> Telefonul sau laptopul pe care ții wallet-ul (Metamask, Phantom etc.) NU trebuie folosit pentru chat pe Telegram, Discord sau pentru a da click pe link-uri.</li>
+        <li><strong>Curiozitatea Ucide Portofelul:</strong> Dacă cineva te abordează cu "informații urgente" sau șantaj, dă BLOCK instant. Nu încerca să fii detectiv.</li>
+        <li><strong>Sindromul Invincibilității:</strong> Cei mai mulți bani se pierd nu când ești începător și verifici totul de 10 ori, ci când devii expert și crezi că ție nu ți se poate întâmpla.</li>
+      </ol>
+
+      <p><strong>Concluzie:</strong> Un click greșit te poate costa totul. Rămâi paranoic. Rămâi în siguranță.</p>
+    `
+  },
   {
     slug: "marea-convergenta-crypto",
     title: "Marea Convergență: Vanguard și CFTC validează Crypto ca 'Gold Standard'",
     date: "05 Dec 2025",
     category: "REGLEMENTARE",
-    // ✅ LINK NOU ȘI STABIL (Bitcoin + Finance Chart)
     image: "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?q=80&w=1000&auto=format&fit=crop", 
     impact: "bullish",
     summary: "Moment istoric: Vanguard acceptă ETF-uri crypto, iar CFTC anunță piețe reglementate federal. Crypto intră oficial pe ușa din față a Wall Street-ului.",
