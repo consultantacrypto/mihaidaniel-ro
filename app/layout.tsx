@@ -1,14 +1,22 @@
 import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google"; 
+// 1. IMPORTĂM SI INTER AICI
+import { Space_Grotesk, Inter } from "next/font/google"; 
 import "./globals.css";
 import { Providers } from "./providers";
 import Script from "next/script";
 
-// ✅ MODIFICARE AICI: Adăugat display: 'swap'
+// Fontul existent (Titluri) - RĂMÂNE LA FEL
 const spaceGrotesk = Space_Grotesk({ 
   subsets: ["latin"],
   weight: ['300', '400', '500', '600', '700'],
   variable: '--font-space',
+  display: 'swap', 
+});
+
+// ✅ FONTUL NOU (Articole) - SE ADAUGĂ
+const inter = Inter({ 
+  subsets: ["latin"],
+  variable: '--font-inter',
   display: 'swap', 
 });
 
@@ -39,9 +47,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ro">
-      <body className={`${spaceGrotesk.variable} font-sans antialiased`}>
+      {/* 2. ADĂUGĂM VARIABILA INTER AICI: ${inter.variable} */}
+      <body className={`${spaceGrotesk.variable} ${inter.variable} font-sans antialiased`}>
         
-        {/* Google Analytics - Rămâne optimizat lazyOnload */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-ZYYJ251HYH"
           strategy="lazyOnload"
