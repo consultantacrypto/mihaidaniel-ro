@@ -3,10 +3,41 @@
 import Navbar from '@/components/Navbar';
 import { Calendar, Clock, ArrowLeft, Share2, AlertTriangle, ShieldAlert, Lock, Smartphone } from 'lucide-react';
 import Link from 'next/link';
+import Script from 'next/script';
 
 export default function ArticlePage() {
+  // ✅ SECRETUL PENTRU GOOGLE DISCOVER: Schema.org
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'NewsArticle',
+    'headline': 'ALERTA: Cum să pierzi 27.000.000$ într-o secundă. Pericolul invizibil din buzunarul tău.',
+    'image': [
+      'https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1200&auto=format&fit=crop'
+    ],
+    'datePublished': '2025-12-05T08:00:00+02:00',
+    'dateModified': '2025-12-05T09:20:00+02:00',
+    'author': [{
+      '@type': 'Person',
+      'name': 'Mihai Daniel',
+      'url': 'https://mihaidaniel.ro',
+      'sameAs': [
+        'https://x.com/MIhaiDanielWeb3',
+        'https://www.youtube.com/@DanielMihaiCrypto',
+        'https://www.linkedin.com/in/mihaidanielmarius/',
+        'https://www.tiktok.com/@mihaidanielmarius'
+      ]
+    }]
+  };
+
   return (
     <main className="min-h-screen flex flex-col bg-[#020617] text-white selection:bg-red-500/30">
+      {/* Injectăm Schema pentru Google */}
+      <Script
+        id="article-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <Navbar />
 
       <article className="flex-1 container mx-auto px-6 py-12 max-w-4xl">
@@ -143,9 +174,9 @@ export default function ArticlePage() {
                 Autor: <span className="text-white font-bold">Mihai Daniel</span> • Analist Crypto
             </div>
             <div className="flex gap-4">
-                <button className="flex items-center gap-2 text-sm font-bold text-blue-400 hover:text-white transition-colors bg-blue-500/10 px-4 py-2 rounded-lg border border-blue-500/20">
-                    <Share2 size={16}/> Distribuie pe X
-                </button>
+                <a href="https://x.com/MIhaiDanielWeb3" target="_blank" className="flex items-center gap-2 text-sm font-bold text-blue-400 hover:text-white transition-colors bg-blue-500/10 px-4 py-2 rounded-lg border border-blue-500/20">
+                    <Share2 size={16}/> Urmărește pe X
+                </a>
             </div>
         </div>
 
