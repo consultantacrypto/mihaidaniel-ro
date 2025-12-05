@@ -1,11 +1,11 @@
-// Aici adaugi știrile tale. Doar copiezi un bloc și schimbi textul.
 export const articles = [ 
   {
     slug: "marea-convergenta-crypto",
     title: "Marea Convergență: Vanguard și CFTC validează Crypto ca 'Gold Standard'",
     date: "05 Dec 2025",
     category: "REGLEMENTARE",
-    image: "https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=1000&auto=format&fit=crop", // Imagine Wall Street / Finance
+    // ✅ LINK NOU ȘI STABIL (Bitcoin + Finance Chart)
+    image: "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?q=80&w=1000&auto=format&fit=crop", 
     impact: "bullish",
     summary: "Moment istoric: Vanguard acceptă ETF-uri crypto, iar CFTC anunță piețe reglementate federal. Crypto intră oficial pe ușa din față a Wall Street-ului.",
     mihaiTake: "Tati, nu e doar o știre, e semnalul de start pentru 'Super Cycle'. Vanguard aduce trilioanele de dolari, iar CFTC aduce siguranța legală. Când cei care ne numeau 'scam' acum vor să ne vândă ETF-uri, știi că am câștigat. E 'Game Over' pentru urși pe termen lung.",
@@ -60,19 +60,16 @@ export const articles = [
     `
   },
   {
-    slug: "sec-aproba-etf-ethereum", // Link-ul unic (fără spații)
+    slug: "sec-aproba-etf-ethereum",
     title: "SEC Aprobă ETF-ul de Ethereum Spot",
     date: "12 Dec 2025",
     category: "REGLEMENTARE",
     image: "https://images.unsplash.com/photo-1622630998477-20aa696fa405?q=80&w=1000&auto=format&fit=crop",
-    impact: "bullish", // bullish, bearish, neutral
+    impact: "bullish",
     summary: "Comisia americană a dat undă verde pentru tranzacționarea ETF-urilor ETH.",
     mihaiTake: "Instituțiile nu mai au scuze. Mă aștept la un flow de 5-10 miliarde $. Ethereum devine 'Internet Bond'.",
     content: `
       <p>Aici scrii textul complet al articolului...</p>
-      <p>Decizia SEC marchează un moment istoric...</p>
-      <h2>De ce contează?</h2>
-      <p>Pentru că deschide robinetul banilor instituționali...</p>
     `
   },
   {
