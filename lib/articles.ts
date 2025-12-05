@@ -1,5 +1,30 @@
 // Aici adaugi știrile tale. Doar copiezi un bloc și schimbi textul.
-export const articles = [ {
+export const articles = [ 
+  {
+    slug: "marea-convergenta-crypto",
+    title: "Marea Convergență: Vanguard și CFTC validează Crypto ca 'Gold Standard'",
+    date: "05 Dec 2025",
+    category: "REGLEMENTARE",
+    image: "https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=1000&auto=format&fit=crop", // Imagine Wall Street / Finance
+    impact: "bullish",
+    summary: "Moment istoric: Vanguard acceptă ETF-uri crypto, iar CFTC anunță piețe reglementate federal. Crypto intră oficial pe ușa din față a Wall Street-ului.",
+    mihaiTake: "Tati, nu e doar o știre, e semnalul de start pentru 'Super Cycle'. Vanguard aduce trilioanele de dolari, iar CFTC aduce siguranța legală. Când cei care ne numeau 'scam' acum vor să ne vândă ETF-uri, știi că am câștigat. E 'Game Over' pentru urși pe termen lung.",
+    content: `
+      <p>Dacă până acum întrebarea era <strong>"Va supraviețui crypto?"</strong>, noile evenimente schimbă întrebarea în <strong>"Cât de mare va ajunge?"</strong>. În ultimele zile, am asistat la două evenimente monumentale în Statele Unite care semnalează sfârșitul fazei de "Vest Sălbatic".</p>
+
+      <h3>1. Uriașul s-a trezit: Vanguard îmbrățișează Crypto</h3>
+      <p><strong>Vestea:</strong> Vanguard, a doua cea mai mare firmă de gestionare a activelor din lume (trilioane de dolari), a decis să permită listarea ETF-urilor și fondurilor mutuale crypto. Vorbim despre Bitcoin, Ethereum, Solana și XRP.</p>
+      <p><strong>De ce este șocant?</strong> Vanguard a fost, istoric vorbind, cel mai mare critic al criptomonedelor. Faptul că ei au făcut o întoarcere la 180 de grade este semnalul suprem de validare instituțională.</p>
+
+      <h3>2. "Gold Standard-ul" Reglementării: CFTC și Piețele Federale</h3>
+      <p><strong>Vestea:</strong> CFTC (Commodity Futures Trading Commission) a anunțat că produsele crypto "spot" vor începe să fie tranzacționate pe burse futures reglementate federal.</p>
+      <p>Acesta este <strong>"Gold Standard-ul"</strong> pentru siguranță. Spre deosebire de bursele offshore, acum crypto se va tranzacționa pe platforme verificate, sigure, care respectă standardele federale de aproape 100 de ani.</p>
+
+      <h3>Concluzie: Ce înseamnă asta pentru noi?</h3>
+      <p>Mesajul este clar: <strong>Vanguard aduce capitalul</strong>, iar <strong>CFTC aduce siguranța</strong>. Este momentul în care crypto iese din "garaj" și intră pe ușa din față a Wall Street-ului.</p>
+    `
+  },
+  {
     slug: "qivalis-banci-europene-stablecoin",
     title: "BREAKING: 9 Bănci Gigant lansează Qivalis - Euro Stablecoin",
     date: "03 Dec 2025",
