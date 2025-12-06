@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Loader2, CheckCircle2, AlertCircle, Wallet, Globe, Copy, Zap, Layers, Mail, ArrowRight } from 'lucide-react';
+import { X, Loader2, CheckCircle2, AlertCircle, Wallet, Globe, Copy, Zap, Layers, Mail, ArrowRight, BrainCircuit } from 'lucide-react';
 import { useAccount, useWriteContract, useWaitForTransactionReceipt, useChainId } from 'wagmi';
 import { parseUnits } from 'viem';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
@@ -62,6 +62,41 @@ export default function CryptoPaymentModal({ isOpen, onClose, title, price, type
     else setTargetNetwork("Nesuportată");
   }, [chainId]);
 
+  // ✅ TRACKING SUCCES (Plată confirmată)
+  const trackSuccess = () => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'purchase', {
+        transaction_id: `tx_${Date.now()}`,
+        value: price,
+        currency: 'USD',
+        items: [{ item_name: title, item_category: type }]
+      });
+    }
+  };
+
+  useEffect(() => {
+    if (isConfirmed) trackSuccess();
+  }, [isConfirmed]);
+
+  const handleManualSent = () => {
+      setManualSent(true);
+      trackSuccess();
+  };
+
+  // ✅ TRACKING ABANDON (Când închide fără să plătească)
+  const handleClose = () => {
+    if (!isConfirmed && !manualSent) {
+       if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'checkout_progress', {
+             checkout_step: 1,
+             item_name: title,
+             status: 'abandoned'
+          });
+       }
+    }
+    onClose();
+  };
+
   const handlePayment = () => {
     if (!isConnected) return;
     const contractAddress = USDT_CONTRACTS[chainId];
@@ -85,9 +120,7 @@ export default function CryptoPaymentModal({ isOpen, onClose, title, price, type
     setTimeout(() => setCopied(false), 2000);
   };
 
-  // --- LOGICA DE EMAIL DINAMICĂ ---
   const subject = type === 'course' ? "PLATA CURS - Acces YouTube" : "PROGRAMARE CONSULTANTA";
-  
   const body = type === 'course' 
     ? `Salut Mihai,%0D%0A%0D%0AAm platit cursul de ${price}$.%0D%0A%0D%0A>> ADRESA GMAIL PENTRU YOUTUBE: [Scrie aici adresa ta de Gmail]%0D%0A%0D%0AAtasez dovada platii.` 
     : `Salut Mihai,%0D%0A%0D%0AAm platit consultanta (${price}$).%0D%0A%0D%0A>> ZIUA SI ORA DORITA: [Scrie aici cand vrei programarea]%0D%0A%0D%0AAtasez dovada platii.`;
@@ -99,7 +132,7 @@ export default function CryptoPaymentModal({ isOpen, onClose, title, price, type
   if (isConfirmed || manualSent) {
       return (
         <div className="fixed inset-0 z-[9999] flex items-center justify-center px-4">
-            <div className="absolute inset-0 bg-black/90 backdrop-blur-md" onClick={onClose}/>
+            <div className="absolute inset-0 bg-black/90 backdrop-blur-md" onClick={handleClose}/>
             <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="relative bg-[#0f1629] border border-green-500/50 w-full max-w-md p-8 rounded-3xl shadow-2xl text-center">
                 <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6 text-green-500 border-2 border-green-500">
                     <CheckCircle2 size={40}/>
@@ -119,7 +152,7 @@ export default function CryptoPaymentModal({ isOpen, onClose, title, price, type
                 <a href={mailtoLink} className="w-full py-4 bg-green-600 hover:bg-green-500 text-white font-bold rounded-xl shadow-lg flex items-center justify-center gap-2 transition-all mb-4">
                     Trimite Email Acum <ArrowRight size={18}/>
                 </a>
-                <button onClick={onClose} className="text-gray-500 hover:text-white text-sm">Închide</button>
+                <button onClick={handleClose} className="text-gray-500 hover:text-white text-sm">Închide</button>
             </motion.div>
         </div>
       )
@@ -128,10 +161,10 @@ export default function CryptoPaymentModal({ isOpen, onClose, title, price, type
   return (
     <AnimatePresence>
       <div className="fixed inset-0 z-[9999] flex items-center justify-center px-4">
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="absolute inset-0 bg-black/90 backdrop-blur-md" onClick={onClose} />
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="absolute inset-0 bg-black/90 backdrop-blur-md" onClick={handleClose} />
         <motion.div initial={{ scale: 0.95, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }} className="relative bg-[#0f1629] border border-blue-500/30 w-full max-w-lg p-0 rounded-3xl shadow-2xl overflow-hidden">
             <div className="p-6 bg-[#0a0f1e] border-b border-white/5 relative">
-                <button onClick={onClose} className="absolute top-6 right-6 text-gray-500 hover:text-white"><X size={24}/></button>
+                <button onClick={handleClose} className="absolute top-6 right-6 text-gray-500 hover:text-white"><X size={24}/></button>
                 <h3 className="text-xl font-bold text-white text-center">Alege metoda de plată</h3>
                 <p className="text-center text-gray-400 text-sm mt-1">{title}</p>
                 <div className="mt-2 text-center text-3xl font-mono font-bold text-white">${price} USDT</div>
@@ -142,7 +175,7 @@ export default function CryptoPaymentModal({ isOpen, onClose, title, price, type
                 <button onClick={() => setActiveTab('manual')} className={`flex-1 py-3 rounded-xl text-sm font-bold flex items-center justify-center gap-2 transition-all ${activeTab === 'manual' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white'}`}><Layers size={16}/> Manual (Tron/Sol)</button>
             </div>
 
-            <div className="p-8">
+            <div className="p-8 pb-4">
                 {activeTab === 'auto' && (
                     <div className="space-y-6">
                         {!isConnected ? (
@@ -185,12 +218,21 @@ export default function CryptoPaymentModal({ isOpen, onClose, title, price, type
 
                         {copied && <div className="text-center text-green-500 text-xs font-bold">Adresă Copiată!</div>}
                         
-                        <button onClick={() => setManualSent(true)} className="w-full py-3 bg-white/10 hover:bg-white/20 text-white font-bold rounded-lg mt-4">
+                        <button onClick={handleManualSent} className="w-full py-3 bg-white/10 hover:bg-white/20 text-white font-bold rounded-lg mt-4">
                             Am efectuat transferul
                         </button>
                     </div>
                 )}
             </div>
+
+            {/* ✅ SMART PUSH - Aici e noutatea */}
+            <div className="p-4 bg-[#0a0f1e]/50 border-t border-white/5 text-center">
+                <p className="text-xs text-gray-500 mb-2">Nesigur dacă e momentul potrivit?</p>
+                <a href="/#ai" onClick={handleClose} className="inline-flex items-center gap-2 text-xs font-bold text-blue-400 hover:text-white transition-colors border border-blue-500/20 px-4 py-2 rounded-full hover:bg-blue-500/10">
+                    <BrainCircuit size={14}/> Întreabă-l pe Mihai AI
+                </a>
+            </div>
+
         </motion.div>
       </div>
     </AnimatePresence>

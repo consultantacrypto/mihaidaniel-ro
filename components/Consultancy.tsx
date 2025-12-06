@@ -8,6 +8,19 @@ import Image from 'next/image';
 export default function Consultancy() {
   const [isPaymentOpen, setPaymentOpen] = useState(false);
 
+  // ✅ TRACKING INTRARE: Numărăm click-urile pe "Rezervă"
+  const handleOpenBooking = () => {
+    // Anunțăm Google că cineva a început procesul
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'begin_checkout', {
+        currency: 'USD',
+        value: 250,
+        items: [{ item_name: 'Consultanta VIP 1 la 1', item_id: 'consultancy_vip' }]
+      });
+    }
+    setPaymentOpen(true);
+  };
+
   return (
     <section id="consultanta" className="py-24 bg-[#050b1d] border-t border-white/5 relative overflow-hidden">
         <div className="absolute right-0 bottom-0 w-[600px] h-[600px] bg-yellow-600/5 rounded-full blur-[150px] pointer-events-none"></div>
@@ -31,7 +44,6 @@ export default function Consultancy() {
                         Consultanță <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">VIP 1 la 1</span>
                     </h2>
                     
-                    {/* FIX CONTRAST: text-gray-300 */}
                     <p className="text-xl text-gray-300 leading-relaxed border-l-4 border-yellow-500/50 pl-6">
                         O oră intensivă. Audităm portofoliul, corectăm greșelile și setăm strategia de Exit.
                         <span className="block mt-2 text-white font-bold">Nu discutăm teorie. Discutăm banii tăi.</span>
@@ -39,7 +51,6 @@ export default function Consultancy() {
                     
                     <div className="bg-gradient-to-br from-[#1a1500] to-black border border-yellow-500/30 p-6 rounded-2xl relative group hover:border-yellow-500/60 transition-colors">
                         <div className="absolute top-0 right-0 bg-yellow-600 text-black text-[10px] font-bold px-3 py-1 rounded-bl-xl">BONUS GRATUIT ($200)</div>
-                        {/* FIX HEADING: h3 pentru structura corectă */}
                         <h3 className="font-bold text-lg text-white mb-4 flex items-center gap-2">
                             <Zap size={18} className="text-yellow-500"/> PACHET AI INVESTOR
                         </h3>
@@ -61,13 +72,12 @@ export default function Consultancy() {
 
                     <div className="pt-4">
                         <button 
-                            onClick={() => setPaymentOpen(true)}
+                            onClick={handleOpenBooking} // ✅ AICI S-A FĂCUT MODIFICAREA CHEIE
                             aria-label="Rezervă sesiunea de consultanță"
                             className="w-full sm:w-auto px-12 py-5 bg-gradient-to-r from-yellow-600 to-yellow-500 hover:from-yellow-500 hover:to-yellow-400 text-black font-black text-lg rounded-xl shadow-[0_0_40px_rgba(234,179,8,0.3)] hover:scale-105 transition-transform flex items-center justify-center gap-3 cursor-pointer"
                         >
                             Rezervă Sesiunea - $250 <ArrowRight size={20}/>
                         </button>
-                        {/* FIX CONTRAST: text-gray-400 */}
                         <p className="text-sm text-gray-400 mt-3 pl-2 flex items-center gap-2">
                             <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span> Maxim 2 locuri pe zi.
                         </p>
