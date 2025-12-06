@@ -68,6 +68,37 @@ const nextConfig: NextConfig = {
 
     return config;
   },
+
+  // ✅ 4. FIX NOU: Redirect-uri pentru a salva traficul vechi (Erorile 404)
+  async redirects() {
+    return [
+      {
+        source: '/en',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/pages/cursuri',
+        destination: '/#curs',
+        permanent: true,
+      },
+      {
+        source: '/blogs/crypto-news',
+        destination: '/stiri',
+        permanent: true,
+      },
+      {
+        source: '/products/consultanta-crypto',
+        destination: '/#consultanta',
+        permanent: true,
+      },
+      {
+        source: '/products/consultanta',
+        destination: '/#consultanta',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
