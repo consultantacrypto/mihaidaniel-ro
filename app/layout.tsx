@@ -4,7 +4,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 import Script from "next/script";
 
-// 1. Configurare Fonturi (Cu display: swap pentru viteză)
+// 1. Configurare Fonturi
 const spaceGrotesk = Space_Grotesk({ 
   subsets: ["latin"],
   weight: ['300', '400', '500', '600', '700'],
@@ -18,15 +18,22 @@ const inter = Inter({
   display: 'swap', 
 });
 
-// 2. Metadata completă (SEO + Social + Verificare)
+// 2. Metadata completă (SEO + Social + Verificare + Favicon)
 export const metadata: Metadata = {
   title: "Mihai Daniel | Web3 Investor & Crypto Mentor",
   description: "Învață trading și investiții crypto de la Mihai Daniel. Cursuri premium, consultanță 1-la-1 și analiză de piață cu AI.",
   keywords: ["crypto", "bitcoin", "curs trading", "mihai daniel", "investitii", "blockchain", "binance cto", "mmcrypto"],
   
-  // ✅ CODUL DE VERIFICARE GOOGLE SEARCH CONSOLE
+  // Codul de verificare Google (Păstrat)
   verification: {
     google: 'vHIFda0TK5EKXwxKHpAN_eJr2vG6fbPR6uIGvFOZn6o',
+  },
+
+  // ✅ AICI AM ADĂUGAT FAVICON-UL NOU
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/icon.svg',
+    apple: '/icon.svg',
   },
 
   openGraph: {
@@ -52,10 +59,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ro">
-      {/* 3. Aplicăm ambele fonturi variabile în Body */}
       <body className={`${spaceGrotesk.variable} ${inter.variable} font-sans antialiased`}>
         
-        {/* Google Analytics - Optimizat (se încarcă în fundal) */}
+        {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-ZYYJ251HYH"
           strategy="lazyOnload"

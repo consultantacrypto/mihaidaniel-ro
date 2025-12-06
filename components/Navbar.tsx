@@ -11,21 +11,26 @@ export default function Navbar() {
   return (
     <nav className="w-full px-6 py-4 flex justify-between items-center border-b border-white/5 bg-[#020617]/90 backdrop-blur-xl sticky top-0 z-50 transition-all duration-300">
       <Link href="/" className="flex items-center gap-3 group cursor-pointer" aria-label="Mihai Daniel Home">
-          <div className="relative w-12 h-12 flex items-center justify-center">
-              <div className="absolute inset-0 bg-gradient-to-tr from-blue-600 to-purple-600 rounded-xl skew-x-[-10deg] shadow-[0_0_20px_rgba(37,99,235,0.3)] group-hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] transition-all duration-500"></div>
-              <div className="absolute inset-[2px] bg-[#020617] rounded-[10px] skew-x-[-10deg]"></div>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="relative z-10 text-white transform skew-x-[-10deg]">
-                  <path d="M4 20V4L12 12L20 4V20" stroke="url(#paint0_linear)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                  <defs>
-                    <linearGradient id="paint0_linear" x1="4" y1="4" x2="20" y2="20" gradientUnits="userSpaceOnUse">
-                      <stop stopColor="#60A5FA" />
-                      <stop offset="1" stopColor="#A78BFA" />
-                    </linearGradient>
-                  </defs>
+          {/* ✅ LOGO NOU PREMIUM (M-ul Bullish) */}
+          <div className="relative w-12 h-12 flex items-center justify-center bg-[#020617] rounded-xl border border-blue-500/20 shadow-[0_0_15px_rgba(59,130,246,0.3)] group-hover:shadow-[0_0_25px_rgba(59,130,246,0.5)] transition-all duration-500 overflow-hidden">
+              {/* Glow Effect */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              {/* Simbolul Vectorial */}
+              <svg width="28" height="28" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" className="relative z-10 transform group-hover:scale-110 transition-transform duration-500">
+                <defs>
+                  <linearGradient id="paint0_linear" x1="130" y1="380" x2="382" y2="180" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#3b82f6" />
+                    <stop offset="1" stopColor="#8b5cf6" />
+                  </linearGradient>
+                </defs>
+                <path d="M130 380 V180 L256 300 L382 180 V260" stroke="url(#paint0_linear)" strokeWidth="50" strokeLinecap="round" strokeLinejoin="round" />
+                <circle cx="382" cy="130" r="30" fill="#06b6d4" />
               </svg>
           </div>
+
           <div className="leading-none hidden sm:block">
-              <div className="font-bold text-lg tracking-wide text-white group-hover:text-blue-200 transition-colors">MIHAI DANIEL</div>
+              <div className="font-bold text-lg tracking-wide text-white group-hover:text-blue-200 transition-colors font-[var(--font-space)]">MIHAI DANIEL</div>
               <div className="text-[9px] text-blue-400 font-mono tracking-[0.2em] uppercase mt-1">Future Ready</div>
           </div>
       </Link>
@@ -51,7 +56,6 @@ export default function Navbar() {
 
       <div className="flex items-center gap-4">
         <ConnectButton showBalance={false} chainStatus="icon" accountStatus="avatar" />
-        {/* ✅ FIX ACCESIBILITATE: aria-label adăugat */}
         <button className="lg:hidden text-white p-2" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label={mobileMenuOpen ? "Închide meniu" : "Deschide meniu"}>
             {mobileMenuOpen ? <X/> : <Menu/>}
         </button>
