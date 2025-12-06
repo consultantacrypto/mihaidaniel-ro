@@ -1,29 +1,5 @@
 export const articles = [ 
-  // ✅ 1. ARTICOL NOU: QUANTUM COMPUTING
-  {
-    slug: "riscuri-quantum-computing-bitcoin-explicat",
-    title: "Calculatoarele Cuantice vs. Bitcoin: Sfârșitul Criptomonedelor sau Doar o Nouă Provocare?",
-    date: "06 Dec 2025",
-    category: "TEHNOLOGIE",
-    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=1000&auto=format&fit=crop", 
-    impact: "neutral", 
-    summary: "Poate un calculator cuantic să 'spargă' Bitcoin? Află care sunt riscurile reale, când ar putea deveni o amenințare și cum se poate apăra rețeaua. Un ghid complet pentru începători.",
-    mihaiTake: "Tehnologia avansează cu o viteză amețitoare. Astăzi vorbim despre Quantum Computing ca o amenințare îndepărtată, dar în lumea digitală, 'departe' devine 'mâine' mai repede decât ne așteptăm. Dacă vrei să construim împreună un plan solid pentru proiectele tale digitale, hai să discutăm.",
-    content: `
-      <p>Dacă urmărești știrile din tehnologie, probabil ai auzit termenul "Quantum Computing" (Calculatoare Cuantice) aruncat tot mai des în discuții, imediat după Inteligența Artificială. De obicei, scenariul prezentat este unul apocaliptic.</p>
-      
-      <h3>Ce este, de fapt, un Calculator Cuantic?</h3>
-      <p>Imaginează-ți că ești într-o bibliotecă imensă și cauți o singură carte care are un "X" roșu pe o pagină. Un calculator clasic este ca un bibliotecar care ia fiecare carte la rând. Un calculator cuantic este ca un magician care poate deschide toate cărțile simultan.</p>
-
-      <h3>De ce se teme Bitcoin de "Quantum"?</h3>
-      <p>Un calculator cuantic suficient de puternic ar putea deriva cheia ta privată din cea publică în câteva ore, teoretic putând semna tranzacții în numele tău.</p>
-
-      <h3>Ar trebui să ne panicăm?</h3>
-      <p>Răspunsul scurt: <strong>NU</strong>. Tehnologia este la început (10-30 de ani distanță de Q-Day), iar Bitcoin este un software care poate fi actualizat cu criptografie post-cuantică (PQC).</p>
-    `
-  },
-
-  // ✅ 2. ARTICOL: SEMNAL ON-CHAIN (SOPR)
+  // ✅ 1. ARTICOL NOU: BITCOIN SOPR & COINBASE (HOT)
   {
     slug: "semnal-on-chain-bitcoin-sopr-rally",
     title: "Semnal On-Chain: Vânzătorii au obosit. Bitcoin pregătește Raliul de Decembrie?",
@@ -51,6 +27,30 @@ export const articles = [
       </ul>
 
       <p><strong>Concluzie:</strong> Piața s-a răcit ("reset"), vânzătorii s-au retras, iar condițiile macro devin favorabile. Scena este pregătită pentru următoarea mișcare.</p>
+    `
+  },
+
+  // ✅ 2. ARTICOL: QUANTUM COMPUTING
+  {
+    slug: "riscuri-quantum-computing-bitcoin-explicat",
+    title: "Calculatoarele Cuantice vs. Bitcoin: Sfârșitul Criptomonedelor sau Doar o Nouă Provocare?",
+    date: "06 Dec 2025",
+    category: "TEHNOLOGIE",
+    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=1000&auto=format&fit=crop", 
+    impact: "neutral", 
+    summary: "Poate un calculator cuantic să 'spargă' Bitcoin? Află care sunt riscurile reale, când ar putea deveni o amenințare și cum se poate apăra rețeaua. Un ghid complet pentru începători.",
+    mihaiTake: "Tehnologia avansează cu o viteză amețitoare. Astăzi vorbim despre Quantum Computing ca o amenințare îndepărtată, dar în lumea digitală, 'departe' devine 'mâine' mai repede decât ne așteptăm. Dacă vrei să construim împreună un plan solid pentru proiectele tale digitale, hai să discutăm.",
+    content: `
+      <p>Dacă urmărești știrile din tehnologie, probabil ai auzit termenul "Quantum Computing" (Calculatoare Cuantice) aruncat tot mai des în discuții, imediat după Inteligența Artificială. De obicei, scenariul prezentat este unul apocaliptic.</p>
+      
+      <h3>Ce este, de fapt, un Calculator Cuantic?</h3>
+      <p>Imaginează-ți că ești într-o bibliotecă imensă și cauți o singură carte care are un "X" roșu pe o pagină. Un calculator clasic este ca un bibliotecar care ia fiecare carte la rând. Un calculator cuantic este ca un magician care poate deschide toate cărțile simultan.</p>
+
+      <h3>De ce se teme Bitcoin de "Quantum"?</h3>
+      <p>Un calculator cuantic suficient de puternic ar putea deriva cheia ta privată din cea publică în câteva ore, teoretic putând semna tranzacții în numele tău.</p>
+
+      <h3>Ar trebui să ne panicăm?</h3>
+      <p>Răspunsul scurt: <strong>NU</strong>. Tehnologia este la început (10-30 de ani distanță de Q-Day), iar Bitcoin este un software care poate fi actualizat cu criptografie post-cuantică (PQC).</p>
     `
   },
 

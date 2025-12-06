@@ -2,7 +2,7 @@
 
 import Navbar from '@/components/Navbar';
 import ShareButtons from '@/components/ShareButtons';
-import { Calendar, Clock, ArrowLeft, Activity, BarChart3, TrendingUp, LineChart } from 'lucide-react';
+import { Calendar, Clock, ArrowLeft, Activity, BarChart3, TrendingUp, LineChart, Zap } from 'lucide-react';
 import Link from 'next/link';
 import Script from 'next/script';
 
