@@ -1,5 +1,5 @@
 export const articles = [ 
-  // ✅ 1. ARTICOL NOU: QUANTUM COMPUTING (PRIMA POZIȚIE)
+  // ✅ 1. ARTICOL NOU: QUANTUM COMPUTING
   {
     slug: "riscuri-quantum-computing-bitcoin-explicat",
     title: "Calculatoarele Cuantice vs. Bitcoin: Sfârșitul Criptomonedelor sau Doar o Nouă Provocare?",
@@ -23,7 +23,38 @@ export const articles = [
     `
   },
 
-  // ✅ 2. ARTICOL: SUA & CFTC
+  // ✅ 2. ARTICOL: SEMNAL ON-CHAIN (SOPR)
+  {
+    slug: "semnal-on-chain-bitcoin-sopr-rally",
+    title: "Semnal On-Chain: Vânzătorii au obosit. Bitcoin pregătește Raliul de Decembrie?",
+    date: "06 Dec 2025",
+    category: "ON-CHAIN", 
+    image: "https://images.unsplash.com/photo-1642751399797-9d71e6878b77?q=80&w=1000&auto=format&fit=crop", 
+    impact: "bullish",
+    summary: "Indicatorul SOPR a atins cel mai mic nivel din 2024, semnalând epuizarea vânzătorilor. Coinbase Instituțional confirmă: lichiditatea revine.",
+    mihaiTake: "Tati, diferența dintre amatori și profesioniști este la ce se uită. Amatorii se uită la lumânări roșii și vând. Profesioniștii se uită la datele On-Chain (SOPR) și văd că 'mâinile slabe' au ieșit din piață. Este un 'Reset' sănătos înainte de următorul impuls.",
+    content: `
+      <p>În ultimele 24 de ore, Bitcoin a suferit o corecție, testând zona de $89,000. Pentru investitorul de retail, asta arată a panică. Dar pentru analiștii on-chain, arată a <strong>oportunitate</strong>.</p>
+
+      <h3>Indicatorul SOPR: Epuizarea Vânzătorilor</h3>
+      <p>Conform datelor monitorizate de <em>Lookonchain</em> și <em>CryptoOnchain</em>, indicatorul <strong>Bitcoin SOPR Ratio</strong> a scăzut la valoarea de <strong>1.35</strong>. Acesta este cel mai jos nivel de la începutul anului 2024.</p>
+      
+      <p><strong>Ce înseamnă asta pe românește?</strong></p>
+      <p>SOPR (Spent Output Profit Ratio) măsoară dacă cei care vând acum sunt pe profit sau pe pierdere. O scădere la acest nivel indică faptul că faza de "marcare a profiturilor" (profit-taking) s-a terminat. Presiunea de vânzare este epuizată. Istoric, acest reset a marcat adesea un <strong>minim local</strong> (local bottom).</p>
+
+      <h3>Coinbase Instituțional: "Lichiditatea Revine"</h3>
+      <p>În paralel, brațul instituțional al Coinbase a emis o notă către clienți anticipând un <strong>"Raliu de Revenire" în Decembrie</strong>.</p>
+      <ul>
+        <li>Probabilitatea unei tăieri de dobândă FED a crescut la 92%.</li>
+        <li>Lichiditatea globală este în creștere.</li>
+        <li>Dolarul american (DXY) arată semne de slăbiciune, ceea ce favorizează activele de risc precum Crypto.</li>
+      </ul>
+
+      <p><strong>Concluzie:</strong> Piața s-a răcit ("reset"), vânzătorii s-au retras, iar condițiile macro devin favorabile. Scena este pregătită pentru următoarea mișcare.</p>
+    `
+  },
+
+  // ✅ 3. ARTICOL: SUA & CFTC
   {
     slug: "sua-cftc-crypto-spot-reglementat",
     title: "BREAKING: SUA pune capăt erei 'Offshore'. Crypto devine oficial activ federal.",
@@ -59,7 +90,7 @@ export const articles = [
     `
   },
 
-  // ✅ 3. ARTICOL: ATAC 27M
+  // ✅ 4. ARTICOL: ATAC 27M
   {
     slug: "atac-27-milioane-link-malitios",
     title: "ALERTA: Cum să pierzi 27.000.000$ într-o secundă. Pericolul invizibil din buzunarul tău",
@@ -97,7 +128,7 @@ export const articles = [
     `
   },
 
-  // ✅ 4. ARTICOL: VANGUARD & CFTC
+  // ✅ 5. ARTICOL: VANGUARD & CFTC (Legacy)
   {
     slug: "marea-convergenta-crypto",
     title: "Marea Convergență: Vanguard și CFTC validează Crypto ca 'Gold Standard'",
@@ -123,7 +154,7 @@ export const articles = [
     `
   },
 
-  // ✅ 5. ARTICOL: QIVALIS (BĂNCI EUROPENE)
+  // ✅ 6. ARTICOL: QIVALIS (BĂNCI EUROPENE)
   {
     slug: "qivalis-banci-europene-stablecoin",
     title: "BREAKING: 9 Bănci Gigant lansează Qivalis - Euro Stablecoin",
@@ -160,7 +191,7 @@ export const articles = [
     `
   },
 
-  // ✅ 6. ARTICOL: SEC ETF ETHEREUM
+  // ✅ 7. ARTICOL: SEC ETF ETHEREUM
   {
     slug: "sec-aproba-etf-ethereum",
     title: "SEC Aprobă ETF-ul de Ethereum Spot",
@@ -178,7 +209,7 @@ export const articles = [
     `
   },
 
-  // ✅ 7. ARTICOL: SOLANA FIREDANCER
+  // ✅ 8. ARTICOL: SOLANA FIREDANCER
   {
     slug: "solana-firedancer",
     title: "Solana lansează Firedancer",
@@ -195,7 +226,7 @@ export const articles = [
     `
   },
 
-  // ✅ 8. ARTICOL: INFLATIE CPI
+  // ✅ 9. ARTICOL: INFLATIE CPI
   {
     slug: "inflatie-sua-cpi",
     title: "Inflația SUA crește (CPI 3.4%)",
