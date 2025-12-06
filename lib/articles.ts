@@ -1,11 +1,47 @@
 export const articles = [ 
-  // ✅ ARTICOL NOU: ATAC 27M (PRIMA POZIȚIE)
+  // ✅ 1. ARTICOL NOU: SUA & CFTC
+  {
+    slug: "sua-cftc-crypto-spot-reglementat",
+    title: "BREAKING: SUA pune capăt erei 'Offshore'. Crypto devine oficial activ federal.",
+    date: "05 Dec 2025",
+    category: "REGLEMENTARE",
+    image: "https://images.unsplash.com/photo-1640340434855-6084b1f4901c?q=80&w=1000&auto=format&fit=crop", 
+    impact: "bullish",
+    summary: "Istorie în direct: CFTC autorizează tranzacționarea Spot Crypto pe burse federale. După 15 ani de refuzuri, America își deschide porțile instituționale. Află ce urmează pe 9 Decembrie.",
+    mihaiTake: "Tati, citiți printre rânduri: 'Era Offshore s-a terminat'. Până acum ne jucam în curtea școlii (FTX, Binance Global). Acum am intrat în liga profesioniștilor (CME, Bitnomial). Când statul american garantează infrastructura, fondurile de pensii nu mai au scuze să nu cumpere. Pregătiți-vă pentru cel mai mare inflow de capital din istorie.",
+    content: `
+      <p>Data de <strong>4 Decembrie 2025</strong> va rămâne în cărțile de istorie financiară. Statele Unite tocmai au pus capăt la 15 ani de ambiguitate și au deschis oficial porțile pentru tranzacționarea criptomonedelor "Spot" pe burse reglementate federal.</p>
+
+      <h3>Ce s-a întâmplat exact?</h3>
+      <p>CFTC (Commodity Futures Trading Commission) a autorizat, pentru prima dată în istorie, tranzacționarea directă (spot) a Bitcoin și altor criptomonede pe platforme care respectă aceleași reguli stricte ca bursa de mărfuri sau de acțiuni.</p>
+      
+      <p><strong>De ce contează?</strong></p>
+      <ul>
+        <li>Până ieri, americanii erau forțați să meargă "offshore" (pe insule exotice) pentru a tranzacționa. Rezultatul? Dezastre precum FTX, unde miliarde au dispărut.</li>
+        <li>De azi, "Vestul Sălbatic" s-a închis. Crypto intră sub umbrela federală.</li>
+      </ul>
+
+      <h3>9 Decembrie: Ziua Zero</h3>
+      <p>Platforma <strong>Bitnomial</strong> va lansa pe 9 decembrie suita completă: Spot cu levier, Perpetuals, Futures și Options. Totul într-un singur loc, totul sub supraveghere federală.</p>
+
+      <h3>Implicațiile sunt colosale:</h3>
+      <ol>
+        <li><strong>Eficiență de Capital:</strong> Instituțiile vor putea folosi marja încrucișată (cross-margining), reducând necesarul de capital cu 30-50%. Asta înseamnă mai mulți bani disponibili pentru cumpărare.</li>
+        <li><strong>Barierele Instituționale cad:</strong> Fondurile de pensii și băncile suverane, care nu aveau voie legal să trimită bani în Bahamas, au acum o cale legală, curată și sigură ("Gold Standard") să intre în piață.</li>
+        <li><strong>Obiectivul declarat:</strong> Caroline Pham (Acting Chairman CFTC) a spus-o clar: <em>"Să facem din America capitala mondială crypto."</em></li>
+      </ol>
+
+      <p>Nu mai este vorba despre "dacă" America va adopta crypto. Este vorba despre cât de repede se va repoziționa capitalul global.</p>
+    `
+  },
+
+  // ✅ 2. ARTICOL: ATAC 27M
   {
     slug: "atac-27-milioane-link-malitios",
     title: "ALERTA: Cum să pierzi 27.000.000$ într-o secundă. Pericolul invizibil din buzunarul tău",
     date: "05 Dec 2025",
     category: "SECURITATE",
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1000&auto=format&fit=crop", // Imagine Hacker/Cybersecurity
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1000&auto=format&fit=crop", 
     impact: "bearish", 
     summary: "Un investitor experimentat a pierdut o avere printr-un singur click pe telefon. Nu a fost un hack complex, ci o manipulare psihologică. Învață cum să nu fii următoarea victimă.",
     mihaiTake: "Tati, reține o regulă de aur: În crypto, paranoia este cel mai bun prieten al tău. Nu pierzi bani când ești speriat, pierzi bani când te simți 'sigur' și 'experimentat'. Telefonul de pe care faci tranzacții NU are ce căuta pe link-uri dubioase de pe Telegram.",
@@ -36,6 +72,8 @@ export const articles = [
       <p><strong>Concluzie:</strong> Un click greșit te poate costa totul. Rămâi paranoic. Rămâi în siguranță.</p>
     `
   },
+
+  // ✅ 3. ARTICOL: VANGUARD & CFTC
   {
     slug: "marea-convergenta-crypto",
     title: "Marea Convergență: Vanguard și CFTC validează Crypto ca 'Gold Standard'",
@@ -60,6 +98,8 @@ export const articles = [
       <p>Mesajul este clar: <strong>Vanguard aduce capitalul</strong>, iar <strong>CFTC aduce siguranța</strong>. Este momentul în care crypto iese din "garaj" și intră pe ușa din față a Wall Street-ului.</p>
     `
   },
+
+  // ✅ 4. ARTICOL: QIVALIS (BĂNCI EUROPENE)
   {
     slug: "qivalis-banci-europene-stablecoin",
     title: "BREAKING: 9 Bănci Gigant lansează Qivalis - Euro Stablecoin",
@@ -95,6 +135,8 @@ export const articles = [
       <p>Lansarea oficială este programată pentru a doua jumătate a lui 2026. Până atunci, Europa se pregătește să intre oficial în era banilor digitali.</p>
     `
   },
+
+  // ✅ 5. ARTICOL: SEC ETF ETHEREUM
   {
     slug: "sec-aproba-etf-ethereum",
     title: "SEC Aprobă ETF-ul de Ethereum Spot",
@@ -105,9 +147,14 @@ export const articles = [
     summary: "Comisia americană a dat undă verde pentru tranzacționarea ETF-urilor ETH.",
     mihaiTake: "Instituțiile nu mai au scuze. Mă aștept la un flow de 5-10 miliarde $. Ethereum devine 'Internet Bond'.",
     content: `
-      <p>Aici scrii textul complet al articolului...</p>
+      <p>Decizia SEC marchează un moment istoric pentru Ethereum. După aprobarea ETF-ului Bitcoin, aceasta era piesa lipsă din puzzle-ul instituțional.</p>
+      <p>Ce înseamnă asta? Că de acum înainte, orice fond de pensii, orice bancă și orice companie listată la bursă poate cumpăra expunere pe Ethereum la fel de ușor cum cumpără acțiuni Apple.</p>
+      <h3>De ce contează?</h3>
+      <p>Pentru că deschide robinetul banilor instituționali. Până acum, riscul legal era prea mare pentru ei. Acum, cu ștampila SEC, Ethereum este validat ca "marfă digitală" (commodity), nu ca security (valoare mobiliară).</p>
     `
   },
+
+  // ✅ 6. ARTICOL: SOLANA FIREDANCER
   {
     slug: "solana-firedancer",
     title: "Solana lansează Firedancer",
@@ -118,9 +165,13 @@ export const articles = [
     summary: "Noul client promite 1 milion TPS.",
     mihaiTake: "Tehnologic e wow, dar prețul a crescut deja pe zvon. Atenție la 'Sell the News'.",
     content: `
-      <p>Solana face un pas uriaș...</p>
+      <p>Solana face un pas uriaș către scalabilitate masivă odată cu lansarea clientului Firedancer, dezvoltat de Jump Crypto.</p>
+      <p>Acesta nu este doar un upgrade; este o rescriere completă a modului în care rețeaua procesează tranzacțiile, promițând viteze teoretice de până la 1 milion de tranzacții pe secundă (TPS).</p>
+      <p>Pentru developeri și utilizatori, asta înseamnă taxe și mai mici și o rețea mult mai stabilă, eliminând blocajele care au afectat Solana în trecut.</p>
     `
   },
+
+  // ✅ 7. ARTICOL: INFLATIE CPI
   {
     slug: "inflatie-sua-cpi",
     title: "Inflația SUA crește (CPI 3.4%)",
@@ -131,7 +182,9 @@ export const articles = [
     summary: "FED-ul nu va scădea dobânzile prea curând.",
     mihaiTake: "Cash is King momentan. Pregătiți ordinele de cumpărare la -20% pe Bitcoin.",
     content: `
-      <p>Datele macro arată prost...</p>
+      <p>Datele macro arată prost. Indicele prețurilor de consum (CPI) a venit peste așteptări, la 3.4%, semnalând că inflația este încă lipicioasă.</p>
+      <p>Ce înseamnă asta pentru piețe? Că FED (Banca Centrală a SUA) nu va grăbi tăierea dobânzilor. Bani scumpi înseamnă lichiditate mai mică în piețele de risc precum Crypto și Tech.</p>
+      <p>Așteptați-vă la volatilitate pe termen scurt. Nu este momentul pentru levier mare.</p>
     `
   }
 ];
