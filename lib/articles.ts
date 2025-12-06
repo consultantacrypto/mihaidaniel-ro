@@ -1,12 +1,12 @@
 export const articles = [ 
-  // ✅ 1. ARTICOL NOU: BITCOIN SOPR & COINBASE (IMAGINE REPARATĂ)
+  // ✅ 1. ARTICOL NOU: BITCOIN SOPR & COINBASE
   {
     slug: "semnal-on-chain-bitcoin-sopr-rally",
     title: "Semnal On-Chain: Vânzătorii au obosit. Bitcoin pregătește Raliul de Decembrie?",
     date: "06 Dec 2025",
     category: "ON-CHAIN", 
-    // Am pus un link stabil către o imagine sugestivă cu Bitcoin și grafice
-    image: "https://images.unsplash.com/photo-1642751399797-9d71e6878b77?q=80&w=1000&auto=format&fit=crop", 
+    // Imagine Stabilă (Bitcoin + Grafice)
+    image: "https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=1000&auto=format&fit=crop", 
     impact: "bullish",
     summary: "Indicatorul SOPR a atins cel mai mic nivel din 2024, semnalând epuizarea vânzătorilor. Coinbase Instituțional confirmă: lichiditatea revine.",
     mihaiTake: "Tati, diferența dintre amatori și profesioniști este la ce se uită. Amatorii se uită la lumânări roșii și vând. Profesioniștii se uită la datele On-Chain (SOPR) și văd că 'mâinile slabe' au ieșit din piață. Este un 'Reset' sănătos înainte de următorul impuls.",

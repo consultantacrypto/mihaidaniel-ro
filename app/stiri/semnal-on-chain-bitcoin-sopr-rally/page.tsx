@@ -2,7 +2,7 @@
 
 import Navbar from '@/components/Navbar';
 import ShareButtons from '@/components/ShareButtons';
-import { Calendar, Clock, ArrowLeft, Activity, BarChart3, TrendingUp, LineChart, Zap } from 'lucide-react';
+import { Calendar, Clock, ArrowLeft, Activity, BarChart3, TrendingUp, LineChart } from 'lucide-react';
 import Link from 'next/link';
 import Script from 'next/script';
 
@@ -12,7 +12,8 @@ export default function ArticlePage() {
     '@type': 'NewsArticle',
     'headline': 'Semnal On-Chain: Vânzătorii au obosit. Bitcoin pregătește Raliul de Decembrie?',
     'image': [
-      'https://images.unsplash.com/photo-1642751399797-9d71e6878b77?q=80&w=1200&auto=format&fit=crop'
+      // Imagine nouă, stabilă
+      'https://images.unsplash.com/photo-1621416894569-0f39ed31d247?q=80&w=1200&auto=format&fit=crop'
     ],
     'datePublished': '2025-12-06T15:00:00+02:00',
     'dateModified': '2025-12-06T15:00:00+02:00',
@@ -60,7 +61,7 @@ export default function ArticlePage() {
         <div className="relative w-full aspect-video mb-12 rounded-2xl overflow-hidden border border-green-500/20 shadow-[0_0_50px_rgba(16,185,129,0.1)] group">
             <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent z-10 opacity-80"></div>
             <img 
-                src="https://images.unsplash.com/photo-1642751399797-9d71e6878b77?q=80&w=1200&auto=format&fit=crop" 
+                src="https://images.unsplash.com/photo-1621416894569-0f39ed31d247?q=80&w=1200&auto=format&fit=crop" 
                 alt="Bitcoin On-Chain Analysis" 
                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000"
             />
