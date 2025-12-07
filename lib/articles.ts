@@ -1,5 +1,46 @@
 export const articles = [ 
-  // ✅ 1. ARTICOL NOU: BITCOIN SOPR & COINBASE
+  // ✅ 1. ARTICOL NOU: FED & DOBÂNZI (MACRO)
+  {
+    slug: "impact-dobanda-fed-bitcoin-scenarii",
+    title: "Alertă Maximă: Decizia FED care Poate Arunca Bitcoin în Aer. Scenariile 0.25% vs 0.50%",
+    date: "07 Dec 2025",
+    category: "MACROECONOMIE", 
+    image: "https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=1000&auto=format&fit=crop", 
+    impact: "neutral", 
+    summary: "Săptămâna viitoare, Jerome Powell are degetul pe 'butonul nuclear'. Analizăm cele 4 scenarii posibile ale dobânzii și cum va reacționa Bitcoin la fiecare.",
+    mihaiTake: "Tati, nu juca la 'păcănele' cu anunțurile macro. Majoritatea pierd bani săptămâna viitoare pentru că reacționează emoțional. Noi ne pregătim profesional: avem planul A pentru 0.25% și planul B pentru 0.50%. Dacă nu știi cum să te poziționezi, stai pe mâini sau intră în consultanță.",
+    content: `
+      <p>Săptămâna viitoare, ochii întregii planete financiare vor fi ațintiți asupra unui singur om: <strong>Jerome Powell</strong>, președintele Rezervei Federale (FED).</p>
+      <p>Decizia privind rata dobânzii de referință în SUA nu este doar o știre economică plictisitoare; este "butonul nuclear" care dictează dacă portofoliul tău crypto va exploda spre noi maxime sau va sângera în următoarele luni.</p>
+
+      <h3>De ce Dobânda SUA este "Gravitația" pentru Crypto?</h3>
+      <p>Gândește-te la rata dobânzii ca la <strong>costul banilor</strong>.</p>
+      <ul>
+        <li><strong>Dobânzi Mari (Situația actuală):</strong> Banii sunt "scumpi". Împrumuturile costă mult. Investitorii preferă siguranța (obligațiuni de stat care plătesc bine) și evită riscul. Rezultat: Crypto scade sau stagnează.</li>
+        <li><strong>Dobânzi Mici (Tăieri de rată):</strong> Banii devin "ieftini". Robinetul de lichiditate se deschide. Dolarii caută randamente mai mari pentru că băncile nu mai oferă dobânzi atractive. Rezultat: Capitalul fuge spre active de risc → Bitcoin și Altcoins cresc.</li>
+      </ul>
+
+      <h3>Cele 4 Scenarii pentru Săptămâna Viitoare</h3>
+      <p>Iată harta exactă a impactului, de la cel mai pesimist la cel mai volatil scenariu:</p>
+      
+      <p><strong>1. Nicio Tăiere (Dobânda rămâne neschimbată) - Bearish Violent</strong><br/>
+      Dacă FED decide să nu taie dobânda, va fi un duș rece pentru piețe. Investitorii au prețuit deja (priced-in) o tăiere. O pauză ar semnala că inflația este încă o problemă majoră. Reacție: Dolarul (DXY) se întărește brusc, iar Bitcoin suferă o vânzare rapidă (-5% până la -10%).</p>
+
+      <p><strong>2. Tăiere de 0.25% (Standardul de Aur) - Bullish Sănătos</strong><br/>
+      Acesta este scenariul pe care piața îl așteaptă. O tăiere de 0.25% semnalează începutul unui nou ciclu de relaxare, fără a crea panică. Reacție: Posibil un efect de tipul "Sell the news" (mică scădere inițială), urmată de o creștere lentă și sănătoasă pe termen mediu.</p>
+
+      <p><strong>3. Tăiere de 0.50% (Bani Ieftini, dar cu un Preț) - Volatilitate Extremă</strong><br/>
+      O tăiere dublă este o sabie cu două tăișuri. Partea plină: Lichiditate masivă intră instant în piață (Pump). Partea goală: Poate semnala că FED știe că economia SUA este pe marginea prăpastiei (recesiune). Reacție: Un raliu euforic de scurtă durată, urmat de incertitudine majoră.</p>
+
+      <p><strong>4. Tăiere de 1.00% (Butonul de Panică) - Black Swan</strong><br/>
+      FED taie 1% doar în caz de criză majoră (ex: COVID 2020, Criza din 2008). Dacă vedem asta, înseamnă că ceva "s-a rupt" în sistemul bancar. Reacție: Bitcoin ar putea avea un spike inițial, dar va fi tras în jos rapid de prăbușirea burselor globale. Cash-ul devine rege.</p>
+
+      <h3>Concluzie: Nu juca la "Păcănele"</h3>
+      <p>Macroeconomia nu este despre ghicit, este despre probabilități și poziționare. O greșeală de interpretare în ziua anunțului te poate costa mii de dolari. Ai nevoie de un plan stabilit dinainte, nu de reacții emoționale la titlurile de știri.</p>
+    `
+  },
+
+  // ✅ 2. ARTICOL: BITCOIN SOPR & COINBASE
   {
     slug: "semnal-on-chain-bitcoin-sopr-rally",
     title: "Semnal On-Chain: Vânzătorii au obosit. Bitcoin pregătește Raliul de Decembrie?",
@@ -30,7 +71,7 @@ export const articles = [
     `
   },
 
-  // ✅ 2. ARTICOL: QUANTUM COMPUTING
+  // ✅ 3. ARTICOL: QUANTUM COMPUTING
   {
     slug: "riscuri-quantum-computing-bitcoin-explicat",
     title: "Calculatoarele Cuantice vs. Bitcoin: Sfârșitul Criptomonedelor sau Doar o Nouă Provocare?",
@@ -54,7 +95,7 @@ export const articles = [
     `
   },
 
-  // ✅ 3. ARTICOL: SUA & CFTC (Imaginea Ta Oficială)
+  // ✅ 4. ARTICOL: SUA & CFTC
   {
     slug: "sua-cftc-crypto-spot-reglementat",
     title: "BREAKING: SUA pune capăt erei 'Offshore'. Crypto devine oficial activ federal.",
@@ -90,7 +131,7 @@ export const articles = [
     `
   },
 
-  // ✅ 4. ARTICOL: ATAC 27M
+  // ✅ 5. ARTICOL: ATAC 27M
   {
     slug: "atac-27-milioane-link-malitios",
     title: "ALERTA: Cum să pierzi 27.000.000$ într-o secundă. Pericolul invizibil din buzunarul tău",
@@ -128,7 +169,7 @@ export const articles = [
     `
   },
 
-  // ✅ 5. ARTICOL: VANGUARD & CFTC (Legacy)
+  // ✅ 6. ARTICOL: VANGUARD & CFTC (Legacy)
   {
     slug: "marea-convergenta-crypto",
     title: "Marea Convergență: Vanguard și CFTC validează Crypto ca 'Gold Standard'",
@@ -154,7 +195,7 @@ export const articles = [
     `
   },
 
-  // ✅ 6. ARTICOL: QIVALIS (BĂNCI EUROPENE)
+  // ✅ 7. ARTICOL: QIVALIS (BĂNCI EUROPENE)
   {
     slug: "qivalis-banci-europene-stablecoin",
     title: "BREAKING: 9 Bănci Gigant lansează Qivalis - Euro Stablecoin",
@@ -191,7 +232,7 @@ export const articles = [
     `
   },
 
-  // ✅ 7. ARTICOL: SEC ETF ETHEREUM
+  // ✅ 8. ARTICOL: SEC ETF ETHEREUM
   {
     slug: "sec-aproba-etf-ethereum",
     title: "SEC Aprobă ETF-ul de Ethereum Spot",
@@ -209,7 +250,7 @@ export const articles = [
     `
   },
 
-  // ✅ 8. ARTICOL: SOLANA FIREDANCER
+  // ✅ 9. ARTICOL: SOLANA FIREDANCER
   {
     slug: "solana-firedancer",
     title: "Solana lansează Firedancer",
@@ -226,7 +267,7 @@ export const articles = [
     `
   },
 
-  // ✅ 9. ARTICOL: INFLATIE CPI
+  // ✅ 10. ARTICOL: INFLATIE CPI
   {
     slug: "inflatie-sua-cpi",
     title: "Inflația SUA crește (CPI 3.4%)",
