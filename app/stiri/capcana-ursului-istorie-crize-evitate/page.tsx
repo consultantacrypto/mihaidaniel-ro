@@ -12,7 +12,7 @@ export default function ArticlePage() {
     '@type': 'NewsArticle',
     'headline': 'Capcana Ursului: De ce Toți Indicatorii de Criză Pot Fi Greșiți',
     'image': [
-      'https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=1200&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=1200&auto=format&fit=crop'
     ],
     'datePublished': '2025-12-07T16:00:00+02:00',
     'dateModified': '2025-12-07T16:00:00+02:00',
@@ -60,7 +60,7 @@ export default function ArticlePage() {
         <div className="relative w-full aspect-video mb-12 rounded-2xl overflow-hidden border border-orange-500/20 shadow-[0_0_50px_rgba(249,115,22,0.15)] group">
             <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent z-10 opacity-80"></div>
             <img 
-                src="https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=1200&auto=format&fit=crop" 
+                src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=1200&auto=format&fit=crop" 
                 alt="Market Psychology Bull vs Bear" 
                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000"
             />
@@ -79,8 +79,7 @@ export default function ArticlePage() {
                 Cazul 1: &quot;Aterizarea Lină&quot; din 1994 (Planul Perfect)
             </h3>
             <p>
-                {/* ✅ FIX AICI: Am folosit &rarr; în loc de -> */}
-                <strong>Situația:</strong> Foarte similară cu 2024. FED a crescut dobânzile agresiv (3% &rarr; 6%). Wall Street-ul era convins că urmează o recesiune în 1995.
+                <strong>Situația:</strong> Foarte similară cu 2024-2025. FED a crescut dobânzile agresiv (3% &rarr; 6%). Wall Street-ul era convins că urmează o recesiune în 1995.
             </p>
             <p>
                 <strong>Răsturnarea:</strong> Alan Greenspan a oprit creșterile la timp. Rezultatul? Nu doar că recesiunea a fost evitată, dar a urmat <strong>Boom-ul dot-com</strong>. S&P 500 a crescut cu +34% în anul următor!
@@ -105,16 +104,28 @@ export default function ArticlePage() {
                 Cazul 3: Șocul COVID din 2020
             </h3>
             <p>
-                Martie 2020. Economia globală s-a oprit. Logic, trebuia să urmeze o depresie.
+                <strong>Situația:</strong> Martie 2020. Lumea s-a închis. Economia globală s-a oprit. Logic, trebuia să urmeze o depresie.
                 <br/><strong>Realitatea:</strong> Intervenția monetară a fost fără precedent. Piețele au atins noi maxime istorice în doar 6 luni. Lecția? <strong>Nu paria împotriva tiparniței de bani.</strong>
             </p>
 
             <h3 className="text-white mt-12 font-[var(--font-space)] text-xl font-bold">De ce Optimismul este o Strategie</h3>
             <p>
-                Sir John Templeton spunea: <em>&quot;Bull market-urile se nasc din pesimism, cresc pe scepticism, se maturizează pe optimism și mor pe euforie.&quot;</em>
+                Sir John Templeton spunea:
             </p>
+            {/* ✅ FIX: Am schimbat 'class' în 'className' */}
+            <blockquote className="border-l-4 border-orange-500 pl-4 italic text-gray-400 my-4">
+                &quot;Bull market-urile se nasc din pesimism, cresc pe scepticism, se maturizează pe optimism și mor pe euforie.&quot;
+            </blockquote>
             <p>
                 Astăzi suntem în faza de pesimism. Faptul că toată lumea este precaută este, paradoxal, cel mai bullish semnal posibil. Când nimeni nu mai are curaj să cumpere, Smart Money intră în scenă.
+            </p>
+
+            <h3 className="text-white mt-12 font-[var(--font-space)] text-xl font-bold">Concluzie: Nu paria împotriva adaptării umane</h3>
+            <p>
+                Istoria ne arată că sistemul financiar este incredibil de rezilient. Fie că e vorba de inovație tehnologică (AI astăzi, Internetul în &#39;95) sau de intervenția băncilor centrale, scenariul apocaliptic este cel mai puțin probabil să se întâmple.
+            </p>
+            <p>
+                Păstrează-ți calmul, gestionează-ți riscul, dar nu lăsa frica să te scoată din joc exact înainte de revenire.
             </p>
         </div>
 
@@ -132,7 +143,7 @@ export default function ArticlePage() {
             </div>
         </div>
 
-        {/* CTA Consultanță */}
+        {/* CTA Consultanță - HOOK: MINDSET & STRATEGY */}
         <div className="mt-12 bg-gradient-to-r from-orange-900/20 to-yellow-900/20 p-8 rounded-2xl border border-orange-500/30 text-center">
             <h3 className="text-2xl font-bold text-white mb-2 font-[var(--font-space)]">Emoțiile te costă bani. Ai nevoie de un plan.</h3>
             <p className="text-gray-300 mb-6 max-w-xl mx-auto">
