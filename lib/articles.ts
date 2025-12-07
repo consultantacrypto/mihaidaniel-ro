@@ -1,6 +1,33 @@
 export const articles = [ 
   // ✅ 1. ARTICOL NOU: BITCOIN MANIPULARE (ANALIZĂ TEHNICĂ)
   {
+    slug: "capcana-ursului-istorie-crize-evitate",
+    title: "\"Capcana Ursului\": De ce Toți Indicatorii de Criză Pot Fi Greșiți. Lecții Istorice.",
+    date: "07 Dec 2025",
+    category: "PSIHOLOGIE PIAȚĂ", // Categorie nouă, foarte atractivă
+    image: "https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=1000&auto=format&fit=crop", // Bull vs Bear abstract
+    impact: "bullish", // Este un articol optimist (contrarian)
+    summary: "Istoria ne învață că atunci când toată lumea așteaptă o criză, ea tinde să nu apară. Analizăm 3 momente critice (1994, 2018, 2020) când piețele au șocat lumea cu reveniri spectaculoase.",
+    mihaiTake: "Tati, ține minte vorba asta: 'Piețele mor pe euforie și se nasc pe pesimism'. Acum suntem la pesimism maxim. Toți văd doar recesiune. Istoric vorbind, acesta este momentul în care 'Smart Money' cumpără, nu vinde. Nu paria împotriva tiparniței de bani.",
+    content: `
+      <p>Deschizi știrile și vezi doar roșu: curba randamentelor inversată, inflație persistentă și un Bitcoin care se chinuie. Consensul general? "Vine un Bear Market crunt."</p>
+      <p>Dar istoria piețelor financiare ne învață o lecție prețioasă: <strong>Atunci când toată lumea se așteaptă la o criză, aceasta tinde să nu mai apară.</strong></p>
+
+      <h3>Cum se poate "Anula" un Bear Market?</h3>
+      <p>Un Bear Market nu este o fatalitate. Există două forțe majore care pot opri căderea:</p>
+      <ul>
+        <li><strong>"The Fed Pivot":</strong> Când economia încetinește, băncile centrale intervin agresiv. Nu vrei să pariezi împotriva tiparniței de bani.</li>
+        <li><strong>Capitularea Vânzătorilor:</strong> Când toți cei care voiau să iasă au ieșit deja, prețul nu mai are unde să meargă decât în sus.</li>
+      </ul>
+
+      <h3>Studiu de Caz: Crăciunul Negru din 2018</h3>
+      <p>În Q4 2018, Jerome Powell părea decis să crească dobânzile. Piețele s-au prăbușit cu 20%. Toți strigau "Recesiune 2019!".</p>
+      <p><strong>Răsturnarea:</strong> În ianuarie, Powell a ieșit și a spus simplu: "Vom fi răbdători". Piețele au explodat instantaneu, recuperând totul în câteva luni. Cei care au vândut de frică au pierdut tot raliul.</p>
+
+      <p><strong>Concluzie:</strong> Astăzi suntem în faza de pesimism. Dar tocmai acest "Zid al Îngrijorării" este scara pe care piețele urcă. Faptul că ești precaut e bine, dar faptul că ești panicat te poate costa averea.</p>
+    `
+  },
+  {
     slug: "bitcoin-manipulare-sau-corectie-brutala",
     title: "Bitcoin: Manipulare Instituțională sau Corecție Brutală? Anatomia unei Prăbușiri de 19 Miliarde $",
     date: "07 Dec 2025",
