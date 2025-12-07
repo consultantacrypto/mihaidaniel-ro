@@ -1,11 +1,56 @@
 export const articles = [ 
-  // ✅ 1. ARTICOL NOU: FED & DOBÂNZI (MACRO)
+  // ✅ 1. ARTICOL NOU: BITCOIN MANIPULARE (ANALIZĂ TEHNICĂ)
+  {
+    slug: "bitcoin-manipulare-sau-corectie-brutala",
+    title: "Bitcoin: Manipulare Instituțională sau Corecție Brutală? Anatomia unei Prăbușiri de 19 Miliarde $",
+    date: "07 Dec 2025",
+    category: "ANALIZĂ PIAȚĂ",
+    image: "https://images.unsplash.com/photo-1642104704074-907c0698cbd9?q=80&w=1000&auto=format&fit=crop", 
+    impact: "bearish",
+    summary: "De ce scade Bitcoin când bursa crește? Analizăm mecanismul 'cascadei de lichidări' și explicăm de ce $80k ar putea fi capcana perfectă întinsă de instituții pentru micii investitori.",
+    mihaiTake: "Tati, nu te lăsa păcălit. Ceea ce vezi pe grafic nu e 'sfârșitul lumii', e un transfer de avere. Instituțiile curăță levierul (gamblerii) ca să poată cumpăra ieftin. Dacă ai intrat în panică și ai vândut, ai făcut exact jocul lor. Dacă vrei să înțelegi cum să te poziționezi pentru Q1 2026, citește analiza până la capăt.",
+    content: `
+      <p>Piața crypto traversează un moment de confuzie extremă. În timp ce indicii bursieri americani (S&P 500, Nasdaq) ating noi maxime istorice, Bitcoin s-a decuplat violent, suferind o prăbușire dramatică de la $126,000 la $80,000.</p>
+      <p>Scenariul descris de investitori este unul de coșmar: un "flash crash" pe 10 Octombrie care a șters 19 miliarde de dolari din piață – cel mai mare eveniment de lichidare din istoria crypto. Dar este aceasta o corecție naturală sau asistăm la o manipulare coordonată a marilor instituții ("Whales")?</p>
+
+      <h3>1. Divergența Masivă: De ce Bursa Crește, iar Crypto Sângerează?</h3>
+      <p>Unul dintre cele mai frustrante aspecte pentru investitorii de retail este "decuplarea". În mod tradițional, Bitcoin a fost corelat cu piețele de risc (US Stocks). Totuși, datele recente arată o anomalie:</p>
+      <ul>
+        <li><strong>US Stocks (Acțiunile SUA):</strong> Au crescut cu +8% de la evenimentul din 10 Octombrie, recuperând pierderile.</li>
+        <li><strong>Bitcoin:</strong> Rămâne la -29% și continuă să fie respins agresiv la fiecare încercare de revenire ("pump").</li>
+      </ul>
+      <p>Această divergență sugerează o lichidare forțată a unor fonduri mari. Când un fond de investiții crypto "explodează" (intră în insolvență), este obligat să vândă activele (BTC) la prețul pieței pentru a acoperi pierderile, indiferent de cât de bine merge economia SUA. Acesta este un semnal clasic de "Capitulare Instituțională".</p>
+
+      <h3>2. Mecanismul "Cascadei de Lichidări": Cum dispare $19 Miliarde într-o clipă</h3>
+      <p>Pentru a înțelege de ce Bitcoin a căzut de la $126k direct la $80k fără oprire, trebuie să înțelegem Leverage-ul (Efectul de Levier).</p>
+      <p>Mulți traderi folosesc leverage (bani împrumutați de la exchange) pentru a-și amplifica câștigurile. Dar acesta funcționează ca o armă cu două tăișuri:</p>
+      <ul>
+        <li>La un leverage de 10x, o scădere de doar 10% a prețului îți lichidează complet poziția.</li>
+        <li>La un leverage de 50x, o scădere de 2% înseamnă faliment total.</li>
+      </ul>
+      <p><strong>Efectul de Domino:</strong> Când prețul scade brusc (declanșat poate de o vânzare masivă a unei Balene), pozițiile Long cu leverage mare sunt lichidate. Când un exchange îți lichidează poziția Long, el vinde automat Bitcoin-ul tău în piață. Această vânzare automată împinge prețul și mai jos, declanșând lichidarea următorului grup de traderi.</p>
+
+      <h3>3. Manipulare sau "Stop Hunting"?</h3>
+      <p>Textul de analiză sugerează că "instituțiile se joacă cu piața". În trading, acest fenomen este cunoscut sub numele de Liquidity Grab sau Stop Hunting.</p>
+      <p>Marile instituții au acces la date care le arată unde sunt plasate ordinele de "Stop Loss" ale micilor investitori. Strategia lor este să împingă prețul agresiv în jos pentru a atinge aceste stop-loss-uri. Rezultatul? O vânzare panicată care le permite instituțiilor să cumpere Bitcoin în cantități masive la prețuri de discount ($80k), chiar de la cei pe care i-au forțat să vândă.</p>
+
+      <h3>Concluzie: Ce faci acum?</h3>
+      <p>Dacă scenariul descris este corect, suntem într-o zonă de manipulare menită să scuture "mâinile slabe" înainte de următorul ciclu de creștere.</p>
+      <ul>
+        <li><strong>Evită Leverage-ul:</strong> În perioade de volatilitate extremă ($500M lichidări zilnice), leverage-ul este calea sigură spre faliment.</li>
+        <li><strong>Urmărește Smart Money:</strong> Instituțiile nu vând la $80k pentru că vor să iasă, ci pentru a lichida retail-ul și a reacumula mai jos.</li>
+        <li><strong>Răbdare:</strong> Istoria ne arată că după fiecare "flash crash" major urmează o perioadă de acumulare plictisitoare, urmată de o explozie a prețului.</li>
+      </ul>
+    `
+  },
+
+  // ✅ 2. ARTICOL NOU: FED & DOBÂNZI (MACRO)
   {
     slug: "impact-dobanda-fed-bitcoin-scenarii",
     title: "Alertă Maximă: Decizia FED care Poate Arunca Bitcoin în Aer. Scenariile 0.25% vs 0.50%",
     date: "07 Dec 2025",
     category: "MACROECONOMIE", 
-    image: "https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=1000&auto=format&fit=crop", 
+    image: "https://images.unsplash.com/photo-1580519542036-c47de6196ba5?q=80&w=1000&auto=format&fit=crop", 
     impact: "neutral", 
     summary: "Săptămâna viitoare, Jerome Powell are degetul pe 'butonul nuclear'. Analizăm cele 4 scenarii posibile ale dobânzii și cum va reacționa Bitcoin la fiecare.",
     mihaiTake: "Tati, nu juca la 'păcănele' cu anunțurile macro. Majoritatea pierd bani săptămâna viitoare pentru că reacționează emoțional. Noi ne pregătim profesional: avem planul A pentru 0.25% și planul B pentru 0.50%. Dacă nu știi cum să te poziționezi, stai pe mâini sau intră în consultanță.",
@@ -40,7 +85,7 @@ export const articles = [
     `
   },
 
-  // ✅ 2. ARTICOL: BITCOIN SOPR & COINBASE
+  // ✅ 3. ARTICOL: BITCOIN SOPR & COINBASE
   {
     slug: "semnal-on-chain-bitcoin-sopr-rally",
     title: "Semnal On-Chain: Vânzătorii au obosit. Bitcoin pregătește Raliul de Decembrie?",
@@ -71,7 +116,7 @@ export const articles = [
     `
   },
 
-  // ✅ 3. ARTICOL: QUANTUM COMPUTING
+  // ✅ 4. ARTICOL: QUANTUM COMPUTING
   {
     slug: "riscuri-quantum-computing-bitcoin-explicat",
     title: "Calculatoarele Cuantice vs. Bitcoin: Sfârșitul Criptomonedelor sau Doar o Nouă Provocare?",
@@ -95,7 +140,7 @@ export const articles = [
     `
   },
 
-  // ✅ 4. ARTICOL: SUA & CFTC
+  // ✅ 5. ARTICOL: SUA & CFTC
   {
     slug: "sua-cftc-crypto-spot-reglementat",
     title: "BREAKING: SUA pune capăt erei 'Offshore'. Crypto devine oficial activ federal.",
@@ -131,7 +176,7 @@ export const articles = [
     `
   },
 
-  // ✅ 5. ARTICOL: ATAC 27M
+  // ✅ 6. ARTICOL: ATAC 27M
   {
     slug: "atac-27-milioane-link-malitios",
     title: "ALERTA: Cum să pierzi 27.000.000$ într-o secundă. Pericolul invizibil din buzunarul tău",
@@ -169,7 +214,7 @@ export const articles = [
     `
   },
 
-  // ✅ 6. ARTICOL: VANGUARD & CFTC (Legacy)
+  // ✅ 7. ARTICOL: VANGUARD & CFTC (Legacy)
   {
     slug: "marea-convergenta-crypto",
     title: "Marea Convergență: Vanguard și CFTC validează Crypto ca 'Gold Standard'",
@@ -195,7 +240,7 @@ export const articles = [
     `
   },
 
-  // ✅ 7. ARTICOL: QIVALIS (BĂNCI EUROPENE)
+  // ✅ 8. ARTICOL: QIVALIS
   {
     slug: "qivalis-banci-europene-stablecoin",
     title: "BREAKING: 9 Bănci Gigant lansează Qivalis - Euro Stablecoin",
@@ -232,7 +277,7 @@ export const articles = [
     `
   },
 
-  // ✅ 8. ARTICOL: SEC ETF ETHEREUM
+  // ✅ 9. ARTICOL: SEC ETF ETHEREUM
   {
     slug: "sec-aproba-etf-ethereum",
     title: "SEC Aprobă ETF-ul de Ethereum Spot",
@@ -250,7 +295,7 @@ export const articles = [
     `
   },
 
-  // ✅ 9. ARTICOL: SOLANA FIREDANCER
+  // ✅ 10. ARTICOL: SOLANA FIREDANCER
   {
     slug: "solana-firedancer",
     title: "Solana lansează Firedancer",
@@ -267,7 +312,7 @@ export const articles = [
     `
   },
 
-  // ✅ 10. ARTICOL: INFLATIE CPI
+  // ✅ 11. ARTICOL: INFLATIE CPI
   {
     slug: "inflatie-sua-cpi",
     title: "Inflația SUA crește (CPI 3.4%)",
