@@ -1,6 +1,29 @@
 export const articles = [ 
   // ✅ 1. ARTICOL NOU: BITCOIN SOPR (Imagine Schimbată - Grafic Analiză)
   {
+    slug: "bitcoin-manipulare-sau-corectie-brutala",
+    title: "Bitcoin: Manipulare Instituțională sau Corecție Brutală? Anatomia unei Prăbușiri de 19 Miliarde $",
+    date: "07 Dec 2025",
+    category: "ANALIZĂ PIAȚĂ", // Categorie nouă, foarte relevantă
+    image: "https://images.unsplash.com/photo-1642104704074-907c0698cbd9?q=80&w=1000&auto=format&fit=crop", // Imagine Chart Roșu/Panic
+    impact: "bearish", // E o analiză a unei scăderi
+    summary: "De ce scade Bitcoin când bursa crește? Analizăm mecanismul 'cascadei de lichidări' și explicăm de ce $80k ar putea fi capcana perfectă întinsă de instituții pentru micii investitori.",
+    mihaiTake: "Tati, nu te lăsa păcălit. Ceea ce vezi pe grafic nu e 'sfârșitul lumii', e un transfer de avere. Instituțiile curăță levierul (gamblerii) ca să poată cumpăra ieftin. Dacă ai intrat în panică și ai vândut, ai făcut exact jocul lor. Dacă vrei să înțelegi cum să te poziționezi pentru Q1 2026, citește analiza până la capăt.",
+    content: `
+      <p>Piața crypto traversează un moment de confuzie extremă. În timp ce indicii bursieri americani (S&P 500, Nasdaq) ating noi maxime istorice, Bitcoin s-a decuplat violent, suferind o prăbușire dramatică de la $126,000 la $80,000.</p>
+
+      <h3>1. Divergența Masivă: De ce Bursa Crește, iar Crypto Sângerează?</h3>
+      <p>Unul dintre cele mai frustrante aspecte pentru investitorii de retail este "decuplarea". În mod tradițional, Bitcoin a fost corelat cu piețele de risc. Totuși, datele recente arată o anomalie.</p>
+      <p>Această divergență sugerează o <strong>lichidare forțată</strong> a unor fonduri mari. Când un fond de investiții crypto "explodează", este obligat să vândă activele la prețul pieței, indiferent de economia SUA. Acesta este un semnal clasic de "Capitulare Instituțională".</p>
+
+      <h3>2. Mecanismul "Cascadei de Lichidări"</h3>
+      <p>Pentru a înțelege de ce Bitcoin a căzut fără oprire, trebuie să înțelegem <strong>Leverage-ul</strong>. Când prețul scade brusc, pozițiile Long cu leverage mare sunt lichidate automat de exchange-uri. Această vânzare automată împinge prețul și mai jos, declanșând lichidarea următorului grup. Se creează un efect de domino.</p>
+
+      <h3>3. Manipulare sau "Stop Hunting"?</h3>
+      <p>Marile instituții au acces la date care le arată unde sunt ordinele de "Stop Loss" ale micilor investitori. Strategia lor? Împing prețul agresiv în jos pentru a atinge aceste stop-loss-uri, creând lichiditate pentru a cumpăra ei înșiși la preț redus.</p>
+    `
+  },
+  {
     slug: "semnal-on-chain-bitcoin-sopr-rally",
     title: "Semnal On-Chain: Vânzătorii au obosit. Bitcoin pregătește Raliul de Decembrie?",
     date: "06 Dec 2025",
