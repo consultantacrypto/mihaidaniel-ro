@@ -1,34 +1,10 @@
 export const articles = [ 
-  // ✅ 1. ARTICOL NOU: BITCOIN SOPR (Imagine Schimbată - Grafic Analiză)
-  {
-    slug: "bitcoin-manipulare-sau-corectie-brutala",
-    title: "Bitcoin: Manipulare Instituțională sau Corecție Brutală? Anatomia unei Prăbușiri de 19 Miliarde $",
-    date: "07 Dec 2025",
-    category: "ANALIZĂ PIAȚĂ", // Categorie nouă, foarte relevantă
-    image: "https://images.unsplash.com/photo-1642104704074-907c0698cbd9?q=80&w=1000&auto=format&fit=crop", // Imagine Chart Roșu/Panic
-    impact: "bearish", // E o analiză a unei scăderi
-    summary: "De ce scade Bitcoin când bursa crește? Analizăm mecanismul 'cascadei de lichidări' și explicăm de ce $80k ar putea fi capcana perfectă întinsă de instituții pentru micii investitori.",
-    mihaiTake: "Tati, nu te lăsa păcălit. Ceea ce vezi pe grafic nu e 'sfârșitul lumii', e un transfer de avere. Instituțiile curăță levierul (gamblerii) ca să poată cumpăra ieftin. Dacă ai intrat în panică și ai vândut, ai făcut exact jocul lor. Dacă vrei să înțelegi cum să te poziționezi pentru Q1 2026, citește analiza până la capăt.",
-    content: `
-      <p>Piața crypto traversează un moment de confuzie extremă. În timp ce indicii bursieri americani (S&P 500, Nasdaq) ating noi maxime istorice, Bitcoin s-a decuplat violent, suferind o prăbușire dramatică de la $126,000 la $80,000.</p>
-
-      <h3>1. Divergența Masivă: De ce Bursa Crește, iar Crypto Sângerează?</h3>
-      <p>Unul dintre cele mai frustrante aspecte pentru investitorii de retail este "decuplarea". În mod tradițional, Bitcoin a fost corelat cu piețele de risc. Totuși, datele recente arată o anomalie.</p>
-      <p>Această divergență sugerează o <strong>lichidare forțată</strong> a unor fonduri mari. Când un fond de investiții crypto "explodează", este obligat să vândă activele la prețul pieței, indiferent de economia SUA. Acesta este un semnal clasic de "Capitulare Instituțională".</p>
-
-      <h3>2. Mecanismul "Cascadei de Lichidări"</h3>
-      <p>Pentru a înțelege de ce Bitcoin a căzut fără oprire, trebuie să înțelegem <strong>Leverage-ul</strong>. Când prețul scade brusc, pozițiile Long cu leverage mare sunt lichidate automat de exchange-uri. Această vânzare automată împinge prețul și mai jos, declanșând lichidarea următorului grup. Se creează un efect de domino.</p>
-
-      <h3>3. Manipulare sau "Stop Hunting"?</h3>
-      <p>Marile instituții au acces la date care le arată unde sunt ordinele de "Stop Loss" ale micilor investitori. Strategia lor? Împing prețul agresiv în jos pentru a atinge aceste stop-loss-uri, creând lichiditate pentru a cumpăra ei înșiși la preț redus.</p>
-    `
-  },
+  // ✅ 1. ARTICOL NOU: BITCOIN SOPR & COINBASE
   {
     slug: "semnal-on-chain-bitcoin-sopr-rally",
     title: "Semnal On-Chain: Vânzătorii au obosit. Bitcoin pregătește Raliul de Decembrie?",
     date: "06 Dec 2025",
     category: "ON-CHAIN", 
-    // Link nou, stabil, tematică Dark Data/Charts
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop", 
     impact: "bullish",
     summary: "Indicatorul SOPR a atins cel mai mic nivel din 2024, semnalând epuizarea vânzătorilor. Coinbase Instituțional confirmă: lichiditatea revine.",
@@ -78,13 +54,13 @@ export const articles = [
     `
   },
 
-  // ✅ 3. ARTICOL: SUA & CFTC
+  // ✅ 3. ARTICOL: SUA & CFTC (Imaginea Ta Oficială)
   {
     slug: "sua-cftc-crypto-spot-reglementat",
     title: "BREAKING: SUA pune capăt erei 'Offshore'. Crypto devine oficial activ federal.",
     date: "05 Dec 2025",
     category: "REGLEMENTARE",
-    image: "https://images.unsplash.com/photo-1640340434855-6084b1f4901c?q=80&w=1000&auto=format&fit=crop", 
+    image: "/cftc-announcement.jpg", 
     impact: "bullish",
     summary: "Istorie în direct: CFTC autorizează tranzacționarea Spot Crypto pe burse federale. După 15 ani de refuzuri, America își deschide porțile instituționale. Află ce urmează pe 9 Decembrie.",
     mihaiTake: "Tati, citiți printre rânduri: 'Era Offshore s-a terminat'. Până acum ne jucam în curtea școlii (FTX, Binance Global). Acum am intrat în liga profesioniștilor (CME, Bitnomial). Când statul american garantează infrastructura, fondurile de pensii nu mai au scuze să nu cumpere. Pregătiți-vă pentru cel mai mare inflow de capital din istorie.",
