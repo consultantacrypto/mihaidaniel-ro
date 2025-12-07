@@ -3,11 +3,26 @@ import { articles } from '@/lib/articles';
 export async function GET() {
   const baseUrl = 'https://mihaidaniel.ro';
   
+  // Funcție simplă pentru a curăța caracterele interzise în XML
+  const escapeXml = (unsafe: string) => {
+    return unsafe.replace(/[<>&'"]/g, (c) => {
+      switch (c) {
+        case '<': return '&lt;';
+        case '>': return '&gt;';
+        case '&': return '&amp;';
+        case '\'': return '&apos;';
+        case '"': return '&quot;';
+        default: return c;
+      }
+    });
+  };
+
   // Construim Header-ul RSS
-  const rssHeader = `
+  // ✅ FIX: Am înlocuit "&" cu "&amp;" în titlu
+  const rssHeader = `<?xml version="1.0" encoding="UTF-8"?>
     <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-      <title>Mihai Daniel - Știri Crypto & Analize</title>
+      <title>Mihai Daniel - Știri Crypto &amp; Analize</title>
       <link>${baseUrl}</link>
       <description>Cele mai importante știri crypto, analize on-chain și educație financiară explicate de Mihai Daniel.</description>
       <language>ro</language>
