@@ -197,3 +197,4 @@ export default function ArticlePage() {
     </main>
   );
 }
+// Update forjat pentru imagine
