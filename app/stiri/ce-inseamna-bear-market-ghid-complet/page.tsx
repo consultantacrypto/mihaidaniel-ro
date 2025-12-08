@@ -12,8 +12,8 @@ export default function ArticlePage() {
     '@type': 'NewsArticle',
     'headline': 'Ce Înseamnă "Bear Market" și De Ce Nu Trebuie Să Te Sperie?',
     'image': [
-      // ✅ LINK IMAGINE STABIL ȘI TESTAT
-      'https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=1200&auto=format&fit=crop'
+      // ✅ IMAGINE HARDCODED (Direct aici, nu din listă)
+      'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=1200&auto=format&fit=crop'
     ],
     'datePublished': '2025-12-08T09:00:00+02:00',
     'dateModified': '2025-12-08T09:00:00+02:00',
@@ -50,7 +50,7 @@ export default function ArticlePage() {
             
             <h1 className="text-3xl md:text-5xl font-black leading-tight mb-6 text-white font-[var(--font-space)]">
                 Ce Înseamnă &quot;Bear Market&quot; și De Ce Nu Trebuie Să Te Sperie? <br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-600">Ghidul Complet pentru Investitorul Inteligent</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-600">Ghidul Complet</span>
             </h1>
 
             <p className="text-xl text-gray-300 leading-relaxed border-l-4 border-red-500/50 pl-6 italic font-[var(--font-inter)]">
@@ -58,13 +58,13 @@ export default function ArticlePage() {
             </p>
         </header>
 
+        {/* ✅ IMAGINE HARDCODED VIZIBILĂ */}
         <div className="relative w-full aspect-video mb-12 rounded-2xl overflow-hidden border border-red-500/20 shadow-[0_0_50px_rgba(239,68,68,0.15)] group">
             <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent z-10 opacity-80"></div>
-            {/* ✅ IMAGINE CORECTATĂ */}
             <img 
-                src="https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=1200&auto=format&fit=crop" 
+                src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=1200&auto=format&fit=crop" 
                 alt="Bear Market Analysis" 
-                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0"
+                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000"
             />
         </div>
 
@@ -81,6 +81,7 @@ export default function ArticlePage() {
                 </p>
             </div>
 
+            {/* TEXT INTEGRAL 100% */}
             <p className="lead text-xl text-white font-medium">
                 Dacă ai deschis portofoliul de investiții recent și ai văzut doar culoarea roșie, probabil ai auzit termenul aruncat peste tot: <strong>&quot;Suntem într-un Bear Market&quot;</strong>.
             </p>
@@ -140,7 +141,7 @@ export default function ArticlePage() {
             <div className="space-y-4">
                 <div className="bg-white/5 p-4 rounded-xl border border-white/10">
                     <h4 className="font-bold text-white mb-1">1. Nu vinde în panică</h4>
-                    <p className="text-sm text-gray-400">Dacă ai investit în active solide (Bitcoin, S&P 500, companii Blue Chip) și teza ta de investiție nu s-a schimbat, prețul roșu este doar &quot;zgomot&quot;. Dacă vinzi acum, transformi o pierdere &quot;pe hârtie&quot; într-una reală.</p>
+                    <p className="text-sm text-gray-400">Dacă ai investit în active solide (Bitcoin, S&P 500, companii Blue Chip) și teza ta nu s-a schimbat, prețul roșu este doar &quot;zgomot&quot;. Dacă vinzi acum, transformi o pierdere &quot;pe hârtie&quot; într-una reală.</p>
                 </div>
                 <div className="bg-white/5 p-4 rounded-xl border border-white/10">
                     <h4 className="font-bold text-white mb-1">2. Folosește strategia DCA (Dollar Cost Averaging)</h4>
@@ -158,14 +159,6 @@ export default function ArticlePage() {
             </p>
             <p>
                 Dacă citești acest articol și încă ești în piață, felicitări! Ești deja cu un pas înaintea mulțimii.
-            </p>
-
-            <h3 className="text-white mt-12 font-[var(--font-space)] text-xl font-bold">Simți că portofoliul tău sângerează și nu știi ce să faci?</h3>
-            <p>
-                Bear Market-ul poate fi o perioadă singuratică și stresantă. Uneori, diferența dintre a vinde pe minim și a acumula avere este o simplă discuție cu cineva care a mai trecut prin asta.
-            </p>
-            <p>
-                Te invit la o sesiune de consultanță 1-la-1 ($250/oră), unde vom analiza portofoliul tău și vom construi o strategie personalizată de apărare și acumulare, adaptată toleranței tale la risc. Nu lăsa piața să decidă pentru tine. Preia controlul.
             </p>
         </div>
 
