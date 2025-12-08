@@ -1,5 +1,72 @@
 export const articles = [ 
-  // ✅ 1. ARTICOL NOU: CAPCANA URSULUI (TEXT INTEGRAL)
+  // ✅ 1. ARTICOL NOU: BEAR MARKET (EDUCAȚIE)
+  {
+    slug: "ce-inseamna-bear-market-ghid-complet",
+    title: "Ce Înseamnă \"Bear Market\" și De Ce Nu Trebuie Să Te Sperie? Ghidul Complet.",
+    date: "08 Dec 2025",
+    category: "EDUCAȚIE FINANCIARĂ",
+    image: "https://images.unsplash.com/photo-1535320903710-d9cf113d2054?q=80&w=1000&auto=format&fit=crop", 
+    impact: "bearish", 
+    summary: "Dacă portofoliul tău e pe roșu, probabil ai auzit termenul \"Bear Market\". Află de unde vine numele, care sunt cele 4 faze psihologice și cum să prosperi în iarna financiară.",
+    mihaiTake: "Tati, nu fugi de urs. Îmbrățișează-l. Bear Market-ul este perioada în care se fac averile, doar că nota de plată o încasezi în Bull Market. Dacă înțelegi psihologia din spatele graficului, frica dispare și apare oportunitatea. Citeste ghidul ăsta ca să știi exact unde ne aflăm.",
+    content: `
+      <p>Dacă ai deschis portofoliul de investiții recent și ai văzut doar culoarea roșie, probabil ai auzit termenul aruncat peste tot: <strong>"Suntem într-un Bear Market"</strong>.</p>
+      <p>Pentru începători, sună înfricoșător. Pentru veteranii de pe Wall Street, sună a oportunitate. Dar ce înseamnă, de fapt, un Bear Market (Piață "Urs")? De ce a fost ales acest animal și, cel mai important, cum îți protejezi banii când ursul atacă piața?</p>
+      <p>În acest ghid complet, demontăm miturile și îți arătăm cum să supraviețuiești – și chiar să prosperi – în timpul "iernii financiare".</p>
+
+      <h3>De unde vine numele? Lupta dintre Taur și Urs</h3>
+      <p>Înainte de a vorbi despre procente și pierderi, trebuie să înțelegem simbolismul. Termenii "Bull" (Taur) și "Bear" (Urs) descriu modul în care aceste animale își atacă prada:</p>
+      <ul>
+        <li><strong>Bull Market (Piața Taur):</strong> Taurul atacă lovind cu coarnele de jos în sus. <br/><em>Semnificație:</em> Prețurile cresc, optimismul este ridicat, graficele merg "to the moon".</li>
+        <li><strong>Bear Market (Piața Urs):</strong> Ursul atacă lovind cu labele de sus în jos, strivindu-și prada. <br/><em>Semnificație:</em> Prețurile scad agresiv, pesimismul domină, investitorii vând de frică.</li>
+      </ul>
+
+      <h3>Definiția Tehnică: Când devine o corecție un Bear Market?</h3>
+      <p>Nu orice scădere de preț înseamnă Bear Market. Piețele respiră; uneori inspiră (creștere), alteori expiră (scădere). Exista o regulă nescrisă, dar acceptată universal pe Wall Street:</p>
+      <ul>
+        <li><strong>Corecție:</strong> O scădere de 10% - 19% față de maximul recent. Este considerată sănătoasă.</li>
+        <li><strong>Bear Market:</strong> O scădere de peste 20% față de maximul istoric recent (ATH), care persistă pe o perioadă mai lungă (luni sau ani).</li>
+      </ul>
+      <p><strong>Notă pentru Crypto:</strong> În lumea criptomonedelor, volatilitatea este mult mai mare. Un "Crypto Bear Market" implică adesea scăderi de 70% - 85% pentru Bitcoin și chiar 90-99% pentru Altcoins.</p>
+
+      <h3>Psihologia Pieței: Cele 4 Faze ale unui Bear Market</h3>
+      <p>Un Bear Market nu este o linie dreaptă în jos. Este un proces psihologic dureros, conceput să testeze răbdarea investitorilor. Iată prin ce trecem:</p>
+      
+      <p><strong>1. Recunoașterea (Negarea)</strong><br/>
+      Prețurile încep să scadă de la maxime. Investitorii spun: "E doar o mică corecție, voi cumpăra mai mult (Buy the Dip)". Optimismul încă există.</p>
+
+      <p><strong>2. Panica</strong><br/>
+      Prețurile nu își revin. Știrile economice devin negative (inflație, război, ratele dobânzilor). Investitorii încep să realizeze că trendul s-a schimbat. Începe vânzarea emoțională.</p>
+
+      <p><strong>3. Stabilizarea (Capitularea)</strong><br/>
+      Acesta este momentul în care investitorii de retail renunță. "Crypto e o țeapă", "Bursa nu e de mine". Vând în pierdere doar ca să scape de stres. Prețurile ating fundul (bottom).</p>
+
+      <p><strong>4. Anticiparea</strong><br/>
+      Prețurile stagnează o perioadă lungă (zona de acumulare). Veștile proaste nu mai afectează prețul. "Smart Money" (Instituțiile) încep să cumpere în liniște, pregătind următorul Bull Market.</p>
+
+      <h3>Cum să Supraviețuiești (și să Faci Bani) când Ursul Atacă</h3>
+      <p>Warren Buffett are o vorbă celebră: <em>"Fii lacom când alții sunt fricoși și fricos când alții sunt lacomi."</em> Bear Market-ul este perioada în care se fac averile, dar ele se încasează abia în Bull Market. Iată 3 reguli de aur:</p>
+
+      <p><strong>1. Nu vinde în panică</strong><br/>
+      Dacă ai investit în active solide (Bitcoin, S&P 500, companii Blue Chip) și teza ta de investiție nu s-a schimbat, prețul roșu este doar "zgomot". Dacă vinzi acum, transformi o pierdere "pe hârtie" într-una reală.</p>
+
+      <p><strong>2. Folosește strategia DCA (Dollar Cost Averaging)</strong><br/>
+      Nu încerca să ghicești unde este fundul prăpastiei (Catching a falling knife). În schimb, investește o sumă fixă, constant (ex: 100$ pe săptămână), indiferent de preț. Astfel, vei cumpăra mai mult când prețul e mic și mai puțin când prețul e mare, obținând un preț mediu excelent.</p>
+
+      <p><strong>3. Evită Leverage-ul (Banii împrumutați)</strong><br/>
+      Într-un Bear Market, volatilitatea este extremă. Lichidările masive sunt frecvente. Păstrează-te pe piața Spot (cumperi activul real). Nu risca să fii șters din piață înainte ca revenirea să înceapă.</p>
+
+      <h3>Concluzie: Iarna nu durează la nesfârșit</h3>
+      <p>Istoria piețelor financiare, de peste 100 de ani, ne arată un lucru cert: Fiecare Bear Market a fost urmat de un Bull Market care a atins noi maxime istorice. Ursul face curățenie. Elimină proiectele slabe, companiile zombie și investitorii lacomi care folosesc prea mult risc.</p>
+      <p>Dacă citești acest articol și încă ești în piață, felicitări! Ești deja cu un pas înaintea mulțimii.</p>
+
+      <h3>Simți că portofoliul tău sângerează și nu știi ce să faci?</h3>
+      <p>Bear Market-ul poate fi o perioadă singuratică și stresantă. Uneori, diferența dintre a vinde pe minim și a acumula avere este o simplă discuție cu cineva care a mai trecut prin asta.</p>
+      <p>Te invit la o sesiune de consultanță 1-la-1, unde vom analiza portofoliul tău și vom construi o strategie personalizată de apărare și acumulare, adaptată toleranței tale la risc. Nu lăsa piața să decidă pentru tine. Preia controlul.</p>
+    `
+  },
+
+  // ✅ 2. ARTICOL: CAPCANA URSULUI (PSIHOLOGIE)
   {
     slug: "capcana-ursului-istorie-crize-evitate",
     title: "\"Capcana Ursului\": De ce Toți Indicatorii de Criză Pot Fi Greșiți. Lecții Istorice.",
@@ -10,48 +77,25 @@ export const articles = [
     summary: "Istoria ne învață că atunci când toată lumea așteaptă o criză, ea tinde să nu apară. Analizăm 3 momente critice (1994, 2018, 2020) când piețele au șocat lumea cu reveniri spectaculoase.",
     mihaiTake: "Tati, ține minte vorba asta: 'Piețele mor pe euforie și se nasc pe pesimism'. Acum suntem la pesimism maxim. Toți văd doar recesiune. Istoric vorbind, acesta este momentul în care 'Smart Money' cumpără, nu vinde. Nu paria împotriva tiparniței de bani.",
     content: `
-      <p>Deschizi știrile și vezi doar roșu: curba randamentelor inversată, inflație persistentă, conflicte geopolitice și un Bitcoin care se chinuie. Consensul general? "Vine un Bear Market crunt."</p>
-      <p>Dar istoria piețelor financiare ne învață o lecție prețioasă, adesea ignorată de investitorii conduși de emoție: <strong>Atunci când toată lumea se așteaptă la o criză, aceasta tinde să nu mai apară.</strong></p>
-      <p>Piețele nu se mișcă pe baza știrilor de azi, ci pe baza așteptărilor pentru mâine. În acest articol, explorăm momentele critice din istorie când indicatorii urlau "Vinde tot!", dar piața a făcut o întoarcere spectaculoasă de 180 de grade, lăsând pesimiștii în urmă.</p>
+      <p>Deschizi știrile și vezi doar roșu: curba randamentelor inversată, inflație persistentă și un Bitcoin care se chinuie. Consensul general? "Vine un Bear Market crunt."</p>
+      <p>Dar istoria piețelor financiare ne învață o lecție prețioasă: <strong>Atunci când toată lumea se așteaptă la o criză, aceasta tinde să nu mai apară.</strong></p>
 
       <h3>Cum se poate "Anula" un Bear Market?</h3>
-      <p>Un Bear Market (scădere de peste 20% pe o perioadă lungă) nu este o fatalitate. Este o consecință a retragerii lichidității. Dar există două forțe majore care pot opri această cădere, chiar și în ultima secundă:</p>
+      <p>Un Bear Market nu este o fatalitate. Există două forțe majore care pot opri căderea:</p>
       <ul>
-        <li><strong>"The Fed Pivot" (Pivotarea Băncii Centrale):</strong> Când economia încetinește prea mult, băncile centrale (FED, BCE) intervin agresiv, tăind dobânzile și injectând bani. Istoric, nu vrei să pariezi împotriva tiparniței de bani.</li>
-        <li><strong>Capitularea Vânzătorilor:</strong> Un Bear Market are nevoie de vânzători. Dar când sentimentul este deja la "pesimism extrem", cine mai rămâne să vândă? Când toți cei care voiau să iasă au ieșit deja, prețul nu mai are unde să meargă decât în sus.</li>
+        <li><strong>"The Fed Pivot":</strong> Când economia încetinește, băncile centrale intervin agresiv. Nu vrei să pariezi împotriva tiparniței de bani.</li>
+        <li><strong>Capitularea Vânzătorilor:</strong> Când toți cei care voiau să iasă au ieșit deja, prețul nu mai are unde să meargă decât în sus.</li>
       </ul>
-      <p>Iată 3 exemple istorice care demonstrează că "sfârșitul lumii" a fost, de fapt, începutul unui Bull Market.</p>
 
-      <h3>Cazul 1: "Aterizarea Lină" din 1994-1995 (Planul Perfect)</h3>
-      <p><strong>Situația:</strong> Foarte similară cu 2024-2025. În 1994, Rezerva Federală a crescut dobânzile agresiv, de la 3% la 6%, pentru a opri inflația. Piața de obligațiuni s-a prăbușit (cel mai rău an din istorie), iar Wall Street-ul era convins că urmează o recesiune în 1995.</p>
-      <p><strong>Răsturnarea:</strong> Alan Greenspan (șeful FED de atunci) a realizat pericolul și a oprit creșterile, apoi a tăiat ușor dobânzile.</p>
-      <p><strong>Rezultatul:</strong> Nu doar că recesiunea a fost evitată (celebrul "Soft Landing"), dar a urmat cea mai explozivă perioadă de creștere din istoria modernă (Boom-ul dot-com). S&P 500 a crescut cu +34% în 1995!</p>
+      <h3>Studiu de Caz: Crăciunul Negru din 2018</h3>
+      <p>În Q4 2018, Jerome Powell părea decis să crească dobânzile. Piețele s-au prăbușit cu 20%. Toți strigau "Recesiune 2019!".</p>
+      <p><strong>Răsturnarea:</strong> În ianuarie, Powell a ieșit și a spus simplu: "Vom fi răbdători". Piețele au explodat instantaneu, recuperând totul în câteva luni. Cei care au vândut de frică au pierdut tot raliul.</p>
 
-      <h3>Cazul 2: Crăciunul Negru din 2018 (Pivotarea Powell)</h3>
-      <p><strong>Situația:</strong> În Q4 2018, Jerome Powell (același de azi) era decis să crească dobânzile. Piețele au intrat în panică. S&P 500 a scăzut cu aproape 20% până în Ajunul Crăciunului. Crypto s-a prăbușit și el. Titlurile ziarelor: "Recesiunea din 2019 este inevitabilă".</p>
-      <p><strong>Răsturnarea:</strong> În prima săptămână din ianuarie 2019, Powell a ieșit public și a spus simplu: "Vom fi răbdători". A renunțat la creșterea dobânzilor.</p>
-      <p><strong>Rezultatul:</strong> Piețele au explodat instantaneu. 2019 a devenit un an excepțional pentru acțiuni și crypto, recuperând toate pierderile în câteva luni. Cei care au vândut de frică în decembrie au pierdut tot raliul.</p>
-
-      <h3>Cazul 3: Șocul COVID din 2020 (Cel mai rapid Bear Market din istorie)</h3>
-      <p><strong>Situația:</strong> Martie 2020. Lumea s-a închis. Economia globală s-a oprit. PIB-ul s-a prăbușit. Logic, ar fi trebuit să urmeze ani de depresie economică.</p>
-      <p><strong>Răsturnarea:</strong> Intervenția fiscală și monetară a fost fără precedent. Stimulentele au inundat piața.</p>
-      <p><strong>Rezultatul:</strong> Deși economia reală suferea, piețele financiare au atins noi maxime istorice în doar 6 luni. Aceasta este lecția supremă: Piețele nu sunt economia. Piețele sunt lichiditate.</p>
-
-      <h3>De ce Optimismul este o Strategie, nu o Emoție</h3>
-      <p>Sir John Templeton, unul dintre cei mai mari investitori din istorie, spunea:</p>
-      <blockquote class="border-l-4 border-orange-500 pl-4 italic text-gray-400 my-4">
-        "Bull market-urile se nasc din pesimism, cresc pe scepticism, se maturizează pe optimism și mor pe euforie."
-      </blockquote>
-      <p>Astăzi, suntem în faza de pesimism și scepticism. Indicatorii macro arată rău? Da. Frica este la cote maxime? Da.</p>
-      <p>Dar tocmai acești factori creează "Zidul Îngrijorării" (Wall of Worry) pe care piețele îl escaladează. Un Bear Market real apare de obicei când nimeni nu se așteaptă, când toți suntem euforici și credem că "de data asta e diferit". Faptul că toată lumea este precaută acum este, paradoxal, cel mai bullish semnal posibil.</p>
-
-      <h3>Concluzie: Nu paria împotriva adaptării umane</h3>
-      <p>Istoria ne arată că sistemul financiar este incredibil de rezilient. Fie că e vorba de inovație tehnologică (AI astăzi, Internetul în '95) sau de intervenția băncilor centrale, scenariul apocaliptic este cel mai puțin probabil să se întâmple.</p>
-      <p>Păstrează-ți calmul, gestionează-ți riscul, dar nu lăsa frica să te scoată din joc exact înainte de revenire.</p>
+      <p><strong>Concluzie:</strong> Astăzi suntem în faza de pesimism. Dar tocmai acest "Zid al Îngrijorării" este scara pe care piețele urcă. Faptul că ești precaut e bine, dar faptul că ești panicat te poate costa averea.</p>
     `
   },
 
-  // ✅ 2. ARTICOL: FED & DOBÂNZI (MACRO)
+  // ✅ 3. ARTICOL: FED & DOBÂNZI (MACRO)
   {
     slug: "impact-dobanda-fed-bitcoin-scenarii",
     title: "Alertă Maximă: Decizia FED care Poate Arunca Bitcoin în Aer. Scenariile 0.25% vs 0.50%",
@@ -92,7 +136,7 @@ export const articles = [
     `
   },
 
-  // ✅ 3. ARTICOL: BITCOIN MANIPULARE
+  // ✅ 4. ARTICOL: BITCOIN MANIPULARE
   {
     slug: "bitcoin-manipulare-sau-corectie-brutala",
     title: "Bitcoin: Manipulare Instituțională sau Corecție Brutală? Anatomia unei Prăbușiri de 19 Miliarde $",
@@ -137,7 +181,7 @@ export const articles = [
     `
   },
 
-  // ✅ 4. ARTICOL: BITCOIN SOPR
+  // ✅ 5. ARTICOL: BITCOIN SOPR & COINBASE
   {
     slug: "semnal-on-chain-bitcoin-sopr-rally",
     title: "Semnal On-Chain: Vânzătorii au obosit. Bitcoin pregătește Raliul de Decembrie?",
@@ -168,7 +212,7 @@ export const articles = [
     `
   },
 
-  // ✅ 5. ARTICOL: QUANTUM COMPUTING
+  // ✅ 6. ARTICOL: QUANTUM COMPUTING
   {
     slug: "riscuri-quantum-computing-bitcoin-explicat",
     title: "Calculatoarele Cuantice vs. Bitcoin: Sfârșitul Criptomonedelor sau Doar o Nouă Provocare?",
@@ -192,7 +236,7 @@ export const articles = [
     `
   },
 
-  // ✅ 6. ARTICOL: SUA & CFTC
+  // ✅ 7. ARTICOL: SUA & CFTC
   {
     slug: "sua-cftc-crypto-spot-reglementat",
     title: "BREAKING: SUA pune capăt erei 'Offshore'. Crypto devine oficial activ federal.",
@@ -228,7 +272,7 @@ export const articles = [
     `
   },
 
-  // ✅ 7. ARTICOL: ATAC 27M
+  // ✅ 8. ARTICOL: ATAC 27M
   {
     slug: "atac-27-milioane-link-malitios",
     title: "ALERTA: Cum să pierzi 27.000.000$ într-o secundă. Pericolul invizibil din buzunarul tău",
@@ -266,7 +310,7 @@ export const articles = [
     `
   },
 
-  // ✅ 8. ARTICOL: VANGUARD & CFTC (Legacy)
+  // ✅ 9. ARTICOL: VANGUARD & CFTC (Legacy)
   {
     slug: "marea-convergenta-crypto",
     title: "Marea Convergență: Vanguard și CFTC validează Crypto ca 'Gold Standard'",
@@ -292,7 +336,7 @@ export const articles = [
     `
   },
 
-  // ✅ 9. ARTICOL: QIVALIS
+  // ✅ 10. ARTICOL: QIVALIS
   {
     slug: "qivalis-banci-europene-stablecoin",
     title: "BREAKING: 9 Bănci Gigant lansează Qivalis - Euro Stablecoin",
@@ -329,7 +373,7 @@ export const articles = [
     `
   },
 
-  // ✅ 10. ARTICOL: SEC ETF ETHEREUM
+  // ✅ 11. ARTICOL: SEC ETF ETHEREUM
   {
     slug: "sec-aproba-etf-ethereum",
     title: "SEC Aprobă ETF-ul de Ethereum Spot",
@@ -347,7 +391,7 @@ export const articles = [
     `
   },
 
-  // ✅ 11. ARTICOL: SOLANA FIREDANCER
+  // ✅ 12. ARTICOL: SOLANA FIREDANCER
   {
     slug: "solana-firedancer",
     title: "Solana lansează Firedancer",
@@ -364,7 +408,7 @@ export const articles = [
     `
   },
 
-  // ✅ 12. ARTICOL: INFLATIE CPI
+  // ✅ 13. ARTICOL: INFLATIE CPI
   {
     slug: "inflatie-sua-cpi",
     title: "Inflația SUA crește (CPI 3.4%)",
