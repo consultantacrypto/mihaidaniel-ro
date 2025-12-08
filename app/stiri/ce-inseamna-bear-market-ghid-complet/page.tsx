@@ -12,6 +12,7 @@ export default function ArticlePage() {
     '@type': 'NewsArticle',
     'headline': 'Ce Înseamnă "Bear Market" și De Ce Nu Trebuie Să Te Sperie?',
     'image': [
+      // ✅ LINK IMAGINE STABIL ȘI TESTAT
       'https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=1200&auto=format&fit=crop'
     ],
     'datePublished': '2025-12-08T09:00:00+02:00',
@@ -49,7 +50,7 @@ export default function ArticlePage() {
             
             <h1 className="text-3xl md:text-5xl font-black leading-tight mb-6 text-white font-[var(--font-space)]">
                 Ce Înseamnă &quot;Bear Market&quot; și De Ce Nu Trebuie Să Te Sperie? <br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-600">Ghidul Complet</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-600">Ghidul Complet pentru Investitorul Inteligent</span>
             </h1>
 
             <p className="text-xl text-gray-300 leading-relaxed border-l-4 border-red-500/50 pl-6 italic font-[var(--font-inter)]">
@@ -59,6 +60,7 @@ export default function ArticlePage() {
 
         <div className="relative w-full aspect-video mb-12 rounded-2xl overflow-hidden border border-red-500/20 shadow-[0_0_50px_rgba(239,68,68,0.15)] group">
             <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent z-10 opacity-80"></div>
+            {/* ✅ IMAGINE CORECTATĂ */}
             <img 
                 src="https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=1200&auto=format&fit=crop" 
                 alt="Bear Market Analysis" 
@@ -75,7 +77,7 @@ export default function ArticlePage() {
                     <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span> Mihai&apos;s Take:
                 </h3>
                 <p className="text-sm italic text-gray-300 relative z-10">
-                    &quot;Tati, nu fugi de urs. Îmbrățișează-l. Bear Market-ul este perioada în care se fac averile, doar că nota de plată o încasezi în Bull Market. Dacă înțelegi psihologia din spatele graficului, frica dispare și apare oportunitatea.&quot;
+                    &quot;Tati, nu fugi de urs. Îmbrățișează-l. Bear Market-ul este perioada în care se fac averile, doar că nota de plată o încasezi în Bull Market. Dacă înțelegi psihologia din spatele graficului, frica dispare și apare oportunitatea. Citeste ghidul ăsta ca să știi exact unde ne aflăm.&quot;
                 </p>
             </div>
 
@@ -85,12 +87,15 @@ export default function ArticlePage() {
             <p>
                 Pentru începători, sună înfricoșător. Pentru veteranii de pe Wall Street, sună a oportunitate. Dar ce înseamnă, de fapt, un Bear Market (Piață &quot;Urs&quot;)? De ce a fost ales acest animal și, cel mai important, cum îți protejezi banii când ursul atacă piața?
             </p>
+            <p>
+                În acest ghid complet, demontăm miturile și îți arătăm cum să supraviețuiești – și chiar să prosperi – în timpul &quot;iernii financiare&quot;.
+            </p>
 
             <h3 className="flex items-center gap-3 text-white mt-12 mb-6 font-[var(--font-space)] text-2xl font-bold border-b border-white/10 pb-4">
                 <span className="p-2 bg-red-500/20 rounded-lg text-red-400"><TrendingDown size={24}/></span>
                 De unde vine numele? Lupta dintre Taur și Urs
             </h3>
-            <p>Înainte de a vorbi despre procente și pierderi, trebuie să înțelegem simbolismul:</p>
+            <p>Înainte de a vorbi despre procente și pierderi, trebuie să înțelegem simbolismul. Termenii &quot;Bull&quot; (Taur) și &quot;Bear&quot; (Urs) descriu modul în care aceste animale își atacă prada:</p>
             <ul className="space-y-4">
                 <li className="bg-green-900/10 p-4 rounded-lg border border-green-500/20">
                     <strong className="text-green-400">🐂 Bull Market (Piața Taur):</strong> Taurul atacă lovind cu coarnele de jos în sus.<br/>
@@ -106,7 +111,7 @@ export default function ArticlePage() {
                 <span className="p-2 bg-orange-500/20 rounded-lg text-orange-400"><AlertTriangle size={24}/></span>
                 Definiția Tehnică: Când devine o corecție un Bear Market?
             </h3>
-            <p>Nu orice scădere de preț înseamnă Bear Market. Piețele respiră. Există o regulă nescrisă, dar acceptată universal:</p>
+            <p>Nu orice scădere de preț înseamnă Bear Market. Piețele respiră; uneori inspiră (creștere), alteori expiră (scădere). Exista o regulă nescrisă, dar acceptată universal pe Wall Street:</p>
             <ul>
                 <li><strong>Corecție:</strong> O scădere de 10% - 19% față de maximul recent. Este considerată sănătoasă.</li>
                 <li><strong>Bear Market:</strong> O scădere de peste 20% față de maximul istoric recent (ATH), care persistă pe o perioadă mai lungă (luni sau ani).</li>
@@ -117,42 +122,50 @@ export default function ArticlePage() {
 
             <h3 className="flex items-center gap-3 text-white mt-12 mb-6 font-[var(--font-space)] text-2xl font-bold border-b border-white/10 pb-4">
                 <span className="p-2 bg-purple-500/20 rounded-lg text-purple-400"><BrainCircuit size={24}/></span>
-                Psihologia Pieței: Cele 4 Faze
+                Psihologia Pieței: Cele 4 Faze ale unui Bear Market
             </h3>
-            <p>Un Bear Market nu este o linie dreaptă în jos. Este un proces psihologic dureros:</p>
+            <p>Un Bear Market nu este o linie dreaptă în jos. Este un proces psihologic dureros, conceput să testeze răbdarea investitorilor. Iată prin ce trecem:</p>
             <ol className="list-decimal pl-6 space-y-4 marker:text-gray-500">
-                <li><strong>Recunoașterea (Negarea):</strong> Investitorii spun: &quot;E doar o mică corecție, voi cumpăra mai mult&quot;. Optimismul încă există.</li>
-                <li><strong>Panica:</strong> Prețurile nu își revin. Știrile devin negative. Începe vânzarea emoțională.</li>
-                <li><strong>Stabilizarea (Capitularea):</strong> Investitorii de retail renunță. &quot;Crypto e o țeapă&quot;. Vând în pierdere doar ca să scape de stres. Prețurile ating fundul.</li>
-                <li><strong>Anticiparea:</strong> Prețurile stagnează (acumulare). &quot;Smart Money&quot; (Instituțiile) încep să cumpere în liniște.</li>
+                <li><strong>Recunoașterea (Negarea):</strong> Prețurile încep să scadă de la maxime. Investitorii spun: &quot;E doar o mică corecție, voi cumpăra mai mult (Buy the Dip)&quot;. Optimismul încă există.</li>
+                <li><strong>Panica:</strong> Prețurile nu își revin. Știrile economice devin negative (inflație, război, ratele dobânzilor). Investitorii încep să realizeze că trendul s-a schimbat. Începe vânzarea emoțională.</li>
+                <li><strong>Stabilizarea (Capitularea):</strong> Acesta este momentul în care investitorii de retail renunță. &quot;Crypto e o țeapă&quot;, &quot;Bursa nu e de mine&quot;. Vând în pierdere doar ca să scape de stres. Prețurile ating fundul (bottom).</li>
+                <li><strong>Anticiparea:</strong> Prețurile stagnează o perioadă lungă (zona de acumulare). Veștile proaste nu mai afectează prețul. &quot;Smart Money&quot; (Instituțiile) încep să cumpere în liniște, pregătind următorul Bull Market.</li>
             </ol>
 
             <h3 className="flex items-center gap-3 text-white mt-12 mb-6 font-[var(--font-space)] text-2xl font-bold border-b border-white/10 pb-4">
                 <span className="p-2 bg-green-500/20 rounded-lg text-green-400"><History size={24}/></span>
-                Cum să Supraviețuiești (și să Faci Bani)
+                Cum să Supraviețuiești (și să Faci Bani) când Ursul Atacă
             </h3>
-            <p>Warren Buffett are o vorbă celebră: <em>&quot;Fii lacom când alții sunt fricoși și fricos când alții sunt lacomi.&quot;</em> Iată 3 reguli de aur:</p>
+            <p>Warren Buffett are o vorbă celebră: <em>&quot;Fii lacom când alții sunt fricoși și fricos când alții sunt lacomi.&quot;</em> Bear Market-ul este perioada în care se fac averile, dar ele se încasează abia în Bull Market. Iată 3 reguli de aur:</p>
             <div className="space-y-4">
                 <div className="bg-white/5 p-4 rounded-xl border border-white/10">
                     <h4 className="font-bold text-white mb-1">1. Nu vinde în panică</h4>
-                    <p className="text-sm text-gray-400">Dacă ai investit în active solide și teza ta nu s-a schimbat, prețul roșu este doar &quot;zgomot&quot;. Dacă vinzi acum, marchezi pierderea.</p>
+                    <p className="text-sm text-gray-400">Dacă ai investit în active solide (Bitcoin, S&P 500, companii Blue Chip) și teza ta de investiție nu s-a schimbat, prețul roșu este doar &quot;zgomot&quot;. Dacă vinzi acum, transformi o pierdere &quot;pe hârtie&quot; într-una reală.</p>
                 </div>
                 <div className="bg-white/5 p-4 rounded-xl border border-white/10">
-                    <h4 className="font-bold text-white mb-1">2. Folosește DCA (Dollar Cost Averaging)</h4>
-                    <p className="text-sm text-gray-400">Nu încerca să ghicești fundul. Investește o sumă fixă, constant. Vei obține un preț mediu excelent.</p>
+                    <h4 className="font-bold text-white mb-1">2. Folosește strategia DCA (Dollar Cost Averaging)</h4>
+                    <p className="text-sm text-gray-400">Nu încerca să ghicești unde este fundul prăpastiei (Catching a falling knife). În schimb, investește o sumă fixă, constant (ex: 100$ pe săptămână), indiferent de preț. Astfel, vei cumpăra mai mult când prețul e mic și mai puțin când prețul e mare, obținând un preț mediu excelent.</p>
                 </div>
                 <div className="bg-white/5 p-4 rounded-xl border border-white/10">
-                    <h4 className="font-bold text-white mb-1">3. Evită Leverage-ul</h4>
-                    <p className="text-sm text-gray-400">Într-un Bear Market, volatilitatea este extremă. Păstrează-te pe piața Spot. Nu risca să fii lichidat.</p>
+                    <h4 className="font-bold text-white mb-1">3. Evită Leverage-ul (Banii împrumutați)</h4>
+                    <p className="text-sm text-gray-400">Într-un Bear Market, volatilitatea este extremă. Lichidările masive sunt frecvente. Păstrează-te pe piața Spot (cumperi activul real). Nu risca să fii șters din piață înainte ca revenirea să înceapă.</p>
                 </div>
             </div>
 
             <h3 className="text-white mt-12 font-[var(--font-space)] text-xl font-bold">Concluzie: Iarna nu durează la nesfârșit</h3>
             <p>
-                Istoria piețelor financiare ne arată un lucru cert: Fiecare Bear Market a fost urmat de un Bull Market care a atins noi maxime istorice. Ursul face curățenie. Elimină proiectele slabe și investitorii lacomi.
+                Istoria piețelor financiare, de peste 100 de ani, ne arată un lucru cert: Fiecare Bear Market a fost urmat de un Bull Market care a atins noi maxime istorice. Ursul face curățenie. Elimină proiectele slabe, companiile zombie și investitorii lacomi care folosesc prea mult risc.
             </p>
             <p>
                 Dacă citești acest articol și încă ești în piață, felicitări! Ești deja cu un pas înaintea mulțimii.
+            </p>
+
+            <h3 className="text-white mt-12 font-[var(--font-space)] text-xl font-bold">Simți că portofoliul tău sângerează și nu știi ce să faci?</h3>
+            <p>
+                Bear Market-ul poate fi o perioadă singuratică și stresantă. Uneori, diferența dintre a vinde pe minim și a acumula avere este o simplă discuție cu cineva care a mai trecut prin asta.
+            </p>
+            <p>
+                Te invit la o sesiune de consultanță 1-la-1 ($250/oră), unde vom analiza portofoliul tău și vom construi o strategie personalizată de apărare și acumulare, adaptată toleranței tale la risc. Nu lăsa piața să decidă pentru tine. Preia controlul.
             </p>
         </div>
 
