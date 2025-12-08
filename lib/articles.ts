@@ -1,18 +1,20 @@
 export const articles = [ 
-  // ✅ 1. ARTICOL NOU: BEAR MARKET (IMAGINE REPARATĂ)
+  // ✅ 1. ARTICOL NOU: BEAR MARKET (DESIGN & STRUCTURĂ REPARATE)
   {
     slug: "ce-inseamna-bear-market-ghid-complet",
     title: "Ce Înseamnă \"Bear Market\" și De Ce Nu Trebuie Să Te Sperie? Ghidul Complet.",
     date: "08 Dec 2025",
     category: "EDUCAȚIE FINANCIARĂ",
-    // Imagine Stabilă (Grafic Bursier Dark Mode)
-    image: "https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=1000&auto=format&fit=crop", 
+    // Imagine Nouă Stabilă (Red Market/Crisis Concept)
+    image: "https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=1200&auto=format&fit=crop", 
     impact: "bearish", 
     summary: "Dacă portofoliul tău e pe roșu, probabil ai auzit termenul \"Bear Market\". Află de unde vine numele, care sunt cele 4 faze psihologice și cum să prosperi în iarna financiară.",
     mihaiTake: "Tati, nu fugi de urs. Îmbrățișează-l. Bear Market-ul este perioada în care se fac averile, doar că nota de plată o încasezi în Bull Market. Dacă înțelegi psihologia din spatele graficului, frica dispare și apare oportunitatea. Citeste ghidul ăsta ca să știi exact unde ne aflăm.",
     content: `
       <p>Dacă ai deschis portofoliul de investiții recent și ai văzut doar culoarea roșie, probabil ai auzit termenul aruncat peste tot: <strong>"Suntem într-un Bear Market"</strong>.</p>
+      
       <p>Pentru începători, sună înfricoșător. Pentru veteranii de pe Wall Street, sună a oportunitate. Dar ce înseamnă, de fapt, un Bear Market (Piață "Urs")? De ce a fost ales acest animal și, cel mai important, cum îți protejezi banii când ursul atacă piața?</p>
+      
       <p>În acest ghid complet, demontăm miturile și îți arătăm cum să supraviețuiești – și chiar să prosperi – în timpul "iernii financiare".</p>
 
       <h3>De unde vine numele? Lupta dintre Taur și Urs</h3>
@@ -160,7 +162,98 @@ export const articles = [
     `
   },
 
-  // ✅ 4. ARTICOL: BITCOIN MANIPULARE
+  // ✅ 4. ARTICOL: BITCOIN SOPR & COINBASE
+  {
+    slug: "semnal-on-chain-bitcoin-sopr-rally",
+    title: "Semnal On-Chain: Vânzătorii au obosit. Bitcoin pregătește Raliul de Decembrie?",
+    date: "06 Dec 2025",
+    category: "ON-CHAIN", 
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop", 
+    impact: "bullish",
+    summary: "Indicatorul SOPR a atins cel mai mic nivel din 2024, semnalând epuizarea vânzătorilor. Coinbase Instituțional confirmă: lichiditatea revine.",
+    mihaiTake: "Tati, diferența dintre amatori și profesioniști este la ce se uită. Amatorii se uită la lumânări roșii și vând. Profesioniștii se uită la datele On-Chain (SOPR) și văd că 'mâinile slabe' au ieșit din piață. Este un 'Reset' sănătos înainte de următorul impuls.",
+    content: `
+      <p>În ultimele 24 de ore, Bitcoin a suferit o corecție, testând zona de $89,000. Pentru investitorul de retail, asta arată a panică. Dar pentru analiștii on-chain, arată a <strong>oportunitate</strong>.</p>
+
+      <h3>Indicatorul SOPR: Epuizarea Vânzătorilor</h3>
+      <p>Conform datelor monitorizate de <em>Lookonchain</em> și <em>CryptoOnchain</em>, indicatorul <strong>Bitcoin SOPR Ratio</strong> a scăzut la valoarea de <strong>1.35</strong>. Acesta este cel mai jos nivel de la începutul anului 2024.</p>
+      
+      <p><strong>Ce înseamnă asta pe românește?</strong></p>
+      <p>SOPR (Spent Output Profit Ratio) măsoară dacă cei care vând acum sunt pe profit sau pe pierdere. O scădere la acest nivel indică faptul că faza de "marcare a profiturilor" (profit-taking) s-a terminat. Presiunea de vânzare este epuizată. Istoric, acest reset a marcat adesea un <strong>minim local</strong> (local bottom).</p>
+
+      <h3>Coinbase Instituțional: "Lichiditatea Revine"</h3>
+      <p>În paralel, brațul instituțional al Coinbase a emis o notă către clienți anticipând un <strong>"Raliu de Revenire" în Decembrie</strong>.</p>
+      <ul>
+        <li>Probabilitatea unei tăieri de dobândă FED a crescut la 92%.</li>
+        <li>Lichiditatea globală este în creștere.</li>
+        <li>Dolarul american (DXY) arată semne de slăbiciune, ceea ce favorizează activele de risc precum Crypto.</li>
+      </ul>
+
+      <p><strong>Concluzie:</strong> Piața s-a răcit ("reset"), vânzătorii s-au retras, iar condițiile macro devin favorabile. Scena este pregătită pentru următoarea mișcare.</p>
+    `
+  },
+
+  // ✅ 5. ARTICOL: QUANTUM COMPUTING
+  {
+    slug: "riscuri-quantum-computing-bitcoin-explicat",
+    title: "Calculatoarele Cuantice vs. Bitcoin: Sfârșitul Criptomonedelor sau Doar o Nouă Provocare?",
+    date: "06 Dec 2025",
+    category: "TEHNOLOGIE",
+    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=1000&auto=format&fit=crop", 
+    impact: "neutral", 
+    summary: "Poate un calculator cuantic să 'spargă' Bitcoin? Află care sunt riscurile reale, când ar putea deveni o amenințare și cum se poate apăra rețeaua. Un ghid complet pentru începători.",
+    mihaiTake: "Tehnologia avansează cu o viteză amețitoare. Astăzi vorbim despre Quantum Computing ca o amenințare îndepărtată, dar în lumea digitală, 'departe' devine 'mâine' mai repede decât ne așteptăm. Dacă vrei să construim împreună un plan solid pentru proiectele tale digitale, hai să discutăm.",
+    content: `
+      <p>Dacă urmărești știrile din tehnologie, probabil ai auzit termenul "Quantum Computing" (Calculatoare Cuantice) aruncat tot mai des în discuții, imediat după Inteligența Artificială. De obicei, scenariul prezentat este unul apocaliptic.</p>
+      
+      <h3>Ce este, de fapt, un Calculator Cuantic?</h3>
+      <p>Imaginează-ți că ești într-o bibliotecă imensă și cauți o singură carte care are un "X" roșu pe o pagină. Un calculator clasic este ca un bibliotecar care ia fiecare carte la rând. Un calculator cuantic este ca un magician care poate deschide toate cărțile simultan.</p>
+
+      <h3>De ce se teme Bitcoin de "Quantum"?</h3>
+      <p>Un calculator cuantic suficient de puternic ar putea deriva cheia ta privată din cea publică în câteva ore, teoretic putând semna tranzacții în numele tău.</p>
+
+      <h3>Ar trebui să ne panicăm?</h3>
+      <p>Răspunsul scurt: <strong>NU</strong>. Tehnologia este la început (10-30 de ani distanță de Q-Day), iar Bitcoin este un software care poate fi actualizat cu criptografie post-cuantică (PQC).</p>
+    `
+  },
+
+  // ✅ 6. ARTICOL: SUA & CFTC
+  {
+    slug: "sua-cftc-crypto-spot-reglementat",
+    title: "BREAKING: SUA pune capăt erei 'Offshore'. Crypto devine oficial activ federal.",
+    date: "05 Dec 2025",
+    category: "REGLEMENTARE",
+    image: "/cftc-announcement.jpg", 
+    impact: "bullish",
+    summary: "Istorie în direct: CFTC autorizează tranzacționarea Spot Crypto pe burse federale. După 15 ani de refuzuri, America își deschide porțile instituționale. Află ce urmează pe 9 Decembrie.",
+    mihaiTake: "Tati, citiți printre rânduri: 'Era Offshore s-a terminat'. Până acum ne jucam în curtea școlii (FTX, Binance Global). Acum am intrat în liga profesioniștilor (CME, Bitnomial). Când statul american garantează infrastructura, fondurile de pensii nu mai au scuze să nu cumpere. Pregătiți-vă pentru cel mai mare inflow de capital din istorie.",
+    content: `
+      <p>Data de <strong>4 Decembrie 2025</strong> va rămâne în cărțile de istorie financiară. Statele Unite tocmai au pus capăt la 15 ani de ambiguitate și au deschis oficial porțile pentru tranzacționarea criptomonedelor "Spot" pe burse reglementate federal.</p>
+
+      <h3>Ce s-a întâmplat exact?</h3>
+      <p>CFTC (Commodity Futures Trading Commission) a autorizat, pentru prima dată în istorie, tranzacționarea directă (spot) a Bitcoin și altor criptomonede pe platforme care respectă aceleași reguli stricte ca bursa de mărfuri sau de acțiuni.</p>
+      
+      <p><strong>De ce contează?</strong></p>
+      <ul>
+        <li>Până ieri, americanii erau forțați să meargă "offshore" (pe insule exotice) pentru a tranzacționa. Rezultatul? Dezastre precum FTX, unde miliarde au dispărut.</li>
+        <li>De azi, "Vestul Sălbatic" s-a închis. Crypto intră sub umbrela federală.</li>
+      </ul>
+
+      <h3>9 Decembrie: Ziua Zero</h3>
+      <p>Platforma <strong>Bitnomial</strong> va lansa pe 9 decembrie suita completă: Spot cu levier, Perpetuals, Futures și Options. Totul într-un singur loc, totul sub supraveghere federală.</p>
+
+      <h3>Implicațiile sunt colosale:</h3>
+      <ol>
+        <li><strong>Eficiență de Capital:</strong> Instituțiile vor putea folosi marja încrucișată (cross-margining), reducând necesarul de capital cu 30-50%. Asta înseamnă mai mulți bani disponibili pentru cumpărare.</li>
+        <li><strong>Barierele Instituționale cad:</strong> Fondurile de pensii și băncile suverane, care nu aveau voie legal să trimită bani în Bahamas, au acum o cale legală, curată și sigură ("Gold Standard") să intre în piață.</li>
+        <li><strong>Obiectivul declarat:</strong> Caroline Pham (Acting Chairman CFTC) a spus-o clar: <em>"Să facem din America capitala mondială crypto."</em></li>
+      </ol>
+
+      <p>Nu mai este vorba despre "dacă" America va adopta crypto. Este vorba despre cât de repede se va repoziționa capitalul global.</p>
+    `
+  },
+
+  // ✅ 7. ARTICOL: BITCOIN MANIPULARE
   {
     slug: "bitcoin-manipulare-sau-corectie-brutala",
     title: "Bitcoin: Manipulare Instituțională sau Corecție Brutală? Anatomia unei Prăbușiri de 19 Miliarde $",
@@ -202,97 +295,6 @@ export const articles = [
         <li><strong>Urmărește Smart Money:</strong> Instituțiile nu vând la $80k pentru că vor să iasă, ci pentru a lichida retail-ul și a reacumula mai jos.</li>
         <li><strong>Răbdare:</strong> Istoria ne arată că după fiecare "flash crash" major urmează o perioadă de acumulare plictisitoare, urmată de o explozie a prețului.</li>
       </ul>
-    `
-  },
-
-  // ✅ 5. ARTICOL: BITCOIN SOPR
-  {
-    slug: "semnal-on-chain-bitcoin-sopr-rally",
-    title: "Semnal On-Chain: Vânzătorii au obosit. Bitcoin pregătește Raliul de Decembrie?",
-    date: "06 Dec 2025",
-    category: "ON-CHAIN", 
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop", 
-    impact: "bullish",
-    summary: "Indicatorul SOPR a atins cel mai mic nivel din 2024, semnalând epuizarea vânzătorilor. Coinbase Instituțional confirmă: lichiditatea revine.",
-    mihaiTake: "Tati, diferența dintre amatori și profesioniști este la ce se uită. Amatorii se uită la lumânări roșii și vând. Profesioniștii se uită la datele On-Chain (SOPR) și văd că 'mâinile slabe' au ieșit din piață. Este un 'Reset' sănătos înainte de următorul impuls.",
-    content: `
-      <p>În ultimele 24 de ore, Bitcoin a suferit o corecție, testând zona de $89,000. Pentru investitorul de retail, asta arată a panică. Dar pentru analiștii on-chain, arată a <strong>oportunitate</strong>.</p>
-
-      <h3>Indicatorul SOPR: Epuizarea Vânzătorilor</h3>
-      <p>Conform datelor monitorizate de <em>Lookonchain</em> și <em>CryptoOnchain</em>, indicatorul <strong>Bitcoin SOPR Ratio</strong> a scăzut la valoarea de <strong>1.35</strong>. Acesta este cel mai jos nivel de la începutul anului 2024.</p>
-      
-      <p><strong>Ce înseamnă asta pe românește?</strong></p>
-      <p>SOPR (Spent Output Profit Ratio) măsoară dacă cei care vând acum sunt pe profit sau pe pierdere. O scădere la acest nivel indică faptul că faza de "marcare a profiturilor" (profit-taking) s-a terminat. Presiunea de vânzare este epuizată. Istoric, acest reset a marcat adesea un <strong>minim local</strong> (local bottom).</p>
-
-      <h3>Coinbase Instituțional: "Lichiditatea Revine"</h3>
-      <p>În paralel, brațul instituțional al Coinbase a emis o notă către clienți anticipând un <strong>"Raliu de Revenire" în Decembrie</strong>.</p>
-      <ul>
-        <li>Probabilitatea unei tăieri de dobândă FED a crescut la 92%.</li>
-        <li>Lichiditatea globală este în creștere.</li>
-        <li>Dolarul american (DXY) arată semne de slăbiciune, ceea ce favorizează activele de risc precum Crypto.</li>
-      </ul>
-
-      <p><strong>Concluzie:</strong> Piața s-a răcit ("reset"), vânzătorii s-au retras, iar condițiile macro devin favorabile. Scena este pregătită pentru următoarea mișcare.</p>
-    `
-  },
-
-  // ✅ 6. ARTICOL: QUANTUM COMPUTING
-  {
-    slug: "riscuri-quantum-computing-bitcoin-explicat",
-    title: "Calculatoarele Cuantice vs. Bitcoin: Sfârșitul Criptomonedelor sau Doar o Nouă Provocare?",
-    date: "06 Dec 2025",
-    category: "TEHNOLOGIE",
-    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=1000&auto=format&fit=crop", 
-    impact: "neutral", 
-    summary: "Poate un calculator cuantic să 'spargă' Bitcoin? Află care sunt riscurile reale, când ar putea deveni o amenințare și cum se poate apăra rețeaua. Un ghid complet pentru începători.",
-    mihaiTake: "Tehnologia avansează cu o viteză amețitoare. Astăzi vorbim despre Quantum Computing ca o amenințare îndepărtată, dar în lumea digitală, 'departe' devine 'mâine' mai repede decât ne așteptăm. Dacă vrei să construim împreună un plan solid pentru proiectele tale digitale, hai să discutăm.",
-    content: `
-      <p>Dacă urmărești știrile din tehnologie, probabil ai auzit termenul "Quantum Computing" (Calculatoare Cuantice) aruncat tot mai des în discuții, imediat după Inteligența Artificială. De obicei, scenariul prezentat este unul apocaliptic.</p>
-      
-      <h3>Ce este, de fapt, un Calculator Cuantic?</h3>
-      <p>Imaginează-ți că ești într-o bibliotecă imensă și cauți o singură carte care are un "X" roșu pe o pagină. Un calculator clasic este ca un bibliotecar care ia fiecare carte la rând. Un calculator cuantic este ca un magician care poate deschide toate cărțile simultan.</p>
-
-      <h3>De ce se teme Bitcoin de "Quantum"?</h3>
-      <p>Un calculator cuantic suficient de puternic ar putea deriva cheia ta privată din cea publică în câteva ore, teoretic putând semna tranzacții în numele tău.</p>
-
-      <h3>Ar trebui să ne panicăm?</h3>
-      <p>Răspunsul scurt: <strong>NU</strong>. Tehnologia este la început (10-30 de ani distanță de Q-Day), iar Bitcoin este un software care poate fi actualizat cu criptografie post-cuantică (PQC).</p>
-    `
-  },
-
-  // ✅ 7. ARTICOL: SUA & CFTC
-  {
-    slug: "sua-cftc-crypto-spot-reglementat",
-    title: "BREAKING: SUA pune capăt erei 'Offshore'. Crypto devine oficial activ federal.",
-    date: "05 Dec 2025",
-    category: "REGLEMENTARE",
-    image: "/cftc-announcement.jpg", 
-    impact: "bullish",
-    summary: "Istorie în direct: CFTC autorizează tranzacționarea Spot Crypto pe burse federale. După 15 ani de refuzuri, America își deschide porțile instituționale. Află ce urmează pe 9 Decembrie.",
-    mihaiTake: "Tati, citiți printre rânduri: 'Era Offshore s-a terminat'. Până acum ne jucam în curtea școlii (FTX, Binance Global). Acum am intrat în liga profesioniștilor (CME, Bitnomial). Când statul american garantează infrastructura, fondurile de pensii nu mai au scuze să nu cumpere. Pregătiți-vă pentru cel mai mare inflow de capital din istorie.",
-    content: `
-      <p>Data de <strong>4 Decembrie 2025</strong> va rămâne în cărțile de istorie financiară. Statele Unite tocmai au pus capăt la 15 ani de ambiguitate și au deschis oficial porțile pentru tranzacționarea criptomonedelor "Spot" pe burse reglementate federal.</p>
-
-      <h3>Ce s-a întâmplat exact?</h3>
-      <p>CFTC (Commodity Futures Trading Commission) a autorizat, pentru prima dată în istorie, tranzacționarea directă (spot) a Bitcoin și altor criptomonede pe platforme care respectă aceleași reguli stricte ca bursa de mărfuri sau de acțiuni.</p>
-      
-      <p><strong>De ce contează?</strong></p>
-      <ul>
-        <li>Până ieri, americanii erau forțați să meargă "offshore" (pe insule exotice) pentru a tranzacționa. Rezultatul? Dezastre precum FTX, unde miliarde au dispărut.</li>
-        <li>De azi, "Vestul Sălbatic" s-a închis. Crypto intră sub umbrela federală.</li>
-      </ul>
-
-      <h3>9 Decembrie: Ziua Zero</h3>
-      <p>Platforma <strong>Bitnomial</strong> va lansa pe 9 decembrie suita completă: Spot cu levier, Perpetuals, Futures și Options. Totul într-un singur loc, totul sub supraveghere federală.</p>
-
-      <h3>Implicațiile sunt colosale:</h3>
-      <ol>
-        <li><strong>Eficiență de Capital:</strong> Instituțiile vor putea folosi marja încrucișată (cross-margining), reducând necesarul de capital cu 30-50%. Asta înseamnă mai mulți bani disponibili pentru cumpărare.</li>
-        <li><strong>Barierele Instituționale cad:</strong> Fondurile de pensii și băncile suverane, care nu aveau voie legal să trimită bani în Bahamas, au acum o cale legală, curată și sigură ("Gold Standard") să intre în piață.</li>
-        <li><strong>Obiectivul declarat:</strong> Caroline Pham (Acting Chairman CFTC) a spus-o clar: <em>"Să facem din America capitala mondială crypto."</em></li>
-      </ol>
-
-      <p>Nu mai este vorba despre "dacă" America va adopta crypto. Este vorba despre cât de repede se va repoziționa capitalul global.</p>
     `
   },
 
