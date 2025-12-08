@@ -1,10 +1,11 @@
 export const articles = [ 
-  // ✅ 1. ARTICOL NOU: BEAR MARKET (EDUCAȚIE) - TEXT INTEGRAL
+  // ✅ 1. ARTICOL NOU: BEAR MARKET (TEXT INTEGRAL 100% CONFORM CERINȚEI)
   {
     slug: "ce-inseamna-bear-market-ghid-complet",
     title: "Ce Înseamnă \"Bear Market\" și De Ce Nu Trebuie Să Te Sperie? Ghidul Complet pentru Investitorul Inteligent",
     date: "08 Dec 2025",
     category: "EDUCAȚIE FINANCIARĂ",
+    // Imagine Nouă, Sigură (Bear/Bull Stock Market)
     image: "https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=1200&auto=format&fit=crop", 
     impact: "bearish", 
     summary: "Dacă portofoliul tău e pe roșu, probabil ai auzit termenul \"Bear Market\". Află de unde vine numele, care sunt cele 4 faze psihologice și cum să prosperi în iarna financiară.",
@@ -17,8 +18,8 @@ export const articles = [
       <h3>De unde vine numele? Lupta dintre Taur și Urs</h3>
       <p>Înainte de a vorbi despre procente și pierderi, trebuie să înțelegem simbolismul. Termenii "Bull" (Taur) și "Bear" (Urs) descriu modul în care aceste animale își atacă prada:</p>
       <ul>
-        <li><strong>Bull Market (Piața Taur):</strong> Taurul atacă lovind cu coarnele de jos în sus. <br/><em>Semnificație:</em> Prețurile cresc, optimismul este ridicat, graficele merg "to the moon".</li>
-        <li><strong>Bear Market (Piața Urs):</strong> Ursul atacă lovind cu labele de sus în jos, strivindu-și prada. <br/><em>Semnificație:</em> Prețurile scad agresiv, pesimismul domină, investitorii vând de frică.</li>
+        <li><strong>Bull Market (Piața Taur):</strong> Taurul atacă lovind cu coarnele de jos în sus.<br/><em>Semnificație:</em> Prețurile cresc, optimismul este ridicat, graficele merg "to the moon".</li>
+        <li><strong>Bear Market (Piața Urs):</strong> Ursul atacă lovind cu labele de sus în jos, strivindu-și prada.<br/><em>Semnificație:</em> Prețurile scad agresiv, pesimismul domină, investitorii vând de frică.</li>
       </ul>
 
       <h3>Definiția Tehnică: Când devine o corecție un Bear Market?</h3>
@@ -31,7 +32,7 @@ export const articles = [
 
       <h3>Psihologia Pieței: Cele 4 Faze ale unui Bear Market</h3>
       <p>Un Bear Market nu este o linie dreaptă în jos. Este un proces psihologic dureros, conceput să testeze răbdarea investitorilor. Iată prin ce trecem:</p>
-      
+
       <p><strong>1. Recunoașterea (Negarea)</strong><br/>
       Prețurile încep să scadă de la maxime. Investitorii spun: "E doar o mică corecție, voi cumpăra mai mult (Buy the Dip)". Optimismul încă există.</p>
 
@@ -45,7 +46,7 @@ export const articles = [
       Prețurile stagnează o perioadă lungă (zona de acumulare). Veștile proaste nu mai afectează prețul. "Smart Money" (Instituțiile) încep să cumpere în liniște, pregătind următorul Bull Market.</p>
 
       <h3>Cum să Supraviețuiești (și să Faci Bani) când Ursul Atacă</h3>
-      <p>Warren Buffett are o vorbă celebră: "Fii lacom când alții sunt fricoși și fricos când alții sunt lacomi." Bear Market-ul este perioada în care se fac averile, dar ele se încasează abia în Bull Market. Iată 3 reguli de aur:</p>
+      <p>Warren Buffett are o vorbă celebră: <em>"Fii lacom când alții sunt fricoși și fricos când alții sunt lacomi."</em> Bear Market-ul este perioada în care se fac averile, dar ele se încasează abia în Bull Market. Iată 3 reguli de aur:</p>
 
       <p><strong>1. Nu vinde în panică</strong><br/>
       Dacă ai investit în active solide (Bitcoin, S&P 500, companii Blue Chip) și teza ta de investiție nu s-a schimbat, prețul roșu este doar "zgomot". Dacă vinzi acum, transformi o pierdere "pe hârtie" într-una reală.</p>
@@ -62,11 +63,11 @@ export const articles = [
 
       <h3>Simți că portofoliul tău sângerează și nu știi ce să faci?</h3>
       <p>Bear Market-ul poate fi o perioadă singuratică și stresantă. Uneori, diferența dintre a vinde pe minim și a acumula avere este o simplă discuție cu cineva care a mai trecut prin asta.</p>
-      <p>Te invit la o sesiune de consultanță 1-la-1, unde vom analiza portofoliul tău și vom construi o strategie personalizată de apărare și acumulare, adaptată toleranței tale la risc. Nu lăsa piața să decidă pentru tine. Preia controlul.</p>
+      <p>Te invit la o sesiune de consultanță 1-la-1 ($250/oră), unde vom analiza portofoliul tău și vom construi o strategie personalizată de apărare și acumulare, adaptată toleranței tale la risc. Nu lăsa piața să decidă pentru tine. Preia controlul.</p>
     `
   },
 
-  // ✅ 2. ARTICOL: CAPCANA URSULUI (PSIHOLOGIE)
+  // ✅ 2. ARTICOL: CAPCANA URSULUI
   {
     slug: "capcana-ursului-istorie-crize-evitate",
     title: "\"Capcana Ursului\": De ce Toți Indicatorii de Criză Pot Fi Greșiți. Lecții Istorice.",
@@ -125,7 +126,7 @@ export const articles = [
       <p><strong>2. Tăiere de 0.25% (Standardul de Aur) - Bullish Sănătos</strong><br/>
       Acesta este scenariul pe care piața îl așteaptă. O tăiere de 0.25% semnalează începutul unui nou ciclu de relaxare, fără a crea panică. Reacție: Posibil un efect de tipul "Sell the news" (mică scădere inițială), urmată de o creștere lentă și sănătoasă pe termen mediu.</p>
 
-      <p><strong>3. Tăiere de 0.50% (Bani Ieftini, dar cu un Preț) - Volatilitate Extremă</strong><br/>
+      <p><strong>3. Tăiere de 0.50% (Volatilitate Extremă)</strong><br/>
       O tăiere dublă este o sabie cu două tăișuri. Partea plină: Lichiditate masivă intră instant în piață (Pump). Partea goală: Poate semnala că FED știe că economia SUA este pe marginea prăpastiei (recesiune). Reacție: Un raliu euforic de scurtă durată, urmat de incertitudine majoră.</p>
 
       <p><strong>4. Tăiere de 1.00% (Butonul de Panică) - Black Swan</strong><br/>
@@ -181,7 +182,7 @@ export const articles = [
     `
   },
 
-  // ✅ 5. ARTICOL: BITCOIN SOPR & COINBASE
+  // ✅ 5. ARTICOL: BITCOIN SOPR
   {
     slug: "semnal-on-chain-bitcoin-sopr-rally",
     title: "Semnal On-Chain: Vânzătorii au obosit. Bitcoin pregătește Raliul de Decembrie?",
