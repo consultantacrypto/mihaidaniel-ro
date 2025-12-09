@@ -5,34 +5,37 @@ import {
   Calendar, Clock, ArrowLeft, 
   TrendingUp, TrendingDown, Activity, 
   AlertTriangle, ShieldAlert, Zap, 
-  BrainCircuit, Lock, Lightbulb, History 
+  BrainCircuit, Lightbulb 
 } from 'lucide-react';
 import Link from 'next/link';
 import Script from 'next/script';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 
-// 1. Generăm rutele statice pentru viteză maximă (SSG)
+// 1. Generăm rutele statice (Viteză Maximă)
 export async function generateStaticParams() {
   return articles.map((article) => ({
     slug: article.slug,
   }));
 }
 
-// 2. Generăm Metadata SEO automat
+// 2. Metadata SEO Automat
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const article = articles.find((a) => a.slug === slug);
+  
   if (!article) return { title: 'Articol Inexistent' };
 
   return {
     title: `${article.title} | Mihai Daniel`,
     description: article.summary,
-    openGraph: { images: [article.image] },
+    openGraph: {
+      images: [article.image],
+    },
   };
 }
 
-// 3. Pagina Universală "Cameleon"
+// 3. Pagina "Cameleon" (Design Premium Automat)
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const article = articles.find((a) => a.slug === slug);
@@ -41,7 +44,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     notFound();
   }
 
-  // --- LOGICA DE DESIGN DINAMIC (AICI E MAGIA) ---
+  // --- LOGICA DE DESIGN ---
+  // Aici se decide culoarea și atmosfera paginii
   const getTheme = () => {
     switch (article.impact) {
       case 'bullish':
@@ -62,22 +66,22 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           color: 'red', 
           accent: 'text-red-500', 
           border: 'border-red-500/20', 
-          bg: 'bg-red-900/10', // Mai închis pentru dramatic
+          bg: 'bg-red-900/10', 
           gradient: 'from-red-500 to-orange-600',
           selection: 'selection:bg-red-500/30',
-          icon: AlertTriangle,
+          icon: TrendingDown, // Sau AlertTriangle
           ctaTitle: 'Nu pierde bani din neștiință',
           ctaText: 'Piețele volatile sunt periculoase fără plan. Securizează-ți portofoliul acum.',
           ctaIcon: ShieldAlert
         };
-      default: // Neutral / Educație / Psihologie
+      default: // Educație / Neutral
         return { 
-          color: 'orange', // Gold pentru educație
-          accent: 'text-orange-400', 
-          border: 'border-orange-500/20', 
-          bg: 'bg-orange-500/10',
-          gradient: 'from-orange-400 to-yellow-400',
-          selection: 'selection:bg-orange-500/30',
+          color: 'blue', 
+          accent: 'text-blue-400', 
+          border: 'border-blue-500/20', 
+          bg: 'bg-blue-900/10',
+          gradient: 'from-blue-400 to-indigo-500',
+          selection: 'selection:bg-blue-500/30',
           icon: BrainCircuit,
           ctaTitle: 'Investește în educația ta',
           ctaText: 'Emoțiile te costă bani. Ai nevoie de o strategie clară, nu de reacții la știri.',
@@ -90,7 +94,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const ThemeIcon = theme.icon;
   const CtaIcon = theme.ctaIcon;
 
-  // Schema SEO
+  // Schema JSON-LD pentru Google
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'NewsArticle',
@@ -112,7 +116,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             </Link>
         </div>
 
-        {/* HEADER DINAMIC */}
+        {/* HEADER */}
         <header className="mb-10 text-center md:text-left">
             <div className={`flex flex-wrap items-center gap-4 text-xs font-bold uppercase tracking-widest ${theme.accent} mb-4 justify-center md:justify-start font-[var(--font-space)]`}>
                 <span className={`${theme.bg} px-3 py-1 rounded-full border ${theme.border} flex items-center gap-2`}>
@@ -123,15 +127,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             </div>
             
             <h1 className="text-3xl md:text-5xl font-black leading-tight mb-6 text-white font-[var(--font-space)]">
-                {/* Highlight pe ultima parte a titlului dacă conține ":" */}
-                {article.title.includes(':') ? (
-                    <>
-                        {article.title.split(':')[0]}: <br/>
-                        <span className={`text-transparent bg-clip-text bg-gradient-to-r ${theme.gradient}`}>
-                            {article.title.split(':')[1]}
-                        </span>
-                    </>
-                ) : article.title}
+                {article.title}
             </h1>
 
             <p className={`text-xl text-gray-300 leading-relaxed border-l-4 ${theme.border.replace('/20', '/50')} pl-6 italic font-[var(--font-inter)]`}>
@@ -145,11 +141,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             <img 
                 src={article.image} 
                 alt={article.title} 
-                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0"
+                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000"
             />
         </div>
 
-        {/* CONȚINUT + MIHAI'S TAKE */}
+        {/* CONTINUT + MIHAI'S TAKE */}
         <div className="prose prose-invert prose-lg max-w-none text-gray-300 font-[var(--font-inter)] leading-relaxed">
             
             {article.mihaiTake && (
@@ -162,7 +158,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 </div>
             )}
 
-            {/* Aici se injectează HTML-ul tău curat din articles.ts */}
+            {/* Aici se injectează tot HTML-ul din articles.ts */}
             <div dangerouslySetInnerHTML={{ __html: article.content }} />
         </div>
 
@@ -171,6 +167,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             <div className="text-sm text-gray-500">
                 Autor: <span className="text-white font-bold">Mihai Daniel</span> • Analist
             </div>
+            
             <div className="flex flex-col gap-2 w-full md:w-auto">
                 <span className="text-xs text-gray-500 uppercase tracking-widest font-bold">Distribuie analiza:</span>
                 <ShareButtons title={article.title} slug={article.slug} />
@@ -185,7 +182,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             <p className="text-gray-300 mb-6 max-w-xl mx-auto">
                 {theme.ctaText}
             </p>
-            <Link href="/#consultanta" className={`inline-flex items-center gap-2 bg-white text-black hover:bg-gray-200 font-bold px-8 py-3 rounded-xl transition-all shadow-lg transform hover:-translate-y-1`}>
+            <Link href="/#consultanta" className={`inline-flex items-center gap-2 bg-${theme.color === 'blue' ? 'indigo' : theme.color}-600 hover:bg-${theme.color === 'blue' ? 'indigo' : theme.color}-500 text-white font-bold px-8 py-3 rounded-xl transition-all shadow-lg transform hover:-translate-y-1`}>
                 <CtaIcon size={18}/> Rezervă Sesiunea ($250)
             </Link>
         </div>
