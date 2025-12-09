@@ -500,4 +500,4 @@ export const articles = [
       <p>Așteptați-vă la volatilitate pe termen scurt. Nu este momentul pentru levier mare.</p>
     `
   }
-];
+]; 
