@@ -1,11 +1,68 @@
 export const articles = [ 
-  // ✅ 1. ARTICOL NOU: BEAR MARKET (Imagine Locală: /bear-market.jpg)
+  // ✅ 1. ARTICOL NOU (AZI): ALERTĂ VOLATILITATE & FED (Imagine Locală)
+  {
+    slug: "alerta-volatilitate-decizie-fed-capcana-mortala",
+    title: "Alertă de Volatilitate: De ce Decizia FED de Mâine Poate Fi o \"Capcană Mortală\"",
+    date: "17 Dec 2025",
+    category: "ANALIZĂ & RISK",
+    image: "/fed-volatility-warning.jpg", // ✅ Imagine Locală (Asigură-te că o ai în public/)
+    impact: "bearish", 
+    summary: "Mâine este ziua Z. FED anunță rata dobânzii. Deși se așteaptă o tăiere de 0.25%, volatilitatea poate fi extremă. Află de ce este periculos să tranzacționezi în timpul anunțului.",
+    mihaiTake: "Tati, mâine nu e zi de făcut bani, e zi de păstrat banii. Când vorbește Powell, piața nu are logică, are doar emoție și algoritmi HFT. Stai pe mâini, nu fi lichiditate pentru alții. Adevărata direcție o vedem abia joi.",
+    content: `
+      <p>Mâine este ziua Z. La ora 21:00 (ora României), Rezerva Federală a SUA (FED) va anunța noua rată a dobânzii.</p>
+      <p>Consensul analiștilor este aproape unanim: o tăiere de 0.25%.</p>
+      <p>La prima vedere, sună a veste bună pentru Bitcoin și piețele de acțiuni, nu? Banii devin mai ieftini, activele ar trebui să crească.</p>
+      <p>Totuși, istoria ne arată o realitate mult mai brutală. Zilele de FOMC (ședințele FED) nu sunt despre direcție, ci despre lichidare. Dacă ești un trader începător sau folosești leverage (bani împrumutați), ziua de mâine se poate transforma rapid dintr-o oportunitate într-un coșmar.</p>
+      <p>Iată de ce decizia de mâine este un teren minat și cum să eviți să devii "lichiditate de ieșire" pentru instituții.</p>
+
+      <h3>1. De ce "Vestea Bună" poate prăbuși piața? (Buy the Rumor, Sell the News)</h3>
+      <p>Piețele financiare sunt mecanisme de anticipare. O tăiere de 0.25% este deja priced-in (inclusă în preț). Fondurile mari au cumpărat deja anticipând acest moment.</p>
+      <p>Când știrea devine oficială mâine seară, există un risc major de <strong>"Sell the News"</strong>.</p>
+      <p>Instituțiile își marchează profiturile, vânzând masiv exact când micii investitori (retail-ul) încep să cumpere de euforie.</p>
+      <p><strong>Rezultatul?</strong> Un "fitil" lung în sus, urmat de o prăbușire violentă.</p>
+
+      <h3>2. Fenomenul "Darth Maul": Cum ești lichidat în ambele direcții</h3>
+      <p>Cel mai mare pericol pentru cei cu apetit mare de risc nu este direcția greșită, ci volatilitatea extremă.</p>
+      <p>În primele minute după anunț, algoritmii de tranzacționare (HFT - High Frequency Trading) preiau controlul. Adesea vedem pe grafic o lumânare de tip "Darth Maul" (numită după sabia cu două tăișuri din Star Wars):</p>
+      <ul>
+        <li>Prețul explodează în SUS (lichidează pozițiile Short).</li>
+        <li>În secunda următoare, prețul se prăbușește în JOS (lichidează pozițiile Long).</li>
+        <li>Prețul revine la mijloc.</li>
+      </ul>
+      <p><strong>Rezultatul:</strong> Prețul e neschimbat, dar contul tău de futures este golit. Dacă ai leverage mare (10x, 20x, 50x), nu ai nicio șansă să supraviețuiești acestor mișcări de 3-4% într-un singur minut.</p>
+
+      <h3>3. Capcana Conferinței de Presă (Ora 21:30)</h3>
+      <p>Mulți începători cred că anunțul orei 21:00 este totul. Greșit. Adevăratul pericol începe 30 de minute mai târziu, când Jerome Powell iese la microfon.</p>
+      <p>Chiar dacă taie dobânda cu 0.25%, tonul lui Powell contează mai mult decât cifra.</p>
+      <p>Dacă spune: <em>"Economia slăbește, suntem îngrijorați"</em> &rarr; Piața poate interpreta asta ca risc de recesiune și se prăbușește.</p>
+      <p>Fiecare cuvânt este analizat de AI-uri care cumpără sau vând în milisecunde. Pentru un ochi neantrenat, graficul va arăta ca un EKG al unui pacient care face infarct. A încerca să tranzacționezi în acest interval fără experiență este pur joc de noroc.</p>
+
+      <h3>4. Pericolul "Slippage-ului" și Blocarea Platformelor</h3>
+      <p>În momentele de volatilitate extremă, lichiditatea dispare din Order Book.</p>
+      <ul>
+        <li><strong>Slippage:</strong> Încerci să vinzi la $98,000, dar ordinul tău se execută la $97,200 pentru că prețul s-a mișcat prea repede.</li>
+        <li><strong>Platforme Blocate:</strong> Istoric, marile exchange-uri (Binance, Coinbase) au tendința de a avea "erori tehnice" fix când piața o ia razna. Să rămâi blocat într-o poziție pierzătoare fără a putea închide este un risc real.</li>
+      </ul>
+
+      <h3>Strategia Câștigătoare: "Statul pe Mâini"</h3>
+      <p>Cel mai bun trade pe care îl poți face mâine, dacă nu ești profesionist, este să nu faci nimic.</p>
+      <ul>
+        <li><strong>Nu folosi leverage:</strong> Dacă ai poziții deschise, redu riscul sau închide-le înainte de ora 21:00.</li>
+        <li><strong>Așteaptă închiderea zilei:</strong> Lasă praful să se așeze. Adevărata direcție a pieței se va vedea abia joi dimineață, după ce Asia și Europa au reacționat la știri.</li>
+        <li><strong>Focusează-te pe Spot:</strong> Dacă vrei să acumulezi, fă-o pe piața Spot, fără a risca lichidarea.</li>
+      </ul>
+      <p>Volatilitatea este o scară: profesioniștii o folosesc să urce, amatorii o folosesc să cadă și să-și rupă gâtul.</p>
+    `
+  },
+
+  // ✅ 2. ARTICOL: GHID BEAR MARKET (Imagine Locală)
   {
     slug: "ce-inseamna-bear-market-ghid-complet",
-    title: "Ce Înseamnă \"Bear Market\" și De Ce Nu Trebuie Să Te Sperie? Ghidul Complet.",
+    title: "Ce Înseamnă \"Bear Market\" și De Ce Nu Trebuie Să Te Sperie? Ghidul Complet pentru Investitorul Inteligent",
     date: "08 Dec 2025",
     category: "EDUCAȚIE FINANCIARĂ",
-    image: "/bear-market.jpg", // Imagine locală sigură
+    image: "/bear-market.jpg", // ✅ Imagine Locală
     impact: "bearish", 
     summary: "Dacă portofoliul tău e pe roșu, probabil ai auzit termenul \"Bear Market\". Află de unde vine numele, care sunt cele 4 faze psihologice și cum să prosperi în iarna financiară.",
     mihaiTake: "Tati, nu fugi de urs. Îmbrățișează-l. Bear Market-ul este perioada în care se fac averile, doar că nota de plată o încasezi în Bull Market. Dacă înțelegi psihologia din spatele graficului, frica dispare și apare oportunitatea. Citeste ghidul ăsta ca să știi exact unde ne aflăm.",
@@ -59,100 +116,10 @@ export const articles = [
       <h3>Concluzie: Iarna nu durează la nesfârșit</h3>
       <p>Istoria piețelor financiare, de peste 100 de ani, ne arată un lucru cert: Fiecare Bear Market a fost urmat de un Bull Market care a atins noi maxime istorice. Ursul face curățenie. Elimină proiectele slabe, companiile zombie și investitorii lacomi care folosesc prea mult risc.</p>
       <p>Dacă citești acest articol și încă ești în piață, felicitări! Ești deja cu un pas înaintea mulțimii.</p>
-
-      <h3>Simți că portofoliul tău sângerează și nu știi ce să faci?</h3>
-      <p>Bear Market-ul poate fi o perioadă singuratică și stresantă. Uneori, diferența dintre a vinde pe minim și a acumula avere este o simplă discuție cu cineva care a mai trecut prin asta.</p>
-      <p>Te invit la o sesiune de consultanță 1-la-1, unde vom analiza portofoliul tău și vom construi o strategie personalizată de apărare și acumulare, adaptată toleranței tale la risc. Nu lăsa piața să decidă pentru tine. Preia controlul.</p>
     `
   },
 
-  // ✅ 2. ARTICOL: FED & DOBÂNZI (Imagine Locală: /fed-rates.jpg)
-  {
-    slug: "impact-dobanda-fed-bitcoin-scenarii",
-    title: "Alertă Maximă: Decizia FED care Poate Arunca Bitcoin în Aer. Scenariile 0.25% vs 0.50%",
-    date: "07 Dec 2025",
-    category: "MACROECONOMIE", 
-    image: "/fed-rates.jpg", // Imagine locală sigură
-    impact: "neutral", 
-    summary: "Săptămâna viitoare, Jerome Powell are degetul pe 'butonul nuclear'. Analizăm cele 4 scenarii posibile ale dobânzii și cum va reacționa Bitcoin la fiecare.",
-    mihaiTake: "Tati, nu juca la 'păcănele' cu anunțurile macro. Majoritatea pierd bani săptămâna viitoare pentru că reacționează emoțional. Noi ne pregătim profesional: avem planul A pentru 0.25% și planul B pentru 0.50%. Dacă nu știi cum să te poziționezi, stai pe mâini sau intră în consultanță.",
-    content: `
-      <p>Săptămâna viitoare, ochii întregii planete financiare vor fi ațintiți asupra unui singur om: <strong>Jerome Powell</strong>, președintele Rezervei Federale (FED).</p>
-      <p>Decizia privind rata dobânzii de referință în SUA nu este doar o știre economică plictisitoare; este "butonul nuclear" care dictează dacă portofoliul tău crypto va exploda spre noi maxime sau va sângera în următoarele luni.</p>
-
-      <h3>De ce Dobânda SUA este "Gravitația" pentru Crypto?</h3>
-      <p>Gândește-te la rata dobânzii ca la <strong>costul banilor</strong>.</p>
-      <ul>
-        <li><strong>Dobânzi Mari (Situația actuală):</strong> Banii sunt "scumpi". Împrumuturile costă mult. Investitorii preferă siguranța (obligațiuni de stat care plătesc bine) și evită riscul. Rezultat: Crypto scade sau stagnează.</li>
-        <li><strong>Dobânzi Mici (Tăieri de rată):</strong> Banii devin "ieftini". Robinetul de lichiditate se deschide. Dolarii caută randamente mai mari pentru că băncile nu mai oferă dobânzi atractive. Rezultat: Capitalul fuge spre active de risc → Bitcoin și Altcoins cresc.</li>
-      </ul>
-
-      <h3>Cele 4 Scenarii pentru Săptămâna Viitoare</h3>
-      <p>Iată harta exactă a impactului, de la cel mai pesimist la cel mai volatil scenariu:</p>
-      
-      <p><strong>1. Nicio Tăiere (Dobânda rămâne neschimbată) - Bearish Violent</strong><br/>
-      Dacă FED decide să nu taie dobânda, va fi un duș rece pentru piețe. Investitorii au prețuit deja (priced-in) o tăiere. O pauză ar semnala că inflația este încă o problemă majoră. Reacție: Dolarul (DXY) se întărește brusc, iar Bitcoin suferă o vânzare rapidă (-5% până la -10%).</p>
-
-      <p><strong>2. Tăiere de 0.25% (Standardul de Aur) - Bullish Sănătos</strong><br/>
-      Acesta este scenariul pe care piața îl așteaptă. O tăiere de 0.25% semnalează începutul unui nou ciclu de relaxare, fără a crea panică. Reacție: Posibil un efect de tipul "Sell the news" (mică scădere inițială), urmată de o creștere lentă și sănătoasă pe termen mediu.</p>
-
-      <p><strong>3. Tăiere de 0.50% (Bani Ieftini, dar cu un Preț) - Volatilitate Extremă</strong><br/>
-      O tăiere dublă este o sabie cu două tăișuri. Partea plină: Lichiditate masivă intră instant în piață (Pump). Partea goală: Poate semnala că FED știe că economia SUA este pe marginea prăpastiei (recesiune). Reacție: Un raliu euforic de scurtă durată, urmat de incertitudine majoră.</p>
-
-      <p><strong>4. Tăiere de 1.00% (Butonul de Panică) - Black Swan</strong><br/>
-      FED taie 1% doar în caz de criză majoră (ex: COVID 2020, Criza din 2008). Dacă vedem asta, înseamnă că ceva "s-a rupt" în sistemul bancar. Reacție: Bitcoin ar putea avea un spike inițial, dar va fi tras în jos rapid de prăbușirea burselor globale. Cash-ul devine rege.</p>
-
-      <h3>Concluzie: Nu juca la "Păcănele"</h3>
-      <p>Macroeconomia nu este despre ghicit, este despre probabilități și poziționare. O greșeală de interpretare în ziua anunțului te poate costa mii de dolari. Ai nevoie de un plan stabilit dinainte, nu de reacții emoționale la titlurile de știri.</p>
-    `
-  },
-
-  // ✅ 3. ARTICOL: BITCOIN MANIPULARE (Imagine Locală: /bitcoin-crash.jpg)
-  {
-    slug: "bitcoin-manipulare-sau-corectie-brutala",
-    title: "Bitcoin: Manipulare Instituțională sau Corecție Brutală? Anatomia unei Prăbușiri de 19 Miliarde $",
-    date: "07 Dec 2025",
-    category: "ANALIZĂ PIAȚĂ",
-    image: "/bitcoin-crash.jpg", // Imagine locală sigură
-    impact: "bearish",
-    summary: "De ce scade Bitcoin când bursa crește? Analizăm mecanismul 'cascadei de lichidări' și explicăm de ce $80k ar putea fi capcana perfectă întinsă de instituții pentru micii investitori.",
-    mihaiTake: "Tati, nu te lăsa păcălit. Ceea ce vezi pe grafic nu e 'sfârșitul lumii', e un transfer de avere. Instituțiile curăță levierul (gamblerii) ca să poată cumpăra ieftin. Dacă ai intrat în panică și ai vândut, ai făcut exact jocul lor. Dacă vrei să înțelegi cum să te poziționezi pentru Q1 2026, citește analiza până la capăt.",
-    content: `
-      <p>Piața crypto traversează un moment de confuzie extremă. În timp ce indicii bursieri americani (S&P 500, Nasdaq) ating noi maxime istorice, Bitcoin s-a decuplat violent, suferind o prăbușire dramatică de la $126,000 la $80,000.</p>
-      <p>Scenariul descris de investitori este unul de coșmar: un "flash crash" pe 10 Octombrie care a șters 19 miliarde de dolari din piață – cel mai mare eveniment de lichidare din istoria crypto. Dar este aceasta o corecție naturală sau asistăm la o manipulare coordonată a marilor instituții ("Whales")?</p>
-
-      <h3>1. Divergența Masivă: De ce Bursa Crește, iar Crypto Sângerează?</h3>
-      <p>Unul dintre cele mai frustrante aspecte pentru investitorii de retail este "decuplarea". În mod tradițional, Bitcoin a fost corelat cu piețele de risc (US Stocks). Totuși, datele recente arată o anomalie:</p>
-      <ul>
-        <li><strong>US Stocks (Acțiunile SUA):</strong> Au crescut cu +8% de la evenimentul din 10 Octombrie, recuperând pierderile.</li>
-        <li><strong>Bitcoin:</strong> Rămâne la -29% și continuă să fie respins agresiv la fiecare încercare de revenire ("pump").</li>
-      </ul>
-      <p>Această divergență sugerează o lichidare forțată a unor fonduri mari. Când un fond de investiții crypto "explodează" (intră în insolvență), este obligat să vândă activele (BTC) la prețul pieței pentru a acoperi pierderile, indiferent de cât de bine merge economia SUA. Acesta este un semnal clasic de "Capitulare Instituțională".</p>
-
-      <h3>2. Mecanismul "Cascadei de Lichidări": Cum dispare $19 Miliarde într-o clipă</h3>
-      <p>Pentru a înțelege de ce Bitcoin a căzut de la $126k direct la $80k fără oprire, trebuie să înțelegem Leverage-ul (Efectul de Levier).</p>
-      <p>Mulți traderi folosesc leverage (bani împrumutați de la exchange) pentru a-și amplifica câștigurile. Dar acesta funcționează ca o armă cu două tăișuri:</p>
-      <ul>
-        <li>La un leverage de 10x, o scădere de doar 10% a prețului îți lichidează complet poziția.</li>
-        <li>La un leverage de 50x, o scădere de 2% înseamnă faliment total.</li>
-      </ul>
-      <p><strong>Efectul de Domino:</strong> Când prețul scade brusc (declanșat poate de o vânzare masivă a unei Balene), pozițiile Long cu leverage mare sunt lichidate. Când un exchange îți lichidează poziția Long, el vinde automat Bitcoin-ul tău în piață. Această vânzare automată împinge prețul și mai jos, declanșând lichidarea următorului grup de traderi.</p>
-
-      <h3>3. Manipulare sau "Stop Hunting"?</h3>
-      <p>Textul de analiză sugerează că "instituțiile se joacă cu piața". În trading, acest fenomen este cunoscut sub numele de Liquidity Grab sau Stop Hunting.</p>
-      <p>Marile instituții au acces la date care le arată unde sunt plasate ordinele de "Stop Loss" ale micilor investitori. Strategia lor este să împingă prețul agresiv în jos pentru a atinge aceste stop-loss-uri. Rezultatul? O vânzare panicată care le permite instituțiilor să cumpere Bitcoin în cantități masive la prețuri de discount ($80k), chiar de la cei pe care i-au forțat să vândă.</p>
-
-      <h3>Concluzie: Ce faci acum?</h3>
-      <p>Dacă scenariul descris este corect, suntem într-o zonă de manipulare menită să scuture "mâinile slabe" înainte de următorul ciclu de creștere.</p>
-      <ul>
-        <li><strong>Evită Leverage-ul:</strong> În perioade de volatilitate extremă ($500M lichidări zilnice), leverage-ul este calea sigură spre faliment.</li>
-        <li><strong>Urmărește Smart Money:</strong> Instituțiile nu vând la $80k pentru că vor să iasă, ci pentru a lichida retail-ul și a reacumula mai jos.</li>
-        <li><strong>Răbdare:</strong> Istoria ne arată că după fiecare "flash crash" major urmează o perioadă de acumulare plictisitoare, urmată de o explozie a prețului.</li>
-      </ul>
-    `
-  },
-
-  // ✅ 4. ARTICOL: CAPCANA URSULUI
+  // ✅ 3. ARTICOL: CAPCANA URSULUI (PSIHOLOGIE & ISTORIE - TEXT INTEGRAL)
   {
     slug: "capcana-ursului-istorie-crize-evitate",
     title: "\"Capcana Ursului\": De ce Toți Indicatorii de Criză Pot Fi Greșiți. Lecții Istorice.",
@@ -204,7 +171,93 @@ export const articles = [
     `
   },
 
-  // ✅ 5. ARTICOL: BITCOIN SOPR & COINBASE
+  // ✅ 4. ARTICOL: FED & DOBÂNZI (Imagine Locală: /fed-rates.jpg)
+  {
+    slug: "impact-dobanda-fed-bitcoin-scenarii",
+    title: "Alertă Maximă: Decizia FED care Poate Arunca Bitcoin în Aer. Scenariile 0.25% vs 0.50%",
+    date: "07 Dec 2025",
+    category: "MACROECONOMIE", 
+    image: "/fed-rates.jpg", // ✅ Imagine Locală
+    impact: "neutral", 
+    summary: "Săptămâna viitoare, Jerome Powell are degetul pe 'butonul nuclear'. Analizăm cele 4 scenarii posibile ale dobânzii și cum va reacționa Bitcoin la fiecare.",
+    mihaiTake: "Tati, nu juca la 'păcănele' cu anunțurile macro. Majoritatea pierd bani săptămâna viitoare pentru că reacționează emoțional. Noi ne pregătim profesional: avem planul A pentru 0.25% și planul B pentru 0.50%. Dacă nu știi cum să te poziționezi, stai pe mâini sau intră în consultanță.",
+    content: `
+      <p>Săptămâna viitoare, ochii întregii planete financiare vor fi ațintiți asupra unui singur om: <strong>Jerome Powell</strong>, președintele Rezervei Federale (FED).</p>
+      <p>Decizia privind rata dobânzii de referință în SUA nu este doar o știre economică plictisitoare; este "butonul nuclear" care dictează dacă portofoliul tău crypto va exploda spre noi maxime sau va sângera în următoarele luni.</p>
+
+      <h3>De ce Dobânda SUA este "Gravitația" pentru Crypto?</h3>
+      <p>Gândește-te la rata dobânzii ca la <strong>costul banilor</strong>.</p>
+      <ul>
+        <li><strong>Dobânzi Mari (Situația actuală):</strong> Banii sunt "scumpi". Împrumuturile costă mult. Investitorii preferă siguranța (obligațiuni de stat care plătesc bine) și evită riscul. Rezultat: Crypto scade sau stagnează.</li>
+        <li><strong>Dobânzi Mici (Tăieri de rată):</strong> Banii devin "ieftini". Robinetul de lichiditate se deschide. Dolarii caută randamente mai mari pentru că băncile nu mai oferă dobânzi atractive. Rezultat: Capitalul fuge spre active de risc → Bitcoin și Altcoins cresc.</li>
+      </ul>
+
+      <h3>Cele 4 Scenarii pentru Săptămâna Viitoare</h3>
+      <p>Iată harta exactă a impactului, de la cel mai pesimist la cel mai volatil scenariu:</p>
+      
+      <p><strong>1. Nicio Tăiere (Bearish Violent)</strong><br/>
+      Dacă FED decide să nu taie dobânda, va fi un duș rece pentru piețe. Investitorii au prețuit deja (priced-in) o tăiere. O pauză ar semnala că inflația este încă o problemă majoră. Reacție: Dolarul (DXY) se întărește brusc, iar Bitcoin suferă o vânzare rapidă (-5% până la -10%).</p>
+
+      <p><strong>2. Tăiere de 0.25% (Standardul de Aur) - Bullish Sănătos</strong><br/>
+      Acesta este scenariul pe care piața îl așteaptă. O tăiere de 0.25% semnalează începutul unui nou ciclu de relaxare, fără a crea panică. Reacție: Posibil un efect de tipul "Sell the news" (mică scădere inițială), urmată de o creștere lentă și sănătoasă pe termen mediu.</p>
+
+      <p><strong>3. Tăiere de 0.50% (Volatilitate Extremă)</strong><br/>
+      O tăiere dublă este o sabie cu două tăișuri. Partea plină: Lichiditate masivă intră instant în piață (Pump). Partea goală: Poate semnala că FED știe că economia SUA este pe marginea prăpastiei (recesiune). Reacție: Un raliu euforic de scurtă durată, urmat de incertitudine majoră.</p>
+
+      <p><strong>4. Tăiere de 1.00% (Butonul de Panică) - Black Swan</strong><br/>
+      FED taie 1% doar în caz de criză majoră (ex: COVID 2020, Criza din 2008). Dacă vedem asta, înseamnă că ceva "s-a rupt" în sistemul bancar. Reacție: Bitcoin ar putea avea un spike inițial, dar va fi tras în jos rapid de prăbușirea burselor globale. Cash-ul devine rege.</p>
+
+      <h3>Concluzie: Nu ghici, pregătește-te</h3>
+      <p>Macroeconomia nu este despre ghicit, este despre probabilități și poziționare. O greșeală de interpretare în ziua anunțului te poate costa mii de dolari. Ai nevoie de o strategie clară, nu de reacții la cald.</p>
+    `
+  },
+
+  // ✅ 5. ARTICOL: BITCOIN MANIPULARE (Imagine Locală: /bitcoin-crash.jpg)
+  {
+    slug: "bitcoin-manipulare-sau-corectie-brutala",
+    title: "Bitcoin: Manipulare Instituțională sau Corecție Brutală? Anatomia unei Prăbușiri de 19 Miliarde $",
+    date: "07 Dec 2025",
+    category: "ANALIZĂ PIAȚĂ",
+    image: "/bitcoin-crash.jpg", // ✅ Imagine Locală
+    impact: "bearish",
+    summary: "De ce scade Bitcoin când bursa crește? Analizăm mecanismul 'cascadei de lichidări' și explicăm de ce $80k ar putea fi capcana perfectă întinsă de instituții pentru micii investitori.",
+    mihaiTake: "Tati, nu te lăsa păcălit. Ceea ce vezi pe grafic nu e 'sfârșitul lumii', e un transfer de avere. Instituțiile curăță levierul (gamblerii) ca să poată cumpăra ieftin. Dacă ai intrat în panică și ai vândut, ai făcut exact jocul lor. Dacă vrei să înțelegi cum să te poziționezi pentru Q1 2026, citește analiza până la capăt.",
+    content: `
+      <p>Piața crypto traversează un moment de confuzie extremă. În timp ce indicii bursieri americani (S&P 500, Nasdaq) ating noi maxime istorice, Bitcoin s-a decuplat violent, suferind o prăbușire dramatică de la $126,000 la $80,000.</p>
+      <p>Scenariul descris de investitori este unul de coșmar: un "flash crash" pe 10 Octombrie care a șters 19 miliarde de dolari din piață – cel mai mare eveniment de lichidare din istoria crypto. Dar este aceasta o corecție naturală sau asistăm la o manipulare coordonată a marilor instituții ("Whales")?</p>
+
+      <h3>1. Divergența Masivă: De ce Bursa Crește, iar Crypto Sângerează?</h3>
+      <p>Unul dintre cele mai frustrante aspecte pentru investitorii de retail este "decuplarea". În mod tradițional, Bitcoin a fost corelat cu piețele de risc (US Stocks). Totuși, datele recente arată o anomalie:</p>
+      <ul>
+        <li><strong>US Stocks (Acțiunile SUA):</strong> Au crescut cu +8% de la evenimentul din 10 Octombrie, recuperând pierderile.</li>
+        <li><strong>Bitcoin:</strong> Rămâne la -29% și continuă să fie respins agresiv la fiecare încercare de revenire ("pump").</li>
+      </ul>
+      <p>Această divergență sugerează o lichidare forțată a unor fonduri mari. Când un fond de investiții crypto "explodează" (intră în insolvență), este obligat să vândă activele (BTC) la prețul pieței pentru a acoperi pierderile, indiferent de cât de bine merge economia SUA. Acesta este un semnal clasic de "Capitulare Instituțională".</p>
+
+      <h3>2. Mecanismul "Cascadei de Lichidări": Cum dispare $19 Miliarde într-o clipă</h3>
+      <p>Pentru a înțelege de ce Bitcoin a căzut de la $126k direct la $80k fără oprire, trebuie să înțelegem Leverage-ul (Efectul de Levier).</p>
+      <p>Mulți traderi folosesc leverage (bani împrumutați de la exchange) pentru a-și amplifica câștigurile. Dar acesta funcționează ca o armă cu două tăișuri:</p>
+      <ul>
+        <li>La un leverage de 10x, o scădere de doar 10% a prețului îți lichidează complet poziția.</li>
+        <li>La un leverage de 50x, o scădere de 2% înseamnă faliment total.</li>
+      </ul>
+      <p><strong>Efectul de Domino:</strong> Când prețul scade brusc (declanșat poate de o vânzare masivă a unei Balene), pozițiile Long cu leverage mare sunt lichidate. Când un exchange îți lichidează poziția Long, el vinde automat Bitcoin-ul tău în piață. Această vânzare automată împinge prețul și mai jos, declanșând lichidarea următorului grup de traderi.</p>
+
+      <h3>3. Manipulare sau "Stop Hunting"?</h3>
+      <p>Textul de analiză sugerează că "instituțiile se joacă cu piața". În trading, acest fenomen este cunoscut sub numele de Liquidity Grab sau Stop Hunting.</p>
+      <p>Marile instituții au acces la date care le arată unde sunt plasate ordinele de "Stop Loss" ale micilor investitori. Strategia lor este să împingă prețul agresiv în jos pentru a atinge aceste stop-loss-uri. Rezultatul? O vânzare panicată care le permite instituțiilor să cumpere Bitcoin în cantități masive la prețuri de discount ($80k), chiar de la cei pe care i-au forțat să vândă.</p>
+
+      <h3>Concluzie: Ce faci acum?</h3>
+      <p>Dacă scenariul descris este corect, suntem într-o zonă de manipulare menită să scuture "mâinile slabe" înainte de următorul ciclu de creștere.</p>
+      <ul>
+        <li><strong>Evită Leverage-ul:</strong> În perioade de volatilitate extremă ($500M lichidări zilnice), leverage-ul este calea sigură spre faliment.</li>
+        <li><strong>Urmărește Smart Money:</strong> Instituțiile nu vând la $80k pentru că vor să iasă, ci pentru a lichida retail-ul și a reacumula mai jos.</li>
+        <li><strong>Răbdare:</strong> Istoria ne arată că după fiecare "flash crash" major urmează o perioadă de acumulare plictisitoare, urmată de o explozie a prețului.</li>
+      </ul>
+    `
+  },
+
+  // ✅ 6. ARTICOL: BITCOIN SOPR
   {
     slug: "semnal-on-chain-bitcoin-sopr-rally",
     title: "Semnal On-Chain: Vânzătorii au obosit. Bitcoin pregătește Raliul de Decembrie?",
@@ -235,7 +288,7 @@ export const articles = [
     `
   },
 
-  // ✅ 6. ARTICOL: QUANTUM COMPUTING
+  // ✅ 7. ARTICOL: QUANTUM COMPUTING
   {
     slug: "riscuri-quantum-computing-bitcoin-explicat",
     title: "Calculatoarele Cuantice vs. Bitcoin: Sfârșitul Criptomonedelor sau Doar o Nouă Provocare?",
@@ -259,7 +312,7 @@ export const articles = [
     `
   },
 
-  // ✅ 7. ARTICOL: SUA & CFTC (Imagine locală)
+  // ✅ 8. ARTICOL: SUA & CFTC (Imagine Locală: /cftc-announcement.jpg)
   {
     slug: "sua-cftc-crypto-spot-reglementat",
     title: "BREAKING: SUA pune capăt erei 'Offshore'. Crypto devine oficial activ federal.",
@@ -295,7 +348,7 @@ export const articles = [
     `
   },
 
-  // ✅ 8. ARTICOL: ATAC 27M
+  // ✅ 9. ARTICOL: ATAC 27M
   {
     slug: "atac-27-milioane-link-malitios",
     title: "ALERTA: Cum să pierzi 27.000.000$ într-o secundă. Pericolul invizibil din buzunarul tău",
@@ -333,7 +386,7 @@ export const articles = [
     `
   },
 
-  // ✅ 9. ARTICOL: VANGUARD & CFTC (Legacy)
+  // ✅ 10. ARTICOL: VANGUARD & CFTC (Legacy)
   {
     slug: "marea-convergenta-crypto",
     title: "Marea Convergență: Vanguard și CFTC validează Crypto ca 'Gold Standard'",
@@ -359,7 +412,7 @@ export const articles = [
     `
   },
 
-  // ✅ 10. ARTICOL: QIVALIS
+  // ✅ 11. ARTICOL: QIVALIS
   {
     slug: "qivalis-banci-europene-stablecoin",
     title: "BREAKING: 9 Bănci Gigant lansează Qivalis - Euro Stablecoin",
@@ -396,7 +449,7 @@ export const articles = [
     `
   },
 
-  // ✅ 11. ARTICOL: SEC ETF ETHEREUM
+  // ✅ 12. ARTICOL: SEC ETF ETHEREUM
   {
     slug: "sec-aproba-etf-ethereum",
     title: "SEC Aprobă ETF-ul de Ethereum Spot",
@@ -414,7 +467,7 @@ export const articles = [
     `
   },
 
-  // ✅ 12. ARTICOL: SOLANA FIREDANCER
+  // ✅ 13. ARTICOL: SOLANA FIREDANCER
   {
     slug: "solana-firedancer",
     title: "Solana lansează Firedancer",
@@ -431,7 +484,7 @@ export const articles = [
     `
   },
 
-  // ✅ 13. ARTICOL: INFLATIE CPI
+  // ✅ 14. ARTICOL: INFLATIE CPI
   {
     slug: "inflatie-sua-cpi",
     title: "Inflația SUA crește (CPI 3.4%)",
