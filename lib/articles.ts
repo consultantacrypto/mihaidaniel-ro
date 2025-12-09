@@ -1,72 +1,5 @@
 export const articles = [ 
-  // ✅ 1. ARTICOL NOU: BEAR MARKET (TEXT INTEGRAL, FĂRĂ TĂIETURI)
-  {
-    slug: "ce-inseamna-bear-market-ghid-complet",
-    title: "Ce Înseamnă \"Bear Market\" și De Ce Nu Trebuie Să Te Sperie? Ghidul Complet pentru Investitorul Inteligent",
-    date: "08 Dec 2025",
-    category: "EDUCAȚIE FINANCIARĂ",
-    image: "/bear-market.jpg", 
-    impact: "bearish", 
-    summary: "Dacă portofoliul tău e pe roșu, probabil ai auzit termenul \"Bear Market\". Află de unde vine numele, care sunt cele 4 faze psihologice și cum să prosperi în iarna financiară.",
-    mihaiTake: "Tati, nu fugi de urs. Îmbrățișează-l. Bear Market-ul este perioada în care se fac averile, doar că nota de plată o încasezi în Bull Market. Dacă înțelegi psihologia din spatele graficului, frica dispare și apare oportunitatea. Citeste ghidul ăsta ca să știi exact unde ne aflăm.",
-    content: `
-      <p>Dacă ai deschis portofoliul de investiții recent și ai văzut doar culoarea roșie, probabil ai auzit termenul aruncat peste tot: <strong>"Suntem într-un Bear Market"</strong>.</p>
-      <p>Pentru începători, sună înfricoșător. Pentru veteranii de pe Wall Street, sună a oportunitate. Dar ce înseamnă, de fapt, un Bear Market (Piață "Urs")? De ce a fost ales acest animal și, cel mai important, cum îți protejezi banii când ursul atacă piața?</p>
-      <p>În acest ghid complet, demontăm miturile și îți arătăm cum să supraviețuiești – și chiar să prosperi – în timpul "iernii financiare".</p>
-
-      <h3>De unde vine numele? Lupta dintre Taur și Urs</h3>
-      <p>Înainte de a vorbi despre procente și pierderi, trebuie să înțelegem simbolismul. Termenii "Bull" (Taur) și "Bear" (Urs) descriu modul în care aceste animale își atacă prada:</p>
-      <ul>
-        <li><strong>Bull Market (Piața Taur):</strong> Taurul atacă lovind cu coarnele de jos în sus. <br/><em>Semnificație:</em> Prețurile cresc, optimismul este ridicat, graficele merg "to the moon".</li>
-        <li><strong>Bear Market (Piața Urs):</strong> Ursul atacă lovind cu labele de sus în jos, strivindu-și prada. <br/><em>Semnificație:</em> Prețurile scad agresiv, pesimismul domină, investitorii vând de frică.</li>
-      </ul>
-
-      <h3>Definiția Tehnică: Când devine o corecție un Bear Market?</h3>
-      <p>Nu orice scădere de preț înseamnă Bear Market. Piețele respiră; uneori inspiră (creștere), alteori expiră (scădere). Exista o regulă nescrisă, dar acceptată universal pe Wall Street:</p>
-      <ul>
-        <li><strong>Corecție:</strong> O scădere de 10% - 19% față de maximul recent. Este considerată sănătoasă.</li>
-        <li><strong>Bear Market:</strong> O scădere de peste 20% față de maximul istoric recent (ATH), care persistă pe o perioadă mai lungă (luni sau ani).</li>
-      </ul>
-      <p><strong>Notă pentru Crypto:</strong> În lumea criptomonedelor, volatilitatea este mult mai mare. Un "Crypto Bear Market" implică adesea scăderi de 70% - 85% pentru Bitcoin și chiar 90-99% pentru Altcoins.</p>
-
-      <h3>Psihologia Pieței: Cele 4 Faze ale unui Bear Market</h3>
-      <p>Un Bear Market nu este o linie dreaptă în jos. Este un proces psihologic dureros, conceput să testeze răbdarea investitorilor. Iată prin ce trecem:</p>
-      
-      <p><strong>1. Recunoașterea (Negarea)</strong><br/>
-      Prețurile încep să scadă de la maxime. Investitorii spun: "E doar o mică corecție, voi cumpăra mai mult (Buy the Dip)". Optimismul încă există.</p>
-
-      <p><strong>2. Panica</strong><br/>
-      Prețurile nu își revin. Știrile economice devin negative (inflație, război, ratele dobânzilor). Investitorii încep să realizeze că trendul s-a schimbat. Începe vânzarea emoțională.</p>
-
-      <p><strong>3. Stabilizarea (Capitularea)</strong><br/>
-      Acesta este momentul în care investitorii de retail renunță. "Crypto e o țeapă", "Bursa nu e de mine". Vând în pierdere doar ca să scape de stres. Prețurile ating fundul (bottom).</p>
-
-      <p><strong>4. Anticiparea</strong><br/>
-      Prețurile stagnează o perioadă lungă (zona de acumulare). Veștile proaste nu mai afectează prețul. "Smart Money" (Instituțiile) încep să cumpere în liniște, pregătind următorul Bull Market.</p>
-
-      <h3>Cum să Supraviețuiești (și să Faci Bani) când Ursul Atacă</h3>
-      <p>Warren Buffett are o vorbă celebră: <em>"Fii lacom când alții sunt fricoși și fricos când alții sunt lacomi."</em> Bear Market-ul este perioada în care se fac averile, dar ele se încasează abia în Bull Market. Iată 3 reguli de aur:</p>
-
-      <p><strong>1. Nu vinde în panică</strong><br/>
-      Dacă ai investit în active solide (Bitcoin, S&P 500, companii Blue Chip) și teza ta de investiție nu s-a schimbat, prețul roșu este doar "zgomot". Dacă vinzi acum, transformi o pierdere "pe hârtie" într-una reală.</p>
-
-      <p><strong>2. Folosește strategia DCA (Dollar Cost Averaging)</strong><br/>
-      Nu încerca să ghicești unde este fundul prăpastiei (Catching a falling knife). În schimb, investește o sumă fixă, constant (ex: 100$ pe săptămână), indiferent de preț. Astfel, vei cumpăra mai mult când prețul e mic și mai puțin când prețul e mare, obținând un preț mediu excelent.</p>
-
-      <p><strong>3. Evită Leverage-ul (Banii împrumutați)</strong><br/>
-      Într-un Bear Market, volatilitatea este extremă. Lichidările masive sunt frecvente. Păstrează-te pe piața Spot (cumperi activul real). Nu risca să fii șters din piață înainte ca revenirea să înceapă.</p>
-
-      <h3>Concluzie: Iarna nu durează la nesfârșit</h3>
-      <p>Istoria piețelor financiare, de peste 100 de ani, ne arată un lucru cert: Fiecare Bear Market a fost urmat de un Bull Market care a atins noi maxime istorice. Ursul face curățenie. Elimină proiectele slabe, companiile zombie și investitorii lacomi care folosesc prea mult risc.</p>
-      <p>Dacă citești acest articol și încă ești în piață, felicitări! Ești deja cu un pas înaintea mulțimii.</p>
-
-      <h3>Simți că portofoliul tău sângerează și nu știi ce să faci?</h3>
-      <p>Bear Market-ul poate fi o perioadă singuratică și stresantă. Uneori, diferența dintre a vinde pe minim și a acumula avere este o simplă discuție cu cineva care a mai trecut prin asta.</p>
-      <p>Te invit la o sesiune de consultanță 1-la-1, unde vom analiza portofoliul tău și vom construi o strategie personalizată de apărare și acumulare, adaptată toleranței tale la risc. Nu lăsa piața să decidă pentru tine. Preia controlul.</p>
-    `
-  },
-
-  // ✅ 2. ARTICOL: ALERTĂ FED (Imagine Locală)
+  // ✅ 1. ARTICOL NOU: ALERTĂ FED (DESIGN PREMIUM INTEGRAT - VERIFICAT)
   {
     slug: "alerta-volatilitate-decizie-fed-capcana-mortala",
     title: "Alertă de Volatilitate: De ce Decizia FED de Mâine Poate Fi o \"Capcană Mortală\"",
@@ -77,53 +10,154 @@ export const articles = [
     summary: "Mâine este ziua Z. FED anunță rata dobânzii. Deși se așteaptă o tăiere de 0.25%, volatilitatea poate fi extremă. Află de ce este periculos să tranzacționezi în timpul anunțului.",
     mihaiTake: "Tati, mâine nu e zi de făcut bani, e zi de păstrat banii. Când vorbește Powell, piața nu are logică, are doar emoție și algoritmi HFT. Stai pe mâini, nu fi lichiditate pentru alții. Adevărata direcție o vedem abia joi.",
     content: `
-      <p>Mâine este ziua Z. La ora 21:00 (ora României), Rezerva Federală a SUA (FED) va anunța noua rată a dobânzii.</p>
-      <p>Consensul analiștilor este aproape unanim: o tăiere de 0.25%.</p>
-      <p>La prima vedere, sună a veste bună pentru Bitcoin și piețele de acțiuni, nu? Banii devin mai ieftini, activele ar trebui să crească.</p>
-      <p>Totuși, istoria ne arată o realitate mult mai brutală. Zilele de FOMC (ședințele FED) nu sunt despre direcție, ci despre lichidare. Dacă ești un trader începător sau folosești leverage (bani împrumutați), ziua de mâine se poate transforma rapid dintr-o oportunitate într-un coșmar.</p>
-      <p>Iată de ce decizia de mâine este un teren minat și cum să eviți să devii "lichiditate de ieșire" pentru instituții.</p>
+      <p class="text-xl font-medium text-white mb-6">Mâine este ziua Z. La ora 21:00 (ora României), Rezerva Federală a SUA (FED) va anunța noua rată a dobânzii.</p>
+      
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-green-900/20 border border-green-500/30 p-4 rounded-xl">
+            <h4 class="text-green-400 font-bold mb-2">🟢 Scenariul Optimist (Teoretic)</h4>
+            <p class="text-sm text-gray-300">Consensul este o tăiere de 0.25%. Teoretic, banii devin mai ieftini, activele cresc.</p>
+        </div>
+        <div class="bg-red-900/20 border border-red-500/30 p-4 rounded-xl">
+            <h4 class="text-red-400 font-bold mb-2">🔴 Realitatea Brutală</h4>
+            <p class="text-sm text-gray-300">Istoria ne arată că zilele FOMC sunt despre <strong>lichidare</strong>, nu despre direcție.</p>
+        </div>
+      </div>
 
-      <h3>1. De ce "Vestea Bună" poate prăbuși piața? (Buy the Rumor, Sell the News)</h3>
-      <p>Piețele financiare sunt mecanisme de anticipare. O tăiere de 0.25% este deja priced-in (inclusă în preț). Fondurile mari au cumpărat deja anticipând acest moment.</p>
-      <p>Când știrea devine oficială mâine seară, există un risc major de <strong>"Sell the News"</strong>.</p>
-      <p>Instituțiile își marchează profiturile, vânzând masiv exact când micii investitori (retail-ul) încep să cumpere de euforie.</p>
-      <p><strong>Rezultatul?</strong> Un "fitil" lung în sus, urmat de o prăbușire violentă.</p>
+      <p class="mb-6">Dacă ești un trader începător sau folosești leverage (bani împrumutați), ziua de mâine se poate transforma rapid dintr-o oportunitate într-un coșmar. Iată de ce decizia de mâine este un teren minat.</p>
 
-      <h3>2. Fenomenul "Darth Maul": Cum ești lichidat în ambele direcții</h3>
-      <p>Cel mai mare pericol pentru cei cu apetit mare de risc nu este direcția greșită, ci volatilitatea extremă.</p>
-      <p>În primele minute după anunț, algoritmii de tranzacționare (HFT - High Frequency Trading) preiau controlul. Adesea vedem pe grafic o lumânare de tip "Darth Maul" (numită după sabia cu două tăișuri din Star Wars):</p>
-      <ul>
-        <li>Prețul explodează în SUS (lichidează pozițiile Short).</li>
-        <li>În secunda următoare, prețul se prăbușește în JOS (lichidează pozițiile Long).</li>
-        <li>Prețul revine la mijloc.</li>
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4 border-b border-gray-700 pb-2">1. De ce "Vestea Bună" poate prăbuși piața?</h3>
+      <p>Piețele financiare sunt mecanisme de anticipare. O tăiere de 0.25% este deja <em>priced-in</em> (inclusă în preț). Fondurile mari au cumpărat deja anticipând acest moment.</p>
+      <div class="bg-yellow-900/10 border-l-4 border-yellow-500 p-4 my-4">
+        <strong class="text-yellow-500 block mb-1">⚠️ Pericolul "Sell the News"</strong>
+        <p class="text-sm">Instituțiile își marchează profiturile, vânzând masiv exact când micii investitori (retail-ul) încep să cumpere de euforie. Rezultatul? Un "fitil" lung în sus, urmat de o prăbușire violentă.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4 border-b border-gray-700 pb-2">2. Fenomenul "Darth Maul": Lichidare Totală</h3>
+      <p>Cel mai mare pericol pentru cei cu apetit mare de risc nu este direcția greșită, ci volatilitatea extremă. În primele minute după anunț, algoritmii de tranzacționare (HFT) preiau controlul.</p>
+      <p>Adesea vedem pe grafic o lumânare de tip <strong>"Darth Maul"</strong> (sabia cu două tăișuri):</p>
+      <ul class="space-y-2 my-4 bg-gray-800/50 p-4 rounded-lg">
+        <li class="flex items-center gap-3"><span class="text-green-500 text-xl">⬆️</span> <span>Prețul explodează în SUS (lichidează Short-urile).</span></li>
+        <li class="flex items-center gap-3"><span class="text-red-500 text-xl">⬇️</span> <span>În secunda următoare, se prăbușește în JOS (lichidează Long-urile).</span></li>
+        <li class="flex items-center gap-3"><span class="text-blue-500 text-xl">➡️</span> <span>Prețul revine la mijloc. Contul tău e gol.</span></li>
       </ul>
-      <p><strong>Rezultatul:</strong> Prețul e neschimbat, dar contul tău de futures este golit. Dacă ai leverage mare (10x, 20x, 50x), nu ai nicio șansă să supraviețuiești acestor mișcări de 3-4% într-un singur minut.</p>
 
-      <h3>3. Capcana Conferinței de Presă (Ora 21:30)</h3>
-      <p>Mulți începători cred că anunțul orei 21:00 este totul. Greșit. Adevăratul pericol începe 30 de minute mai târziu, când Jerome Powell iese la microfon.</p>
-      <p>Chiar dacă taie dobânda cu 0.25%, tonul lui Powell contează mai mult decât cifra.</p>
-      <p>Dacă spune: <em>"Economia slăbește, suntem îngrijorați"</em> &rarr; Piața poate interpreta asta ca risc de recesiune și se prăbușește.</p>
-      <p>Fiecare cuvânt este analizat de AI-uri care cumpără sau vând în milisecunde. Pentru un ochi neantrenat, graficul va arăta ca un EKG al unui pacient care face infarct. A încerca să tranzacționezi în acest interval fără experiență este pur joc de noroc.</p>
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4 border-b border-gray-700 pb-2">3. Capcana Conferinței de Presă (Ora 21:30)</h3>
+      <p>Mulți începători cred că anunțul orei 21:00 este totul. Greșit. Adevăratul pericol începe 30 de minute mai târziu, când <strong>Jerome Powell</strong> iese la microfon.</p>
+      <p class="italic text-gray-400 mb-4">Chiar dacă taie dobânda cu 0.25%, tonul lui Powell contează mai mult decât cifra.</p>
+      <div class="bg-red-900/10 p-4 rounded-lg">
+        <p>Dacă spune: <em>"Economia slăbește, suntem îngrijorați"</em> &rarr; Piața poate interpreta asta ca risc de recesiune și se prăbușește. Fiecare cuvânt este analizat de AI-uri care execută ordine în milisecunde.</p>
+      </div>
 
-      <h3>4. Pericolul "Slippage-ului" și Blocarea Platformelor</h3>
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4 border-b border-gray-700 pb-2">4. Pericolul "Slippage-ului" și Blocarea Platformelor</h3>
       <p>În momentele de volatilitate extremă, lichiditatea dispare din Order Book.</p>
-      <ul>
+      <ul class="list-disc pl-6 space-y-2 mb-6">
         <li><strong>Slippage:</strong> Încerci să vinzi la $98,000, dar ordinul tău se execută la $97,200 pentru că prețul s-a mișcat prea repede.</li>
         <li><strong>Platforme Blocate:</strong> Istoric, marile exchange-uri (Binance, Coinbase) au tendința de a avea "erori tehnice" fix când piața o ia razna. Să rămâi blocat într-o poziție pierzătoare fără a putea închide este un risc real.</li>
       </ul>
 
-      <h3>Strategia Câștigătoare: "Statul pe Mâini"</h3>
-      <p>Cel mai bun trade pe care îl poți face mâine, dacă nu ești profesionist, este să nu faci nimic.</p>
-      <ul>
-        <li><strong>Nu folosi leverage:</strong> Dacă ai poziții deschise, redu riscul sau închide-le înainte de ora 21:00.</li>
-        <li><strong>Așteaptă închiderea zilei:</strong> Lasă praful să se așeze. Adevărata direcție a pieței se va vedea abia joi dimineață, după ce Asia și Europa au reacționat la știri.</li>
-        <li><strong>Focusează-te pe Spot:</strong> Dacă vrei să acumulezi, fă-o pe piața Spot, fără a risca lichidarea.</li>
-      </ul>
-      <p>Volatilitatea este o scară: profesioniștii o folosesc să urce, amatorii o folosesc să cadă și să-și rupă gâtul.</p>
+      <div class="bg-blue-600/10 border border-blue-500 p-6 rounded-2xl text-center mt-8">
+        <h4 class="text-xl font-bold text-blue-400 mb-4">Strategia Câștigătoare: "Statul pe Mâini"</h4>
+        <p class="mb-4">Cel mai bun trade pe care îl poți face mâine, dacă nu ești profesionist, este să nu faci nimic.</p>
+        <div class="text-left space-y-2 text-sm">
+            <p>✅ <strong>Nu folosi leverage:</strong> Redu riscul înainte de ora 21:00.</p>
+            <p>✅ <strong>Așteaptă închiderea zilei:</strong> Lasă praful să se așeze.</p>
+            <p>✅ <strong>Focusează-te pe Spot:</strong> Dacă vrei să acumulezi, fă-o fără risc de lichidare.</p>
+        </div>
+      </div>
+
+      <p class="font-bold text-center mt-6">Volatilitatea este o scară: profesioniștii o folosesc să urce, amatorii o folosesc să cadă și să-și rupă gâtul.</p>
     `
   },
 
-  // ✅ 3. ARTICOL: CAPCANA URSULUI (PSIHOLOGIE & ISTORIE)
+  // ✅ 2. ARTICOL: GHID BEAR MARKET (DESIGN PREMIUM INTEGRAT)
+  {
+    slug: "ce-inseamna-bear-market-ghid-complet",
+    title: "Ce Înseamnă \"Bear Market\" și De Ce Nu Trebuie Să Te Sperie? Ghidul Complet.",
+    date: "08 Dec 2025",
+    category: "EDUCAȚIE FINANCIARĂ",
+    image: "/bear-market.jpg", 
+    impact: "bearish", 
+    summary: "Dacă portofoliul tău e pe roșu, probabil ai auzit termenul \"Bear Market\". Află de unde vine numele, care sunt cele 4 faze psihologice și cum să prosperi în iarna financiară.",
+    mihaiTake: "Tati, nu fugi de urs. Îmbrățișează-l. Bear Market-ul este perioada în care se fac averile, doar că nota de plată o încasezi în Bull Market. Dacă înțelegi psihologia din spatele graficului, frica dispare și apare oportunitatea. Citeste ghidul ăsta ca să știi exact unde ne aflăm.",
+    content: `
+      <p class="text-lg text-gray-300 mb-6">Dacă ai deschis portofoliul de investiții recent și ai văzut doar culoarea roșie, probabil ai auzit termenul aruncat peste tot: <strong>"Suntem într-un Bear Market"</strong>.</p>
+      
+      <div class="grid md:grid-cols-2 gap-4 mb-8">
+        <div class="bg-green-900/10 p-4 rounded-lg border border-green-500/20">
+            <strong class="text-green-400 block mb-2 text-xl">🐂 Bull Market (Taur)</strong>
+            <p>Taurul atacă lovind cu coarnele de jos în sus.</p>
+            <em class="text-sm text-gray-400">Semnificație: Prețurile cresc, optimismul este ridicat, graficele merg "to the moon".</em>
+        </div>
+        <div class="bg-red-900/10 p-4 rounded-lg border border-red-500/20">
+            <strong class="text-red-400 block mb-2 text-xl">🐻 Bear Market (Urs)</strong>
+            <p>Ursul atacă lovind cu labele de sus în jos, strivindu-și prada.</p>
+            <em class="text-sm text-gray-400">Semnificație: Prețurile scad agresiv, pesimismul domină, investitorii vând de frică.</em>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4 border-b border-gray-700 pb-2">Definiția Tehnică: Când devine o corecție un Bear Market?</h3>
+      <p>Nu orice scădere de preț înseamnă Bear Market. Piețele respiră; uneori inspiră (creștere), alteori expiră (scădere). Exista o regulă nescrisă, dar acceptată universal pe Wall Street:</p>
+      
+      <ul class="space-y-4 my-6">
+        <li class="bg-gray-800 p-4 rounded-lg flex items-start gap-3">
+            <span class="text-blue-400 font-bold whitespace-nowrap">📉 Corecție:</span>
+            <span>O scădere de <strong>10% - 19%</strong> față de maximul recent. Este considerată sănătoasă.</span>
+        </li>
+        <li class="bg-red-900/20 p-4 rounded-lg flex items-start gap-3 border border-red-500/30">
+            <span class="text-red-400 font-bold whitespace-nowrap">🐻 Bear Market:</span>
+            <span>O scădere de <strong>peste 20%</strong> față de maximul istoric recent (ATH), care persistă pe o perioadă mai lungă (luni sau ani).</span>
+        </li>
+      </ul>
+      <p class="text-sm bg-gray-800 p-3 rounded border-l-4 border-orange-500 mb-8"><strong>Notă pentru Crypto:</strong> În lumea criptomonedelor, volatilitatea este mult mai mare. Un "Crypto Bear Market" implică adesea scăderi de 70% - 85% pentru Bitcoin și chiar 90-99% pentru Altcoins.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4 border-b border-gray-700 pb-2">Psihologia Pieței: Cele 4 Faze</h3>
+      <p class="mb-4">Un Bear Market nu este o linie dreaptă în jos. Este un proces psihologic dureros, conceput să testeze răbdarea investitorilor. Iată prin ce trecem:</p>
+      
+      <div class="space-y-4">
+        <div class="border-l-4 border-gray-500 pl-4 py-2">
+            <strong class="text-white block">1. Recunoașterea (Negarea)</strong>
+            <p class="text-sm">Prețurile încep să scadă. Investitorii spun: "E doar o mică corecție, cumpăr dip-ul". Optimismul încă există.</p>
+        </div>
+        <div class="border-l-4 border-yellow-500 pl-4 py-2">
+            <strong class="text-white block">2. Panica</strong>
+            <p class="text-sm">Prețurile nu își revin. Știrile devin negative. Începe vânzarea emoțională.</p>
+        </div>
+        <div class="border-l-4 border-red-500 pl-4 py-2">
+            <strong class="text-white block">3. Stabilizarea (Capitularea)</strong>
+            <p class="text-sm">Investitorii de retail renunță. "Crypto e o țeapă". Vând în pierdere doar ca să scape de stres. Prețurile ating fundul.</p>
+        </div>
+        <div class="border-l-4 border-green-500 pl-4 py-2">
+            <strong class="text-white block">4. Anticiparea</strong>
+            <p class="text-sm">Prețurile stagnează (acumulare). "Smart Money" (Instituțiile) încep să cumpere în liniște, pregătind următorul Bull Market.</p>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4 border-b border-gray-700 pb-2">Cum să Supraviețuiești (și să Faci Bani)</h3>
+      <p class="italic text-gray-400 mb-6">Warren Buffett: "Fii lacom când alții sunt fricoși și fricos când alții sunt lacomi."</p>
+      
+      <div class="grid gap-4">
+        <div class="bg-gray-800 p-4 rounded-xl">
+            <h4 class="font-bold text-white mb-2">1. Nu vinde în panică</h4>
+            <p class="text-sm text-gray-400">Dacă ai investit în active solide și teza ta nu s-a schimbat, prețul roșu este doar "zgomot". Dacă vinzi acum, transformi o pierdere "pe hârtie" într-una reală.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-xl">
+            <h4 class="font-bold text-white mb-2">2. Folosește DCA (Dollar Cost Averaging)</h4>
+            <p class="text-sm text-gray-400">Nu încerca să ghicești fundul. Investește o sumă fixă, constant (ex: 100$/săptămână). Vei cumpăra mai mult când e ieftin și vei obține un preț mediu excelent.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-xl">
+            <h4 class="font-bold text-white mb-2">3. Evită Leverage-ul</h4>
+            <p class="text-sm text-gray-400">Într-un Bear Market, volatilitatea este extremă. Păstrează-te pe piața Spot. Nu risca să fii șters din piață înainte ca revenirea să înceapă.</p>
+        </div>
+      </div>
+
+      <div class="mt-8 p-6 bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl border border-gray-700 text-center">
+        <h4 class="text-lg font-bold text-white mb-2">Concluzie: Iarna nu durează la nesfârșit</h4>
+        <p class="text-sm text-gray-300">Istoria ne arată un lucru cert: Fiecare Bear Market a fost urmat de un Bull Market care a atins noi maxime istorice. Ursul face curățenie. Elimină proiectele slabe și investitorii lacomi. Dacă citești asta și ești încă în piață, felicitări! Ești deja cu un pas înaintea mulțimii.</p>
+      </div>
+    `
+  },
+
+  // ✅ 3. ARTICOL: CAPCANA URSULUI (PSIHOLOGIE)
   {
     slug: "capcana-ursului-istorie-crize-evitate",
     title: "\"Capcana Ursului\": De ce Toți Indicatorii de Criză Pot Fi Greșiți. Lecții Istorice.",
@@ -175,13 +209,13 @@ export const articles = [
     `
   },
 
-  // ✅ 4. ARTICOL: FED & DOBÂNZI (Imagine Locală: /fed-rates.jpg)
+  // ✅ 4. ARTICOL: FED & DOBÂNZI (MACRO)
   {
     slug: "impact-dobanda-fed-bitcoin-scenarii",
     title: "Alertă Maximă: Decizia FED care Poate Arunca Bitcoin în Aer. Scenariile 0.25% vs 0.50%",
     date: "07 Dec 2025",
     category: "MACROECONOMIE", 
-    image: "/fed-rates.jpg", // ✅ Imagine Locală
+    image: "/fed-rates.jpg", 
     impact: "neutral", 
     summary: "Săptămâna viitoare, Jerome Powell are degetul pe 'butonul nuclear'. Analizăm cele 4 scenarii posibile ale dobânzii și cum va reacționa Bitcoin la fiecare.",
     mihaiTake: "Tati, nu juca la 'păcănele' cu anunțurile macro. Majoritatea pierd bani săptămâna viitoare pentru că reacționează emoțional. Noi ne pregătim profesional: avem planul A pentru 0.25% și planul B pentru 0.50%. Dacă nu știi cum să te poziționezi, stai pe mâini sau intră în consultanță.",
