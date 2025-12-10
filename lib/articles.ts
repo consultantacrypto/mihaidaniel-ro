@@ -1,12 +1,120 @@
-export const articles = [ 
-  // ✅ 1. ARTICOL NOU: LEVIERUL (EDUCAȚIE & RISK) - INTEGRAL
+export const articles = [
+  // ✅ 1. ARTICOL NOU (AZI): HALVING VS LICHIDITATE (ANALIZĂ DIALECTICĂ)
+  {
+    slug: "mitul-halving-ului-sacru-vs-realitatea-lichiditatii",
+    title: "Mitul \"Halving-ului Sacru\" vs. Realitatea Lichidității: Ce dictează cu adevărat prețul Bitcoin în 2025?",
+    date: "10 Dec 2025",
+    category: "ANALIZĂ MACRO",
+    image: "/halvingvslichditate.jpg", // ✅ Imagine Locală
+    impact: "bullish", 
+    summary: "Suntem în Decembrie 2025. Vechea narativă \"Halving = Bull Market\" este contestată de corelația cu lichiditatea globală. O analiză Teză-Antiteză-Sinteză despre viitorul Bitcoin.",
+    mihaiTake: "Tati, nu te uita doar la Halving. Uită-te la imprimanta FED. Când americanii dau drumul la bani și minerii produc mai puțin, atunci începe magia. Halving-ul încarcă arma, dar Lichiditatea apasă trăgaciul.",
+    content: `
+      <p class="text-xl font-medium text-white mb-6">Suntem în luna decembrie 2025. Piețele financiare globale își țin respirația. Pe 1 decembrie, Rezerva Federală a SUA a semnalat oficial sfârșitul ciclului de "Quantitative Tightening" (QT - retragerea lichidității din piață), iar așteptările pentru primele tăieri de dobânzi sunt la cote maxime (peste 90% pentru ședința iminentă).</p>
+      
+      <p>În ecosistemul crypto, tensiunea este palpabilă. Ne aflăm în fereastra istorică "post-halving" (după evenimentul din aprilie 2024), perioada în care, tradițional, Bitcoin înregistra creșteri parabolice.</p>
+      
+      <p>Și totuși, ciclul actual pare diferit. Volatilitatea extremă din august 2024 (declanșată de o mișcare a Băncii Japoniei) a arătat o vulnerabilitate șocantă a Bitcoin la factorii macroeconomici, în ciuda Halving-ului proaspăt încheiat.</p>
+      
+      <div class="bg-gray-800 p-6 rounded-xl border-l-4 border-yellow-500 my-8">
+        <p class="text-lg font-bold text-white mb-2">Marea Dezbatere a anului 2025:</p>
+        <p class="text-gray-300 italic">Este Halving-ul Bitcoin un mecanism economic sacru care garantează creșterea prețului, sau ciclurile anterioare au fost doar coincidențe fericite, suprapuse peste perioadele în care băncile centrale tipăreau bani?</p>
+      </div>
+
+      <p>Pentru investitorul matur din 2025, răspunsul nu este "ori/ori". Pentru a înțelege direcția pieței, trebuie să explorăm această antiteză fundamentală.</p>
+
+      <div class="mt-12 mb-8">
+        <h3 class="text-2xl font-bold text-blue-400 mb-4 flex items-center gap-2">
+            <span class="bg-blue-500/20 p-2 rounded">TEZA</span> 
+            Rolul Central al Halving-ului – Scarcitatea Matematică
+        </h3>
+        <p class="mb-4">Argumentul "tradiționalist" al Bitcoin se bazează pe designul imuabil creat de Satoshi Nakamoto. Aceasta este fundația ideologică a Bitcoin ca "aur digital" (hard money).</p>
+        
+        <h4 class="text-xl font-bold text-white mt-6 mb-2">1. Mecanismul "Supply Shock" (Șocul de Ofertă)</h4>
+        <p>Spre deosebire de monedele fiat (USD, EUR), unde oferta poate fi mărită oricând printr-o decizie politică a bancherilor centrali, oferta de Bitcoin este guvernată de matematică.</p>
+        <ul class="list-disc pl-6 space-y-2 mb-4 text-gray-300">
+            <li>Înainte de aprilie 2024, se emiteau ~900 BTC pe zi.</li>
+            <li><strong>Astăzi, în 2025, se emit doar ~450 BTC pe zi.</strong></li>
+        </ul>
+        <p class="bg-blue-900/10 p-4 rounded-lg border border-blue-500/20"><strong>Argumentul Tezei:</strong> Dacă cererea pentru Bitcoin rămâne constantă sau crește (datorită ETF-urilor și adopției globale), iar cantitatea de Bitcoin nou scade brusc la jumătate, prețul trebuie să crească. Este economie elementară.</p>
+
+        <h4 class="text-xl font-bold text-white mt-6 mb-2">2. Efectul Psihologic și Ciclul de 4 Ani</h4>
+        <p>Istoric, Halving-ul a funcționat ca o profeție auto-împlinită:</p>
+        <ul class="space-y-2 mt-2 mb-4">
+            <li class="flex items-center gap-2"><span class="text-green-500 font-bold">2012:</span> Prețul a explodat de la $12 la peste $1,100.</li>
+            <li class="flex items-center gap-2"><span class="text-green-500 font-bold">2016:</span> A inițiat bull run-ul istoric până la $20,000.</li>
+            <li class="flex items-center gap-2"><span class="text-green-500 font-bold">2020:</span> A pregătit terenul pentru maximele de $69,000.</li>
+            <li class="flex items-center gap-2"><span class="text-white font-bold">2024 (Actual):</span> Un fenomen unic – ATH înainte de Halving, propulsat de ETF-uri.</li>
+        </ul>
+      </div>
+
+      <div class="mt-12 mb-8">
+        <h3 class="text-2xl font-bold text-red-400 mb-4 flex items-center gap-2">
+            <span class="bg-red-500/20 p-2 rounded">ANTITEZA</span> 
+            Realitatea Lichidității – Bitcoin ca "Barometru Macro"
+        </h3>
+        <p class="mb-4">Aceasta este perspectiva care a câștigat teren masiv în 2024-2025. Argumentul este brutal de simplu: Bitcoin nu există într-un vid; este un activ de risc extrem de sensibil la costul banilor.</p>
+
+        <h4 class="text-xl font-bold text-white mt-6 mb-2">1. Corelația Supremă: Bitcoin vs. Masa Monetară Globală (M2)</h4>
+        <p>Analize recente arată o corelație statistică uluitoare (peste 0.85) între prețul Bitcoin și Lichiditatea Globală M2.</p>
+        <div class="bg-red-900/10 p-4 rounded-lg border border-red-500/20 mb-4">
+            <strong>Argumentul Antitezei:</strong> Toate marile "bull runs" ale Bitcoin au coincis perfect cu perioade de expansiune monetară (QE). Când banii sunt "ieftini" și abundenți, aceștia se revarsă în active riscante. Bitcoin, fiind cel mai rapid cal din această cursă, beneficiază cel mai mult. <strong>Halving-ul a fost doar scânteia; lichiditatea Fed a fost benzina.</strong>
+        </div>
+
+        <h4 class="text-xl font-bold text-white mt-6 mb-2">2. Dovada Vulnerabilității: Crash-ul din August 2024</h4>
+        <p>Dacă Halving-ul din aprilie 2024 ar fi fost suficient, ce s-a întâmplat în august 2024? Banca Japoniei a majorat ratele, iar Bitcoin a pierdut peste 25% în câteva zile. Asta a demonstrat că "scarcitatea programată" nu poate opri o vânzare masivă în panică într-un șoc de lichiditate.</p>
+      </div>
+
+      <div class="mt-12 mb-8 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-8 rounded-2xl border border-green-500/30">
+        <h3 class="text-2xl font-bold text-green-400 mb-4 text-center">SINTEZA: Noua Paradigmă a Ciclului 2025-2026</h3>
+        <p class="text-lg text-white text-center mb-6">Nu este "Halving SAU Lichiditate". Este <strong>Halving ȘI Lichiditate</strong>.</p>
+        
+        <div class="grid md:grid-cols-2 gap-6">
+            <div>
+                <strong class="text-blue-300 block mb-2">Halving-ul dictează Fundamentul (Podeaua)</strong>
+                <p class="text-sm text-gray-300">Asigură că Bitcoin nu poate fi devalorizat prin inflație. Ridică "podeaua" prețului în fiecare ciclu.</p>
+            </div>
+            <div>
+                <strong class="text-green-300 block mb-2">Lichiditatea dictează Tavanul</strong>
+                <p class="text-sm text-gray-300">Deciziile FED decid când presiunea latentă este eliberată și cât de sus poate ajunge prețul. Lichiditatea este valul care ridică toate bărcile.</p>
+            </div>
+        </div>
+
+        <h4 class="text-xl font-bold text-white mt-8 mb-3">Contextul Exploziv din Decembrie 2025</h4>
+        <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+                <span class="text-green-500">✅</span>
+                <span><strong>Factorul Intern:</strong> Suntem la >18 luni post-halving, perioada istorică a "șocului de ofertă".</span>
+            </li>
+            <li class="flex items-start gap-2">
+                <span class="text-green-500">✅</span>
+                <span><strong>Factorul Extern:</strong> FED a oprit QT. Reluarea tipăririi de bani este inevitabilă pentru a susține datoria de 38 trilioane $.</span>
+            </li>
+        </ul>
+        <p class="mt-6 font-bold text-center text-white bg-green-500/20 p-3 rounded">Sinteza: Halving-ul a încărcat arma, iar pivotul FED din finalul lui 2025 este pe cale să apese trăgaciul.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4 border-b border-gray-700 pb-2">Concluzie: Implicații pentru Investitorul Inteligent</h3>
+      <p>În 2025, a investi în Bitcoin bazându-te exclusiv pe un calendar de 4 ani este naiv. Lecțiile cheie:</p>
+      <ol class="list-decimal pl-6 space-y-3 text-gray-300 mt-4">
+        <li><strong>Bitcoin s-a maturizat:</strong> Este un activ macro global, integrat prin ETF-uri.</li>
+        <li><strong>Urmărește Banii, nu doar Blocurile:</strong> Deciziile FED sunt la fel de importante ca datele on-chain.</li>
+        <li><strong>Antiteza este Sănătoasă:</strong> Înțelege că Bitcoin este și "hard money" și "barometru de lichiditate".</li>
+      </ol>
+      
+      <p class="mt-6">Evidența din 2025 ne arată clar: Halving-ul a construit fundația, dar valurile de lichiditate fiat sunt cele care vor decide cât de înalt se va construi zgârie-norul în acest ciclu.</p>
+      <p class="text-xs text-gray-500 mt-8 pt-4 border-t border-gray-800">Disclaimer: Acest articol reprezintă o analiză a pieței și nu constituie un sfat financiar.</p>
+    `
+  },
+
+  // ✅ 2. ARTICOL: LEVIERUL (EDUCAȚIE & RISK) - INTEGRAL
   {
     slug: "mirajul-levierului-arma-financiara-distrugere",
     title: "Mirajul Levierului: \"Arma Financiară de Distrugere în Masă\" care îți poate Zeroiza Contul într-o Secundă. Ghid de Conștientizare.",
     date: "19 Dec 2025",
     category: "EDUCAȚIE & RISK",
-    image: "/leverage-danger.jpg", // ✅ Asigură-te că ai poza asta în 'public'
-    impact: "bearish", // Roșu pentru pericol
+    image: "/leverage-danger.jpg", 
+    impact: "bearish", 
     summary: "Levierul este promovat ca o superputere, dar realitatea este brutală: distruge 80% din conturi. Află matematica din spatele dezastrului și cum să nu devii o victimă.",
     mihaiTake: "Tati, levierul nu e prietenul tău, e un împrumut toxic. Când brokerul îți dă 1:100, nu îți face o favoare, îți dă frânghia să te spânzuri. Dacă nu știi să calculezi riscul la centimă, stai pe Spot. Altfel, ești doar carne de tun pentru algortimi.",
     content: `
@@ -92,7 +200,7 @@ export const articles = [
     `
   },
 
-  // ✅ 2. ARTICOL: ALERTĂ FED (Imagine Locală: /fed-volatility-warning.jpg)
+  // ✅ 3. ARTICOL: ALERTĂ FED (Imagine Locală)
   {
     slug: "alerta-volatilitate-decizie-fed-capcana-mortala",
     title: "Alertă de Volatilitate: De ce Decizia FED de Mâine Poate Fi o \"Capcană Mortală\"",
@@ -162,7 +270,7 @@ export const articles = [
     `
   },
 
-  // ✅ 3. ARTICOL: GHID BEAR MARKET (DESIGN PREMIUM INTEGRAT)
+  // ✅ 4. ARTICOL: GHID BEAR MARKET (Imagine Locală)
   {
     slug: "ce-inseamna-bear-market-ghid-complet",
     title: "Ce Înseamnă \"Bear Market\" și De Ce Nu Trebuie Să Te Sperie? Ghidul Complet.",
@@ -250,7 +358,7 @@ export const articles = [
     `
   },
 
-  // ✅ 4. ARTICOL: CAPCANA URSULUI (PSIHOLOGIE & ISTORIE)
+  // ✅ 5. ARTICOL: CAPCANA URSULUI (PSIHOLOGIE & ISTORIE)
   {
     slug: "capcana-ursului-istorie-crize-evitate",
     title: "\"Capcana Ursului\": De ce Toți Indicatorii de Criză Pot Fi Greșiți. Lecții Istorice.",
@@ -302,7 +410,7 @@ export const articles = [
     `
   },
 
-  // ✅ 5. ARTICOL: FED & DOBÂNZI (MACRO)
+  // ✅ 6. ARTICOL: FED & DOBÂNZI (MACRO)
   {
     slug: "impact-dobanda-fed-bitcoin-scenarii",
     title: "Alertă Maximă: Decizia FED care Poate Arunca Bitcoin în Aer. Scenariile 0.25% vs 0.50%",
@@ -343,7 +451,7 @@ export const articles = [
     `
   },
 
-  // ✅ 6. ARTICOL: BITCOIN MANIPULARE (Imagine Locală: /bitcoin-crash.jpg)
+  // ✅ 7. ARTICOL: BITCOIN MANIPULARE (Imagine Locală: /bitcoin-crash.jpg)
   {
     slug: "bitcoin-manipulare-sau-corectie-brutala",
     title: "Bitcoin: Manipulare Instituțională sau Corecție Brutală? Anatomia unei Prăbușiri de 19 Miliarde $",
@@ -388,7 +496,7 @@ export const articles = [
     `
   },
 
-  // ✅ 7. ARTICOL: BITCOIN SOPR
+  // ✅ 8. ARTICOL: BITCOIN SOPR
   {
     slug: "semnal-on-chain-bitcoin-sopr-rally",
     title: "Semnal On-Chain: Vânzătorii au obosit. Bitcoin pregătește Raliul de Decembrie?",
@@ -419,7 +527,7 @@ export const articles = [
     `
   },
 
-  // ✅ 8. ARTICOL: QUANTUM COMPUTING
+  // ✅ 9. ARTICOL: QUANTUM COMPUTING
   {
     slug: "riscuri-quantum-computing-bitcoin-explicat",
     title: "Calculatoarele Cuantice vs. Bitcoin: Sfârșitul Criptomonedelor sau Doar o Nouă Provocare?",
@@ -443,7 +551,7 @@ export const articles = [
     `
   },
 
-  // ✅ 9. ARTICOL: SUA & CFTC (Imagine Locală: /cftc-announcement.jpg)
+  // ✅ 10. ARTICOL: SUA & CFTC (Imagine Locală: /cftc-announcement.jpg)
   {
     slug: "sua-cftc-crypto-spot-reglementat",
     title: "BREAKING: SUA pune capăt erei 'Offshore'. Crypto devine oficial activ federal.",
@@ -479,7 +587,7 @@ export const articles = [
     `
   },
 
-  // ✅ 10. ARTICOL: ATAC 27M
+  // ✅ 11. ARTICOL: ATAC 27M
   {
     slug: "atac-27-milioane-link-malitios",
     title: "ALERTA: Cum să pierzi 27.000.000$ într-o secundă. Pericolul invizibil din buzunarul tău",
@@ -517,7 +625,7 @@ export const articles = [
     `
   },
 
-  // ✅ 11. ARTICOL: VANGUARD & CFTC (Legacy)
+  // ✅ 12. ARTICOL: VANGUARD & CFTC (Legacy)
   {
     slug: "marea-convergenta-crypto",
     title: "Marea Convergență: Vanguard și CFTC validează Crypto ca 'Gold Standard'",
@@ -543,7 +651,7 @@ export const articles = [
     `
   },
 
-  // ✅ 12. ARTICOL: QIVALIS
+  // ✅ 13. ARTICOL: QIVALIS
   {
     slug: "qivalis-banci-europene-stablecoin",
     title: "BREAKING: 9 Bănci Gigant lansează Qivalis - Euro Stablecoin",
@@ -580,7 +688,7 @@ export const articles = [
     `
   },
 
-  // ✅ 13. ARTICOL: SEC ETF ETHEREUM
+  // ✅ 14. ARTICOL: SEC ETF ETHEREUM
   {
     slug: "sec-aproba-etf-ethereum",
     title: "SEC Aprobă ETF-ul de Ethereum Spot",
@@ -598,7 +706,7 @@ export const articles = [
     `
   },
 
-  // ✅ 14. ARTICOL: SOLANA FIREDANCER
+  // ✅ 15. ARTICOL: SOLANA FIREDANCER
   {
     slug: "solana-firedancer",
     title: "Solana lansează Firedancer",
@@ -615,7 +723,7 @@ export const articles = [
     `
   },
 
-  // ✅ 15. ARTICOL: INFLATIE CPI
+  // ✅ 16. ARTICOL: INFLATIE CPI
   {
     slug: "inflatie-sua-cpi",
     title: "Inflația SUA crește (CPI 3.4%)",
