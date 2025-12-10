@@ -1,5 +1,98 @@
 export const articles = [ 
-  // ✅ 1. ARTICOL NOU: ALERTĂ FED (DESIGN PREMIUM INTEGRAT - VERIFICAT)
+  // ✅ 1. ARTICOL NOU: LEVIERUL (EDUCAȚIE & RISK) - INTEGRAL
+  {
+    slug: "mirajul-levierului-arma-financiara-distrugere",
+    title: "Mirajul Levierului: \"Arma Financiară de Distrugere în Masă\" care îți poate Zeroiza Contul într-o Secundă. Ghid de Conștientizare.",
+    date: "19 Dec 2025",
+    category: "EDUCAȚIE & RISK",
+    image: "/leverage-danger.jpg", // ✅ Asigură-te că ai poza asta în 'public'
+    impact: "bearish", // Roșu pentru pericol
+    summary: "Levierul este promovat ca o superputere, dar realitatea este brutală: distruge 80% din conturi. Află matematica din spatele dezastrului și cum să nu devii o victimă.",
+    mihaiTake: "Tati, levierul nu e prietenul tău, e un împrumut toxic. Când brokerul îți dă 1:100, nu îți face o favoare, îți dă frânghia să te spânzuri. Dacă nu știi să calculezi riscul la centimă, stai pe Spot. Altfel, ești doar carne de tun pentru algortimi.",
+    content: `
+      <p class="text-xl font-medium text-white mb-6">În lumea strălucitoare a tradingului online, există un "cântec de sirenă" căruia puțini îi rezistă: promisiunea de a controla sume uriașe de bani cu un capital propriu infim. Acesta este <strong>Levierul (Leverage)</strong>.</p>
+      
+      <p>Brokerii îl promovează ca pe o superputere – <em>"Tranzacționează cu 1:100!"</em>, <em>"Putere de cumpărare de 500 de ori mai mare!"</em>. Pentru traderul neexperimentat, sună ca scurtătura supremă către bogăție.</p>
+      
+      <div class="bg-red-900/20 border-l-4 border-red-500 p-6 my-6 rounded-r-lg">
+        <p class="text-red-200 font-bold mb-2">Realitatea brutală:</p>
+        <p class="text-gray-300">Levierul este responsabil pentru distrugerea a peste <strong>80% din conturile de retail în primele 6 luni</strong>. Nu este o scurtătură către succes, ci, în mâinile unui novice, este o "armă financiară de distrugere în masă" îndreptată direct către propriul portofel.</p>
+      </div>
+
+      <p>Acest articol demontează mirajul și explică matematica dezastrului.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Anatomia Dezastrului: De ce Levierul este o "Sabie cu Două Tăișuri"</h3>
+      <p>Levierul este, simplu spus, bani împrumutați de la broker pentru a amplifica o poziție. Dacă folosești levier 1:100, cu 1.000$ ai tăi, controlezi 100.000$ în piață.</p>
+      <p>Sună grozav când piața merge în direcția ta. Dar iată mecanismele care transformă acest avantaj într-o capcană mortală:</p>
+
+      <div class="space-y-8 mt-8">
+        <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
+            <h4 class="text-xl font-bold text-orange-400 mb-3">1. Matematica Nemiloasă a Pierderilor Amplificate</h4>
+            <p class="mb-4">Acesta este conceptul pe care majoritatea îl ignoră. Levierul nu amplifică doar profiturile, ci și pierderile, cu exact aceeași magnitudine.</p>
+            <div class="bg-black/30 p-4 rounded-lg">
+                <strong class="text-white block mb-2">Scenariul Fatal:</strong>
+                <p class="text-sm text-gray-400 mb-2">Ai un cont de 1.000$ și folosești levier maxim 1:100 pentru a cumpăra EUR/USD (poziție de 100.000$).</p>
+                <ul class="list-disc pl-5 space-y-2 text-sm text-gray-300">
+                    <li>Dacă piața crește cu 1%, tu ai dublat contul (profit 100%). Felicitări, te simți un geniu.</li>
+                    <li><strong class="text-red-400">DAR</strong>, dacă piața scade cu doar 1% împotriva ta, pierderea ta nu este de 1% din cei 1000$, ci de 1% din valoarea totală a poziției (100.000$). Adică 1.000$.</li>
+                </ul>
+                <p class="mt-3 text-red-400 font-bold border-t border-gray-600 pt-2">Rezultat: O mișcare banală de 1% a pieței ți-a șters integral contul. Instantaneu.</p>
+            </div>
+        </div>
+
+        <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
+            <h4 class="text-xl font-bold text-orange-400 mb-3">2. "Stop Out" și Apelul în Marjă (Margin Call)</h4>
+            <p>Brokerul nu este partenerul tău de risc; el este creditorul tău. El nu va pierde niciodată banii lui în tranzacția ta.</p>
+            <p class="mt-2">Când folosești levier mare, "marja liberă" (banii tăi care susțin tranzacția) este foarte mică. O mică fluctuație negativă consumă rapid acea marjă. În momentul în care capitalul tău scade sub un anumit nivel critic (nivelul de Stop Out), brokerul intervine automat.</p>
+            <p class="mt-4 bg-red-900/10 p-3 rounded border border-red-500/30 text-sm"><strong>Capcana:</strong> Brokerul îți închide forțat cele mai perdante poziții ("te lichidează") la cel mai prost preț posibil din acel moment, pentru a-și proteja împrumutul. Tu rămâi cu un cont aproape gol, privind cum, adesea, piața își revine după ce ai fost scos din joc.</p>
+        </div>
+
+        <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
+            <h4 class="text-xl font-bold text-orange-400 mb-3">3. Toxicitatea Psihologică</h4>
+            <p>Levierul ridicat distruge disciplina. Când vezi că poți câștiga (sau pierde) 500$ în 10 secunde, creierul tău nu mai procesează tranzacționarea ca pe o investiție rațională, ci ca pe un joc de noroc la cazino.</p>
+            <p class="mt-2">Frica de a pierde și lăcomia de a câștiga rapid devin copleșitoare, ducând la decizii impulsive: mutarea Stop Loss-ului ("doar puțin mai jos") sau adăugarea la poziții perdante ("revenge trading").</p>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Ghid de Conștientizare și Supraviețuire</h3>
+      <p>Dacă vrei să ai o carieră lungă în trading, trebuie să încetezi să privești levierul ca pe un prieten și să începi să-l tratezi ca pe un explozibil instabil.</p>
+
+      <ul class="space-y-6 mt-6">
+        <li class="flex flex-col gap-2">
+            <div class="flex items-center gap-3">
+                <span class="bg-blue-500 text-white font-bold w-8 h-8 flex items-center justify-center rounded-full shrink-0">1</span>
+                <strong class="text-lg text-white">Regula #1: Levierul "Disponibil" vs. Levierul "Folosit"</strong>
+            </div>
+            <p class="pl-11 text-gray-300">Faptul că brokerul îți oferă levier 1:500 NU înseamnă că trebuie să îl folosești. Este ca și cum ai conduce o mașină care poate prinde 300 km/h; nu înseamnă că trebuie să mergi cu viteza aia prin oraș. Profesioniștii folosesc rar un levier real mai mare de 1:5 sau 1:10.</p>
+        </li>
+
+        <li class="flex flex-col gap-2">
+            <div class="flex items-center gap-3">
+                <span class="bg-blue-500 text-white font-bold w-8 h-8 flex items-center justify-center rounded-full shrink-0">2</span>
+                <strong class="text-lg text-white">Regula #2: Gândește în RISC PROCENTUAL, nu în "Loturi"</strong>
+            </div>
+            <p class="pl-11 text-gray-300">Nu intra într-o tranzacție gândind: "Voi cumpăra 1 lot standard pentru că am levier mare". Gândește așa: <em>"Sunt dispus să risc 1% din contul meu pe această tranzacție. Unde trebuie să pun Stop Loss-ul? La 50 de pipși."</em> Abia apoi calculezi mărimea poziției. Vei descoperi că poziția rezultată folosește un levier real foarte mic.</p>
+        </li>
+
+        <li class="flex flex-col gap-2">
+            <div class="flex items-center gap-3">
+                <span class="bg-blue-500 text-white font-bold w-8 h-8 flex items-center justify-center rounded-full shrink-0">3</span>
+                <strong class="text-lg text-white">Regula #3: Volatilitatea ucide conturile cu levier mare</strong>
+            </div>
+            <p class="pl-11 text-gray-300">În perioade de știri economice majore (FED, NFP), piețele fac "salturi" (gaps). Dacă ești prins într-un salt împotriva ta cu levier 1:100, prețul poate sări peste Stop Loss-ul tău, iar brokerul te va executa la un preț mult mai rău (slippage), lăsându-te uneori chiar cu datorii.</p>
+        </li>
+      </ul>
+
+      <div class="mt-12 p-8 bg-gradient-to-br from-gray-900 to-black border border-gray-700 rounded-2xl text-center">
+        <h4 class="text-2xl font-bold text-white mb-4">Concluzie</h4>
+        <p class="text-lg text-gray-300 mb-6">Levierul nu este un instrument pentru a te îmbogăți rapid când ai puțini bani. Este un instrument pentru cei care au deja mulți bani și vor să își optimizeze capitalul, înțelegând perfect riscurile.</p>
+        <p class="text-lg text-white font-medium">Dacă ești la început de drum, cel mai bun sfat pe care îl poți primi este acesta: <strong>Redu levierul.</strong> Supraviețuirea contului tău este mai importantă decât visul unui profit rapid care nu va veni niciodată dacă ești lichidat mâine.</p>
+        <p class="text-xs text-gray-500 mt-8 pt-4 border-t border-gray-800">Disclaimer: Acest articol are scop pur educațional și nu reprezintă un sfat de investiții. Tranzacționarea în marjă implică un risc extrem de ridicat și poate duce la pierderea întregului capital investit.</p>
+      </div>
+    `
+  },
+
+  // ✅ 2. ARTICOL: ALERTĂ FED (Imagine Locală: /fed-volatility-warning.jpg)
   {
     slug: "alerta-volatilitate-decizie-fed-capcana-mortala",
     title: "Alertă de Volatilitate: De ce Decizia FED de Mâine Poate Fi o \"Capcană Mortală\"",
@@ -69,7 +162,7 @@ export const articles = [
     `
   },
 
-  // ✅ 2. ARTICOL: GHID BEAR MARKET (DESIGN PREMIUM INTEGRAT)
+  // ✅ 3. ARTICOL: GHID BEAR MARKET (DESIGN PREMIUM INTEGRAT)
   {
     slug: "ce-inseamna-bear-market-ghid-complet",
     title: "Ce Înseamnă \"Bear Market\" și De Ce Nu Trebuie Să Te Sperie? Ghidul Complet.",
@@ -157,7 +250,7 @@ export const articles = [
     `
   },
 
-  // ✅ 3. ARTICOL: CAPCANA URSULUI (PSIHOLOGIE)
+  // ✅ 4. ARTICOL: CAPCANA URSULUI (PSIHOLOGIE & ISTORIE)
   {
     slug: "capcana-ursului-istorie-crize-evitate",
     title: "\"Capcana Ursului\": De ce Toți Indicatorii de Criză Pot Fi Greșiți. Lecții Istorice.",
@@ -209,7 +302,7 @@ export const articles = [
     `
   },
 
-  // ✅ 4. ARTICOL: FED & DOBÂNZI (MACRO)
+  // ✅ 5. ARTICOL: FED & DOBÂNZI (MACRO)
   {
     slug: "impact-dobanda-fed-bitcoin-scenarii",
     title: "Alertă Maximă: Decizia FED care Poate Arunca Bitcoin în Aer. Scenariile 0.25% vs 0.50%",
@@ -250,7 +343,7 @@ export const articles = [
     `
   },
 
-  // ✅ 5. ARTICOL: BITCOIN MANIPULARE (Imagine Locală: /bitcoin-crash.jpg)
+  // ✅ 6. ARTICOL: BITCOIN MANIPULARE (Imagine Locală: /bitcoin-crash.jpg)
   {
     slug: "bitcoin-manipulare-sau-corectie-brutala",
     title: "Bitcoin: Manipulare Instituțională sau Corecție Brutală? Anatomia unei Prăbușiri de 19 Miliarde $",
@@ -295,7 +388,7 @@ export const articles = [
     `
   },
 
-  // ✅ 6. ARTICOL: BITCOIN SOPR
+  // ✅ 7. ARTICOL: BITCOIN SOPR
   {
     slug: "semnal-on-chain-bitcoin-sopr-rally",
     title: "Semnal On-Chain: Vânzătorii au obosit. Bitcoin pregătește Raliul de Decembrie?",
@@ -326,7 +419,7 @@ export const articles = [
     `
   },
 
-  // ✅ 7. ARTICOL: QUANTUM COMPUTING
+  // ✅ 8. ARTICOL: QUANTUM COMPUTING
   {
     slug: "riscuri-quantum-computing-bitcoin-explicat",
     title: "Calculatoarele Cuantice vs. Bitcoin: Sfârșitul Criptomonedelor sau Doar o Nouă Provocare?",
@@ -350,7 +443,7 @@ export const articles = [
     `
   },
 
-  // ✅ 8. ARTICOL: SUA & CFTC (Imagine Locală: /cftc-announcement.jpg)
+  // ✅ 9. ARTICOL: SUA & CFTC (Imagine Locală: /cftc-announcement.jpg)
   {
     slug: "sua-cftc-crypto-spot-reglementat",
     title: "BREAKING: SUA pune capăt erei 'Offshore'. Crypto devine oficial activ federal.",
@@ -386,7 +479,7 @@ export const articles = [
     `
   },
 
-  // ✅ 9. ARTICOL: ATAC 27M
+  // ✅ 10. ARTICOL: ATAC 27M
   {
     slug: "atac-27-milioane-link-malitios",
     title: "ALERTA: Cum să pierzi 27.000.000$ într-o secundă. Pericolul invizibil din buzunarul tău",
@@ -424,7 +517,7 @@ export const articles = [
     `
   },
 
-  // ✅ 10. ARTICOL: VANGUARD & CFTC (Legacy)
+  // ✅ 11. ARTICOL: VANGUARD & CFTC (Legacy)
   {
     slug: "marea-convergenta-crypto",
     title: "Marea Convergență: Vanguard și CFTC validează Crypto ca 'Gold Standard'",
@@ -450,7 +543,7 @@ export const articles = [
     `
   },
 
-  // ✅ 11. ARTICOL: QIVALIS
+  // ✅ 12. ARTICOL: QIVALIS
   {
     slug: "qivalis-banci-europene-stablecoin",
     title: "BREAKING: 9 Bănci Gigant lansează Qivalis - Euro Stablecoin",
@@ -487,7 +580,7 @@ export const articles = [
     `
   },
 
-  // ✅ 12. ARTICOL: SEC ETF ETHEREUM
+  // ✅ 13. ARTICOL: SEC ETF ETHEREUM
   {
     slug: "sec-aproba-etf-ethereum",
     title: "SEC Aprobă ETF-ul de Ethereum Spot",
@@ -505,7 +598,7 @@ export const articles = [
     `
   },
 
-  // ✅ 13. ARTICOL: SOLANA FIREDANCER
+  // ✅ 14. ARTICOL: SOLANA FIREDANCER
   {
     slug: "solana-firedancer",
     title: "Solana lansează Firedancer",
@@ -522,7 +615,7 @@ export const articles = [
     `
   },
 
-  // ✅ 14. ARTICOL: INFLATIE CPI
+  // ✅ 15. ARTICOL: INFLATIE CPI
   {
     slug: "inflatie-sua-cpi",
     title: "Inflația SUA crește (CPI 3.4%)",
