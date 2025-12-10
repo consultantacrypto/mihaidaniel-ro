@@ -1,14 +1,31 @@
 import { articles } from '@/lib/articles';
 import Navbar from '@/components/Navbar';
 import Link from 'next/link';
-import { Calendar, ArrowRight, TrendingUp, TrendingDown, Minus, BrainCircuit } from 'lucide-react';
+import { Calendar, ArrowRight, TrendingUp, TrendingDown, Minus, BrainCircuit, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export const metadata = {
   title: 'Market Intelligence | Știri Crypto Explicate',
   description: 'Analize de piață, știri crypto traduse și explicate de Mihai Daniel.',
 };
 
-export default function NewsPage() {
+// Configurare: Câte articole vrei pe pagină?
+const ITEMS_PER_PAGE = 6;
+
+export default async function NewsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}) {
+  // 1. Aflăm pagina curentă din URL (ex: mihaidaniel.ro/stiri?page=2)
+  const params = await searchParams;
+  const currentPage = Number(params?.page) || 1;
+
+  // 2. Calculăm ce articole să afișăm
+  const totalPages = Math.ceil(articles.length / ITEMS_PER_PAGE);
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const endIndex = startIndex + ITEMS_PER_PAGE;
+  const currentArticles = articles.slice(startIndex, endIndex);
+
   return (
     <main className="min-h-screen bg-[#020617] text-white selection:bg-blue-500/30">
       <Navbar />
@@ -24,7 +41,8 @@ export default function NewsPage() {
         </div>
 
         <div className="grid gap-8 max-w-5xl mx-auto">
-            {articles.map((item, idx) => (
+            {/* Afișăm doar articolele paginii curente */}
+            {currentArticles.map((item, idx) => (
                 <Link href={`/stiri/${item.slug}`} key={idx} className="group bg-[#0a0f1e] border border-white/10 rounded-3xl overflow-hidden flex flex-col md:flex-row hover:border-blue-500/50 transition-all hover:shadow-2xl hover:shadow-blue-900/20">
                     <div className="w-full md:w-72 h-64 md:h-auto shrink-0 relative overflow-hidden">
                         <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all z-10"></div>
@@ -56,6 +74,44 @@ export default function NewsPage() {
                 </Link>
             ))}
         </div>
+
+        {/* 🔹 ZONA DE PAGINARE (NOU) */}
+        <div className="flex justify-center items-center gap-4 mt-16 max-w-5xl mx-auto pt-8 border-t border-white/5">
+            {/* Buton Previous */}
+            {currentPage > 1 ? (
+                <Link 
+                    href={`/stiri?page=${currentPage - 1}`}
+                    className="flex items-center gap-2 px-6 py-3 rounded-xl bg-[#0a0f1e] border border-white/10 hover:border-blue-500 text-white transition-all group"
+                >
+                    <ChevronLeft size={20} className="group-hover:-translate-x-1 transition-transform"/> 
+                    Pagina Anterioară
+                </Link>
+            ) : (
+                <button disabled className="flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 border border-white/5 text-gray-600 cursor-not-allowed">
+                    <ChevronLeft size={20}/> Pagina Anterioară
+                </button>
+            )}
+            
+            <span className="font-mono text-blue-400 text-sm">
+                Pagina <span className="text-white font-bold">{currentPage}</span> din {totalPages}
+            </span>
+
+            {/* Buton Next */}
+            {currentPage < totalPages ? (
+                <Link 
+                    href={`/stiri?page=${currentPage + 1}`}
+                    className="flex items-center gap-2 px-6 py-3 rounded-xl bg-[#0a0f1e] border border-white/10 hover:border-blue-500 text-white transition-all group"
+                >
+                    Pagina Următoare 
+                    <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform"/>
+                </Link>
+            ) : (
+                <button disabled className="flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 border border-white/5 text-gray-600 cursor-not-allowed">
+                    Pagina Următoare <ChevronRight size={20}/>
+                </button>
+            )}
+        </div>
+
       </div>
     </main>
   );
