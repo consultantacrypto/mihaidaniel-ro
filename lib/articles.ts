@@ -1,11 +1,11 @@
 export const articles = [
-  // ✅ 1. ARTICOL NOU (AZI): HALVING VS LICHIDITATE (ANALIZĂ DIALECTICĂ)
+  // ✅ 1. ARTICOL NOU (AZI): HALVING VS LICHIDITATE (Imagine Corectată)
   {
     slug: "mitul-halving-ului-sacru-vs-realitatea-lichiditatii",
     title: "Mitul \"Halving-ului Sacru\" vs. Realitatea Lichidității: Ce dictează cu adevărat prețul Bitcoin în 2025?",
     date: "10 Dec 2025",
     category: "ANALIZĂ MACRO",
-    image: "/halvingvslichditate.jpg", // ✅ Imagine Locală
+    image: "/halvingvslichiditate.jpg", // ✅ Imaginea ta exactă
     impact: "bullish", 
     summary: "Suntem în Decembrie 2025. Vechea narativă \"Halving = Bull Market\" este contestată de corelația cu lichiditatea globală. O analiză Teză-Antiteză-Sinteză despre viitorul Bitcoin.",
     mihaiTake: "Tati, nu te uita doar la Halving. Uită-te la imprimanta FED. Când americanii dau drumul la bani și minerii produc mai puțin, atunci începe magia. Halving-ul încarcă arma, dar Lichiditatea apasă trăgaciul.",
@@ -273,7 +273,7 @@ export const articles = [
   // ✅ 4. ARTICOL: GHID BEAR MARKET (Imagine Locală)
   {
     slug: "ce-inseamna-bear-market-ghid-complet",
-    title: "Ce Înseamnă \"Bear Market\" și De Ce Nu Trebuie Să Te Sperie? Ghidul Complet.",
+    title: "Ce Înseamnă \"Bear Market\" și De Ce Nu Trebuie Să Te Sperie? Ghidul Complet pentru Investitorul Inteligent",
     date: "08 Dec 2025",
     category: "EDUCAȚIE FINANCIARĂ",
     image: "/bear-market.jpg", 
