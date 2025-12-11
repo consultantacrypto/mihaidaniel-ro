@@ -1,5 +1,95 @@
 export const articles = [ 
-  // ✅ 1. ARTICOL NOU (AZI): REUNIUNEA FOMC DECEMBRIE 2025
+  // ✅ 1. ARTICOL NOU: ACUMULARE INSTITUȚIONALĂ ETHEREUM
+  {
+    slug: "acumulare-institutionala-ethereum-dat-bmnr-2025",
+    title: "Acumularea Instituțională de Ethereum: O Tendință Bullish în 2025",
+    date: "12 Dec 2025",
+    category: "INSTITUȚIONAL",
+    image: "/acumulare-eth.jpg", // ✅ Asigură-te că ai poza asta în 'public'
+    impact: "bullish",
+    summary: "Instituțiile nu se opresc. Descoperă cum Digital Asset Treasuries (DATs) și giganți precum BitMine (BMNR) acumulează masiv Ethereum, pregătind terenul pentru un super-ciclu, susținut de BlackRock.",
+    mihaiTake: "Tati, urmărește banii deștepți ('Smart Money'). Când vezi că firme listate la bursă își transformă cash-ul în Ethereum și BlackRock vrea ETF cu Staking, nu mai e loc de dubii. Instituțiile cumpără tot ce prind. Tu ce faci? Stai pe margine sau acumulezi?",
+    content: `
+      <p class="text-xl font-medium text-white mb-6">În lumea criptomonedelor, Ethereum (ETH) continuă să atragă atenția investitorilor instituționali, în special prin intermediul așa-numitelor <strong>Digital Asset Treasuries (DATs)</strong> – entități corporative care alocă rezerve financiare în active digitale precum ETH.</p>
+      
+      <p class="mb-6">Un post recent pe platforma X (fostul Twitter) de la utilizatorul <em>@BullTheoryio</em> a stârnit discuții ample, sugerând o acumulare masivă de ETH de către instituții, cu <strong>BitMine Immersion Technologies (BMNR)</strong> în rol principal. Acest articol explorează în detaliu validitatea acestor afirmații, bazându-ne pe date recente din 2025, inclusiv achiziții agresive, poziționări instituționale și catalizatori precum noul ETF staked ETH propus de BlackRock.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Ce Sunt Digital Asset Treasuries (DATs) și De Ce Sunt Importante pentru ETH?</h3>
+      
+      <p class="mb-4">Digital Asset Treasuries reprezintă o strategie emergentă în care companii listate la bursă, precum <strong>BitMine Immersion Technologies</strong> sau <strong>SharpLink Gaming</strong>, transformă rezervele lor tradiționale (cash sau alte active) în criptomonede, în special ETH. Aceste entități oferă investitorilor expunere indirectă la ETH prin acțiuni cotate, evitând riscurile directe ale deținerii cripto.</p>
+      
+      <div class="bg-blue-900/20 border-l-4 border-blue-500 p-4 my-6 rounded-r-lg">
+        <p class="text-blue-200 font-bold mb-2">Cifre Cheie 2025:</p>
+        <p class="text-gray-300">DAT-urile axate pe ETH controlează aproximativ <strong>4.8-5.1 milioane de ETH</strong>, reprezentând 2.8-3.2% din oferta totală circulanta. Această tendință reflectă o schimbare structurală în alocarea capitalului corporativ.</p>
+      </div>
+
+      <p class="mb-4">Deși fluxurile instituționale în DAT-uri au scăzut cu 81% de la vârful din august 2025, ajungând la un minim de 370.000 ETH în decembrie, jucători cheie precum BitMine continuă să acumuleze agresiv. Aceasta sugerează o divergență: în timp ce sectorul DAT per ansamblu se confruntă cu o răcire temporară, entități precum BMNR accelerează, țintind controlul asupra până la 5% din oferta ETH.</p>
+      
+      <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 mt-6">
+        <h4 class="text-lg font-bold text-white mb-3">De ce aleg instituțiile Ethereum?</h4>
+        <ul class="list-disc pl-5 space-y-2 text-gray-300">
+            <li><strong>Yield Real:</strong> ETH oferă randamente atractive prin staking (aprox. 3-5% anual).</li>
+            <li><strong>Dominație DeFi:</strong> Controlează peste 67% din TVL (Total Value Locked).</li>
+            <li><strong>RWA:</strong> Este poziționat ca lider pentru tokenizarea activelor reale.</li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">BitMine Immersion Technologies (BMNR): Liderul Acumulării ETH</h3>
+      
+      <p class="mb-4">BitMine Immersion Technologies, listată la NYSE sub ticker-ul <strong>BMNR</strong>, este cel mai proeminent exemplu de DAT axat pe ETH. Compania, condusă de Tom Lee (fost analist la Fundstrat), a transformat modelul său de business din mining BTC tradițional către o strategie de trezorerie digitală, cu ETH ca activ principal.</p>
+      
+      <p class="mb-6">Conform anunțurilor recente din decembrie 2025, BMNR deține peste <strong>3.86 milioane de ETH</strong>, reprezentând aproximativ 3.2% din oferta circulanta, cu o valoare totală a activelor crypto și cash depășind 13.2 miliarde USD.</p>
+
+      <div class="bg-green-900/10 border border-green-500/30 rounded-xl p-6 my-8">
+        <h4 class="text-lg font-bold text-green-400 mb-4 flex items-center gap-2"><span class="animate-pulse">●</span> Achiziții Recente Impresionante:</h4>
+        <ul class="space-y-4 text-gray-300">
+            <li class="flex items-start gap-3">
+                <span class="text-green-500 font-bold text-xl">1.</span>
+                <span>Săptămâna trecută, BMNR a adăugat <strong>138.452 ETH</strong> (aprox. 435 milioane USD), crescând ritmul de acumulare cu 156%.</span>
+            </li>
+            <li class="flex items-start gap-3">
+                <span class="text-green-500 font-bold text-xl">2.</span>
+                <span>În doar 6 ore, compania a cumpărat <strong>33.504 ETH</strong> (112 milioane USD), declanșând o creștere a acțiunilor BMNR peste 40 USD.</span>
+            </li>
+            <li class="flex items-start gap-3">
+                <span class="text-green-500 font-bold text-xl">3.</span>
+                <span>De la mijlocul anului 2025, BMNR a acumulat rapid, ajungând la 4% din ETH în doar cinci luni, cu planuri de staking MAVAN care ar putea genera peste 1 milion USD zilnic.</span>
+            </li>
+        </ul>
+      </div>
+
+      <p class="mb-4">Această strategie reflexivă – creșterea prețului ETH duce la NAV mai mare, emisiuni de acțiuni la premium, mai multe achiziții ETH – creează un ciclu virtuos. BMNR nu mai este doar un miner; oferă servicii de consultanță BTC, leasing de echipamente și gestionează o trezorerie ETH care compensează riscurile prin staking.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Poziționarea Instituțională în BMNR: Semne de Încredere</h3>
+      
+      <p class="mb-4">Investitorii instituționali văd BMNR ca un proxy pentru ETH. Deținerea instituțională depășește 23%, cu influxuri nete de peste 90 milioane de acțiuni în trimestrele recente.</p>
+      
+      <p class="mb-4">Jucători majori precum <strong>Morgan Stanley</strong> (9.7 milioane acțiuni), Susquehanna, ARK Invest, Jane Street, BlackRock, Fidelity, JPMorgan și Citadel au crescut pozițiile semnificativ. Raportul instituțiilor care cresc vs. reduc pozițiile este dezechilibrat în favoarea cumpărătorilor, reflectând încredere în modelul DAT.</p>
+      
+      <div class="bg-gray-800 p-4 rounded-lg border-l-2 border-yellow-500 mb-6">
+        <strong>Analiză Tehnică BMNR:</strong> Acțiunile au crescut cu 22% recent, depășind ETH. RSI zilnic este peste 50 (bullish), cu suport la 35-37 USD. Ținte potențiale Q1 2026: <strong>48-50 USD</strong>.
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Catalizatorul Major: ETF-ul Staked ETH al BlackRock (ETHB)</h3>
+      
+      <p class="mb-4">Un factor cheie care validează teza bullish este depunerea recentă a BlackRock pentru un ETF staked ETH, sub ticker-ul <strong>ETHB</strong>. Lansat inițial ca spot ETF în iulie 2024, BlackRock propune acum staking pentru 70-90% din holdings, oferind randamente instituționale.</p>
+      <p class="mb-6">Aceasta ar putea atrage miliarde în ETH, mai ales pe fondul tăierilor de rate ale Fed, făcând staking-ul ETH mai atractiv decât obligațiunile.</p>
+      
+      <div class="p-6 bg-gradient-to-r from-purple-900/20 to-blue-900/20 rounded-2xl border border-purple-500/30 text-center">
+        <p class="text-xl text-white font-bold mb-2">Previzunea lui Tom Lee:</p>
+        <p class="text-gray-300 italic">"100.000 USD pentru ETH este posibil într-un 'superciclu' bazat pe viitor. Cu ETH la minime de 7 ani în taxe de rețea, dar cu acumulare instituțională persistentă, rally-ul pare sustenabil."</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Concluzie: O Teorie Solidă, dar cu Riscuri</h3>
+      
+      <p class="mb-4">Datele validează postarea inițială: instituțiile acumulează ETH prin DAT-uri, cu BMNR lider, susținut de influxuri masive și catalizatori precum ETHB. Aceasta indică un transfer de la "mâini slabe" (retail) la holde corporative puternice, poziționând ETH pentru creșteri pe termen lung.</p>
+      <p class="mb-6">Totuși, piețele crypto sunt volatile, iar DAT-urile concentrate precum BMNR implică riscuri – de la fluctuații de preț la reglementări.</p>
+      
+      <p class="text-sm text-gray-500 border-t border-gray-800 pt-4">Disclaimer: Acest articol este o analiză și nu un sfat financiar. DYOR (Do Your Own Research).</p>
+    `
+  },
+
+  // ✅ 2. ARTICOL: IMPACT REUNIUNE FOMC DECEMBRIE 2025
   {
     slug: "impact-reuniune-fomc-decembrie-2025-crypto",
     title: "Impactul Reuniunii FOMC din Decembrie 2025 asupra Pieței Crypto: O Analiză Detaliată și Explicativă",
@@ -12,114 +102,72 @@ export const articles = [
     content: `
       <p class="text-xl font-medium text-white mb-6">Reuniunea FOMC din 9-10 decembrie 2025 a fost un moment pivotal pentru economia SUA și piețele globale, inclusiv cea crypto.</p>
       
-      <p class="mb-4 text-gray-300">Federal Reserve, banca centrală a SUA, a anunțat o serie de măsuri care combină prudență cu injecții de lichiditate. Pe scurt, Fed a redus rata dobânzii de referință cu <strong>25 de puncte de bază</strong> (de la 3,75%-4% la 3,5%-3,75%), așa cum se așteptau majoritatea analiștilor. Totuși, surpriza a venit din anunțurile privind lichiditatea și proiecțiile economice viitoare.</p>
+      <p class="mb-4">Federal Reserve, banca centrală a SUA, a anunțat o serie de măsuri care combină prudență cu injecții de lichiditate. Pe scurt, Fed a redus rata dobânzii de referință cu <strong>25 de puncte de bază</strong> (de la 3,75%-4% la 3,5%-3,75%), așa cum se așteptau majoritatea analiștilor. Totuși, surpriza a venit din anunțurile privind lichiditatea și proiecțiile economice viitoare.</p>
       
-      <p class="mb-6 text-gray-300">Această reuniune vine în contextul unei economii americane care se confruntă cu inflație persistentă (încă peste ținta de 2%), un piață a muncii care se răcește și incertitudini geopolitice, inclusiv efectele tarifelor vamale. Președintele Fed, Jerome Powell, a subliniat un ton "hawkish" (mai restrictiv), indicând că ratele dobânzilor au ajuns în zona "neutră" – adică nici prea stimulative, nici prea restrictive – și că nu vor urma reduceri suplimentare în curând. Totuși, elementele de susținere a lichidității au fost interpretate de piețe ca un semnal pozitiv pentru activele de risc, cum ar fi criptomonedele.</p>
-
-      <div class="my-8 border-l-4 border-blue-500 pl-6 py-2 bg-blue-900/10 rounded-r-xl">
-        <p class="text-lg font-bold text-blue-400 mb-2">Să descompunem anunțurile cheie</p>
-        <p class="text-sm text-gray-400">Explicăm fiecare punct în parte înainte de a ne concentra pe impactul masiv asupra crypto.</p>
-      </div>
+      <p class="mb-6">Această reuniune vine în contextul unei economii americane care se confruntă cu inflație persistentă (încă peste ținta de 2%), un piață a muncii care se răcește și incertitudini geopolitice, inclusiv efectele tarifelor vamale. Președintele Fed, Jerome Powell, a subliniat un ton "hawkish" (mai restrictiv), indicând că ratele dobânzilor au ajuns în zona "neutră" – adică nici prea stimulative, nici prea restrictive – și că nu vor urma reduceri suplimentare în curând. Totuși, elementele de susținere a lichidității au fost interpretate de piețe ca un semnal pozitiv pentru activele de risc, cum ar fi criptomonedele.</p>
 
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Explicații Detaliate ale Anunțurilor Fed</h3>
       
       <div class="space-y-8">
         
-        <div class="bg-gray-800/40 p-6 rounded-2xl border border-gray-700 hover:border-blue-500/50 transition-colors">
-            <h4 class="text-xl font-bold text-blue-400 mb-4 flex items-center gap-2">
-                <span class="bg-blue-500/20 w-8 h-8 flex items-center justify-center rounded-full text-sm">1</span>
-                Reducerea Ratei Dobânzii cu 25 bps
-            </h4>
-            <div class="space-y-3 text-gray-300">
-                <p><strong>Ce înseamnă?</strong> Rata dobânzii federale (federal funds rate) influențează costul împrumuturilor în economie. O reducere de 0,25% face banii mai ieftini, stimulând cheltuielile și investițiile. Aceasta este a treia reducere consecutivă în 2025, totalizând 75 bps în ultimele trei luni.</p>
-                <p class="bg-black/30 p-3 rounded border-l-2 border-gray-500 text-sm"><strong>Context:</strong> Decizia nu a fost unanimă – au existat trei disensiuni în comitet, cel mai mare număr din 2019, reflectând dezbateri interne despre riscurile inflației versus slăbiciunea pieței muncii.</p>
-                <p><strong>Proiecții viitoare:</strong> Powell a exclus creșteri ale ratelor (rate hikes) și a indicat că viitoarele mișcări vor fi "data-dependent" (bazate pe date economice). Proiecțiile arată o rată mediană de 3,6% la sfârșitul lui 2025 și 3,4% în 2026, sugerând posibile pauze sau reduceri minime.</p>
+        <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
+            <h4 class="text-xl font-bold text-blue-400 mb-3">1. Reducerea Ratei Dobânzii cu 25 bps: O Mișcare Așteptată, dar cu Disensiuni</h4>
+            <p class="mb-3"><strong>Ce înseamnă?</strong> Rata dobânzii federale (federal funds rate) influențează costul împrumuturilor în economie. O reducere de 0,25% face banii mai ieftini, stimulând cheltuielile și investițiile. Aceasta este a treia reducere consecutivă în 2025, totalizând 75 bps în ultimele trei luni.</p>
+            <p class="mb-3 text-sm text-gray-300 bg-black/20 p-3 rounded"><strong>Context:</strong> Decizia nu a fost unanimă – au existat trei disensiuni în comitet, cel mai mare număr din 2019, reflectând dezbateri interne despre riscurile inflației versus slăbiciunea pieței muncii.</p>
+            <p><strong>Proiecții viitoare:</strong> Powell a exclus creșteri ale ratelor (rate hikes) și a indicat că viitoarele mișcări vor fi "data-dependent" (bazate pe date economice). Proiecțiile arată o rată mediană de 3,6% la sfârșitul lui 2025 și 3,4% în 2026, sugerând posibile pauze sau reduceri minime.</p>
+        </div>
+
+        <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
+            <h4 class="text-xl font-bold text-green-400 mb-3">2. Începerea Achizițiilor de T-bill: Injecție de Lichiditate de 40 Miliarde USD/Lună</h4>
+            <p class="mb-3"><strong>Ce înseamnă?</strong> De la 12 decembrie 2025, Fed va cumpăra obligațiuni guvernamentale pe termen scurt (Treasury bills, sau T-bill) în valoare de aproximativ 40 de miliarde de dolari pe lună. Aceste achiziții vor rămâne "elevate" (ridicate) pentru câteva luni, înainte de a scădea.</p>
+            <p class="mb-3"><strong>Explicație:</strong> Scopul este menținerea unui nivel "amplu" de rezerve în sistemul bancar, pentru a evita tensiuni în piețele financiare pe termen scurt. Nu este considerat Quantitative Easing (QE) clasic, deoarece se concentrează pe obligațiuni pe termen scurt și nu pe stimularea generală a economiei. Totuși, efectul net este o creștere a lichidității – bani noi intrați în sistem.</p>
+            <div class="bg-green-900/10 border-l-4 border-green-500 p-3 mt-3 text-sm">
+                <strong>Legătura cu QT:</strong> Quantitative Tightening (QT) – procesul de reducere a bilanțului Fed prin vânzarea de active – s-a încheiat oficial la 1 decembrie 2025. Aceasta marchează trecerea de la "strângerea curelei" la o fază de stabilizare.
             </div>
         </div>
 
-        <div class="bg-gray-800/40 p-6 rounded-2xl border border-gray-700 hover:border-green-500/50 transition-colors">
-            <h4 class="text-xl font-bold text-green-400 mb-4 flex items-center gap-2">
-                <span class="bg-green-500/20 w-8 h-8 flex items-center justify-center rounded-full text-sm">2</span>
-                Achiziții T-bill: 40 Miliarde USD/Lună
-            </h4>
-            <div class="space-y-3 text-gray-300">
-                <p><strong>Ce înseamnă?</strong> De la 12 decembrie 2025, Fed va cumpăra obligațiuni guvernamentale pe termen scurt (Treasury bills, sau T-bill) în valoare de aproximativ 40 de miliarde de dolari pe lună. Aceste achiziții vor rămâne "elevate" (ridicate) pentru câteva luni, înainte de a scădea.</p>
-                <p><strong>Explicație:</strong> Scopul este menținerea unui nivel "amplu" de rezerve în sistemul bancar, pentru a evita tensiuni în piețele financiare pe termen scurt. Nu este considerat Quantitative Easing (QE) clasic, deoarece se concentrează pe obligațiuni pe termen scurt și nu pe stimularea generală a economiei. Totuși, efectul net este o creștere a lichidității – bani noi intrați în sistem.</p>
-                <div class="bg-green-900/20 p-3 rounded border border-green-500/30 text-green-200 text-sm font-medium">
-                    ⚡ <strong>Legătura cu QT:</strong> Quantitative Tightening (QT) – procesul de reducere a bilanțului Fed prin vânzarea de active – s-a încheiat oficial la 1 decembrie 2025. Aceasta marchează trecerea de la "strângerea curelei" la o fază de stabilizare, după ce bilanțul Fed a scăzut cu peste 2,4 trilioane de dolari în ultimii ani.
-                </div>
-            </div>
-        </div>
-
-        <div class="bg-gray-800/40 p-6 rounded-2xl border border-gray-700 hover:border-orange-500/50 transition-colors">
-            <h4 class="text-xl font-bold text-orange-400 mb-4 flex items-center gap-2">
-                <span class="bg-orange-500/20 w-8 h-8 flex items-center justify-center rounded-full text-sm">3</span>
-                Proiecții Economice 2026
-            </h4>
+        <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
+            <h4 class="text-xl font-bold text-orange-400 mb-3">3. Proiecții Economice: Creștere Mai Mare în 2026</h4>
             <ul class="list-disc pl-5 space-y-2 text-gray-300">
                 <li><strong>Creștere economică:</strong> PIB-ul SUA este proiectat să crească de la 1,7% în 2025 la 2,3% în 2026 – un semnal optimist că economia va accelera, posibil datorită politicilor fiscale și reducerii inflației.</li>
                 <li><strong>Inflație:</strong> Rămâne ridicată la 2,9% în 2025 (față de ținta de 2%), dar scade la 2,4% în 2026. Powell a menționat riscuri ascendente din cauza tarifelor vamale, dar le consideră temporare.</li>
                 <li><strong>Piața muncii:</strong> Șomajul este așteptat la 4,5% în 2025, cu o răcire graduală. Powell a descris-o ca "foarte slabă", cu creșteri mai mici de locuri de muncă și o cerere redusă.</li>
                 <li><strong>Alte semnale:</strong> Indicele ISM (un indicator al activității manufacturiere) ar putea depăși 50 în 2026, semnalând expansiune – un factor istoric pozitiv pentru piețele de risc.</li>
             </ul>
-            <p class="mt-4 text-sm text-orange-200"><strong>Tonul General:</strong> Hawkish, dar cu elemente de susținere. Reuniunea a fost percepută ca hawkish din cauza pauzei pe reduceri de rate și absenței unui QE masiv. Totuși, injecția de lichiditate compensează acest aspect, oferind un echilibru.</p>
         </div>
       </div>
 
-      <h3 class="text-2xl font-bold text-white mt-16 mb-8 border-b border-gray-700 pb-2">Impactul Potențial Imediat asupra Pieței Crypto</h3>
-      <p class="mb-8 text-lg text-gray-300">Acum, să ne concentrăm pe aspectul cheie: cum afectează aceste anunțuri piața crypto imediat (în zilele/săptămânile următoare)? Crypto este un activ de risc, sensibil la lichiditate, rate de dobândă și sentimentul macroeconomic. Istoricul arată că injecțiile de lichiditate de la Fed (cum ar fi QE din 2020-2021) au dus la raliuri majore în Bitcoin și altcoins.</p>
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Focus pe Impactul Potențial Imediat asupra Pieței Crypto</h3>
+      <p class="mb-6">Acum, să ne concentrăm pe aspectul cheie: cum afectează aceste anunțuri piața crypto imediat (în zilele/săptămânile următoare)? Crypto este un activ de risc, sensibil la lichiditate, rate de dobândă și sentimentul macroeconomic. Istoricul arată că injecțiile de lichiditate de la Fed (cum ar fi QE din 2020-2021) au dus la raliuri majore în Bitcoin și altcoins. Iată o analiză detaliată a impactului potențial:</p>
 
-      <div class="grid gap-8">
+      <div class="grid gap-6">
         
-        <div class="bg-gradient-to-r from-green-900/30 to-emerald-900/10 p-6 rounded-2xl border-l-4 border-green-500">
-            <h4 class="text-xl font-bold text-green-400 mb-3">🚀 Injecția de Lichiditate: Un Boost Pozitiv</h4>
+        <div class="bg-gradient-to-br from-green-900/30 to-emerald-900/30 p-6 rounded-2xl border border-green-500/30">
+            <h4 class="text-xl font-bold text-white mb-3">🚀 Injecția de Lichiditate: Un Boost Pozitiv</h4>
             <p class="text-gray-300 mb-4"><strong>Impact imediat:</strong> Achizițiile de T-bill de 40 de miliarde USD/lună începând cu 12 decembrie injectează bani noi în sistem, reducând presiunile de finanțare pe termen scurt. Chiar dacă nu este QE, efectul este similar: mai multă lichiditate înseamnă mai mulți bani disponibili pentru investiții în active riscante. În trecut, sfârșitul QT și începutul achizițiilor au dus la creșteri ale prețurilor crypto – de exemplu, în 2019, anunțuri similare au contribuit la un raliu Bitcoin de peste 200%.</p>
-            <div class="bg-black/40 p-3 rounded">
-                <strong class="text-green-300">Potențial pentru crypto:</strong> 
-                <span class="text-gray-300">Bitcoin (BTC) și Ethereum (ETH) ar putea vedea o creștere imediată de 5-10% în următoarele zile, pe măsură ce traderii interpretează asta ca un "pivot" spre politici mai blânde. Lichiditatea suplimentară ar putea alimenta fluxuri instituționale, mai ales cu ETF-urile Bitcoin și Ethereum deja aprobate.</span>
-            </div>
+            <p class="font-bold text-green-400">Potențial pentru crypto: Bitcoin (BTC) și Ethereum (ETH) ar putea vedea o creștere imediată de 5-10% în următoarele zile, pe măsură ce traderii interpretează asta ca un "pivot" spre politici mai blânde. Lichiditatea suplimentară ar putea alimenta fluxuri instituționale.</p>
         </div>
 
-        <div class="bg-gradient-to-r from-purple-900/30 to-indigo-900/10 p-6 rounded-2xl border-l-4 border-purple-500">
-            <h4 class="text-xl font-bold text-purple-400 mb-3">🌌 Sfârșitul QT: Semnale pentru "Altseason"</h4>
+        <div class="bg-gradient-to-br from-purple-900/30 to-indigo-900/30 p-6 rounded-2xl border border-purple-500/30">
+            <h4 class="text-xl font-bold text-white mb-3">🌌 Sfârșitul QT: Semnale pentru "Altseason"</h4>
             <p class="text-gray-300 mb-4"><strong>Impact imediat:</strong> Trecerea de la QT la stabilizare (și achiziții) oprește scurgerea de lichiditate, ceea ce istoric a fost un catalizator pentru "altseason" – perioade în care altcoins (cum ar fi Solana, Cardano sau meme coins) outperform Bitcoin. Proiecția de creștere PIB în 2026 și posibila depășire a ISM peste 50 sugerează o economie în expansiune, care favorizează riscul.</p>
-            <div class="bg-black/40 p-3 rounded">
-                <strong class="text-purple-300">Potențial pentru crypto:</strong> 
-                <span class="text-gray-300">Imediat, ar putea declanșa un influx în altcoins, cu volume de tranzacționare crescute pe platforme precum Binance sau Coinbase. De exemplu, dacă ISM arată semne de îmbunătățire în datele viitoare (ianuarie 2026), ar putea amplifica un raliu generalizat, similar cu 2021 când lichiditatea Fed a dus la capitalizări de piață record.</span>
-            </div>
-            <p class="mt-3 text-sm text-purple-200 italic">Exemplu concret: Dacă Bitcoin testează rezistența la 150.000 USD (nivel ipotetic bazat pe trenduri actuale), altcoins ar putea câștiga 20-50% în săptămâni, atrași de lichiditate.</p>
+            <p class="font-bold text-purple-400">Exemplu concret: Dacă Bitcoin testează rezistența la 150.000 USD (nivel ipotetic bazat pe trenduri actuale), altcoins ar putea câștiga 20-50% în săptămâni, atrași de lichiditate.</p>
         </div>
 
-        <div class="bg-gradient-to-r from-red-900/30 to-orange-900/10 p-6 rounded-2xl border-l-4 border-red-500">
-            <h4 class="text-xl font-bold text-red-400 mb-3">⚠️ Tonul Hawkish și Inflația: Presiuni Negative</h4>
-            <p class="text-gray-300 mb-4"><strong>Impact imediat:</strong> Pauza pe reduceri de rate și menționarea zonei "neutre" ar putea crea volatilitate. Crypto este sensibil la rate mai înalte, care fac activele tradiționale (cum ar fi obligațiunile) mai atractive. Inflația ridicată (2,9% în 2025) ar putea duce la vânzări panicate dacă traderii anticipează o Fed mai restrictivă.</p>
-            <div class="bg-black/40 p-3 rounded">
-                <strong class="text-red-300">Potențial pentru crypto:</strong> 
-                <span class="text-gray-300">Imediat, ar putea apărea o corecție de 5-15% în BTC/ETH dacă sentimentul devine negativ, mai ales dacă piețele bursiere (S&P 500) scad. Totuși, slăbiciunea pieței muncii ar putea tempera asta, sugerând posibile reduceri viitoare.</span>
-            </div>
+        <div class="bg-gradient-to-br from-red-900/30 to-orange-900/30 p-6 rounded-2xl border border-red-500/30">
+            <h4 class="text-xl font-bold text-white mb-3">⚠️ Tonul Hawkish și Inflația: Presiuni Negative</h4>
+            <p class="text-gray-300 mb-4"><strong>Impact imediat:</strong> Pauza pe reduceri de rate și menționarea zonei "neutre" ar putea crea volatilitate. Inflația ridicată (2,9% în 2025) ar putea duce la vânzări panicate dacă traderii anticipează o Fed mai restrictivă.</p>
+            <p class="font-bold text-red-400">Potențial: Imediat, ar putea apărea o corecție de 5-15% în BTC/ETH dacă sentimentul devine negativ, mai ales dacă piețele bursiere scad.</p>
         </div>
       </div>
 
-      <div class="mt-12 mb-8 bg-gray-800 p-6 rounded-xl">
-        <h4 class="text-lg font-bold text-white mb-2">Factori Adiționali și Riscuri Imediate</h4>
-        <ul class="list-disc pl-5 space-y-2 text-gray-300">
-            <li><strong>Sentimentul pieței:</strong> Imediat după anunț, piețele au reacționat mixt – acțiunile au crescut (Dow +500 puncte), dar obligațiunile au răsunat hawkish. Crypto, fiind 24/7, ar putea vedea volatilitate ridicată în weekendul următor.</li>
-            <li><strong>Riscuri globale:</strong> Incertitudini precum tarifele vamale sau geopolitica ar putea amplifica efectele negative, ducând la o fugă spre active sigure (USD, aur) și vânzări în crypto.</li>
-            <li><strong>Oportunități:</strong> Pentru investitori, asta ar putea fi un moment de cumpărare la dip, mai ales dacă lichiditatea susține un trend ascendent spre 2026.</li>
-        </ul>
-      </div>
-
-      <div class="bg-gradient-to-br from-gray-900 to-black border border-gray-700 p-8 rounded-2xl text-center shadow-2xl">
-        <h3 class="text-2xl font-bold text-white mb-4">Concluzie: Oportunități cu Volatilitate Ridicată</h3>
-        <p class="text-lg text-gray-300 leading-relaxed mb-6">
-            Reuniunea FOMC din decembrie 2025 marchează o tranziție spre o Fed mai echilibrată, cu lichiditate suplimentară care compensează tonul hawkish. Pentru piața crypto, impactul imediat este potențial pozitiv, prin injecții de capital care ar putea declanșa raliuri în BTC și altcoins, favorizând un "altseason" incipient. Totuși, riscurile de volatilitate din cauza inflației și pauzei pe rate nu trebuie ignorate – recomand monitorizarea datelor economice viitoare, precum raportul de locuri de muncă din ianuarie 2026.
-        </p>
-        <p class="text-xs text-gray-500 pt-4 border-t border-gray-800 w-full">Disclaimer: Acest articol reprezintă o analiză a pieței și nu constituie un sfat financiar. Investițiile în criptomonede sunt volatile și implică riscuri.</p>
-      </div>
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Concluzie: Oportunități cu Volatilitate Ridicată</h3>
+      <p class="text-gray-300">Reuniunea FOMC din decembrie 2025 marchează o tranziție spre o Fed mai echilibrată, cu lichiditate suplimentară care compensează tonul hawkish. Pentru piața crypto, impactul imediat este potențial pozitiv, prin injecții de capital care ar putea declanșa raliuri în BTC și altcoins. Totuși, riscurile de volatilitate nu trebuie ignorate – recomand monitorizarea datelor economice viitoare, precum raportul de locuri de muncă din ianuarie 2026.</p>
+      <p class="text-xs text-gray-500 mt-8 pt-4 border-t border-gray-800">Disclaimer: Acest articol reprezintă o analiză a pieței și nu constituie un sfat financiar.</p>
     `
   },
 
-  // ✅ 2. ARTICOL: HALVING VS LICHIDITATE (Imagine Locală)
+  // ✅ 3. ARTICOL: HALVING VS LICHIDITATE (Imagine Locală)
   {
     slug: "mitul-halving-ului-sacru-vs-realitatea-lichiditatii",
     title: "Mitul \"Halving-ului Sacru\" vs. Realitatea Lichidității: Ce dictează cu adevărat prețul Bitcoin în 2025?",
@@ -227,7 +275,7 @@ export const articles = [
     `
   },
 
-  // ✅ 3. ARTICOL: LEVIERUL (EDUCAȚIE & RISK)
+  // ✅ 4. ARTICOL: LEVIERUL (EDUCAȚIE & RISK) - INTEGRAL
   {
     slug: "mirajul-levierului-arma-financiara-distrugere",
     title: "Mirajul Levierului: \"Arma Financiară de Distrugere în Masă\" care îți poate Zeroiza Contul într-o Secundă. Ghid de Conștientizare.",
@@ -320,7 +368,7 @@ export const articles = [
     `
   },
 
-  // ✅ 4. ARTICOL: ALERTĂ FED (Imagine Locală)
+  // ✅ 5. ARTICOL: ALERTĂ FED (Imagine Locală)
   {
     slug: "alerta-volatilitate-decizie-fed-capcana-mortala",
     title: "Alertă de Volatilitate: De ce Decizia FED de Mâine Poate Fi o \"Capcană Mortală\"",
@@ -390,7 +438,7 @@ export const articles = [
     `
   },
 
-  // ✅ 5. ARTICOL: GHID BEAR MARKET (Imagine Locală)
+  // ✅ 6. ARTICOL: GHID BEAR MARKET (Imagine Locală)
   {
     slug: "ce-inseamna-bear-market-ghid-complet",
     title: "Ce Înseamnă \"Bear Market\" și De Ce Nu Trebuie Să Te Sperie? Ghidul Complet.",
@@ -478,7 +526,7 @@ export const articles = [
     `
   },
 
-  // ✅ 6. ARTICOL: CAPCANA URSULUI (PSIHOLOGIE & ISTORIE)
+  // ✅ 7. ARTICOL: CAPCANA URSULUI (PSIHOLOGIE & ISTORIE)
   {
     slug: "capcana-ursului-istorie-crize-evitate",
     title: "\"Capcana Ursului\": De ce Toți Indicatorii de Criză Pot Fi Greșiți. Lecții Istorice.",
@@ -530,7 +578,7 @@ export const articles = [
     `
   },
 
-  // ✅ 7. ARTICOL: FED & DOBÂNZI (MACRO)
+  // ✅ 8. ARTICOL: FED & DOBÂNZI (MACRO)
   {
     slug: "impact-dobanda-fed-bitcoin-scenarii",
     title: "Alertă Maximă: Decizia FED care Poate Arunca Bitcoin în Aer. Scenariile 0.25% vs 0.50%",
@@ -571,7 +619,7 @@ export const articles = [
     `
   },
 
-  // ✅ 8. ARTICOL: BITCOIN MANIPULARE (Imagine Locală: /bitcoin-crash.jpg)
+  // ✅ 9. ARTICOL: BITCOIN MANIPULARE (Imagine Locală: /bitcoin-crash.jpg)
   {
     slug: "bitcoin-manipulare-sau-corectie-brutala",
     title: "Bitcoin: Manipulare Instituțională sau Corecție Brutală? Anatomia unei Prăbușiri de 19 Miliarde $",
@@ -616,7 +664,7 @@ export const articles = [
     `
   },
 
-  // ✅ 9. ARTICOL: BITCOIN SOPR
+  // ✅ 10. ARTICOL: BITCOIN SOPR
   {
     slug: "semnal-on-chain-bitcoin-sopr-rally",
     title: "Semnal On-Chain: Vânzătorii au obosit. Bitcoin pregătește Raliul de Decembrie?",
@@ -647,7 +695,7 @@ export const articles = [
     `
   },
 
-  // ✅ 10. ARTICOL: QUANTUM COMPUTING
+  // ✅ 11. ARTICOL: QUANTUM COMPUTING
   {
     slug: "riscuri-quantum-computing-bitcoin-explicat",
     title: "Calculatoarele Cuantice vs. Bitcoin: Sfârșitul Criptomonedelor sau Doar o Nouă Provocare?",
@@ -671,7 +719,7 @@ export const articles = [
     `
   },
 
-  // ✅ 11. ARTICOL: SUA & CFTC (Imagine Locală: /cftc-announcement.jpg)
+  // ✅ 12. ARTICOL: SUA & CFTC (Imagine Locală: /cftc-announcement.jpg)
   {
     slug: "sua-cftc-crypto-spot-reglementat",
     title: "BREAKING: SUA pune capăt erei 'Offshore'. Crypto devine oficial activ federal.",
@@ -707,7 +755,7 @@ export const articles = [
     `
   },
 
-  // ✅ 12. ARTICOL: ATAC 27M
+  // ✅ 13. ARTICOL: ATAC 27M
   {
     slug: "atac-27-milioane-link-malitios",
     title: "ALERTA: Cum să pierzi 27.000.000$ într-o secundă. Pericolul invizibil din buzunarul tău",
@@ -745,7 +793,7 @@ export const articles = [
     `
   },
 
-  // ✅ 13. ARTICOL: VANGUARD & CFTC (Legacy)
+  // ✅ 14. ARTICOL: VANGUARD & CFTC (Legacy)
   {
     slug: "marea-convergenta-crypto",
     title: "Marea Convergență: Vanguard și CFTC validează Crypto ca 'Gold Standard'",
@@ -771,7 +819,7 @@ export const articles = [
     `
   },
 
-  // ✅ 14. ARTICOL: QIVALIS
+  // ✅ 15. ARTICOL: QIVALIS
   {
     slug: "qivalis-banci-europene-stablecoin",
     title: "BREAKING: 9 Bănci Gigant lansează Qivalis - Euro Stablecoin",
@@ -808,7 +856,7 @@ export const articles = [
     `
   },
 
-  // ✅ 15. ARTICOL: SEC ETF ETHEREUM
+  // ✅ 16. ARTICOL: SEC ETF ETHEREUM
   {
     slug: "sec-aproba-etf-ethereum",
     title: "SEC Aprobă ETF-ul de Ethereum Spot",
@@ -826,7 +874,7 @@ export const articles = [
     `
   },
 
-  // ✅ 16. ARTICOL: SOLANA FIREDANCER
+  // ✅ 17. ARTICOL: SOLANA FIREDANCER
   {
     slug: "solana-firedancer",
     title: "Solana lansează Firedancer",
@@ -843,7 +891,7 @@ export const articles = [
     `
   },
 
-  // ✅ 17. ARTICOL: INFLATIE CPI
+  // ✅ 18. ARTICOL: INFLATIE CPI
   {
     slug: "inflatie-sua-cpi",
     title: "Inflația SUA crește (CPI 3.4%)",
