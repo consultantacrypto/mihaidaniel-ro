@@ -5,80 +5,117 @@ export const articles = [
     title: "Impactul Reuniunii FOMC din Decembrie 2025 asupra Pieței Crypto: O Analiză Detaliată și Explicativă",
     date: "11 Dec 2025",
     category: "ANALIZĂ MACRO",
-    image: "/t-bill.jpg", // ✅ Imagine Locală
+    image: "/t-bill.jpg",
     impact: "bullish", 
-    summary: "Fed a redus rata dobânzii cu 25 bps și a anunțat injecții de lichiditate de 40 miliarde $/lună. Află cum acest pivot poate declanșa un nou Altseason.",
-    mihaiTake: "Tati, nu te uita la ce zice Powell, uită-te la ce face. A oprit QT și a început să cumpere T-bills. Asta înseamnă 40 de miliarde de dolari bani noi în piață în fiecare lună. Pentru crypto, lichiditatea e oxigen. Pregătiți-vă pentru volatilitate pe termen scurt, dar direcția pe termen lung devine clară.",
+    summary: "Fed a redus rata dobânzii cu 25 bps și a anunțat injecții de lichiditate de 40 miliarde $/lună. O analiză completă a deciziilor, a proiecțiilor pentru 2026 și a impactului imediat asupra Bitcoin și Altcoins.",
+    mihaiTake: "Tati, dincolo de cifre, mesajul e clar: 'Robinetul s-a deschis'. Chiar dacă Powell pare dur, faptul că bagă 40 de miliarde lunar în piață e tot ce contează pentru noi. Asta e benzina pentru Altseason-ul pe care îl așteptăm în 2026.",
     content: `
       <p class="text-xl font-medium text-white mb-6">Reuniunea FOMC din 9-10 decembrie 2025 a fost un moment pivotal pentru economia SUA și piețele globale, inclusiv cea crypto.</p>
       
-      <div class="grid md:grid-cols-2 gap-6 mb-8">
-        <div class="bg-blue-900/20 border border-blue-500/30 p-4 rounded-xl">
-            <h4 class="text-blue-400 font-bold mb-2">📢 Decizia Oficială</h4>
-            <ul class="list-disc pl-5 text-sm text-gray-300 space-y-1">
-                <li>Rata dobânzii redusă cu <strong>25 bps</strong> (la 3.5% - 3.75%).</li>
-                <li>Start achiziții T-bills: <strong>40 Mld $/lună</strong>.</li>
-                <li>Sfârșitul QT (Quantitative Tightening) la 1 Dec.</li>
-            </ul>
-        </div>
-        <div class="bg-green-900/20 border border-green-500/30 p-4 rounded-xl">
-            <h4 class="text-green-400 font-bold mb-2">🚀 Impact Crypto</h4>
-            <p class="text-sm text-gray-300">Injecția de lichiditate este combustibil pur pentru activele de risc. Piața primește semnalul de "Risk-On".</p>
-        </div>
-      </div>
+      <p class="mb-4 text-gray-300">Federal Reserve, banca centrală a SUA, a anunțat o serie de măsuri care combină prudență cu injecții de lichiditate. Pe scurt, Fed a redus rata dobânzii de referință cu <strong>25 de puncte de bază</strong> (de la 3,75%-4% la 3,5%-3,75%), așa cum se așteptau majoritatea analiștilor. Totuși, surpriza a venit din anunțurile privind lichiditatea și proiecțiile economice viitoare.</p>
+      
+      <p class="mb-6 text-gray-300">Această reuniune vine în contextul unei economii americane care se confruntă cu inflație persistentă (încă peste ținta de 2%), un piață a muncii care se răcește și incertitudini geopolitice, inclusiv efectele tarifelor vamale. Președintele Fed, Jerome Powell, a subliniat un ton "hawkish" (mai restrictiv), indicând că ratele dobânzilor au ajuns în zona "neutră" – adică nici prea stimulative, nici prea restrictive – și că nu vor urma reduceri suplimentare în curând. Totuși, elementele de susținere a lichidității au fost interpretate de piețe ca un semnal pozitiv pentru activele de risc, cum ar fi criptomonedele.</p>
 
-      <p class="mb-6">Această reuniune vine în contextul unei economii americane care se confruntă cu inflație persistentă, un piață a muncii care se răcește și incertitudini geopolitice. Să descompunem anunțurile cheie și impactul lor.</p>
+      <div class="my-8 border-l-4 border-blue-500 pl-6 py-2 bg-blue-900/10 rounded-r-xl">
+        <p class="text-lg font-bold text-blue-400 mb-2">Să descompunem anunțurile cheie</p>
+        <p class="text-sm text-gray-400">Explicăm fiecare punct în parte înainte de a ne concentra pe impactul masiv asupra crypto.</p>
+      </div>
 
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Explicații Detaliate ale Anunțurilor Fed</h3>
       
-      <div class="space-y-6">
-        <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
-            <h4 class="text-xl font-bold text-white mb-3">1. Reducerea Ratei Dobânzii cu 25 bps</h4>
-            <p class="mb-2 text-gray-300">Aceasta este a treia reducere consecutivă în 2025. Banii devin mai ieftini, stimulând investițiile.</p>
-            <p class="text-sm text-gray-400 border-l-2 border-gray-600 pl-3"><strong>Notă:</strong> Decizia nu a fost unanimă – au existat trei disensiuni în comitet, semn că bancherii nu se pun de acord asupra inflației.</p>
-        </div>
-
-        <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
-            <h4 class="text-xl font-bold text-white mb-3">2. Începerea Achizițiilor de T-bill (40 Mld $/lună)</h4>
-            <p class="mb-2 text-gray-300">De la 12 decembrie, Fed cumpără obligațiuni pe termen scurt. Deși nu îi spun "Quantitative Easing" (QE), efectul este același: <strong>creșterea lichidității</strong>.</p>
-            <div class="bg-green-900/10 p-3 rounded border-l-4 border-green-500 mt-3 text-sm">
-                <strong>Esențial:</strong> Istoric, când Fed oprește QT și începe să bage bani în piață, Bitcoin reacționează pozitiv. Este "combustibilul" necesar pentru un bull run susținut.
+      <div class="space-y-8">
+        
+        <div class="bg-gray-800/40 p-6 rounded-2xl border border-gray-700 hover:border-blue-500/50 transition-colors">
+            <h4 class="text-xl font-bold text-blue-400 mb-4 flex items-center gap-2">
+                <span class="bg-blue-500/20 w-8 h-8 flex items-center justify-center rounded-full text-sm">1</span>
+                Reducerea Ratei Dobânzii cu 25 bps
+            </h4>
+            <div class="space-y-3 text-gray-300">
+                <p><strong>Ce înseamnă?</strong> Rata dobânzii federale (federal funds rate) influențează costul împrumuturilor în economie. O reducere de 0,25% face banii mai ieftini, stimulând cheltuielile și investițiile. Aceasta este a treia reducere consecutivă în 2025, totalizând 75 bps în ultimele trei luni.</p>
+                <p class="bg-black/30 p-3 rounded border-l-2 border-gray-500 text-sm"><strong>Context:</strong> Decizia nu a fost unanimă – au existat trei disensiuni în comitet, cel mai mare număr din 2019, reflectând dezbateri interne despre riscurile inflației versus slăbiciunea pieței muncii.</p>
+                <p><strong>Proiecții viitoare:</strong> Powell a exclus creșteri ale ratelor (rate hikes) și a indicat că viitoarele mișcări vor fi "data-dependent" (bazate pe date economice). Proiecțiile arată o rată mediană de 3,6% la sfârșitul lui 2025 și 3,4% în 2026, sugerând posibile pauze sau reduceri minime.</p>
             </div>
         </div>
 
-        <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
-            <h4 class="text-xl font-bold text-white mb-3">3. Proiecții Economice 2026</h4>
+        <div class="bg-gray-800/40 p-6 rounded-2xl border border-gray-700 hover:border-green-500/50 transition-colors">
+            <h4 class="text-xl font-bold text-green-400 mb-4 flex items-center gap-2">
+                <span class="bg-green-500/20 w-8 h-8 flex items-center justify-center rounded-full text-sm">2</span>
+                Achiziții T-bill: 40 Miliarde USD/Lună
+            </h4>
+            <div class="space-y-3 text-gray-300">
+                <p><strong>Ce înseamnă?</strong> De la 12 decembrie 2025, Fed va cumpăra obligațiuni guvernamentale pe termen scurt (Treasury bills, sau T-bill) în valoare de aproximativ 40 de miliarde de dolari pe lună. Aceste achiziții vor rămâne "elevate" (ridicate) pentru câteva luni, înainte de a scădea.</p>
+                <p><strong>Explicație:</strong> Scopul este menținerea unui nivel "amplu" de rezerve în sistemul bancar, pentru a evita tensiuni în piețele financiare pe termen scurt. Nu este considerat Quantitative Easing (QE) clasic, deoarece se concentrează pe obligațiuni pe termen scurt și nu pe stimularea generală a economiei. Totuși, efectul net este o creștere a lichidității – bani noi intrați în sistem.</p>
+                <div class="bg-green-900/20 p-3 rounded border border-green-500/30 text-green-200 text-sm font-medium">
+                    ⚡ <strong>Legătura cu QT:</strong> Quantitative Tightening (QT) – procesul de reducere a bilanțului Fed prin vânzarea de active – s-a încheiat oficial la 1 decembrie 2025. Aceasta marchează trecerea de la "strângerea curelei" la o fază de stabilizare, după ce bilanțul Fed a scăzut cu peste 2,4 trilioane de dolari în ultimii ani.
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-gray-800/40 p-6 rounded-2xl border border-gray-700 hover:border-orange-500/50 transition-colors">
+            <h4 class="text-xl font-bold text-orange-400 mb-4 flex items-center gap-2">
+                <span class="bg-orange-500/20 w-8 h-8 flex items-center justify-center rounded-full text-sm">3</span>
+                Proiecții Economice 2026
+            </h4>
             <ul class="list-disc pl-5 space-y-2 text-gray-300">
-                <li><strong>PIB:</strong> Creștere la 2.3% în 2026 (semnal optimist).</li>
-                <li><strong>Inflație:</strong> Scade la 2.4% în 2026.</li>
-                <li><strong>Șomaj:</strong> Așteptat la 4.5% (răcire graduală).</li>
+                <li><strong>Creștere economică:</strong> PIB-ul SUA este proiectat să crească de la 1,7% în 2025 la 2,3% în 2026 – un semnal optimist că economia va accelera, posibil datorită politicilor fiscale și reducerii inflației.</li>
+                <li><strong>Inflație:</strong> Rămâne ridicată la 2,9% în 2025 (față de ținta de 2%), dar scade la 2,4% în 2026. Powell a menționat riscuri ascendente din cauza tarifelor vamale, dar le consideră temporare.</li>
+                <li><strong>Piața muncii:</strong> Șomajul este așteptat la 4,5% în 2025, cu o răcire graduală. Powell a descris-o ca "foarte slabă", cu creșteri mai mici de locuri de muncă și o cerere redusă.</li>
+                <li><strong>Alte semnale:</strong> Indicele ISM (un indicator al activității manufacturiere) ar putea depăși 50 în 2026, semnalând expansiune – un factor istoric pozitiv pentru piețele de risc.</li>
             </ul>
+            <p class="mt-4 text-sm text-orange-200"><strong>Tonul General:</strong> Hawkish, dar cu elemente de susținere. Reuniunea a fost percepută ca hawkish din cauza pauzei pe reduceri de rate și absenței unui QE masiv. Totuși, injecția de lichiditate compensează acest aspect, oferind un echilibru.</p>
         </div>
       </div>
 
-      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Impactul Imediat asupra Pieței Crypto</h3>
+      <h3 class="text-2xl font-bold text-white mt-16 mb-8 border-b border-gray-700 pb-2">Impactul Potențial Imediat asupra Pieței Crypto</h3>
+      <p class="mb-8 text-lg text-gray-300">Acum, să ne concentrăm pe aspectul cheie: cum afectează aceste anunțuri piața crypto imediat (în zilele/săptămânile următoare)? Crypto este un activ de risc, sensibil la lichiditate, rate de dobândă și sentimentul macroeconomic. Istoricul arată că injecțiile de lichiditate de la Fed (cum ar fi QE din 2020-2021) au dus la raliuri majore în Bitcoin și altcoins.</p>
 
-      <div class="grid gap-6 mt-6">
-        <div class="bg-gradient-to-br from-green-900/40 to-emerald-900/40 p-6 rounded-2xl border border-green-500/40">
-            <h4 class="text-xl font-bold text-green-300 mb-2">🔥 Boost de Lichiditate</h4>
-            <p class="text-gray-300 mb-2">Cei 40 mld $ lunar vor căuta randament. Bitcoin și Ethereum ar putea vedea o creștere imediată de 5-10% pe măsură ce traderii interpretează "pivotul".</p>
+      <div class="grid gap-8">
+        
+        <div class="bg-gradient-to-r from-green-900/30 to-emerald-900/10 p-6 rounded-2xl border-l-4 border-green-500">
+            <h4 class="text-xl font-bold text-green-400 mb-3">🚀 Injecția de Lichiditate: Un Boost Pozitiv</h4>
+            <p class="text-gray-300 mb-4"><strong>Impact imediat:</strong> Achizițiile de T-bill de 40 de miliarde USD/lună începând cu 12 decembrie injectează bani noi în sistem, reducând presiunile de finanțare pe termen scurt. Chiar dacă nu este QE, efectul este similar: mai multă lichiditate înseamnă mai mulți bani disponibili pentru investiții în active riscante. În trecut, sfârșitul QT și începutul achizițiilor au dus la creșteri ale prețurilor crypto – de exemplu, în 2019, anunțuri similare au contribuit la un raliu Bitcoin de peste 200%.</p>
+            <div class="bg-black/40 p-3 rounded">
+                <strong class="text-green-300">Potențial pentru crypto:</strong> 
+                <span class="text-gray-300">Bitcoin (BTC) și Ethereum (ETH) ar putea vedea o creștere imediată de 5-10% în următoarele zile, pe măsură ce traderii interpretează asta ca un "pivot" spre politici mai blânde. Lichiditatea suplimentară ar putea alimenta fluxuri instituționale, mai ales cu ETF-urile Bitcoin și Ethereum deja aprobate.</span>
+            </div>
         </div>
 
-        <div class="bg-gradient-to-br from-purple-900/40 to-indigo-900/40 p-6 rounded-2xl border border-purple-500/40">
-            <h4 class="text-xl font-bold text-purple-300 mb-2">🌌 Semnal de "Altseason"</h4>
-            <p class="text-gray-300 mb-2">Sfârșitul QT oprește scurgerea de bani din piață. O economie în expansiune favorizează riscul, ceea ce ar putea direcționa capitalul către Altcoins (Solana, Cardano, etc.).</p>
+        <div class="bg-gradient-to-r from-purple-900/30 to-indigo-900/10 p-6 rounded-2xl border-l-4 border-purple-500">
+            <h4 class="text-xl font-bold text-purple-400 mb-3">🌌 Sfârșitul QT: Semnale pentru "Altseason"</h4>
+            <p class="text-gray-300 mb-4"><strong>Impact imediat:</strong> Trecerea de la QT la stabilizare (și achiziții) oprește scurgerea de lichiditate, ceea ce istoric a fost un catalizator pentru "altseason" – perioade în care altcoins (cum ar fi Solana, Cardano sau meme coins) outperform Bitcoin. Proiecția de creștere PIB în 2026 și posibila depășire a ISM peste 50 sugerează o economie în expansiune, care favorizează riscul.</p>
+            <div class="bg-black/40 p-3 rounded">
+                <strong class="text-purple-300">Potențial pentru crypto:</strong> 
+                <span class="text-gray-300">Imediat, ar putea declanșa un influx în altcoins, cu volume de tranzacționare crescute pe platforme precum Binance sau Coinbase. De exemplu, dacă ISM arată semne de îmbunătățire în datele viitoare (ianuarie 2026), ar putea amplifica un raliu generalizat, similar cu 2021 când lichiditatea Fed a dus la capitalizări de piață record.</span>
+            </div>
+            <p class="mt-3 text-sm text-purple-200 italic">Exemplu concret: Dacă Bitcoin testează rezistența la 150.000 USD (nivel ipotetic bazat pe trenduri actuale), altcoins ar putea câștiga 20-50% în săptămâni, atrași de lichiditate.</p>
         </div>
 
-        <div class="bg-gradient-to-br from-red-900/40 to-orange-900/40 p-6 rounded-2xl border border-red-500/40">
-            <h4 class="text-xl font-bold text-red-300 mb-2">⚠️ Riscuri pe Termen Scurt</h4>
-            <p class="text-gray-300 mb-2">Tonul "hawkish" (pauză la reduceri viitoare) și inflația de 2.9% pot crea sperieturi temporare. Nu folosiți levier exagerat!</p>
+        <div class="bg-gradient-to-r from-red-900/30 to-orange-900/10 p-6 rounded-2xl border-l-4 border-red-500">
+            <h4 class="text-xl font-bold text-red-400 mb-3">⚠️ Tonul Hawkish și Inflația: Presiuni Negative</h4>
+            <p class="text-gray-300 mb-4"><strong>Impact imediat:</strong> Pauza pe reduceri de rate și menționarea zonei "neutre" ar putea crea volatilitate. Crypto este sensibil la rate mai înalte, care fac activele tradiționale (cum ar fi obligațiunile) mai atractive. Inflația ridicată (2,9% în 2025) ar putea duce la vânzări panicate dacă traderii anticipează o Fed mai restrictivă.</p>
+            <div class="bg-black/40 p-3 rounded">
+                <strong class="text-red-300">Potențial pentru crypto:</strong> 
+                <span class="text-gray-300">Imediat, ar putea apărea o corecție de 5-15% în BTC/ETH dacă sentimentul devine negativ, mai ales dacă piețele bursiere (S&P 500) scad. Totuși, slăbiciunea pieței muncii ar putea tempera asta, sugerând posibile reduceri viitoare.</span>
+            </div>
         </div>
       </div>
 
-      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Concluzie</h3>
-      <p>Reuniunea din decembrie marchează tranziția spre o Fed care injectează din nou lichiditate, chiar dacă o face mascat. Pentru piața crypto, acesta este un semnal fundamental bullish.</p>
-      <p class="mt-4 font-bold text-white">Recomandare: Acumularea pe corecții (buy the dip) pare strategia câștigătoare, având în spate vântul din pupa al lichidității.</p>
-      <p class="text-xs text-gray-500 mt-8 pt-4 border-t border-gray-800">Disclaimer: Acest articol reprezintă o analiză a pieței și nu constituie un sfat financiar.</p>
+      <div class="mt-12 mb-8 bg-gray-800 p-6 rounded-xl">
+        <h4 class="text-lg font-bold text-white mb-2">Factori Adiționali și Riscuri Imediate</h4>
+        <ul class="list-disc pl-5 space-y-2 text-gray-300">
+            <li><strong>Sentimentul pieței:</strong> Imediat după anunț, piețele au reacționat mixt – acțiunile au crescut (Dow +500 puncte), dar obligațiunile au răsunat hawkish. Crypto, fiind 24/7, ar putea vedea volatilitate ridicată în weekendul următor.</li>
+            <li><strong>Riscuri globale:</strong> Incertitudini precum tarifele vamale sau geopolitica ar putea amplifica efectele negative, ducând la o fugă spre active sigure (USD, aur) și vânzări în crypto.</li>
+            <li><strong>Oportunități:</strong> Pentru investitori, asta ar putea fi un moment de cumpărare la dip, mai ales dacă lichiditatea susține un trend ascendent spre 2026.</li>
+        </ul>
+      </div>
+
+      <div class="bg-gradient-to-br from-gray-900 to-black border border-gray-700 p-8 rounded-2xl text-center shadow-2xl">
+        <h3 class="text-2xl font-bold text-white mb-4">Concluzie: Oportunități cu Volatilitate Ridicată</h3>
+        <p class="text-lg text-gray-300 leading-relaxed mb-6">
+            Reuniunea FOMC din decembrie 2025 marchează o tranziție spre o Fed mai echilibrată, cu lichiditate suplimentară care compensează tonul hawkish. Pentru piața crypto, impactul imediat este potențial pozitiv, prin injecții de capital care ar putea declanșa raliuri în BTC și altcoins, favorizând un "altseason" incipient. Totuși, riscurile de volatilitate din cauza inflației și pauzei pe rate nu trebuie ignorate – recomand monitorizarea datelor economice viitoare, precum raportul de locuri de muncă din ianuarie 2026.
+        </p>
+        <p class="text-xs text-gray-500 pt-4 border-t border-gray-800 w-full">Disclaimer: Acest articol reprezintă o analiză a pieței și nu constituie un sfat financiar. Investițiile în criptomonede sunt volatile și implică riscuri.</p>
+      </div>
     `
   },
 
