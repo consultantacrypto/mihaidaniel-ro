@@ -1,13 +1,13 @@
 import { articles } from '@/lib/articles';
 import Navbar from '@/components/Navbar';
 import Link from 'next/link';
-import Image from 'next/image'; // ✅ IMPORT CRITIC PENTRU VITEZĂ
+import Image from 'next/image'; // ✅ 1. IMPORTUL MAGIC
 import { Calendar, ArrowRight, TrendingUp, TrendingDown, Minus, BrainCircuit, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export const metadata = {
   title: 'Market Intelligence | Știri Crypto Explicate',
   description: 'Analize de piață, știri crypto traduse și explicate de Mihai Daniel.',
-  // ✅ SEO: Cuvinte cheie adăugate
+  // ✅ Păstrăm SEO la 100
   keywords: ['stiri crypto', 'analiza bitcoin', 'fomc', 'educatie financiara', 'mihai daniel', 'crypto romania'],
 };
 
@@ -19,11 +19,10 @@ export default async function NewsPage({
 }: {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }) {
-  // 1. Aflăm pagina curentă din URL (ex: mihaidaniel.ro/stiri?page=2)
   const params = await searchParams;
   const currentPage = Number(params?.page) || 1;
 
-  // 2. Calculăm ce articole să afișăm
+  // Calculăm paginarea
   const totalPages = Math.ceil(articles.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const endIndex = startIndex + ITEMS_PER_PAGE;
@@ -44,20 +43,19 @@ export default async function NewsPage({
         </div>
 
         <div className="grid gap-8 max-w-5xl mx-auto">
-            {/* Afișăm doar articolele paginii curente */}
             {currentArticles.map((item, idx) => (
                 <Link href={`/stiri/${item.slug}`} key={idx} className="group bg-[#0a0f1e] border border-white/10 rounded-3xl overflow-hidden flex flex-col md:flex-row hover:border-blue-500/50 transition-all hover:shadow-2xl hover:shadow-blue-900/20">
                     <div className="w-full md:w-72 h-64 md:h-auto shrink-0 relative overflow-hidden">
                         <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all z-10"></div>
                         
-                        {/* ✅ OPTIMIZARE: Next.js Image Component */}
+                        {/* ✅ 2. IMAGINEA OPTIMIZATĂ (Aici e secretul vitezei) */}
                         <Image 
                             src={item.image} 
                             alt={item.title}
-                            fill // Umple containerul părinte (care are w-72 h-64)
+                            fill // Umple containerul părintelui (w-72 h-64)
                             className="object-cover group-hover:scale-110 transition-transform duration-700"
-                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Spune browserului cât de mare e poza reală
-                            priority={idx < 2} // Încarcă primele 2 poze instant (LCP Booster)
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Descarcă varianta mică pe mobil
+                            priority={idx < 2} // Încarcă INSTANT primele 2 poze (pentru scor 100 la viteză)
                         />
 
                          <div className="absolute top-4 left-4 z-20">
@@ -66,6 +64,7 @@ export default async function NewsPage({
                              {item.impact === 'neutral' && <span className="text-[10px] font-bold bg-gray-500 text-white px-2 py-1 rounded flex items-center gap-1 shadow-lg"><Minus size={12}/> NEUTRAL</span>}
                         </div>
                     </div>
+                    
                     <div className="flex-1 p-6 md:p-8 flex flex-col justify-center relative">
                         <div className="flex items-center gap-3 text-xs text-gray-500 font-mono mb-3 uppercase tracking-widest">
                             <span className="flex items-center gap-1"><Calendar size={14}/> {item.date}</span>
@@ -75,7 +74,6 @@ export default async function NewsPage({
                         <h2 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors leading-tight">{item.title}</h2>
                         <p className="text-gray-400 leading-relaxed mb-6 line-clamp-2">{item.summary}</p>
                         
-                        {/* Verificăm dacă există mihaiTake înainte să afișăm cutia */}
                         {item.mihaiTake && (
                             <div className="bg-blue-900/10 border-l-2 border-blue-500 pl-4 py-2 mb-6 rounded-r-lg">
                                 <div className="flex items-center gap-2 text-[10px] font-bold text-blue-400 uppercase mb-1">
@@ -93,16 +91,11 @@ export default async function NewsPage({
             ))}
         </div>
 
-        {/* 🔹 ZONA DE PAGINARE */}
+        {/* PAGINARE */}
         <div className="flex justify-center items-center gap-4 mt-16 max-w-5xl mx-auto pt-8 border-t border-white/5">
-            {/* Buton Previous */}
             {currentPage > 1 ? (
-                <Link 
-                    href={`/stiri?page=${currentPage - 1}`}
-                    className="flex items-center gap-2 px-6 py-3 rounded-xl bg-[#0a0f1e] border border-white/10 hover:border-blue-500 text-white transition-all group"
-                >
-                    <ChevronLeft size={20} className="group-hover:-translate-x-1 transition-transform"/> 
-                    Pagina Anterioară
+                <Link href={`/stiri?page=${currentPage - 1}`} className="flex items-center gap-2 px-6 py-3 rounded-xl bg-[#0a0f1e] border border-white/10 hover:border-blue-500 text-white transition-all group">
+                    <ChevronLeft size={20} className="group-hover:-translate-x-1 transition-transform"/> Pagina Anterioară
                 </Link>
             ) : (
                 <button disabled className="flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 border border-white/5 text-gray-600 cursor-not-allowed">
@@ -114,14 +107,9 @@ export default async function NewsPage({
                 Pagina <span className="text-white font-bold">{currentPage}</span> din {totalPages}
             </span>
 
-            {/* Buton Next */}
             {currentPage < totalPages ? (
-                <Link 
-                    href={`/stiri?page=${currentPage + 1}`}
-                    className="flex items-center gap-2 px-6 py-3 rounded-xl bg-[#0a0f1e] border border-white/10 hover:border-blue-500 text-white transition-all group"
-                >
-                    Pagina Următoare 
-                    <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform"/>
+                <Link href={`/stiri?page=${currentPage + 1}`} className="flex items-center gap-2 px-6 py-3 rounded-xl bg-[#0a0f1e] border border-white/10 hover:border-blue-500 text-white transition-all group">
+                    Pagina Următoare <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform"/>
                 </Link>
             ) : (
                 <button disabled className="flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 border border-white/5 text-gray-600 cursor-not-allowed">
