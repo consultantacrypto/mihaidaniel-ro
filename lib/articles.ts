@@ -1,64 +1,130 @@
 export const articles = [
-  // ✅ 1. ARTICOL NOU (AZI): MITUL ALTCOIN SEASON
+  // ✅ 1. ARTICOL NOU: MiCA & BLOCADA BANCARĂ (TEXT INTEGRAL)
+  {
+    slug: "cortina-de-fier-financiara-europeana-mica-2026",
+    title: "\"Cortina de Fier\" Financiară a Europei (2026): Pericolele Tranzacționării pe Platforme Nereglementate",
+    date: "14 Dec 2025",
+    category: "REGLEMENTARE & RISC",
+    image: "/mica-reglementari.jpg", 
+    impact: "bearish", 
+    summary: "2026 este anul critic. Dacă tranzacționezi pe platforme non-MiCA, riști să îți fie înghețate conturile bancare și să plătești 70% impozit. Ghid complet despre noile reguli europene.",
+    mihaiTake: "Tati, joaca s-a terminat. UE nu interzice crypto, doar îl controlează total. Dacă încerci să fii 'șmecher' cu VPN-uri în 2026, te vei trezi cu banii blocați în blockchain și contul bancar închis. Adaptează-te sau dispari.",
+    content: `
+      <p class="text-xl font-medium text-white mb-6">Subiectul zilei: Pericolele tranzacționării pe platforme nereglementate MiCA (Non-Compliant Exchanges & DEXs) începând cu 2026.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">1. Contextul: De ce 2026 este anul critic?</h3>
+      <p class="mb-4">Deși MiCA a intrat în vigoare la final de 2024, există o "perioadă de grație" (Grandfathering Period). Aceasta permite platformelor vechi să opereze pe legislații naționale temporare.</p>
+      
+      <div class="bg-blue-900/20 border-l-4 border-blue-500 p-4 my-6 rounded-r-lg">
+        <p class="text-blue-200 font-bold mb-2">Termenul limită:</p>
+        <p class="text-gray-300">Pentru multe state membre (inclusiv Franța, Luxemburg și probabil România prin aliniere), această perioadă se încheie la <strong>1 Iulie 2026</strong>.</p>
+      </div>
+      
+      <p class="mb-4"><strong>Ce se întâmplă atunci:</strong> Orice exchange care nu are licență CASP (Crypto-Asset Service Provider) devine ilegal în a solicita clienți europeni.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">2. Riscul #1: Blocada Bancară (Financial Exclusion)</h3>
+      <p class="mb-4">Acesta este cel mai mare pericol imediat. Nu poliția te va opri, ci banca ta.</p>
+      
+      <ul class="list-disc pl-6 space-y-4 text-gray-300 mb-6">
+        <li><strong>Mecanismul:</strong> Băncile din UE (Revolut, ING, Banca Transilvania etc.) vor avea obligația să monitorizeze sursa fondurilor.</li>
+        <li><strong>Scenariul 2026:</strong> Dacă încerci să faci cash-out (să tragi banii în bancă) de pe un exchange din afara UE (ex: Bybit Global, KuCoin non-EU, Gate.io) sau dintr-un DEX fără un intermediar reglementat:
+            <ul class="list-circle pl-6 mt-2 space-y-2 text-red-400">
+                <li>Tranzacția va fi respinsă automat.</li>
+                <li>Contul bancar poate fi înghețat pentru "suspiciune de spălare de bani" (AML).</li>
+            </ul>
+        </li>
+      </ul>
+      <p class="bg-gray-800 p-4 rounded-lg"><strong>Motivul:</strong> Băncile nu vor risca amenzi uriașe pentru a procesa transferul tău de 5.000 EUR dintr-o sursă "gri".</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">3. Riscul #2: Capcana "DAC8" și Fiscul (ANAF)</h3>
+      <p class="mb-4">Începând cu 1 ianuarie 2026, intră în vigoare directiva <strong>DAC8</strong>.</p>
+      
+      <p class="mb-4"><strong>Ce înseamnă:</strong> Schimb automat de informații între toate platformele crypto care au clienți UE și autoritățile fiscale (ANAF).</p>
+      
+      <div class="space-y-4 mb-6">
+        <div class="bg-red-900/10 p-4 rounded-xl border border-red-500/20">
+            <strong class="text-red-400 block mb-2">Pericolul:</strong>
+            <p class="text-sm text-gray-300">Dacă tranzacționezi pe o platformă "ascunsă" care totuși vrea să rămână accesibilă în Europa, ea va raporta totul retroactiv. Dacă tranzacționezi pe o platformă complet obscură și apoi încerci să aduci banii în țară, ANAF va cere "Sursa Fondurilor".</p>
+        </div>
+        <div class="bg-red-900/10 p-4 rounded-xl border border-red-500/20">
+            <strong class="text-red-400 block mb-2">Legea Românească (Impozit 70%):</strong>
+            <p class="text-sm text-gray-300">Dacă nu poți prezenta un raport clar, validat de o entitate recunoscută (CASP), ANAF poate încadra venitul la "Sursă neidentificată" și îl poate impozita cu <strong>70%</strong> (noua lege a evaziunii) + dosar penal.</p>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">4. Riscul #3: Regula Călătoriei (Travel Rule)</h3>
+      <p class="mb-4">Regulamentul TFR (Transfer of Funds Regulation) devine draconic.</p>
+      
+      <ul class="list-disc pl-6 space-y-3 text-gray-300 mb-6">
+        <li><strong>Limita de 1.000 EUR:</strong> Pentru orice transfer mai mare de 1.000 EUR de pe un exchange către propriul tău Ledger/Metamask (Unhosted Wallet), exchange-ul este obligat să verifice că adresa îți aparține.</li>
+        <li><strong>Blocajul:</strong> Platformele nereglementate nu au uneltele necesare să comunice aceste date către platformele reglementate.</li>
+        <li><strong>Consecința:</strong> Nu vei putea muta banii de pe un Exchange Non-MiCA -> Exchange MiCA (ex: Binance/Bybit EU) pentru a scoate fiat. Banii tăi vor rămâne blocați în ecosistemul crypto, fără ieșire legală către RON/EUR.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">5. Riscul #4: Delistarea Stablecoins (USDT/USDC)</h3>
+      <p class="mb-4">MiCA impune reguli stricte pentru emitenții de stablecoins (Trebuie să fie E-Money Tokens).</p>
+      
+      <p class="mb-4"><strong>Pericolul:</strong> Platformele reglementate vor fi obligate să delisteze stablecoin-urile neconforme.</p>
+      <p class="mb-6 bg-yellow-900/10 p-4 rounded border border-yellow-500/30 text-gray-300"><strong>Situația:</strong> Dacă ții banii în USDT pe o platformă nereglementată și vrei să îi muți în Europa, s-ar putea să descoperi că USDT-ul tău nu este acceptat la depunere pe platformele europene, fiind obligat să faci conversii costisitoare sau riscante.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">6. Mitul "VPN-ului" și "Reverse Solicitation"</h3>
+      <p class="mb-4">Mulți cred că vor folosi un VPN pentru a accesa platforme din Asia/Caraibe.</p>
+      
+      <div class="p-6 bg-gradient-to-r from-gray-800 to-black rounded-xl border border-gray-700 text-center">
+        <strong class="text-white text-lg block mb-2">Realitatea:</strong>
+        <p class="text-gray-400 text-sm">Autoritatea Europeană (ESMA) a clarificat conceptul de "Reverse Solicitation". Este o excepție extrem de îngustă. Dacă platforma din Asia are orice meniu în limba română sau orice marketing în UE, este ilegală.</p>
+        <p class="text-white font-bold mt-4">Chiar dacă reușești să tranzacționezi prin VPN, problema rămâne la ieșire (Off-ramp). Banii digitali sunt inutili dacă nu pot deveni putere de cumpărare în lumea reală.</p>
+      </div>
+    `
+  },
+
+  // ✅ 2. ARTICOL: MITUL ALTCOIN SEASON
   {
     slug: "mitul-si-realitatea-altcoin-season-2022-2026",
     title: "2022-2025: Marea Minciună a Altcoin-urilor. Studiu de Piață: Mitul și Realitatea \"Altcoin Season\".",
     date: "13 Dec 2025",
     category: "ANALIZĂ PIAȚĂ",
-    image: "/altcoinseasson.jpg", // ✅ Asigură-te că ai poza asta în 'public'
+    image: "/altcoinseasson.jpg", 
     impact: "neutral", 
     summary: "De ce nu am avut un 'Altcoin Season' adevărat în ultimii 3 ani? Analizăm datele reci, 'mini-bulele' sectoriale și de ce 2026 ar putea fi anul decisiv pentru investitorii selectivi.",
     mihaiTake: "Tati, nu te lăsa păcălit de influenceri care strigă 'To The Moon' la orice pompare de 5%. Piața s-a schimbat. Banii nu mai curg peste tot ca în 2017. Acum ești într-un joc de șah, nu la păcănele. În 2026, doar proiectele cu utilitate vor supraviețui.",
     content: `
       <p class="text-xl font-medium text-white mb-6">Pentru publicul larg, trebuie să demontăm ideea că "Altcoin Season" înseamnă doar că prețurile cresc. Realitatea din ultimii ani a fost mult mai dură pentru portofoliile micilor investitori.</p>
-      
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">1. Ce înseamnă "Altcoin Season" (Explicația Simplă)</h3>
-      
       <div class="bg-blue-900/20 border-l-4 border-blue-500 p-4 my-6 rounded-r-lg">
         <p class="text-blue-200 font-bold mb-2">Definiția Tehnică:</p>
         <p class="text-gray-300">Un Altcoin Season este declarat oficial doar atunci când <strong>75% dintre primele 50 de monede (Altcoins)</strong> performează mai bine decât Bitcoin pe o perioadă de 90 de zile.</p>
       </div>
-
       <p class="mb-4"><strong>Analogia pe înțelesul tuturor:</strong> Gândește-te la Bitcoin ca la "Regele" care intră primul în sala de bal (crește prețul). Cât timp ochii sunt pe Rege, nimeni nu dansează.</p>
       <p class="mb-6">Altcoin Season este momentul în care Regele se așază pe tron (Bitcoin stagnează sau crește încet), iar "nobilii" (Ethereum, Solana etc.) și apoi "poporul" (monedele mici) încep să danseze frenetic (creșteri explozive de 5x, 10x, 50x).</p>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">2. Analiza Perioadei 2022 - Prezent (Am avut Altseason?)</h3>
-      
       <p class="mb-6">Dacă ne uităm la datele reci, răspunsul scurt este: <strong>NU</strong>, nu am avut un "Altcoin Season" clasic și susținut, similar cu cel din 2017 sau 2021. Am avut doar "Mini-Sezoane" sectoriale.</p>
-
       <div class="space-y-6">
         <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700">
             <h4 class="text-lg font-bold text-red-400 mb-2">2022 (Bear Market)</h4>
             <p class="text-gray-300 text-sm">A fost iarnă nucleară. Totul a scăzut, Bitcoin Dominance (BTC.D) a fluctuat, dar frica a dominat piața.</p>
         </div>
-
         <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700">
             <h4 class="text-lg font-bold text-orange-400 mb-2">2023 (Anul Acumulării)</h4>
             <p class="text-gray-300 text-sm">Bitcoin a început să își revină, dar Altcoin-urile au rămas în urmă. Cei care au cumpărat Alts aici au suferit, pentru că BTC le-a "supt" lichiditatea.</p>
         </div>
-
         <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700">
             <h4 class="text-lg font-bold text-green-400 mb-2">2024 - 2025 (Bitcoin Season & ETF)</h4>
             <p class="text-gray-300 text-sm">Aceasta a fost era instituțională. Banii grei au intrat în Bitcoin prin ETF-uri. <strong>Excepția:</strong> Am avut "Mini-Bule" pe sectoare specifice: AI și Meme Coins. Dar asta NU este un Altcoin Season generalizat, ci o rotație speculativă.</p>
         </div>
-        
         <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700">
             <h4 class="text-lg font-bold text-purple-400 mb-2">Q3 2025 (Fenta din Septembrie)</h4>
             <p class="text-gray-300 text-sm">Datele arată un scurt moment în septembrie 2025 când indexul a atins valoarea de 78 (tehnic un Altseason), dar a fost rapid urmat de o corecție. A fost mai degrabă o capcană.</p>
         </div>
       </div>
-
       <p class="mt-6 italic text-gray-400 border-l-2 border-gray-600 pl-4">Concluzia pentru audiență: Cine a așteptat un sezon generalizat în care "totul crește" a pierdut bani sau timp. Piața s-a maturizat și a devenit selectivă.</p>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">3. Ce urmează? Predicții pentru 2026</h3>
       <p class="mb-6">Aici intervine expertiza și "Alpha-ul". De ce 2026 arată diferit?</p>
-
       <ul class="list-disc pl-6 space-y-4 text-gray-300 mb-8">
         <li><strong>Lichiditatea Globală:</strong> Istoric, Altcoin Season apare la aproximativ 12-18 luni DUPĂ halving-ul Bitcoin, când băncile centrale (FED, BCE) încep să tipărească bani ieftini (rate scăzute). Suntem exact în acel grafic pentru 2026.</li>
         <li><strong>Dominanța Bitcoin (BTC.D):</strong> Momentan, BTC.D este încă sus. Semnalul de declanșare pentru Altseason va fi când BTC.D va atinge un vârf (poate 60%+) și va începe să cadă brusc, în timp ce prețul Bitcoin rămâne stabil.</li>
         <li><strong>Instituțiile caută randament:</strong> După ce au cumpărat Bitcoin, fondurile mari vor căuta randamente mai mari. Unde se duc? În Ethereum (ETF-uri), Solana și proiecte de infrastructură Real World Assets (RWA).</li>
       </ul>
-
       <div class="mt-8 p-8 bg-gradient-to-br from-gray-900 to-black border border-gray-700 rounded-2xl text-center shadow-xl">
         <h4 class="text-2xl font-bold text-white mb-4">Cum te poziționezi TU vs. Mulțime</h4>
         <p class="text-gray-300 mb-6">Competiția va striga "Altseason" la fiecare lumânare verde de 5% pe Shiba Inu. Vor induce FOMO nefondat.</p>
@@ -70,7 +136,7 @@ export const articles = [
     `
   },
 
-  // ✅ 2. ARTICOL: ACUMULARE INSTITUȚIONALĂ ETHEREUM
+  // ✅ 3. ARTICOL: ACUMULARE INSTITUȚIONALĂ ETHEREUM
   {
     slug: "acumulare-institutionala-ethereum-dat-bmnr-2025",
     title: "Acumularea Instituțională de Ethereum: O Tendință Bullish în 2025",
@@ -82,20 +148,14 @@ export const articles = [
     mihaiTake: "Tati, urmărește banii deștepți ('Smart Money'). Când vezi că firme listate la bursă își transformă cash-ul în Ethereum și BlackRock vrea ETF cu Staking, nu mai e loc de dubii. Instituțiile cumpără tot ce prind. Tu ce faci? Stai pe margine sau acumulezi?",
     content: `
       <p class="text-xl font-medium text-white mb-6">În lumea criptomonedelor, Ethereum (ETH) continuă să atragă atenția investitorilor instituționali, în special prin intermediul așa-numitelor <strong>Digital Asset Treasuries (DATs)</strong> – entități corporative care alocă rezerve financiare în active digitale precum ETH.</p>
-      
       <p class="mb-6">Un post recent pe platforma X (fostul Twitter) de la utilizatorul <em>@BullTheoryio</em> a stârnit discuții ample, sugerând o acumulare masivă de ETH de către instituții, cu <strong>BitMine Immersion Technologies (BMNR)</strong> în rol principal. Acest articol explorează în detaliu validitatea acestor afirmații, bazându-ne pe date recente din 2025, inclusiv achiziții agresive, poziționări instituționale și catalizatori precum noul ETF staked ETH propus de BlackRock.</p>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Ce Sunt Digital Asset Treasuries (DATs) și De Ce Sunt Importante pentru ETH?</h3>
-      
       <p class="mb-4">Digital Asset Treasuries reprezintă o strategie emergentă în care companii listate la bursă, precum <strong>BitMine Immersion Technologies</strong> sau <strong>SharpLink Gaming</strong>, transformă rezervele lor tradiționale (cash sau alte active) în criptomonede, în special ETH. Aceste entități oferă investitorilor expunere indirectă la ETH prin acțiuni cotate, evitând riscurile directe ale deținerii cripto.</p>
-      
       <div class="bg-blue-900/20 border-l-4 border-blue-500 p-4 my-6 rounded-r-lg">
         <p class="text-blue-200 font-bold mb-2">Cifre Cheie 2025:</p>
         <p class="text-gray-300">DAT-urile axate pe ETH controlează aproximativ <strong>4.8-5.1 milioane de ETH</strong>, reprezentând 2.8-3.2% din oferta totală circulanta. Această tendință reflectă o schimbare structurală în alocarea capitalului corporativ.</p>
       </div>
-
       <p class="mb-4">Deși fluxurile instituționale în DAT-uri au scăzut cu 81% de la vârful din august 2025, ajungând la un minim de 370.000 ETH în decembrie, jucători cheie precum BitMine continuă să acumuleze agresiv. Aceasta sugerează o divergență: în timp ce sectorul DAT per ansamblu se confruntă cu o răcire temporară, entități precum BMNR accelerează, țintind controlul asupra până la 5% din oferta ETH.</p>
-      
       <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 mt-6">
         <h4 class="text-lg font-bold text-white mb-3">De ce aleg instituțiile Ethereum?</h4>
         <ul class="list-disc pl-5 space-y-2 text-gray-300">
@@ -104,13 +164,9 @@ export const articles = [
             <li><strong>RWA:</strong> Este poziționat ca lider pentru tokenizarea activelor reale.</li>
         </ul>
       </div>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">BitMine Immersion Technologies (BMNR): Liderul Acumulării ETH</h3>
-      
       <p class="mb-4">BitMine Immersion Technologies, listată la NYSE sub ticker-ul <strong>BMNR</strong>, este cel mai proeminent exemplu de DAT axat pe ETH. Compania, condusă de Tom Lee (fost analist la Fundstrat), a transformat modelul său de business din mining BTC tradițional către o strategie de trezorerie digitală, cu ETH ca activ principal.</p>
-      
       <p class="mb-6">Conform anunțurilor recente din decembrie 2025, BMNR deține peste <strong>3.86 milioane de ETH</strong>, reprezentând aproximativ 3.2% din oferta circulanta, cu o valoare totală a activelor crypto și cash depășind 13.2 miliarde USD.</p>
-
       <div class="bg-green-900/10 border border-green-500/30 rounded-xl p-6 my-8">
         <h4 class="text-lg font-bold text-green-400 mb-4 flex items-center gap-2"><span class="animate-pulse">●</span> Achiziții Recente Impresionante:</h4>
         <ul class="space-y-4 text-gray-300">
@@ -128,39 +184,28 @@ export const articles = [
             </li>
         </ul>
       </div>
-
       <p class="mb-4">Această strategie reflexivă – creșterea prețului ETH duce la NAV mai mare, emisiuni de acțiuni la premium, mai multe achiziții ETH – creează un ciclu virtuos. BMNR nu mai este doar un miner; oferă servicii de consultanță BTC, leasing de echipamente și gestionează o trezorerie ETH care compensează riscurile prin staking.</p>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Poziționarea Instituțională în BMNR: Semne de Încredere</h3>
-      
       <p class="mb-4">Investitorii instituționali văd BMNR ca un proxy pentru ETH. Deținerea instituțională depășește 23%, cu influxuri nete de peste 90 milioane de acțiuni în trimestrele recente.</p>
-      
       <p class="mb-4">Jucători majori precum <strong>Morgan Stanley</strong> (9.7 milioane acțiuni), Susquehanna, ARK Invest, Jane Street, BlackRock, Fidelity, JPMorgan și Citadel au crescut pozițiile semnificativ. Raportul instituțiilor care cresc vs. reduc pozițiile este dezechilibrat în favoarea cumpărătorilor, reflectând încredere în modelul DAT.</p>
-      
       <div class="bg-gray-800 p-4 rounded-lg border-l-2 border-yellow-500 mb-6">
         <strong>Analiză Tehnică BMNR:</strong> Acțiunile au crescut cu 22% recent, depășind ETH. RSI zilnic este peste 50 (bullish), cu suport la 35-37 USD. Ținte potențiale Q1 2026: <strong>48-50 USD</strong>.
       </div>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Catalizatorul Major: ETF-ul Staked ETH al BlackRock (ETHB)</h3>
-      
       <p class="mb-4">Un factor cheie care validează teza bullish este depunerea recentă a BlackRock pentru un ETF staked ETH, sub ticker-ul <strong>ETHB</strong>. Lansat inițial ca spot ETF în iulie 2024, BlackRock propune acum staking pentru 70-90% din holdings, oferind randamente instituționale.</p>
       <p class="mb-6">Aceasta ar putea atrage miliarde în ETH, mai ales pe fondul tăierilor de rate ale Fed, făcând staking-ul ETH mai atractiv decât obligațiunile.</p>
-      
       <div class="p-6 bg-gradient-to-r from-purple-900/20 to-blue-900/20 rounded-2xl border border-purple-500/30 text-center">
         <p class="text-xl text-white font-bold mb-2">Previzunea lui Tom Lee:</p>
         <p class="text-gray-300 italic">"100.000 USD pentru ETH este posibil într-un 'superciclu' bazat pe viitor. Cu ETH la minime de 7 ani în taxe de rețea, dar cu acumulare instituțională persistentă, rally-ul pare sustenabil."</p>
       </div>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Concluzie: O Teorie Solidă, dar cu Riscuri</h3>
-      
       <p class="mb-4">Datele validează postarea inițială: instituțiile acumulează ETH prin DAT-uri, cu BMNR lider, susținut de influxuri masive și catalizatori precum ETHB. Aceasta indică un transfer de la "mâini slabe" (retail) la holde corporative puternice, poziționând ETH pentru creșteri pe termen lung.</p>
       <p class="mb-6">Totuși, piețele crypto sunt volatile, iar DAT-urile concentrate precum BMNR implică riscuri – de la fluctuații de preț la reglementări.</p>
-      
       <p class="text-sm text-gray-500 border-t border-gray-800 pt-4">Disclaimer: Acest articol este o analiză și nu un sfat financiar. DYOR (Do Your Own Research).</p>
     `
   },
 
-  // ✅ 3. ARTICOL: IMPACT REUNIUNE FOMC DECEMBRIE 2025
+  // ✅ 4. ARTICOL: IMPACT REUNIUNE FOMC DECEMBRIE 2025
   {
     slug: "impact-reuniune-fomc-decembrie-2025-crypto",
     title: "Impactul Reuniunii FOMC din Decembrie 2025 asupra Pieței Crypto: O Analiză Detaliată și Explicativă",
@@ -180,7 +225,6 @@ export const articles = [
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Explicații Detaliate ale Anunțurilor Fed</h3>
       
       <div class="space-y-8">
-        
         <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
             <h4 class="text-xl font-bold text-blue-400 mb-3">1. Reducerea Ratei Dobânzii cu 25 bps: O Mișcare Așteptată, dar cu Disensiuni</h4>
             <p class="mb-3"><strong>Ce înseamnă?</strong> Rata dobânzii federale (federal funds rate) influențează costul împrumuturilor în economie. O reducere de 0,25% face banii mai ieftini, stimulând cheltuielile și investițiile. Aceasta este a treia reducere consecutivă în 2025, totalizând 75 bps în ultimele trei luni.</p>
@@ -212,7 +256,6 @@ export const articles = [
       <p class="mb-6">Acum, să ne concentrăm pe aspectul cheie: cum afectează aceste anunțuri piața crypto imediat (în zilele/săptămânile următoare)? Crypto este un activ de risc, sensibil la lichiditate, rate de dobândă și sentimentul macroeconomic. Istoricul arată că injecțiile de lichiditate de la Fed (cum ar fi QE din 2020-2021) au dus la raliuri majore în Bitcoin și altcoins. Iată o analiză detaliată a impactului potențial:</p>
 
       <div class="grid gap-6">
-        
         <div class="bg-gradient-to-br from-green-900/30 to-emerald-900/30 p-6 rounded-2xl border border-green-500/30">
             <h4 class="text-xl font-bold text-white mb-3">🚀 Injecția de Lichiditate: Un Boost Pozitiv</h4>
             <p class="text-gray-300 mb-4"><strong>Impact imediat:</strong> Achizițiile de T-bill de 40 de miliarde USD/lună începând cu 12 decembrie injectează bani noi în sistem, reducând presiunile de finanțare pe termen scurt. Chiar dacă nu este QE, efectul este similar: mai multă lichiditate înseamnă mai mulți bani disponibili pentru investiții în active riscante. În trecut, sfârșitul QT și începutul achizițiilor au dus la creșteri ale prețurilor crypto – de exemplu, în 2019, anunțuri similare au contribuit la un raliu Bitcoin de peste 200%.</p>
@@ -238,7 +281,7 @@ export const articles = [
     `
   },
 
-  // ✅ 4. ARTICOL: HALVING VS LICHIDITATE (Imagine Locală)
+  // ✅ 5. ARTICOL: HALVING VS LICHIDITATE (Imagine Locală)
   {
     slug: "mitul-halving-ului-sacru-vs-realitatea-lichiditatii",
     title: "Mitul \"Halving-ului Sacru\" vs. Realitatea Lichidității: Ce dictează cu adevărat prețul Bitcoin în 2025?",
@@ -250,25 +293,19 @@ export const articles = [
     mihaiTake: "Tati, nu te uita doar la Halving. Uită-te la imprimanta FED. Când americanii dau drumul la bani și minerii produc mai puțin, atunci începe magia. Halving-ul încarcă arma, dar Lichiditatea apasă trăgaciul.",
     content: `
       <p class="text-xl font-medium text-white mb-6">Suntem în luna decembrie 2025. Piețele financiare globale își țin respirația. Pe 1 decembrie, Rezerva Federală a SUA a semnalat oficial sfârșitul ciclului de "Quantitative Tightening" (QT - retragerea lichidității din piață), iar așteptările pentru primele tăieri de dobânzi sunt la cote maxime (peste 90% pentru ședința iminentă).</p>
-      
       <p>În ecosistemul crypto, tensiunea este palpabilă. Ne aflăm în fereastra istorică "post-halving" (după evenimentul din aprilie 2024), perioada în care, tradițional, Bitcoin înregistra creșteri parabolice.</p>
-      
       <p>Și totuși, ciclul actual pare diferit. Volatilitatea extremă din august 2024 (declanșată de o mișcare a Băncii Japoniei) a arătat o vulnerabilitate șocantă a Bitcoin la factorii macroeconomici, în ciuda Halving-ului proaspăt încheiat.</p>
-      
       <div class="bg-gray-800 p-6 rounded-xl border-l-4 border-yellow-500 my-8">
         <p class="text-lg font-bold text-white mb-2">Marea Dezbatere a anului 2025:</p>
         <p class="text-gray-300 italic">Este Halving-ul Bitcoin un mecanism economic sacru care garantează creșterea prețului, sau ciclurile anterioare au fost doar coincidențe fericite, suprapuse peste perioadele în care băncile centrale tipăreau bani?</p>
       </div>
-
       <p>Pentru investitorul matur din 2025, răspunsul nu este "ori/ori". Pentru a înțelege direcția pieței, trebuie să explorăm această antiteză fundamentală.</p>
-
       <div class="mt-12 mb-8">
         <h3 class="text-2xl font-bold text-blue-400 mb-4 flex items-center gap-2">
             <span class="bg-blue-500/20 p-2 rounded">TEZA</span> 
             Rolul Central al Halving-ului – Scarcitatea Matematică
         </h3>
         <p class="mb-4">Argumentul "tradiționalist" al Bitcoin se bazează pe designul imuabil creat de Satoshi Nakamoto. Aceasta este fundația ideologică a Bitcoin ca "aur digital" (hard money).</p>
-        
         <h4 class="text-xl font-bold text-white mt-6 mb-2">1. Mecanismul "Supply Shock" (Șocul de Ofertă)</h4>
         <p>Spre deosebire de monedele fiat (USD, EUR), unde oferta poate fi mărită oricând printr-o decizie politică a bancherilor centrali, oferta de Bitcoin este guvernată de matematică.</p>
         <ul class="list-disc pl-6 space-y-2 mb-4 text-gray-300">
@@ -276,7 +313,6 @@ export const articles = [
             <li><strong>Astăzi, în 2025, se emit doar ~450 BTC pe zi.</strong></li>
         </ul>
         <p class="bg-blue-900/10 p-4 rounded-lg border border-blue-500/20"><strong>Argumentul Tezei:</strong> Dacă cererea pentru Bitcoin rămâne constantă sau crește (datorită ETF-urilor și adopției globale), iar cantitatea de Bitcoin nou scade brusc la jumătate, prețul trebuie să crească. Este economie elementară.</p>
-
         <h4 class="text-xl font-bold text-white mt-6 mb-2">2. Efectul Psihologic și Ciclul de 4 Ani</h4>
         <p>Istoric, Halving-ul a funcționat ca o profeție auto-împlinită:</p>
         <ul class="space-y-2 mt-2 mb-4">
@@ -286,28 +322,23 @@ export const articles = [
             <li class="flex items-center gap-2"><span class="text-white font-bold">2024 (Actual):</span> Un fenomen unic – ATH înainte de Halving, propulsat de ETF-uri.</li>
         </ul>
       </div>
-
       <div class="mt-12 mb-8">
         <h3 class="text-2xl font-bold text-red-400 mb-4 flex items-center gap-2">
             <span class="bg-red-500/20 p-2 rounded">ANTITEZA</span> 
             Realitatea Lichidității – Bitcoin ca "Barometru Macro"
         </h3>
         <p class="mb-4">Aceasta este perspectiva care a câștigat teren masiv în 2024-2025. Argumentul este brutal de simplu: Bitcoin nu există într-un vid; este un activ de risc extrem de sensibil la costul banilor.</p>
-
         <h4 class="text-xl font-bold text-white mt-6 mb-2">1. Corelația Supremă: Bitcoin vs. Masa Monetară Globală (M2)</h4>
         <p>Analize recente arată o corelație statistică uluitoare (peste 0.85) între prețul Bitcoin și Lichiditatea Globală M2.</p>
         <div class="bg-red-900/10 p-4 rounded-lg border border-red-500/20 mb-4">
             <strong>Argumentul Antitezei:</strong> Toate marile "bull runs" ale Bitcoin au coincis perfect cu perioade de expansiune monetară (QE). Când banii sunt "ieftini" și abundenți, aceștia se revarsă în active riscante. Bitcoin, fiind cel mai rapid cal din această cursă, beneficiază cel mai mult. <strong>Halving-ul a fost doar scânteia; lichiditatea Fed a fost benzina.</strong>
         </div>
-
         <h4 class="text-xl font-bold text-white mt-6 mb-2">2. Dovada Vulnerabilității: Crash-ul din August 2024</h4>
         <p>Dacă Halving-ul din aprilie 2024 ar fi fost suficient, ce s-a întâmplat în august 2024? Banca Japoniei a majorat ratele, iar Bitcoin a pierdut peste 25% în câteva zile. Asta a demonstrat că "scarcitatea programată" nu poate opri o vânzare masivă în panică într-un șoc de lichiditate.</p>
       </div>
-
       <div class="mt-12 mb-8 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-8 rounded-2xl border border-green-500/30">
         <h3 class="text-2xl font-bold text-green-400 mb-4 text-center">SINTEZA: Noua Paradigmă a Ciclului 2025-2026</h3>
         <p class="text-lg text-white text-center mb-6">Nu este "Halving SAU Lichiditate". Este <strong>Halving ȘI Lichiditate</strong>.</p>
-        
         <div class="grid md:grid-cols-2 gap-6">
             <div>
                 <strong class="text-blue-300 block mb-2">Halving-ul dictează Fundamentul (Podeaua)</strong>
@@ -318,7 +349,6 @@ export const articles = [
                 <p class="text-sm text-gray-300">Deciziile FED decid când presiunea latentă este eliberată și cât de sus poate ajunge prețul. Lichiditatea este valul care ridică toate bărcile.</p>
             </div>
         </div>
-
         <h4 class="text-xl font-bold text-white mt-8 mb-3">Contextul Exploziv din Decembrie 2025</h4>
         <ul class="space-y-3">
             <li class="flex items-start gap-2">
@@ -332,7 +362,6 @@ export const articles = [
         </ul>
         <p class="mt-6 font-bold text-center text-white bg-green-500/20 p-3 rounded">Sinteza: Halving-ul a încărcat arma, iar pivotul FED din finalul lui 2025 este pe cale să apese trăgaciul.</p>
       </div>
-
       <h3 class="text-2xl font-bold text-white mt-8 mb-4 border-b border-gray-700 pb-2">Concluzie: Implicații pentru Investitorul Inteligent</h3>
       <p>În 2025, a investi în Bitcoin bazându-te exclusiv pe un calendar de 4 ani este naiv. Lecțiile cheie:</p>
       <ol class="list-decimal pl-6 space-y-3 text-gray-300 mt-4">
@@ -340,13 +369,12 @@ export const articles = [
         <li><strong>Urmărește Banii, nu doar Blocurile:</strong> Deciziile FED sunt la fel de importante ca datele on-chain.</li>
         <li><strong>Antiteza este Sănătoasă:</strong> Înțelege că Bitcoin este și "hard money" și "barometru de lichiditate".</li>
       </ol>
-      
       <p class="mt-6">Evidența din 2025 ne arată clar: Halving-ul a construit fundația, dar valurile de lichiditate fiat sunt cele care vor decide cât de înalt se va construi zgârie-norul în acest ciclu.</p>
       <p class="text-xs text-gray-500 mt-8 pt-4 border-t border-gray-800">Disclaimer: Acest articol reprezintă o analiză a pieței și nu constituie un sfat financiar.</p>
     `
   },
 
-  // ✅ 5. ARTICOL: LEVIERUL (EDUCAȚIE & RISK) - INTEGRAL
+  // ✅ 6. ARTICOL: LEVIERUL (EDUCAȚIE & RISK) - INTEGRAL
   {
     slug: "mirajul-levierului-arma-financiara-distrugere",
     title: "Mirajul Levierului: \"Arma Financiară de Distrugere în Masă\" care îți poate Zeroiza Contul într-o Secundă. Ghid de Conștientizare.",
@@ -358,20 +386,15 @@ export const articles = [
     mihaiTake: "Tati, levierul nu e prietenul tău, e un împrumut toxic. Când brokerul îți dă 1:100, nu îți face o favoare, îți dă frânghia să te spânzuri. Dacă nu știi să calculezi riscul la centimă, stai pe Spot. Altfel, ești doar carne de tun pentru algortimi.",
     content: `
       <p class="text-xl font-medium text-white mb-6">În lumea strălucitoare a tradingului online, există un "cântec de sirenă" căruia puțini îi rezistă: promisiunea de a controla sume uriașe de bani cu un capital propriu infim. Acesta este <strong>Levierul (Leverage)</strong>.</p>
-      
       <p>Brokerii îl promovează ca pe o superputere – <em>"Tranzacționează cu 1:100!"</em>, <em>"Putere de cumpărare de 500 de ori mai mare!"</em>. Pentru traderul neexperimentat, sună ca scurtătura supremă către bogăție.</p>
-      
       <div class="bg-red-900/20 border-l-4 border-red-500 p-6 my-6 rounded-r-lg">
         <p class="text-red-200 font-bold mb-2">Realitatea brutală:</p>
         <p class="text-gray-300">Levierul este responsabil pentru distrugerea a peste <strong>80% din conturile de retail în primele 6 luni</strong>. Nu este o scurtătură către succes, ci, în mâinile unui novice, este o "armă financiară de distrugere în masă" îndreptată direct către propriul portofel.</p>
       </div>
-
       <p>Acest articol demontează mirajul și explică matematica dezastrului.</p>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Anatomia Dezastrului: De ce Levierul este o "Sabie cu Două Tăișuri"</h3>
       <p>Levierul este, simplu spus, bani împrumutați de la broker pentru a amplifica o poziție. Dacă folosești levier 1:100, cu 1.000$ ai tăi, controlezi 100.000$ în piață.</p>
       <p>Sună grozav când piața merge în direcția ta. Dar iată mecanismele care transformă acest avantaj într-o capcană mortală:</p>
-
       <div class="space-y-8 mt-8">
         <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
             <h4 class="text-xl font-bold text-orange-400 mb-3">1. Matematica Nemiloasă a Pierderilor Amplificate</h4>
@@ -386,24 +409,20 @@ export const articles = [
                 <p class="mt-3 text-red-400 font-bold border-t border-gray-600 pt-2">Rezultat: O mișcare banală de 1% a pieței ți-a șters integral contul. Instantaneu.</p>
             </div>
         </div>
-
         <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
             <h4 class="text-xl font-bold text-orange-400 mb-3">2. "Stop Out" și Apelul în Marjă (Margin Call)</h4>
             <p>Brokerul nu este partenerul tău de risc; el este creditorul tău. El nu va pierde niciodată banii lui în tranzacția ta.</p>
             <p class="mt-2">Când folosești levier mare, "marja liberă" (banii tăi care susțin tranzacția) este foarte mică. O mică fluctuație negativă consumă rapid acea marjă. În momentul în care capitalul tău scade sub un anumit nivel critic (nivelul de Stop Out), brokerul intervine automat.</p>
             <p class="mt-4 bg-red-900/10 p-3 rounded border border-red-500/30 text-sm"><strong>Capcana:</strong> Brokerul îți închide forțat cele mai perdante poziții ("te lichidează") la cel mai prost preț posibil din acel moment, pentru a-și proteja împrumutul. Tu rămâi cu un cont aproape gol, privind cum, adesea, piața își revine după ce ai fost scos din joc.</p>
         </div>
-
         <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
             <h4 class="text-xl font-bold text-orange-400 mb-3">3. Toxicitatea Psihologică</h4>
             <p>Levierul ridicat distruge disciplina. Când vezi că poți câștiga (sau pierde) 500$ în 10 secunde, creierul tău nu mai procesează tranzacționarea ca pe o investiție rațională, ci ca pe un joc de noroc la cazino.</p>
             <p class="mt-2">Frica de a pierde și lăcomia de a câștiga rapid devin copleșitoare, ducând la decizii impulsive: mutarea Stop Loss-ului ("doar puțin mai jos") sau adăugarea la poziții perdante ("revenge trading").</p>
         </div>
       </div>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Ghid de Conștientizare și Supraviețuire</h3>
       <p>Dacă vrei să ai o carieră lungă în trading, trebuie să încetezi să privești levierul ca pe un prieten și să începi să-l tratezi ca pe un explozibil instabil.</p>
-
       <ul class="space-y-6 mt-6">
         <li class="flex flex-col gap-2">
             <div class="flex items-center gap-3">
@@ -412,7 +431,6 @@ export const articles = [
             </div>
             <p class="pl-11 text-gray-300">Faptul că brokerul îți oferă levier 1:500 NU înseamnă că trebuie să îl folosești. Este ca și cum ai conduce o mașină care poate prinde 300 km/h; nu înseamnă că trebuie să mergi cu viteza aia prin oraș. Profesioniștii folosesc rar un levier real mai mare de 1:5 sau 1:10.</p>
         </li>
-
         <li class="flex flex-col gap-2">
             <div class="flex items-center gap-3">
                 <span class="bg-blue-500 text-white font-bold w-8 h-8 flex items-center justify-center rounded-full shrink-0">2</span>
@@ -420,7 +438,6 @@ export const articles = [
             </div>
             <p class="pl-11 text-gray-300">Nu intra într-o tranzacție gândind: "Voi cumpăra 1 lot standard pentru că am levier mare". Gândește așa: <em>"Sunt dispus să risc 1% din contul meu pe această tranzacție. Unde trebuie să pun Stop Loss-ul? La 50 de pipși."</em> Abia apoi calculezi mărimea poziției. Vei descoperi că poziția rezultată folosește un levier real foarte mic.</p>
         </li>
-
         <li class="flex flex-col gap-2">
             <div class="flex items-center gap-3">
                 <span class="bg-blue-500 text-white font-bold w-8 h-8 flex items-center justify-center rounded-full shrink-0">3</span>
@@ -429,7 +446,6 @@ export const articles = [
             <p class="pl-11 text-gray-300">În perioade de știri economice majore (FED, NFP), piețele fac "salturi" (gaps). Dacă ești prins într-un salt împotriva ta cu levier 1:100, prețul poate sări peste Stop Loss-ul tău, iar brokerul te va executa la un preț mult mai rău (slippage), lăsându-te uneori chiar cu datorii.</p>
         </li>
       </ul>
-
       <div class="mt-12 p-8 bg-gradient-to-br from-gray-900 to-black border border-gray-700 rounded-2xl text-center">
         <h4 class="text-2xl font-bold text-white mb-4">Concluzie</h4>
         <p class="text-lg text-gray-300 mb-6">Levierul nu este un instrument pentru a te îmbogăți rapid când ai puțini bani. Este un instrument pentru cei care au deja mulți bani și vor să își optimizeze capitalul, înțelegând perfect riscurile.</p>
@@ -439,7 +455,7 @@ export const articles = [
     `
   },
 
-  // ✅ 6. ARTICOL: ALERTĂ FED (Imagine Locală)
+  // ✅ 7. ARTICOL: ALERTĂ FED (Imagine Locală)
   {
     slug: "alerta-volatilitate-decizie-fed-capcana-mortala",
     title: "Alertă de Volatilitate: De ce Decizia FED de Mâine Poate Fi o \"Capcană Mortală\"",
@@ -451,7 +467,6 @@ export const articles = [
     mihaiTake: "Tati, mâine nu e zi de făcut bani, e zi de păstrat banii. Când vorbește Powell, piața nu are logică, are doar emoție și algoritmi HFT. Stai pe mâini, nu fi lichiditate pentru alții. Adevărata direcție o vedem abia joi.",
     content: `
       <p class="text-xl font-medium text-white mb-6">Mâine este ziua Z. La ora 21:00 (ora României), Rezerva Federală a SUA (FED) va anunța noua rată a dobânzii.</p>
-      
       <div class="grid md:grid-cols-2 gap-6 mb-8">
         <div class="bg-green-900/20 border border-green-500/30 p-4 rounded-xl">
             <h4 class="text-green-400 font-bold mb-2">🟢 Scenariul Optimist (Teoretic)</h4>
@@ -462,16 +477,13 @@ export const articles = [
             <p class="text-sm text-gray-300">Istoria ne arată că zilele FOMC sunt despre <strong>lichidare</strong>, nu despre direcție.</p>
         </div>
       </div>
-
       <p class="mb-6">Dacă ești un trader începător sau folosești leverage (bani împrumutați), ziua de mâine se poate transforma rapid dintr-o oportunitate într-un coșmar. Iată de ce decizia de mâine este un teren minat.</p>
-
       <h3 class="text-2xl font-bold text-white mt-8 mb-4 border-b border-gray-700 pb-2">1. De ce "Vestea Bună" poate prăbuși piața?</h3>
       <p>Piețele financiare sunt mecanisme de anticipare. O tăiere de 0.25% este deja <em>priced-in</em> (inclusă în preț). Fondurile mari au cumpărat deja anticipând acest moment.</p>
       <div class="bg-yellow-900/10 border-l-4 border-yellow-500 p-4 my-4">
         <strong class="text-yellow-500 block mb-1">⚠️ Pericolul "Sell the News"</strong>
         <p class="text-sm">Instituțiile își marchează profiturile, vânzând masiv exact când micii investitori (retail-ul) încep să cumpere de euforie. Rezultatul? Un "fitil" lung în sus, urmat de o prăbușire violentă.</p>
       </div>
-
       <h3 class="text-2xl font-bold text-white mt-8 mb-4 border-b border-gray-700 pb-2">2. Fenomenul "Darth Maul": Lichidare Totală</h3>
       <p>Cel mai mare pericol pentru cei cu apetit mare de risc nu este direcția greșită, ci volatilitatea extremă. În primele minute după anunț, algoritmii de tranzacționare (HFT) preiau controlul.</p>
       <p>Adesea vedem pe grafic o lumânare de tip <strong>"Darth Maul"</strong> (sabia cu două tăișuri):</p>
@@ -480,21 +492,18 @@ export const articles = [
         <li class="flex items-center gap-3"><span class="text-red-500 text-xl">⬇️</span> <span>În secunda următoare, se prăbușește în JOS (lichidează Long-urile).</span></li>
         <li class="flex items-center gap-3"><span class="text-blue-500 text-xl">➡️</span> <span>Prețul revine la mijloc. Contul tău e gol.</span></li>
       </ul>
-
       <h3 class="text-2xl font-bold text-white mt-8 mb-4 border-b border-gray-700 pb-2">3. Capcana Conferinței de Presă (Ora 21:30)</h3>
       <p>Mulți începători cred că anunțul orei 21:00 este totul. Greșit. Adevăratul pericol începe 30 de minute mai târziu, când <strong>Jerome Powell</strong> iese la microfon.</p>
       <p class="italic text-gray-400 mb-4">Chiar dacă taie dobânda cu 0.25%, tonul lui Powell contează mai mult decât cifra.</p>
       <div class="bg-red-900/10 p-4 rounded-lg">
         <p>Dacă spune: <em>"Economia slăbește, suntem îngrijorați"</em> &rarr; Piața poate interpreta asta ca risc de recesiune și se prăbușește. Fiecare cuvânt este analizat de AI-uri care execută ordine în milisecunde.</p>
       </div>
-
       <h3 class="text-2xl font-bold text-white mt-8 mb-4 border-b border-gray-700 pb-2">4. Pericolul "Slippage-ului" și Blocarea Platformelor</h3>
       <p>În momentele de volatilitate extremă, lichiditatea dispare din Order Book.</p>
       <ul class="list-disc pl-6 space-y-2 mb-6">
         <li><strong>Slippage:</strong> Încerci să vinzi la $98,000, dar ordinul tău se execută la $97,200 pentru că prețul s-a mișcat prea repede.</li>
         <li><strong>Platforme Blocate:</strong> Istoric, marile exchange-uri (Binance, Coinbase) au tendința de a avea "erori tehnice" fix când piața o ia razna. Să rămâi blocat într-o poziție pierzătoare fără a putea închide este un risc real.</li>
       </ul>
-
       <div class="bg-blue-600/10 border border-blue-500 p-6 rounded-2xl text-center mt-8">
         <h4 class="text-xl font-bold text-blue-400 mb-4">Strategia Câștigătoare: "Statul pe Mâini"</h4>
         <p class="mb-4">Cel mai bun trade pe care îl poți face mâine, dacă nu ești profesionist, este să nu faci nimic.</p>
@@ -504,12 +513,11 @@ export const articles = [
             <p>✅ <strong>Focusează-te pe Spot:</strong> Dacă vrei să acumulezi, fă-o fără risc de lichidare.</p>
         </div>
       </div>
-
       <p class="font-bold text-center mt-6">Volatilitatea este o scară: profesioniștii o folosesc să urce, amatorii o folosesc să cadă și să-și rupă gâtul.</p>
     `
   },
 
-  // ✅ 7. ARTICOL: GHID BEAR MARKET (Imagine Locală)
+  // ✅ 8. ARTICOL: GHID BEAR MARKET (Imagine Locală)
   {
     slug: "ce-inseamna-bear-market-ghid-complet",
     title: "Ce Înseamnă \"Bear Market\" și De Ce Nu Trebuie Să Te Sperie? Ghidul Complet.",
@@ -597,7 +605,7 @@ export const articles = [
     `
   },
 
-  // ✅ 8. ARTICOL: CAPCANA URSULUI (PSIHOLOGIE & ISTORIE)
+  // ✅ 9. ARTICOL: CAPCANA URSULUI (PSIHOLOGIE & ISTORIE)
   {
     slug: "capcana-ursului-istorie-crize-evitate",
     title: "\"Capcana Ursului\": De ce Toți Indicatorii de Criză Pot Fi Greșiți. Lecții Istorice.",
@@ -649,7 +657,7 @@ export const articles = [
     `
   },
 
-  // ✅ 9. ARTICOL: FED & DOBÂNZI (MACRO)
+  // ✅ 10. ARTICOL: FED & DOBÂNZI (MACRO)
   {
     slug: "impact-dobanda-fed-bitcoin-scenarii",
     title: "Alertă Maximă: Decizia FED care Poate Arunca Bitcoin în Aer. Scenariile 0.25% vs 0.50%",
@@ -690,7 +698,7 @@ export const articles = [
     `
   },
 
-  // ✅ 10. ARTICOL: BITCOIN MANIPULARE (Imagine Locală: /bitcoin-crash.jpg)
+  // ✅ 11. ARTICOL: BITCOIN MANIPULARE (Imagine Locală: /bitcoin-crash.jpg)
   {
     slug: "bitcoin-manipulare-sau-corectie-brutala",
     title: "Bitcoin: Manipulare Instituțională sau Corecție Brutală? Anatomia unei Prăbușiri de 19 Miliarde $",
@@ -735,7 +743,7 @@ export const articles = [
     `
   },
 
-  // ✅ 11. ARTICOL: BITCOIN SOPR
+  // ✅ 12. ARTICOL: BITCOIN SOPR
   {
     slug: "semnal-on-chain-bitcoin-sopr-rally",
     title: "Semnal On-Chain: Vânzătorii au obosit. Bitcoin pregătește Raliul de Decembrie?",
@@ -766,7 +774,7 @@ export const articles = [
     `
   },
 
-  // ✅ 12. ARTICOL: QUANTUM COMPUTING
+  // ✅ 13. ARTICOL: QUANTUM COMPUTING
   {
     slug: "riscuri-quantum-computing-bitcoin-explicat",
     title: "Calculatoarele Cuantice vs. Bitcoin: Sfârșitul Criptomonedelor sau Doar o Nouă Provocare?",
@@ -790,7 +798,7 @@ export const articles = [
     `
   },
 
-  // ✅ 13. ARTICOL: SUA & CFTC (Imagine Locală: /cftc-announcement.jpg)
+  // ✅ 14. ARTICOL: SUA & CFTC (Imagine Locală: /cftc-announcement.jpg)
   {
     slug: "sua-cftc-crypto-spot-reglementat",
     title: "BREAKING: SUA pune capăt erei 'Offshore'. Crypto devine oficial activ federal.",
@@ -826,7 +834,7 @@ export const articles = [
     `
   },
 
-  // ✅ 14. ARTICOL: ATAC 27M
+  // ✅ 15. ARTICOL: ATAC 27M
   {
     slug: "atac-27-milioane-link-malitios",
     title: "ALERTA: Cum să pierzi 27.000.000$ într-o secundă. Pericolul invizibil din buzunarul tău",
@@ -864,7 +872,7 @@ export const articles = [
     `
   },
 
-  // ✅ 15. ARTICOL: VANGUARD & CFTC (Legacy)
+  // ✅ 16. ARTICOL: VANGUARD & CFTC (Legacy)
   {
     slug: "marea-convergenta-crypto",
     title: "Marea Convergență: Vanguard și CFTC validează Crypto ca 'Gold Standard'",
@@ -890,7 +898,7 @@ export const articles = [
     `
   },
 
-  // ✅ 16. ARTICOL: QIVALIS
+  // ✅ 17. ARTICOL: QIVALIS
   {
     slug: "qivalis-banci-europene-stablecoin",
     title: "BREAKING: 9 Bănci Gigant lansează Qivalis - Euro Stablecoin",
@@ -927,7 +935,7 @@ export const articles = [
     `
   },
 
-  // ✅ 17. ARTICOL: SEC ETF ETHEREUM
+  // ✅ 18. ARTICOL: SEC ETF ETHEREUM
   {
     slug: "sec-aproba-etf-ethereum",
     title: "SEC Aprobă ETF-ul de Ethereum Spot",
@@ -945,7 +953,7 @@ export const articles = [
     `
   },
 
-  // ✅ 18. ARTICOL: SOLANA FIREDANCER
+  // ✅ 19. ARTICOL: SOLANA FIREDANCER
   {
     slug: "solana-firedancer",
     title: "Solana lansează Firedancer",
@@ -962,7 +970,7 @@ export const articles = [
     `
   },
 
-  // ✅ 19. ARTICOL: INFLATIE CPI
+  // ✅ 20. ARTICOL: INFLATIE CPI
   {
     slug: "inflatie-sua-cpi",
     title: "Inflația SUA crește (CPI 3.4%)",
