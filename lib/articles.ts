@@ -1,11 +1,82 @@
-export const articles = [ 
-  // ✅ 1. ARTICOL NOU: ACUMULARE INSTITUȚIONALĂ ETHEREUM
+export const articles = [
+  // ✅ 1. ARTICOL NOU (AZI): MITUL ALTCOIN SEASON
+  {
+    slug: "mitul-si-realitatea-altcoin-season-2022-2026",
+    title: "2022-2025: Marea Minciună a Altcoin-urilor. Studiu de Piață: Mitul și Realitatea \"Altcoin Season\".",
+    date: "13 Dec 2025",
+    category: "ANALIZĂ PIAȚĂ",
+    image: "/altcoinseasson.jpg", // ✅ Asigură-te că ai poza asta în 'public'
+    impact: "neutral", 
+    summary: "De ce nu am avut un 'Altcoin Season' adevărat în ultimii 3 ani? Analizăm datele reci, 'mini-bulele' sectoriale și de ce 2026 ar putea fi anul decisiv pentru investitorii selectivi.",
+    mihaiTake: "Tati, nu te lăsa păcălit de influenceri care strigă 'To The Moon' la orice pompare de 5%. Piața s-a schimbat. Banii nu mai curg peste tot ca în 2017. Acum ești într-un joc de șah, nu la păcănele. În 2026, doar proiectele cu utilitate vor supraviețui.",
+    content: `
+      <p class="text-xl font-medium text-white mb-6">Pentru publicul larg, trebuie să demontăm ideea că "Altcoin Season" înseamnă doar că prețurile cresc. Realitatea din ultimii ani a fost mult mai dură pentru portofoliile micilor investitori.</p>
+      
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">1. Ce înseamnă "Altcoin Season" (Explicația Simplă)</h3>
+      
+      <div class="bg-blue-900/20 border-l-4 border-blue-500 p-4 my-6 rounded-r-lg">
+        <p class="text-blue-200 font-bold mb-2">Definiția Tehnică:</p>
+        <p class="text-gray-300">Un Altcoin Season este declarat oficial doar atunci când <strong>75% dintre primele 50 de monede (Altcoins)</strong> performează mai bine decât Bitcoin pe o perioadă de 90 de zile.</p>
+      </div>
+
+      <p class="mb-4"><strong>Analogia pe înțelesul tuturor:</strong> Gândește-te la Bitcoin ca la "Regele" care intră primul în sala de bal (crește prețul). Cât timp ochii sunt pe Rege, nimeni nu dansează.</p>
+      <p class="mb-6">Altcoin Season este momentul în care Regele se așază pe tron (Bitcoin stagnează sau crește încet), iar "nobilii" (Ethereum, Solana etc.) și apoi "poporul" (monedele mici) încep să danseze frenetic (creșteri explozive de 5x, 10x, 50x).</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">2. Analiza Perioadei 2022 - Prezent (Am avut Altseason?)</h3>
+      
+      <p class="mb-6">Dacă ne uităm la datele reci, răspunsul scurt este: <strong>NU</strong>, nu am avut un "Altcoin Season" clasic și susținut, similar cu cel din 2017 sau 2021. Am avut doar "Mini-Sezoane" sectoriale.</p>
+
+      <div class="space-y-6">
+        <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700">
+            <h4 class="text-lg font-bold text-red-400 mb-2">2022 (Bear Market)</h4>
+            <p class="text-gray-300 text-sm">A fost iarnă nucleară. Totul a scăzut, Bitcoin Dominance (BTC.D) a fluctuat, dar frica a dominat piața.</p>
+        </div>
+
+        <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700">
+            <h4 class="text-lg font-bold text-orange-400 mb-2">2023 (Anul Acumulării)</h4>
+            <p class="text-gray-300 text-sm">Bitcoin a început să își revină, dar Altcoin-urile au rămas în urmă. Cei care au cumpărat Alts aici au suferit, pentru că BTC le-a "supt" lichiditatea.</p>
+        </div>
+
+        <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700">
+            <h4 class="text-lg font-bold text-green-400 mb-2">2024 - 2025 (Bitcoin Season & ETF)</h4>
+            <p class="text-gray-300 text-sm">Aceasta a fost era instituțională. Banii grei au intrat în Bitcoin prin ETF-uri. <strong>Excepția:</strong> Am avut "Mini-Bule" pe sectoare specifice: AI și Meme Coins. Dar asta NU este un Altcoin Season generalizat, ci o rotație speculativă.</p>
+        </div>
+        
+        <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700">
+            <h4 class="text-lg font-bold text-purple-400 mb-2">Q3 2025 (Fenta din Septembrie)</h4>
+            <p class="text-gray-300 text-sm">Datele arată un scurt moment în septembrie 2025 când indexul a atins valoarea de 78 (tehnic un Altseason), dar a fost rapid urmat de o corecție. A fost mai degrabă o capcană.</p>
+        </div>
+      </div>
+
+      <p class="mt-6 italic text-gray-400 border-l-2 border-gray-600 pl-4">Concluzia pentru audiență: Cine a așteptat un sezon generalizat în care "totul crește" a pierdut bani sau timp. Piața s-a maturizat și a devenit selectivă.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">3. Ce urmează? Predicții pentru 2026</h3>
+      <p class="mb-6">Aici intervine expertiza și "Alpha-ul". De ce 2026 arată diferit?</p>
+
+      <ul class="list-disc pl-6 space-y-4 text-gray-300 mb-8">
+        <li><strong>Lichiditatea Globală:</strong> Istoric, Altcoin Season apare la aproximativ 12-18 luni DUPĂ halving-ul Bitcoin, când băncile centrale (FED, BCE) încep să tipărească bani ieftini (rate scăzute). Suntem exact în acel grafic pentru 2026.</li>
+        <li><strong>Dominanța Bitcoin (BTC.D):</strong> Momentan, BTC.D este încă sus. Semnalul de declanșare pentru Altseason va fi când BTC.D va atinge un vârf (poate 60%+) și va începe să cadă brusc, în timp ce prețul Bitcoin rămâne stabil.</li>
+        <li><strong>Instituțiile caută randament:</strong> După ce au cumpărat Bitcoin, fondurile mari vor căuta randamente mai mari. Unde se duc? În Ethereum (ETF-uri), Solana și proiecte de infrastructură Real World Assets (RWA).</li>
+      </ul>
+
+      <div class="mt-8 p-8 bg-gradient-to-br from-gray-900 to-black border border-gray-700 rounded-2xl text-center shadow-xl">
+        <h4 class="text-2xl font-bold text-white mb-4">Cum te poziționezi TU vs. Mulțime</h4>
+        <p class="text-gray-300 mb-6">Competiția va striga "Altseason" la fiecare lumânare verde de 5% pe Shiba Inu. Vor induce FOMO nefondat.</p>
+        <div class="bg-green-900/20 p-4 rounded-xl border border-green-500/30 inline-block">
+            <p class="text-lg font-bold text-green-400">Strategia Smart Money:</p>
+            <p class="text-white mt-2">"Nu cumpărați tot ce zboară. În 2026, nu toate bărcile se vor ridica odată cu mareea. Doar cele cu utilitate (Utility), venituri reale și adopție instituțională vor supraviețui."</p>
+        </div>
+      </div>
+    `
+  },
+
+  // ✅ 2. ARTICOL: ACUMULARE INSTITUȚIONALĂ ETHEREUM
   {
     slug: "acumulare-institutionala-ethereum-dat-bmnr-2025",
     title: "Acumularea Instituțională de Ethereum: O Tendință Bullish în 2025",
     date: "12 Dec 2025",
     category: "INSTITUȚIONAL",
-    image: "/acumulare-eth.jpg", // ✅ Asigură-te că ai poza asta în 'public'
+    image: "/acumulare-eth.jpg", 
     impact: "bullish",
     summary: "Instituțiile nu se opresc. Descoperă cum Digital Asset Treasuries (DATs) și giganți precum BitMine (BMNR) acumulează masiv Ethereum, pregătind terenul pentru un super-ciclu, susținut de BlackRock.",
     mihaiTake: "Tati, urmărește banii deștepți ('Smart Money'). Când vezi că firme listate la bursă își transformă cash-ul în Ethereum și BlackRock vrea ETF cu Staking, nu mai e loc de dubii. Instituțiile cumpără tot ce prind. Tu ce faci? Stai pe margine sau acumulezi?",
@@ -89,7 +160,7 @@ export const articles = [
     `
   },
 
-  // ✅ 2. ARTICOL: IMPACT REUNIUNE FOMC DECEMBRIE 2025
+  // ✅ 3. ARTICOL: IMPACT REUNIUNE FOMC DECEMBRIE 2025
   {
     slug: "impact-reuniune-fomc-decembrie-2025-crypto",
     title: "Impactul Reuniunii FOMC din Decembrie 2025 asupra Pieței Crypto: O Analiză Detaliată și Explicativă",
@@ -130,7 +201,7 @@ export const articles = [
             <h4 class="text-xl font-bold text-orange-400 mb-3">3. Proiecții Economice: Creștere Mai Mare în 2026</h4>
             <ul class="list-disc pl-5 space-y-2 text-gray-300">
                 <li><strong>Creștere economică:</strong> PIB-ul SUA este proiectat să crească de la 1,7% în 2025 la 2,3% în 2026 – un semnal optimist că economia va accelera, posibil datorită politicilor fiscale și reducerii inflației.</li>
-                <li><strong>Inflație:</strong> Rămâne ridicată la 2,9% în 2025 (față de ținta de 2%), dar scade la 2,4% în 2026. Powell a menționat riscuri ascendente din cauza tarifelor vamale, dar le consideră temporare.</li>
+                <li><strong>Inflație:</strong> Rămâne ridicată la 2,9% în 2025 (față de ținta de 2%), dar scade la 2.4% în 2026. Powell a menționat riscuri ascendente din cauza tarifelor vamale, dar le consideră temporare.</li>
                 <li><strong>Piața muncii:</strong> Șomajul este așteptat la 4,5% în 2025, cu o răcire graduală. Powell a descris-o ca "foarte slabă", cu creșteri mai mici de locuri de muncă și o cerere redusă.</li>
                 <li><strong>Alte semnale:</strong> Indicele ISM (un indicator al activității manufacturiere) ar putea depăși 50 în 2026, semnalând expansiune – un factor istoric pozitiv pentru piețele de risc.</li>
             </ul>
@@ -167,7 +238,7 @@ export const articles = [
     `
   },
 
-  // ✅ 3. ARTICOL: HALVING VS LICHIDITATE (Imagine Locală)
+  // ✅ 4. ARTICOL: HALVING VS LICHIDITATE (Imagine Locală)
   {
     slug: "mitul-halving-ului-sacru-vs-realitatea-lichiditatii",
     title: "Mitul \"Halving-ului Sacru\" vs. Realitatea Lichidității: Ce dictează cu adevărat prețul Bitcoin în 2025?",
@@ -275,7 +346,7 @@ export const articles = [
     `
   },
 
-  // ✅ 4. ARTICOL: LEVIERUL (EDUCAȚIE & RISK) - INTEGRAL
+  // ✅ 5. ARTICOL: LEVIERUL (EDUCAȚIE & RISK) - INTEGRAL
   {
     slug: "mirajul-levierului-arma-financiara-distrugere",
     title: "Mirajul Levierului: \"Arma Financiară de Distrugere în Masă\" care îți poate Zeroiza Contul într-o Secundă. Ghid de Conștientizare.",
@@ -368,7 +439,7 @@ export const articles = [
     `
   },
 
-  // ✅ 5. ARTICOL: ALERTĂ FED (Imagine Locală)
+  // ✅ 6. ARTICOL: ALERTĂ FED (Imagine Locală)
   {
     slug: "alerta-volatilitate-decizie-fed-capcana-mortala",
     title: "Alertă de Volatilitate: De ce Decizia FED de Mâine Poate Fi o \"Capcană Mortală\"",
@@ -438,7 +509,7 @@ export const articles = [
     `
   },
 
-  // ✅ 6. ARTICOL: GHID BEAR MARKET (Imagine Locală)
+  // ✅ 7. ARTICOL: GHID BEAR MARKET (Imagine Locală)
   {
     slug: "ce-inseamna-bear-market-ghid-complet",
     title: "Ce Înseamnă \"Bear Market\" și De Ce Nu Trebuie Să Te Sperie? Ghidul Complet.",
@@ -526,7 +597,7 @@ export const articles = [
     `
   },
 
-  // ✅ 7. ARTICOL: CAPCANA URSULUI (PSIHOLOGIE & ISTORIE)
+  // ✅ 8. ARTICOL: CAPCANA URSULUI (PSIHOLOGIE & ISTORIE)
   {
     slug: "capcana-ursului-istorie-crize-evitate",
     title: "\"Capcana Ursului\": De ce Toți Indicatorii de Criză Pot Fi Greșiți. Lecții Istorice.",
@@ -578,7 +649,7 @@ export const articles = [
     `
   },
 
-  // ✅ 8. ARTICOL: FED & DOBÂNZI (MACRO)
+  // ✅ 9. ARTICOL: FED & DOBÂNZI (MACRO)
   {
     slug: "impact-dobanda-fed-bitcoin-scenarii",
     title: "Alertă Maximă: Decizia FED care Poate Arunca Bitcoin în Aer. Scenariile 0.25% vs 0.50%",
@@ -619,7 +690,7 @@ export const articles = [
     `
   },
 
-  // ✅ 9. ARTICOL: BITCOIN MANIPULARE (Imagine Locală: /bitcoin-crash.jpg)
+  // ✅ 10. ARTICOL: BITCOIN MANIPULARE (Imagine Locală: /bitcoin-crash.jpg)
   {
     slug: "bitcoin-manipulare-sau-corectie-brutala",
     title: "Bitcoin: Manipulare Instituțională sau Corecție Brutală? Anatomia unei Prăbușiri de 19 Miliarde $",
@@ -664,7 +735,7 @@ export const articles = [
     `
   },
 
-  // ✅ 10. ARTICOL: BITCOIN SOPR
+  // ✅ 11. ARTICOL: BITCOIN SOPR
   {
     slug: "semnal-on-chain-bitcoin-sopr-rally",
     title: "Semnal On-Chain: Vânzătorii au obosit. Bitcoin pregătește Raliul de Decembrie?",
@@ -695,7 +766,7 @@ export const articles = [
     `
   },
 
-  // ✅ 11. ARTICOL: QUANTUM COMPUTING
+  // ✅ 12. ARTICOL: QUANTUM COMPUTING
   {
     slug: "riscuri-quantum-computing-bitcoin-explicat",
     title: "Calculatoarele Cuantice vs. Bitcoin: Sfârșitul Criptomonedelor sau Doar o Nouă Provocare?",
@@ -719,7 +790,7 @@ export const articles = [
     `
   },
 
-  // ✅ 12. ARTICOL: SUA & CFTC (Imagine Locală: /cftc-announcement.jpg)
+  // ✅ 13. ARTICOL: SUA & CFTC (Imagine Locală: /cftc-announcement.jpg)
   {
     slug: "sua-cftc-crypto-spot-reglementat",
     title: "BREAKING: SUA pune capăt erei 'Offshore'. Crypto devine oficial activ federal.",
@@ -755,7 +826,7 @@ export const articles = [
     `
   },
 
-  // ✅ 13. ARTICOL: ATAC 27M
+  // ✅ 14. ARTICOL: ATAC 27M
   {
     slug: "atac-27-milioane-link-malitios",
     title: "ALERTA: Cum să pierzi 27.000.000$ într-o secundă. Pericolul invizibil din buzunarul tău",
@@ -793,7 +864,7 @@ export const articles = [
     `
   },
 
-  // ✅ 14. ARTICOL: VANGUARD & CFTC (Legacy)
+  // ✅ 15. ARTICOL: VANGUARD & CFTC (Legacy)
   {
     slug: "marea-convergenta-crypto",
     title: "Marea Convergență: Vanguard și CFTC validează Crypto ca 'Gold Standard'",
@@ -819,7 +890,7 @@ export const articles = [
     `
   },
 
-  // ✅ 15. ARTICOL: QIVALIS
+  // ✅ 16. ARTICOL: QIVALIS
   {
     slug: "qivalis-banci-europene-stablecoin",
     title: "BREAKING: 9 Bănci Gigant lansează Qivalis - Euro Stablecoin",
@@ -856,7 +927,7 @@ export const articles = [
     `
   },
 
-  // ✅ 16. ARTICOL: SEC ETF ETHEREUM
+  // ✅ 17. ARTICOL: SEC ETF ETHEREUM
   {
     slug: "sec-aproba-etf-ethereum",
     title: "SEC Aprobă ETF-ul de Ethereum Spot",
@@ -874,7 +945,7 @@ export const articles = [
     `
   },
 
-  // ✅ 17. ARTICOL: SOLANA FIREDANCER
+  // ✅ 18. ARTICOL: SOLANA FIREDANCER
   {
     slug: "solana-firedancer",
     title: "Solana lansează Firedancer",
@@ -891,7 +962,7 @@ export const articles = [
     `
   },
 
-  // ✅ 18. ARTICOL: INFLATIE CPI
+  // ✅ 19. ARTICOL: INFLATIE CPI
   {
     slug: "inflatie-sua-cpi",
     title: "Inflația SUA crește (CPI 3.4%)",
@@ -907,4 +978,4 @@ export const articles = [
       <p>Așteptați-vă la volatilitate pe termen scurt. Nu este momentul pentru levier mare.</p>
     `
   }
-]; 
+];
