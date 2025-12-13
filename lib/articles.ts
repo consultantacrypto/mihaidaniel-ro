@@ -1,11 +1,76 @@
 export const articles = [
-  // ✅ 1. ARTICOL NOU (AZI): US TREASURY DEBT BUYBACK
+  // ✅ 1. ARTICOL NOU (AZI): SEZONUL CELOR 20
+  {
+    slug: "nu-asteptati-altcoin-season-vine-sezonul-celor-20",
+    title: "Nu așteptați \"Altcoin Season\". Vine \"Sezonul celor 20\".",
+    date: "16 Dec 2025",
+    category: "STRATEGIE & PORTFOLIO",
+    image: "/cele20.jpg", // ✅ Imaginea ta uploadată
+    impact: "bullish", 
+    summary: "Lichiditatea nu mai curge în cascadă. 99% din monede vor tinde spre zero. Află care sunt cele 20 de active 'alese' de instituții pentru ciclul 2026.",
+    mihaiTake: "Tati, epoca 'spray and pray' a murit. Nu mai arunca banii în toate proiectele obscure sperând la 100x. În 2026, banii inteligenți se concentrează. Dacă portofoliul tău arată ca o salată de fructe cu 50 de monede, ești victima sigură. Concentrare = Avere.",
+    content: `
+      <p class="text-xl font-medium text-white mb-6">În ciclurile trecute (2017, 2021), lichiditatea se revărsa ca o cascadă: din Bitcoin -> în ETH -> în Mid Caps -> în Shitcoins. Totul creștea. <strong>În 2026, cascada s-a oprit.</strong></p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">1. Schimbarea de Paradigmă: 99% vs. 1%</h3>
+      
+      <p class="mb-4">Realitatea este brutală: Avem zeci de mii de criptomonede. Majoritatea sunt "Zombie Chains" (fără utilizatori, doar cu boți) sau proiecte abandonate de developeri.</p>
+      
+      <div class="bg-red-900/20 border-l-4 border-red-500 p-6 my-6 rounded-r-lg">
+        <p class="text-red-200 font-bold mb-2">Avertisment:</p>
+        <p class="text-gray-300">Cei care așteaptă ca vechile lor portofolii de "bijuterii" din 2021 să revină la ATH (All Time High) vor rămâne cu ochii în soare. Banii noi nu intră acolo.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">2. Lista Scurtă a Instituțiilor (The Shortlist)</h3>
+      <p class="mb-4">Lichiditatea care vine dinspre FED și Trezorerie (cei 40-60 Mld. $/lună) intră prin vehicule reglementate (ETF-uri, Fonduri, Bănci).</p>
+
+      <div class="bg-gray-800 p-6 rounded-xl border border-gray-600 my-6">
+        <h4 class="text-xl font-bold text-blue-400 mb-4 flex items-center gap-2">🛡️ Filtrul Instituțional</h4>
+        <p class="mb-4 text-gray-300">Acești bani "smart" au voie legal să atingă doar active care îndeplinesc 3 condiții stricte:</p>
+        <ul class="space-y-3 text-gray-200">
+            <li class="flex items-start gap-2"><span class="text-blue-500">✔</span> <strong>Claritate Juridică:</strong> Să fie Commodity sau MiCA Compliant.</li>
+            <li class="flex items-start gap-2"><span class="text-blue-500">✔</span> <strong>Lichiditate Masivă:</strong> Să poți intra/ieși cu 100M$ fără să prăbușești prețul.</li>
+            <li class="flex items-start gap-2"><span class="text-blue-500">✔</span> <strong>Track Record:</strong> Să fi supraviețuit minim unui Bear Market.</li>
+        </ul>
+      </div>
+
+      <p class="mb-6"><strong>Rezultatul:</strong> Banii se vor opri la Bitcoin (Regele), Ethereum (Regina/Infrastructura) și o "Gardă Pretoriană" de maxim <strong>15-20 de Altcoins</strong> (Top Layer 1 active, Top AI Protocols, Top RWA). Restul e zgomot.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">3. De ce ETH și "Cei 20" vor surclasa piața</h3>
+      
+      <div class="grid gap-6 mb-8">
+        <div class="bg-gradient-to-br from-purple-900/20 to-blue-900/20 p-5 rounded-xl border border-purple-500/30">
+            <strong class="text-purple-400 block mb-2 text-lg">Ethereum (ETH)</strong>
+            <p class="text-gray-300 text-sm">Este singurul blockchain profitabil cu un ecosistem financiar real. ETF-urile pe ETH abia încep să fie vândute clienților bogați.</p>
+        </div>
+        <div class="bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-5 rounded-xl border border-green-500/30">
+            <strong class="text-green-400 block mb-2 text-lg">"Cei 20" (Solana, Chainlink, AI, RWA)</strong>
+            <p class="text-gray-300 text-sm">Acestea vor funcționa ca acțiunile tehnologice (Nvidia, Microsoft). Vor atrage tot capitalul speculativ inteligent.</p>
+        </div>
+        <div class="bg-gradient-to-br from-red-900/20 to-orange-900/20 p-5 rounded-xl border border-red-500/30">
+            <strong class="text-red-400 block mb-2 text-lg">Restul pieței</strong>
+            <p class="text-gray-300 text-sm">Va fi un cimitir. Vor avea pompe izolate de o zi (manipulare), dar trendul va fi spre zero față de BTC.</p>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">4. Strategia Corectă: Concentrare, nu Diversificare</h3>
+      
+      <div class="p-8 bg-gradient-to-r from-gray-900 to-black border border-white/10 rounded-2xl text-center shadow-2xl">
+        <p class="text-xl text-white font-medium leading-relaxed italic">
+            "Diversificarea în 50 de altcoins este sinucidere financiară în 2026. În loc să cumperi 'totul', pariază pe caii câștigători. <br/><br/>
+            <span class="text-green-400 font-bold not-italic">Dacă moneda ta nu e în vizorul BlackRock/Bybit Institutional, vinde-o și mută-te în cele 20 care contează."</span>
+        </p>
+      </div>
+    `
+  },
+
+  // ✅ 2. ARTICOL: US TREASURY DEBT BUYBACK
   {
     slug: "trezoreria-sua-debt-buyback-semnal-crypto-2026",
     title: "Trezoreria SUA tocmai a făcut-o din nou ($12.5 MLD). Și nimeni din România nu vorbește despre asta.",
     date: "15 Dec 2025",
     category: "MACRO & LICHIDITATE",
-    image: "/usdebt.jpg", // ✅ Asigură-te că ai poza asta în 'public'
+    image: "/usdebt.jpg",
     impact: "bullish", 
     summary: "Încă o răscumpărare de datorie de 12,5 MILIARDE $. A doua în 7 zile. Nu e 'QE' oficial, dar e lichiditate pe ușa din spate. Află de ce acest semnal tehnic dictează următorul Bull Run.",
     mihaiTake: "Tati, nu te uita la ce spun ei la TV, uită-te la ce fac cu banii. Când Trezoreria cumpără propria datorie, înseamnă că 'motorul' scârțâie și are nevoie de ulei. Uleiul ăla e lichiditate. Și lichiditatea ajunge mereu în Bitcoin. Nu paria împotriva tiparniței.",
@@ -60,7 +125,7 @@ export const articles = [
     `
   },
 
-  // ✅ 2. ARTICOL: MiCA & BLOCADA BANCARĂ (TEXT INTEGRAL)
+  // ✅ 3. ARTICOL: MiCA & BLOCADA BANCARĂ (TEXT INTEGRAL)
   {
     slug: "cortina-de-fier-financiara-europeana-mica-2026",
     title: "\"Cortina de Fier\" Financiară a Europei (2026): Pericolele Tranzacționării pe Platforme Nereglementate",
@@ -139,7 +204,7 @@ export const articles = [
     `
   },
 
-  // ✅ 3. ARTICOL: MITUL ALTCOIN SEASON
+  // ✅ 4. ARTICOL: MITUL ALTCOIN SEASON
   {
     slug: "mitul-si-realitatea-altcoin-season-2022-2026",
     title: "2022-2025: Marea Minciună a Altcoin-urilor. Studiu de Piață: Mitul și Realitatea \"Altcoin Season\".",
@@ -197,7 +262,7 @@ export const articles = [
     `
   },
 
-  // ✅ 4. ARTICOL: ACUMULARE INSTITUȚIONALĂ ETHEREUM
+  // ✅ 5. ARTICOL: ACUMULARE INSTITUȚIONALĂ ETHEREUM
   {
     slug: "acumulare-institutionala-ethereum-dat-bmnr-2025",
     title: "Acumularea Instituțională de Ethereum: O Tendință Bullish în 2025",
@@ -266,7 +331,7 @@ export const articles = [
     `
   },
 
-  // ✅ 5. ARTICOL: IMPACT REUNIUNE FOMC DECEMBRIE 2025
+  // ✅ 6. ARTICOL: IMPACT REUNIUNE FOMC DECEMBRIE 2025
   {
     slug: "impact-reuniune-fomc-decembrie-2025-crypto",
     title: "Impactul Reuniunii FOMC din Decembrie 2025 asupra Pieței Crypto: O Analiză Detaliată și Explicativă",
@@ -331,7 +396,7 @@ export const articles = [
     `
   },
 
-  // ✅ 6. ARTICOL: HALVING VS LICHIDITATE (Imagine Locală)
+  // ✅ 7. ARTICOL: HALVING VS LICHIDITATE (Imagine Locală)
   {
     slug: "mitul-halving-ului-sacru-vs-realitatea-lichiditatii",
     title: "Mitul \"Halving-ului Sacru\" vs. Realitatea Lichidității: Ce dictează cu adevărat prețul Bitcoin în 2025?",
@@ -424,7 +489,7 @@ export const articles = [
     `
   },
 
-  // ✅ 7. ARTICOL: LEVIERUL (EDUCAȚIE & RISK) - INTEGRAL
+  // ✅ 8. ARTICOL: LEVIERUL (EDUCAȚIE & RISK) - INTEGRAL
   {
     slug: "mirajul-levierului-arma-financiara-distrugere",
     title: "Mirajul Levierului: \"Arma Financiară de Distrugere în Masă\" care îți poate Zeroiza Contul într-o Secundă. Ghid de Conștientizare.",
@@ -505,7 +570,7 @@ export const articles = [
     `
   },
 
-  // ✅ 8. ARTICOL: ALERTĂ FED (Imagine Locală)
+  // ✅ 9. ARTICOL: ALERTĂ FED (Imagine Locală)
   {
     slug: "alerta-volatilitate-decizie-fed-capcana-mortala",
     title: "Alertă de Volatilitate: De ce Decizia FED de Mâine Poate Fi o \"Capcană Mortală\"",
@@ -567,7 +632,7 @@ export const articles = [
     `
   },
 
-  // ✅ 9. ARTICOL: GHID BEAR MARKET (Imagine Locală)
+  // ✅ 10. ARTICOL: GHID BEAR MARKET (Imagine Locală)
   {
     slug: "ce-inseamna-bear-market-ghid-complet",
     title: "Ce Înseamnă \"Bear Market\" și De Ce Nu Trebuie Să Te Sperie? Ghidul Complet.",
@@ -655,7 +720,7 @@ export const articles = [
     `
   },
 
-  // ✅ 10. ARTICOL: CAPCANA URSULUI (PSIHOLOGIE & ISTORIE)
+  // ✅ 11. ARTICOL: CAPCANA URSULUI (PSIHOLOGIE & ISTORIE)
   {
     slug: "capcana-ursului-istorie-crize-evitate",
     title: "\"Capcana Ursului\": De ce Toți Indicatorii de Criză Pot Fi Greșiți. Lecții Istorice.",
@@ -707,7 +772,7 @@ export const articles = [
     `
   },
 
-  // ✅ 11. ARTICOL: FED & DOBÂNZI (MACRO)
+  // ✅ 12. ARTICOL: FED & DOBÂNZI (MACRO)
   {
     slug: "impact-dobanda-fed-bitcoin-scenarii",
     title: "Alertă Maximă: Decizia FED care Poate Arunca Bitcoin în Aer. Scenariile 0.25% vs 0.50%",
@@ -748,7 +813,7 @@ export const articles = [
     `
   },
 
-  // ✅ 12. ARTICOL: BITCOIN MANIPULARE (Imagine Locală: /bitcoin-crash.jpg)
+  // ✅ 13. ARTICOL: BITCOIN MANIPULARE (Imagine Locală: /bitcoin-crash.jpg)
   {
     slug: "bitcoin-manipulare-sau-corectie-brutala",
     title: "Bitcoin: Manipulare Instituțională sau Corecție Brutală? Anatomia unei Prăbușiri de 19 Miliarde $",
@@ -793,7 +858,7 @@ export const articles = [
     `
   },
 
-  // ✅ 13. ARTICOL: BITCOIN SOPR
+  // ✅ 14. ARTICOL: BITCOIN SOPR
   {
     slug: "semnal-on-chain-bitcoin-sopr-rally",
     title: "Semnal On-Chain: Vânzătorii au obosit. Bitcoin pregătește Raliul de Decembrie?",
@@ -824,7 +889,7 @@ export const articles = [
     `
   },
 
-  // ✅ 14. ARTICOL: QUANTUM COMPUTING
+  // ✅ 15. ARTICOL: QUANTUM COMPUTING
   {
     slug: "riscuri-quantum-computing-bitcoin-explicat",
     title: "Calculatoarele Cuantice vs. Bitcoin: Sfârșitul Criptomonedelor sau Doar o Nouă Provocare?",
@@ -848,7 +913,7 @@ export const articles = [
     `
   },
 
-  // ✅ 15. ARTICOL: SUA & CFTC (Imagine Locală: /cftc-announcement.jpg)
+  // ✅ 16. ARTICOL: SUA & CFTC (Imagine Locală: /cftc-announcement.jpg)
   {
     slug: "sua-cftc-crypto-spot-reglementat",
     title: "BREAKING: SUA pune capăt erei 'Offshore'. Crypto devine oficial activ federal.",
@@ -884,7 +949,7 @@ export const articles = [
     `
   },
 
-  // ✅ 16. ARTICOL: ATAC 27M
+  // ✅ 17. ARTICOL: ATAC 27M
   {
     slug: "atac-27-milioane-link-malitios",
     title: "ALERTA: Cum să pierzi 27.000.000$ într-o secundă. Pericolul invizibil din buzunarul tău",
@@ -922,7 +987,7 @@ export const articles = [
     `
   },
 
-  // ✅ 17. ARTICOL: VANGUARD & CFTC (Legacy)
+  // ✅ 18. ARTICOL: VANGUARD & CFTC (Legacy)
   {
     slug: "marea-convergenta-crypto",
     title: "Marea Convergență: Vanguard și CFTC validează Crypto ca 'Gold Standard'",
@@ -948,7 +1013,7 @@ export const articles = [
     `
   },
 
-  // ✅ 18. ARTICOL: QIVALIS
+  // ✅ 19. ARTICOL: QIVALIS
   {
     slug: "qivalis-banci-europene-stablecoin",
     title: "BREAKING: 9 Bănci Gigant lansează Qivalis - Euro Stablecoin",
@@ -985,7 +1050,7 @@ export const articles = [
     `
   },
 
-  // ✅ 19. ARTICOL: SEC ETF ETHEREUM
+  // ✅ 20. ARTICOL: SEC ETF ETHEREUM
   {
     slug: "sec-aproba-etf-ethereum",
     title: "SEC Aprobă ETF-ul de Ethereum Spot",
@@ -1003,7 +1068,7 @@ export const articles = [
     `
   },
 
-  // ✅ 20. ARTICOL: SOLANA FIREDANCER
+  // ✅ 21. ARTICOL: SOLANA FIREDANCER
   {
     slug: "solana-firedancer",
     title: "Solana lansează Firedancer",
@@ -1020,7 +1085,7 @@ export const articles = [
     `
   },
 
-  // ✅ 21. ARTICOL: INFLATIE CPI
+  // ✅ 22. ARTICOL: INFLATIE CPI
   {
     slug: "inflatie-sua-cpi",
     title: "Inflația SUA crește (CPI 3.4%)",
