@@ -1,5 +1,66 @@
 export const articles = [
-  // ✅ 1. ARTICOL NOU: MiCA & BLOCADA BANCARĂ (TEXT INTEGRAL)
+  // ✅ 1. ARTICOL NOU (AZI): US TREASURY DEBT BUYBACK
+  {
+    slug: "trezoreria-sua-debt-buyback-semnal-crypto-2026",
+    title: "Trezoreria SUA tocmai a făcut-o din nou ($12.5 MLD). Și nimeni din România nu vorbește despre asta.",
+    date: "15 Dec 2025",
+    category: "MACRO & LICHIDITATE",
+    image: "/usdebt.jpg", // ✅ Asigură-te că ai poza asta în 'public'
+    impact: "bullish", 
+    summary: "Încă o răscumpărare de datorie de 12,5 MILIARDE $. A doua în 7 zile. Nu e 'QE' oficial, dar e lichiditate pe ușa din spate. Află de ce acest semnal tehnic dictează următorul Bull Run.",
+    mihaiTake: "Tati, nu te uita la ce spun ei la TV, uită-te la ce fac cu banii. Când Trezoreria cumpără propria datorie, înseamnă că 'motorul' scârțâie și are nevoie de ulei. Uleiul ăla e lichiditate. Și lichiditatea ajunge mereu în Bitcoin. Nu paria împotriva tiparniței.",
+    content: `
+      <p class="text-xl font-medium text-white mb-6">Încă o răscumpărare de datorie (Debt Buyback) de <strong>12,5 MILIARDE $</strong>. Asta vine la doar o săptămână după cea mai mare intervenție de acest gen din istoria Americii.</p>
+      
+      <p class="mb-4">Dacă ți se pare o știre banală, ratezi complet imaginea de ansamblu. Dacă deții active (Crypto, Acțiuni, Imobiliare), citește asta cu atenție. 👇</p>
+
+      <div class="bg-red-900/20 border-l-4 border-red-500 p-4 my-6 rounded-r-lg">
+        <p class="text-red-200 font-bold mb-2">ALERTA:</p>
+        <p class="text-gray-300">Acesta NU este un comportament normal. Răscumpărările de către Trezorerie erau evenimente rare. Acum am avut două intervenții masive în 7 zile.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Ce înseamnă, pe românește, un "Buyback"?</h3>
+      <p class="mb-4">Guvernul își retrage propria datorie de pe piață înainte de termen, folosind cash proaspăt, pentru a calma piața obligațiunilor.</p>
+      
+      <p class="bg-gray-800 p-4 rounded-lg border border-gray-600"><strong>Traducerea pentru investitori:</strong> Ei intervin pentru că ceva începe să se rupă sub suprafață.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">De ce acum?</h3>
+      <ul class="list-disc pl-6 space-y-3 text-gray-300 mb-6">
+        <li>Pentru că dobânzile sunt prea sus.</li>
+        <li>Refinanțarea trilioanelor de dolari devine un coșmar logistic.</li>
+        <li>Cererea pentru obligațiunile pe termen lung tremură.</li>
+        <li><strong>Sistemul rămâne fără lichiditate ("uleiul" din motor).</strong></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Deci, ce fac ei de fapt?</h3>
+      <p class="mb-4">Injectează lichiditate. În liniște. Pe ușa din spate.</p>
+      
+      <div class="space-y-2 mb-6">
+        <p class="flex items-center gap-2 text-gray-400">🔇 Nu îi vor spune "QE" (Quantitative Easing).</p>
+        <p class="flex items-center gap-2 text-gray-400">🔇 Nu vor recunoaște că e "Stimulus".</p>
+        <p class="flex items-center gap-2 text-green-400 font-bold">🔊 Dar funcțional, exact asta este.</p>
+      </div>
+
+      <div class="p-6 bg-gradient-to-r from-gray-900 to-black border border-green-500/30 rounded-xl my-8">
+        <h4 class="text-xl font-bold text-green-400 mb-4">Și aici e "Secretul" pe care masele îl ratează:</h4>
+        <p class="text-gray-300 mb-4">Acea lichiditate NU rămâne niciodată blocată în Trezorerie. Ea se scurge...</p>
+        <p class="text-white font-medium">Se infiltrează în acțiuni, în credite, în active reale... <br/><span class="text-blue-400 font-bold">🌊 Și, inevitabil... în Bitcoin și Crypto.</span></p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Așa începe fiecare ciclu major:</h3>
+      <ol class="list-decimal pl-6 space-y-4 text-gray-300 mb-8">
+        <li>Mai întâi vin "operațiunile tehnice" (plictisitoare pentru plebe).</li>
+        <li>Apoi vine negarea ("Nu e inflație, e tranzitoriu").</li>
+        <li><strong>Apoi prețurile activelor explodează ÎNAINTE să apară știrile la TV.</strong></li>
+      </ol>
+
+      <p class="mb-4">Trezoreria SUA tocmai ți-a arătat că e inconfortabilă cu situația. Și când oamenii care conduc tiparnița de bani devin inconfortabili, activele de risc (Risk-On) sunt primele care reacționează.</p>
+      
+      <p class="text-white font-bold italic border-l-4 border-yellow-500 pl-4 py-2">Am fost printre singurii care v-a avertizat corect în trecut. Acesta este semnalul instituțional pe care îl așteptam pentru 2026. Nu paria împotriva lichidității.</p>
+    `
+  },
+
+  // ✅ 2. ARTICOL: MiCA & BLOCADA BANCARĂ (TEXT INTEGRAL)
   {
     slug: "cortina-de-fier-financiara-europeana-mica-2026",
     title: "\"Cortina de Fier\" Financiară a Europei (2026): Pericolele Tranzacționării pe Platforme Nereglementate",
@@ -78,7 +139,7 @@ export const articles = [
     `
   },
 
-  // ✅ 2. ARTICOL: MITUL ALTCOIN SEASON
+  // ✅ 3. ARTICOL: MITUL ALTCOIN SEASON
   {
     slug: "mitul-si-realitatea-altcoin-season-2022-2026",
     title: "2022-2025: Marea Minciună a Altcoin-urilor. Studiu de Piață: Mitul și Realitatea \"Altcoin Season\".",
@@ -136,7 +197,7 @@ export const articles = [
     `
   },
 
-  // ✅ 3. ARTICOL: ACUMULARE INSTITUȚIONALĂ ETHEREUM
+  // ✅ 4. ARTICOL: ACUMULARE INSTITUȚIONALĂ ETHEREUM
   {
     slug: "acumulare-institutionala-ethereum-dat-bmnr-2025",
     title: "Acumularea Instituțională de Ethereum: O Tendință Bullish în 2025",
@@ -205,7 +266,7 @@ export const articles = [
     `
   },
 
-  // ✅ 4. ARTICOL: IMPACT REUNIUNE FOMC DECEMBRIE 2025
+  // ✅ 5. ARTICOL: IMPACT REUNIUNE FOMC DECEMBRIE 2025
   {
     slug: "impact-reuniune-fomc-decembrie-2025-crypto",
     title: "Impactul Reuniunii FOMC din Decembrie 2025 asupra Pieței Crypto: O Analiză Detaliată și Explicativă",
@@ -217,13 +278,9 @@ export const articles = [
     mihaiTake: "Tati, dincolo de cifre, mesajul e clar: 'Robinetul s-a deschis'. Chiar dacă Powell pare dur, faptul că bagă 40 de miliarde lunar în piață e tot ce contează pentru noi. Asta e benzina pentru Altseason-ul pe care îl așteptăm în 2026.",
     content: `
       <p class="text-xl font-medium text-white mb-6">Reuniunea FOMC din 9-10 decembrie 2025 a fost un moment pivotal pentru economia SUA și piețele globale, inclusiv cea crypto.</p>
-      
       <p class="mb-4">Federal Reserve, banca centrală a SUA, a anunțat o serie de măsuri care combină prudență cu injecții de lichiditate. Pe scurt, Fed a redus rata dobânzii de referință cu <strong>25 de puncte de bază</strong> (de la 3,75%-4% la 3,5%-3,75%), așa cum se așteptau majoritatea analiștilor. Totuși, surpriza a venit din anunțurile privind lichiditatea și proiecțiile economice viitoare.</p>
-      
       <p class="mb-6">Această reuniune vine în contextul unei economii americane care se confruntă cu inflație persistentă (încă peste ținta de 2%), un piață a muncii care se răcește și incertitudini geopolitice, inclusiv efectele tarifelor vamale. Președintele Fed, Jerome Powell, a subliniat un ton "hawkish" (mai restrictiv), indicând că ratele dobânzilor au ajuns în zona "neutră" – adică nici prea stimulative, nici prea restrictive – și că nu vor urma reduceri suplimentare în curând. Totuși, elementele de susținere a lichidității au fost interpretate de piețe ca un semnal pozitiv pentru activele de risc, cum ar fi criptomonedele.</p>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Explicații Detaliate ale Anunțurilor Fed</h3>
-      
       <div class="space-y-8">
         <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
             <h4 class="text-xl font-bold text-blue-400 mb-3">1. Reducerea Ratei Dobânzii cu 25 bps: O Mișcare Așteptată, dar cu Disensiuni</h4>
@@ -231,7 +288,6 @@ export const articles = [
             <p class="mb-3 text-sm text-gray-300 bg-black/20 p-3 rounded"><strong>Context:</strong> Decizia nu a fost unanimă – au existat trei disensiuni în comitet, cel mai mare număr din 2019, reflectând dezbateri interne despre riscurile inflației versus slăbiciunea pieței muncii.</p>
             <p><strong>Proiecții viitoare:</strong> Powell a exclus creșteri ale ratelor (rate hikes) și a indicat că viitoarele mișcări vor fi "data-dependent" (bazate pe date economice). Proiecțiile arată o rată mediană de 3,6% la sfârșitul lui 2025 și 3,4% în 2026, sugerând posibile pauze sau reduceri minime.</p>
         </div>
-
         <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
             <h4 class="text-xl font-bold text-green-400 mb-3">2. Începerea Achizițiilor de T-bill: Injecție de Lichiditate de 40 Miliarde USD/Lună</h4>
             <p class="mb-3"><strong>Ce înseamnă?</strong> De la 12 decembrie 2025, Fed va cumpăra obligațiuni guvernamentale pe termen scurt (Treasury bills, sau T-bill) în valoare de aproximativ 40 de miliarde de dolari pe lună. Aceste achiziții vor rămâne "elevate" (ridicate) pentru câteva luni, înainte de a scădea.</p>
@@ -240,7 +296,6 @@ export const articles = [
                 <strong>Legătura cu QT:</strong> Quantitative Tightening (QT) – procesul de reducere a bilanțului Fed prin vânzarea de active – s-a încheiat oficial la 1 decembrie 2025. Aceasta marchează trecerea de la "strângerea curelei" la o fază de stabilizare.
             </div>
         </div>
-
         <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
             <h4 class="text-xl font-bold text-orange-400 mb-3">3. Proiecții Economice: Creștere Mai Mare în 2026</h4>
             <ul class="list-disc pl-5 space-y-2 text-gray-300">
@@ -251,37 +306,32 @@ export const articles = [
             </ul>
         </div>
       </div>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Focus pe Impactul Potențial Imediat asupra Pieței Crypto</h3>
       <p class="mb-6">Acum, să ne concentrăm pe aspectul cheie: cum afectează aceste anunțuri piața crypto imediat (în zilele/săptămânile următoare)? Crypto este un activ de risc, sensibil la lichiditate, rate de dobândă și sentimentul macroeconomic. Istoricul arată că injecțiile de lichiditate de la Fed (cum ar fi QE din 2020-2021) au dus la raliuri majore în Bitcoin și altcoins. Iată o analiză detaliată a impactului potențial:</p>
-
       <div class="grid gap-6">
         <div class="bg-gradient-to-br from-green-900/30 to-emerald-900/30 p-6 rounded-2xl border border-green-500/30">
             <h4 class="text-xl font-bold text-white mb-3">🚀 Injecția de Lichiditate: Un Boost Pozitiv</h4>
             <p class="text-gray-300 mb-4"><strong>Impact imediat:</strong> Achizițiile de T-bill de 40 de miliarde USD/lună începând cu 12 decembrie injectează bani noi în sistem, reducând presiunile de finanțare pe termen scurt. Chiar dacă nu este QE, efectul este similar: mai multă lichiditate înseamnă mai mulți bani disponibili pentru investiții în active riscante. În trecut, sfârșitul QT și începutul achizițiilor au dus la creșteri ale prețurilor crypto – de exemplu, în 2019, anunțuri similare au contribuit la un raliu Bitcoin de peste 200%.</p>
             <p class="font-bold text-green-400">Potențial pentru crypto: Bitcoin (BTC) și Ethereum (ETH) ar putea vedea o creștere imediată de 5-10% în următoarele zile, pe măsură ce traderii interpretează asta ca un "pivot" spre politici mai blânde. Lichiditatea suplimentară ar putea alimenta fluxuri instituționale.</p>
         </div>
-
         <div class="bg-gradient-to-br from-purple-900/30 to-indigo-900/30 p-6 rounded-2xl border border-purple-500/30">
             <h4 class="text-xl font-bold text-white mb-3">🌌 Sfârșitul QT: Semnale pentru "Altseason"</h4>
             <p class="text-gray-300 mb-4"><strong>Impact imediat:</strong> Trecerea de la QT la stabilizare (și achiziții) oprește scurgerea de lichiditate, ceea ce istoric a fost un catalizator pentru "altseason" – perioade în care altcoins (cum ar fi Solana, Cardano sau meme coins) outperform Bitcoin. Proiecția de creștere PIB în 2026 și posibila depășire a ISM peste 50 sugerează o economie în expansiune, care favorizează riscul.</p>
             <p class="font-bold text-purple-400">Exemplu concret: Dacă Bitcoin testează rezistența la 150.000 USD (nivel ipotetic bazat pe trenduri actuale), altcoins ar putea câștiga 20-50% în săptămâni, atrași de lichiditate.</p>
         </div>
-
         <div class="bg-gradient-to-br from-red-900/30 to-orange-900/30 p-6 rounded-2xl border border-red-500/30">
             <h4 class="text-xl font-bold text-white mb-3">⚠️ Tonul Hawkish și Inflația: Presiuni Negative</h4>
             <p class="text-gray-300 mb-4"><strong>Impact imediat:</strong> Pauza pe reduceri de rate și menționarea zonei "neutre" ar putea crea volatilitate. Inflația ridicată (2,9% în 2025) ar putea duce la vânzări panicate dacă traderii anticipează o Fed mai restrictivă.</p>
             <p class="font-bold text-red-400">Potențial: Imediat, ar putea apărea o corecție de 5-15% în BTC/ETH dacă sentimentul devine negativ, mai ales dacă piețele bursiere scad.</p>
         </div>
       </div>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Concluzie: Oportunități cu Volatilitate Ridicată</h3>
       <p class="text-gray-300">Reuniunea FOMC din decembrie 2025 marchează o tranziție spre o Fed mai echilibrată, cu lichiditate suplimentară care compensează tonul hawkish. Pentru piața crypto, impactul imediat este potențial pozitiv, prin injecții de capital care ar putea declanșa raliuri în BTC și altcoins. Totuși, riscurile de volatilitate nu trebuie ignorate – recomand monitorizarea datelor economice viitoare, precum raportul de locuri de muncă din ianuarie 2026.</p>
       <p class="text-xs text-gray-500 mt-8 pt-4 border-t border-gray-800">Disclaimer: Acest articol reprezintă o analiză a pieței și nu constituie un sfat financiar.</p>
     `
   },
 
-  // ✅ 5. ARTICOL: HALVING VS LICHIDITATE (Imagine Locală)
+  // ✅ 6. ARTICOL: HALVING VS LICHIDITATE (Imagine Locală)
   {
     slug: "mitul-halving-ului-sacru-vs-realitatea-lichiditatii",
     title: "Mitul \"Halving-ului Sacru\" vs. Realitatea Lichidității: Ce dictează cu adevărat prețul Bitcoin în 2025?",
@@ -374,7 +424,7 @@ export const articles = [
     `
   },
 
-  // ✅ 6. ARTICOL: LEVIERUL (EDUCAȚIE & RISK) - INTEGRAL
+  // ✅ 7. ARTICOL: LEVIERUL (EDUCAȚIE & RISK) - INTEGRAL
   {
     slug: "mirajul-levierului-arma-financiara-distrugere",
     title: "Mirajul Levierului: \"Arma Financiară de Distrugere în Masă\" care îți poate Zeroiza Contul într-o Secundă. Ghid de Conștientizare.",
@@ -455,7 +505,7 @@ export const articles = [
     `
   },
 
-  // ✅ 7. ARTICOL: ALERTĂ FED (Imagine Locală)
+  // ✅ 8. ARTICOL: ALERTĂ FED (Imagine Locală)
   {
     slug: "alerta-volatilitate-decizie-fed-capcana-mortala",
     title: "Alertă de Volatilitate: De ce Decizia FED de Mâine Poate Fi o \"Capcană Mortală\"",
@@ -517,7 +567,7 @@ export const articles = [
     `
   },
 
-  // ✅ 8. ARTICOL: GHID BEAR MARKET (Imagine Locală)
+  // ✅ 9. ARTICOL: GHID BEAR MARKET (Imagine Locală)
   {
     slug: "ce-inseamna-bear-market-ghid-complet",
     title: "Ce Înseamnă \"Bear Market\" și De Ce Nu Trebuie Să Te Sperie? Ghidul Complet.",
@@ -605,7 +655,7 @@ export const articles = [
     `
   },
 
-  // ✅ 9. ARTICOL: CAPCANA URSULUI (PSIHOLOGIE & ISTORIE)
+  // ✅ 10. ARTICOL: CAPCANA URSULUI (PSIHOLOGIE & ISTORIE)
   {
     slug: "capcana-ursului-istorie-crize-evitate",
     title: "\"Capcana Ursului\": De ce Toți Indicatorii de Criză Pot Fi Greșiți. Lecții Istorice.",
@@ -657,7 +707,7 @@ export const articles = [
     `
   },
 
-  // ✅ 10. ARTICOL: FED & DOBÂNZI (MACRO)
+  // ✅ 11. ARTICOL: FED & DOBÂNZI (MACRO)
   {
     slug: "impact-dobanda-fed-bitcoin-scenarii",
     title: "Alertă Maximă: Decizia FED care Poate Arunca Bitcoin în Aer. Scenariile 0.25% vs 0.50%",
@@ -698,7 +748,7 @@ export const articles = [
     `
   },
 
-  // ✅ 11. ARTICOL: BITCOIN MANIPULARE (Imagine Locală: /bitcoin-crash.jpg)
+  // ✅ 12. ARTICOL: BITCOIN MANIPULARE (Imagine Locală: /bitcoin-crash.jpg)
   {
     slug: "bitcoin-manipulare-sau-corectie-brutala",
     title: "Bitcoin: Manipulare Instituțională sau Corecție Brutală? Anatomia unei Prăbușiri de 19 Miliarde $",
@@ -743,7 +793,7 @@ export const articles = [
     `
   },
 
-  // ✅ 12. ARTICOL: BITCOIN SOPR
+  // ✅ 13. ARTICOL: BITCOIN SOPR
   {
     slug: "semnal-on-chain-bitcoin-sopr-rally",
     title: "Semnal On-Chain: Vânzătorii au obosit. Bitcoin pregătește Raliul de Decembrie?",
@@ -774,7 +824,7 @@ export const articles = [
     `
   },
 
-  // ✅ 13. ARTICOL: QUANTUM COMPUTING
+  // ✅ 14. ARTICOL: QUANTUM COMPUTING
   {
     slug: "riscuri-quantum-computing-bitcoin-explicat",
     title: "Calculatoarele Cuantice vs. Bitcoin: Sfârșitul Criptomonedelor sau Doar o Nouă Provocare?",
@@ -798,7 +848,7 @@ export const articles = [
     `
   },
 
-  // ✅ 14. ARTICOL: SUA & CFTC (Imagine Locală: /cftc-announcement.jpg)
+  // ✅ 15. ARTICOL: SUA & CFTC (Imagine Locală: /cftc-announcement.jpg)
   {
     slug: "sua-cftc-crypto-spot-reglementat",
     title: "BREAKING: SUA pune capăt erei 'Offshore'. Crypto devine oficial activ federal.",
@@ -834,7 +884,7 @@ export const articles = [
     `
   },
 
-  // ✅ 15. ARTICOL: ATAC 27M
+  // ✅ 16. ARTICOL: ATAC 27M
   {
     slug: "atac-27-milioane-link-malitios",
     title: "ALERTA: Cum să pierzi 27.000.000$ într-o secundă. Pericolul invizibil din buzunarul tău",
@@ -872,7 +922,7 @@ export const articles = [
     `
   },
 
-  // ✅ 16. ARTICOL: VANGUARD & CFTC (Legacy)
+  // ✅ 17. ARTICOL: VANGUARD & CFTC (Legacy)
   {
     slug: "marea-convergenta-crypto",
     title: "Marea Convergență: Vanguard și CFTC validează Crypto ca 'Gold Standard'",
@@ -898,7 +948,7 @@ export const articles = [
     `
   },
 
-  // ✅ 17. ARTICOL: QIVALIS
+  // ✅ 18. ARTICOL: QIVALIS
   {
     slug: "qivalis-banci-europene-stablecoin",
     title: "BREAKING: 9 Bănci Gigant lansează Qivalis - Euro Stablecoin",
@@ -935,7 +985,7 @@ export const articles = [
     `
   },
 
-  // ✅ 18. ARTICOL: SEC ETF ETHEREUM
+  // ✅ 19. ARTICOL: SEC ETF ETHEREUM
   {
     slug: "sec-aproba-etf-ethereum",
     title: "SEC Aprobă ETF-ul de Ethereum Spot",
@@ -953,7 +1003,7 @@ export const articles = [
     `
   },
 
-  // ✅ 19. ARTICOL: SOLANA FIREDANCER
+  // ✅ 20. ARTICOL: SOLANA FIREDANCER
   {
     slug: "solana-firedancer",
     title: "Solana lansează Firedancer",
@@ -970,7 +1020,7 @@ export const articles = [
     `
   },
 
-  // ✅ 20. ARTICOL: INFLATIE CPI
+  // ✅ 21. ARTICOL: INFLATIE CPI
   {
     slug: "inflatie-sua-cpi",
     title: "Inflația SUA crește (CPI 3.4%)",
