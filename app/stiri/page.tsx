@@ -1,5 +1,6 @@
 import { articles } from '@/lib/articles';
 import Navbar from '@/components/Navbar';
+import CategoryFilter from '@/components/CategoryFilter'; // ✅ Importul Nou
 import Link from 'next/link';
 import Image from 'next/image';
 import { Calendar, ArrowRight, TrendingUp, TrendingDown, Minus, BrainCircuit, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -19,122 +20,140 @@ export default async function NewsPage({
 }) {
   const params = await searchParams;
   const currentPage = Number(params?.page) || 1;
+  const categoryFilter = (params?.category as string) || 'all';
 
-  const totalPages = Math.ceil(articles.length / ITEMS_PER_PAGE);
+  // --- 🧠 LOGICA DE FILTRARE INTELIGENTĂ ---
+  const filteredArticles = articles.filter((article) => {
+    const text = (article.title + article.summary + article.category).toLowerCase();
+    
+    switch (categoryFilter) {
+      case 'btc':
+        return text.includes('bitcoin') || text.includes('btc') || text.includes('satoshi') || text.includes('halving');
+      case 'eth':
+        return text.includes('ethereum') || text.includes('eth') || text.includes('vitalik') || text.includes('blackrock'); // Blackrock are legătură cu ETH ETF acum
+      case 'macro':
+        return text.includes('fomc') || text.includes('fed') || text.includes('inflatie') || text.includes('banca') || text.includes('cpi') || text.includes('trezorerie') || article.category.includes('MACRO') || article.category.includes('INSTITUȚIONAL');
+      case 'alts':
+        // Tot ce e crypto dar nu e BTC/ETH specific sau e despre altseason
+        return text.includes('solana') || text.includes('altcoin') || text.includes('altseason') || text.includes('token') || article.category.includes('ADOPȚIE');
+      case 'edu':
+        return article.category.includes('EDUCAȚIE') || article.category.includes('PSIHOLOGIE') || article.category.includes('SECURITATE');
+      default:
+        return true; // 'all'
+    }
+  });
+
+  // Calculăm paginarea pe articolele filtrate
+  const totalPages = Math.ceil(filteredArticles.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const endIndex = startIndex + ITEMS_PER_PAGE;
-  const currentArticles = articles.slice(startIndex, endIndex);
+  const currentArticles = filteredArticles.slice(startIndex, endIndex);
 
   return (
-    <main className="min-h-screen bg-[#020617] text-white selection:bg-red-500/30">
+    <main className="min-h-screen bg-[#020617] text-white selection:bg-blue-500/30">
       <Navbar />
       
       <div className="container mx-auto px-6 py-24">
           
-          {/* HEADER FESTIV - MINIMALIST (Doar Căciulița pe M) */}
-          <div className="text-center mb-20">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight flex items-center justify-center gap-3 flex-wrap">
-                  
-                  {/* Cuvântul "Market" cu Căciulița pe M */}
-                  <div className="relative inline-block">
-                    {/* Căciulița SVG poziționată perfect pe M */}
-                    <svg className="absolute -top-5 -left-3 w-10 h-10 md:w-12 md:h-12 rotate-[-15deg] drop-shadow-lg z-20 pointer-events-none" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        {/* Baza Albă */}
-                        <path d="M10 75 C10 75 30 85 50 75 C70 65 80 60 80 60 L 80 70 C 80 70 60 80 40 85 C 20 90 10 75 10 75 Z" fill="white"/>
-                        {/* Conul Roșu */}
-                        <path d="M15 75 C 15 75 30 10 80 10 C 80 10 60 40 80 60 C 80 60 40 70 15 75 Z" fill="#DC2626"/>
-                        {/* Moțul Alb */}
-                        <circle cx="80" cy="10" r="8" fill="white"/>
-                    </svg>
-                    
-                    <span className="text-white relative z-10">Market</span>
-                  </div>
-
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Intelligence</span>
+          {/* HEADER PREMIUM */}
+          <div className="text-center mb-12">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
+                  Market <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Intelligence</span>
               </h1>
               
               <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
                   Nu doar titluri. <span className="text-white font-bold">Analiză strategică.</span><br/>
-                  Închidem anul 2025 în forță. Pregătește-ți portofoliul pentru 2026.
+                  Închidem anul 2025 în forță.
               </p>
           </div>
 
+          {/* ✅ NOUL COMPONENT DE FILTRARE */}
+          <CategoryFilter />
+
           {/* LISTA ARTICOLE */}
-          <div className="grid gap-8 max-w-5xl mx-auto">
-              {currentArticles.map((item, idx) => (
-                  <Link href={`/stiri/${item.slug}`} key={idx} className="group bg-[#0a0f1e] border border-white/10 rounded-3xl overflow-hidden flex flex-col md:flex-row hover:border-blue-500/50 transition-all hover:shadow-2xl hover:shadow-blue-900/10">
-                      <div className="w-full md:w-72 h-64 md:h-auto shrink-0 relative overflow-hidden">
-                          {/* Overlay simplu la hover */}
-                          <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all z-10"></div>
-                          
-                          <Image 
-                              src={item.image} 
-                              alt={item.title}
-                              fill 
-                              className="object-cover group-hover:scale-105 transition-transform duration-700"
-                              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
-                              priority={idx < 2} 
-                          />
+          {currentArticles.length > 0 ? (
+            <div className="grid gap-8 max-w-5xl mx-auto">
+                {currentArticles.map((item, idx) => (
+                    <Link href={`/stiri/${item.slug}`} key={item.slug} className="group bg-[#0a0f1e] border border-white/10 rounded-3xl overflow-hidden flex flex-col md:flex-row hover:border-blue-500/50 transition-all hover:shadow-2xl hover:shadow-blue-900/10">
+                        <div className="w-full md:w-72 h-64 md:h-auto shrink-0 relative overflow-hidden">
+                            <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all z-10"></div>
+                            
+                            <Image 
+                                src={item.image} 
+                                alt={item.title}
+                                fill 
+                                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+                                priority={idx < 2} 
+                            />
 
-                          <div className="absolute top-4 left-4 z-20">
-                              {item.impact === 'bullish' && <span className="text-[10px] font-bold bg-green-500 text-black px-2 py-1 rounded flex items-center gap-1 shadow-lg"><TrendingUp size={12}/> BULLISH</span>}
-                              {item.impact === 'bearish' && <span className="text-[10px] font-bold bg-red-500 text-white px-2 py-1 rounded flex items-center gap-1 shadow-lg"><TrendingDown size={12}/> BEARISH</span>}
-                              {item.impact === 'neutral' && <span className="text-[10px] font-bold bg-gray-500 text-white px-2 py-1 rounded flex items-center gap-1 shadow-lg"><Minus size={12}/> NEUTRAL</span>}
-                          </div>
-                      </div>
-                      
-                      <div className="flex-1 p-6 md:p-8 flex flex-col justify-center">
-                          <div className="flex items-center gap-3 text-xs text-gray-500 font-mono mb-3 uppercase tracking-widest">
-                              <span className="flex items-center gap-1"><Calendar size={14}/> {item.date}</span>
-                              <span className="w-1 h-1 bg-gray-600 rounded-full"></span>
-                              <span className="text-blue-400">{item.category}</span>
-                          </div>
-                          <h2 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors leading-tight">{item.title}</h2>
-                          <p className="text-gray-400 leading-relaxed mb-6 line-clamp-2">{item.summary}</p>
-                          
-                          {item.mihaiTake && (
-                              <div className="bg-blue-900/10 border-l-2 border-blue-500 pl-4 py-2 mb-6 rounded-r-lg">
-                                  <div className="flex items-center gap-2 text-[10px] font-bold text-blue-400 uppercase mb-1">
-                                      <BrainCircuit size={12}/> Mihai's Take
-                                  </div>
-                                  <p className="text-sm text-gray-300 italic line-clamp-1">"{item.mihaiTake}"</p>
-                              </div>
-                          )}
+                            <div className="absolute top-4 left-4 z-20">
+                                {item.impact === 'bullish' && <span className="text-[10px] font-bold bg-green-500 text-black px-2 py-1 rounded flex items-center gap-1 shadow-lg"><TrendingUp size={12}/> BULLISH</span>}
+                                {item.impact === 'bearish' && <span className="text-[10px] font-bold bg-red-500 text-white px-2 py-1 rounded flex items-center gap-1 shadow-lg"><TrendingDown size={12}/> BEARISH</span>}
+                                {item.impact === 'neutral' && <span className="text-[10px] font-bold bg-gray-500 text-white px-2 py-1 rounded flex items-center gap-1 shadow-lg"><Minus size={12}/> NEUTRAL</span>}
+                            </div>
+                        </div>
+                        
+                        <div className="flex-1 p-6 md:p-8 flex flex-col justify-center">
+                            <div className="flex items-center gap-3 text-xs text-gray-500 font-mono mb-3 uppercase tracking-widest">
+                                <span className="flex items-center gap-1"><Calendar size={14}/> {item.date}</span>
+                                <span className="w-1 h-1 bg-gray-600 rounded-full"></span>
+                                <span className="text-blue-400">{item.category}</span>
+                            </div>
+                            <h2 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors leading-tight">{item.title}</h2>
+                            <p className="text-gray-400 leading-relaxed mb-6 line-clamp-2">{item.summary}</p>
+                            
+                            {item.mihaiTake && (
+                                <div className="bg-blue-900/10 border-l-2 border-blue-500 pl-4 py-2 mb-6 rounded-r-lg">
+                                    <div className="flex items-center gap-2 text-[10px] font-bold text-blue-400 uppercase mb-1">
+                                        <BrainCircuit size={12}/> Mihai's Take
+                                    </div>
+                                    <p className="text-sm text-gray-300 italic line-clamp-1">"{item.mihaiTake}"</p>
+                                </div>
+                            )}
 
-                          <div className="flex items-center gap-2 text-sm font-bold text-white group-hover:translate-x-2 transition-transform mt-auto">
-                              Citește Analiza <ArrowRight size={16} className="text-blue-500 group-hover:text-white transition-colors"/>
-                          </div>
-                      </div>
-                  </Link>
-              ))}
-          </div>
+                            <div className="flex items-center gap-2 text-sm font-bold text-white group-hover:translate-x-2 transition-transform mt-auto">
+                                Citește Analiza <ArrowRight size={16} className="text-blue-500 group-hover:text-white transition-colors"/>
+                            </div>
+                        </div>
+                    </Link>
+                ))}
+            </div>
+          ) : (
+            <div className="text-center py-20 text-gray-500">
+                <p>Nu am găsit articole în această categorie momentan.</p>
+                <Link href="/stiri" className="text-blue-400 hover:underline mt-2 inline-block">Vezi toate articolele</Link>
+            </div>
+          )}
 
           {/* PAGINARE */}
-          <div className="flex justify-center items-center gap-4 mt-16 max-w-5xl mx-auto pt-8 border-t border-white/5">
-              {currentPage > 1 ? (
-                  <Link href={`/stiri?page=${currentPage - 1}`} className="flex items-center gap-2 px-6 py-3 rounded-xl bg-[#0a0f1e] border border-white/10 hover:border-blue-500 text-white transition-all group">
-                      <ChevronLeft size={20} className="group-hover:-translate-x-1 transition-transform"/> Pagina Anterioară
-                  </Link>
-              ) : (
-                  <button disabled className="flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 border border-white/5 text-gray-600 cursor-not-allowed">
-                      <ChevronLeft size={20}/> Pagina Anterioară
-                  </button>
-              )}
-              
-              <span className="font-mono text-gray-500 text-sm">
-                  Pagina <span className="text-white font-bold">{currentPage}</span> din {totalPages}
-              </span>
+          {totalPages > 1 && (
+            <div className="flex justify-center items-center gap-4 mt-16 max-w-5xl mx-auto pt-8 border-t border-white/5">
+                {currentPage > 1 ? (
+                    <Link href={`/stiri?page=${currentPage - 1}&category=${categoryFilter}`} className="flex items-center gap-2 px-6 py-3 rounded-xl bg-[#0a0f1e] border border-white/10 hover:border-blue-500 text-white transition-all group">
+                        <ChevronLeft size={20} className="group-hover:-translate-x-1 transition-transform"/> Pagina Anterioară
+                    </Link>
+                ) : (
+                    <button disabled className="flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 border border-white/5 text-gray-600 cursor-not-allowed">
+                        <ChevronLeft size={20}/> Pagina Anterioară
+                    </button>
+                )}
+                
+                <span className="font-mono text-gray-500 text-sm">
+                    Pagina <span className="text-white font-bold">{currentPage}</span> din {totalPages}
+                </span>
 
-              {currentPage < totalPages ? (
-                  <Link href={`/stiri?page=${currentPage + 1}`} className="flex items-center gap-2 px-6 py-3 rounded-xl bg-[#0a0f1e] border border-white/10 hover:border-blue-500 text-white transition-all group">
-                      Pagina Următoare <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform"/>
-                  </Link>
-              ) : (
-                  <button disabled className="flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 border border-white/5 text-gray-600 cursor-not-allowed">
-                      Pagina Următoare <ChevronRight size={20}/>
-                  </button>
-              )}
-          </div>
+                {currentPage < totalPages ? (
+                    <Link href={`/stiri?page=${currentPage + 1}&category=${categoryFilter}`} className="flex items-center gap-2 px-6 py-3 rounded-xl bg-[#0a0f1e] border border-white/10 hover:border-blue-500 text-white transition-all group">
+                        Pagina Următoare <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform"/>
+                    </Link>
+                ) : (
+                    <button disabled className="flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 border border-white/5 text-gray-600 cursor-not-allowed">
+                        Pagina Următoare <ChevronRight size={20}/>
+                    </button>
+                )}
+            </div>
+          )}
 
       </div>
     </main>
