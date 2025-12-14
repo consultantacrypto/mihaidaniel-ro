@@ -8,7 +8,7 @@ import {
   Calendar, Clock, ArrowLeft, 
   TrendingUp, TrendingDown, 
   AlertTriangle, ShieldAlert, Zap, 
-  BrainCircuit, Lightbulb 
+  BrainCircuit, Lightbulb, CheckCircle2 
 } from 'lucide-react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -54,40 +54,41 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         return { 
           color: 'green', 
           accent: 'text-green-400', 
-          border: 'border-green-500/20', 
-          bg: 'bg-green-500/10',
-          gradient: 'from-green-400 to-emerald-600',
+          border: 'border-green-500/30', 
+          // Gradient mai închis pentru contrast cu butonul alb
+          bg: 'bg-green-950/40', 
           selection: 'selection:bg-green-500/30',
           icon: TrendingUp,
           ctaTitle: 'Pregătește-te pentru oportunitate',
           ctaText: 'Când piața crește, trebuie să știi când să intri și când să ieși. Hai să facem strategia.',
-          ctaIcon: Zap
+          ctaIcon: Zap,
+          btnText: 'text-green-700'
         };
       case 'bearish':
         return { 
           color: 'red', 
           accent: 'text-red-500', 
-          border: 'border-red-500/20', 
-          bg: 'bg-red-900/10', 
-          gradient: 'from-red-500 to-orange-600',
+          border: 'border-red-500/30', 
+          bg: 'bg-red-950/40', 
           selection: 'selection:bg-red-500/30',
           icon: TrendingDown,
           ctaTitle: 'Nu pierde bani din neștiință',
           ctaText: 'Piețele volatile sunt periculoase fără plan. Securizează-ți portofoliul acum.',
-          ctaIcon: ShieldAlert
+          ctaIcon: ShieldAlert,
+          btnText: 'text-red-700'
         };
       default: 
         return { 
           color: 'blue', 
           accent: 'text-blue-400', 
-          border: 'border-blue-500/20', 
-          bg: 'bg-blue-900/10',
-          gradient: 'from-blue-400 to-indigo-500',
+          border: 'border-blue-500/30', 
+          bg: 'bg-blue-950/40',
           selection: 'selection:bg-blue-500/30',
           icon: BrainCircuit,
           ctaTitle: 'Investește în educația ta',
           ctaText: 'Emoțiile te costă bani. Ai nevoie de o strategie clară, nu de reacții la știri.',
-          ctaIcon: Lightbulb
+          ctaIcon: Lightbulb,
+          btnText: 'text-blue-700'
         };
     }
   };
@@ -121,7 +122,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         {/* HEADER */}
         <header className="mb-10 text-center md:text-left">
             <div className={`flex flex-wrap items-center gap-4 text-xs font-bold uppercase tracking-widest ${theme.accent} mb-4 justify-center md:justify-start font-[var(--font-space)]`}>
-                <span className={`${theme.bg} px-3 py-1 rounded-full border ${theme.border} flex items-center gap-2`}>
+                <span className={`bg-white/5 px-3 py-1 rounded-full border ${theme.border} flex items-center gap-2`}>
                     <ThemeIcon size={12}/> {article.category}
                 </span>
                 <span className="flex items-center gap-1 text-gray-400"><Calendar size={12}/> {article.date}</span>
@@ -132,7 +133,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 {article.title}
             </h1>
 
-            <p className={`text-xl text-gray-300 leading-relaxed border-l-4 ${theme.border.replace('/20', '/50')} pl-6 italic font-[var(--font-inter)]`}>
+            <p className={`text-xl text-gray-300 leading-relaxed border-l-4 ${theme.border.replace('/30', '/60')} pl-6 italic font-[var(--font-inter)]`}>
                 {article.summary}
             </p>
         </header>
@@ -149,7 +150,6 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
         {/* CONTINUT */}
         <div className="prose prose-invert prose-lg max-w-none text-gray-300 font-[var(--font-inter)] leading-relaxed">
-            
             {article.mihaiTake && (
                 <div className="bg-[#0a1025] border border-gray-800 p-6 rounded-xl mb-8 relative overflow-hidden">
                     <div className="absolute top-0 right-0 p-4 opacity-5"><BrainCircuit size={100} className="text-white"/></div>
@@ -159,24 +159,37 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                     <p className="text-sm italic text-gray-300 relative z-10">"{article.mihaiTake}"</p>
                 </div>
             )}
-
             <div dangerouslySetInnerHTML={{ __html: article.content }} />
         </div>
 
-        {/* 1. CTA CONSULTANȚĂ (Prioritate 1) */}
-        <div className={`mt-12 bg-gradient-to-r ${theme.bg.replace('bg-', 'from-').replace('/10', '/20')} to-gray-900/50 p-8 rounded-2xl border ${theme.border} text-center`}>
-            <h3 className="text-2xl font-bold text-white mb-2 font-[var(--font-space)]">
-                {theme.ctaTitle}
-            </h3>
-            <p className="text-gray-300 mb-6 max-w-xl mx-auto">
-                {theme.ctaText}
-            </p>
-            <Link href="/#consultanta" className={`inline-flex items-center gap-2 bg-${theme.color === 'blue' ? 'indigo' : theme.color}-600 hover:bg-${theme.color === 'blue' ? 'indigo' : theme.color}-500 text-white font-bold px-8 py-3 rounded-xl transition-all shadow-lg transform hover:-translate-y-1`}>
-                <CtaIcon size={18}/> Rezervă Sesiunea ($250)
-            </Link>
+        {/* --- 1. CTA CONSULTANȚĂ (HIGH CONTRAST & VISIBILITY) --- */}
+        <div className={`mt-16 relative overflow-hidden rounded-3xl border ${theme.border} p-1`}>
+            {/* Background Gradient Dark */}
+            <div className={`absolute inset-0 ${theme.bg} backdrop-blur-xl`}></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black/0 to-black/60"></div>
+            
+            <div className="relative z-10 p-8 md:p-12 text-center">
+                <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/30 border ${theme.border} text-xs font-bold uppercase tracking-widest ${theme.accent} mb-6`}>
+                    <CheckCircle2 size={12} /> Locuri Limitate Ianuarie 2026
+                </div>
+                
+                <h3 className="text-3xl font-black text-white mb-4 font-[var(--font-space)]">
+                    {theme.ctaTitle}
+                </h3>
+                <p className="text-gray-300 mb-8 max-w-xl mx-auto text-lg leading-relaxed">
+                    {theme.ctaText}
+                </p>
+                
+                {/* BUTON ALB - CONTRAST MAXIM */}
+                <Link href="/#consultanta" className={`group inline-flex items-center gap-3 bg-white hover:bg-gray-100 ${theme.btnText} font-black text-lg px-10 py-4 rounded-xl transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transform hover:-translate-y-1`}>
+                    <CtaIcon size={20} className="group-hover:scale-110 transition-transform"/> 
+                    Rezervă Sesiunea ($250)
+                </Link>
+                <p className="text-xs text-gray-500 mt-4">Sesiune 1-la-1 • Strategie Personalizată</p>
+            </div>
         </div>
 
-        {/* 2. BYBIT PROMO (Prioritate 2 - Sub Consultanță) */}
+        {/* --- 2. BYBIT PROMO (MODERN & GLOSSY) --- */}
         <BybitPromo />
 
         {/* 3. RELATED ARTICLES */}
