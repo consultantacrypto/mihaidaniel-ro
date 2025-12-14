@@ -2,8 +2,8 @@ import { articles } from '@/lib/articles';
 import Navbar from '@/components/Navbar';
 import ShareButtons from '@/components/ShareButtons';
 import Newsletter from '@/components/Newsletter';
-import BybitPromo from '@/components/BybitPromo'; // ✅ Integrat
-import RelatedArticles from '@/components/RelatedArticles'; // ✅ Integrat
+import BybitPromo from '@/components/BybitPromo'; 
+import RelatedArticles from '@/components/RelatedArticles'; 
 import { 
   Calendar, Clock, ArrowLeft, 
   TrendingUp, TrendingDown, 
@@ -56,10 +56,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           accent: 'text-green-400', 
           border: 'border-green-500/20', 
           bg: 'bg-green-500/10',
+          gradient: 'from-green-400 to-emerald-600',
           selection: 'selection:bg-green-500/30',
           icon: TrendingUp,
           ctaTitle: 'Pregătește-te pentru oportunitate',
-          ctaText: 'Când piața crește, trebuie să știi când să intri și când să ieși.',
+          ctaText: 'Când piața crește, trebuie să știi când să intri și când să ieși. Hai să facem strategia.',
           ctaIcon: Zap
         };
       case 'bearish':
@@ -68,10 +69,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           accent: 'text-red-500', 
           border: 'border-red-500/20', 
           bg: 'bg-red-900/10', 
+          gradient: 'from-red-500 to-orange-600',
           selection: 'selection:bg-red-500/30',
           icon: TrendingDown,
           ctaTitle: 'Nu pierde bani din neștiință',
-          ctaText: 'Piețele volatile sunt periculoase fără plan. Securizează-ți portofoliul.',
+          ctaText: 'Piețele volatile sunt periculoase fără plan. Securizează-ți portofoliul acum.',
           ctaIcon: ShieldAlert
         };
       default: 
@@ -80,10 +82,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           accent: 'text-blue-400', 
           border: 'border-blue-500/20', 
           bg: 'bg-blue-900/10',
+          gradient: 'from-blue-400 to-indigo-500',
           selection: 'selection:bg-blue-500/30',
           icon: BrainCircuit,
           ctaTitle: 'Investește în educația ta',
-          ctaText: 'Emoțiile te costă bani. Ai nevoie de o strategie clară.',
+          ctaText: 'Emoțiile te costă bani. Ai nevoie de o strategie clară, nu de reacții la știri.',
           ctaIcon: Lightbulb
         };
     }
@@ -160,11 +163,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             <div dangerouslySetInnerHTML={{ __html: article.content }} />
         </div>
 
-        {/* ✅ BYBIT PROMO (Apare imediat după text) */}
-        <BybitPromo />
-
-        {/* CTA CONSULTANȚĂ */}
-        <div className={`mt-12 bg-gradient-to-r ${theme.bg.replace('bg-', 'from-').replace('/10', '/20')} to-gray-900/50 p-8 rounded-2xl border ${theme.border} text-center mb-8`}>
+        {/* 1. CTA CONSULTANȚĂ (Prioritate 1) */}
+        <div className={`mt-12 bg-gradient-to-r ${theme.bg.replace('bg-', 'from-').replace('/10', '/20')} to-gray-900/50 p-8 rounded-2xl border ${theme.border} text-center`}>
             <h3 className="text-2xl font-bold text-white mb-2 font-[var(--font-space)]">
                 {theme.ctaTitle}
             </h3>
@@ -176,10 +176,13 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             </Link>
         </div>
 
-        {/* ✅ RELATED ARTICLES */}
+        {/* 2. BYBIT PROMO (Prioritate 2 - Sub Consultanță) */}
+        <BybitPromo />
+
+        {/* 3. RELATED ARTICLES */}
         <RelatedArticles currentSlug={article.slug} />
 
-        {/* NEWSLETTER */}
+        {/* 4. NEWSLETTER */}
         <Newsletter />
 
         {/* FOOTER ARTICOL */}

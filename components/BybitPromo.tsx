@@ -1,46 +1,49 @@
 import Link from 'next/link';
-import { ArrowRight, ShieldCheck, Zap } from 'lucide-react';
+import { ArrowRight, ShieldCheck, CheckCircle2 } from 'lucide-react';
 
 export default function BybitPromo() {
-  // ✅ LINK-UL TĂU ESTE CONFIGURAT AICI
   const AFFILIATE_LINK = "https://partner.bybit.eu/b/STIRICRYPTO"; 
 
   return (
     <div className="w-full my-12 relative overflow-hidden rounded-2xl group">
-      {/* Background Bybit Style (Black & Yellow accents) */}
+      {/* Background Dark Premium */}
       <div className="absolute inset-0 bg-[#121212] border border-[#F7A600]/20 group-hover:border-[#F7A600]/50 transition-colors duration-500"></div>
       
-      <div className="relative z-10 p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8">
+      <div className="relative z-10 p-8 flex flex-col items-center text-center gap-6">
         
-        {/* Text Area */}
-        <div className="flex-1 text-center md:text-left">
-          <div className="inline-flex items-center gap-2 text-[#F7A600] font-bold text-xs uppercase tracking-widest mb-3">
-            <ShieldCheck size={14} /> Partener Oficial
-          </div>
-          <h3 className="text-2xl md:text-3xl font-black text-white mb-2 font-[var(--font-space)]">
-            Tranzacționează Crypto Reglementat
-          </h3>
-          <p className="text-gray-400 text-sm md:text-base mb-6 leading-relaxed">
-            Platforma pe care o folosesc eu pentru execuție rapidă și lichiditate instituțională. 
-            <br className="hidden md:block" /> Înregistrează-te prin link-ul oficial <strong>StiriCrypto</strong>.
-          </p>
-          
-          <div className="flex flex-wrap justify-center md:justify-start gap-4 text-xs font-mono text-gray-500">
-            <span className="flex items-center gap-1"><Zap size={12} className="text-yellow-500"/> Execuție 0.01ms</span>
-            <span className="flex items-center gap-1"><ShieldCheck size={12} className="text-yellow-500"/> Proof of Reserves</span>
-          </div>
+        {/* Logo Area & Badge */}
+        <div className="flex flex-col items-center gap-2">
+            {/* Logo Stilizat (Text) */}
+            <div className="text-3xl font-black text-white tracking-tighter flex items-center gap-1">
+                BYBIT <span className="text-[#F7A600] text-lg align-top">★</span>
+            </div>
+            <div className="inline-flex items-center gap-1.5 text-green-400 bg-green-900/20 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-green-500/20">
+                <ShieldCheck size={12} /> Reglementat MiCA
+            </div>
         </div>
 
-        {/* Button Area */}
-        <div className="shrink-0">
+        {/* Text Area */}
+        <div>
+          <h3 className="text-xl md:text-2xl font-bold text-white mb-2 font-[var(--font-space)]">
+            Cea mai sigură platformă europeană
+          </h3>
+          <p className="text-gray-400 text-sm max-w-lg mx-auto leading-relaxed">
+            Nu îți risca banii pe platforme obscure. Alege partenerul reglementat pe care îl folosesc și eu pentru siguranță și lichiditate.
+          </p>
+        </div>
+
+        {/* Action Area */}
+        <div className="flex flex-col sm:flex-row items-center gap-4 w-full justify-center">
           <Link 
             href={AFFILIATE_LINK} 
             target="_blank"
-            className="flex items-center gap-3 bg-[#F7A600] hover:bg-[#ffb300] text-black font-black px-8 py-4 rounded-xl transition-all transform hover:-translate-y-1 shadow-[0_0_20px_rgba(247,166,0,0.2)] hover:shadow-[0_0_30px_rgba(247,166,0,0.4)]"
+            className="flex items-center justify-center gap-2 bg-[#F7A600] hover:bg-[#ffb300] text-black font-black px-8 py-3.5 rounded-xl transition-all transform hover:-translate-y-1 shadow-[0_0_20px_rgba(247,166,0,0.2)] w-full sm:w-auto"
           >
-            Deschide Cont <ArrowRight size={20} />
+            Deschide Cont <ArrowRight size={18} />
           </Link>
-          <p className="text-[10px] text-center mt-3 text-gray-600">Bonus exclusiv prin acest link</p>
+          <div className="flex items-center gap-2 text-xs text-gray-500">
+            <CheckCircle2 size={12} className="text-[#F7A600]"/> Bonus de Bun Venit Activ
+          </div>
         </div>
 
       </div>
