@@ -1,11 +1,137 @@
 export const articles = [
-  // ✅ 1. ARTICOL NOU (AZI): SEZONUL CELOR 20
+  // ✅ 1. ARTICOL NOU (AZI): DOSARUL SATOSHI
+  {
+    slug: "dosarul-satoshi-cine-este-fantoma-de-70-miliarde-investigatie-2025",
+    title: "Dosarul Satoshi: Cine este \"Fantoma\" de 70 Miliarde de Dolari? Investigația Completă 2025",
+    date: "17 Dec 2025",
+    category: "EDUCAȚIE & INVESTIGAȚIE",
+    image: "/satoshi.jpg", // ✅ Imaginea ta uploadată
+    impact: "neutral", 
+    summary: "Cine este arhitectul Bitcoin? Un geniu singuratic, Hal Finney sau o agenție guvernamentală? Analizăm dovezile criminalistice, teoriile HBO și verdictul instanțelor din 2024 în cel mai mare mister al secolului.",
+    mihaiTake: "Tati, cel mai mare cadou pe care ni l-a făcut Satoshi nu e tehnologia, ci dispariția lui. Dacă rămânea, Bitcoin era doar o altă companie cu CEO pe care o putea aresta guvernul. Așa, e o forță a naturii. Nu căuta fantoma, bucură-te de libertatea pe care ți-a lăsat-o.",
+    content: `
+      <p class="text-xl font-medium text-white mb-6">Pe 31 octombrie 2008, o entitate sub pseudonimul <strong>Satoshi Nakamoto</strong> a publicat celebrul Whitepaper Bitcoin. În 2011, a dispărut. Astăzi, averea sa neatinsă valorează peste <strong>70 de miliarde de dolari</strong>.</p>
+      
+      <p class="mb-4">Cine este, de fapt, arhitectul Bitcoin? Este un geniu singuratic, un grup de criptografi sau o agenție guvernamentală? Acest studiu analizează principalii suspecți, folosind dovezi criminalistice, analize lingvistice și decizii judiciare recente (2024-2025).</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">1. Hal Finney: Primul Pionier (Favoritul Sentimental)</h3>
+      
+      <div class="flex items-center gap-2 mb-4">
+        <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded text-sm font-bold border border-green-500/50">Scor Viabilitate: 9/10</span>
+      </div>
+      
+      <p class="mb-4">Hal Finney a fost un criptograf legendar și prima persoană (în afara lui Satoshi) care a rulat software-ul Bitcoin.</p>
+      <p class="mb-4"><strong>Momentul Cheie:</strong> Pe 12 ianuarie 2009, Finney a primit prima tranzacție Bitcoin din istorie (10 BTC) direct de la Nakamoto.</p>
+      
+      <div class="bg-gray-800 p-6 rounded-xl border border-gray-600 mb-6">
+        <p class="text-gray-300 mb-2"><strong>🔎 Probele:</strong> Analiza stilometrică a arătat că stilul de scriere al lui Finney este cel mai apropiat de cel al lui Satoshi. Mai mult, Finney locuia la câteva străzi distanță de un bărbat numit... <em>Dorian Nakamoto</em> (o posibilă sursă de inspirație pentru pseudonim).</p>
+        <p class="text-gray-300 border-t border-gray-700 pt-2 mt-2"><strong>⚖️ Contra-argumente:</strong> Finney a negat vehement până la moartea sa în 2014. Email-urile dintre el și Satoshi par autentice, sugerând două persoane distincte.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">2. Nick Szabo: Arhitectul Conceptual</h3>
+      
+      <div class="flex items-center gap-2 mb-4">
+        <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded text-sm font-bold border border-blue-500/50">Scor Viabilitate: 8/10</span>
+      </div>
+
+      <p class="mb-4">Nick Szabo a creat "Bit Gold" în 1998, un precursor aproape identic conceptual cu Bitcoin.</p>
+      <ul class="list-disc pl-6 space-y-2 text-gray-300 mb-6">
+        <li><strong>Probele:</strong> "Bit Gold" folosea proof-of-work și lanțuri de semnături digitale. În mod suspect, Whitepaper-ul Bitcoin nu citează munca lui Szabo, deși similitudinile sunt izbitoare. Elon Musk a sugerat că Szabo este cel mai probabil candidat.</li>
+        <li><strong>Contra-argumente:</strong> Szabo a negat constant. Nu există o "pistă fumegândă" tehnică care să lege direct codul Bitcoin de el.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">3. Len Sassaman: Geniul Tragic (Teoria HBO)</h3>
+      
+      <div class="flex items-center gap-2 mb-4">
+        <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded text-sm font-bold border border-purple-500/50">Scor Viabilitate: 7/10</span>
+      </div>
+
+      <p class="mb-4">O teorie care a explodat după documentarul HBO din 2024. Sassaman a fost un prodigy al mișcării Cypherpunk.</p>
+      <div class="bg-purple-900/10 border-l-4 border-purple-500 p-4 mb-6">
+        <p class="text-gray-300"><strong>Coincidența Tulburătoare:</strong> Sassaman s-a sinucis în iulie 2011, la doar 2 luni după ce Satoshi a trimis ultimul său email spunând <em>"Nu voi mai fi aici în viitor"</em>.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">4. Adam Back & Wei Dai: Părinții Tehnologiei</h3>
+      <p class="mb-4">Amândoi sunt citați în Whitepaper-ul Bitcoin.</p>
+      <ul class="list-disc pl-6 space-y-3 text-gray-300 mb-6">
+        <li><strong>Adam Back (CEO Blockstream):</strong> A inventat Hashcash, sistemul pe care se bazează minarea Bitcoin. Deși a negat, rămâne unul dintre puținii oameni capabili să creeze protocolul de la zero.</li>
+        <li><strong>Wei Dai:</strong> Creatorul b-money. Satoshi l-a contactat personal înainte de lansare.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">5. Dosarele Respinse: Cine NU este Satoshi</h3>
+      
+      <div class="space-y-4 mb-8">
+        <div class="bg-red-900/10 p-4 rounded border border-red-500/20">
+            <strong class="text-red-400 block mb-1">❌ Craig Wright (Falsul Satoshi)</strong>
+            <p class="text-sm text-gray-300">Verdict: În martie 2024, Înalta Curte din Marea Britanie a decis oficial, pe baza unor dovezi "copleșitoare", că Wright a falsificat documente și a mințit. <strong>El nu este Satoshi Nakamoto.</strong></p>
+        </div>
+        <div class="bg-red-900/10 p-4 rounded border border-red-500/20">
+            <strong class="text-red-400 block mb-1">❌ Dorian Nakamoto & Elon Musk</strong>
+            <p class="text-sm text-gray-300">Dorian a fost o victimă a presei (Newsweek 2014), iar Musk nu se potrivește cronologic (în 2008 salva Tesla). Teoriile CIA contrazic filozofia anti-sistem a Bitcoin.</p>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Tabel Comparativ: Suspecții Principali</h3>
+      
+      <div class="overflow-x-auto mb-8">
+        <table class="w-full text-left border-collapse">
+            <thead>
+                <tr class="text-gray-400 border-b border-gray-700 text-sm uppercase">
+                    <th class="p-3">Candidat</th>
+                    <th class="p-3">Expertiză</th>
+                    <th class="p-3">Conexiuni</th>
+                    <th class="p-3">Probabilitate</th>
+                </tr>
+            </thead>
+            <tbody class="text-gray-200 text-sm">
+                <tr class="border-b border-gray-800 hover:bg-white/5">
+                    <td class="p-3 font-bold text-blue-400">Hal Finney</td>
+                    <td class="p-3">⭐⭐⭐⭐⭐</td>
+                    <td class="p-3">DA (RPOW)</td>
+                    <td class="p-3 text-green-400 font-bold">Foarte Mare</td>
+                </tr>
+                <tr class="border-b border-gray-800 hover:bg-white/5">
+                    <td class="p-3 font-bold text-blue-400">Nick Szabo</td>
+                    <td class="p-3">⭐⭐⭐⭐⭐</td>
+                    <td class="p-3">DA (Bit Gold)</td>
+                    <td class="p-3 text-green-400">Mare</td>
+                </tr>
+                <tr class="border-b border-gray-800 hover:bg-white/5">
+                    <td class="p-3 font-bold text-blue-400">Len Sassaman</td>
+                    <td class="p-3">⭐⭐⭐⭐⭐</td>
+                    <td class="p-3">DA (Mixmaster)</td>
+                    <td class="p-3 text-yellow-400">Medie-Mare</td>
+                </tr>
+                <tr class="border-b border-gray-800 hover:bg-white/5">
+                    <td class="p-3 font-bold text-gray-500 line-through">Craig Wright</td>
+                    <td class="p-3">⭐⭐</td>
+                    <td class="p-3">NU</td>
+                    <td class="p-3 text-red-500">FRAUDĂ</td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Concluzie: De ce este bine că nu știm?</h3>
+      <p class="mb-4">Misterul identității lui Satoshi Nakamoto nu este o slăbiciune, ci cea mai mare forță a Bitcoin.</p>
+      <p class="mb-4">Dacă Satoshi ar fi o persoană cunoscută (ca Vitalik Buterin pentru Ethereum sau Mark Zuckerberg pentru Meta), ar exista un punct central de presiune, un lider care poate fi arestat, compromis sau influențat.</p>
+      
+      <div class="p-6 bg-gradient-to-r from-gray-900 to-black border border-white/10 rounded-2xl text-center shadow-xl mt-8">
+        <p class="text-lg text-white font-medium leading-relaxed italic">
+            "Faptul că cele 1 milion de monede nu s-au mișcat din 2010 sugerează fie că creatorul nu mai este printre noi, fie că a avut o disciplină supraomenească. <br/><br/>
+            <span class="text-green-400 font-bold not-italic">Până când acele portofele se vor mișca, Satoshi rămâne nimeni și, în același timp, toți cei care folosesc rețeaua."</span>
+        </p>
+      </div>
+    `
+  },
+
+  // ✅ 2. ARTICOL: SEZONUL CELOR 20 (STRATEGIE PORTOFOLIU)
   {
     slug: "nu-asteptati-altcoin-season-vine-sezonul-celor-20",
     title: "Nu așteptați \"Altcoin Season\". Vine \"Sezonul celor 20\".",
     date: "16 Dec 2025",
     category: "STRATEGIE & PORTFOLIO",
-    image: "/cele20.jpg", // ✅ Imaginea ta uploadată
+    image: "/cele20.jpg", 
     impact: "bullish", 
     summary: "Lichiditatea nu mai curge în cascadă. 99% din monede vor tinde spre zero. Află care sunt cele 20 de active 'alese' de instituții pentru ciclul 2026.",
     mihaiTake: "Tati, epoca 'spray and pray' a murit. Nu mai arunca banii în toate proiectele obscure sperând la 100x. În 2026, banii inteligenți se concentrează. Dacă portofoliul tău arată ca o salată de fructe cu 50 de monede, ești victima sigură. Concentrare = Avere.",
@@ -64,7 +190,7 @@ export const articles = [
     `
   },
 
-  // ✅ 2. ARTICOL: US TREASURY DEBT BUYBACK
+  // ✅ 3. ARTICOL: US TREASURY DEBT BUYBACK
   {
     slug: "trezoreria-sua-debt-buyback-semnal-crypto-2026",
     title: "Trezoreria SUA tocmai a făcut-o din nou ($12.5 MLD). Și nimeni din România nu vorbește despre asta.",
@@ -125,7 +251,7 @@ export const articles = [
     `
   },
 
-  // ✅ 3. ARTICOL: MiCA & BLOCADA BANCARĂ (TEXT INTEGRAL)
+  // ✅ 4. ARTICOL: MiCA & BLOCADA BANCARĂ (TEXT INTEGRAL)
   {
     slug: "cortina-de-fier-financiara-europeana-mica-2026",
     title: "\"Cortina de Fier\" Financiară a Europei (2026): Pericolele Tranzacționării pe Platforme Nereglementate",
@@ -204,7 +330,7 @@ export const articles = [
     `
   },
 
-  // ✅ 4. ARTICOL: MITUL ALTCOIN SEASON
+  // ✅ 5. ARTICOL: MITUL ALTCOIN SEASON
   {
     slug: "mitul-si-realitatea-altcoin-season-2022-2026",
     title: "2022-2025: Marea Minciună a Altcoin-urilor. Studiu de Piață: Mitul și Realitatea \"Altcoin Season\".",
@@ -262,7 +388,7 @@ export const articles = [
     `
   },
 
-  // ✅ 5. ARTICOL: ACUMULARE INSTITUȚIONALĂ ETHEREUM
+  // ✅ 6. ARTICOL: ACUMULARE INSTITUȚIONALĂ ETHEREUM
   {
     slug: "acumulare-institutionala-ethereum-dat-bmnr-2025",
     title: "Acumularea Instituțională de Ethereum: O Tendință Bullish în 2025",
@@ -331,7 +457,7 @@ export const articles = [
     `
   },
 
-  // ✅ 6. ARTICOL: IMPACT REUNIUNE FOMC DECEMBRIE 2025
+  // ✅ 7. ARTICOL: IMPACT REUNIUNE FOMC DECEMBRIE 2025
   {
     slug: "impact-reuniune-fomc-decembrie-2025-crypto",
     title: "Impactul Reuniunii FOMC din Decembrie 2025 asupra Pieței Crypto: O Analiză Detaliată și Explicativă",
@@ -396,7 +522,7 @@ export const articles = [
     `
   },
 
-  // ✅ 7. ARTICOL: HALVING VS LICHIDITATE (Imagine Locală)
+  // ✅ 8. ARTICOL: HALVING VS LICHIDITATE (Imagine Locală)
   {
     slug: "mitul-halving-ului-sacru-vs-realitatea-lichiditatii",
     title: "Mitul \"Halving-ului Sacru\" vs. Realitatea Lichidității: Ce dictează cu adevărat prețul Bitcoin în 2025?",
@@ -489,7 +615,7 @@ export const articles = [
     `
   },
 
-  // ✅ 8. ARTICOL: LEVIERUL (EDUCAȚIE & RISK) - INTEGRAL
+  // ✅ 9. ARTICOL: LEVIERUL (EDUCAȚIE & RISK) - INTEGRAL
   {
     slug: "mirajul-levierului-arma-financiara-distrugere",
     title: "Mirajul Levierului: \"Arma Financiară de Distrugere în Masă\" care îți poate Zeroiza Contul într-o Secundă. Ghid de Conștientizare.",
@@ -570,7 +696,7 @@ export const articles = [
     `
   },
 
-  // ✅ 9. ARTICOL: ALERTĂ FED (Imagine Locală)
+  // ✅ 10. ARTICOL: ALERTĂ FED (Imagine Locală)
   {
     slug: "alerta-volatilitate-decizie-fed-capcana-mortala",
     title: "Alertă de Volatilitate: De ce Decizia FED de Mâine Poate Fi o \"Capcană Mortală\"",
@@ -632,7 +758,7 @@ export const articles = [
     `
   },
 
-  // ✅ 10. ARTICOL: GHID BEAR MARKET (Imagine Locală)
+  // ✅ 11. ARTICOL: GHID BEAR MARKET (Imagine Locală)
   {
     slug: "ce-inseamna-bear-market-ghid-complet",
     title: "Ce Înseamnă \"Bear Market\" și De Ce Nu Trebuie Să Te Sperie? Ghidul Complet.",
