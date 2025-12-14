@@ -1,9 +1,12 @@
 import { articles } from '@/lib/articles';
 import Navbar from '@/components/Navbar';
 import ShareButtons from '@/components/ShareButtons';
+import Newsletter from '@/components/Newsletter';
+import BybitPromo from '@/components/BybitPromo'; // ✅ Integrat
+import RelatedArticles from '@/components/RelatedArticles'; // ✅ Integrat
 import { 
   Calendar, Clock, ArrowLeft, 
-  TrendingUp, TrendingDown, Activity, 
+  TrendingUp, TrendingDown, 
   AlertTriangle, ShieldAlert, Zap, 
   BrainCircuit, Lightbulb 
 } from 'lucide-react';
@@ -12,14 +15,14 @@ import Script from 'next/script';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 
-// 1. Generăm rutele statice (Viteză Maximă)
+// 1. Generăm rutele statice
 export async function generateStaticParams() {
   return articles.map((article) => ({
     slug: article.slug,
   }));
 }
 
-// 2. Metadata SEO Automat
+// 2. Metadata SEO
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const article = articles.find((a) => a.slug === slug);
@@ -35,7 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-// 3. Pagina "Cameleon" (Design Premium Automat)
+// 3. Pagina Articolului
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const article = articles.find((a) => a.slug === slug);
@@ -44,8 +47,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     notFound();
   }
 
-  // --- LOGICA DE DESIGN ---
-  // Aici se decide culoarea și atmosfera paginii
+  // --- Design Dinamic ---
   const getTheme = () => {
     switch (article.impact) {
       case 'bullish':
@@ -54,11 +56,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           accent: 'text-green-400', 
           border: 'border-green-500/20', 
           bg: 'bg-green-500/10',
-          gradient: 'from-green-400 to-emerald-600',
           selection: 'selection:bg-green-500/30',
           icon: TrendingUp,
           ctaTitle: 'Pregătește-te pentru oportunitate',
-          ctaText: 'Când piața crește, trebuie să știi când să intri și când să ieși. Hai să facem strategia.',
+          ctaText: 'Când piața crește, trebuie să știi când să intri și când să ieși.',
           ctaIcon: Zap
         };
       case 'bearish':
@@ -67,24 +68,22 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           accent: 'text-red-500', 
           border: 'border-red-500/20', 
           bg: 'bg-red-900/10', 
-          gradient: 'from-red-500 to-orange-600',
           selection: 'selection:bg-red-500/30',
-          icon: TrendingDown, // Sau AlertTriangle
+          icon: TrendingDown,
           ctaTitle: 'Nu pierde bani din neștiință',
-          ctaText: 'Piețele volatile sunt periculoase fără plan. Securizează-ți portofoliul acum.',
+          ctaText: 'Piețele volatile sunt periculoase fără plan. Securizează-ți portofoliul.',
           ctaIcon: ShieldAlert
         };
-      default: // Educație / Neutral
+      default: 
         return { 
           color: 'blue', 
           accent: 'text-blue-400', 
           border: 'border-blue-500/20', 
           bg: 'bg-blue-900/10',
-          gradient: 'from-blue-400 to-indigo-500',
           selection: 'selection:bg-blue-500/30',
           icon: BrainCircuit,
           ctaTitle: 'Investește în educația ta',
-          ctaText: 'Emoțiile te costă bani. Ai nevoie de o strategie clară, nu de reacții la știri.',
+          ctaText: 'Emoțiile te costă bani. Ai nevoie de o strategie clară.',
           ctaIcon: Lightbulb
         };
     }
@@ -94,7 +93,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const ThemeIcon = theme.icon;
   const CtaIcon = theme.ctaIcon;
 
-  // Schema JSON-LD pentru Google
+  // Schema JSON-LD
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'NewsArticle',
@@ -145,7 +144,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             />
         </div>
 
-        {/* CONTINUT + MIHAI'S TAKE */}
+        {/* CONTINUT */}
         <div className="prose prose-invert prose-lg max-w-none text-gray-300 font-[var(--font-inter)] leading-relaxed">
             
             {article.mihaiTake && (
@@ -158,24 +157,14 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 </div>
             )}
 
-            {/* Aici se injectează tot HTML-ul din articles.ts */}
             <div dangerouslySetInnerHTML={{ __html: article.content }} />
         </div>
 
-        {/* FOOTER */}
-        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 font-[var(--font-inter)]">
-            <div className="text-sm text-gray-500">
-                Autor: <span className="text-white font-bold">Mihai Daniel</span> • Analist
-            </div>
-            
-            <div className="flex flex-col gap-2 w-full md:w-auto">
-                <span className="text-xs text-gray-500 uppercase tracking-widest font-bold">Distribuie analiza:</span>
-                <ShareButtons title={article.title} slug={article.slug} />
-            </div>
-        </div>
+        {/* ✅ BYBIT PROMO (Apare imediat după text) */}
+        <BybitPromo />
 
-        {/* CTA DINAMIC */}
-        <div className={`mt-12 bg-gradient-to-r ${theme.bg.replace('bg-', 'from-').replace('/10', '/20')} to-gray-900/50 p-8 rounded-2xl border ${theme.border} text-center`}>
+        {/* CTA CONSULTANȚĂ */}
+        <div className={`mt-12 bg-gradient-to-r ${theme.bg.replace('bg-', 'from-').replace('/10', '/20')} to-gray-900/50 p-8 rounded-2xl border ${theme.border} text-center mb-8`}>
             <h3 className="text-2xl font-bold text-white mb-2 font-[var(--font-space)]">
                 {theme.ctaTitle}
             </h3>
@@ -185,6 +174,24 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             <Link href="/#consultanta" className={`inline-flex items-center gap-2 bg-${theme.color === 'blue' ? 'indigo' : theme.color}-600 hover:bg-${theme.color === 'blue' ? 'indigo' : theme.color}-500 text-white font-bold px-8 py-3 rounded-xl transition-all shadow-lg transform hover:-translate-y-1`}>
                 <CtaIcon size={18}/> Rezervă Sesiunea ($250)
             </Link>
+        </div>
+
+        {/* ✅ RELATED ARTICLES */}
+        <RelatedArticles currentSlug={article.slug} />
+
+        {/* NEWSLETTER */}
+        <Newsletter />
+
+        {/* FOOTER ARTICOL */}
+        <div className="mt-8 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 font-[var(--font-inter)]">
+            <div className="text-sm text-gray-500">
+                Autor: <span className="text-white font-bold">Mihai Daniel</span> • Analist
+            </div>
+            
+            <div className="flex flex-col gap-2 w-full md:w-auto">
+                <span className="text-xs text-gray-500 uppercase tracking-widest font-bold">Distribuie analiza:</span>
+                <ShareButtons title={article.title} slug={article.slug} />
+            </div>
         </div>
 
       </article>
