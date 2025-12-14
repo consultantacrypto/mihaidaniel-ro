@@ -1,11 +1,104 @@
 export const articles = [
-  // ✅ 1. ARTICOL NOU (AZI): DOSARUL SATOSHI
+  // ✅ 1. ARTICOL NOU (AZI): ALERTA BOJ (JAPONIA)
+  {
+    slug: "alerta-boj-lebada-neagra-japonia-bitcoin-18-decembrie",
+    title: "Alerta BOJ: \"Lebăda Neagră\" din Japonia care poate lovi Bitcoin săptămâna viitoare (18-19 Decembrie)",
+    date: "18 Dec 2025",
+    category: "MACRO & RISC",
+    image: "/japanbank.jpg", // ✅ Imaginea ta uploadată
+    impact: "bearish", 
+    summary: "De ce o creștere de 0.25% la Tokyo contează mai mult decât deciziile FED? Analizăm mecanismul 'Yen Carry Trade' și cele 3 scenarii de impact pentru portofoliul tău.",
+    mihaiTake: "Tati, ignoră zgomotul de pe Twitter. Adevăratul 'Boss Final' al anului 2025 este Banca Japoniei. Dacă ei ridică dobânda, robinetul global de bani ieftini se închide. Nu e momentul să fii erou cu levier 100x. Păstrează gloanțele (USDT) pentru a vâna oportunitățile din volatilitate.",
+    content: `
+      <p class="text-xl font-medium text-white mb-6">Săptămâna viitoare, ochii investitorilor de retail vor fi pe grafice. Ochii investitorilor instituționali vor fi pe Tokyo.</p>
+      
+      <p class="mb-4">Pe <strong>18-19 Decembrie 2025</strong>, Banca Centrală a Japoniei (BOJ) pregătește o mișcare istorică: majorarea ratei de dobândă la <strong>0.75%</strong>. Pare puțin? Este cel mai înalt nivel din ultimii 30 de ani.</p>
+      
+      <div class="bg-red-900/10 border-l-4 border-red-500 p-4 my-6 rounded-r-lg">
+        <strong class="text-red-400 block mb-2">De ce contează?</strong>
+        <p class="text-gray-300">Pentru Bitcoin, aceasta nu este doar o știre economică plictisitoare. Este un potențial <strong>șoc de lichiditate</strong>.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Mecanismul Pericolului: "Carry Trade-ul" Explicat Simplu</h3>
+      <p class="mb-4">De ani de zile, fondurile de investiții fac următorul joc (Yen Carry Trade):</p>
+      
+      <div class="bg-gray-800 p-6 rounded-xl border border-gray-600 mb-8">
+        <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+                <span class="bg-blue-500/20 text-blue-400 font-bold px-2 py-1 rounded text-xs mt-1">PASUL 1</span>
+                <span class="text-gray-300">Împrumută Yeni japonezi la dobânzi aproape de zero (bani gratis).</span>
+            </li>
+            <li class="flex items-start gap-3">
+                <span class="bg-blue-500/20 text-blue-400 font-bold px-2 py-1 rounded text-xs mt-1">PASUL 2</span>
+                <span class="text-gray-300">Vând Yenii și cumpără Dolari sau active riscante (Acțiuni, Bitcoin).</span>
+            </li>
+            <li class="flex items-start gap-3">
+                <span class="bg-green-500/20 text-green-400 font-bold px-2 py-1 rounded text-xs mt-1">PASUL 3</span>
+                <span class="text-gray-300">Profită de diferența uriașă de randament.</span>
+            </li>
+        </ul>
+        <div class="mt-6 pt-4 border-t border-gray-700">
+            <p class="text-white font-bold mb-2">⚠️ Ce se întâmplă săptămâna viitoare?</p>
+            <p class="text-sm text-gray-400">Dacă BOJ crește dobânda, costul acestor împrumuturi crește. Yen-ul se întărește. Investitorii sunt forțați să <strong>vândă activele riscante (BTC)</strong> pentru a plăti datoriile în Yeni. Este exact mecanismul care a cauzat prăbușirea piețelor în "Lunea Neagră" din august 2024.</p>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Cele 3 Scenarii pentru Bitcoin (Analiză de Probabilitate)</h3>
+      <p class="mb-6">Piețele au prețat deja o mare parte din acest eveniment, dar volatilitatea este garantată. Iată la ce să te aștepți:</p>
+
+      <div class="space-y-6">
+        {/* Scenariul 1 */}
+        <div class="bg-red-900/10 border border-red-500/30 p-6 rounded-xl">
+            <h4 class="text-xl font-bold text-red-400 mb-2 flex items-center gap-2">🔴 Scenariul 1: Majorarea Așteptată (Probabilitate 90%)</h4>
+            <ul class="list-disc pl-5 space-y-2 text-gray-300 text-sm">
+                <li><strong>Decizia:</strong> BOJ ridică rata la 0.75% și confirmă că economia își revine.</li>
+                <li><strong>Reacția Bitcoin:</strong> Impact Negativ Moderat. Ne putem aștepta la o corecție rapidă de 5-10% (posibil retestare zonă inferioară) pe măsură ce pozițiile de carry trade sunt lichidate.</li>
+                <li><strong>Strategia:</strong> <span class="text-white font-bold">Nu intrați în panică.</span> Dacă piața a "prețuit" deja știrea, scăderea va fi cumpărată rapid (Sell the rumor, Buy the news).</li>
+            </ul>
+        </div>
+
+        {/* Scenariul 2 */}
+        <div class="bg-green-900/10 border border-green-500/30 p-6 rounded-xl">
+            <h4 class="text-xl font-bold text-green-400 mb-2 flex items-center gap-2">🟢 Scenariul 2: Surpriza "Hold" (Probabilitate 10%)</h4>
+            <ul class="list-disc pl-5 space-y-2 text-gray-300 text-sm">
+                <li><strong>Decizia:</strong> Datele de inflație de pe 19 dimineața sunt slabe, iar BOJ decide să aștepte. Rata rămâne la 0.5%.</li>
+                <li><strong>Reacția Bitcoin:</strong> Impact Exploziv Pozitiv. Yen-ul scade, lichiditatea rămâne ieftină. Bitcoin ar putea vedea o lumânare verde masivă (+5-15%) instantaneu.</li>
+                <li><strong>Strategia:</strong> Moment excelent pentru poziții Long pe termen scurt.</li>
+            </ul>
+        </div>
+
+        {/* Scenariul 3 */}
+        <div class="bg-gray-800 border border-gray-600 p-6 rounded-xl">
+            <h4 class="text-xl font-bold text-gray-200 mb-2 flex items-center gap-2">⚫ Scenariul 3: "Șoimii" Atacă (Probabilitate <5%)</h4>
+            <ul class="list-disc pl-5 space-y-2 text-gray-300 text-sm">
+                <li><strong>Decizia:</strong> Majorare la 0.75% SAU mai mult, combinată cu un limbaj agresiv despre viitoare creșteri rapide.</li>
+                <li><strong>Reacția Bitcoin:</strong> Impact Foarte Negativ. Panică generală. Scăderi de 15-20%, lichidări în lanț.</li>
+                <li><strong>Strategia:</strong> Cash is King. Stai pe margine și așteaptă să se așeze praful.</li>
+            </ul>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Concluzie și Plan de Acțiune</h3>
+      <p class="mb-4">Suntem într-un moment critic. SUA relaxează (tipărește), Japonia strânge cureaua. Acest contrast creează turbulențe. Bitcoin sub 85.000 USD arată deja că "Smart Money" se protejează înainte de eveniment.</p>
+      
+      <div class="bg-yellow-900/10 border-l-4 border-yellow-500 p-6 rounded-r-lg mt-6">
+        <h4 class="text-lg font-bold text-yellow-500 mb-3">Sfatul meu:</h4>
+        <ol class="list-decimal pl-5 space-y-2 text-gray-300">
+            <li><strong>Nu tranzacționați cu levier mare</strong> în perioada 18-19 Decembrie. Riscul de lichidare este extrem.</li>
+            <li><strong>Urmăriți perechea USD/JPY.</strong> Dacă scade violent sub 150, Bitcoin va suferi.</li>
+            <li><strong>Păstrați lichiditate (USDT)</strong> pentru a cumpăra eventualele dip-uri cauzate de panică. Aceasta este o corecție de lichiditate, nu sfârșitul ciclului.</li>
+        </ol>
+      </div>
+    `
+  },
+
+  // ✅ 2. DOSARUL SATOSHI
   {
     slug: "dosarul-satoshi-cine-este-fantoma-de-70-miliarde-investigatie-2025",
     title: "Dosarul Satoshi: Cine este \"Fantoma\" de 70 Miliarde de Dolari? Investigația Completă 2025",
     date: "17 Dec 2025",
     category: "EDUCAȚIE & INVESTIGAȚIE",
-    image: "/satoshi.jpg", // ✅ Imaginea ta uploadată
+    image: "/satoshi.jpg", 
     impact: "neutral", 
     summary: "Cine este arhitectul Bitcoin? Un geniu singuratic, Hal Finney sau o agenție guvernamentală? Analizăm dovezile criminalistice, teoriile HBO și verdictul instanțelor din 2024 în cel mai mare mister al secolului.",
     mihaiTake: "Tati, cel mai mare cadou pe care ni l-a făcut Satoshi nu e tehnologia, ci dispariția lui. Dacă rămânea, Bitcoin era doar o altă companie cu CEO pe care o putea aresta guvernul. Așa, e o forță a naturii. Nu căuta fantoma, bucură-te de libertatea pe care ți-a lăsat-o.",
@@ -125,7 +218,7 @@ export const articles = [
     `
   },
 
-  // ✅ 2. ARTICOL: SEZONUL CELOR 20 (STRATEGIE PORTOFOLIU)
+  // ✅ 3. SEZONUL CELOR 20
   {
     slug: "nu-asteptati-altcoin-season-vine-sezonul-celor-20",
     title: "Nu așteptați \"Altcoin Season\". Vine \"Sezonul celor 20\".",
@@ -190,7 +283,7 @@ export const articles = [
     `
   },
 
-  // ✅ 3. ARTICOL: US TREASURY DEBT BUYBACK
+  // ✅ 4. ARTICOL: US TREASURY DEBT BUYBACK
   {
     slug: "trezoreria-sua-debt-buyback-semnal-crypto-2026",
     title: "Trezoreria SUA tocmai a făcut-o din nou ($12.5 MLD). Și nimeni din România nu vorbește despre asta.",
@@ -251,7 +344,7 @@ export const articles = [
     `
   },
 
-  // ✅ 4. ARTICOL: MiCA & BLOCADA BANCARĂ (TEXT INTEGRAL)
+  // ✅ 5. ARTICOL: MiCA & BLOCADA BANCARĂ (TEXT INTEGRAL)
   {
     slug: "cortina-de-fier-financiara-europeana-mica-2026",
     title: "\"Cortina de Fier\" Financiară a Europei (2026): Pericolele Tranzacționării pe Platforme Nereglementate",
@@ -330,7 +423,7 @@ export const articles = [
     `
   },
 
-  // ✅ 5. ARTICOL: MITUL ALTCOIN SEASON
+  // ✅ 6. ARTICOL: MITUL ALTCOIN SEASON
   {
     slug: "mitul-si-realitatea-altcoin-season-2022-2026",
     title: "2022-2025: Marea Minciună a Altcoin-urilor. Studiu de Piață: Mitul și Realitatea \"Altcoin Season\".",
@@ -388,7 +481,7 @@ export const articles = [
     `
   },
 
-  // ✅ 6. ARTICOL: ACUMULARE INSTITUȚIONALĂ ETHEREUM
+  // ✅ 7. ARTICOL: ACUMULARE INSTITUȚIONALĂ ETHEREUM
   {
     slug: "acumulare-institutionala-ethereum-dat-bmnr-2025",
     title: "Acumularea Instituțională de Ethereum: O Tendință Bullish în 2025",
@@ -457,7 +550,7 @@ export const articles = [
     `
   },
 
-  // ✅ 7. ARTICOL: IMPACT REUNIUNE FOMC DECEMBRIE 2025
+  // ✅ 8. ARTICOL: IMPACT REUNIUNE FOMC DECEMBRIE 2025
   {
     slug: "impact-reuniune-fomc-decembrie-2025-crypto",
     title: "Impactul Reuniunii FOMC din Decembrie 2025 asupra Pieței Crypto: O Analiză Detaliată și Explicativă",
@@ -522,7 +615,7 @@ export const articles = [
     `
   },
 
-  // ✅ 8. ARTICOL: HALVING VS LICHIDITATE (Imagine Locală)
+  // ✅ 9. ARTICOL: HALVING VS LICHIDITATE (Imagine Locală)
   {
     slug: "mitul-halving-ului-sacru-vs-realitatea-lichiditatii",
     title: "Mitul \"Halving-ului Sacru\" vs. Realitatea Lichidității: Ce dictează cu adevărat prețul Bitcoin în 2025?",
@@ -615,7 +708,7 @@ export const articles = [
     `
   },
 
-  // ✅ 9. ARTICOL: LEVIERUL (EDUCAȚIE & RISK) - INTEGRAL
+  // ✅ 10. ARTICOL: LEVIERUL (EDUCAȚIE & RISK) - INTEGRAL
   {
     slug: "mirajul-levierului-arma-financiara-distrugere",
     title: "Mirajul Levierului: \"Arma Financiară de Distrugere în Masă\" care îți poate Zeroiza Contul într-o Secundă. Ghid de Conștientizare.",
@@ -696,7 +789,7 @@ export const articles = [
     `
   },
 
-  // ✅ 10. ARTICOL: ALERTĂ FED (Imagine Locală)
+  // ✅ 11. ARTICOL: ALERTĂ FED (Imagine Locală)
   {
     slug: "alerta-volatilitate-decizie-fed-capcana-mortala",
     title: "Alertă de Volatilitate: De ce Decizia FED de Mâine Poate Fi o \"Capcană Mortală\"",
@@ -758,7 +851,7 @@ export const articles = [
     `
   },
 
-  // ✅ 11. ARTICOL: GHID BEAR MARKET (Imagine Locală)
+  // ✅ 12. ARTICOL: GHID BEAR MARKET (Imagine Locală)
   {
     slug: "ce-inseamna-bear-market-ghid-complet",
     title: "Ce Înseamnă \"Bear Market\" și De Ce Nu Trebuie Să Te Sperie? Ghidul Complet.",
@@ -846,7 +939,7 @@ export const articles = [
     `
   },
 
-  // ✅ 11. ARTICOL: CAPCANA URSULUI (PSIHOLOGIE & ISTORIE)
+  // ✅ 13. ARTICOL: CAPCANA URSULUI (PSIHOLOGIE & ISTORIE)
   {
     slug: "capcana-ursului-istorie-crize-evitate",
     title: "\"Capcana Ursului\": De ce Toți Indicatorii de Criză Pot Fi Greșiți. Lecții Istorice.",
@@ -898,7 +991,7 @@ export const articles = [
     `
   },
 
-  // ✅ 12. ARTICOL: FED & DOBÂNZI (MACRO)
+  // ✅ 14. ARTICOL: FED & DOBÂNZI (MACRO)
   {
     slug: "impact-dobanda-fed-bitcoin-scenarii",
     title: "Alertă Maximă: Decizia FED care Poate Arunca Bitcoin în Aer. Scenariile 0.25% vs 0.50%",
@@ -939,7 +1032,7 @@ export const articles = [
     `
   },
 
-  // ✅ 13. ARTICOL: BITCOIN MANIPULARE (Imagine Locală: /bitcoin-crash.jpg)
+  // ✅ 15. ARTICOL: BITCOIN MANIPULARE (Imagine Locală: /bitcoin-crash.jpg)
   {
     slug: "bitcoin-manipulare-sau-corectie-brutala",
     title: "Bitcoin: Manipulare Instituțională sau Corecție Brutală? Anatomia unei Prăbușiri de 19 Miliarde $",
@@ -984,7 +1077,7 @@ export const articles = [
     `
   },
 
-  // ✅ 14. ARTICOL: BITCOIN SOPR
+  // ✅ 16. ARTICOL: BITCOIN SOPR
   {
     slug: "semnal-on-chain-bitcoin-sopr-rally",
     title: "Semnal On-Chain: Vânzătorii au obosit. Bitcoin pregătește Raliul de Decembrie?",
@@ -1015,7 +1108,7 @@ export const articles = [
     `
   },
 
-  // ✅ 15. ARTICOL: QUANTUM COMPUTING
+  // ✅ 17. ARTICOL: QUANTUM COMPUTING
   {
     slug: "riscuri-quantum-computing-bitcoin-explicat",
     title: "Calculatoarele Cuantice vs. Bitcoin: Sfârșitul Criptomonedelor sau Doar o Nouă Provocare?",
@@ -1039,7 +1132,7 @@ export const articles = [
     `
   },
 
-  // ✅ 16. ARTICOL: SUA & CFTC (Imagine Locală: /cftc-announcement.jpg)
+  // ✅ 18. ARTICOL: SUA & CFTC (Imagine Locală: /cftc-announcement.jpg)
   {
     slug: "sua-cftc-crypto-spot-reglementat",
     title: "BREAKING: SUA pune capăt erei 'Offshore'. Crypto devine oficial activ federal.",
@@ -1075,7 +1168,7 @@ export const articles = [
     `
   },
 
-  // ✅ 17. ARTICOL: ATAC 27M
+  // ✅ 19. ARTICOL: ATAC 27M
   {
     slug: "atac-27-milioane-link-malitios",
     title: "ALERTA: Cum să pierzi 27.000.000$ într-o secundă. Pericolul invizibil din buzunarul tău",
@@ -1113,7 +1206,7 @@ export const articles = [
     `
   },
 
-  // ✅ 18. ARTICOL: VANGUARD & CFTC (Legacy)
+  // ✅ 20. ARTICOL: VANGUARD & CFTC (Legacy)
   {
     slug: "marea-convergenta-crypto",
     title: "Marea Convergență: Vanguard și CFTC validează Crypto ca 'Gold Standard'",
@@ -1139,7 +1232,7 @@ export const articles = [
     `
   },
 
-  // ✅ 19. ARTICOL: QIVALIS
+  // ✅ 21. ARTICOL: QIVALIS
   {
     slug: "qivalis-banci-europene-stablecoin",
     title: "BREAKING: 9 Bănci Gigant lansează Qivalis - Euro Stablecoin",
@@ -1176,7 +1269,7 @@ export const articles = [
     `
   },
 
-  // ✅ 20. ARTICOL: SEC ETF ETHEREUM
+  // ✅ 22. ARTICOL: SEC ETF ETHEREUM
   {
     slug: "sec-aproba-etf-ethereum",
     title: "SEC Aprobă ETF-ul de Ethereum Spot",
@@ -1194,7 +1287,7 @@ export const articles = [
     `
   },
 
-  // ✅ 21. ARTICOL: SOLANA FIREDANCER
+  // ✅ 23. ARTICOL: SOLANA FIREDANCER
   {
     slug: "solana-firedancer",
     title: "Solana lansează Firedancer",
@@ -1211,7 +1304,7 @@ export const articles = [
     `
   },
 
-  // ✅ 22. ARTICOL: INFLATIE CPI
+  // ✅ 24. ARTICOL: INFLATIE CPI
   {
     slug: "inflatie-sua-cpi",
     title: "Inflația SUA crește (CPI 3.4%)",
