@@ -26,15 +26,31 @@ export default async function NewsPage({
   const currentArticles = articles.slice(startIndex, endIndex);
 
   return (
-    <main className="min-h-screen bg-[#020617] text-white selection:bg-blue-500/30">
+    <main className="min-h-screen bg-[#020617] text-white selection:bg-red-500/30">
       <Navbar />
       
       <div className="container mx-auto px-6 py-24">
           
-          {/* HEADER CLEAN & PROFI */}
+          {/* HEADER FESTIV - MINIMALIST (Doar Căciulița pe M) */}
           <div className="text-center mb-20">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
-                  Market <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Intelligence</span>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight flex items-center justify-center gap-3 flex-wrap">
+                  
+                  {/* Cuvântul "Market" cu Căciulița pe M */}
+                  <div className="relative inline-block">
+                    {/* Căciulița SVG poziționată perfect pe M */}
+                    <svg className="absolute -top-5 -left-3 w-10 h-10 md:w-12 md:h-12 rotate-[-15deg] drop-shadow-lg z-20 pointer-events-none" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        {/* Baza Albă */}
+                        <path d="M10 75 C10 75 30 85 50 75 C70 65 80 60 80 60 L 80 70 C 80 70 60 80 40 85 C 20 90 10 75 10 75 Z" fill="white"/>
+                        {/* Conul Roșu */}
+                        <path d="M15 75 C 15 75 30 10 80 10 C 80 10 60 40 80 60 C 80 60 40 70 15 75 Z" fill="#DC2626"/>
+                        {/* Moțul Alb */}
+                        <circle cx="80" cy="10" r="8" fill="white"/>
+                    </svg>
+                    
+                    <span className="text-white relative z-10">Market</span>
+                  </div>
+
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Intelligence</span>
               </h1>
               
               <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
