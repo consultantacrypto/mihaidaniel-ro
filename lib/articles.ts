@@ -1,11 +1,79 @@
 export const articles = [
-  // ✅ 1. ARTICOL NOU: FORTĂREAȚA DIGITALĂ (Imagine Simplificată)
+  // ✅ 1. ARTICOL NOU: GHID SUPRAVIEȚUIRE ON-CHAIN (Imagine: onchain.jpg)
+  {
+    slug: "ghid-supravietuire-on-chain-urmareste-balenele-nu-stirile",
+    title: "Ce văd instituțiile și tu nu: Ghidul de Supraviețuire On-Chain (Urmărește Balenele, nu Știrile)",
+    date: "20 Dec 2025",
+    category: "EDUCAȚIE & ON-CHAIN",
+    image: "/onchain.jpg", 
+    impact: "neutral", 
+    summary: "Când citești știrea, e deja prea târziu. Află cum să spionezi portofelele 'Smart Money' și să interpretezi datele înainte ca prețul să explodeze.",
+    mihaiTake: "Tati, în crypto, informația înseamnă putere, dar doar dacă o ai înaintea mulțimii. Când vezi știrea pe Twitter, ești deja 'Exit Liquidity'. Datele On-Chain sunt singurul mod de a vedea ce fac banii deștepți în timp real. Nu mai ghici, începe să spionezi legal.",
+    content: `
+      <p class="text-xl font-medium text-white mb-6">În crypto, există o regulă brutală: <strong>Știrile sunt pentru "Exit Liquidity".</strong></p>
+      
+      <p class="mb-4">Când vezi un titlu mare <em>"BlackRock cumpără Bitcoin"</em>, fii sigur că instituțiile au acumulat deja cu săptămâni înainte. Tu doar le cumperi "pomparea".</p>
+      <p class="mb-6">Dar există un avantaj incorect pe care îl avem în crypto față de bursă: <strong>Transparența Radicală</strong>. Pe blockchain, fiecare mutare lasă o urmă. Balenele pot minți pe Twitter, pot plăti articole false, dar nu pot muta 100 de milioane de dolari fără ca blockchain-ul să înregistreze tranzacția. Acesta este ghidul tău de spionaj legal.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">1. Indicatorul #1: Exchange Inflow/Outflow (Pulsul Pieței)</h3>
+      <p class="mb-4">Acesta este cel mai simplu și puternic semnal.</p>
+      
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-red-900/10 border border-red-500/30 p-5 rounded-xl">
+            <strong class="text-red-400 block mb-2 text-lg">📉 Exchange Inflow (Intrări)</strong>
+            <p class="text-sm text-gray-300">Când balenele mută BTC din portofele reci (Ledger) pe Binance/Coinbase, au un singur motiv: <strong>Să vândă.</strong></p>
+            <p class="text-xs text-red-300 mt-2 font-bold">Semnal: Presiune de vânzare iminentă (Pericol).</p>
+        </div>
+        <div class="bg-green-900/10 border border-green-500/30 p-5 rounded-xl">
+            <strong class="text-green-400 block mb-2 text-lg">📈 Exchange Outflow (Ieșiri)</strong>
+            <p class="text-sm text-gray-300">Când vezi mii de BTC părăsind bursele către portofele private. Balenele nu au de gând să vândă curând.</p>
+            <p class="text-xs text-green-300 mt-2 font-bold">Semnal: Acumulare masivă (Supply Shock).</p>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">2. Indicatorul #2: Stablecoin Supply Ratio (Muniția)</h3>
+      <p class="mb-4">Stablecoin-urile (USDT, USDC) sunt "praful de pușcă" al pieței. Dacă vezi că Trezoreria Tether printează 1 miliard de USDT și îi trimite pe exchange-uri, acei bani nu stau degeaba.</p>
+      
+      <div class="bg-blue-900/20 border-l-4 border-blue-500 p-4 my-6">
+        <strong class="text-blue-200 block mb-1">💡 Puterea de Cumpărare:</strong>
+        <p class="text-gray-300">O creștere a rezervei de Stablecoins pe exchange-uri este cel mai puternic semnal <strong>Bullish</strong> pe care îl poți primi. Banii sunt pregătiți să intre în piață.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">3. Instrumentele de Spionaj: Glassnode & Arkham</h3>
+      <p class="mb-4">Nu ai nevoie de diplomă în IT. Ai nevoie de uneltele corecte.</p>
+      
+      <ul class="space-y-4 mb-6">
+        <li class="bg-gray-800 p-4 rounded-xl border border-gray-700">
+            <strong class="text-orange-400">Glassnode (Macro):</strong>
+            <p class="text-sm text-gray-400 mt-1">Pentru imaginea de ansamblu. Îți arată ciclurile pieței și comportamentul general (ex: MVRV Z-Score – care îți spune dacă Bitcoin e supraevaluat sau subevaluat).</p>
+        </li>
+        <li class="bg-gray-800 p-4 rounded-xl border border-gray-700">
+            <strong class="text-blue-400">Arkham Intelligence (Micro):</strong>
+            <p class="text-sm text-gray-400 mt-1">Pentru "vânătoarea de oameni". Poți vedea exact ce cumpără un fond de investiții sau un influencer faimos în timp real. <em>Exemplu: Dacă vezi că un portofel asociat cu Justin Sun începe să acumuleze o monedă obscură, ai un semnal înainte ca ei să posteze.</em></p>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">4. Diferența dintre "Volum Real" și "Wash Trading"</h3>
+      <p class="mb-4">Pe CoinMarketCap, volumul poate fi falsificat de exchange-uri pentru a părea active. <strong>On-Chain, volumul este real.</strong> Trebuie să plătești "Gas Fees" pentru a muta banii. Nimeni nu plătește milioane în taxe doar ca să te păcălească pe tine.</p>
+      <div class="bg-yellow-900/10 border border-yellow-500/30 p-4 rounded-lg">
+        <p class="text-gray-300"><strong>⚠️ Capcana Divergenței:</strong> Dacă prețul crește, dar volumul On-Chain scade, este o Divergență. E o capcană. Urmează prăbușirea.</p>
+      </div>
+
+      <div class="mt-12 p-8 bg-gradient-to-br from-gray-900 to-black border border-white/10 rounded-2xl text-center shadow-2xl">
+        <h4 class="text-2xl font-bold text-white mb-4">Concluzie: Fii Rechinul, nu Peștele Mic</h4>
+        <p class="text-gray-300 mb-6">În 2026, nu vei mai putea face profit doar cu noroc. Cei care se bazează pe "ce a zis X-ulescu pe YouTube" vor fi mâncați de cei care se uită la datele On-Chain.</p>
+        <p class="text-lg text-green-400 font-bold">"Nu crede. Verifică. Urmărește banii, nu gura lumii."</p>
+      </div>
+    `
+  },
+
+  // ✅ 2. ARTICOL: FORTĂREAȚA DIGITALĂ (SECURITATE) (Imagine: security.jpg)
   {
     slug: "fortareata-digitala-banca-elvetiana-crypto-securitate-2026",
     title: "Fortăreața Digitală: Cum să devii propria ta Bancă Elvețiană în 2026 (Nu e vorba doar de un Ledger)",
     date: "19 Dec 2025",
     category: "EDUCAȚIE & SECURITATE",
-    image: "/security.jpg", // ✅ Numele nou, scurt și sigur
+    image: "/security.jpg", 
     impact: "neutral", 
     summary: "În era MiCA și a hackerilor AI, securitatea nu mai este o opțiune. Este singurul mod de a-ți păstra averea. Ghid complet despre Passphrase, Cold Storage și Blind Signing.",
     mihaiTake: "Tati, să faci bani în crypto e ușor. Să îi păstrezi e greu. Dacă ai milioanele pe un Hot Wallet sau pe un Exchange, nu ești bogat, ești doar norocos. Încă. Securitatea e plictisitoare până în secunda în care te salvează de la faliment.",
@@ -68,12 +136,8 @@ export const articles = [
       </div>
     `
   },
-  
-  // ... restul articolelor RĂMÂN NESCHIMBATE ...
-  // (Include aici restul articolelor din lista ta anterioară: BOJ, Satoshi, Sezonul 20 etc.)
-  // Asigură-te că nu ștergi virgula și parantezele la finalul listei! 
 
-  // ✅ 2. ALERTA BOJ (JAPONIA)
+  // ✅ 3. ARTICOL: ALERTA BOJ (JAPONIA)
   {
     slug: "alerta-boj-lebada-neagra-japonia-bitcoin-18-decembrie",
     title: "Alerta BOJ: \"Lebăda Neagră\" din Japonia care poate lovi Bitcoin săptămâna viitoare (18-19 Decembrie)",
@@ -166,7 +230,7 @@ export const articles = [
     `
   },
 
-  // ✅ 3. DOSARUL SATOSHI
+  // ✅ 4. ARTICOL: DOSARUL SATOSHI
   {
     slug: "dosarul-satoshi-cine-este-fantoma-de-70-miliarde-investigatie-2025",
     title: "Dosarul Satoshi: Cine este \"Fantoma\" de 70 Miliarde de Dolari? Investigația Completă 2025",
@@ -292,7 +356,7 @@ export const articles = [
     `
   },
 
-  // ✅ 4. SEZONUL CELOR 20
+  // ✅ 5. ARTICOL: SEZONUL CELOR 20
   {
     slug: "nu-asteptati-altcoin-season-vine-sezonul-celor-20",
     title: "Nu așteptați \"Altcoin Season\". Vine \"Sezonul celor 20\".",
@@ -357,7 +421,7 @@ export const articles = [
     `
   },
 
-  // ✅ 5. ARTICOL: US TREASURY DEBT BUYBACK
+  // ✅ 6. ARTICOL: US TREASURY DEBT BUYBACK
   {
     slug: "trezoreria-sua-debt-buyback-semnal-crypto-2026",
     title: "Trezoreria SUA tocmai a făcut-o din nou ($12.5 MLD). Și nimeni din România nu vorbește despre asta.",
@@ -418,7 +482,7 @@ export const articles = [
     `
   },
 
-  // ✅ 6. ARTICOL: MiCA & BLOCADA BANCARĂ (TEXT INTEGRAL)
+  // ✅ 7. ARTICOL: MiCA & BLOCADA BANCARĂ (TEXT INTEGRAL)
   {
     slug: "cortina-de-fier-financiara-europeana-mica-2026",
     title: "\"Cortina de Fier\" Financiară a Europei (2026): Pericolele Tranzacționării pe Platforme Nereglementate",
@@ -497,7 +561,7 @@ export const articles = [
     `
   },
 
-  // ✅ 7. ARTICOL: MITUL ALTCOIN SEASON
+  // ✅ 8. ARTICOL: MITUL ALTCOIN SEASON
   {
     slug: "mitul-si-realitatea-altcoin-season-2022-2026",
     title: "2022-2025: Marea Minciună a Altcoin-urilor. Studiu de Piață: Mitul și Realitatea \"Altcoin Season\".",
@@ -555,7 +619,7 @@ export const articles = [
     `
   },
 
-  // ✅ 8. ARTICOL: ACUMULARE INSTITUȚIONALĂ ETHEREUM
+  // ✅ 9. ARTICOL: ACUMULARE INSTITUȚIONALĂ ETHEREUM
   {
     slug: "acumulare-institutionala-ethereum-dat-bmnr-2025",
     title: "Acumularea Instituțională de Ethereum: O Tendință Bullish în 2025",
@@ -624,7 +688,7 @@ export const articles = [
     `
   },
 
-  // ✅ 9. ARTICOL: IMPACT REUNIUNE FOMC DECEMBRIE 2025
+  // ✅ 10. ARTICOL: IMPACT REUNIUNE FOMC DECEMBRIE 2025
   {
     slug: "impact-reuniune-fomc-decembrie-2025-crypto",
     title: "Impactul Reuniunii FOMC din Decembrie 2025 asupra Pieței Crypto: O Analiză Detaliată și Explicativă",
@@ -689,7 +753,7 @@ export const articles = [
     `
   },
 
-  // ✅ 10. ARTICOL: HALVING VS LICHIDITATE (Imagine Locală)
+  // ✅ 11. ARTICOL: HALVING VS LICHIDITATE (Imagine Locală)
   {
     slug: "mitul-halving-ului-sacru-vs-realitatea-lichiditatii",
     title: "Mitul \"Halving-ului Sacru\" vs. Realitatea Lichidității: Ce dictează cu adevărat prețul Bitcoin în 2025?",
