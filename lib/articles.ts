@@ -1,11 +1,10 @@
-export const articles = [
-  // ✅ 1. ARTICOL NOU (AZI): FORTĂREAȚA DIGITALĂ
+// ✅ 1. ARTICOL NOU: FORTĂREAȚA DIGITALĂ (Imagine Simplificată)
   {
     slug: "fortareata-digitala-banca-elvetiana-crypto-securitate-2026",
     title: "Fortăreața Digitală: Cum să devii propria ta Bancă Elvețiană în 2026 (Nu e vorba doar de un Ledger)",
     date: "19 Dec 2025",
     category: "EDUCAȚIE & SECURITATE",
-    image: "/securitate-date.jpg", // ✅ Imaginea ta uploadată
+    image: "/security.jpg", // ✅ Numele nou, scurt și sigur
     impact: "neutral", 
     summary: "În era MiCA și a hackerilor AI, securitatea nu mai este o opțiune. Este singurul mod de a-ți păstra averea. Ghid complet despre Passphrase, Cold Storage și Blind Signing.",
     mihaiTake: "Tati, să faci bani în crypto e ușor. Să îi păstrezi e greu. Dacă ai milioanele pe un Hot Wallet sau pe un Exchange, nu ești bogat, ești doar norocos. Încă. Securitatea e plictisitoare până în secunda în care te salvează de la faliment.",
