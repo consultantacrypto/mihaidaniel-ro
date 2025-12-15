@@ -1,11 +1,81 @@
 export const articles = [
-  // ✅ 1. ARTICOL NOU (AZI): ALERTA BOJ (JAPONIA)
+  // ✅ 1. ARTICOL NOU (AZI): FORTĂREAȚA DIGITALĂ
+  {
+    slug: "fortareata-digitala-banca-elvetiana-crypto-securitate-2026",
+    title: "Fortăreața Digitală: Cum să devii propria ta Bancă Elvețiană în 2026 (Nu e vorba doar de un Ledger)",
+    date: "19 Dec 2025",
+    category: "EDUCAȚIE & SECURITATE",
+    image: "/securitatedate.jpg", // ✅ Imaginea ta uploadată
+    impact: "neutral", 
+    summary: "În era MiCA și a hackerilor AI, securitatea nu mai este o opțiune. Este singurul mod de a-ți păstra averea. Ghid complet despre Passphrase, Cold Storage și Blind Signing.",
+    mihaiTake: "Tati, să faci bani în crypto e ușor. Să îi păstrezi e greu. Dacă ai milioanele pe un Hot Wallet sau pe un Exchange, nu ești bogat, ești doar norocos. Încă. Securitatea e plictisitoare până în secunda în care te salvează de la faliment.",
+    content: `
+      <p class="text-xl font-medium text-white mb-6">Imaginează-ți scenariul: Ai prins x50, portofoliul tău arată 1 milion de dolari. Te culci fericit. Dimineața, contul e zero.</p>
+      
+      <p class="mb-4">Nu ești victima ghinionului. Ești victima propriei neglijențe. Majoritatea cred că un Ledger aruncat într-un sertar îi salvează automat. <strong>Greșit.</strong> Securitatea nu este un produs pe care îl cumperi, este un proces pe care îl execuți.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">1. Filosofia "Cold Storage" vs. "Hot Wallet"</h3>
+      <p class="mb-4">Trebuie să gândești ca o bancă. Nu ții toți banii băncii în casa de marcat de la ghișeu.</p>
+      
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-red-900/10 border border-red-500/30 p-5 rounded-xl">
+            <strong class="text-red-400 block mb-2 text-lg">🔥 Hot Wallet (Metamask/Phantom)</strong>
+            <p class="text-sm text-gray-300">Este portofelul tău de buzunar. Ții în el doar banii de cafea și de gaz. Este conectat permanent la internet, deci vulnerabil la orice exploit de browser sau malware.</p>
+        </div>
+        <div class="bg-blue-900/10 border border-blue-500/30 p-5 rounded-xl">
+            <strong class="text-blue-400 block mb-2 text-lg">❄️ Cold Storage (Ledger/Trezor)</strong>
+            <p class="text-sm text-gray-300">Este seiful din perete. Nu interacționează cu contracte dubioase. Nu semnează tranzacții zilnice. Cheile private nu ating niciodată internetul.</p>
+        </div>
+      </div>
+
+      <div class="bg-yellow-900/10 border-l-4 border-yellow-500 p-4 my-6">
+        <strong class="text-yellow-500 block mb-1">⚠️ Regula de Aur:</strong>
+        <p class="text-gray-300">Nu amesteca niciodată "Degen Plays" (NFT-uri, Meme-uri dubioase) cu "Long Term Holdings" (Bitcoin-ul de pensie) pe același wallet. Dacă semnezi un contract malițios pentru un airdrop de 5$, poți pierde tot Bitcoin-ul.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">2. Nivelul Avansat: Passphrase (Portofelul Ascuns)</h3>
+      <p class="mb-4">Aici intrăm în zona "Insider". Ce faci dacă cineva găsește cele 24 de cuvinte (Seed Phrase)? Sau mai rău, dacă ești amenințat fizic să deblochezi Ledger-ul?</p>
+      
+      <p class="mb-4">Soluția este <strong>Passphrase</strong> (sau "Al 25-lea cuvânt").</p>
+      <ul class="list-disc pl-6 space-y-3 text-gray-300 mb-6">
+        <li>Aceasta funcționează ca o parolă suplimentară pe care o memorezi (nu o scrii nicăieri).</li>
+        <li><strong>Magia:</strong> Seed Phrase + Passphrase = Un portofel complet nou, invizibil.</li>
+        <li>Chiar dacă hoțul are dispozitivul și cele 24 de cuvinte, el va vedea doar contul "de sacrificiu" (unde ții o sumă mică), nu contul principal protejat de Passphrase.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">3. Pericolul "Blind Signing" și Phishing</h3>
+      <p class="mb-4">Hackerii nu mai sparg criptografia (e matematic imposibil). <strong>Ei sparg oamenii.</strong></p>
+      
+      <p class="mb-4">Cel mai comun atac în 2025 este <strong>"Blind Signing"</strong> (Semnarea în orb). Primești un email de la "Support" sau vezi un buton de "Claim Airdrop". Apeși pe el, Ledger-ul îți cere să semnezi o tranzacție complexă pe care nu o înțelegi. În momentul în care ai semnat, ai dat permisiunea contractului să îți golească portofelul.</p>
+      
+      <div class="bg-gray-800 p-6 rounded-xl border border-gray-600 mb-6">
+        <h4 class="text-lg font-bold text-green-400 mb-2">🛡️ Soluția Practică:</h4>
+        <ul class="space-y-2 text-gray-300">
+            <li>✅ <strong>Verifică de 3 ori, semnează o dată.</strong></li>
+            <li>✅ Folosește extensii de securitate precum <strong>Pocket Universe</strong> sau <strong>Wallet Guard</strong>. Acestea simulează tranzacția înainte să o semnezi și îți spun clar: <em>"Atenție! Această tranzacție îți va transfera toți banii către adresa X."</em></li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">4. Contextul 2026: De ce "Self-Custody" este obligatoriu</h3>
+      <p class="mb-4">Trebuie să legăm totul de realitatea legislativă (MiCA).</p>
+      <p class="mb-4">Dacă ții banii pe un Exchange Centralizat (CEX), acei bani <strong>nu sunt ai tăi</strong>. Sunt o promisiune (IOU). Într-o criză de lichiditate sau la un ordin guvernamental, Exchange-ul poate fi obligat să îți înghețe contul.</p>
+      
+      <div class="p-6 bg-gradient-to-r from-gray-900 to-black border border-white/10 rounded-2xl text-center shadow-xl mt-8">
+        <p class="text-lg text-white font-medium leading-relaxed italic">
+            "Într-un portofel rece (Cold Wallet), tu ești CEO-ul, Banca Centrală și Armata. <br/><br/>
+            <span class="text-blue-400 font-bold not-italic">Nimeni nu îți poate confisca 12 cuvinte memorate în minte. Aceasta este adevărata suveranitate financiară."</span>
+        </p>
+      </div>
+    `
+  },
+
+  // ✅ 2. ALERTA BOJ (JAPONIA)
   {
     slug: "alerta-boj-lebada-neagra-japonia-bitcoin-18-decembrie",
     title: "Alerta BOJ: \"Lebăda Neagră\" din Japonia care poate lovi Bitcoin săptămâna viitoare (18-19 Decembrie)",
     date: "18 Dec 2025",
     category: "MACRO & RISC",
-    image: "/japanbank.jpg", // ✅ Imaginea ta uploadată
+    image: "/japanbank.jpg", 
     impact: "bearish", 
     summary: "De ce o creștere de 0.25% la Tokyo contează mai mult decât deciziile FED? Analizăm mecanismul 'Yen Carry Trade' și cele 3 scenarii de impact pentru portofoliul tău.",
     mihaiTake: "Tati, ignoră zgomotul de pe Twitter. Adevăratul 'Boss Final' al anului 2025 este Banca Japoniei. Dacă ei ridică dobânda, robinetul global de bani ieftini se închide. Nu e momentul să fii erou cu levier 100x. Păstrează gloanțele (USDT) pentru a vâna oportunitățile din volatilitate.",
@@ -92,7 +162,7 @@ export const articles = [
     `
   },
 
-  // ✅ 2. DOSARUL SATOSHI
+  // ✅ 3. DOSARUL SATOSHI
   {
     slug: "dosarul-satoshi-cine-este-fantoma-de-70-miliarde-investigatie-2025",
     title: "Dosarul Satoshi: Cine este \"Fantoma\" de 70 Miliarde de Dolari? Investigația Completă 2025",
@@ -218,7 +288,7 @@ export const articles = [
     `
   },
 
-  // ✅ 3. SEZONUL CELOR 20
+  // ✅ 4. SEZONUL CELOR 20
   {
     slug: "nu-asteptati-altcoin-season-vine-sezonul-celor-20",
     title: "Nu așteptați \"Altcoin Season\". Vine \"Sezonul celor 20\".",
@@ -283,7 +353,7 @@ export const articles = [
     `
   },
 
-  // ✅ 4. ARTICOL: US TREASURY DEBT BUYBACK
+  // ✅ 5. ARTICOL: US TREASURY DEBT BUYBACK
   {
     slug: "trezoreria-sua-debt-buyback-semnal-crypto-2026",
     title: "Trezoreria SUA tocmai a făcut-o din nou ($12.5 MLD). Și nimeni din România nu vorbește despre asta.",
@@ -344,7 +414,7 @@ export const articles = [
     `
   },
 
-  // ✅ 5. ARTICOL: MiCA & BLOCADA BANCARĂ (TEXT INTEGRAL)
+  // ✅ 6. ARTICOL: MiCA & BLOCADA BANCARĂ (TEXT INTEGRAL)
   {
     slug: "cortina-de-fier-financiara-europeana-mica-2026",
     title: "\"Cortina de Fier\" Financiară a Europei (2026): Pericolele Tranzacționării pe Platforme Nereglementate",
@@ -423,7 +493,7 @@ export const articles = [
     `
   },
 
-  // ✅ 6. ARTICOL: MITUL ALTCOIN SEASON
+  // ✅ 7. ARTICOL: MITUL ALTCOIN SEASON
   {
     slug: "mitul-si-realitatea-altcoin-season-2022-2026",
     title: "2022-2025: Marea Minciună a Altcoin-urilor. Studiu de Piață: Mitul și Realitatea \"Altcoin Season\".",
@@ -481,7 +551,7 @@ export const articles = [
     `
   },
 
-  // ✅ 7. ARTICOL: ACUMULARE INSTITUȚIONALĂ ETHEREUM
+  // ✅ 8. ARTICOL: ACUMULARE INSTITUȚIONALĂ ETHEREUM
   {
     slug: "acumulare-institutionala-ethereum-dat-bmnr-2025",
     title: "Acumularea Instituțională de Ethereum: O Tendință Bullish în 2025",
@@ -550,7 +620,7 @@ export const articles = [
     `
   },
 
-  // ✅ 8. ARTICOL: IMPACT REUNIUNE FOMC DECEMBRIE 2025
+  // ✅ 9. ARTICOL: IMPACT REUNIUNE FOMC DECEMBRIE 2025
   {
     slug: "impact-reuniune-fomc-decembrie-2025-crypto",
     title: "Impactul Reuniunii FOMC din Decembrie 2025 asupra Pieței Crypto: O Analiză Detaliată și Explicativă",
@@ -615,7 +685,7 @@ export const articles = [
     `
   },
 
-  // ✅ 9. ARTICOL: HALVING VS LICHIDITATE (Imagine Locală)
+  // ✅ 10. ARTICOL: HALVING VS LICHIDITATE (Imagine Locală)
   {
     slug: "mitul-halving-ului-sacru-vs-realitatea-lichiditatii",
     title: "Mitul \"Halving-ului Sacru\" vs. Realitatea Lichidității: Ce dictează cu adevărat prețul Bitcoin în 2025?",
@@ -708,7 +778,7 @@ export const articles = [
     `
   },
 
-  // ✅ 10. ARTICOL: LEVIERUL (EDUCAȚIE & RISK) - INTEGRAL
+  // ✅ 11. ARTICOL: LEVIERUL (EDUCAȚIE & RISK) - INTEGRAL
   {
     slug: "mirajul-levierului-arma-financiara-distrugere",
     title: "Mirajul Levierului: \"Arma Financiară de Distrugere în Masă\" care îți poate Zeroiza Contul într-o Secundă. Ghid de Conștientizare.",
@@ -789,7 +859,7 @@ export const articles = [
     `
   },
 
-  // ✅ 11. ARTICOL: ALERTĂ FED (Imagine Locală)
+  // ✅ 12. ARTICOL: ALERTĂ FED (Imagine Locală)
   {
     slug: "alerta-volatilitate-decizie-fed-capcana-mortala",
     title: "Alertă de Volatilitate: De ce Decizia FED de Mâine Poate Fi o \"Capcană Mortală\"",
@@ -851,7 +921,7 @@ export const articles = [
     `
   },
 
-  // ✅ 12. ARTICOL: GHID BEAR MARKET (Imagine Locală)
+  // ✅ 13. ARTICOL: GHID BEAR MARKET (Imagine Locală)
   {
     slug: "ce-inseamna-bear-market-ghid-complet",
     title: "Ce Înseamnă \"Bear Market\" și De Ce Nu Trebuie Să Te Sperie? Ghidul Complet.",
@@ -939,7 +1009,7 @@ export const articles = [
     `
   },
 
-  // ✅ 13. ARTICOL: CAPCANA URSULUI (PSIHOLOGIE & ISTORIE)
+  // ✅ 14. ARTICOL: CAPCANA URSULUI (PSIHOLOGIE & ISTORIE)
   {
     slug: "capcana-ursului-istorie-crize-evitate",
     title: "\"Capcana Ursului\": De ce Toți Indicatorii de Criză Pot Fi Greșiți. Lecții Istorice.",
@@ -991,7 +1061,7 @@ export const articles = [
     `
   },
 
-  // ✅ 14. ARTICOL: FED & DOBÂNZI (MACRO)
+  // ✅ 15. ARTICOL: FED & DOBÂNZI (MACRO)
   {
     slug: "impact-dobanda-fed-bitcoin-scenarii",
     title: "Alertă Maximă: Decizia FED care Poate Arunca Bitcoin în Aer. Scenariile 0.25% vs 0.50%",
@@ -1032,7 +1102,7 @@ export const articles = [
     `
   },
 
-  // ✅ 15. ARTICOL: BITCOIN MANIPULARE (Imagine Locală: /bitcoin-crash.jpg)
+  // ✅ 16. ARTICOL: BITCOIN MANIPULARE (Imagine Locală: /bitcoin-crash.jpg)
   {
     slug: "bitcoin-manipulare-sau-corectie-brutala",
     title: "Bitcoin: Manipulare Instituțională sau Corecție Brutală? Anatomia unei Prăbușiri de 19 Miliarde $",
@@ -1077,7 +1147,7 @@ export const articles = [
     `
   },
 
-  // ✅ 16. ARTICOL: BITCOIN SOPR
+  // ✅ 17. ARTICOL: BITCOIN SOPR
   {
     slug: "semnal-on-chain-bitcoin-sopr-rally",
     title: "Semnal On-Chain: Vânzătorii au obosit. Bitcoin pregătește Raliul de Decembrie?",
@@ -1108,7 +1178,7 @@ export const articles = [
     `
   },
 
-  // ✅ 17. ARTICOL: QUANTUM COMPUTING
+  // ✅ 18. ARTICOL: QUANTUM COMPUTING
   {
     slug: "riscuri-quantum-computing-bitcoin-explicat",
     title: "Calculatoarele Cuantice vs. Bitcoin: Sfârșitul Criptomonedelor sau Doar o Nouă Provocare?",
@@ -1132,7 +1202,7 @@ export const articles = [
     `
   },
 
-  // ✅ 18. ARTICOL: SUA & CFTC (Imagine Locală: /cftc-announcement.jpg)
+  // ✅ 19. ARTICOL: SUA & CFTC (Imagine Locală: /cftc-announcement.jpg)
   {
     slug: "sua-cftc-crypto-spot-reglementat",
     title: "BREAKING: SUA pune capăt erei 'Offshore'. Crypto devine oficial activ federal.",
@@ -1168,7 +1238,7 @@ export const articles = [
     `
   },
 
-  // ✅ 19. ARTICOL: ATAC 27M
+  // ✅ 20. ARTICOL: ATAC 27M
   {
     slug: "atac-27-milioane-link-malitios",
     title: "ALERTA: Cum să pierzi 27.000.000$ într-o secundă. Pericolul invizibil din buzunarul tău",
@@ -1206,7 +1276,7 @@ export const articles = [
     `
   },
 
-  // ✅ 20. ARTICOL: VANGUARD & CFTC (Legacy)
+  // ✅ 21. ARTICOL: VANGUARD & CFTC (Legacy)
   {
     slug: "marea-convergenta-crypto",
     title: "Marea Convergență: Vanguard și CFTC validează Crypto ca 'Gold Standard'",
@@ -1232,7 +1302,7 @@ export const articles = [
     `
   },
 
-  // ✅ 21. ARTICOL: QIVALIS
+  // ✅ 22. ARTICOL: QIVALIS
   {
     slug: "qivalis-banci-europene-stablecoin",
     title: "BREAKING: 9 Bănci Gigant lansează Qivalis - Euro Stablecoin",
@@ -1269,7 +1339,7 @@ export const articles = [
     `
   },
 
-  // ✅ 22. ARTICOL: SEC ETF ETHEREUM
+  // ✅ 23. ARTICOL: SEC ETF ETHEREUM
   {
     slug: "sec-aproba-etf-ethereum",
     title: "SEC Aprobă ETF-ul de Ethereum Spot",
@@ -1287,7 +1357,7 @@ export const articles = [
     `
   },
 
-  // ✅ 23. ARTICOL: SOLANA FIREDANCER
+  // ✅ 24. ARTICOL: SOLANA FIREDANCER
   {
     slug: "solana-firedancer",
     title: "Solana lansează Firedancer",
@@ -1304,7 +1374,7 @@ export const articles = [
     `
   },
 
-  // ✅ 24. ARTICOL: INFLATIE CPI
+  // ✅ 25. ARTICOL: INFLATIE CPI
   {
     slug: "inflatie-sua-cpi",
     title: "Inflația SUA crește (CPI 3.4%)",
