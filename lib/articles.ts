@@ -1,4 +1,5 @@
-// ✅ 1. ARTICOL NOU: FORTĂREAȚA DIGITALĂ (Imagine Simplificată)
+export const articles = [
+  // ✅ 1. ARTICOL NOU: FORTĂREAȚA DIGITALĂ (Imagine Simplificată)
   {
     slug: "fortareata-digitala-banca-elvetiana-crypto-securitate-2026",
     title: "Fortăreața Digitală: Cum să devii propria ta Bancă Elvețiană în 2026 (Nu e vorba doar de un Ledger)",
@@ -67,6 +68,10 @@
       </div>
     `
   },
+  
+  // ... restul articolelor RĂMÂN NESCHIMBATE ...
+  // (Include aici restul articolelor din lista ta anterioară: BOJ, Satoshi, Sezonul 20 etc.)
+  // Asigură-te că nu ștergi virgula și parantezele la finalul listei! 
 
   // ✅ 2. ALERTA BOJ (JAPONIA)
   {
