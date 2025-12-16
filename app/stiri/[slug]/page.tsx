@@ -6,8 +6,7 @@ import BybitPromo from '@/components/BybitPromo';
 import RelatedArticles from '@/components/RelatedArticles'; 
 import ReadingProgress from '@/components/ReadingProgress'; 
 import CryptoTicker from '@/components/CryptoTicker'; 
-// ✅ IMPORTURILE UI (Inclusiv AudioPlayer)
-import AudioPlayer from '@/components/AudioPlayer';
+// ✅ Am scos AudioPlayer, am păstrat doar Dicționarul
 import { enhanceContent } from '@/lib/dictionary';
 
 import { 
@@ -53,7 +52,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     notFound();
   }
 
-  // ✅ PROCESĂM CONȚINUTUL PENTRU A ADĂUGA TOOLTIPS (DICȚIONAR)
+  // ✅ Păstrăm Dicționarul Interactiv (Tooltips)
   const contentWithTooltips = enhanceContent(article.content);
 
   // --- Design Dinamic ---
@@ -118,10 +117,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   return (
     <main className={`min-h-screen flex flex-col bg-[#020617] text-white ${theme.selection}`}>
       
-      {/* 1. BARA DE PROGRES (Sus) */}
+      {/* 1. BARA DE PROGRES */}
       <ReadingProgress />
 
-      {/* 2. BANDA CU PREȚURI (Imediat sub progress bar) */}
+      {/* 2. BANDA CU PREȚURI */}
       <CryptoTicker />
 
       <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -163,9 +162,6 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             />
         </div>
 
-        {/* ✅ 3. PLAYER AUDIO (Aici e locul perfect) */}
-        <AudioPlayer text={article.content} title={article.title} />
-
         {/* CONTINUT */}
         <div className="prose prose-invert prose-lg max-w-none text-gray-300 font-[var(--font-inter)] leading-relaxed">
             {article.mihaiTake && (
@@ -178,7 +174,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 </div>
             )}
             
-            {/* Afișăm conținutul procesat cu tooltips */}
+            {/* Afișăm conținutul cu tooltips, FĂRĂ Audio */}
             <div dangerouslySetInnerHTML={{ __html: contentWithTooltips }} />
         </div>
 
