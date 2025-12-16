@@ -6,13 +6,14 @@ import BybitPromo from '@/components/BybitPromo';
 import RelatedArticles from '@/components/RelatedArticles'; 
 import ReadingProgress from '@/components/ReadingProgress'; 
 import CryptoTicker from '@/components/CryptoTicker'; 
-// ✅ IMPORTUL PENTRU DICȚIONAR
+// ✅ IMPORTURILE UI SPECIALE
+import AudioPlayer from '@/components/AudioPlayer';
 import { enhanceContent } from '@/lib/dictionary';
 
 import { 
   Calendar, Clock, ArrowLeft, 
   TrendingUp, TrendingDown, 
-  AlertTriangle, ShieldAlert, Zap, 
+  ShieldAlert, Zap, 
   BrainCircuit, Lightbulb, CheckCircle2 
 } from 'lucide-react';
 import Link from 'next/link';
@@ -52,7 +53,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     notFound();
   }
 
-  // ✅ AICI ESTE MAGIA: Transformăm textul simplu în text cu Tooltips
+  // ✅ PROCESĂM CONȚINUTUL PENTRU A ADĂUGA TOOLTIPS (DICȚIONAR)
   const contentWithTooltips = enhanceContent(article.content);
 
   // --- Design Dinamic ---
@@ -117,10 +118,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   return (
     <main className={`min-h-screen flex flex-col bg-[#020617] text-white ${theme.selection}`}>
       
-      {/* 1. BARA DE PROGRES */}
+      {/* 1. BARA DE PROGRES (Sus) */}
       <ReadingProgress />
 
-      {/* 2. BANDA CU PREȚURI */}
+      {/* 2. BANDA CU PREȚURI (Imediat sub progress bar) */}
       <CryptoTicker />
 
       <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -162,6 +163,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             />
         </div>
 
+        {/* ✅ 3. PLAYER AUDIO (Aici e locul perfect) */}
+        <AudioPlayer text={article.content} title={article.title} />
+
         {/* CONTINUT */}
         <div className="prose prose-invert prose-lg max-w-none text-gray-300 font-[var(--font-inter)] leading-relaxed">
             {article.mihaiTake && (
@@ -174,7 +178,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 </div>
             )}
             
-            {/* ✅ FOLOSIM CONȚINUTUL PROCESAT (CU DICȚIONAR) */}
+            {/* Afișăm conținutul procesat cu tooltips */}
             <div dangerouslySetInnerHTML={{ __html: contentWithTooltips }} />
         </div>
 
