@@ -4,6 +4,9 @@ import ShareButtons from '@/components/ShareButtons';
 import Newsletter from '@/components/Newsletter';
 import BybitPromo from '@/components/BybitPromo'; 
 import RelatedArticles from '@/components/RelatedArticles'; 
+// ✅ 1. IMPORTUL NOU
+import ReadingProgress from '@/components/ReadingProgress'; 
+
 import { 
   Calendar, Clock, ArrowLeft, 
   TrendingUp, TrendingDown, 
@@ -55,7 +58,6 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           color: 'green', 
           accent: 'text-green-400', 
           border: 'border-green-500/30', 
-          // Gradient mai închis pentru contrast cu butonul alb
           bg: 'bg-green-950/40', 
           selection: 'selection:bg-green-500/30',
           icon: TrendingUp,
@@ -69,7 +71,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           color: 'red', 
           accent: 'text-red-500', 
           border: 'border-red-500/30', 
-          bg: 'bg-red-950/40', 
+          bg: 'bg-red-950/40',
           selection: 'selection:bg-red-500/30',
           icon: TrendingDown,
           ctaTitle: 'Nu pierde bani din neștiință',
@@ -109,6 +111,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
   return (
     <main className={`min-h-screen flex flex-col bg-[#020617] text-white ${theme.selection}`}>
+      
+      {/* ✅ 2. AICI ESTE BARA DE PROGRES - Fixată sus */}
+      <ReadingProgress />
+
       <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Navbar />
 
