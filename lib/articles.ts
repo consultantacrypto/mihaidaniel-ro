@@ -1,5 +1,67 @@
 export const articles = [
-  // ✅ 1. ARTICOL NOU: GHID SUPRAVIEȚUIRE ON-CHAIN (Imagine: onchain.jpg)
+  // ✅ 1. ARTICOL NOU (AZI): CHINA BAN 2.0
+  {
+    slug: "china-ban-2-0-bitcoin-scadere-xinjiang-mining-blackout",
+    title: "\"China Ban 2.0\": De ce scade Bitcoin sub 87.000$ și cine a oprit curentul în Xinjiang?",
+    date: "22 Dec 2025",
+    category: "MINARE & GEOPOLITICĂ",
+    image: "/hashcrash.jpg", 
+    impact: "bearish", 
+    summary: "500.000 de mineri scoși din priză peste noapte. O analiză a impactului invizibil asupra prețului și de ce această scădere este o oportunitate generațională.",
+    mihaiTake: "Tati, istoria nu se repetă, dar rimează. China ne-a mai făcut schema asta în 2021 și cine a cumpărat atunci e milionar azi. Nu te speria de grafic, uită-te la oportunitate. Când minerii vând de nevoie, tu cumperi de plăcere. Mulțumește-i Partidului pentru discount.",
+    content: `
+      <p class="text-xl font-medium text-white mb-6">Dacă te uiți la grafic și vezi Bitcoin scăzând cu 1.6% sub pragul psihologic de 87.000$, prima reacție e să cauți motive tehnice. <strong>Greșit.</strong> Motivul nu e pe grafic, e în Asia.</p>
+      
+      <p class="mb-4">Ceea ce vedem astăzi este ecoul unui "Blackout" masiv în China. Istoria din 2021 se repetă, dar la o scară mai subtilă și mai periculoasă.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">1. Secretul lui Polichinelle: Minerii Fantomă</h3>
+      <p class="mb-4">Oficial, minarea este interzisă în China din 2021. Neoficial, până luna trecută, China controla din nou <strong>20% din hashrate-ul global</strong>.</p>
+      <div class="bg-gray-800 p-4 rounded-xl border-l-4 border-yellow-500 mb-6">
+        <p class="text-gray-300 italic">"Cum? Prin ferme clandestine ascunse în hidrocentralele mici din sud sau în complexele industriale din Xinjiang, mascate sub consum de 'procesare date AI'. Ei au profitat de surplusul de energie și de corupția locală. Până săptămâna asta."</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">2. Decembrie 2025: Marea Deconectare</h3>
+      <p class="mb-4">Banca Populară a Chinei (PBoC) și autoritățile din Xinjiang au declanșat o razie coordonată. Cifrele pe care le avem din surse industriale sunt șocante:</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <div class="bg-red-900/10 border border-red-500/30 p-4 rounded-xl text-center">
+            <span class="text-3xl mb-2 block">📉</span>
+            <strong class="text-red-400 block text-lg">450.000</strong>
+            <span class="text-gray-400 text-xs uppercase font-bold">Rigs Deconectate</span>
+        </div>
+        <div class="bg-orange-900/10 border border-orange-500/30 p-4 rounded-xl text-center">
+            <span class="text-3xl mb-2 block">⚡</span>
+            <strong class="text-orange-400 block text-lg">2 GW</strong>
+            <span class="text-gray-400 text-xs uppercase font-bold">Putere Pierdută</span>
+        </div>
+        <div class="bg-blue-900/10 border border-blue-500/30 p-4 rounded-xl text-center">
+            <span class="text-3xl mb-2 block">📊</span>
+            <strong class="text-blue-400 block text-lg">-100 EH/s</strong>
+            <span class="text-gray-400 text-xs uppercase font-bold">Hashrate Drop</span>
+        </div>
+      </div>
+      <p class="text-sm text-gray-400 mb-6 text-center"><em>*Aproximativ 8-10% din securitatea rețelei Bitcoin a dispărut în 48 de ore. Se vede pe blockchain: timpul dintre blocuri a crescut.</em></p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">3. De ce scade prețul? (Mecanismul de Capitulare)</h3>
+      <p class="mb-4">Aici e partea pe care trebuie să o înțelegi ca investitor. Când un miner din China este prins, el are două opțiuni:</p>
+      <ul class="list-disc pl-6 space-y-3 text-gray-300 mb-6">
+        <li><span class="text-red-500 font-bold">A.</span> Merge la închisoare.</li>
+        <li><span class="text-green-500 font-bold">B.</span> Își vinde Bitcoin-ul deținut pentru a mitui, a plăti amenzi sau a-și muta echipamentele în Paraguay sau Etiopia.</li>
+      </ul>
+      <p class="bg-red-900/20 p-4 rounded border border-red-500/50 text-gray-200"><strong>Realitatea:</strong> Ce vedem acum la 86.700$ este <strong>presiune de vânzare forțată</strong>. Nu vând pentru că vor, vând pentru că trebuie. Este o lichidare de necesitate.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">4. Oportunitatea: "Buy the Blood"</h3>
+      <p class="mb-4">Istoria ne-a învățat o lecție valoroasă în mai 2021 (când China a interzis prima dată minarea): <strong>Orice dip cauzat de "China Ban" este o oportunitate generațională de cumpărare.</strong></p>
+      
+      <div class="p-6 bg-gradient-to-r from-gray-900 to-black border border-green-500/30 rounded-2xl mt-6 shadow-2xl">
+        <h4 class="text-xl font-bold text-green-400 mb-3">Concluzia pentru Comunitate</h4>
+        <p class="text-gray-300 mb-4">Această scădere este "zgomot" geopolitic. Fundamentele Bitcoin nu s-au schimbat. Doar geografia lui s-a schimbat.</p>
+        <p class="text-white font-bold text-lg">Rețeaua Bitcoin este anti-fragilă. Hashrate-ul își va reveni în SUA și Orientul Mijlociu. Dacă ai cash pregătit (USDT), mulțumește-i Partidului Comunist Chinez pentru reducerea de preț.</p>
+      </div>
+    `
+  },
+
+  // ✅ 2. GHID ON-CHAIN (BALENELE)
   {
     slug: "ghid-supravietuire-on-chain-urmareste-balenele-nu-stirile",
     title: "Ce văd instituțiile și tu nu: Ghidul de Supraviețuire On-Chain (Urmărește Balenele, nu Știrile)",
@@ -11,13 +73,10 @@ export const articles = [
     mihaiTake: "Tati, în crypto, informația înseamnă putere, dar doar dacă o ai înaintea mulțimii. Când vezi știrea pe Twitter, ești deja 'Exit Liquidity'. Datele On-Chain sunt singurul mod de a vedea ce fac banii deștepți în timp real. Nu mai ghici, începe să spionezi legal.",
     content: `
       <p class="text-xl font-medium text-white mb-6">În crypto, există o regulă brutală: <strong>Știrile sunt pentru "Exit Liquidity".</strong></p>
-      
       <p class="mb-4">Când vezi un titlu mare <em>"BlackRock cumpără Bitcoin"</em>, fii sigur că instituțiile au acumulat deja cu săptămâni înainte. Tu doar le cumperi "pomparea".</p>
       <p class="mb-6">Dar există un avantaj incorect pe care îl avem în crypto față de bursă: <strong>Transparența Radicală</strong>. Pe blockchain, fiecare mutare lasă o urmă. Balenele pot minți pe Twitter, pot plăti articole false, dar nu pot muta 100 de milioane de dolari fără ca blockchain-ul să înregistreze tranzacția. Acesta este ghidul tău de spionaj legal.</p>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">1. Indicatorul #1: Exchange Inflow/Outflow (Pulsul Pieței)</h3>
       <p class="mb-4">Acesta este cel mai simplu și puternic semnal.</p>
-      
       <div class="grid md:grid-cols-2 gap-6 mb-8">
         <div class="bg-red-900/10 border border-red-500/30 p-5 rounded-xl">
             <strong class="text-red-400 block mb-2 text-lg">📉 Exchange Inflow (Intrări)</strong>
@@ -30,18 +89,14 @@ export const articles = [
             <p class="text-xs text-green-300 mt-2 font-bold">Semnal: Acumulare masivă (Supply Shock).</p>
         </div>
       </div>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">2. Indicatorul #2: Stablecoin Supply Ratio (Muniția)</h3>
       <p class="mb-4">Stablecoin-urile (USDT, USDC) sunt "praful de pușcă" al pieței. Dacă vezi că Trezoreria Tether printează 1 miliard de USDT și îi trimite pe exchange-uri, acei bani nu stau degeaba.</p>
-      
       <div class="bg-blue-900/20 border-l-4 border-blue-500 p-4 my-6">
         <strong class="text-blue-200 block mb-1">💡 Puterea de Cumpărare:</strong>
         <p class="text-gray-300">O creștere a rezervei de Stablecoins pe exchange-uri este cel mai puternic semnal <strong>Bullish</strong> pe care îl poți primi. Banii sunt pregătiți să intre în piață.</p>
       </div>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">3. Instrumentele de Spionaj: Glassnode & Arkham</h3>
       <p class="mb-4">Nu ai nevoie de diplomă în IT. Ai nevoie de uneltele corecte.</p>
-      
       <ul class="space-y-4 mb-6">
         <li class="bg-gray-800 p-4 rounded-xl border border-gray-700">
             <strong class="text-orange-400">Glassnode (Macro):</strong>
@@ -52,13 +107,11 @@ export const articles = [
             <p class="text-sm text-gray-400 mt-1">Pentru "vânătoarea de oameni". Poți vedea exact ce cumpără un fond de investiții sau un influencer faimos în timp real. <em>Exemplu: Dacă vezi că un portofel asociat cu Justin Sun începe să acumuleze o monedă obscură, ai un semnal înainte ca ei să posteze.</em></p>
         </li>
       </ul>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">4. Diferența dintre "Volum Real" și "Wash Trading"</h3>
       <p class="mb-4">Pe CoinMarketCap, volumul poate fi falsificat de exchange-uri pentru a părea active. <strong>On-Chain, volumul este real.</strong> Trebuie să plătești "Gas Fees" pentru a muta banii. Nimeni nu plătește milioane în taxe doar ca să te păcălească pe tine.</p>
       <div class="bg-yellow-900/10 border border-yellow-500/30 p-4 rounded-lg">
         <p class="text-gray-300"><strong>⚠️ Capcana Divergenței:</strong> Dacă prețul crește, dar volumul On-Chain scade, este o Divergență. E o capcană. Urmează prăbușirea.</p>
       </div>
-
       <div class="mt-12 p-8 bg-gradient-to-br from-gray-900 to-black border border-white/10 rounded-2xl text-center shadow-2xl">
         <h4 class="text-2xl font-bold text-white mb-4">Concluzie: Fii Rechinul, nu Peștele Mic</h4>
         <p class="text-gray-300 mb-6">În 2026, nu vei mai putea face profit doar cu noroc. Cei care se bazează pe "ce a zis X-ulescu pe YouTube" vor fi mâncați de cei care se uită la datele On-Chain.</p>
@@ -67,7 +120,7 @@ export const articles = [
     `
   },
 
-  // ✅ 2. ARTICOL: FORTĂREAȚA DIGITALĂ (SECURITATE) (Imagine: security.jpg)
+  // ✅ 3. FORTĂREAȚA DIGITALĂ (SECURITATE)
   {
     slug: "fortareata-digitala-banca-elvetiana-crypto-securitate-2026",
     title: "Fortăreața Digitală: Cum să devii propria ta Bancă Elvețiană în 2026 (Nu e vorba doar de un Ledger)",
@@ -79,12 +132,9 @@ export const articles = [
     mihaiTake: "Tati, să faci bani în crypto e ușor. Să îi păstrezi e greu. Dacă ai milioanele pe un Hot Wallet sau pe un Exchange, nu ești bogat, ești doar norocos. Încă. Securitatea e plictisitoare până în secunda în care te salvează de la faliment.",
     content: `
       <p class="text-xl font-medium text-white mb-6">Imaginează-ți scenariul: Ai prins x50, portofoliul tău arată 1 milion de dolari. Te culci fericit. Dimineața, contul e zero.</p>
-      
       <p class="mb-4">Nu ești victima ghinionului. Ești victima propriei neglijențe. Majoritatea cred că un Ledger aruncat într-un sertar îi salvează automat. <strong>Greșit.</strong> Securitatea nu este un produs pe care îl cumperi, este un proces pe care îl execuți.</p>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">1. Filosofia "Cold Storage" vs. "Hot Wallet"</h3>
       <p class="mb-4">Trebuie să gândești ca o bancă. Nu ții toți banii băncii în casa de marcat de la ghișeu.</p>
-      
       <div class="grid md:grid-cols-2 gap-6 mb-8">
         <div class="bg-red-900/10 border border-red-500/30 p-5 rounded-xl">
             <strong class="text-red-400 block mb-2 text-lg">🔥 Hot Wallet (Metamask/Phantom)</strong>
@@ -95,27 +145,21 @@ export const articles = [
             <p class="text-sm text-gray-300">Este seiful din perete. Nu interacționează cu contracte dubioase. Nu semnează tranzacții zilnice. Cheile private nu ating niciodată internetul.</p>
         </div>
       </div>
-
       <div class="bg-yellow-900/10 border-l-4 border-yellow-500 p-4 my-6">
         <strong class="text-yellow-500 block mb-1">⚠️ Regula de Aur:</strong>
         <p class="text-gray-300">Nu amesteca niciodată "Degen Plays" (NFT-uri, Meme-uri dubioase) cu "Long Term Holdings" (Bitcoin-ul de pensie) pe același wallet. Dacă semnezi un contract malițios pentru un airdrop de 5$, poți pierde tot Bitcoin-ul.</p>
       </div>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">2. Nivelul Avansat: Passphrase (Portofelul Ascuns)</h3>
       <p class="mb-4">Aici intrăm în zona "Insider". Ce faci dacă cineva găsește cele 24 de cuvinte (Seed Phrase)? Sau mai rău, dacă ești amenințat fizic să deblochezi Ledger-ul?</p>
-      
       <p class="mb-4">Soluția este <strong>Passphrase</strong> (sau "Al 25-lea cuvânt").</p>
       <ul class="list-disc pl-6 space-y-3 text-gray-300 mb-6">
         <li>Aceasta funcționează ca o parolă suplimentară pe care o memorezi (nu o scrii nicăieri).</li>
         <li><strong>Magia:</strong> Seed Phrase + Passphrase = Un portofel complet nou, invizibil.</li>
         <li>Chiar dacă hoțul are dispozitivul și cele 24 de cuvinte, el va vedea doar contul "de sacrificiu" (unde ții o sumă mică), nu contul principal protejat de Passphrase.</li>
       </ul>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">3. Pericolul "Blind Signing" și Phishing</h3>
       <p class="mb-4">Hackerii nu mai sparg criptografia (e matematic imposibil). <strong>Ei sparg oamenii.</strong></p>
-      
       <p class="mb-4">Cel mai comun atac în 2025 este <strong>"Blind Signing"</strong> (Semnarea în orb). Primești un email de la "Support" sau vezi un buton de "Claim Airdrop". Apeși pe el, Ledger-ul îți cere să semnezi o tranzacție complexă pe care nu o înțelegi. În momentul în care ai semnat, ai dat permisiunea contractului să îți golească portofelul.</p>
-      
       <div class="bg-gray-800 p-6 rounded-xl border border-gray-600 mb-6">
         <h4 class="text-lg font-bold text-green-400 mb-2">🛡️ Soluția Practică:</h4>
         <ul class="space-y-2 text-gray-300">
@@ -123,11 +167,9 @@ export const articles = [
             <li>✅ Folosește extensii de securitate precum <strong>Pocket Universe</strong> sau <strong>Wallet Guard</strong>. Acestea simulează tranzacția înainte să o semnezi și îți spun clar: <em>"Atenție! Această tranzacție îți va transfera toți banii către adresa X."</em></li>
         </ul>
       </div>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">4. Contextul 2026: De ce "Self-Custody" este obligatoriu</h3>
       <p class="mb-4">Trebuie să legăm totul de realitatea legislativă (MiCA).</p>
       <p class="mb-4">Dacă ții banii pe un Exchange Centralizat (CEX), acei bani <strong>nu sunt ai tăi</strong>. Sunt o promisiune (IOU). Într-o criză de lichiditate sau la un ordin guvernamental, Exchange-ul poate fi obligat să îți înghețe contul.</p>
-      
       <div class="p-6 bg-gradient-to-r from-gray-900 to-black border border-white/10 rounded-2xl text-center shadow-xl mt-8">
         <p class="text-lg text-white font-medium leading-relaxed italic">
             "Într-un portofel rece (Cold Wallet), tu ești CEO-ul, Banca Centrală și Armata. <br/><br/>
@@ -137,7 +179,7 @@ export const articles = [
     `
   },
 
-  // ✅ 3. ARTICOL: ALERTA BOJ (JAPONIA)
+  // ✅ 4. ALERTA BOJ (JAPONIA)
   {
     slug: "alerta-boj-lebada-neagra-japonia-bitcoin-18-decembrie",
     title: "Alerta BOJ: \"Lebăda Neagră\" din Japonia care poate lovi Bitcoin săptămâna viitoare (18-19 Decembrie)",
@@ -149,17 +191,13 @@ export const articles = [
     mihaiTake: "Tati, ignoră zgomotul de pe Twitter. Adevăratul 'Boss Final' al anului 2025 este Banca Japoniei. Dacă ei ridică dobânda, robinetul global de bani ieftini se închide. Nu e momentul să fii erou cu levier 100x. Păstrează gloanțele (USDT) pentru a vâna oportunitățile din volatilitate.",
     content: `
       <p class="text-xl font-medium text-white mb-6">Săptămâna viitoare, ochii investitorilor de retail vor fi pe grafice. Ochii investitorilor instituționali vor fi pe Tokyo.</p>
-      
       <p class="mb-4">Pe <strong>18-19 Decembrie 2025</strong>, Banca Centrală a Japoniei (BOJ) pregătește o mișcare istorică: majorarea ratei de dobândă la <strong>0.75%</strong>. Pare puțin? Este cel mai înalt nivel din ultimii 30 de ani.</p>
-      
       <div class="bg-red-900/10 border-l-4 border-red-500 p-4 my-6 rounded-r-lg">
         <strong class="text-red-400 block mb-2">De ce contează?</strong>
         <p class="text-gray-300">Pentru Bitcoin, aceasta nu este doar o știre economică plictisitoare. Este un potențial <strong>șoc de lichiditate</strong>.</p>
       </div>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Mecanismul Pericolului: "Carry Trade-ul" Explicat Simplu</h3>
       <p class="mb-4">De ani de zile, fondurile de investiții fac următorul joc (Yen Carry Trade):</p>
-      
       <div class="bg-gray-800 p-6 rounded-xl border border-gray-600 mb-8">
         <ul class="space-y-4">
             <li class="flex items-start gap-3">
@@ -180,12 +218,9 @@ export const articles = [
             <p class="text-sm text-gray-400">Dacă BOJ crește dobânda, costul acestor împrumuturi crește. Yen-ul se întărește. Investitorii sunt forțați să <strong>vândă activele riscante (BTC)</strong> pentru a plăti datoriile în Yeni. Este exact mecanismul care a cauzat prăbușirea piețelor în "Lunea Neagră" din august 2024.</p>
         </div>
       </div>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Cele 3 Scenarii pentru Bitcoin (Analiză de Probabilitate)</h3>
       <p class="mb-6">Piețele au prețat deja o mare parte din acest eveniment, dar volatilitatea este garantată. Iată la ce să te aștepți:</p>
-
       <div class="space-y-6">
-        {/* Scenariul 1 */}
         <div class="bg-red-900/10 border border-red-500/30 p-6 rounded-xl">
             <h4 class="text-xl font-bold text-red-400 mb-2 flex items-center gap-2">🔴 Scenariul 1: Majorarea Așteptată (Probabilitate 90%)</h4>
             <ul class="list-disc pl-5 space-y-2 text-gray-300 text-sm">
@@ -194,8 +229,6 @@ export const articles = [
                 <li><strong>Strategia:</strong> <span class="text-white font-bold">Nu intrați în panică.</span> Dacă piața a "prețuit" deja știrea, scăderea va fi cumpărată rapid (Sell the rumor, Buy the news).</li>
             </ul>
         </div>
-
-        {/* Scenariul 2 */}
         <div class="bg-green-900/10 border border-green-500/30 p-6 rounded-xl">
             <h4 class="text-xl font-bold text-green-400 mb-2 flex items-center gap-2">🟢 Scenariul 2: Surpriza "Hold" (Probabilitate 10%)</h4>
             <ul class="list-disc pl-5 space-y-2 text-gray-300 text-sm">
@@ -204,8 +237,6 @@ export const articles = [
                 <li><strong>Strategia:</strong> Moment excelent pentru poziții Long pe termen scurt.</li>
             </ul>
         </div>
-
-        {/* Scenariul 3 */}
         <div class="bg-gray-800 border border-gray-600 p-6 rounded-xl">
             <h4 class="text-xl font-bold text-gray-200 mb-2 flex items-center gap-2">⚫ Scenariul 3: "Șoimii" Atacă (Probabilitate <5%)</h4>
             <ul class="list-disc pl-5 space-y-2 text-gray-300 text-sm">
@@ -215,10 +246,8 @@ export const articles = [
             </ul>
         </div>
       </div>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Concluzie și Plan de Acțiune</h3>
       <p class="mb-4">Suntem într-un moment critic. SUA relaxează (tipărește), Japonia strânge cureaua. Acest contrast creează turbulențe. Bitcoin sub 85.000 USD arată deja că "Smart Money" se protejează înainte de eveniment.</p>
-      
       <div class="bg-yellow-900/10 border-l-4 border-yellow-500 p-6 rounded-r-lg mt-6">
         <h4 class="text-lg font-bold text-yellow-500 mb-3">Sfatul meu:</h4>
         <ol class="list-decimal pl-5 space-y-2 text-gray-300">
@@ -230,7 +259,7 @@ export const articles = [
     `
   },
 
-  // ✅ 4. ARTICOL: DOSARUL SATOSHI
+  // ✅ 5. DOSARUL SATOSHI
   {
     slug: "dosarul-satoshi-cine-este-fantoma-de-70-miliarde-investigatie-2025",
     title: "Dosarul Satoshi: Cine este \"Fantoma\" de 70 Miliarde de Dolari? Investigația Completă 2025",
@@ -242,55 +271,41 @@ export const articles = [
     mihaiTake: "Tati, cel mai mare cadou pe care ni l-a făcut Satoshi nu e tehnologia, ci dispariția lui. Dacă rămânea, Bitcoin era doar o altă companie cu CEO pe care o putea aresta guvernul. Așa, e o forță a naturii. Nu căuta fantoma, bucură-te de libertatea pe care ți-a lăsat-o.",
     content: `
       <p class="text-xl font-medium text-white mb-6">Pe 31 octombrie 2008, o entitate sub pseudonimul <strong>Satoshi Nakamoto</strong> a publicat celebrul Whitepaper Bitcoin. În 2011, a dispărut. Astăzi, averea sa neatinsă valorează peste <strong>70 de miliarde de dolari</strong>.</p>
-      
       <p class="mb-4">Cine este, de fapt, arhitectul Bitcoin? Este un geniu singuratic, un grup de criptografi sau o agenție guvernamentală? Acest studiu analizează principalii suspecți, folosind dovezi criminalistice, analize lingvistice și decizii judiciare recente (2024-2025).</p>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">1. Hal Finney: Primul Pionier (Favoritul Sentimental)</h3>
-      
       <div class="flex items-center gap-2 mb-4">
         <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded text-sm font-bold border border-green-500/50">Scor Viabilitate: 9/10</span>
       </div>
-      
       <p class="mb-4">Hal Finney a fost un criptograf legendar și prima persoană (în afara lui Satoshi) care a rulat software-ul Bitcoin.</p>
       <p class="mb-4"><strong>Momentul Cheie:</strong> Pe 12 ianuarie 2009, Finney a primit prima tranzacție Bitcoin din istorie (10 BTC) direct de la Nakamoto.</p>
-      
       <div class="bg-gray-800 p-6 rounded-xl border border-gray-600 mb-6">
         <p class="text-gray-300 mb-2"><strong>🔎 Probele:</strong> Analiza stilometrică a arătat că stilul de scriere al lui Finney este cel mai apropiat de cel al lui Satoshi. Mai mult, Finney locuia la câteva străzi distanță de un bărbat numit... <em>Dorian Nakamoto</em> (o posibilă sursă de inspirație pentru pseudonim).</p>
         <p class="text-gray-300 border-t border-gray-700 pt-2 mt-2"><strong>⚖️ Contra-argumente:</strong> Finney a negat vehement până la moartea sa în 2014. Email-urile dintre el și Satoshi par autentice, sugerând două persoane distincte.</p>
       </div>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">2. Nick Szabo: Arhitectul Conceptual</h3>
-      
       <div class="flex items-center gap-2 mb-4">
         <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded text-sm font-bold border border-blue-500/50">Scor Viabilitate: 8/10</span>
       </div>
-
       <p class="mb-4">Nick Szabo a creat "Bit Gold" în 1998, un precursor aproape identic conceptual cu Bitcoin.</p>
       <ul class="list-disc pl-6 space-y-2 text-gray-300 mb-6">
         <li><strong>Probele:</strong> "Bit Gold" folosea proof-of-work și lanțuri de semnături digitale. În mod suspect, Whitepaper-ul Bitcoin nu citează munca lui Szabo, deși similitudinile sunt izbitoare. Elon Musk a sugerat că Szabo este cel mai probabil candidat.</li>
         <li><strong>Contra-argumente:</strong> Szabo a negat constant. Nu există o "pistă fumegândă" tehnică care să lege direct codul Bitcoin de el.</li>
       </ul>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">3. Len Sassaman: Geniul Tragic (Teoria HBO)</h3>
-      
       <div class="flex items-center gap-2 mb-4">
         <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded text-sm font-bold border border-purple-500/50">Scor Viabilitate: 7/10</span>
       </div>
-
       <p class="mb-4">O teorie care a explodat după documentarul HBO din 2024. Sassaman a fost un prodigy al mișcării Cypherpunk.</p>
       <div class="bg-purple-900/10 border-l-4 border-purple-500 p-4 mb-6">
         <p class="text-gray-300"><strong>Coincidența Tulburătoare:</strong> Sassaman s-a sinucis în iulie 2011, la doar 2 luni după ce Satoshi a trimis ultimul său email spunând <em>"Nu voi mai fi aici în viitor"</em>.</p>
       </div>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">4. Adam Back & Wei Dai: Părinții Tehnologiei</h3>
       <p class="mb-4">Amândoi sunt citați în Whitepaper-ul Bitcoin.</p>
       <ul class="list-disc pl-6 space-y-3 text-gray-300 mb-6">
         <li><strong>Adam Back (CEO Blockstream):</strong> A inventat Hashcash, sistemul pe care se bazează minarea Bitcoin. Deși a negat, rămâne unul dintre puținii oameni capabili să creeze protocolul de la zero.</li>
         <li><strong>Wei Dai:</strong> Creatorul b-money. Satoshi l-a contactat personal înainte de lansare.</li>
       </ul>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">5. Dosarele Respinse: Cine NU este Satoshi</h3>
-      
       <div class="space-y-4 mb-8">
         <div class="bg-red-900/10 p-4 rounded border border-red-500/20">
             <strong class="text-red-400 block mb-1">❌ Craig Wright (Falsul Satoshi)</strong>
@@ -301,9 +316,7 @@ export const articles = [
             <p class="text-sm text-gray-300">Dorian a fost o victimă a presei (Newsweek 2014), iar Musk nu se potrivește cronologic (în 2008 salva Tesla). Teoriile CIA contrazic filozofia anti-sistem a Bitcoin.</p>
         </div>
       </div>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Tabel Comparativ: Suspecții Principali</h3>
-      
       <div class="overflow-x-auto mb-8">
         <table class="w-full text-left border-collapse">
             <thead>
@@ -342,11 +355,9 @@ export const articles = [
             </tbody>
         </table>
       </div>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Concluzie: De ce este bine că nu știm?</h3>
       <p class="mb-4">Misterul identității lui Satoshi Nakamoto nu este o slăbiciune, ci cea mai mare forță a Bitcoin.</p>
       <p class="mb-4">Dacă Satoshi ar fi o persoană cunoscută (ca Vitalik Buterin pentru Ethereum sau Mark Zuckerberg pentru Meta), ar exista un punct central de presiune, un lider care poate fi arestat, compromis sau influențat.</p>
-      
       <div class="p-6 bg-gradient-to-r from-gray-900 to-black border border-white/10 rounded-2xl text-center shadow-xl mt-8">
         <p class="text-lg text-white font-medium leading-relaxed italic">
             "Faptul că cele 1 milion de monede nu s-au mișcat din 2010 sugerează fie că creatorul nu mai este printre noi, fie că a avut o disciplină supraomenească. <br/><br/>
@@ -356,7 +367,7 @@ export const articles = [
     `
   },
 
-  // ✅ 5. ARTICOL: SEZONUL CELOR 20
+  // ✅ 6. SEZONUL CELOR 20
   {
     slug: "nu-asteptati-altcoin-season-vine-sezonul-celor-20",
     title: "Nu așteptați \"Altcoin Season\". Vine \"Sezonul celor 20\".",
@@ -368,19 +379,14 @@ export const articles = [
     mihaiTake: "Tati, epoca 'spray and pray' a murit. Nu mai arunca banii în toate proiectele obscure sperând la 100x. În 2026, banii inteligenți se concentrează. Dacă portofoliul tău arată ca o salată de fructe cu 50 de monede, ești victima sigură. Concentrare = Avere.",
     content: `
       <p class="text-xl font-medium text-white mb-6">În ciclurile trecute (2017, 2021), lichiditatea se revărsa ca o cascadă: din Bitcoin -> în ETH -> în Mid Caps -> în Shitcoins. Totul creștea. <strong>În 2026, cascada s-a oprit.</strong></p>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">1. Schimbarea de Paradigmă: 99% vs. 1%</h3>
-      
       <p class="mb-4">Realitatea este brutală: Avem zeci de mii de criptomonede. Majoritatea sunt "Zombie Chains" (fără utilizatori, doar cu boți) sau proiecte abandonate de developeri.</p>
-      
       <div class="bg-red-900/20 border-l-4 border-red-500 p-6 my-6 rounded-r-lg">
         <p class="text-red-200 font-bold mb-2">Avertisment:</p>
         <p class="text-gray-300">Cei care așteaptă ca vechile lor portofolii de "bijuterii" din 2021 să revină la ATH (All Time High) vor rămâne cu ochii în soare. Banii noi nu intră acolo.</p>
       </div>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">2. Lista Scurtă a Instituțiilor (The Shortlist)</h3>
       <p class="mb-4">Lichiditatea care vine dinspre FED și Trezorerie (cei 40-60 Mld. $/lună) intră prin vehicule reglementate (ETF-uri, Fonduri, Bănci).</p>
-
       <div class="bg-gray-800 p-6 rounded-xl border border-gray-600 my-6">
         <h4 class="text-xl font-bold text-blue-400 mb-4 flex items-center gap-2">🛡️ Filtrul Instituțional</h4>
         <p class="mb-4 text-gray-300">Acești bani "smart" au voie legal să atingă doar active care îndeplinesc 3 condiții stricte:</p>
@@ -390,11 +396,8 @@ export const articles = [
             <li class="flex items-start gap-2"><span class="text-blue-500">✔</span> <strong>Track Record:</strong> Să fi supraviețuit minim unui Bear Market.</li>
         </ul>
       </div>
-
       <p class="mb-6"><strong>Rezultatul:</strong> Banii se vor opri la Bitcoin (Regele), Ethereum (Regina/Infrastructura) și o "Gardă Pretoriană" de maxim <strong>15-20 de Altcoins</strong> (Top Layer 1 active, Top AI Protocols, Top RWA). Restul e zgomot.</p>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">3. De ce ETH și "Cei 20" vor surclasa piața</h3>
-      
       <div class="grid gap-6 mb-8">
         <div class="bg-gradient-to-br from-purple-900/20 to-blue-900/20 p-5 rounded-xl border border-purple-500/30">
             <strong class="text-purple-400 block mb-2 text-lg">Ethereum (ETH)</strong>
@@ -409,9 +412,7 @@ export const articles = [
             <p class="text-gray-300 text-sm">Va fi un cimitir. Vor avea pompe izolate de o zi (manipulare), dar trendul va fi spre zero față de BTC.</p>
         </div>
       </div>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">4. Strategia Corectă: Concentrare, nu Diversificare</h3>
-      
       <div class="p-8 bg-gradient-to-r from-gray-900 to-black border border-white/10 rounded-2xl text-center shadow-2xl">
         <p class="text-xl text-white font-medium leading-relaxed italic">
             "Diversificarea în 50 de altcoins este sinucidere financiară în 2026. În loc să cumperi 'totul', pariază pe caii câștigători. <br/><br/>
@@ -421,7 +422,7 @@ export const articles = [
     `
   },
 
-  // ✅ 6. ARTICOL: US TREASURY DEBT BUYBACK
+  // ✅ 7. ARTICOL: US TREASURY DEBT BUYBACK
   {
     slug: "trezoreria-sua-debt-buyback-semnal-crypto-2026",
     title: "Trezoreria SUA tocmai a făcut-o din nou ($12.5 MLD). Și nimeni din România nu vorbește despre asta.",
@@ -433,19 +434,14 @@ export const articles = [
     mihaiTake: "Tati, nu te uita la ce spun ei la TV, uită-te la ce fac cu banii. Când Trezoreria cumpără propria datorie, înseamnă că 'motorul' scârțâie și are nevoie de ulei. Uleiul ăla e lichiditate. Și lichiditatea ajunge mereu în Bitcoin. Nu paria împotriva tiparniței.",
     content: `
       <p class="text-xl font-medium text-white mb-6">Încă o răscumpărare de datorie (Debt Buyback) de <strong>12,5 MILIARDE $</strong>. Asta vine la doar o săptămână după cea mai mare intervenție de acest gen din istoria Americii.</p>
-      
       <p class="mb-4">Dacă ți se pare o știre banală, ratezi complet imaginea de ansamblu. Dacă deții active (Crypto, Acțiuni, Imobiliare), citește asta cu atenție. 👇</p>
-
       <div class="bg-red-900/20 border-l-4 border-red-500 p-4 my-6 rounded-r-lg">
         <p class="text-red-200 font-bold mb-2">ALERTA:</p>
         <p class="text-gray-300">Acesta NU este un comportament normal. Răscumpărările de către Trezorerie erau evenimente rare. Acum am avut două intervenții masive în 7 zile.</p>
       </div>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Ce înseamnă, pe românește, un "Buyback"?</h3>
       <p class="mb-4">Guvernul își retrage propria datorie de pe piață înainte de termen, folosind cash proaspăt, pentru a calma piața obligațiunilor.</p>
-      
       <p class="bg-gray-800 p-4 rounded-lg border border-gray-600"><strong>Traducerea pentru investitori:</strong> Ei intervin pentru că ceva începe să se rupă sub suprafață.</p>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">De ce acum?</h3>
       <ul class="list-disc pl-6 space-y-3 text-gray-300 mb-6">
         <li>Pentru că dobânzile sunt prea sus.</li>
@@ -453,36 +449,30 @@ export const articles = [
         <li>Cererea pentru obligațiunile pe termen lung tremură.</li>
         <li><strong>Sistemul rămâne fără lichiditate ("uleiul" din motor).</strong></li>
       </ul>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Deci, ce fac ei de fapt?</h3>
       <p class="mb-4">Injectează lichiditate. În liniște. Pe ușa din spate.</p>
-      
       <div class="space-y-2 mb-6">
         <p class="flex items-center gap-2 text-gray-400">🔇 Nu îi vor spune "QE" (Quantitative Easing).</p>
         <p class="flex items-center gap-2 text-gray-400">🔇 Nu vor recunoaște că e "Stimulus".</p>
         <p class="flex items-center gap-2 text-green-400 font-bold">🔊 Dar funcțional, exact asta este.</p>
       </div>
-
       <div class="p-6 bg-gradient-to-r from-gray-900 to-black border border-green-500/30 rounded-xl my-8">
         <h4 class="text-xl font-bold text-green-400 mb-4">Și aici e "Secretul" pe care masele îl ratează:</h4>
         <p class="text-gray-300 mb-4">Acea lichiditate NU rămâne niciodată blocată în Trezorerie. Ea se scurge...</p>
         <p class="text-white font-medium">Se infiltrează în acțiuni, în credite, în active reale... <br/><span class="text-blue-400 font-bold">🌊 Și, inevitabil... în Bitcoin și Crypto.</span></p>
       </div>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">Așa începe fiecare ciclu major:</h3>
       <ol class="list-decimal pl-6 space-y-4 text-gray-300 mb-8">
         <li>Mai întâi vin "operațiunile tehnice" (plictisitoare pentru plebe).</li>
         <li>Apoi vine negarea ("Nu e inflație, e tranzitoriu").</li>
         <li><strong>Apoi prețurile activelor explodează ÎNAINTE să apară știrile la TV.</strong></li>
       </ol>
-
       <p class="mb-4">Trezoreria SUA tocmai ți-a arătat că e inconfortabilă cu situația. Și când oamenii care conduc tiparnița de bani devin inconfortabili, activele de risc (Risk-On) sunt primele care reacționează.</p>
-      
       <p class="text-white font-bold italic border-l-4 border-yellow-500 pl-4 py-2">Am fost printre singurii care v-a avertizat corect în trecut. Acesta este semnalul instituțional pe care îl așteptam pentru 2026. Nu paria împotriva lichidității.</p>
     `
   },
 
-  // ✅ 7. ARTICOL: MiCA & BLOCADA BANCARĂ (TEXT INTEGRAL)
+  // ✅ 8. ARTICOL: MiCA & BLOCADA BANCARĂ (TEXT INTEGRAL)
   {
     slug: "cortina-de-fier-financiara-europeana-mica-2026",
     title: "\"Cortina de Fier\" Financiară a Europei (2026): Pericolele Tranzacționării pe Platforme Nereglementate",
@@ -494,20 +484,15 @@ export const articles = [
     mihaiTake: "Tati, joaca s-a terminat. UE nu interzice crypto, doar îl controlează total. Dacă încerci să fii 'șmecher' cu VPN-uri în 2026, te vei trezi cu banii blocați în blockchain și contul bancar închis. Adaptează-te sau dispari.",
     content: `
       <p class="text-xl font-medium text-white mb-6">Subiectul zilei: Pericolele tranzacționării pe platforme nereglementate MiCA (Non-Compliant Exchanges & DEXs) începând cu 2026.</p>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">1. Contextul: De ce 2026 este anul critic?</h3>
       <p class="mb-4">Deși MiCA a intrat în vigoare la final de 2024, există o "perioadă de grație" (Grandfathering Period). Aceasta permite platformelor vechi să opereze pe legislații naționale temporare.</p>
-      
       <div class="bg-blue-900/20 border-l-4 border-blue-500 p-4 my-6 rounded-r-lg">
         <p class="text-blue-200 font-bold mb-2">Termenul limită:</p>
         <p class="text-gray-300">Pentru multe state membre (inclusiv Franța, Luxemburg și probabil România prin aliniere), această perioadă se încheie la <strong>1 Iulie 2026</strong>.</p>
       </div>
-      
       <p class="mb-4"><strong>Ce se întâmplă atunci:</strong> Orice exchange care nu are licență CASP (Crypto-Asset Service Provider) devine ilegal în a solicita clienți europeni.</p>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">2. Riscul #1: Blocada Bancară (Financial Exclusion)</h3>
       <p class="mb-4">Acesta este cel mai mare pericol imediat. Nu poliția te va opri, ci banca ta.</p>
-      
       <ul class="list-disc pl-6 space-y-4 text-gray-300 mb-6">
         <li><strong>Mecanismul:</strong> Băncile din UE (Revolut, ING, Banca Transilvania etc.) vor avea obligația să monitorizeze sursa fondurilor.</li>
         <li><strong>Scenariul 2026:</strong> Dacă încerci să faci cash-out (să tragi banii în bancă) de pe un exchange din afara UE (ex: Bybit Global, KuCoin non-EU, Gate.io) sau dintr-un DEX fără un intermediar reglementat:
@@ -518,12 +503,9 @@ export const articles = [
         </li>
       </ul>
       <p class="bg-gray-800 p-4 rounded-lg"><strong>Motivul:</strong> Băncile nu vor risca amenzi uriașe pentru a procesa transferul tău de 5.000 EUR dintr-o sursă "gri".</p>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">3. Riscul #2: Capcana "DAC8" și Fiscul (ANAF)</h3>
       <p class="mb-4">Începând cu 1 ianuarie 2026, intră în vigoare directiva <strong>DAC8</strong>.</p>
-      
       <p class="mb-4"><strong>Ce înseamnă:</strong> Schimb automat de informații între toate platformele crypto care au clienți UE și autoritățile fiscale (ANAF).</p>
-      
       <div class="space-y-4 mb-6">
         <div class="bg-red-900/10 p-4 rounded-xl border border-red-500/20">
             <strong class="text-red-400 block mb-2">Pericolul:</strong>
@@ -534,25 +516,19 @@ export const articles = [
             <p class="text-sm text-gray-300">Dacă nu poți prezenta un raport clar, validat de o entitate recunoscută (CASP), ANAF poate încadra venitul la "Sursă neidentificată" și îl poate impozita cu <strong>70%</strong> (noua lege a evaziunii) + dosar penal.</p>
         </div>
       </div>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">4. Riscul #3: Regula Călătoriei (Travel Rule)</h3>
       <p class="mb-4">Regulamentul TFR (Transfer of Funds Regulation) devine draconic.</p>
-      
       <ul class="list-disc pl-6 space-y-3 text-gray-300 mb-6">
         <li><strong>Limita de 1.000 EUR:</strong> Pentru orice transfer mai mare de 1.000 EUR de pe un exchange către propriul tău Ledger/Metamask (Unhosted Wallet), exchange-ul este obligat să verifice că adresa îți aparține.</li>
         <li><strong>Blocajul:</strong> Platformele nereglementate nu au uneltele necesare să comunice aceste date către platformele reglementate.</li>
         <li><strong>Consecința:</strong> Nu vei putea muta banii de pe un Exchange Non-MiCA -> Exchange MiCA (ex: Binance/Bybit EU) pentru a scoate fiat. Banii tăi vor rămâne blocați în ecosistemul crypto, fără ieșire legală către RON/EUR.</li>
       </ul>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">5. Riscul #4: Delistarea Stablecoins (USDT/USDC)</h3>
       <p class="mb-4">MiCA impune reguli stricte pentru emitenții de stablecoins (Trebuie să fie E-Money Tokens).</p>
-      
       <p class="mb-4"><strong>Pericolul:</strong> Platformele reglementate vor fi obligate să delisteze stablecoin-urile neconforme.</p>
       <p class="mb-6 bg-yellow-900/10 p-4 rounded border border-yellow-500/30 text-gray-300"><strong>Situația:</strong> Dacă ții banii în USDT pe o platformă nereglementată și vrei să îi muți în Europa, s-ar putea să descoperi că USDT-ul tău nu este acceptat la depunere pe platformele europene, fiind obligat să faci conversii costisitoare sau riscante.</p>
-
       <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">6. Mitul "VPN-ului" și "Reverse Solicitation"</h3>
       <p class="mb-4">Mulți cred că vor folosi un VPN pentru a accesa platforme din Asia/Caraibe.</p>
-      
       <div class="p-6 bg-gradient-to-r from-gray-800 to-black rounded-xl border border-gray-700 text-center">
         <strong class="text-white text-lg block mb-2">Realitatea:</strong>
         <p class="text-gray-400 text-sm">Autoritatea Europeană (ESMA) a clarificat conceptul de "Reverse Solicitation". Este o excepție extrem de îngustă. Dacă platforma din Asia are orice meniu în limba română sau orice marketing în UE, este ilegală.</p>
@@ -561,7 +537,7 @@ export const articles = [
     `
   },
 
-  // ✅ 8. ARTICOL: MITUL ALTCOIN SEASON
+  // ✅ 9. ARTICOL: MITUL ALTCOIN SEASON
   {
     slug: "mitul-si-realitatea-altcoin-season-2022-2026",
     title: "2022-2025: Marea Minciună a Altcoin-urilor. Studiu de Piață: Mitul și Realitatea \"Altcoin Season\".",
@@ -619,7 +595,7 @@ export const articles = [
     `
   },
 
-  // ✅ 9. ARTICOL: ACUMULARE INSTITUȚIONALĂ ETHEREUM
+  // ✅ 10. ARTICOL: ACUMULARE INSTITUȚIONALĂ ETHEREUM
   {
     slug: "acumulare-institutionala-ethereum-dat-bmnr-2025",
     title: "Acumularea Instituțională de Ethereum: O Tendință Bullish în 2025",
@@ -688,7 +664,7 @@ export const articles = [
     `
   },
 
-  // ✅ 10. ARTICOL: IMPACT REUNIUNE FOMC DECEMBRIE 2025
+  // ✅ 11. ARTICOL: IMPACT REUNIUNE FOMC DECEMBRIE 2025
   {
     slug: "impact-reuniune-fomc-decembrie-2025-crypto",
     title: "Impactul Reuniunii FOMC din Decembrie 2025 asupra Pieței Crypto: O Analiză Detaliată și Explicativă",
@@ -753,7 +729,7 @@ export const articles = [
     `
   },
 
-  // ✅ 11. ARTICOL: HALVING VS LICHIDITATE (Imagine Locală)
+  // ✅ 12. ARTICOL: HALVING VS LICHIDITATE (Imagine Locală)
   {
     slug: "mitul-halving-ului-sacru-vs-realitatea-lichiditatii",
     title: "Mitul \"Halving-ului Sacru\" vs. Realitatea Lichidității: Ce dictează cu adevărat prețul Bitcoin în 2025?",
@@ -846,7 +822,7 @@ export const articles = [
     `
   },
 
-  // ✅ 11. ARTICOL: LEVIERUL (EDUCAȚIE & RISK) - INTEGRAL
+  // ✅ 13. ARTICOL: LEVIERUL (EDUCAȚIE & RISK) - INTEGRAL
   {
     slug: "mirajul-levierului-arma-financiara-distrugere",
     title: "Mirajul Levierului: \"Arma Financiară de Distrugere în Masă\" care îți poate Zeroiza Contul într-o Secundă. Ghid de Conștientizare.",
@@ -927,7 +903,7 @@ export const articles = [
     `
   },
 
-  // ✅ 12. ARTICOL: ALERTĂ FED (Imagine Locală)
+  // ✅ 14. ARTICOL: ALERTĂ FED (Imagine Locală)
   {
     slug: "alerta-volatilitate-decizie-fed-capcana-mortala",
     title: "Alertă de Volatilitate: De ce Decizia FED de Mâine Poate Fi o \"Capcană Mortală\"",
@@ -989,7 +965,7 @@ export const articles = [
     `
   },
 
-  // ✅ 13. ARTICOL: GHID BEAR MARKET (Imagine Locală)
+  // ✅ 15. ARTICOL: GHID BEAR MARKET (Imagine Locală)
   {
     slug: "ce-inseamna-bear-market-ghid-complet",
     title: "Ce Înseamnă \"Bear Market\" și De Ce Nu Trebuie Să Te Sperie? Ghidul Complet.",
@@ -1077,7 +1053,7 @@ export const articles = [
     `
   },
 
-  // ✅ 14. ARTICOL: CAPCANA URSULUI (PSIHOLOGIE & ISTORIE)
+  // ✅ 16. ARTICOL: CAPCANA URSULUI (PSIHOLOGIE & ISTORIE)
   {
     slug: "capcana-ursului-istorie-crize-evitate",
     title: "\"Capcana Ursului\": De ce Toți Indicatorii de Criză Pot Fi Greșiți. Lecții Istorice.",
@@ -1129,7 +1105,7 @@ export const articles = [
     `
   },
 
-  // ✅ 15. ARTICOL: FED & DOBÂNZI (MACRO)
+  // ✅ 17. ARTICOL: FED & DOBÂNZI (MACRO)
   {
     slug: "impact-dobanda-fed-bitcoin-scenarii",
     title: "Alertă Maximă: Decizia FED care Poate Arunca Bitcoin în Aer. Scenariile 0.25% vs 0.50%",
@@ -1170,7 +1146,7 @@ export const articles = [
     `
   },
 
-  // ✅ 16. ARTICOL: BITCOIN MANIPULARE (Imagine Locală: /bitcoin-crash.jpg)
+  // ✅ 18. ARTICOL: BITCOIN MANIPULARE (Imagine Locală: /bitcoin-crash.jpg)
   {
     slug: "bitcoin-manipulare-sau-corectie-brutala",
     title: "Bitcoin: Manipulare Instituțională sau Corecție Brutală? Anatomia unei Prăbușiri de 19 Miliarde $",
@@ -1215,7 +1191,7 @@ export const articles = [
     `
   },
 
-  // ✅ 17. ARTICOL: BITCOIN SOPR
+  // ✅ 19. ARTICOL: BITCOIN SOPR
   {
     slug: "semnal-on-chain-bitcoin-sopr-rally",
     title: "Semnal On-Chain: Vânzătorii au obosit. Bitcoin pregătește Raliul de Decembrie?",
@@ -1246,7 +1222,7 @@ export const articles = [
     `
   },
 
-  // ✅ 18. ARTICOL: QUANTUM COMPUTING
+  // ✅ 20. ARTICOL: QUANTUM COMPUTING
   {
     slug: "riscuri-quantum-computing-bitcoin-explicat",
     title: "Calculatoarele Cuantice vs. Bitcoin: Sfârșitul Criptomonedelor sau Doar o Nouă Provocare?",
@@ -1270,7 +1246,7 @@ export const articles = [
     `
   },
 
-  // ✅ 19. ARTICOL: SUA & CFTC (Imagine Locală: /cftc-announcement.jpg)
+  // ✅ 21. ARTICOL: SUA & CFTC (Imagine Locală: /cftc-announcement.jpg)
   {
     slug: "sua-cftc-crypto-spot-reglementat",
     title: "BREAKING: SUA pune capăt erei 'Offshore'. Crypto devine oficial activ federal.",
@@ -1306,7 +1282,7 @@ export const articles = [
     `
   },
 
-  // ✅ 20. ARTICOL: ATAC 27M
+  // ✅ 22. ARTICOL: ATAC 27M
   {
     slug: "atac-27-milioane-link-malitios",
     title: "ALERTA: Cum să pierzi 27.000.000$ într-o secundă. Pericolul invizibil din buzunarul tău",
@@ -1344,7 +1320,7 @@ export const articles = [
     `
   },
 
-  // ✅ 21. ARTICOL: VANGUARD & CFTC (Legacy)
+  // ✅ 23. ARTICOL: VANGUARD & CFTC (Legacy)
   {
     slug: "marea-convergenta-crypto",
     title: "Marea Convergență: Vanguard și CFTC validează Crypto ca 'Gold Standard'",
@@ -1370,7 +1346,7 @@ export const articles = [
     `
   },
 
-  // ✅ 22. ARTICOL: QIVALIS
+  // ✅ 24. ARTICOL: QIVALIS
   {
     slug: "qivalis-banci-europene-stablecoin",
     title: "BREAKING: 9 Bănci Gigant lansează Qivalis - Euro Stablecoin",
@@ -1407,7 +1383,7 @@ export const articles = [
     `
   },
 
-  // ✅ 23. ARTICOL: SEC ETF ETHEREUM
+  // ✅ 25. ARTICOL: SEC ETF ETHEREUM
   {
     slug: "sec-aproba-etf-ethereum",
     title: "SEC Aprobă ETF-ul de Ethereum Spot",
@@ -1425,7 +1401,7 @@ export const articles = [
     `
   },
 
-  // ✅ 24. ARTICOL: SOLANA FIREDANCER
+  // ✅ 26. ARTICOL: SOLANA FIREDANCER
   {
     slug: "solana-firedancer",
     title: "Solana lansează Firedancer",
@@ -1442,7 +1418,7 @@ export const articles = [
     `
   },
 
-  // ✅ 25. ARTICOL: INFLATIE CPI
+  // ✅ 27. ARTICOL: INFLATIE CPI
   {
     slug: "inflatie-sua-cpi",
     title: "Inflația SUA crește (CPI 3.4%)",
