@@ -6,7 +6,7 @@ import BybitPromo from '@/components/BybitPromo';
 import RelatedArticles from '@/components/RelatedArticles'; 
 import ReadingProgress from '@/components/ReadingProgress'; 
 import CryptoTicker from '@/components/CryptoTicker'; 
-// ✅ IMPORTURILE UI SPECIALE
+// ✅ IMPORTURILE UI (Inclusiv AudioPlayer)
 import AudioPlayer from '@/components/AudioPlayer';
 import { enhanceContent } from '@/lib/dictionary';
 
