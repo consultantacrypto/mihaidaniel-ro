@@ -1,5 +1,70 @@
 export const articles = [
-  // ✅ 1. ARTICOL NOU (AZI): CHINA BAN 2.0
+  // ✅ 1. ARTICOL NOU (AZI): JAPONIA & BOJ RATE HIKE
+  {
+    slug: "sfarsitul-celui-mai-mare-secret-financiar-japonia-boj-2025",
+    title: "Sfârșitul Celui Mai Mare Secret Financiar al Lumii: Cum Schimbă Japonia Jocul Global",
+    date: "23 Dec 2025",
+    category: "MACRO & GEOPOLITICĂ",
+    image: "/bojrate.jpg", 
+    impact: "bearish", 
+    summary: "Era banilor ieftini s-a încheiat. Banca Japoniei trece de la cumpărături masive la vânzări, iar randamentele obligațiunilor ating maxime istorice. Analizăm impactul asupra lichidității globale.",
+    mihaiTake: "Tati, robinetul cu bani gratis s-a închis. Japonia a finanțat petrecerea globală timp de 30 de ani, dar acum chelnerul a venit cu nota de plată. Când costul banilor crește la sursă, totul se reprerțuiește. Cash-ul devine mai valoros, activele speculative suferă.",
+    content: `
+      <p class="text-xl font-medium text-white mb-6">În ultimele trei decenii, Japonia a fost sursa ascunsă a celor mai ieftini bani din istoria omenirii. Rate de dobândă aproape zero, lichiditate infinită și trilioane de yeni împrumutați pentru investiții în toate clasele de active de pe Pământ.</p>
+      
+      <p class="mb-4">Dar această eră s-a încheiat săptămâna aceasta. Pe măsură ce Banca Japoniei (BOJ) trece de la cumpărături masive la vânzări controlate, piețele globale simt deja undele de șoc. Hai să explorăm ce înseamnă asta, cu date concrete și implicații practice, într-un mod clar și direct.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">1. O Istorie de 30 de Ani de Bani Ieftini</h3>
+      <p class="mb-4">Imaginați-vă un sistem în care poți împrumuta bani aproape gratuit și să-i investești oriunde pentru profit. Asta a fost <strong>"carry trade-ul"</strong> cu yeni japonezi: împrumuturi la rate zero, transformate în acțiuni tech, obligațiuni, criptomonede sau pensii.</p>
+      
+      <div class="bg-blue-900/10 border-l-4 border-blue-500 p-4 mb-6">
+        <strong class="text-blue-400 block mb-1">Mecanismul QE:</strong>
+        <p class="text-gray-300 italic">BOJ a susținut această mașinărie prin cumpărături masive de active – un program numit "ușurare cantitativă" (QE) – care a menținut yenul slab și lichiditatea abundentă.</p>
+      </div>
+
+      <p class="mb-4">Dar acum, totul se schimbă. Pe 19 decembrie 2025, BOJ este așteptată să crească rata de dobândă la <strong>0,75%</strong> – cea mai mare din 1995 – cu o probabilitate de 90%. Asta înseamnă costuri mai mari pentru împrumuturi, ceea ce poate declanșa vânzări în lanț pe piețe.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">2. Numerele Care Nu Mint</h3>
+      <p class="mb-6">Iată datele cheie care arată amploarea schimbării tectonice din piețele financiare:</p>
+      
+      <div class="grid grid-cols-1 gap-6 mb-8">
+        {/* Card 1 */}
+        <div class="bg-gray-800 p-5 rounded-xl border border-gray-700 flex flex-col md:flex-row items-center gap-4">
+            <div className="bg-green-900/30 p-3 rounded-full text-green-400 text-2xl">💰</div>
+            <div>
+                <strong class="text-white text-lg block">Dețineri ETF ale BOJ: $534 MLD</strong>
+                <p class="text-gray-400 text-sm mt-1">Planul de vânzare se întinde pe 100 de ani (!), cu vânzări anuale de circa 620 miliarde yeni. Nu e o lichidare rapidă, ci una lentă, pentru a evita haosul total.</p>
+            </div>
+        </div>
+
+        {/* Card 2 */}
+        <div class="bg-gray-800 p-5 rounded-xl border border-gray-700 flex flex-col md:flex-row items-center gap-4">
+            <div className="bg-blue-900/30 p-3 rounded-full text-blue-400 text-2xl">🇺🇸</div>
+            <div>
+                <strong class="text-white text-lg block">Dețineri Obligațiuni SUA: $1.189 Trilioane</strong>
+                <p class="text-gray-400 text-sm mt-1">Japonia este cel mai mare creditor străin al Americii. Orice schimbare de politică la Tokyo influențează direct ratele dobânzilor din SUA și, implicit, prețul Bitcoin.</p>
+            </div>
+        </div>
+
+        {/* Card 3 */}
+        <div class="bg-gray-800 p-5 rounded-xl border border-gray-700 flex flex-col md:flex-row items-center gap-4">
+            <div className="bg-red-900/30 p-3 rounded-full text-red-400 text-2xl">📈</div>
+            <div>
+                <strong class="text-white text-lg block">Randamente JGB (Japonia): Recorduri</strong>
+                <p class="text-gray-400 text-sm mt-1">10 Ani: <strong>1.96%</strong> (Max din 2007) <br/> 30 Ani: <strong>3.36%</strong> (Record recent). Randamentele mari atrag capitalul înapoi în Japonia, scoțându-l din piețele speculative.</p>
+            </div>
+        </div>
+      </div>
+
+      <div class="p-6 bg-gradient-to-r from-gray-900 to-black border border-red-500/30 rounded-2xl mt-8 shadow-xl text-center">
+        <h4 class="text-xl font-bold text-red-400 mb-3">Concluzia Strategică</h4>
+        <p class="text-gray-300 mb-4">Când "banca centrală a lumii" (de facto) începe să strângă cureaua, lichiditatea globală scade. Istoric, asta aduce volatilitate crescută.</p>
+        <p class="text-white font-bold italic">"Nu ignora Japonia. Ceea ce se întâmplă la Tokyo dimineața, lovește Wall Street-ul după-amiaza."</p>
+      </div>
+    `
+  },
+
+  // ✅ 2. CHINA BAN 2.0
   {
     slug: "china-ban-2-0-bitcoin-scadere-xinjiang-mining-blackout",
     title: "\"China Ban 2.0\": De ce scade Bitcoin sub 87.000$ și cine a oprit curentul în Xinjiang?",
@@ -61,7 +126,7 @@ export const articles = [
     `
   },
 
-  // ✅ 2. GHID ON-CHAIN (BALENELE)
+  // ✅ 3. GHID ON-CHAIN (BALENELE)
   {
     slug: "ghid-supravietuire-on-chain-urmareste-balenele-nu-stirile",
     title: "Ce văd instituțiile și tu nu: Ghidul de Supraviețuire On-Chain (Urmărește Balenele, nu Știrile)",
@@ -120,7 +185,7 @@ export const articles = [
     `
   },
 
-  // ✅ 3. FORTĂREAȚA DIGITALĂ (SECURITATE)
+  // ✅ 4. FORTĂREAȚA DIGITALĂ (SECURITATE)
   {
     slug: "fortareata-digitala-banca-elvetiana-crypto-securitate-2026",
     title: "Fortăreața Digitală: Cum să devii propria ta Bancă Elvețiană în 2026 (Nu e vorba doar de un Ledger)",
@@ -179,7 +244,7 @@ export const articles = [
     `
   },
 
-  // ✅ 4. ALERTA BOJ (JAPONIA)
+  // ✅ 5. ALERTA BOJ (JAPONIA - Articolul vechi de pe 18 Dec)
   {
     slug: "alerta-boj-lebada-neagra-japonia-bitcoin-18-decembrie",
     title: "Alerta BOJ: \"Lebăda Neagră\" din Japonia care poate lovi Bitcoin săptămâna viitoare (18-19 Decembrie)",
@@ -259,7 +324,7 @@ export const articles = [
     `
   },
 
-  // ✅ 5. DOSARUL SATOSHI
+  // ✅ 6. DOSARUL SATOSHI
   {
     slug: "dosarul-satoshi-cine-este-fantoma-de-70-miliarde-investigatie-2025",
     title: "Dosarul Satoshi: Cine este \"Fantoma\" de 70 Miliarde de Dolari? Investigația Completă 2025",
@@ -735,7 +800,7 @@ export const articles = [
     title: "Mitul \"Halving-ului Sacru\" vs. Realitatea Lichidității: Ce dictează cu adevărat prețul Bitcoin în 2025?",
     date: "10 Dec 2025",
     category: "ANALIZĂ MACRO",
-    image: "/halvingvslichiditate.jpg", // ✅ Imagine Locală
+    image: "/halvingvslichiditate.jpg", 
     impact: "bullish", 
     summary: "Suntem în Decembrie 2025. Vechea narativă \"Halving = Bull Market\" este contestată de corelația cu lichiditatea globală. O analiză Teză-Antiteză-Sinteză despre viitorul Bitcoin.",
     mihaiTake: "Tati, nu te uita doar la Halving. Uită-te la imprimanta FED. Când americanii dau drumul la bani și minerii produc mai puțin, atunci începe magia. Halving-ul încarcă arma, dar Lichiditatea apasă trăgaciul.",
