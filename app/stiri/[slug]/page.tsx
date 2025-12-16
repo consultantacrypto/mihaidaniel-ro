@@ -4,9 +4,10 @@ import ShareButtons from '@/components/ShareButtons';
 import Newsletter from '@/components/Newsletter';
 import BybitPromo from '@/components/BybitPromo'; 
 import RelatedArticles from '@/components/RelatedArticles'; 
-// ✅ IMPORTURILE UI SPECIALE
 import ReadingProgress from '@/components/ReadingProgress'; 
 import CryptoTicker from '@/components/CryptoTicker'; 
+// ✅ IMPORTUL PENTRU DICȚIONAR
+import { enhanceContent } from '@/lib/dictionary';
 
 import { 
   Calendar, Clock, ArrowLeft, 
@@ -50,6 +51,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   if (!article) {
     notFound();
   }
+
+  // ✅ AICI ESTE MAGIA: Transformăm textul simplu în text cu Tooltips
+  const contentWithTooltips = enhanceContent(article.content);
 
   // --- Design Dinamic ---
   const getTheme = () => {
@@ -113,10 +117,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   return (
     <main className={`min-h-screen flex flex-col bg-[#020617] text-white ${theme.selection}`}>
       
-      {/* ✅ 1. BARA DE PROGRES (Prima, fixată sus) */}
+      {/* 1. BARA DE PROGRES */}
       <ReadingProgress />
 
-      {/* ✅ 2. BANDA CU PREȚURI (Imediat sub bara de progres) */}
+      {/* 2. BANDA CU PREȚURI */}
       <CryptoTicker />
 
       <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -169,12 +173,13 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                     <p className="text-sm italic text-gray-300 relative z-10">"{article.mihaiTake}"</p>
                 </div>
             )}
-            <div dangerouslySetInnerHTML={{ __html: article.content }} />
+            
+            {/* ✅ FOLOSIM CONȚINUTUL PROCESAT (CU DICȚIONAR) */}
+            <div dangerouslySetInnerHTML={{ __html: contentWithTooltips }} />
         </div>
 
-        {/* --- 1. CTA CONSULTANȚĂ (HIGH CONTRAST & VISIBILITY) --- */}
+        {/* --- 1. CTA CONSULTANȚĂ --- */}
         <div className={`mt-16 relative overflow-hidden rounded-3xl border ${theme.border} p-1`}>
-            {/* Background Gradient Dark */}
             <div className={`absolute inset-0 ${theme.bg} backdrop-blur-xl`}></div>
             <div className="absolute inset-0 bg-gradient-to-b from-black/0 to-black/60"></div>
             
@@ -190,7 +195,6 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                     {theme.ctaText}
                 </p>
                 
-                {/* BUTON ALB - CONTRAST MAXIM */}
                 <Link href="/#consultanta" className={`group inline-flex items-center gap-3 bg-white hover:bg-gray-100 ${theme.btnText} font-black text-lg px-10 py-4 rounded-xl transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transform hover:-translate-y-1`}>
                     <CtaIcon size={20} className="group-hover:scale-110 transition-transform"/> 
                     Rezervă Sesiunea ($250)
@@ -199,7 +203,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             </div>
         </div>
 
-        {/* --- 2. BYBIT PROMO (MODERN & GLOSSY) --- */}
+        {/* --- 2. BYBIT PROMO --- */}
         <BybitPromo />
 
         {/* 3. RELATED ARTICLES */}
