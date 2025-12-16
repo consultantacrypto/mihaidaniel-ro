@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from 'react';
-import { Play, Pause, Volume2, StopCircle, AlertCircle } from 'lucide-react';
+import { Play, Pause, Volume2, StopCircle } from 'lucide-react';
 
 interface AudioPlayerProps {
   text: string;
@@ -12,10 +12,8 @@ export default function AudioPlayer({ text, title }: AudioPlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isSupported, setIsSupported] = useState(false);
   const [roVoice, setRoVoice] = useState<SpeechSynthesisVoice | null>(null);
-  const [voicesLoaded, setVoicesLoaded] = useState(false);
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
 
-  // 1. Încărcăm vocile sistemului
   useEffect(() => {
     if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
       setIsSupported(true);
@@ -23,20 +21,15 @@ export default function AudioPlayer({ text, title }: AudioPlayerProps) {
       const loadVoices = () => {
         const availableVoices = window.speechSynthesis.getVoices();
         
-        // Căutăm o voce de Română
-        // Prioritizăm "Google" că sună mai bine, sau orice are 'ro-RO'
-        const romanian = availableVoices.find(v => v.lang === 'ro-RO' && v.name.includes('Google')) 
-                      || availableVoices.find(v => v.lang === 'ro-RO');
+        // Căutare mai relaxată pentru orice voce care pare a fi românească
+        const romanian = availableVoices.find(v => v.lang.includes('ro') || v.name.toLowerCase().includes('romanian'));
         
         if (romanian) {
           setRoVoice(romanian);
         }
-        setVoicesLoaded(true);
       };
 
       loadVoices();
-      
-      // Chrome încarcă vocile asincron, trebuie să ascultăm evenimentul
       window.speechSynthesis.onvoiceschanged = loadVoices;
     }
   }, []);
@@ -44,52 +37,44 @@ export default function AudioPlayer({ text, title }: AudioPlayerProps) {
   const handlePlay = () => {
     if (!isSupported) return;
 
-    // Dacă redă deja, punem pauză
     if (isPlaying) {
       window.speechSynthesis.pause();
       setIsPlaying(false);
       return;
     }
 
-    // Dacă e pe pauză, continuăm
     if (window.speechSynthesis.paused && window.speechSynthesis.speaking) {
       window.speechSynthesis.resume();
       setIsPlaying(true);
       return;
     }
 
-    // START NOU
-    window.speechSynthesis.cancel(); // Oprim orice altceva
+    window.speechSynthesis.cancel();
 
-    // Curățăm textul de HTML și caractere ciudate
+    // Curățăm textul
     const cleanText = text
-      .replace(/<[^>]*>/g, '') // Scoate tag-uri HTML
+      .replace(/<[^>]*>/g, '') 
       .replace(/&nbsp;/g, ' ')
-      .replace(/\s+/g, ' ')    // Scoate spații duble
+      .replace(/\s+/g, ' ')
       .trim();
 
-    const fullText = `${title}. ... ${cleanText}`; // Pauză după titlu
+    const fullText = `${title}. ... ${cleanText}`;
 
     const utterance = new SpeechSynthesisUtterance(fullText);
     
-    // Setări critice pentru calitate
-    if (roVoice) {
-      utterance.voice = roVoice; // Setăm explicit vocea românească
-      utterance.lang = 'ro-RO';
-    } else {
-      // Fallback extrem: Încercăm să forțăm lang, deși s-ar putea să nu sune bine
-      utterance.lang = 'ro-RO'; 
-    }
-
-    utterance.rate = 0.9; // Viteza (0.9 e mai natural pentru știri)
+    // Setări esențiale: Forțăm limba chiar dacă nu am găsit obiectul voice
+    utterance.lang = 'ro-RO'; 
+    utterance.rate = 0.9;
     utterance.pitch = 1;
 
-    utterance.onend = () => {
-      setIsPlaying(false);
-    };
+    // Dacă am găsit o voce specifică, o folosim. Dacă nu, lăsăm browserul să se descurce cu 'ro-RO'
+    if (roVoice) {
+      utterance.voice = roVoice;
+    }
 
+    utterance.onend = () => setIsPlaying(false);
     utterance.onerror = (e) => {
-      console.error("Eroare redare audio:", e);
+      console.error("Audio Error:", e);
       setIsPlaying(false);
     };
 
@@ -108,21 +93,17 @@ export default function AudioPlayer({ text, title }: AudioPlayerProps) {
   return (
     <div className="my-8 bg-[#0f172a] border border-blue-900/30 rounded-xl p-4 flex items-center gap-4 shadow-lg group hover:border-blue-500/50 transition-all relative overflow-hidden">
       
-      {/* Indicator Vizual Background */}
+      {/* Indicator fundal */}
       {isPlaying && (
         <div className="absolute inset-0 bg-blue-500/5 z-0 animate-pulse"></div>
       )}
 
+      {/* Butonul este ACUM MEREU ACTIV */}
       <button 
         onClick={handlePlay}
-        disabled={!roVoice && voicesLoaded} // Dezactivăm dacă nu avem voce RO
-        className={`flex items-center justify-center w-12 h-12 rounded-full hover:scale-105 transition-transform shadow-lg shrink-0 z-10 ${
-          !roVoice && voicesLoaded 
-            ? 'bg-gray-700 cursor-not-allowed text-gray-500' 
-            : 'bg-blue-600 hover:bg-blue-500 text-white shadow-blue-500/30'
-        }`}
+        className="flex items-center justify-center w-12 h-12 bg-blue-600 hover:bg-blue-500 text-white rounded-full hover:scale-105 transition-transform shadow-lg shrink-0 z-10"
       >
-        {isPlaying ? <Pause size={20} fill="currentColor" /> : <Play size={20} fill="currentColor" className="ml-1" />}
+        {isPlaying ? <Pause size={20} fill="white" /> : <Play size={20} fill="white" className="ml-1" />}
       </button>
 
       <div className="flex-1 z-10">
@@ -131,39 +112,23 @@ export default function AudioPlayer({ text, title }: AudioPlayerProps) {
             <Volume2 size={14} className="text-blue-400"/> Ascultă Articolul
           </span>
           
-          {/* Status Indicator */}
-          {isPlaying ? (
+          {isPlaying && (
             <span className="text-xs text-green-400 font-bold flex items-center gap-1">
-              <span className="w-2 h-2 bg-green-500 rounded-full animate-ping"></span> Redare
+              <span className="w-2 h-2 bg-green-500 rounded-full animate-ping"></span> Live
             </span>
-          ) : (
-            !roVoice && voicesLoaded && (
-              <span className="text-xs text-red-400 flex items-center gap-1">
-                <AlertCircle size={12}/> Lipsă voce RO
-              </span>
-            )
           )}
         </div>
         
-        {/* Bara Progres Vizual */}
+        {/* Vizualizator */}
         <div className="h-1.5 bg-gray-800 rounded-full overflow-hidden w-full relative">
            {isPlaying ? (
              <div className="absolute top-0 left-0 h-full w-2/3 bg-blue-500 rounded-full animate-[shimmer_1.5s_infinite_linear]" 
-                  style={{
-                    backgroundImage: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent)'
-                  }}
+                  style={{ backgroundImage: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent)' }}
              ></div>
            ) : (
              <div className="h-full bg-blue-600/20 w-full"></div>
            )}
         </div>
-        
-        {/* Mesaj de eroare discret dacă nu găsim voce */}
-        {!roVoice && voicesLoaded && (
-          <p className="text-[10px] text-gray-500 mt-1">
-            Browserul tău nu are pachetul de voce "Română" instalat.
-          </p>
-        )}
       </div>
 
       {isPlaying && (
