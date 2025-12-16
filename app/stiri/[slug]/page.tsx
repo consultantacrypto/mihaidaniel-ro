@@ -4,8 +4,9 @@ import ShareButtons from '@/components/ShareButtons';
 import Newsletter from '@/components/Newsletter';
 import BybitPromo from '@/components/BybitPromo'; 
 import RelatedArticles from '@/components/RelatedArticles'; 
-// ✅ 1. IMPORTUL NOU
+// ✅ IMPORTURILE UI SPECIALE
 import ReadingProgress from '@/components/ReadingProgress'; 
+import CryptoTicker from '@/components/CryptoTicker'; 
 
 import { 
   Calendar, Clock, ArrowLeft, 
@@ -112,8 +113,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   return (
     <main className={`min-h-screen flex flex-col bg-[#020617] text-white ${theme.selection}`}>
       
-      {/* ✅ 2. AICI ESTE BARA DE PROGRES - Fixată sus */}
+      {/* ✅ 1. BARA DE PROGRES (Prima, fixată sus) */}
       <ReadingProgress />
+
+      {/* ✅ 2. BANDA CU PREȚURI (Imediat sub bara de progres) */}
+      <CryptoTicker />
 
       <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Navbar />
