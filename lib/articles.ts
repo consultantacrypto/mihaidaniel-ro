@@ -1,4 +1,50 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU (CLARITY ACT) - PUNE-L PRIMUL
+  {
+    slug: "clarity-act-adio-vestul-salbatic-crypto-2026",
+    title: "CLARITY ACT: Adio \"Vestul Sălbatic\". Cum transformă noua lege Crypto în 2026",
+    date: "18 Dec 2025",
+    category: "REGLEMENTARE & VIITOR",
+    image: "/clarityact.jpg",
+    impact: "bullish",
+    summary: "O imagine face cât 1000 de cuvinte. Trecem de la haosul offshore la ordinea instituțională. Analizăm impactul Clarity Act și de ce BlackRock și Nvidia construiesc orașul viitorului pe blockchain.",
+    mihaiTake: "Tati, privește imaginea asta. În stânga e trecutul nostru: praf, bandiți, 'Wild West'. Acolo ne-am călit, dar acolo riscam să fim furați. Privește în dreapta: Orașul Viitorului. BlackRock, Nvidia, Blockchain Enterprise. La mijloc? Ciocanul Legii. Asta e Clarity Act. Nu e un zid care ne oprește, e podul pe care trec trilioanele de dolari.",
+    content: `
+      <p class="text-xl font-medium text-white mb-6">Imaginea de mai sus nu este doar o ilustrație, este harta exactă a momentului istoric în care ne aflăm. Suntem la granița dintre două lumi.</p>
+      
+      <p class="mb-4">Până acum, Crypto a fost <strong>"Vestul Sălbatic"</strong> (partea stângă a imaginii). O lume a oportunităților infinite, dar și a pericolelor mortale. Exchange-uri care fugeau cu banii, hack-uri de miliarde, proiecte fantomă și cowboy digitali care trăgeau (tranzacționau) primul și întrebau după.</p>
+
+      <div class="bg-blue-900/10 border-l-4 border-blue-500 p-6 my-8 rounded-r-lg">
+        <h4 class="text-lg font-bold text-blue-400 mb-2">⚖️ Ciocanul Legii (Centrul)</h4>
+        <p class="text-gray-300">"Clarity Act" și noile reglementări (MiCA în Europa, FIT21 în SUA) nu au venit să distrugă crypto. Au venit să pună asfalt peste drumurile de pământ. <br/><br/>
+        <span class="text-white italic">Instituțiile nu își pot conduce mașinile sport (capitalul de trilioane) pe drumuri pline de gropi și bandiți. Au nevoie de autostrăzi legale.</span></p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">1. Ce vezi în dreapta? (Viitorul Instituțional)</h3>
+      <p class="mb-4">Dacă te uiți atent la clădirile din "Orașul Viitorului", vei vedea logo-uri familiare: <strong>BlackRock, Nvidia, Blockchain Digital Asset Exchange</strong>.</p>
+      
+      <ul class="space-y-4 mb-8">
+        <li class="bg-gray-800 p-4 rounded-xl border border-gray-700">
+            <strong class="text-green-400 block mb-1">🏦 BlackRock & Băncile</strong>
+            <span class="text-gray-300 text-sm">Ei nu intrau în "Saloon-ul" din Vestul Sălbatic. Dar acum, că există reguli clare și custodie calificată, ei construiesc zgârie-nori financiari pe fundația Bitcoin și Ethereum.</span>
+        </li>
+        <li class="bg-gray-800 p-4 rounded-xl border border-gray-700">
+            <strong class="text-purple-400 block mb-1">💻 Nvidia & AI</strong>
+            <span class="text-gray-300 text-sm">Tehnologia Blockchain se întâlnește cu AI-ul. Puterea de calcul necesară pentru viitorul digital va fi tranzacționată și securizată on-chain.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">2. Ce înseamnă asta pentru tine, investitorule?</h3>
+      <p class="mb-4">Tranziția este dureroasă. Multe proiecte vechi, care trăiau din haos și hype, vor dispărea (vor rămâne în praful din stânga). Dar cele care trec podul reglementării vor valora mai mult decât ne putem imagina.</p>
+
+      <div class="p-6 bg-gradient-to-r from-gray-900 to-black border border-blue-500/30 rounded-2xl mt-8 shadow-xl text-center">
+        <h4 class="text-xl font-bold text-blue-400 mb-3">Concluzia Vizuală</h4>
+        <p class="text-gray-300 mb-4">Nu plânge după romantismul Vestului Sălbatic. Era periculos.</p>
+        <p class="text-white font-bold italic">"Pregătește-te pentru Orașul Viitorului. Acolo se fac adevăratele averi generaționale, nu la păcănelele din deșert."</p>
+      </div>
+    `
+  },
+
   // ✅ 1. ARTICOL NOU (AZI): SUPPLY SHOCK
   {
     slug: "alerta-maxima-adevaratul-bitcoin-supply-shock-nu-a-inceput-inca",
