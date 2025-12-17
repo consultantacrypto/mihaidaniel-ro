@@ -1,9 +1,100 @@
 export const articles = [
-  // ✅ 1. ARTICOL NOU (AZI): JAPONIA & BOJ RATE HIKE
+  // ✅ 1. ARTICOL NOU (AZI): SUPPLY SHOCK
+  {
+    slug: "alerta-maxima-adevaratul-bitcoin-supply-shock-nu-a-inceput-inca",
+    title: "ALERTA MAXIMĂ: Adevăratul \"Bitcoin Supply Shock\" NU a început încă. (Ce se întâmplă când se termină Bitcoin-ul de pe raft)",
+    date: "17 Dec 2025",
+    category: "ANALIZĂ & MACRO",
+    image: "/supplyshockdecembrie.jpg", 
+    impact: "bullish", 
+    summary: "Uită de graficele de 4 ore. Uită de știrile zilei. Asta este singura dinamică ce contează: Lumea vrea mai mult Bitcoin decât există disponibil la vânzare. Și ruptura e aproape.",
+    mihaiTake: "Tati, matematica nu are sentimente. Când BlackRock vrea să cumpere de 1 miliard și pe exchange sunt doar 100 de milioane, prețul nu urcă, prețul se teleportează. Nu vinde oamenilor bogați Bitcoin-ul tău ieftin. Ține-l strâns, pentru că rafturile se golesc și nu mai vine marfă nouă.",
+    content: `
+      <p class="text-xl font-medium text-white mb-6">Majoritatea investitorilor de retail cred că prețul Bitcoin crește pentru că "e hype". <strong>Greșit.</strong></p>
+      <p class="mb-4">Prețul crește când cineva vrea să cumpere 1.000 BTC și pe exchange există doar 500 BTC la prețul curent. Restul de 500 trebuie cumpărați la prețuri mult mai mari, de la vânzători care nu vor să vândă.</p>
+      <p class="mb-6">Suntem în fața unui <strong>"Perfect Storm"</strong> (Furtuna Perfectă). Pe de o parte, Halving-ul din 2024 a înjumătățit producția nouă. Pe de altă parte, ETF-urile spot din SUA au deschis robinetul pentru trilioane de dolari instituționali care trebuie să cumpere Bitcoin fizic, nu contracte pe hârtie.</p>
+
+      <div class="bg-blue-900/10 border-l-4 border-blue-500 p-6 my-8 rounded-r-lg">
+        <h4 class="text-lg font-bold text-blue-400 mb-2">Ce este "Supply Shock"-ul?</h4>
+        <p class="text-gray-300">Este momentul exact în care lichiditatea de pe burse (Binance, Coinbase) se evaporă atât de tare, încât ordinele mari de cumpărare nu mai pot fi executate fără a muta prețul cu 10-20% într-o singură zi. <br/><br/>
+        <span class="text-white italic">Este momentul în care rafturile magazinului sunt goale, iar afară sunt 10.000 de oameni cu banii în mână, disperați să cumpere ultima pâine.</span></p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">2. Mecanismul: Cum se produce ruptura?</h3>
+      <p class="mb-4">Să ne uităm sub capotă. Piața funcționează pe baza a trei actori principali:</p>
+      
+      <ul class="space-y-4 mb-8">
+        <li class="bg-gray-800 p-4 rounded-xl border border-gray-700">
+            <strong class="text-orange-400 block mb-1">🔨 Minerii (Producătorii)</strong>
+            <span class="text-gray-300 text-sm">După Halving, ei produc doar ~450 BTC pe zi. Asta e tot. Nu pot produce mai mult, indiferent cât de mare e cererea.</span>
+        </li>
+        <li class="bg-gray-800 p-4 rounded-xl border border-gray-700">
+            <strong class="text-blue-400 block mb-1">💎 HODL-erii (Mâinile de Diamant)</strong>
+            <span class="text-gray-300 text-sm">Peste 70% din Bitcoin-ul existent nu s-a mișcat de mai bine de un an. Acești oameni (ca tine și ca mine) nu vând la 90k$. Ei așteaptă prețuri astronomice sau nu vând niciodată.</span>
+        </li>
+        <li class="bg-gray-800 p-4 rounded-xl border border-gray-700">
+            <strong class="text-green-400 block mb-1">🏦 Instituțiile (Vampirii de Lichiditate)</strong>
+            <span class="text-gray-300 text-sm">BlackRock, Fidelity și ceilalți cumpără, în medie, de 5-10 ori mai mult Bitcoin zilnic decât produc minerii.</span>
+        </li>
+      </ul>
+
+      <div class="bg-red-900/20 border border-red-500/30 p-6 rounded-xl text-center mb-8">
+        <h4 class="text-red-400 font-bold text-lg mb-2">⚠️ Ecuația Dezastrului</h4>
+        <p class="text-white text-xl font-mono mb-4">[Cererea Zilnică ETF] > [Producția Zilnică Mineri] + [Vânzările Retail]</p>
+        <p class="text-gray-400 text-sm">Diferența trebuie acoperită din rezervele exchange-urilor. Datele On-Chain (Glassnode) ne arată că rezervele sunt la minimul ultimilor 5-6 ani. Balenele retrag masiv BTC în cold storage. Când aceste rezerve ating un nivel critic, începe șocul.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">3. Când va avea loc? (Semnalele de Alarmă)</h3>
+      <p class="mb-4">Nu putem da o dată exactă, dar putem vedea semnele precursoare. Se întâmplă "gradually, then suddenly" (treptat, apoi dintr-o dată). Suntem în faza "treptată" acum. Iată ce să urmărești:</p>
+      
+      <ul class="list-disc pl-6 space-y-3 text-gray-300 mb-6">
+        <li><strong>Desk-urile OTC se usucă:</strong> Instituțiile mari nu cumpără de pe Binance, ci prin brokeri OTC pentru a nu mișca prețul. Când acești brokeri rămân fără BTC și trebuie să intre pe piața publică, începe haosul.</li>
+        <li><strong>"Squeeze" pe Short-uri:</strong> Când prețul începe să urce violent, cei care au pariat pe scădere (short-sellers) sunt forțați să cumpere BTC pentru a-și închide pozițiile, accelerând creșterea.</li>
+        <li><strong>Volatilitate extremă pe lichiditate mică:</strong> Prețul sare cu 3-4% în câteva minute pe volume mici de tranzacționare. Asta arată că "order book-ul" este subțire. Nu sunt vânzători.</li>
+      </ul>
+      <p class="text-yellow-400 font-bold italic mb-8">Momentul critic este așteptat cândva în Q4 2025 - Q1 2026, pe măsură ce efectul compus al achizițiilor instituționale va goli stocurile lichide.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">4. Momentul Zero: Ce se întâmplă când lovește Șocul?</h3>
+      <p class="mb-4">Pregătește-te mental, pentru că va fi violent. Nu va arăta ca o creștere normală.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+        <div class="bg-green-900/10 border border-green-500/20 p-4 rounded-lg">
+            <strong class="text-green-400 block mb-1">🕯️ "The God Candle"</strong>
+            <p class="text-xs text-gray-300">Vom vedea zile cu creșteri de 10.000$ - 20.000$ într-o singură sesiune. Graficul va arăta ca un zid vertical.</p>
+        </div>
+        <div class="bg-red-900/10 border border-red-500/20 p-4 rounded-lg">
+            <strong class="text-red-400 block mb-1">💧 Evaporarea Lichidității</strong>
+            <p class="text-xs text-gray-300">Spread-ul se va mări enorm. Va fi greu să cumperi și să vinzi la prețul afișat.</p>
+        </div>
+        <div class="bg-purple-900/10 border border-purple-500/20 p-4 rounded-lg">
+            <strong class="text-purple-400 block mb-1">😱 Panica Retailului</strong>
+            <p class="text-xs text-gray-300">Oamenii care au ignorat Bitcoin la 60k vor intra disperați la 150k, blocând aplicațiile exchange-urilor.</p>
+        </div>
+        <div class="bg-blue-900/10 border border-blue-500/20 p-4 rounded-lg">
+            <strong class="text-blue-400 block mb-1">🔒 Blocaj Instituțional</strong>
+            <p class="text-xs text-gray-300">Fondurile care așteptau "corecția" vor realiza că au pierdut trenul și vor cumpăra panicat la orice preț.</p>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">5. Concluzie: Ce trebuie să faci TU?</h3>
+      <p class="mb-4">Dacă citești asta și ai deja Bitcoin securizat în cold storage, felicitări. Ești poziționat pentru cel mai mare transfer de bogăție din istoria recentă.</p>
+      
+      <div class="bg-gray-800 p-6 rounded-xl border-l-4 border-yellow-500">
+        <h4 class="text-white font-bold mb-3">Regulile de aur în fața Supply Shock-ului:</h4>
+        <ol class="list-decimal pl-5 space-y-2 text-gray-300">
+            <li><strong>NU încerca să faci trading:</strong> Nu vinde la prima lumânare mare sperând să recumperi mai jos. Într-un supply shock, prețul poate să nu se mai întoarcă niciodată la nivelul la care ai vândut.</li>
+            <li><strong>Scoate BTC de pe Exchange:</strong> Când începe nebunia, exchange-urile vor avea probleme. Nu vrei ca Bitcoin-ul tău să fie blocat acolo.</li>
+            <li><strong>Stai calm:</strong> Sumele din portofoliu vor oscila nebunește. Planul tău de exit trebuie să fie clar dinainte, nu făcut la cald.</li>
+        </ol>
+      </div>
+      <p class="mt-6 text-center text-white font-bold text-lg">Rezumat: Rafturile se golesc. Balenele cumpără tot. Așteaptă șocul.</p>
+    `
+  },
+
+  // ✅ 2. JAPONIA & BOJ RATE HIKE
   {
     slug: "sfarsitul-celui-mai-mare-secret-financiar-japonia-boj-2025",
     title: "Sfârșitul Celui Mai Mare Secret Financiar al Lumii: Cum Schimbă Japonia Jocul Global",
-    date: "23 Dec 2025",
+    date: "16 Dec 2025",
     category: "MACRO & GEOPOLITICĂ",
     image: "/bojrate.jpg", 
     impact: "bearish", 
@@ -64,11 +155,11 @@ export const articles = [
     `
   },
 
-  // ✅ 2. CHINA BAN 2.0
+  // ✅ 3. CHINA BAN 2.0
   {
     slug: "china-ban-2-0-bitcoin-scadere-xinjiang-mining-blackout",
     title: "\"China Ban 2.0\": De ce scade Bitcoin sub 87.000$ și cine a oprit curentul în Xinjiang?",
-    date: "22 Dec 2025",
+    date: "15 Dec 2025",
     category: "MINARE & GEOPOLITICĂ",
     image: "/hashcrash.jpg", 
     impact: "bearish", 
@@ -126,11 +217,11 @@ export const articles = [
     `
   },
 
-  // ✅ 3. GHID ON-CHAIN (BALENELE)
+  // ✅ 4. GHID ON-CHAIN (BALENELE)
   {
     slug: "ghid-supravietuire-on-chain-urmareste-balenele-nu-stirile",
     title: "Ce văd instituțiile și tu nu: Ghidul de Supraviețuire On-Chain (Urmărește Balenele, nu Știrile)",
-    date: "20 Dec 2025",
+    date: "14 Dec 2025",
     category: "EDUCAȚIE & ON-CHAIN",
     image: "/onchain.jpg", 
     impact: "neutral", 
@@ -185,11 +276,11 @@ export const articles = [
     `
   },
 
-  // ✅ 4. FORTĂREAȚA DIGITALĂ (SECURITATE)
+  // ✅ 5. FORTĂREAȚA DIGITALĂ (SECURITATE)
   {
     slug: "fortareata-digitala-banca-elvetiana-crypto-securitate-2026",
     title: "Fortăreața Digitală: Cum să devii propria ta Bancă Elvețiană în 2026 (Nu e vorba doar de un Ledger)",
-    date: "19 Dec 2025",
+    date: "13 Dec 2025",
     category: "EDUCAȚIE & SECURITATE",
     image: "/security.jpg", 
     impact: "neutral", 
@@ -244,11 +335,11 @@ export const articles = [
     `
   },
 
-  // ✅ 5. ALERTA BOJ (JAPONIA - Articolul vechi de pe 18 Dec)
+  // ✅ 6. ALERTA BOJ (JAPONIA - Articolul vechi de pe 18 Dec)
   {
     slug: "alerta-boj-lebada-neagra-japonia-bitcoin-18-decembrie",
     title: "Alerta BOJ: \"Lebăda Neagră\" din Japonia care poate lovi Bitcoin săptămâna viitoare (18-19 Decembrie)",
-    date: "18 Dec 2025",
+    date: "12 Dec 2025",
     category: "MACRO & RISC",
     image: "/japanbank.jpg", 
     impact: "bearish", 
@@ -324,11 +415,11 @@ export const articles = [
     `
   },
 
-  // ✅ 6. DOSARUL SATOSHI
+  // ✅ 7. DOSARUL SATOSHI
   {
     slug: "dosarul-satoshi-cine-este-fantoma-de-70-miliarde-investigatie-2025",
     title: "Dosarul Satoshi: Cine este \"Fantoma\" de 70 Miliarde de Dolari? Investigația Completă 2025",
-    date: "17 Dec 2025",
+    date: "11 Dec 2025",
     category: "EDUCAȚIE & INVESTIGAȚIE",
     image: "/satoshi.jpg", 
     impact: "neutral", 
@@ -432,11 +523,11 @@ export const articles = [
     `
   },
 
-  // ✅ 6. SEZONUL CELOR 20
+  // ✅ 8. SEZONUL CELOR 20
   {
     slug: "nu-asteptati-altcoin-season-vine-sezonul-celor-20",
     title: "Nu așteptați \"Altcoin Season\". Vine \"Sezonul celor 20\".",
-    date: "16 Dec 2025",
+    date: "10 Dec 2025",
     category: "STRATEGIE & PORTFOLIO",
     image: "/cele20.jpg", 
     impact: "bullish", 
@@ -487,11 +578,11 @@ export const articles = [
     `
   },
 
-  // ✅ 7. ARTICOL: US TREASURY DEBT BUYBACK
+  // ✅ 9. US TREASURY
   {
     slug: "trezoreria-sua-debt-buyback-semnal-crypto-2026",
     title: "Trezoreria SUA tocmai a făcut-o din nou ($12.5 MLD). Și nimeni din România nu vorbește despre asta.",
-    date: "15 Dec 2025",
+    date: "09 Dec 2025",
     category: "MACRO & LICHIDITATE",
     image: "/usdebt.jpg",
     impact: "bullish", 
@@ -537,11 +628,11 @@ export const articles = [
     `
   },
 
-  // ✅ 8. ARTICOL: MiCA & BLOCADA BANCARĂ (TEXT INTEGRAL)
+  // ✅ 10. MiCA
   {
     slug: "cortina-de-fier-financiara-europeana-mica-2026",
     title: "\"Cortina de Fier\" Financiară a Europei (2026): Pericolele Tranzacționării pe Platforme Nereglementate",
-    date: "14 Dec 2025",
+    date: "08 Dec 2025",
     category: "REGLEMENTARE & RISC",
     image: "/mica-reglementari.jpg", 
     impact: "bearish", 
@@ -602,11 +693,11 @@ export const articles = [
     `
   },
 
-  // ✅ 9. ARTICOL: MITUL ALTCOIN SEASON
+  // ✅ 11. ARTICOL: MITUL ALTCOIN SEASON
   {
     slug: "mitul-si-realitatea-altcoin-season-2022-2026",
     title: "2022-2025: Marea Minciună a Altcoin-urilor. Studiu de Piață: Mitul și Realitatea \"Altcoin Season\".",
-    date: "13 Dec 2025",
+    date: "08 Dec 2025",
     category: "ANALIZĂ PIAȚĂ",
     image: "/altcoinseasson.jpg", 
     impact: "neutral", 
@@ -660,11 +751,11 @@ export const articles = [
     `
   },
 
-  // ✅ 10. ARTICOL: ACUMULARE INSTITUȚIONALĂ ETHEREUM
+  // ✅ 12. ARTICOL: ACUMULARE INSTITUȚIONALĂ ETHEREUM
   {
     slug: "acumulare-institutionala-ethereum-dat-bmnr-2025",
     title: "Acumularea Instituțională de Ethereum: O Tendință Bullish în 2025",
-    date: "12 Dec 2025",
+    date: "08 Dec 2025",
     category: "INSTITUȚIONAL",
     image: "/acumulare-eth.jpg", 
     impact: "bullish",
@@ -729,11 +820,11 @@ export const articles = [
     `
   },
 
-  // ✅ 11. ARTICOL: IMPACT REUNIUNE FOMC DECEMBRIE 2025
+  // ✅ 13. ARTICOL: IMPACT REUNIUNE FOMC DECEMBRIE 2025
   {
     slug: "impact-reuniune-fomc-decembrie-2025-crypto",
     title: "Impactul Reuniunii FOMC din Decembrie 2025 asupra Pieței Crypto: O Analiză Detaliată și Explicativă",
-    date: "11 Dec 2025",
+    date: "08 Dec 2025",
     category: "ANALIZĂ MACRO",
     image: "/t-bill.jpg",
     impact: "bullish", 
@@ -794,11 +885,11 @@ export const articles = [
     `
   },
 
-  // ✅ 12. ARTICOL: HALVING VS LICHIDITATE (Imagine Locală)
+  // ✅ 14. ARTICOL: HALVING VS LICHIDITATE (Imagine Locală)
   {
     slug: "mitul-halving-ului-sacru-vs-realitatea-lichiditatii",
     title: "Mitul \"Halving-ului Sacru\" vs. Realitatea Lichidității: Ce dictează cu adevărat prețul Bitcoin în 2025?",
-    date: "10 Dec 2025",
+    date: "08 Dec 2025",
     category: "ANALIZĂ MACRO",
     image: "/halvingvslichiditate.jpg", 
     impact: "bullish", 
@@ -887,11 +978,11 @@ export const articles = [
     `
   },
 
-  // ✅ 13. ARTICOL: LEVIERUL (EDUCAȚIE & RISK) - INTEGRAL
+  // ✅ 15. ARTICOL: LEVIERUL (EDUCAȚIE & RISK) - INTEGRAL
   {
     slug: "mirajul-levierului-arma-financiara-distrugere",
     title: "Mirajul Levierului: \"Arma Financiară de Distrugere în Masă\" care îți poate Zeroiza Contul într-o Secundă. Ghid de Conștientizare.",
-    date: "19 Dec 2025",
+    date: "08 Dec 2025",
     category: "EDUCAȚIE & RISK",
     image: "/leverage-danger.jpg", 
     impact: "bearish", 
@@ -968,11 +1059,11 @@ export const articles = [
     `
   },
 
-  // ✅ 14. ARTICOL: ALERTĂ FED (Imagine Locală)
+  // ✅ 16. ARTICOL: ALERTĂ FED (Imagine Locală)
   {
     slug: "alerta-volatilitate-decizie-fed-capcana-mortala",
     title: "Alertă de Volatilitate: De ce Decizia FED de Mâine Poate Fi o \"Capcană Mortală\"",
-    date: "17 Dec 2025",
+    date: "07 Dec 2025",
     category: "ANALIZĂ & RISK",
     image: "/fed-volatility-warning.jpg", 
     impact: "bearish", 
@@ -1030,11 +1121,11 @@ export const articles = [
     `
   },
 
-  // ✅ 15. ARTICOL: GHID BEAR MARKET (Imagine Locală)
+  // ✅ 17. ARTICOL: GHID BEAR MARKET (Imagine Locală)
   {
     slug: "ce-inseamna-bear-market-ghid-complet",
     title: "Ce Înseamnă \"Bear Market\" și De Ce Nu Trebuie Să Te Sperie? Ghidul Complet.",
-    date: "08 Dec 2025",
+    date: "06 Dec 2025",
     category: "EDUCAȚIE FINANCIARĂ",
     image: "/bear-market.jpg", 
     impact: "bearish", 
@@ -1118,11 +1209,11 @@ export const articles = [
     `
   },
 
-  // ✅ 16. ARTICOL: CAPCANA URSULUI (PSIHOLOGIE & ISTORIE)
+  // ✅ 18. ARTICOL: CAPCANA URSULUI (PSIHOLOGIE & ISTORIE)
   {
     slug: "capcana-ursului-istorie-crize-evitate",
     title: "\"Capcana Ursului\": De ce Toți Indicatorii de Criză Pot Fi Greșiți. Lecții Istorice.",
-    date: "07 Dec 2025",
+    date: "06 Dec 2025",
     category: "PSIHOLOGIE PIAȚĂ", 
     image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=1000&auto=format&fit=crop", 
     impact: "bullish", 
@@ -1170,11 +1261,11 @@ export const articles = [
     `
   },
 
-  // ✅ 17. ARTICOL: FED & DOBÂNZI (MACRO)
+  // ✅ 19. ARTICOL: FED & DOBÂNZI (MACRO)
   {
     slug: "impact-dobanda-fed-bitcoin-scenarii",
     title: "Alertă Maximă: Decizia FED care Poate Arunca Bitcoin în Aer. Scenariile 0.25% vs 0.50%",
-    date: "07 Dec 2025",
+    date: "06 Dec 2025",
     category: "MACROECONOMIE", 
     image: "/fed-rates.jpg", 
     impact: "neutral", 
@@ -1211,11 +1302,11 @@ export const articles = [
     `
   },
 
-  // ✅ 18. ARTICOL: BITCOIN MANIPULARE (Imagine Locală: /bitcoin-crash.jpg)
+  // ✅ 20. ARTICOL: BITCOIN MANIPULARE (Imagine Locală: /bitcoin-crash.jpg)
   {
     slug: "bitcoin-manipulare-sau-corectie-brutala",
     title: "Bitcoin: Manipulare Instituțională sau Corecție Brutală? Anatomia unei Prăbușiri de 19 Miliarde $",
-    date: "07 Dec 2025",
+    date: "06 Dec 2025",
     category: "ANALIZĂ PIAȚĂ",
     image: "/bitcoin-crash.jpg", 
     impact: "bearish",
@@ -1256,11 +1347,11 @@ export const articles = [
     `
   },
 
-  // ✅ 19. ARTICOL: BITCOIN SOPR
+  // ✅ 21. ARTICOL: BITCOIN SOPR
   {
     slug: "semnal-on-chain-bitcoin-sopr-rally",
     title: "Semnal On-Chain: Vânzătorii au obosit. Bitcoin pregătește Raliul de Decembrie?",
-    date: "06 Dec 2025",
+    date: "05 Dec 2025",
     category: "ON-CHAIN", 
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop", 
     impact: "bullish",
@@ -1287,11 +1378,11 @@ export const articles = [
     `
   },
 
-  // ✅ 20. ARTICOL: QUANTUM COMPUTING
+  // ✅ 22. ARTICOL: QUANTUM COMPUTING
   {
     slug: "riscuri-quantum-computing-bitcoin-explicat",
     title: "Calculatoarele Cuantice vs. Bitcoin: Sfârșitul Criptomonedelor sau Doar o Nouă Provocare?",
-    date: "06 Dec 2025",
+    date: "05 Dec 2025",
     category: "TEHNOLOGIE",
     image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=1000&auto=format&fit=crop", 
     impact: "neutral", 
@@ -1311,11 +1402,11 @@ export const articles = [
     `
   },
 
-  // ✅ 21. ARTICOL: SUA & CFTC (Imagine Locală: /cftc-announcement.jpg)
+  // ✅ 23. ARTICOL: SUA & CFTC (Imagine Locală: /cftc-announcement.jpg)
   {
     slug: "sua-cftc-crypto-spot-reglementat",
     title: "BREAKING: SUA pune capăt erei 'Offshore'. Crypto devine oficial activ federal.",
-    date: "05 Dec 2025",
+    date: "04 Dec 2025",
     category: "REGLEMENTARE",
     image: "/cftc-announcement.jpg", 
     impact: "bullish",
@@ -1347,11 +1438,11 @@ export const articles = [
     `
   },
 
-  // ✅ 22. ARTICOL: ATAC 27M
+  // ✅ 24. ARTICOL: ATAC 27M
   {
     slug: "atac-27-milioane-link-malitios",
     title: "ALERTA: Cum să pierzi 27.000.000$ într-o secundă. Pericolul invizibil din buzunarul tău",
-    date: "05 Dec 2025",
+    date: "04 Dec 2025",
     category: "SECURITATE",
     image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1000&auto=format&fit=crop", 
     impact: "bearish", 
@@ -1385,11 +1476,11 @@ export const articles = [
     `
   },
 
-  // ✅ 23. ARTICOL: VANGUARD & CFTC (Legacy)
+  // ✅ 25. ARTICOL: VANGUARD & CFTC (Legacy)
   {
     slug: "marea-convergenta-crypto",
     title: "Marea Convergență: Vanguard și CFTC validează Crypto ca 'Gold Standard'",
-    date: "05 Dec 2025",
+    date: "04 Dec 2025",
     category: "REGLEMENTARE",
     image: "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?q=80&w=1000&auto=format&fit=crop", 
     impact: "bullish",
@@ -1411,7 +1502,7 @@ export const articles = [
     `
   },
 
-  // ✅ 24. ARTICOL: QIVALIS
+  // ✅ 26. ARTICOL: QIVALIS
   {
     slug: "qivalis-banci-europene-stablecoin",
     title: "BREAKING: 9 Bănci Gigant lansează Qivalis - Euro Stablecoin",
@@ -1448,11 +1539,11 @@ export const articles = [
     `
   },
 
-  // ✅ 25. ARTICOL: SEC ETF ETHEREUM
+  // ✅ 27. ARTICOL: SEC ETF ETHEREUM
   {
     slug: "sec-aproba-etf-ethereum",
     title: "SEC Aprobă ETF-ul de Ethereum Spot",
-    date: "12 Dec 2025",
+    date: "02 Dec 2025",
     category: "REGLEMENTARE",
     image: "https://images.unsplash.com/photo-1622630998477-20aa696fa405?q=80&w=1000&auto=format&fit=crop",
     impact: "bullish",
@@ -1466,11 +1557,11 @@ export const articles = [
     `
   },
 
-  // ✅ 26. ARTICOL: SOLANA FIREDANCER
+  // ✅ 28. ARTICOL: SOLANA FIREDANCER
   {
     slug: "solana-firedancer",
     title: "Solana lansează Firedancer",
-    date: "11 Dec 2025",
+    date: "02 Dec 2025",
     category: "TEHNOLOGIE",
     image: "https://images.unsplash.com/photo-1621416894569-0f39ed31d247?q=80&w=1000&auto=format&fit=crop",
     impact: "neutral",
@@ -1483,11 +1574,11 @@ export const articles = [
     `
   },
 
-  // ✅ 27. ARTICOL: INFLATIE CPI
+  // ✅ 29. ARTICOL: INFLATIE CPI
   {
     slug: "inflatie-sua-cpi",
     title: "Inflația SUA crește (CPI 3.4%)",
-    date: "10 Dec 2025",
+    date: "01 Dec 2025",
     category: "MACRO",
     image: "https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=1000&auto=format&fit=crop",
     impact: "bearish",
