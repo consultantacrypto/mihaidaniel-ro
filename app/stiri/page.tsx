@@ -47,37 +47,40 @@ export default async function NewsPage({
       
       <div className="container mx-auto px-6 py-16 flex-grow">
           
-          {/* --- HEADER ALINIAT CORECT (FLEX) --- */}
-          <div className="flex flex-col lg:flex-row justify-between items-end gap-8 mb-16 border-b border-white/5 pb-8">
-              
-              {/* Stânga: Titluri */}
-              <div className="w-full lg:w-auto">
-                <div className="inline-flex items-center gap-2 bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 border border-blue-500/20">
-                    <Activity size={14} className="animate-pulse"/> Market Intelligence
+          {/* --- HEADER IMPERIAL (Centrat și Compact) --- */}
+          <div className="max-w-5xl mx-auto mb-16">
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-10 border-b border-white/5 pb-10">
+                
+                {/* Text: Stânga (sau Centrat pe mobil) */}
+                <div className="text-center lg:text-left flex-1">
+                    <div className="inline-flex items-center gap-2 bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 border border-blue-500/20">
+                        <Activity size={14} className="animate-pulse"/> Market Intelligence
+                    </div>
+                    <h1 className="text-5xl md:text-6xl font-black mb-4 tracking-tight leading-none text-white">
+                        Știri & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Analize</span>
+                    </h1>
+                    <p className="text-gray-400 text-lg max-w-lg mx-auto lg:mx-0 leading-relaxed">
+                        Nu citi doar știri. Înțelege contextul. <br/>
+                        Analize strategice pentru investitorii Smart Money.
+                    </p>
                 </div>
-                <h1 className="text-5xl md:text-7xl font-black mb-4 tracking-tight leading-none text-white">
-                    Știri & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Analize</span>
-                </h1>
-                <p className="text-gray-400 text-lg max-w-xl leading-relaxed">
-                    Interpretare strategică pentru investitorii care vor să fie cu un pas înaintea masei.
-                </p>
-              </div>
 
-              {/* Dreapta: WIDGET FIX (Nu se mai întinde) */}
-              <div className="w-full lg:w-auto flex justify-center lg:justify-end">
-                <FearGreed />
-              </div>
+                {/* Widget: Dreapta (Fix și Stabil) */}
+                <div className="shrink-0 animate-in slide-in-from-right-8 duration-700 fade-in">
+                    <FearGreed />
+                </div>
 
+            </div>
           </div>
 
           {/* FILTRE */}
           <CategoryFilter />
 
-          {/* LISTA ARTICOLE (GRID 3 Coloane Fixe) */}
+          {/* LISTA ARTICOLE */}
           {currentArticles.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 {currentArticles.map((item, idx) => (
-                    <Link href={`/stiri/${item.slug}`} key={item.slug} className="group bg-[#0a0f1e] border border-white/10 rounded-3xl overflow-hidden flex flex-col hover:border-blue-500/50 transition-all hover:shadow-2xl h-full">
+                    <Link href={`/stiri/${item.slug}`} key={item.slug} className="group bg-[#0a0f1e] border border-white/10 rounded-3xl overflow-hidden flex flex-col hover:border-blue-500/50 transition-all hover:shadow-[0_0_30px_rgba(59,130,246,0.1)] h-full">
                         {/* Imagine */}
                         <div className="w-full aspect-video shrink-0 relative overflow-hidden bg-gray-900">
                             <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1e] to-transparent opacity-60 z-10"></div>
@@ -86,7 +89,7 @@ export default async function NewsPage({
                                 alt={item.title}
                                 fill 
                                 className="object-cover group-hover:scale-110 transition-transform duration-1000"
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                sizes="(max-width: 768px) 100vw, 320px" 
                                 priority={idx < 2} 
                             />
                             {/* Badge Impact */}
@@ -120,7 +123,7 @@ export default async function NewsPage({
                 ))}
             </div>
           ) : (
-            <div className="text-center py-32 bg-white/5 rounded-3xl border border-white/5">
+            <div className="text-center py-32 bg-white/5 rounded-3xl border border-white/5 max-w-4xl mx-auto">
                 <p className="text-gray-400 text-xl">Nu am găsit articole în această categorie momentan.</p>
                 <Link href="/stiri" className="text-blue-400 hover:text-blue-300 mt-4 inline-flex items-center gap-2 font-bold">
                     <ChevronLeft size={16}/> Înapoi la toate știrile
