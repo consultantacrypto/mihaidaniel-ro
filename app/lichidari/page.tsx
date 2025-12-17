@@ -1,9 +1,10 @@
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer'; // ✅ Acum merge pentru că ai creat fișierul
+import Footer from '@/components/Footer';
 import CryptoTicker from '@/components/CryptoTicker';
 import LiquidationFeed from '@/components/LiquidationChart'; 
-import { AlertTriangle, TrendingUp, Skull, Globe2 } from 'lucide-react';
+import { AlertTriangle, TrendingUp, Skull, Globe2, ShieldCheck, Zap, ExternalLink, Crown } from 'lucide-react';
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Lichidări Crypto Global Live | Mihai Daniel',
@@ -16,8 +17,9 @@ export default function LiquidationsPage() {
       <CryptoTicker />
       <Navbar />
 
-      <div className="container mx-auto px-4 py-12 max-w-6xl flex-grow">
+      <div className="container mx-auto px-4 py-12 max-w-7xl flex-grow">
         
+        {/* Header */}
         <div className="text-center mb-12">
             <span className="bg-blue-500/10 text-blue-400 border border-blue-500/20 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest inline-flex items-center gap-2 mb-4">
                 <Globe2 size={14}/> Agregator Global
@@ -30,36 +32,101 @@ export default function LiquidationsPage() {
             </p>
         </div>
 
-        <div className="grid md:grid-cols-12 gap-8 items-start">
+        <div className="grid lg:grid-cols-12 gap-8 items-start">
             
-            <div className="md:col-span-4 space-y-6">
+            {/* --- COLOANA STÂNGA: INSTRUMENTE & AFILIERE (Sticky) --- */}
+            <div className="lg:col-span-4 space-y-6 lg:sticky lg:top-24">
+                
+                {/* 1. Explicația Tehnică */}
                 <div className="bg-gray-900/50 border border-gray-800 p-6 rounded-2xl relative overflow-hidden">
                     <div className="absolute top-0 right-0 p-4 opacity-10"><Skull size={80} /></div>
-                    <h3 className="font-bold text-white mb-3 text-lg">Cum să citești banda?</h3>
-                    <p className="text-sm text-gray-400 leading-relaxed mb-4">
-                        Acesta este un flux de date brute. Nu există filtru. Ceea ce vezi sunt bani reali pierduți de traderi reali.
-                    </p>
+                    <h3 className="font-bold text-white mb-3 text-lg flex items-center gap-2">
+                        <span className="w-2 h-2 bg-red-500 rounded-full animate-ping"></span> Live Feed Info
+                    </h3>
                     <ul className="space-y-3 text-sm">
-                        <li className="bg-red-900/20 border border-red-500/20 p-3 rounded-lg">
+                        <li className="bg-red-900/10 border border-red-500/20 p-3 rounded-lg">
                             <strong className="text-red-400 block mb-1">Long Lichidat (Roșu)</strong>
-                            <span className="text-gray-400 text-xs">Traderul a pariat că prețul va crește. Prețul a scăzut și exchange-ul i-a vândut poziția forțat. <br/><strong>Efect:</strong> Presiune de vânzare.</span>
+                            <span className="text-gray-400 text-xs">A pariat pe creștere 📈. Prețul a scăzut și a pierdut tot.</span>
                         </li>
-                        <li className="bg-green-900/20 border border-green-500/20 p-3 rounded-lg">
+                        <li className="bg-green-900/10 border border-green-500/20 p-3 rounded-lg">
                             <strong className="text-green-400 block mb-1">Short Lichidat (Verde)</strong>
-                            <span className="text-gray-400 text-xs">Traderul a pariat că prețul va scădea. Prețul a crescut și exchange-ul a cumpărat forțat. <br/><strong>Efect:</strong> Presiune de cumpărare.</span>
+                            <span className="text-gray-400 text-xs">A pariat pe scădere 📉. Prețul a crescut și a pierdut tot.</span>
                         </li>
                     </ul>
                 </div>
 
-                <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-blue-500/20 p-6 rounded-2xl">
-                    <h3 className="font-bold text-white mb-2 flex items-center gap-2"><Globe2 size={16} className="text-blue-400"/> De ce 3 Exchange-uri?</h3>
-                    <p className="text-xs text-gray-400">
-                        Binance, Bybit și OKX reprezintă peste <strong>70% din volumul global</strong> de derivate crypto. Dacă vezi lichidări simultane pe toate trei, înseamnă că mișcarea prețului este autentică și violentă.
-                    </p>
+                {/* 2. ZONA DE CONVERSIE (Affiliates) */}
+                <div className="space-y-4">
+                    <div className="flex items-center gap-2 mb-2">
+                        <ShieldCheck size={16} className="text-blue-400"/>
+                        <span className="text-xs font-bold uppercase tracking-widest text-gray-400">Tradează pe Platforme Sigure</span>
+                    </div>
+
+                    {/* BYBIT CARD */}
+                    <a href="https://partner.bybit.eu/b/LUCKY7777" target="_blank" className="block group relative overflow-hidden rounded-xl border border-[#ffb119]/30 bg-[#17181e] p-1 transition-all hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(255,177,25,0.2)]">
+                        <div className="absolute top-0 right-0 bg-[#ffb119] text-black text-[10px] font-bold px-2 py-0.5 rounded-bl-lg">TOP CHOICE</div>
+                        <div className="flex items-center justify-between p-4">
+                            <div className="flex items-center gap-3">
+                                <div className="h-10 w-10 bg-[#ffb119] rounded-lg flex items-center justify-center text-black font-black text-xs">BY</div>
+                                <div>
+                                    <div className="text-white font-bold text-lg leading-none">Bybit</div>
+                                    <div className="text-[#ffb119] text-xs">Bonus Exclusiv</div>
+                                </div>
+                            </div>
+                            <ExternalLink size={18} className="text-gray-500 group-hover:text-white transition-colors"/>
+                        </div>
+                    </a>
+
+                    {/* BINANCE CARD */}
+                    <a href="https://www.binance.com/join?ref=35329648" target="_blank" className="block group relative overflow-hidden rounded-xl border border-[#FCD535]/30 bg-[#1E2026] p-1 transition-all hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(252,213,53,0.2)]">
+                        <div className="flex items-center justify-between p-4">
+                            <div className="flex items-center gap-3">
+                                <div className="h-10 w-10 bg-[#FCD535] rounded-lg flex items-center justify-center text-black font-black">
+                                    <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6" xmlns="http://www.w3.org/2000/svg"><path d="M16.624 13.9202l2.7175 2.7154-7.353 7.353-7.353-7.352 2.7175-2.7164 4.6355 4.6595 4.6356-4.6595zm4.6366-4.6366L24 12l-2.7154 2.7164L18.5682 12l2.6924-2.7164zm-9.272.331l5.087 5.088H6.9244l5.087-5.088zM5.376 10.0798L2.6585 7.3644 10.0115.0115l7.353 7.353-2.7175 2.7164-4.6356-4.6595-4.6355 4.6595zM2.7154 9.2836L5.4318 12l-2.7164 2.7164L0 12l2.7154-2.7164z" fill="currentColor"/></svg>
+                                </div>
+                                <div>
+                                    <div className="text-white font-bold text-lg leading-none">Binance</div>
+                                    <div className="text-[#FCD535] text-xs">Lider Global</div>
+                                </div>
+                            </div>
+                            <ExternalLink size={18} className="text-gray-500 group-hover:text-white transition-colors"/>
+                        </div>
+                    </a>
+
+                    {/* OKX CARD */}
+                    <a href="https://www.okx.com/join/77249876" target="_blank" className="block group relative overflow-hidden rounded-xl border border-white/20 bg-black p-1 transition-all hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">
+                        <div className="flex items-center justify-between p-4">
+                            <div className="flex items-center gap-3">
+                                <div className="h-10 w-10 bg-white rounded-lg flex items-center justify-center text-black font-black tracking-tighter">OKX</div>
+                                <div>
+                                    <div className="text-white font-bold text-lg leading-none">OKX</div>
+                                    <div className="text-gray-400 text-xs">Tehnologie Web3</div>
+                                </div>
+                            </div>
+                            <ExternalLink size={18} className="text-gray-500 group-hover:text-white transition-colors"/>
+                        </div>
+                    </a>
                 </div>
+
+                {/* 3. CONSULTANȚĂ (High Ticket) */}
+                <Link href="/#consultanta" className="block mt-8 group">
+                    <div className="bg-gradient-to-r from-yellow-600/20 to-yellow-900/20 border border-yellow-500/30 p-6 rounded-2xl text-center relative overflow-hidden hover:border-yellow-500 transition-all">
+                        <div className="absolute inset-0 bg-yellow-500/5 group-hover:bg-yellow-500/10 transition-colors"></div>
+                        <Crown size={32} className="text-yellow-500 mx-auto mb-3" />
+                        <h4 className="text-xl font-black text-white mb-2">Nu mai pierde bani!</h4>
+                        <p className="text-sm text-gray-300 mb-4">
+                            Vezi lista din dreapta? 90% nu au avut un plan. Hai să construim strategia ta.
+                        </p>
+                        <span className="inline-block bg-yellow-500 text-black font-bold px-6 py-2 rounded-full text-sm group-hover:scale-105 transition-transform">
+                            Rezervă Consultanță
+                        </span>
+                    </div>
+                </Link>
+
             </div>
 
-            <div className="md:col-span-8">
+            {/* --- COLOANA DREAPTA: FEED-UL LIVE (Mai lată) --- */}
+            <div className="lg:col-span-8">
                 <LiquidationFeed />
                 
                 <div className="mt-6 flex flex-col md:flex-row gap-4">
@@ -77,13 +144,7 @@ export default function LiquidationsPage() {
 
         </div>
 
-        <div className="text-center border-t border-gray-800 pt-12 mt-12">
-            <p className="text-gray-400 mb-6">Vrei să înțelegi cum să nu ajungi pe lista asta?</p>
-            <a href="/stiri/mirajul-levierului-arma-financiara-distrugere" className="inline-flex items-center gap-2 bg-white text-black px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform shadow-[0_0_20px_rgba(255,255,255,0.2)]">
-                <TrendingUp size={18} /> Citește Ghidul Anti-Lichidare
-            </a>
-        </div>
-
+    
       </div>
       <Footer />
     </main>
