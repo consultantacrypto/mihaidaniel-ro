@@ -2,7 +2,7 @@ import { articles } from '@/lib/articles';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CategoryFilter from '@/components/CategoryFilter';
-import FearGreed from '@/components/FearGreed'; 
+import FearGreed from '@/components/FearGreed';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Calendar, ArrowRight, TrendingUp, TrendingDown, Minus, BrainCircuit, ChevronLeft, ChevronRight, Activity } from 'lucide-react';
@@ -47,25 +47,24 @@ export default async function NewsPage({
       
       <div className="container mx-auto px-6 py-16 flex-grow">
           
-          {/* --- HEADER DASHBOARD (GRID) --- */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16 border-b border-white/5 pb-12">
+          {/* --- HEADER ALINIAT CORECT (FLEX) --- */}
+          <div className="flex flex-col lg:flex-row justify-between items-end gap-8 mb-16 border-b border-white/5 pb-8">
               
-              {/* Stânga: Titlu și Intro */}
-              <div className="text-left">
+              {/* Stânga: Titluri */}
+              <div className="w-full lg:w-auto">
                 <div className="inline-flex items-center gap-2 bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 border border-blue-500/20">
                     <Activity size={14} className="animate-pulse"/> Market Intelligence
                 </div>
-                <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-none text-white">
+                <h1 className="text-5xl md:text-7xl font-black mb-4 tracking-tight leading-none text-white">
                     Știri & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Analize</span>
                 </h1>
-                <p className="text-gray-400 text-lg md:text-xl max-w-xl leading-relaxed">
-                    Nu citim doar știri, citim printre rânduri. <br/>
-                    <span className="text-white font-bold">Interpretare strategică</span> pentru investitorii care vor să fie cu un pas înaintea masei.
+                <p className="text-gray-400 text-lg max-w-xl leading-relaxed">
+                    Interpretare strategică pentru investitorii care vor să fie cu un pas înaintea masei.
                 </p>
               </div>
 
-              {/* Dreapta: WIDGETUL WAW (Centrat pe mobil, Dreapta pe desktop) */}
-              <div className="flex justify-center lg:justify-end">
+              {/* Dreapta: WIDGET FIX (Nu se mai întinde) */}
+              <div className="w-full lg:w-auto flex justify-center lg:justify-end">
                 <FearGreed />
               </div>
 
@@ -74,20 +73,20 @@ export default async function NewsPage({
           {/* FILTRE */}
           <CategoryFilter />
 
-          {/* LISTA ARTICOLE */}
+          {/* LISTA ARTICOLE (GRID 3 Coloane Fixe) */}
           {currentArticles.length > 0 ? (
-            <div className="grid gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {currentArticles.map((item, idx) => (
-                    <Link href={`/stiri/${item.slug}`} key={item.slug} className="group bg-[#0a0f1e] border border-white/10 rounded-3xl overflow-hidden flex flex-col md:flex-row hover:border-blue-500/50 transition-all hover:shadow-[0_0_30px_rgba(59,130,246,0.1)]">
+                    <Link href={`/stiri/${item.slug}`} key={item.slug} className="group bg-[#0a0f1e] border border-white/10 rounded-3xl overflow-hidden flex flex-col hover:border-blue-500/50 transition-all hover:shadow-2xl h-full">
                         {/* Imagine */}
-                        <div className="w-full md:w-80 h-64 md:h-auto shrink-0 relative overflow-hidden">
+                        <div className="w-full aspect-video shrink-0 relative overflow-hidden bg-gray-900">
                             <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1e] to-transparent opacity-60 z-10"></div>
                             <Image 
                                 src={item.image} 
                                 alt={item.title}
                                 fill 
                                 className="object-cover group-hover:scale-110 transition-transform duration-1000"
-                                sizes="(max-width: 768px) 100vw, 320px" 
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 priority={idx < 2} 
                             />
                             {/* Badge Impact */}
@@ -99,32 +98,22 @@ export default async function NewsPage({
                         </div>
                         
                         {/* Text */}
-                        <div className="flex-1 p-6 md:p-10 flex flex-col justify-center">
+                        <div className="flex-1 p-6 flex flex-col">
                             <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500 font-mono mb-4 uppercase tracking-widest">
                                 <span className="flex items-center gap-1 text-gray-400"><Calendar size={12}/> {item.date}</span>
                                 <span className="text-blue-500 font-bold border border-blue-500/20 px-2 py-0.5 rounded">{item.category}</span>
                             </div>
                             
-                            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors leading-tight font-[var(--font-space)]">
+                            <h2 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors leading-tight font-[var(--font-space)] line-clamp-2">
                                 {item.title}
                             </h2>
                             
-                            <p className="text-gray-400 leading-relaxed mb-6 line-clamp-2 text-base md:text-lg">
+                            <p className="text-gray-400 text-sm leading-relaxed mb-4 line-clamp-3">
                                 {item.summary}
                             </p>
                             
-                            {item.mihaiTake && (
-                                <div className="bg-blue-900/10 border-l-2 border-blue-500 pl-4 py-3 mb-6 rounded-r-xl relative overflow-hidden">
-                                    <div className="absolute right-0 top-0 opacity-5"><BrainCircuit size={40}/></div>
-                                    <div className="flex items-center gap-2 text-[10px] font-bold text-blue-400 uppercase mb-1">
-                                        <BrainCircuit size={12}/> Mihai's Take
-                                    </div>
-                                    <p className="text-sm text-gray-300 italic line-clamp-2 relative z-10">"{item.mihaiTake}"</p>
-                                </div>
-                            )}
-
-                            <div className="flex items-center gap-2 text-sm font-bold text-white group-hover:translate-x-2 transition-transform mt-auto">
-                                Citește Analiza Completă <ArrowRight size={16} className="text-blue-500 group-hover:text-white transition-colors"/>
+                            <div className="mt-auto pt-4 border-t border-white/5 flex items-center text-sm font-bold text-white group-hover:text-blue-400 transition-colors">
+                                Citește Analiza <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform"/>
                             </div>
                         </div>
                     </Link>
