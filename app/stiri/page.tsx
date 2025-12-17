@@ -47,30 +47,32 @@ export default async function NewsPage({
       
       <div className="container mx-auto px-6 py-16 flex-grow">
           
-          {/* --- HEADER IMPERIAL (Centrat și Compact) --- */}
-          <div className="max-w-5xl mx-auto mb-16">
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-10 border-b border-white/5 pb-10">
+          {/* --- HEADER INTEGRAT (COMPACT & PROFI) --- */}
+          <div className="max-w-4xl mx-auto mb-16 border-b border-white/5 pb-10">
                 
-                {/* Text: Stânga (sau Centrat pe mobil) */}
-                <div className="text-center lg:text-left flex-1">
-                    <div className="inline-flex items-center gap-2 bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 border border-blue-500/20">
-                        <Activity size={14} className="animate-pulse"/> Market Intelligence
-                    </div>
-                    <h1 className="text-5xl md:text-6xl font-black mb-4 tracking-tight leading-none text-white">
-                        Știri & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Analize</span>
-                    </h1>
-                    <p className="text-gray-400 text-lg max-w-lg mx-auto lg:mx-0 leading-relaxed">
+                {/* 1. Eticheta deasupra */}
+                <div className="inline-flex items-center gap-2 text-blue-400 text-xs font-bold uppercase tracking-widest mb-4">
+                    <Activity size={14} className="animate-pulse"/> Market Intelligence
+                </div>
+
+                {/* 2. Titlul Mare */}
+                <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-none text-white">
+                    Știri & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Analize</span>
+                </h1>
+
+                <div className="flex flex-col md:flex-row items-end justify-between gap-8">
+                    {/* 3. Textul Valoros (Stânga) */}
+                    <p className="text-gray-400 text-lg md:text-xl max-w-lg leading-relaxed">
                         Nu citi doar știri. Înțelege contextul. <br/>
-                        Analize strategice pentru investitorii Smart Money.
+                        <span className="text-white font-bold">Analize strategice</span> pentru investitorii Smart Money.
                     </p>
+
+                    {/* 4. Widget-ul Discret (Dreapta, la nivelul ochilor) */}
+                    <div className="w-full md:w-auto pl-0 md:pl-8 border-l-0 md:border-l border-white/10">
+                        <FearGreed />
+                    </div>
                 </div>
 
-                {/* Widget: Dreapta (Fix și Stabil) */}
-                <div className="shrink-0 animate-in slide-in-from-right-8 duration-700 fade-in">
-                    <FearGreed />
-                </div>
-
-            </div>
           </div>
 
           {/* FILTRE */}
