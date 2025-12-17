@@ -2,13 +2,20 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Loader2, CheckCircle2, AlertCircle, Wallet, Globe, Copy, Zap, Layers, Mail, ArrowRight, BrainCircuit } from 'lucide-react';
+import { X, Loader2, CheckCircle2, Globe, Copy, Zap, Layers, Mail, ArrowRight, BrainCircuit } from 'lucide-react';
 import { useAccount, useWriteContract, useWaitForTransactionReceipt, useChainId } from 'wagmi';
 import { parseUnits } from 'viem';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
+import emailjs from '@emailjs/browser';
 
+// --- CONFIGURARE PORTOFELE ---
 const RECIPIENT_WALLET = "0xdeab68fb2be0f1756ee61ac87f4d72527ad18e3d";
 const MY_EMAIL = "consultantacrypto.ro@gmail.com";
+
+// --- ✅ CONFIGURARE EMAILJS (COMPLETĂ) ---
+const EMAILJS_SERVICE_ID = "service_ctx4uog"; // ✅ ID-ul Tău
+const EMAILJS_TEMPLATE_ID = "template_1gs1u0i"; // ✅ ID-ul Template-ului
+const EMAILJS_PUBLIC_KEY = "kgEy0emPtv1Fs89Gb"; // ✅ Cheia Publică
 
 const WALLETS = {
   EVM: RECIPIENT_WALLET,
@@ -46,8 +53,9 @@ export default function CryptoPaymentModal({ isOpen, onClose, title, price, type
   const [activeTab, setActiveTab] = useState<'auto' | 'manual'>('auto');
   const [copied, setCopied] = useState(false);
   const [manualSent, setManualSent] = useState(false);
+  const [emailStatus, setEmailStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
   
-  const { isConnected } = useAccount();
+  const { address, isConnected } = useAccount();
   const chainId = useChainId();
   const { data: hash, writeContract, isPending, error: writeError } = useWriteContract();
   const { isLoading: isConfirming, isSuccess: isConfirmed } = useWaitForTransactionReceipt({ hash });
@@ -62,7 +70,46 @@ export default function CryptoPaymentModal({ isOpen, onClose, title, price, type
     else setTargetNetwork("Nesuportată");
   }, [chainId]);
 
-  // ✅ TRACKING SUCCES (Plată confirmată)
+  // --- 🚀 SISTEM DE NOTIFICARE AUTOMATĂ ---
+  const sendAutomatedEmail = (txHash: string, method: string) => {
+    if (emailStatus === 'sent' || emailStatus === 'sending') return;
+    
+    setEmailStatus('sending');
+
+    const templateParams = {
+        type: type === 'course' ? 'CURS PREMIUM' : 'CONSULTANTA VIP',
+        title: title,
+        amount: price,
+        method: method,
+        wallet_address: address || 'Anonim (Manual)',
+        tx_hash: txHash,
+    };
+
+    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, EMAILJS_PUBLIC_KEY)
+      .then((response) => {
+        console.log('EMAIL SENT SUCCESS!', response.status, response.text);
+        setEmailStatus('sent');
+      }, (err) => {
+        console.log('EMAIL FAILED...', err);
+        setEmailStatus('error');
+      });
+  };
+
+  // 1. Trigger la Plata Automată (EVM)
+  useEffect(() => {
+    if (isConfirmed && hash) {
+        trackSuccess();
+        sendAutomatedEmail(hash, `Auto EVM (${targetNetwork})`);
+    }
+  }, [isConfirmed, hash]);
+
+  // 2. Trigger la Plata Manuală
+  const handleManualSent = () => {
+      setManualSent(true);
+      trackSuccess();
+      sendAutomatedEmail('Transfer Manual (Vezi Wallet)', 'Manual (TRON/SOL)');
+  };
+
   const trackSuccess = () => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'purchase', {
@@ -74,25 +121,9 @@ export default function CryptoPaymentModal({ isOpen, onClose, title, price, type
     }
   };
 
-  useEffect(() => {
-    if (isConfirmed) trackSuccess();
-  }, [isConfirmed]);
-
-  const handleManualSent = () => {
-      setManualSent(true);
-      trackSuccess();
-  };
-
-  // ✅ TRACKING ABANDON (Când închide fără să plătească)
   const handleClose = () => {
     if (!isConfirmed && !manualSent) {
-       if (typeof window !== 'undefined' && (window as any).gtag) {
-          (window as any).gtag('event', 'checkout_progress', {
-             checkout_step: 1,
-             item_name: title,
-             status: 'abandoned'
-          });
-       }
+       // Tracking Abandon
     }
     onClose();
   };
@@ -120,44 +151,57 @@ export default function CryptoPaymentModal({ isOpen, onClose, title, price, type
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const subject = type === 'course' ? "PLATA CURS - Acces YouTube" : "PROGRAMARE CONSULTANTA";
-  const body = type === 'course' 
-    ? `Salut Mihai,%0D%0A%0D%0AAm platit cursul de ${price}$.%0D%0A%0D%0A>> ADRESA GMAIL PENTRU YOUTUBE: [Scrie aici adresa ta de Gmail]%0D%0A%0D%0AAtasez dovada platii.` 
-    : `Salut Mihai,%0D%0A%0D%0AAm platit consultanta (${price}$).%0D%0A%0D%0A>> ZIUA SI ORA DORITA: [Scrie aici cand vrei programarea]%0D%0A%0D%0AAtasez dovada platii.`;
-  
-  const mailtoLink = `mailto:${MY_EMAIL}?subject=${subject}&body=${body}`;
-
   if (!isOpen) return null;
 
+  // --- ECRAN DE SUCCES (SPACESHIP MODE) ---
   if (isConfirmed || manualSent) {
       return (
         <div className="fixed inset-0 z-[9999] flex items-center justify-center px-4">
             <div className="absolute inset-0 bg-black/90 backdrop-blur-md" onClick={handleClose}/>
-            <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="relative bg-[#0f1629] border border-green-500/50 w-full max-w-md p-8 rounded-3xl shadow-2xl text-center">
-                <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6 text-green-500 border-2 border-green-500">
+            <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="relative bg-[#0f1629] border border-green-500/50 w-full max-w-md p-8 rounded-3xl shadow-[0_0_50px_rgba(34,197,94,0.2)] text-center overflow-hidden">
+                
+                {/* Background Animation */}
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-green-500 to-transparent animate-pulse"></div>
+
+                <div className="w-20 h-20 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-6 text-green-500 border border-green-500/30 shadow-[0_0_20px_rgba(34,197,94,0.3)]">
                     <CheckCircle2 size={40}/>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2">Plată Înregistrată!</h3>
-                <p className="text-gray-300 mb-6">Mai ai un singur pas pentru a primi accesul.</p>
                 
-                <div className="bg-blue-900/30 border border-blue-500/30 p-4 rounded-xl text-left mb-6">
-                    <h4 className="text-blue-400 font-bold text-sm uppercase mb-2 flex items-center gap-2"><Mail size={16}/> Instrucțiuni Obligatorii:</h4>
-                    {type === 'course' ? (
-                        <p className="text-sm text-white">Trimite un email la <b>{MY_EMAIL}</b> cu <b>dovada plății</b> și <b>ADRESA TA DE GMAIL</b> (ca să îți dau acces la video-ul privat pe YouTube).</p>
-                    ) : (
-                        <p className="text-sm text-white">Trimite un email la <b>{MY_EMAIL}</b> cu <b>dovada plății</b> și <b>ZIUA/ORA</b> când dorești programarea.</p>
-                    )}
+                <h3 className="text-2xl font-black text-white mb-2 tracking-tight">PLATĂ REUȘITĂ!</h3>
+                <p className="text-gray-400 mb-8 text-sm">Banii au intrat. Accesul se pregătește.</p>
+                
+                {/* Status Notificare Automată */}
+                <div className="bg-[#0a0f1e] border border-white/5 p-4 rounded-xl mb-6">
+                    <div className="flex items-center justify-between mb-2">
+                        <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">Sistem Notificare</span>
+                        {emailStatus === 'sending' && <Loader2 size={14} className="animate-spin text-blue-400"/>}
+                        {emailStatus === 'sent' && <CheckCircle2 size={14} className="text-green-400"/>}
+                        {emailStatus === 'error' && <X size={14} className="text-red-400"/>}
+                    </div>
+                    
+                    {emailStatus === 'sending' && <p className="text-sm text-blue-400 font-medium">Se trimite alerta către Mihai...</p>}
+                    {emailStatus === 'sent' && <p className="text-sm text-green-400 font-bold">Mihai a fost notificat instant! 🚀</p>}
+                    {emailStatus === 'error' && <p className="text-sm text-red-400">Eroare server. Trimite un mail manual.</p>}
                 </div>
 
-                <a href={mailtoLink} className="w-full py-4 bg-green-600 hover:bg-green-500 text-white font-bold rounded-xl shadow-lg flex items-center justify-center gap-2 transition-all mb-4">
-                    Trimite Email Acum <ArrowRight size={18}/>
+                <div className="bg-blue-900/20 border-l-2 border-blue-500 p-4 rounded-r-xl text-left mb-6">
+                    <h4 className="text-blue-200 font-bold text-xs uppercase mb-1 flex items-center gap-2"><Mail size={14}/> Ultimul Pas:</h4>
+                    <p className="text-sm text-gray-300">
+                        Trimite un email scurt la <b>{MY_EMAIL}</b> cu <b>adresa ta de Gmail</b> (pentru acces la materialele private).
+                    </p>
+                </div>
+
+                <a href={`mailto:${MY_EMAIL}?subject=CONFIRMARE ACCES - ${title}&body=Salut, am efectuat plata. Adresa mea de Gmail este:`} className="w-full py-4 bg-white text-black font-black rounded-xl shadow-lg flex items-center justify-center gap-2 transition-transform hover:scale-[1.02] mb-4">
+                    Trimite Gmail-ul Tău <ArrowRight size={18}/>
                 </a>
-                <button onClick={handleClose} className="text-gray-500 hover:text-white text-sm">Închide</button>
+                
+                <button onClick={handleClose} className="text-gray-500 hover:text-white text-xs uppercase tracking-widest font-bold">Închide Fereastra</button>
             </motion.div>
         </div>
       )
   }
 
+  // --- ECRAN DE PLATĂ (MODAL) ---
   return (
     <AnimatePresence>
       <div className="fixed inset-0 z-[9999] flex items-center justify-center px-4">
@@ -167,12 +211,14 @@ export default function CryptoPaymentModal({ isOpen, onClose, title, price, type
                 <button onClick={handleClose} className="absolute top-6 right-6 text-gray-500 hover:text-white"><X size={24}/></button>
                 <h3 className="text-xl font-bold text-white text-center">Alege metoda de plată</h3>
                 <p className="text-center text-gray-400 text-sm mt-1">{title}</p>
-                <div className="mt-2 text-center text-3xl font-mono font-bold text-white">${price} USDT</div>
+                <div className="mt-2 text-center text-3xl font-mono font-bold text-white text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-400">
+                    ${price} USDT
+                </div>
             </div>
 
             <div className="flex p-2 bg-[#050810]">
-                <button onClick={() => setActiveTab('auto')} className={`flex-1 py-3 rounded-xl text-sm font-bold flex items-center justify-center gap-2 transition-all ${activeTab === 'auto' ? 'bg-blue-600 text-white' : 'text-gray-400 hover:text-white'}`}><Zap size={16}/> Automat (EVM)</button>
-                <button onClick={() => setActiveTab('manual')} className={`flex-1 py-3 rounded-xl text-sm font-bold flex items-center justify-center gap-2 transition-all ${activeTab === 'manual' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white'}`}><Layers size={16}/> Manual (Tron/Sol)</button>
+                <button onClick={() => setActiveTab('auto')} className={`flex-1 py-3 rounded-xl text-sm font-bold flex items-center justify-center gap-2 transition-all ${activeTab === 'auto' ? 'bg-blue-600 text-white shadow-lg shadow-blue-900/20' : 'text-gray-400 hover:text-white'}`}><Zap size={16}/> Automat (EVM)</button>
+                <button onClick={() => setActiveTab('manual')} className={`flex-1 py-3 rounded-xl text-sm font-bold flex items-center justify-center gap-2 transition-all ${activeTab === 'manual' ? 'bg-purple-600 text-white shadow-lg shadow-purple-900/20' : 'text-gray-400 hover:text-white'}`}><Layers size={16}/> Manual (Tron/Sol)</button>
             </div>
 
             <div className="p-8 pb-4">
@@ -180,23 +226,23 @@ export default function CryptoPaymentModal({ isOpen, onClose, title, price, type
                     <div className="space-y-6">
                         {!isConnected ? (
                             <div className="text-center py-4">
-                                <p className="text-gray-300 mb-6 text-sm">Conectează wallet-ul pentru plată automată.</p>
+                                <p className="text-gray-300 mb-6 text-sm">Conectează wallet-ul pentru plată instant.</p>
                                 <div className="flex justify-center transform scale-110"><ConnectButton /></div>
                             </div>
                         ) : (
                             <>
                                 <div className="bg-blue-900/20 border border-blue-500/20 p-4 rounded-xl flex items-center justify-between">
-                                    <div className="flex items-center gap-2"><Globe size={18} className="text-blue-400"/><span className="text-sm text-gray-300">Rețea:</span></div>
-                                    <span className="font-bold text-white text-sm">{targetNetwork || "Unknown"}</span>
+                                    <div className="flex items-center gap-2"><Globe size={18} className="text-blue-400"/><span className="text-sm text-gray-300">Rețea Activă:</span></div>
+                                    <span className="font-bold text-white text-sm bg-blue-500/20 px-3 py-1 rounded-lg">{targetNetwork || "Unknown"}</span>
                                 </div>
                                 {!isPending && !isConfirming && (
-                                    <button onClick={handlePayment} className="w-full py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl shadow-lg flex items-center justify-center gap-2 transition-transform hover:scale-[1.02]">
-                                        Plătește {price} USDT
+                                    <button onClick={handlePayment} className="w-full py-4 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white font-bold rounded-xl shadow-lg flex items-center justify-center gap-2 transition-transform hover:scale-[1.02]">
+                                        Confirmă Plata
                                     </button>
                                 )}
-                                {isPending && <div className="text-center text-blue-400"><Loader2 className="animate-spin mx-auto mb-2"/> Confirmă în Wallet...</div>}
-                                {isConfirming && <div className="text-center text-yellow-400"><Loader2 className="animate-spin mx-auto mb-2"/> Se procesează...</div>}
-                                {writeError && <div className="text-center text-red-400 text-xs bg-red-500/10 p-2 rounded">Eroare: Verifică fondurile.</div>}
+                                {isPending && <div className="text-center text-blue-400 font-bold animate-pulse"><Loader2 className="animate-spin mx-auto mb-2"/> Confirmă în Metamask...</div>}
+                                {isConfirming && <div className="text-center text-yellow-400 font-bold animate-pulse"><Loader2 className="animate-spin mx-auto mb-2"/> Se procesează pe Blockchain...</div>}
+                                {writeError && <div className="text-center text-red-400 text-xs bg-red-500/10 p-2 rounded border border-red-500/20">Eroare: Fonduri insuficiente sau tranzacție anulată.</div>}
                             </>
                         )}
                     </div>
@@ -204,32 +250,31 @@ export default function CryptoPaymentModal({ isOpen, onClose, title, price, type
 
                 {activeTab === 'manual' && (
                     <div className="space-y-6">
-                        <div className="text-center mb-4"><p className="text-sm text-gray-400">Trimite exact <b>${price} USDT</b>.</p></div>
+                        <div className="text-center mb-4"><p className="text-sm text-gray-400">Trimite exact <b>${price} USDT</b> la una din adrese:</p></div>
                         
-                        <div className="bg-[#1a1f2e] p-4 rounded-xl border border-white/5 hover:border-red-500/50 transition-colors group">
-                            <div className="flex justify-between items-center mb-2"><span className="text-red-500 font-bold text-sm">TRON (TRC-20)</span><button onClick={() => copyToClipboard(WALLETS.TRON)} className="text-gray-400 hover:text-white"><Copy size={16}/></button></div>
-                            <div className="font-mono text-xs text-gray-300 break-all">{WALLETS.TRON}</div>
+                        <div className="bg-[#1a1f2e] p-4 rounded-xl border border-white/5 hover:border-red-500/50 transition-all group cursor-pointer" onClick={() => copyToClipboard(WALLETS.TRON)}>
+                            <div className="flex justify-between items-center mb-2"><span className="text-red-500 font-bold text-sm flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-red-500"></div> TRON (TRC-20)</span><Copy size={16} className="text-gray-500 group-hover:text-white"/></div>
+                            <div className="font-mono text-xs text-gray-300 break-all bg-black/30 p-2 rounded border border-white/5">{WALLETS.TRON}</div>
                         </div>
                         
-                        <div className="bg-[#1a1f2e] p-4 rounded-xl border border-white/5 hover:border-purple-500/50 transition-colors group">
-                            <div className="flex justify-between items-center mb-2"><span className="text-purple-500 font-bold text-sm">SOLANA</span><button onClick={() => copyToClipboard(WALLETS.SOLANA)} className="text-gray-400 hover:text-white"><Copy size={16}/></button></div>
-                            <div className="font-mono text-xs text-gray-300 break-all">{WALLETS.SOLANA}</div>
+                        <div className="bg-[#1a1f2e] p-4 rounded-xl border border-white/5 hover:border-purple-500/50 transition-all group cursor-pointer" onClick={() => copyToClipboard(WALLETS.SOLANA)}>
+                            <div className="flex justify-between items-center mb-2"><span className="text-purple-500 font-bold text-sm flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-purple-500"></div> SOLANA</span><Copy size={16} className="text-gray-500 group-hover:text-white"/></div>
+                            <div className="font-mono text-xs text-gray-300 break-all bg-black/30 p-2 rounded border border-white/5">{WALLETS.SOLANA}</div>
                         </div>
 
-                        {copied && <div className="text-center text-green-500 text-xs font-bold">Adresă Copiată!</div>}
+                        {copied && <div className="text-center text-green-500 text-xs font-bold animate-bounce">Adresă Copiată în Clipboard!</div>}
                         
-                        <button onClick={handleManualSent} className="w-full py-3 bg-white/10 hover:bg-white/20 text-white font-bold rounded-lg mt-4">
+                        <button onClick={handleManualSent} className="w-full py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl mt-2 border border-white/10 hover:border-white/30 transition-all">
                             Am efectuat transferul
                         </button>
                     </div>
                 )}
             </div>
 
-            {/* ✅ SMART PUSH - Aici e noutatea */}
-            <div className="p-4 bg-[#0a0f1e]/50 border-t border-white/5 text-center">
-                <p className="text-xs text-gray-500 mb-2">Nesigur dacă e momentul potrivit?</p>
-                <a href="/#ai" onClick={handleClose} className="inline-flex items-center gap-2 text-xs font-bold text-blue-400 hover:text-white transition-colors border border-blue-500/20 px-4 py-2 rounded-full hover:bg-blue-500/10">
-                    <BrainCircuit size={14}/> Întreabă-l pe Mihai AI
+            {/* AI Upsell */}
+            <div className="p-4 bg-[#0a0f1e]/80 border-t border-white/5 text-center backdrop-blur-sm">
+                <a href="/#ai" onClick={handleClose} className="inline-flex items-center gap-2 text-[10px] font-bold text-blue-400 hover:text-white transition-colors uppercase tracking-widest opacity-70 hover:opacity-100">
+                    <BrainCircuit size={12}/> Powered by Mihai AI
                 </a>
             </div>
 
@@ -237,4 +282,4 @@ export default function CryptoPaymentModal({ isOpen, onClose, title, price, type
       </div>
     </AnimatePresence>
   );
-}
+} 

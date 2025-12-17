@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@google/generative-ai": "^0.21.0",
     "@next/third-parties": "^16.0.7",
     "@rainbow-me/rainbowkit": "^2.2.9",
