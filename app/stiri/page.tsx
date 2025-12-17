@@ -1,6 +1,8 @@
 import { articles } from '@/lib/articles';
 import Navbar from '@/components/Navbar';
-import CategoryFilter from '@/components/CategoryFilter'; // ✅ Importul Nou
+import Footer from '@/components/Footer'; // ✅ Am adăugat Footer
+import CategoryFilter from '@/components/CategoryFilter';
+import FearGreed from '@/components/FearGreed'; // ✅ Componenta Nouă
 import Link from 'next/link';
 import Image from 'next/image';
 import { Calendar, ArrowRight, TrendingUp, TrendingDown, Minus, BrainCircuit, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -22,7 +24,7 @@ export default async function NewsPage({
   const currentPage = Number(params?.page) || 1;
   const categoryFilter = (params?.category as string) || 'all';
 
-  // --- 🧠 LOGICA DE FILTRARE INTELIGENTĂ ---
+  // --- 🧠 LOGICA DE FILTRARE ---
   const filteredArticles = articles.filter((article) => {
     const text = (article.title + article.summary + article.category).toLowerCase();
     
@@ -30,44 +32,50 @@ export default async function NewsPage({
       case 'btc':
         return text.includes('bitcoin') || text.includes('btc') || text.includes('satoshi') || text.includes('halving');
       case 'eth':
-        return text.includes('ethereum') || text.includes('eth') || text.includes('vitalik') || text.includes('blackrock'); // Blackrock are legătură cu ETH ETF acum
+        return text.includes('ethereum') || text.includes('eth') || text.includes('vitalik') || text.includes('blackrock');
       case 'macro':
         return text.includes('fomc') || text.includes('fed') || text.includes('inflatie') || text.includes('banca') || text.includes('cpi') || text.includes('trezorerie') || article.category.includes('MACRO') || article.category.includes('INSTITUȚIONAL');
       case 'alts':
-        // Tot ce e crypto dar nu e BTC/ETH specific sau e despre altseason
         return text.includes('solana') || text.includes('altcoin') || text.includes('altseason') || text.includes('token') || article.category.includes('ADOPȚIE');
       case 'edu':
         return article.category.includes('EDUCAȚIE') || article.category.includes('PSIHOLOGIE') || article.category.includes('SECURITATE');
       default:
-        return true; // 'all'
+        return true;
     }
   });
 
-  // Calculăm paginarea pe articolele filtrate
   const totalPages = Math.ceil(filteredArticles.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const endIndex = startIndex + ITEMS_PER_PAGE;
   const currentArticles = filteredArticles.slice(startIndex, endIndex);
 
   return (
-    <main className="min-h-screen bg-[#020617] text-white selection:bg-blue-500/30">
+    <main className="min-h-screen bg-[#020617] text-white selection:bg-blue-500/30 flex flex-col">
       <Navbar />
       
-      <div className="container mx-auto px-6 py-24">
+      <div className="container mx-auto px-6 py-24 flex-grow">
           
-          {/* HEADER PREMIUM */}
-          <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
-                  Market <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Intelligence</span>
-              </h1>
+          {/* HEADER PREMIUM + FEAR & GREED */}
+          <div className="flex flex-col items-center mb-12 gap-6 relative">
               
-              <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
-                  Nu doar titluri. <span className="text-white font-bold">Analiză strategică.</span><br/>
-                  Închidem anul 2025 în forță.
-              </p>
+              <div className="text-center">
+                <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight">
+                    Market <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Intelligence</span>
+                </h1>
+                
+                <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
+                    Nu doar titluri. <span className="text-white font-bold">Analiză strategică.</span>
+                </p>
+              </div>
+
+              {/* ✅ AICI ESTE WIDGETUL */}
+              <div className="animate-in slide-in-from-bottom-4 duration-700 fade-in">
+                <FearGreed />
+              </div>
+
           </div>
 
-          {/* ✅ NOUL COMPONENT DE FILTRARE */}
+          {/* FILTRARE */}
           <CategoryFilter />
 
           {/* LISTA ARTICOLE */}
@@ -149,13 +157,14 @@ export default async function NewsPage({
                     </Link>
                 ) : (
                     <button disabled className="flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 border border-white/5 text-gray-600 cursor-not-allowed">
-                        Pagina Următoare <ChevronRight size={20}/>
+                        <ChevronLeft size={20}/> Pagina Următoare
                     </button>
                 )}
             </div>
           )}
 
       </div>
+      <Footer />
     </main>
   );
 }
