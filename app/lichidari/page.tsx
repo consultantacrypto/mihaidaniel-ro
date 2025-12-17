@@ -1,5 +1,5 @@
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import Footer from '@/components/Footer'; // ✅ Acum merge pentru că ai creat fișierul
 import CryptoTicker from '@/components/CryptoTicker';
 import LiquidationFeed from '@/components/LiquidationChart'; 
 import { AlertTriangle, TrendingUp, Skull, Globe2 } from 'lucide-react';
@@ -12,13 +12,12 @@ export const metadata: Metadata = {
 
 export default function LiquidationsPage() {
   return (
-    <main className="min-h-screen bg-[#020617] text-white">
+    <main className="min-h-screen bg-[#020617] text-white flex flex-col">
       <CryptoTicker />
       <Navbar />
 
-      <div className="container mx-auto px-4 py-12 max-w-6xl">
+      <div className="container mx-auto px-4 py-12 max-w-6xl flex-grow">
         
-        {/* Header */}
         <div className="text-center mb-12">
             <span className="bg-blue-500/10 text-blue-400 border border-blue-500/20 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest inline-flex items-center gap-2 mb-4">
                 <Globe2 size={14}/> Agregator Global
@@ -31,10 +30,8 @@ export default function LiquidationsPage() {
             </p>
         </div>
 
-        {/* FEED-UL LIVE */}
         <div className="grid md:grid-cols-12 gap-8 items-start">
             
-            {/* Coloana Stângă: Explicații (4 coloane) */}
             <div className="md:col-span-4 space-y-6">
                 <div className="bg-gray-900/50 border border-gray-800 p-6 rounded-2xl relative overflow-hidden">
                     <div className="absolute top-0 right-0 p-4 opacity-10"><Skull size={80} /></div>
@@ -49,7 +46,7 @@ export default function LiquidationsPage() {
                         </li>
                         <li className="bg-green-900/20 border border-green-500/20 p-3 rounded-lg">
                             <strong className="text-green-400 block mb-1">Short Lichidat (Verde)</strong>
-                            <span className="text-gray-400 text-xs">Traderul a pariat că prețul va scădea. Prețul a crescut și exchange-ul a cumpărat forțat. <br/><strong>Efect:</strong> Presiune de cumpărare (Fuel for Pump).</span>
+                            <span className="text-gray-400 text-xs">Traderul a pariat că prețul va scădea. Prețul a crescut și exchange-ul a cumpărat forțat. <br/><strong>Efect:</strong> Presiune de cumpărare.</span>
                         </li>
                     </ul>
                 </div>
@@ -62,7 +59,6 @@ export default function LiquidationsPage() {
                 </div>
             </div>
 
-            {/* Coloana Centrală: Feed-ul (8 coloane) */}
             <div className="md:col-span-8">
                 <LiquidationFeed />
                 
@@ -81,7 +77,6 @@ export default function LiquidationsPage() {
 
         </div>
 
-        {/* CTA */}
         <div className="text-center border-t border-gray-800 pt-12 mt-12">
             <p className="text-gray-400 mb-6">Vrei să înțelegi cum să nu ajungi pe lista asta?</p>
             <a href="/stiri/mirajul-levierului-arma-financiara-distrugere" className="inline-flex items-center gap-2 bg-white text-black px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform shadow-[0_0_20px_rgba(255,255,255,0.2)]">

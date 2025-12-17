@@ -1,16 +1,15 @@
 "use client";
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { TrendingDown, TrendingUp, Activity, Zap, Layers } from 'lucide-react';
 
-// Structura unificată a datelor
 interface Liquidation {
   id: string;
   exchange: 'Binance' | 'Bybit' | 'OKX';
   symbol: string;
   side: 'Long' | 'Short';
   price: number;
-  amount: number; // Valoare în USD
+  amount: number; 
   time: number;
 }
 
@@ -18,15 +17,13 @@ export default function LiquidationFeed() {
   const [liquidations, setLiquidations] = useState<Liquidation[]>([]);
   const [activeFeeds, setActiveFeeds] = useState<string[]>([]);
 
-  // Funcție ajutătoare pentru a adăuga lichidări în listă (max 10)
   const addLiquidation = (liq: Liquidation) => {
-    setLiquidations((prev) => [liq, ...prev].slice(0, 10));
+    setLiquidations((prev) => [liq, ...prev].slice(0, 12)); // Păstrăm ultimele 12
   };
 
   useEffect(() => {
-    // --- 1. BINANCE CONNECTION ---
+    // 1. BINANCE
     const binanceWs = new WebSocket('wss://fstream.binance.com/ws/!forceOrder@arr');
-    
     binanceWs.onopen = () => setActiveFeeds(prev => [...prev, 'Binance']);
     binanceWs.onmessage = (event) => {
       try {
@@ -36,7 +33,7 @@ export default function LiquidationFeed() {
           id: `binance-${Date.now()}-${Math.random()}`,
           exchange: 'Binance',
           symbol: data.s.replace('USDT', ''),
-          side: data.S === 'SELL' ? 'Long' : 'Short', // Binance raportează ordinul executat (SELL pt Long rekt)
+          side: data.S === 'SELL' ? 'Long' : 'Short',
           price: parseFloat(data.p),
           amount: parseFloat(data.p) * parseFloat(data.q),
           time: Date.now(),
@@ -44,12 +41,10 @@ export default function LiquidationFeed() {
       } catch (e) { console.error(e); }
     };
 
-    // --- 2. BYBIT CONNECTION ---
+    // 2. BYBIT
     const bybitWs = new WebSocket('wss://stream.bybit.com/v5/public/linear');
-    
     bybitWs.onopen = () => {
       setActiveFeeds(prev => [...prev, 'Bybit']);
-      // Subscribe la canalul de lichidări
       bybitWs.send(JSON.stringify({ "op": "subscribe", "args": ["liquidation.BTCUSDT", "liquidation.ETHUSDT", "liquidation.SOLUSDT", "liquidation.XRPUSDT"] }));
     };
     bybitWs.onmessage = (event) => {
@@ -61,7 +56,7 @@ export default function LiquidationFeed() {
             id: `bybit-${Date.now()}-${Math.random()}`,
             exchange: 'Bybit',
             symbol: data.symbol.replace('USDT', ''),
-            side: data.side === 'Buy' ? 'Short' : 'Long', // Bybit raportează direcția opusă lichidării uneori, ajustăm
+            side: data.side === 'Buy' ? 'Short' : 'Long', 
             price: parseFloat(data.price),
             amount: parseFloat(data.price) * parseFloat(data.size),
             time: Date.now(),
@@ -70,9 +65,8 @@ export default function LiquidationFeed() {
       } catch (e) { console.error(e); }
     };
 
-    // --- 3. OKX CONNECTION ---
+    // 3. OKX
     const okxWs = new WebSocket('wss://ws.okx.com:8443/ws/v5/public');
-    
     okxWs.onopen = () => {
       setActiveFeeds(prev => [...prev, 'OKX']);
       okxWs.send(JSON.stringify({
@@ -85,9 +79,8 @@ export default function LiquidationFeed() {
         const msg = JSON.parse(event.data);
         if (msg.arg && msg.arg.channel === 'liquidation-orders' && msg.data) {
           const data = msg.data[0];
-          // OKX amount is in contracts (usually 1 contract = 100 USD for BTC, but varies). 
-          // Simplificăm pentru UI: folosim o estimare vizuală bazată pe size (sz)
-          const estimatedVal = parseFloat(data.bkPx) * parseFloat(data.sz) * 0.01; // Aproximare
+          // Estimare valoare contract OKX (aprox)
+          const estimatedVal = parseFloat(data.bkPx) * parseFloat(data.sz) * 0.01; 
           
           addLiquidation({
             id: `okx-${Date.now()}-${Math.random()}`,
@@ -110,7 +103,7 @@ export default function LiquidationFeed() {
   }, []);
 
   return (
-    <div className="w-full bg-[#0b1221] border border-blue-900/30 rounded-2xl p-6 shadow-2xl overflow-hidden relative min-h-[500px]">
+    <div className="w-full bg-[#0b1221] border border-blue-900/30 rounded-2xl p-6 shadow-2xl overflow-hidden relative min-h-[600px]">
       
       {/* Header */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 border-b border-gray-800 pb-4 gap-4">
@@ -140,7 +133,7 @@ export default function LiquidationFeed() {
         </div>
       </div>
 
-      {/* Lista de Lichidări */}
+      {/* Lista */}
       <div className="space-y-2">
         <div className="grid grid-cols-4 text-xs text-gray-500 uppercase font-bold px-4 mb-2 tracking-wider">
             <span>Exchange / Pereche</span>
@@ -161,14 +154,12 @@ export default function LiquidationFeed() {
               key={liq.id} 
               className={`grid grid-cols-4 items-center p-3 rounded-lg border transition-all duration-300 animate-in slide-in-from-top fade-in hover:scale-[1.01] ${
                 liq.side === 'Long' 
-                  ? 'bg-red-500/5 border-red-500/20 hover:bg-red-500/10' // Long Rekt (Roșu)
-                  : 'bg-green-500/5 border-green-500/20 hover:bg-green-500/10' // Short Rekt (Verde)
+                  ? 'bg-red-500/5 border-red-500/20 hover:bg-red-500/10' 
+                  : 'bg-green-500/5 border-green-500/20 hover:bg-green-500/10'
               }`}
             >
-              {/* 1. Exchange & Symbol */}
               <div className="flex flex-col">
                 <div className="flex items-center gap-2">
-                    {/* Badge Exchange */}
                     <span className={`text-[9px] px-1.5 rounded font-bold ${
                         liq.exchange === 'Binance' ? 'bg-yellow-500/20 text-yellow-500' :
                         liq.exchange === 'Bybit' ? 'bg-orange-500/20 text-orange-500' :
@@ -180,7 +171,6 @@ export default function LiquidationFeed() {
                 </div>
               </div>
 
-              {/* 2. Side (Long/Short) */}
               <div className="text-center">
                 <span className={`text-xs font-black px-2 py-1 rounded uppercase flex items-center justify-center gap-1 mx-auto w-fit ${
                     liq.side === 'Long' ? 'text-red-400 bg-red-900/20' : 'text-green-400 bg-green-900/20'
@@ -190,14 +180,12 @@ export default function LiquidationFeed() {
                 </span>
               </div>
 
-              {/* 3. Price */}
               <div className="text-right font-mono text-gray-300 text-sm">
                 ${liq.price.toLocaleString()}
               </div>
 
-              {/* 4. Amount */}
               <div className="text-right">
-                <span className={`font-mono font-bold text-sm ${liq.amount > 100000 ? 'text-yellow-400 animate-pulse' : 'text-white'}`}>
+                <span className={`font-mono font-bold text-sm ${liq.amount > 50000 ? 'text-yellow-400 animate-pulse' : 'text-white'}`}>
                     ${Math.floor(liq.amount).toLocaleString()}
                 </span>
                 {liq.amount > 50000 && (
@@ -209,7 +197,6 @@ export default function LiquidationFeed() {
         )}
       </div>
       
-      {/* Footer Info */}
       <div className="mt-6 pt-4 border-t border-gray-800 flex justify-between items-center text-[10px] text-gray-500">
         <p className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 bg-blue-500 rounded-full animate-pulse"></span>
