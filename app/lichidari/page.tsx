@@ -59,7 +59,8 @@ export default function LiquidationsPage() {
                 <div className="space-y-4">
                     <div className="flex items-center gap-2 mb-2">
                         <ShieldCheck size={16} className="text-blue-400"/>
-                        <span className="text-xs font-bold uppercase tracking-widest text-gray-400">Tradează pe Platforme Sigure</span>
+                        {/* ✅ CORECTAT: Tranzacționează */}
+                        <span className="text-xs font-bold uppercase tracking-widest text-gray-400">Tranzacționează pe Platforme Sigure</span>
                     </div>
 
                     {/* BYBIT CARD */}
