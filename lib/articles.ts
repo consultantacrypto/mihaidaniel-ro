@@ -5,7 +5,7 @@ export const articles = [
     title: "Bătălia Titanilor: MicroStrategy vs. BlackRock. Cine deține de fapt viitorul banilor tăi?",
     date: "19 Dec 2025",
     category: "ANALIZĂ INSTITUȚIONALĂ",
-    image: "/blackrock-strategy.jpg",
+    image: "/blackrockstrategy.jpg",
     impact: "bullish",
     summary: "Doi Giganți, Două Viziuni. Michael Saylor vrea tot Bitcoin-ul. Larry Fink vrea să tokenizeze Wall Street-ul. Amândoi cumpără masiv, dar jocul este diferit. Află cine îți mișcă portofoliul.",
     mihaiTake: "Tati, în colțul roșu îl avem pe Saylor, 'Maximalistul' care se împrumută să ia tot. În colțul albastru e Fink, 'Regele Wall Street', care vrea să mute bursa pe blockchain. Dacă nu înțelegi diferența dintre ei, joci la loto. MicroStrategy e pariul pe Raritate, BlackRock e pariul pe Utilitate. Ai nevoie de ambele.",
