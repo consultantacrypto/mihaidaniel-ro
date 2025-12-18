@@ -5,7 +5,7 @@ import CategoryFilter from '@/components/CategoryFilter';
 import FearGreed from '@/components/FearGreed';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Calendar, ArrowRight, TrendingUp, TrendingDown, Minus, BrainCircuit, ChevronLeft, ChevronRight, Activity } from 'lucide-react';
+import { Calendar, ArrowRight, TrendingUp, TrendingDown, Minus, ChevronLeft, ChevronRight, Activity } from 'lucide-react';
 
 export const metadata = {
   title: 'Market Intelligence | Știri Crypto Explicate',
@@ -47,32 +47,31 @@ export default async function NewsPage({
       
       <div className="container mx-auto px-6 py-16 flex-grow">
           
-          {/* --- HEADER INTEGRAT (COMPACT & PROFI) --- */}
+          {/* --- HEADER INTEGRAT --- */}
           <div className="max-w-4xl mx-auto mb-16 border-b border-white/5 pb-10">
                 
-                {/* 1. Eticheta deasupra */}
+                {/* 1. Eticheta */}
                 <div className="inline-flex items-center gap-2 text-blue-400 text-xs font-bold uppercase tracking-widest mb-4">
                     <Activity size={14} className="animate-pulse"/> Market Intelligence
                 </div>
 
-                {/* 2. Titlul Mare */}
+                {/* 2. Titlul */}
                 <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-none text-white">
                     Știri & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Analize</span>
                 </h1>
 
                 <div className="flex flex-col md:flex-row items-end justify-between gap-8">
-                    {/* 3. Textul Valoros (Stânga) */}
+                    {/* 3. Descriere */}
                     <p className="text-gray-400 text-lg md:text-xl max-w-lg leading-relaxed">
                         Nu citi doar știri. Înțelege contextul. <br/>
                         <span className="text-white font-bold">Analize strategice</span> pentru investitorii Smart Money.
                     </p>
 
-                    {/* 4. Widget-ul Discret (Dreapta, la nivelul ochilor) */}
+                    {/* 4. Widget Fear & Greed */}
                     <div className="w-full md:w-auto pl-0 md:pl-8 border-l-0 md:border-l border-white/10">
                         <FearGreed />
                     </div>
                 </div>
-
           </div>
 
           {/* FILTRE */}
@@ -90,6 +89,7 @@ export default async function NewsPage({
                                 src={item.image} 
                                 alt={item.title}
                                 fill 
+                                unoptimized={true} // ✅ AICI ESTE FIXUL PENTRU IMAGINE
                                 className="object-cover group-hover:scale-110 transition-transform duration-1000"
                                 sizes="(max-width: 768px) 100vw, 320px" 
                                 priority={idx < 2} 
