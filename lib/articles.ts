@@ -1,4 +1,109 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU (FDV TRAP) - ON TOP
+  {
+    slug: "capcana-fdv-matematica-nu-magie-crypto-tokenomics",
+    title: "Capcana FDV: Matematică, nu Magie. De ce moneda ta favorită va scădea 90% chiar dacă proiectul e revoluționar",
+    date: "18 Dec 2025",
+    category: "EDUCAȚIE & TOKENOMICS",
+    image: "/fdvvalue.jpg",
+    impact: "neutral",
+    summary: "Proiect bun, grafic oribil? Nu e manipulare, e matematică. Învață diferența critică dintre Market Cap și FDV înainte să devii 'Exit Liquidity' pentru fondurile de investiții.",
+    mihaiTake: "Tati, nu confunda Hype-ul cu matematica. Poți să ai cea mai bună tehnologie din lume, dacă tokenomics-ul e stricat, prețul se va duce la zero. Diferența dintre o investiție de succes și o 'țeapă' legală se numește Inflație. Verifică FDV-ul înainte să fii sacul de bani al VC-urilor.",
+    content: `
+      <p class="text-xl font-medium text-white mb-6">Câteodată, cumperi o monedă despre care toți vorbesc. Tehnologia e genială, parteneriatele sunt cu Google sau Microsoft, echipa e de top. Și totuși, prețul scade constant, lună de lună, în timp ce Bitcoin crește.</p>
+      <p class="mb-4">Te întrebi: <em>"Oare manipulează cineva piața?"</em></p>
+      <div class="bg-red-900/20 border-l-4 border-red-500 p-4 mb-6">
+        <strong class="text-white block mb-1">Răspunsul este NU.</strong>
+        <p class="text-gray-300">Nu e manipulare. Este Tokenomics. Ai cumpărat un proiect bun, dar ai făcut o investiție proastă. Diferența dintre cele două se numește <strong>Inflație</strong>.</p>
+      </div>
+      <p class="mb-6">În acest articol, vom demonta cel mai periculos mecanism din crypto: Raportul Market Cap vs. FDV.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">1. Iluzia Prețului: Market Cap vs. FDV</h3>
+      <p class="mb-4">Majoritatea investitorilor se uită la <strong>Market Cap</strong> (Capitalizarea de Piață).</p>
+      <div class="bg-gray-800 p-4 rounded-lg border border-gray-600 mb-4 font-mono text-sm text-green-400">
+        Formula: Preț x Monede în Circulație
+      </div>
+      <p class="mb-4">Aceasta îți arată cât valorează monedele disponibile acum.</p>
+      <p class="mb-4">Dar investitorii deștepți se uită la <strong>FDV</strong> (Fully Diluted Valuation).</p>
+      <div class="bg-gray-800 p-4 rounded-lg border border-gray-600 mb-8 font-mono text-sm text-blue-400">
+        Formula: Preț x TOTALUL Monedelor care vor exista vreodată
+      </div>
+
+      <div class="bg-blue-900/10 border border-blue-500/30 p-6 rounded-xl mb-8">
+        <h4 class="text-lg font-bold text-white mb-4">Exemplul care doare: Proiectul "FutureChain"</h4>
+        <ul class="space-y-2 text-gray-300">
+            <li>• Are un preț de <strong>1$</strong>.</li>
+            <li>• Are 10 milioane de monede în circulație. <strong>Market Cap = 10 Milioane $</strong>. (Pare ieftin, nu? Are loc de creștere!)</li>
+            <li className="text-red-400 font-bold mt-2">• DAR... numărul total de monede va fi de 1 miliard.</li>
+            <li className="text-white font-bold text-lg border-t border-white/10 pt-2 mt-2">FDV = 1 Miliard $.</li>
+        </ul>
+        <p class="mt-4 text-sm text-gray-400 italic">Dacă cumperi acum, tu evaluezi proiectul la 1 miliard, nu la 10 milioane. Restul de 990 de milioane de monede nu au dispărut. Ele stau în "vesting" (blocate) și urmează să inunde piața.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">2. Cine sunt vânzătorii? (Mecanismul VC)</h3>
+      <p class="mb-4">De ce există această diferență uriașă? Pentru că Fondurile de Investiții (Venture Capital - VCs) au cumpărat acea monedă cu 2 ani înaintea ta, la prețuri de nimic (Seed Round).</p>
+      
+      <div class="grid grid-cols-2 gap-4 mb-6">
+        <div class="bg-red-900/10 p-4 rounded text-center border border-red-500/20">
+            <span class="block text-gray-400 text-xs">Prețul Tău</span>
+            <strong class="text-white text-xl">1.00 $</strong>
+        </div>
+        <div class="bg-green-900/10 p-4 rounded text-center border border-green-500/20">
+            <span class="block text-gray-400 text-xs">Prețul VC</span>
+            <strong class="text-green-400 text-xl">0.01 $</strong>
+        </div>
+      </div>
+      
+      <p class="mb-4">Ei au un profit de 100x în momentul listării. Singurul lucru care îi oprește să vândă tot instantaneu este "Vesting Schedule" (Calendarul de Deblocare). De obicei, au o perioadă de blocare de 1 an ("Cliff"), urmată de deblocări lunare timp de 2-3 ani.</p>
+      <p class="bg-gray-800 p-4 rounded border-l-4 border-yellow-500 text-gray-300"><strong>Momentul Adevărului:</strong> În fiecare lună, milioane de monede noi sunt eliberate în portofelele VC-urilor. Ce crezi că fac cu ele? Le vând. Cui? Ție, care susții prețul. Aceasta este o presiune de vânzare constantă, infinită.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">3. Sindromul "Low Float, High FDV"</h3>
+      <p class="mb-4">În ciclul 2024-2025, aceasta a devenit o epidemie. Proiectele se lansează cu doar 5-10% din monede în circulație.</p>
+      <ul class="space-y-4 mb-6">
+        <li class="flex items-start gap-3">
+            <span class="text-green-500 font-bold">Avantaj pentru Ei:</span>
+            <span class="text-gray-300">Oferta fiind mică, prețul poate fi pompat ușor la lansare ("Pump").</span>
+        </li>
+        <li class="flex items-start gap-3">
+            <span class="text-red-500 font-bold">Dezavantaj pentru Tine:</span>
+            <span class="text-gray-300">Ești diluat masiv în următorii 2 ani.</span>
+        </li>
+      </ul>
+      <p class="mb-6">Dacă deții o monedă care are doar 10% din supply în piață, înseamnă că inflația viitoare este de 900%. Întreabă-te: ar cumpăra cineva Dolari sau Euro dacă ar ști că banca centrală va printa de 9 ori mai mulți bani anul viitor?</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">4. Cum te protejezi? (Checklist-ul de Supraviețuire)</h3>
+      <p class="mb-6">Înainte să apeși butonul "BUY", verifică aceste 3 lucruri pe CoinGecko sau CoinMarketCap:</p>
+
+      <div class="space-y-4">
+        <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+            <strong class="text-blue-400 block mb-2 text-lg">1. Raportul MC / FDV</strong>
+            <ul class="space-y-2 text-sm">
+                <li class="flex items-center gap-2"><span class="text-green-500">✅</span> <span>Dacă e > 0.8 (80% din monede sunt în piață): Ești în siguranță. (Ex: Bitcoin, Ethereum).</span></li>
+                <li class="flex items-center gap-2"><span class="text-red-500">❌</span> <span>Dacă e < 0.2 (Sub 20% în piață): PERICOL. Ești "Exit Liquidity".</span></li>
+            </ul>
+        </div>
+        
+        <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+            <strong class="text-blue-400 block mb-2 text-lg">2. Unlock-urile Viitoare</strong>
+            <p class="text-sm text-gray-300 mb-2">Folosește site-uri precum TokenUnlocks.app. Vezi când e următorul "Cliff".</p>
+            <p class="text-xs text-yellow-500 font-bold">SFAT: Nu cumpăra niciodată cu 2 săptămâni înainte de un unlock major. Prețul scade aproape garantat.</p>
+        </div>
+
+        <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+            <strong class="text-blue-400 block mb-2 text-lg">3. Cine deține monedele?</strong>
+            <p class="text-sm text-gray-300">Dacă "Echipa" și "Investitorii" dețin 60% din tokenuri, proiectul este centralizat. Tu ești doar un pasager în mașina lor.</p>
+        </div>
+      </div>
+
+      <div class="p-8 bg-gradient-to-r from-gray-900 to-black border border-red-500/30 rounded-2xl mt-12 text-center shadow-xl">
+        <h4 class="text-2xl font-bold text-white mb-4">Concluzie: Nu fi sacul lor de bani</h4>
+        <p class="text-gray-300 mb-4">Un proiect poate schimba lumea prin tehnologie, dar poate fi o investiție falimentară din cauza tokenomics-ului.</p>
+        <p class="text-white font-bold text-lg italic">"Nu confunda Hype-ul cu matematica. În 2026, banii se vor face pe proiectele care au trecut de perioada de inflație, nu pe cele care abia încep să își dilueze investitorii."</p>
+        <p class="text-green-400 font-bold mt-4">Verifică FDV-ul. Salvează-ți portofoliul.</p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU (MICROSTRATEGY VS BLACKROCK)
   {
     slug: "batalia-titanilor-microstrategy-vs-blackrock-viitorul-banilor",
