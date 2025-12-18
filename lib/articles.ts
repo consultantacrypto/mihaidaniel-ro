@@ -1,4 +1,92 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU (MICROSTRATEGY VS BLACKROCK) - ON TOP
+  {
+    slug: "batalia-titanilor-microstrategy-vs-blackrock-viitorul-banilor",
+    title: "Bătălia Titanilor: MicroStrategy vs. BlackRock. Cine deține de fapt viitorul banilor tăi?",
+    date: "19 Dec 2025",
+    category: "ANALIZĂ INSTITUȚIONALĂ",
+    image: "/blackrock-strategy.jpg",
+    impact: "bullish",
+    summary: "Doi Giganți, Două Viziuni. Michael Saylor vrea tot Bitcoin-ul. Larry Fink vrea să tokenizeze Wall Street-ul. Amândoi cumpără masiv, dar jocul este diferit. Află cine îți mișcă portofoliul.",
+    mihaiTake: "Tati, în colțul roșu îl avem pe Saylor, 'Maximalistul' care se împrumută să ia tot. În colțul albastru e Fink, 'Regele Wall Street', care vrea să mute bursa pe blockchain. Dacă nu înțelegi diferența dintre ei, joci la loto. MicroStrategy e pariul pe Raritate, BlackRock e pariul pe Utilitate. Ai nevoie de ambele.",
+    content: `
+      <p class="text-xl font-medium text-white mb-6">În colțul roșu, îl avem pe <strong>Michael Saylor (MicroStrategy)</strong>: vizionarul radical, "Maximalistul", omul care împrumută miliarde de dolari pentru a cumpăra fiecare Bitcoin disponibil.</p>
+      <p class="mb-4">În colțul albastru, îl avem pe <strong>Larry Fink (BlackRock)</strong>: "Regele Wall Street-ului", omul care gestionează 10 trilioane de dolari și care vede crypto nu ca pe o religie, ci ca pe o clasă de active.</p>
+      <p class="mb-6 border-l-4 border-yellow-500 pl-4 italic text-gray-300">Amândoi cumpără masiv. Dar "DE CE" și "CUM" o fac este total diferit. Dacă nu înțelegi diferența, nu înțelegi cine îți mișcă portofoliul.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">1. MicroStrategy (MSTR): "Corporația Bitcoin"</h3>
+      <div class="bg-red-900/10 border-l-4 border-red-500 p-6 rounded-r-xl mb-6">
+        <ul class="space-y-2">
+            <li><strong>Strategia:</strong> "Leveraged Long" (Pariu cu Levier pe termen infinit).</li>
+            <li><strong>Activ:</strong> Exclusiv Bitcoin.</li>
+        </ul>
+      </div>
+      <p class="mb-4"><strong>Mod de operare:</strong> MicroStrategy nu este un fond de investiții. Este o companie operațională care emite datorie (obligațiuni convertibile) pentru a cumpăra Bitcoin.</p>
+      <p class="mb-4">Saylor a descoperit ceea ce piața numește <strong>"Infinite Money Glitch"</strong>:</p>
+      <ol class="list-decimal pl-6 space-y-2 text-gray-300 mb-6">
+        <li>Acțiunile MSTR cresc pentru că dețin Bitcoin.</li>
+        <li>Compania vinde acțiuni sau se împrumută la dobânzi mici.</li>
+        <li>Cu banii, cumpără și mai mult Bitcoin.</li>
+        <li>Prețul Bitcoin crește, acțiunile cresc... și ciclul se repetă.</li>
+      </ol>
+      <p class="text-white font-bold">Impact: MicroStrategy scoate Bitcoin din circulație pentru totdeauna. Ei nu vând. Ei sunt "Black Hole"-ul (Gaură Neagră) care absoarbe oferta. Scopul lor este să devină cea mai bogată companie din lume prin simpla deținere a rezervei mondiale de valoare.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">2. BlackRock (IBIT/ETHA): "Supermarketul Financiar"</h3>
+      <div class="bg-blue-900/10 border-l-4 border-blue-500 p-6 rounded-r-xl mb-6">
+        <ul class="space-y-2">
+            <li><strong>Strategia:</strong> "Asset Access" (Facilitarea Accesului) & "Tokenization".</li>
+            <li><strong>Activ:</strong> Bitcoin (Aur Digital) și Ethereum (Sistemul de Operare).</li>
+        </ul>
+      </div>
+      <p class="mb-4"><strong>Mod de operare:</strong> BlackRock NU pariază banii proprii. Ei cumpără crypto doar dacă clienții lor cumpără acțiuni la ETF-urile lor (IBIT sau ETHA).</p>
+      <ul class="list-disc pl-6 space-y-3 text-gray-300 mb-6">
+        <li><strong>Pentru Bitcoin:</strong> Îl văd ca pe un "Flight to Safety" (refugiu), o alternativă la aur.</li>
+        <li><strong>Pentru Ethereum:</strong> Aici este marea diferență față de Saylor. Larry Fink a declarat public: <em>"Următorul pas este tokenizarea activelor financiare"</em>. BlackRock vede Ethereum nu ca pe o monedă, ci ca pe infrastructura pe care se vor muta bursele de valori, imobiliarele și obligațiunile.</li>
+      </ul>
+      <p class="text-white font-bold">Impact: BlackRock aduce Legitimitate și Distribuție. Ei pun crypto în portofoliile bunicilor și ale fondurilor de pensii. Dacă Saylor creează "Scarcity" (Raritate), BlackRock creează "Adoption" (Adoptare).</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">3. Războiul Viziunilor: De ce Ethereum este Câmpul de Luptă</h3>
+      <p class="mb-4">Aici se despart drumurile.</p>
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-gray-800 p-4 rounded-xl border border-red-500/30">
+            <strong class="text-red-400 block mb-2">Viziunea Saylor</strong>
+            <p class="text-sm text-gray-300">Consideră că Ethereum este o "Security" (valoare mobiliară), centralizată și riscantă. El pariază doar pe stabilitatea imuabilă a Bitcoin. Pentru el, Crypto = Bitcoin.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-xl border border-blue-500/30">
+            <strong class="text-blue-400 block mb-2">Viziunea Fink</strong>
+            <p class="text-sm text-gray-300">Pariază pe utilitate. Fondul lui tokenizat pe Ethereum (BUIDL) arată clar intenția: vrea să mute Wall Street-ul on-chain. Pentru BlackRock, Bitcoin este seiful, dar Ethereum este autostrada.</p>
+        </div>
+      </div>
+      <p class="mb-6"><strong>Ce înseamnă asta pentru tine?</strong> Când BlackRock pompează narativul de "Tokenizare" (RWA - Real World Assets), prețul Ethereum și al ecosistemului său va exploda, indiferent ce crede Saylor. Instituțiile au nevoie de smart contracts, iar Bitcoin nu le oferă nativ.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">4. Concluzie: Cum să profiți de amândoi?</h3>
+      <p class="mb-4">Nu trebuie să alegi o tabără. Trebuie să înțelegi fluxurile.</p>
+      <ul class="space-y-4 mb-8">
+        <li class="flex items-start gap-3">
+            <span class="text-red-500 text-xl">🟥</span>
+            <div>
+                <strong class="text-white">Când Saylor cumpără:</strong>
+                <p class="text-gray-400 text-sm">El ridică podeaua prețului Bitcoin. El ne protejează de scăderi masive prin absorbția ofertei. Urmărește anunțurile lui de achiziție ca semnal de confirmare a trendului.</p>
+            </div>
+        </li>
+        <li class="flex items-start gap-3">
+            <span class="text-blue-500 text-xl">🟦</span>
+            <div>
+                <strong class="text-white">Când BlackRock vorbește:</strong>
+                <p class="text-gray-400 text-sm">Urmărește ce face, nu doar ce zice. Dacă BlackRock lansează produse pe Ethereum, înseamnă că "Smart Money" se pregătește de DeFi instituțional.</p>
+            </div>
+        </li>
+      </ul>
+
+      <div class="p-6 bg-gradient-to-r from-gray-900 to-black border border-white/20 rounded-2xl mt-8 shadow-xl text-center">
+        <h4 class="text-xl font-bold text-white mb-4">VERDICTUL</h4>
+        <p class="text-gray-300 mb-2">MicroStrategy este pariul tău pe <strong>Raritate</strong> (Bitcoin va valora milioane pentru că e limitat).</p>
+        <p class="text-gray-300 mb-4">BlackRock este pariul tău pe <strong>Utilitate</strong> (Blockchain-ul va înlocui băncile).</p>
+        <p class="text-green-400 font-bold text-lg">În portofoliul tău, ai nevoie de ambele viziuni.</p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU (CLARITY ACT) - PUNE-L PRIMUL
   {
     slug: "clarity-act-adio-vestul-salbatic-crypto-2026",
