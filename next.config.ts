@@ -4,10 +4,7 @@ const nextConfig: NextConfig = {
   // @ts-ignore - Ignorăm eroarea de tip, proprietatea e validă pentru Next.js 16+
   turbopack: {},
 
-  // @ts-ignore - Ignorăm eroarea de tip, vrem doar să treacă build-ul
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+
 
   // 1. Optimizare Pachete (Tree-Shaking)
   experimental: {
