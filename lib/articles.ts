@@ -1,4 +1,84 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU (RAZBOIUL LICHIDITATII) - ON TOP
+  {
+    slug: "razboiul-lichiditatii-sua-vs-japonia-cine-castiga-bitcoin",
+    title: "Războiul Lichidității: SUA apasă accelerația, Japonia trage frâna de mână. Cine câștigă bătălia pentru Bitcoin?",
+    date: "19 Dec 2025",
+    category: "MACROECONOMIE GLOBALĂ",
+    image: "/fedboj.jpg",
+    impact: "neutral",
+    summary: "Asistăm la un fenomen rar: Divergența Politicilor Monetare. SUA tipărește bani, Japonia îi retrage. Bitcoin e prins la mijloc. Analizăm indicatorul suprem de lichiditate netă pentru a vedea viitorul.",
+    mihaiTake: "Tati, ești într-o mașină cu două pedale apăsate simultan. SUA apasă accelerația (bani ieftini), Japonia trage frâna de mână (dobânzi mari). Pe termen scurt, motorul se îneacă și avem volatilitate. Dar pe termen lung? Puterea de tipărire a Americii e mai mare decât puterea de strângere a Japoniei. Nu lăsa zgomotul din Tokyo să te facă să pierzi trendul din New York.",
+    content: `
+      <p class="text-xl font-medium text-white mb-6">Dacă te uiți la graficul Bitcoin și ești confuz, nu ești singurul. Într-o zi avem știri pozitive din SUA, a doua zi avem panică din Asia.</p>
+      <p class="mb-4">Motivul? Asistăm la un fenomen rar în economia globală: <strong>Divergența Politicilor Monetare</strong>.</p>
+      
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-green-900/10 border border-green-500/30 p-4 rounded-xl">
+            <strong class="text-green-400 block mb-2 text-lg">🇺🇸 SUA (Accelerația)</strong>
+            <p class="text-sm text-gray-300">Rezerva Federală (FED) a început să taie ratele și să injecteze lichiditate ("Money Printer Go Brrr").</p>
+        </div>
+        <div class="bg-red-900/10 border border-red-500/30 p-4 rounded-xl">
+            <strong class="text-red-400 block mb-2 text-lg">🇯🇵 Japonia (Frâna)</strong>
+            <p class="text-sm text-gray-300">Banca Japoniei (BOJ) tocmai a majorat ratele la 0.75%, scumpind banii și retrăgând lichiditate.</p>
+        </div>
+      </div>
+
+      <p class="mb-6">Bitcoin, fiind cel mai sensibil "barometru" al lichidității globale, este prins la mijloc. Este ca și cum ai încerca să conduci un Ferrari cu piciorul pe accelerație (SUA), dar cu frâna de mână trasă (Japonia).</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">1. Frontul American: "Fed Pivot" și Puterea ETF-urilor</h3>
+      <p class="mb-4">În SUA, narativul este clar <strong class="text-green-400">Bullish</strong>. Inflația a scăzut, iar FED-ul a redus dobânzile pentru a evita recesiunea.</p>
+      
+      <ul class="space-y-4 mb-6">
+        <li class="bg-gray-800 p-4 rounded-xl border-l-4 border-green-500">
+            <strong class="text-white block mb-1">Ce înseamnă asta:</strong>
+            <span class="text-gray-300 text-sm">Dolarul devine mai ieftin. Istoric, când Dolarul (DXY) scade, activele riscante (Bitcoin, Aur, Acțiuni Tech) cresc.</span>
+        </li>
+        <li class="bg-gray-800 p-4 rounded-xl border-l-4 border-green-500">
+            <strong class="text-white block mb-1">Factorul ETF:</strong>
+            <span class="text-gray-300 text-sm">BlackRock și Fidelity acționează ca un zid de protecție. În ciuda volatilității, fluxurile în ETF-uri (Inflows) rămân pozitive. Instituțiile americane profită de orice scădere cauzată de panică pentru a acumula.</span>
+        </li>
+      </ul>
+      <p class="text-green-400 font-bold mb-8">Efect: Presiune de CUMPĂRARE constantă pe termen mediu/lung.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">2. Frontul Japonez: "Yen Shock" și Frâna de Mână</h3>
+      <p class="mb-4">Aici este sursa durerii actuale. Decizia BOJ de săptămâna aceasta (Decembrie 2025) de a duce rata la 0.75% a trimis unde de șoc.</p>
+      
+      <div class="bg-red-900/10 p-6 rounded-xl border border-red-500/30 mb-6">
+        <p class="mb-3"><strong class="text-red-400">Problema:</strong> "Carry Trade-ul" (banii împrumutați ieftin din Japonia pentru a cumpăra crypto) devine neprofitabil. Fondurile speculative sunt forțate să vândă active pentru a returna Yenii.</p>
+        <p><strong class="text-red-400">Realitatea:</strong> Japonia este cel mai mare creditor al lumii. Când ei strâng cureaua, lichiditatea globală se contractă instantaneu.</p>
+      </div>
+      <p class="text-red-400 font-bold mb-8">Efect: Presiune de VÂNZARE violentă pe termen scurt.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">3. Indicatorul Suprem: "Global Net Liquidity"</h3>
+      <p class="mb-4">Cum știi cine câștigă? Nu te uita la știri, uită-te la graficul Lichidității Nete Globale.</p>
+      
+      <div class="bg-blue-900/20 p-6 rounded-xl border border-blue-500/50 text-center my-8">
+        <p class="text-gray-400 text-sm uppercase tracking-widest mb-2">Formula Secretă</p>
+        <p class="text-xl md:text-2xl font-mono text-white font-bold">
+            Bilanțul FED + Bilanțul BOJ + Bilanțul BCE <br/> <span class="text-red-400">- TGA (Contul Trezoreriei SUA)</span>
+        </p>
+      </div>
+
+      <p class="mb-4"><strong>Situația de azi (Decembrie 2025):</strong> Deși Japonia retrage bani, Statele Unite și China injectează bani mult mai agresiv.</p>
+      <ul class="list-disc pl-6 space-y-2 text-gray-300 mb-6">
+        <li><strong>Rezultatul Net:</strong> Lichiditatea Globală este în creștere ușoară, dar cu turbulențe.</li>
+        <li>Puterea de "tipărire" a SUA este, matematic, mai mare decât puterea de "strângere" a Japoniei.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">4. Concluzie: Volatilitate acum, Explozie după</h3>
+      <p class="mb-4">Suntem într-o perioadă de tranziție dureroasă. Piața trebuie să "digere" ieșirea Japoniei din era dobânzilor zero. Această digestie provoacă greață (scăderi bruște, lichidări de leverage).</p>
+      <p class="mb-6">Dar, odată ce pozițiile speculative pe Yen sunt curățate (probabil până la finalul Q1 2026), rămânem doar cu forța dominantă: Relaxarea Monetară a SUA.</p>
+
+      <div class="p-8 bg-gradient-to-r from-gray-900 to-black border border-white/10 rounded-2xl mt-8 text-center shadow-2xl">
+        <h4 class="text-2xl font-bold text-white mb-4">VERDICTUL</h4>
+        <p class="text-gray-300 mb-2">🇯🇵 BOJ poate cauza o corecție de 10-20% (oportunitate de cumpărare).</p>
+        <p class="text-gray-300 mb-4">🇺🇸 Dar FED-ul și ETF-urile dictează trendul multianual.</p>
+        <p class="text-blue-400 font-bold text-lg italic">"Nu lăsa zgomotul din Tokyo să te facă să pierzi trendul din New York."</p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU (FDV TRAP) - ON TOP
   {
     slug: "capcana-fdv-matematica-nu-magie-crypto-tokenomics",
