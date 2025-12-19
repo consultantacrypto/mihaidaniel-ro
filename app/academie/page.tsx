@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { dictionary } from '@/lib/dictionary';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Search, BookOpen, Database, Activity, BrainCircuit, ShieldCheck, TrendingUp, ArrowRight } from 'lucide-react';
+import { Search, BookOpen, Database, Activity, BrainCircuit, ShieldCheck, TrendingUp, ArrowRight, Lock } from 'lucide-react';
 
 export const metadata = {
   title: 'Academia Crypto | Dicționar Explicat de Mihai Daniel',
@@ -18,6 +18,7 @@ export default function AcademyPage() {
       {/* HERO SECTION */}
       <div className="relative pt-32 pb-20 px-6 overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+        
         <div className="container mx-auto max-w-4xl text-center relative z-10">
             <div className="inline-flex items-center gap-2 text-cyan-400 text-xs font-bold uppercase tracking-widest mb-6 border border-cyan-500/20 px-4 py-2 rounded-full bg-cyan-900/10">
                 <BookOpen size={14}/> Biblioteca Investitorului
@@ -33,7 +34,7 @@ export default function AcademyPage() {
         </div>
       </div>
 
-      {/* LISTA DE ARTICOLE CU IMAGINI */}
+      {/* LISTA DE ARTICOLE */}
       <div className="container mx-auto px-6 pb-24">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {dictionary.map((item) => (
@@ -51,16 +52,26 @@ export default function AcademyPage() {
                              unoptimized={true}
                            />
                         )}
+                        
+                        {/* ICONIȚE CATEGORII - ACTUALIZATE PENTRU NOILE TIPURI */}
                         <div className="absolute top-4 left-4 z-20 backdrop-blur-md bg-black/50 rounded-lg p-1.5 border border-white/10">
-                             {item.category === 'FUNDAMENTE' && <Database size={16} className="text-orange-400"/>}
-                             {item.category === 'TRADING' && <Activity size={16} className="text-green-400"/>}
-                             {item.category === 'DEFI' && <BrainCircuit size={16} className="text-purple-400"/>}
+                             {item.category === 'BITCOIN & FUNDAMENTE' && <Database size={16} className="text-orange-400"/>}
+                             {item.category === 'TRADING & CHARTURI' && <Activity size={16} className="text-green-400"/>}
+                             {item.category === 'DEFI & WEB3' && <BrainCircuit size={16} className="text-purple-400"/>}
+                             {item.category === 'SECURITATE & WALLETS' && <ShieldCheck size={16} className="text-blue-400"/>}
+                             {item.category === 'PSIHOLOGIE & CICLE' && <TrendingUp size={16} className="text-yellow-400"/>}
                         </div>
                     </div>
                     
                     {/* TEXTUL */}
                     <div className="p-6 flex flex-col flex-grow">
-                        <span className="text-[10px] font-mono text-cyan-500 uppercase tracking-widest mb-2">
+                        {/* Culoarea textului de categorie în funcție de tip */}
+                        <span className={`text-[10px] font-mono uppercase tracking-widest mb-2 ${
+                            item.category === 'BITCOIN & FUNDAMENTE' ? 'text-orange-400' :
+                            item.category === 'TRADING & CHARTURI' ? 'text-green-400' :
+                            item.category === 'DEFI & WEB3' ? 'text-purple-400' :
+                            'text-cyan-500'
+                        }`}>
                             {item.category}
                         </span>
                         
