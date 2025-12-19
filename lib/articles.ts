@@ -1,4 +1,74 @@
 export const articles = [
+// ✅ ARTICOL NOU (TRUMP VS CLARITY ACT) - ON TOP
+  {
+    slug: "sabotaj-involuntar-trump-legea-claritatii-altseason-hoskinson",
+    title: "SABOTAJ INVOLUNTAR? Cum a 'deraiat' Trump Legea Clarității și a înghețat Altseason-ul (Acuzațiile lui Charles Hoskinson)",
+    date: "19 Dec 2025",
+    category: "POLITICĂ & PIEȚE",
+    image: "/trumpclarity.jpg",
+    impact: "neutral",
+    summary: "Charles Hoskinson aruncă bomba: Legea care trebuia să salveze crypto era ca și adoptată, dar lansarea proiectului DeFi al familiei Trump a transformat totul într-un război politic. Află de ce Altcoin-urile tale suferă.",
+    mihaiTake: "Tati, asta e dovada clară că în Washington nu contează ce e corect, contează cum arată la TV. Bitcoin câștigă pentru că nu are nevoie de legi noi. Altcoin-urile sunt încă ostatici politici. Până nu se separă inovația de campania electorală, instituțiile stau pe margine.",
+    content: `
+      <p class="text-xl font-medium text-white mb-6">În culisele de la Washington, se pregătea o victorie istorică. Charles Hoskinson, fondatorul Cardano și unul dintre cei mai vocali lideri din industrie, a aruncat recent o bombă mediatică: Legea care trebuia să salveze crypto (Clarity Act) era ca și adoptată... până când a intervenit Donald Trump.</p>
+      
+      <p class="mb-4">Nu, Trump nu a fost împotriva ei. Din contră. Dar lansarea propriului său proiect crypto într-un moment critic a transformat o lege tehnologică într-o armă politică.</p>
+      
+      <div class="bg-gray-800 border-l-4 border-yellow-500 p-4 mb-6">
+        <strong class="text-white block mb-1">Miza Articolului:</strong>
+        <p class="text-gray-300">Hai să disecăm această situație, pentru că ea explică de ce portofoliul tău de Altcoins a suferit în ultimele luni, în timp ce Bitcoin a performat.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">1. Scenariul Perfect: "The Clarity Act"</h3>
+      <p class="mb-4">Până la finalul lui 2024, lobby-ul crypto reușise imposibilul. După ani de teroare sub Gary Gensler (SEC), se formase un consens bipartizan (atât Republicani, cât și Democrați).</p>
+      
+      <ul class="space-y-4 mb-8">
+        <li class="flex items-start gap-3">
+            <span class="bg-green-500/20 text-green-400 p-1 rounded font-bold text-xs mt-1">PROIECȚIA</span>
+            <span class="text-gray-300">Aproximativ 70 de Senatori erau gata să voteze "DA" pentru Clarity Act.</span>
+        </li>
+        <li class="flex items-start gap-3">
+            <span class="bg-blue-500/20 text-blue-400 p-1 rounded font-bold text-xs mt-1">MIZA</span>
+            <span class="text-gray-300">Legea ar fi oferit statut clar pentru Altcoins (Solana, Cardano, etc.), clasificându-le drept mărfuri, nu acțiuni. Asta ar fi declanșat un val masiv de investiții instituționale în Altcoins.</span>
+        </li>
+      </ul>
+      <p class="text-gray-400 italic mb-6">Totul era pregătit. Șampania era la rece.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">2. Momentul Rupturii: Lansarea "TrumpCoin"</h3>
+      <p class="mb-4">Exact în acest climat delicat, Donald Trump și familia sa au lansat propriul proiect DeFi (World Liberty Financial) și au început să promoveze agresiv narativul crypto.</p>
+      
+      <div class="bg-red-900/10 border border-red-500/30 p-6 rounded-xl mb-6">
+        <h4 class="text-lg font-bold text-red-400 mb-2">De ce a fost asta o problemă?</h4>
+        <p class="text-white font-medium mb-4">Hoskinson explică simplu: "Optica s-a schimbat instantaneu".</p>
+        <ul class="list-disc pl-5 space-y-2 text-gray-300">
+            <li>Până atunci, a vota pentru Crypto însemna a vota pentru <strong>inovație și locuri de muncă</strong>.</li>
+            <li>După lansare, a vota pentru Crypto însemna, în ochii alegătorilor și ai presei, a-l susține pe <strong>Donald Trump și afacerile lui personale</strong>.</li>
+        </ul>
+      </div>
+
+      <p class="mb-4"><strong>Reacția în lanț:</strong> Democrații moderați, care erau gata să voteze legea, s-au retras speriați. Nu puteau risca să fie atacați în campanie că "ajută afacerile familiei Trump". Subiectul a devenit toxic politic. Legea a fost pusă "pe tușă".</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">3. Victima Colaterală: De ce Altcoin-urile au rămas în urmă?</h3>
+      <p class="mb-6">Această mișcare politică a creat o distorsiune majoră în piață, pe care o simțim și azi.</p>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-[#0a0f1e] p-5 rounded-xl border border-green-500/20">
+            <strong class="text-green-400 text-lg block mb-2">Bitcoin (BTC)</strong>
+            <p class="text-sm text-gray-400">Nu a fost afectat. El are deja claritate (este marfă/commodity) și este susținut de BlackRock. De aceea Bitcoin a atins noi maxime.</p>
+        </div>
+        <div class="bg-[#0a0f1e] p-5 rounded-xl border border-red-500/20">
+            <strong class="text-red-400 text-lg block mb-2">Altcoins (ADA, SOL, XRP)</strong>
+            <p class="text-sm text-gray-400">Au rămas în zona gri. Fără "Clarity Act", instituțiile nu au curajul să investească masiv în ele, de frică să nu fie date în judecată de SEC.</p>
+        </div>
+      </div>
+
+      <div class="p-6 bg-gradient-to-r from-gray-900 to-black border border-white/10 rounded-2xl shadow-xl">
+        <p class="text-gray-300 italic mb-2">Charles Hoskinson este tranșant:</p>
+        <p class="text-white font-bold text-lg">"Dacă Trump ar fi așteptat ca legea să treacă mai întâi și abia apoi își lansa proiectul, am fi avut astăzi și claritate legală, și un Altseason exploziv."</p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU (RAZBOIUL LICHIDITATII) - ON TOP
   {
     slug: "razboiul-lichiditatii-sua-vs-japonia-cine-castiga-bitcoin",
