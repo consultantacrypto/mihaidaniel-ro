@@ -1,7 +1,7 @@
 'use client';
 
 import { ConnectButton } from '@rainbow-me/rainbowkit';
-import { Youtube, BrainCircuit, Crown, Menu, X, Newspaper, BarChart3 } from 'lucide-react';
+import { Youtube, BrainCircuit, Crown, Menu, X, Newspaper, BarChart3, BookOpen } from 'lucide-react';
 import { useState } from 'react';
 import Link from 'next/link';
 
@@ -33,21 +33,30 @@ export default function Navbar() {
           </div>
       </Link>
       
-      <div className="hidden lg:flex items-center gap-8 text-sm font-medium text-gray-300">
+      {/* --- DESKTOP MENU --- */}
+      <div className="hidden lg:flex items-center gap-6 text-sm font-medium text-gray-300">
+          
           <Link href="/stiri" className="hover:text-white transition-colors flex items-center gap-2">
-            <Newspaper size={16}/> Știri Crypto
+            <Newspaper size={16}/> Știri
+          </Link>
+
+          {/* ✅ ACADEMIA - Plasată strategic lângă știri, dar cu accent de educație (Cyan) */}
+          <Link href="/academie" className="hover:text-cyan-400 transition-colors flex items-center gap-2 group">
+            <BookOpen size={16} className="group-hover:scale-110 transition-transform"/> 
+            Academia
           </Link>
           
-          {/* ✅ LINK NOU CĂTRE PAGINA DE LICHIDĂRI */}
           <Link href="/lichidari" className="flex items-center gap-2 text-red-400 bg-red-500/10 px-3 py-1 rounded-full border border-red-500/20 hover:bg-red-500/20 transition-all">
-            <BarChart3 size={14} /> Lichidări Live
+            <BarChart3 size={14} /> Lichidări
           </Link>
           
+          <div className="h-4 w-px bg-white/10 mx-2"></div> {/* Separator Vizual */}
+
           <a href="/#ai" className="hover:text-blue-400 transition-colors flex items-center gap-2 group">
-            <BrainCircuit size={14} className="group-hover:animate-pulse"/> Mihai AI
+            <BrainCircuit size={14} className="group-hover:animate-pulse"/> AI
           </a>
           <a href="/#consultanta" className="hover:text-yellow-400 transition-colors flex items-center gap-2">
-            <Crown size={14} className="text-yellow-500"/> VIP Mentorship
+            <Crown size={14} className="text-yellow-500"/> VIP
           </a>
           
           <a href="https://www.youtube.com/@DanielMihaiCrypto" target="_blank" className="flex items-center gap-2 text-red-400 bg-red-500/10 px-3 py-1 rounded-full border border-red-500/20 text-xs hover:bg-red-500/20 transition-all cursor-pointer" aria-label="Canal YouTube Mihai Daniel">
@@ -63,17 +72,28 @@ export default function Navbar() {
         </button>
       </div>
 
+      {/* --- MOBILE MENU --- */}
       {mobileMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-[#020617] border-b border-white/10 p-6 flex flex-col gap-4 lg:hidden shadow-2xl animate-in slide-in-from-top-5">
-             <Link href="/stiri" onClick={() => setMobileMenuOpen(false)} className="text-white py-2 border-b border-white/5 font-bold">📰 Știri Crypto</Link>
+             <Link href="/stiri" onClick={() => setMobileMenuOpen(false)} className="text-white py-2 border-b border-white/5 font-bold flex items-center gap-2">
+                <Newspaper size={18}/> Știri Crypto
+             </Link>
              
-             {/* ✅ LINK NOU MOBILE */}
-             <Link href="/lichidari" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 text-red-400 py-2 border-b border-white/5 font-bold">
-                <BarChart3 size={16} /> Lichidări Live
+             {/* ✅ LINK ACADEMIE MOBILE */}
+             <Link href="/academie" onClick={() => setMobileMenuOpen(false)} className="text-cyan-400 py-2 border-b border-white/5 font-bold flex items-center gap-2">
+                <BookOpen size={18}/> Academia Crypto
              </Link>
 
-             <a href="/#ai" onClick={() => setMobileMenuOpen(false)} className="text-gray-300 py-2 border-b border-white/5">Mihai AI</a>
-             <a href="/#consultanta" onClick={() => setMobileMenuOpen(false)} className="text-yellow-500 py-2 border-b border-white/5">VIP Mentorship</a>
+             <Link href="/lichidari" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 text-red-400 py-2 border-b border-white/5 font-bold">
+                <BarChart3 size={18} /> Lichidări Live
+             </Link>
+
+             <a href="/#ai" onClick={() => setMobileMenuOpen(false)} className="text-gray-300 py-2 border-b border-white/5 flex items-center gap-2">
+                <BrainCircuit size={18}/> Mihai AI
+             </a>
+             <a href="/#consultanta" onClick={() => setMobileMenuOpen(false)} className="text-yellow-500 py-2 border-b border-white/5 flex items-center gap-2">
+                <Crown size={18}/> VIP Mentorship
+             </a>
         </div>
       )}
     </nav>
