@@ -26,6 +26,7 @@ export default function RelatedArticles({ currentSlug }: { currentSlug: string }
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 sizes="(max-width: 768px) 100vw, 33vw"
+                unoptimized={true} // ✅ FIX-UL MAGIC PENTRU IMAGINI
               />
             </div>
             <div className="p-5">
