@@ -1,4 +1,94 @@
 export const articles = [
+// ✅ ARTICOL NOU (ADDRESS POISONING - 50M LOST) - ALERTĂ
+  {
+    slug: "secunda-neatentie-50-milioane-dolari-address-poisoning",
+    title: "SECUNDA DE NEATENȚIE CARE A COSTAT 50 DE MILIOANE DE DOLARI. Cum funcționează \"Address Poisoning\" și de ce ești următoarea țintă",
+    date: "20 Dec 2025",
+    category: "SECURITATE & EDUCAȚIE",
+    image: "/50mlost.jpg",
+    impact: "bearish", // Roșu pentru Alertă Critică
+    summary: "Un investitor a pierdut 50 de milioane $ din cauza unei greșeli banale de copy-paste. Află cum funcționează 'Address Poisoning', atacul psihologic care păcălește chiar și experții, și cele 3 reguli care te salvează.",
+    mihaiTake: "Tati, în crypto tu ești propria ta bancă. Asta înseamnă că tu ești și propriul tău agent de securitate. Nu există 'Anulare Tranzacție'. Victima de 50 de milioane a învățat cea mai scumpă lecție din istorie. Tu o poți învăța gratis.",
+    content: `
+      <div class="bg-red-950/30 border border-red-500/20 p-6 rounded-2xl mb-8">
+        <h4 class="text-red-500 font-bold uppercase tracking-widest text-xs mb-2 flex items-center gap-2">
+            🚨 Urgență: Critică
+        </h4>
+        <p class="text-xl font-medium text-white mb-4">Imaginează-ți că ai 50 de milioane de dolari în USDT. Ești prudent. Știi regulile.</p>
+        <p class="text-gray-300 mb-2">Așa că, înainte de a trimite toată suma, faci un "Test Transaction" de 50$ către adresa ta. Testul ajunge cu bine. Ești liniștit.</p>
+        <p class="text-gray-300">Intri în istoricul tranzacțiilor, copiezi adresa de la ultima intrare (care arată identic cu a ta) și trimiți restul de 49.999.950$.</p>
+        <p class="text-white font-bold mt-4 border-l-4 border-red-500 pl-4">Banii pleacă. Dar nu ajung niciodată la tine. Tocmai i-ai donat unui hacker.</p>
+      </div>
+
+      <p class="mb-6">Acesta nu este un scenariu de film. Este realitatea crudă trăită de utilizatorul 0xcB80 zilele trecute. O greșeală de copy-paste l-a costat o avere.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">1. Mecanismul Atacului: "Otrăvirea Adresei" (Address Poisoning)</h3>
+      <p class="mb-4">Cum e posibil să greșești adresa dacă ai verificat-o? Hackerii exploatează modul în care creierul nostru (și portofelele crypto) funcționează.</p>
+      
+      <ul class="list-disc pl-6 mb-6 space-y-4 text-gray-300">
+        <li><strong>Momeala:</strong> Hackerul vede că ai făcut o tranzacție de test.</li>
+        <li><strong>Clona:</strong> Folosind softuri avansate, hackerul generează în câteva secunde o adresă "vanity" care are exact aceleași prime 4-6 caractere și aceleași ultime 4-6 caractere ca adresa ta reală.</li>
+      </ul>
+
+      <div class="bg-[#0a0f1e] p-6 rounded-xl border border-blue-500/20 font-mono text-sm mb-6">
+        <div class="flex flex-col gap-4">
+            <div>
+                <span class="text-green-400 block text-xs uppercase mb-1">Adresa Ta (Legitimă):</span>
+                <span class="text-gray-400">0xbaf4...<span class="text-white font-bold bg-green-500/20 px-1">B649</span>...5F8b5</span>
+            </div>
+            <div>
+                <span class="text-red-400 block text-xs uppercase mb-1">Adresa Hackerului (Clona):</span>
+                <span class="text-gray-400">0xbaf4...<span class="text-white font-bold bg-red-500/20 px-1">C782</span>...5F8b5</span>
+            </div>
+        </div>
+        <div class="mt-4 text-xs text-gray-500 italic border-t border-white/10 pt-2">
+            *Observă că mijlocul e diferit, dar capetele sunt identice.
+        </div>
+      </div>
+
+      <p class="mb-4"><strong>Otrăvirea:</strong> Hackerul îți trimite 0 USDT sau o sumă infimă de pe adresa clonă.</p>
+      <p class="mb-4"><strong>Capcana:</strong> Acum, ultima tranzacție din istoricul tău apare ca venind de la (sau către) acea adresă vizual identică. Majoritatea portofelelor (Metamask, Phantom, TrustWallet) ascund mijlocul adresei cu "..." pentru a arăta mai curat.</p>
+      
+      <div class="bg-gray-800 p-4 rounded-lg italic text-gray-300 border-l-2 border-red-500 mb-8">
+        "Tu vezi: 0xbaf4...5F8b5. Creierul tău spune: 'Asta e adresa. Începe la fel, se termină la fel. E sigură.' Dai Copy. Dai Paste. Dai Send. Game Over."
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">2. De ce funcționează? (Psihologia Lenei)</h3>
+      <p class="mb-4">Acest atac nu exploatează o vulnerabilitate în blockchain, ci o vulnerabilitate umană: <strong>Complacența</strong>.</p>
+      <p class="mb-6">Suntem obișnuiți să verificăm doar "capetele" adresei. Hackerii știu asta. Ei investesc putere de calcul masivă doar pentru a potrivi acele caractere, știind că 99% din utilizatori nu verifică cele 30 de caractere din mijloc.</p>
+      <p class="mb-6">În cazul victimei de 50M$, faptul că a făcut tranzacția de test l-a trădat. Testul a alertat hackerul, care a "plantat" adresa falsă exact înainte ca victima să trimită suma mare.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">3. Cum te protejezi? (Regulile de Aur)</h3>
+      <p class="mb-8">Această pierdere putea fi evitată 100% cu o simplă schimbare de obicei.</p>
+
+      <div class="space-y-6">
+        <div class="bg-[#0a0f1e] border border-red-500/30 p-6 rounded-xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-20 h-20 bg-red-500/10 rounded-full blur-xl"></div>
+            <h4 class="text-xl font-bold text-red-400 mb-2">🛑 REGULA 1: NICIODATĂ nu copia adresa din "Istoric".</h4>
+            <p class="text-gray-300">Istoricul tranzacțiilor este un câmp de luptă. Oricine îți poate trimite tranzacții acolo. Copiază adresa doar din sursa sigură (portofelul de destinație, agenda salvată).</p>
+        </div>
+
+        <div class="bg-[#0a0f1e] border border-blue-500/30 p-6 rounded-xl relative overflow-hidden">
+             <div class="absolute top-0 right-0 w-20 h-20 bg-blue-500/10 rounded-full blur-xl"></div>
+            <h4 class="text-xl font-bold text-blue-400 mb-2">👀 REGULA 2: Verifică tot, nu doar capetele.</h4>
+            <p class="text-gray-300">Nu te uita doar la primele 4 și ultimele 4 caractere. Verifică și 2-3 caractere din mijloc sau, ideal, folosește funcția de scanare QR code dacă e posibil.</p>
+        </div>
+
+        <div class="bg-[#0a0f1e] border border-green-500/30 p-6 rounded-xl relative overflow-hidden">
+             <div class="absolute top-0 right-0 w-20 h-20 bg-green-500/10 rounded-full blur-xl"></div>
+            <h4 class="text-xl font-bold text-green-400 mb-2">📖 REGULA 3: Folosește "Address Book" (Lista Albă).</h4>
+            <p class="text-gray-300">Majoritatea aplicațiilor crypto (Binance, Metamask) îți permit să salvezi adresele frecvente și să le dai un nume (ex: "Ledger-ul Meu", "Portofelul Copiilor"). Odată salvată și verificată, folosește doar acea intrare. Dacă o adresă nu e în agendă, trateaz-o ca pe o bombă neexplodată.</p>
+        </div>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-white/10">
+        <h4 class="text-xl font-bold text-white mb-4">Concluzie: Paranoia e sănătoasă</h4>
+        <p class="text-gray-300 mb-4">În crypto, tu ești propria ta bancă. Asta înseamnă că tu ești și propriul tău agent de securitate. Nu există "Anulare Tranzacție". Nu există "Suport Clienți" la Bitcoin.</p>
+        <p class="text-white font-bold italic">Victima de 50 de milioane a învățat cea mai scumpă lecție din istorie. Tu o poți învăța gratis. Data viitoare când trimiți bani, amintește-ți: Istoricul minte.</p>
+      </div>
+    `
+  },
+
 // ✅ ARTICOL NOU (EXPLOZIA 26 DECEMBRIE) - ON TOP
   {
     slug: "explozia-23-miliarde-bitcoin-blocat-85000-26-decembrie",
