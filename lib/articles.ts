@@ -1,4 +1,118 @@
 export const articles = [
+// ✅ ARTICOL NOU (EXPLOZIA 26 DECEMBRIE) - ON TOP
+  {
+    slug: "explozia-23-miliarde-bitcoin-blocat-85000-26-decembrie",
+    title: "EXPLOZIA DE 23.8 MILIARDE $: De ce Bitcoin este \"blocat\" la 85.000$ și cum ziua de 26 Decembrie schimbă totul",
+    date: "20 Dec 2025",
+    category: "ANALIZĂ DERIVATE & MARKET STRUCTURE",
+    image: "/26decembrie.jpg",
+    impact: "bullish",
+    summary: "Bitcoin pare mort la 85.000$, dar este doar o 'cușcă matematică'. Un zid de derivate de 23.8 miliarde $ suprimă prețul. Află de ce data de 26 Decembrie este detonatorul care va elibera presiunea către 118.000$.",
+    mihaiTake: "Tati, liniștea asta de la 85k e sunetul fitilului care arde. Piața îți oferă un discount de 33.000$ valabil doar până la Crăciun. Nu te lăsa păcălit de plictiseală. Când dealerii pleacă pe 26 Decembrie, dispare 'gravitația artificială' și începe adevărata distracție.",
+    content: `
+      <p class="text-xl font-medium text-white mb-6">Dacă te uiți la grafic, Bitcoin pare mort. Stă blocat la 85.500$ de zile întregi. Nimic nu se mișcă. Lumea începe să se întrebe: <em>"Gata? S-a terminat Bull Market-ul?"</em></p>
+      
+      <div class="bg-red-900/10 border-l-4 border-red-500 p-4 mb-8">
+        <strong class="text-white block mb-1">Răspunsul datelor este NU.</strong>
+        <p class="text-gray-300">Ceea ce vedem nu este stabilitate. Este o <span class="text-red-400 font-bold">cușcă matematică</span>. Prețul este suprimat artificial de un zid de instrumente derivate în valoare de 23.8 Miliarde de Dolari.</p>
+      </div>
+
+      <p class="mb-6">Bitcoin este ca un arc comprimat la maxim, ținut în loc de o siguranță care va sări în aer pe 26 Decembrie. Hai să ne uităm sub capota pieței.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">1. MENGHINA: De ce prețul nu are voie să se miște</h3>
+      <p class="mb-4">Pe termen scurt, Bitcoin este prins într-un "război al dealerilor" (Market Makers). Există un blocaj structural de <strong>584 Milioane $</strong> (Risc Brut).</p>
+      
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-[#0a0f1e] p-5 rounded-xl border border-red-500/20">
+            <strong class="text-red-400 text-lg block mb-2">🛑 Tavanul (90.000$)</strong>
+            <p class="text-sm text-gray-400">Instituțiile au vândut opțiuni "Call" masive aici. Ei vor ca prețul să rămână sub acest nivel pentru a încasa prima de risc.</p>
+        </div>
+        <div class="bg-[#0a0f1e] p-5 rounded-xl border border-green-500/20">
+            <strong class="text-green-400 text-lg block mb-2">🟢 Podeaua (85.000$)</strong>
+            <p class="text-sm text-gray-400">Aici este "Max Pain". Dealerii sunt poziționați astfel încât sunt obligați să cumpere orice scădere și să vândă orice creștere pentru a rămâne neutri.</p>
+        </div>
+      </div>
+      
+      <p class="mb-4">Acest mecanism creează o "gravitație artificială". Dealerii acționează ca un amortizor imens. Orice tentativă de breakout este vândută, orice dump este cumpărat. Rezultatul? Plictiseală totală.</p>
+      <p class="text-yellow-500 text-sm italic mb-6">Pericolul Ascuns: Structura este fragilă. Dacă scădem brusc sub 85.000$, dealerii intră în "Short Gamma" și sunt forțați să vândă agresiv. Dar adevărata poveste este în sus.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">2. VACUUMUL: Bitcoin este cu 28% mai ieftin decât ar trebui</h3>
+      <p class="mb-4">În timp ce dealerii țin prețul pe loc, matematica pe termen lung urlă. Conform modelului "Power Law Corridor" (legea puterii care a guvernat Bitcoin din 2010):</p>
+
+      <div class="bg-blue-900/10 border border-blue-500/30 p-6 rounded-xl mb-8 font-mono">
+        <div class="flex justify-between border-b border-white/10 pb-2 mb-2">
+            <span class="text-gray-400">Valoare Corectă (Fair Value):</span>
+            <span class="text-green-400 font-bold">118.286 $</span>
+        </div>
+        <div class="flex justify-between border-b border-white/10 pb-2 mb-2">
+            <span class="text-gray-400">Preț Actual:</span>
+            <span class="text-white font-bold">~85.500 $</span>
+        </div>
+        <div class="flex justify-between pt-2">
+            <span class="text-red-400 font-bold">DIFERENȚA (DISCOUNT):</span>
+            <span class="text-red-500 font-bold text-xl">-28%</span>
+        </div>
+      </div>
+
+      <p class="mb-6">Aceasta este o anomalie masivă. Piața este "încolăcită" (coiling) sub linia de trend. Există un gol de 33.000 $ per monedă între realitate și prețul suprimat. În fizică și în piețe, natura urăște vidul. Odată ce presiunea dispare, prețul va zbura să umple acest gol.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">3. DETONATORUL: Ziua de 26 Decembrie</h3>
+      <p class="mb-4">Tot acest joc de așteptare are o dată de expirare. La propriu.</p>
+      
+      <ul class="space-y-4 mb-8">
+        <li class="bg-gray-800 p-4 rounded-lg flex gap-3 items-center">
+            <span class="text-2xl">💣</span>
+            <div>
+                <strong class="text-white block">Bomba</strong>
+                <span class="text-gray-400 text-sm">Pe 26 Decembrie expiră opțiuni cu o valoare noțională de <strong>23.8 Miliarde de Dolari</strong>. Acesta este "barajul" care ține volatilitatea în frâu.</span>
+            </div>
+        </li>
+        <li class="bg-gray-800 p-4 rounded-lg flex gap-3 items-center">
+            <span class="text-2xl">🔓</span>
+            <div>
+                <strong class="text-white block">Marea Eliberare</strong>
+                <span class="text-gray-400 text-sm">În momentul expirării, 44.8% din toată expunerea Gamma a pieței dispare instantaneu.</span>
+            </div>
+        </li>
+      </ul>
+
+      <p class="mb-4">Imaginați-vă că dealerii țin cu toate puterile o ușă închisă. Pe 26 Decembrie, dealerii pleacă acasă. Ușa rămâne neapărată.</p>
+      <ul class="list-disc pl-6 mb-6 space-y-1 text-gray-300">
+        <li>Zidul de la 90k dispare.</li>
+        <li>"Lipiciul" de la 85k se evaporă.</li>
+        <li>Piața trece instantaneu de la "Manipulare" la "Descoperire de Preț".</li>
+      </ul>
+
+      <div class="p-8 bg-gradient-to-r from-gray-900 to-black border border-green-500/30 rounded-2xl mt-12 shadow-2xl">
+        <h4 class="text-xl font-bold text-green-400 mb-4 uppercase tracking-widest">Foaia de Parcurs (Roadmap)</h4>
+        
+        <div class="space-y-4 border-l-2 border-green-500/30 pl-6 relative">
+            <div class="relative">
+                <div class="absolute -left-[31px] top-1 h-4 w-4 rounded-full bg-gray-600 border border-black"></div>
+                <strong class="text-gray-400">Acum - 26 Decembrie</strong>
+                <p class="text-sm text-gray-500">Plictiseală, frustrare, manipulare. Prețul rămâne captiv.</p>
+            </div>
+            <div class="relative">
+                <div class="absolute -left-[31px] top-1 h-4 w-4 rounded-full bg-red-500 border border-black animate-pulse"></div>
+                <strong class="text-white">26 Decembrie</strong>
+                <p class="text-sm text-gray-300">Expirarea a 23.8 Miliarde $. Barajul se rupe.</p>
+            </div>
+            <div class="relative">
+                <div class="absolute -left-[31px] top-1 h-4 w-4 rounded-full bg-green-500 border border-black"></div>
+                <strong class="text-green-400">Ianuarie 2026</strong>
+                <p class="text-sm text-gray-300">Gravitația preia controlul. Bitcoin va căuta să închidă gap-ul, țintind direct spre 118.000$.</p>
+            </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-white/10">
+            <p class="text-white font-bold italic text-center">
+                "Piața îți oferă un discount de 33.000$ valabil doar până la Crăciun. Nu lăsa plictiseala să te fure din fața celei mai evidente oportunități matematice a anului."
+            </p>
+        </div>
+      </div>
+    `
+  }, 
+
 // ✅ ARTICOL NOU (TRUMP VS CLARITY ACT) - ON TOP
   {
     slug: "sabotaj-involuntar-trump-legea-claritatii-altseason-hoskinson",
