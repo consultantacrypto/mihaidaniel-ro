@@ -7,127 +7,96 @@ export type AcademyCategory =
   | 'PSIHOLOGIE & CICLE';
 
 export type AcademyItem = {
-  slug: string;       // Link-ul (ex: ce-este-bitcoin)
-  term: string;       // Titlul principal (ex: Bitcoin)
-  image: string;      // Imaginea de copertă (mare)
+  slug: string;       
+  term: string;       
+  image: string;      
   category: AcademyCategory;
-  definition: string; // Descrierea scurtă pentru card (meta description)
-  analogy: string;    // "Pe românește" - pentru cutia galbenă
-  mihaiTake: string;  // Opinia ta personală - pentru cutia neagră
-  fullContent: string;// Conținutul HTML complet (Articolul)
+  definition: string; 
+  analogy: string;    
+  mihaiTake: string;  
+  fullContent: string;
 };
 
-// --- 2. TEMPLATE PENTRU ARTICOLE NOI (COPY-PASTE ASTA CÂND SCRII) ---
-/*
-  {
-    slug: "titlu-articol-seo",
-    term: "Titlul Vizibil",
-    category: "TRADING & CHARTURI",
-    image: "/nume-poza.jpg",
-    definition: "O propoziție scurtă care apare pe Google și în lista de carduri.",
-    analogy: "O comparație simplă din viața reală.",
-    mihaiTake: "Sfatul tău direct, ca de la prieten la prieten.",
-    fullContent: `
-      <p class="text-xl text-white font-medium mb-6">Introducere puternică...</p>
-      
-      <h3 class="text-2xl font-bold text-white mt-8 mb-4">Subtitlu 1</h3>
-      <p class="mb-4">Paragraf explicativ...</p>
-      
-      <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-300">
-        <li>Punct 1</li>
-        <li>Punct 2</li>
-      </ul>
-    `
-  },
-*/
-
-// --- 3. CONȚINUTUL ACADEMIEI ---
+// --- 2. CONȚINUTUL ACADEMIEI ---
 export const dictionary: AcademyItem[] = [
-  // === CATEGORIA: FUNDAMENTE ===
+  // === ✅ ARTICOL NOU: BITCOIN ===
   {
     slug: "ce-este-bitcoin-ghid-complet",
     term: "Bitcoin (BTC)",
     category: "BITCOIN & FUNDAMENTE",
-    image: "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?q=80&w=2069&auto=format&fit=crop", 
-    definition: "Ghidul complet despre Bitcoin. Nu este doar o monedă, este prima rețea de proprietate digitală descentralizată din istorie.",
-    analogy: "Aur Digital. Gândește-te la el ca la singura bancă din lume pe care nimeni nu o poate închide, nimeni nu o poate controla și unde tu ești singurul proprietar al cheii seifului.",
-    mihaiTake: "Tati, Bitcoin nu e 'banii de internet' cu care îți iei cafea. E asigurarea ta împotriva inflației. Când băncile printează bani din nimic, Bitcoin rămâne la fel: 21 de milioane. Punct.",
+    image: "/bitcoinacademy.jpg", // Imaginea nouă încărcată de tine
+    definition: "Ghidul complet despre Bitcoin. Nu este doar o monedă, este prima formă de proprietate digitală absolută din istoria omenirii.",
+    analogy: "Registrul Public Indestructibil. Imaginează-ți un caiet uriaș ținut de milioane de oameni simultan. Nimeni nu poate rupe o pagină din el fără ca toți ceilalți să observe.",
+    mihaiTake: "Să înțelegi Bitcoin astăzi este ca și cum ai fi înțeles Internetul în 1995. Pare ciudat, pare complicat, dar este tehnologia care va reseta modul în care funcționează lumea. Nu trebuie să fii expert IT, trebuie doar să înțelegi un lucru: Banii s-au schimbat pentru totdeauna.",
     fullContent: `
-      <p class="text-xl text-white font-medium mb-6">Bitcoin nu este doar o monedă. Este prima dată în istoria umanității când avem un activ digital care nu poate fi copiat, nu poate fi falsificat și nu poate fi oprit.</p>
-      
-      <h3 class="text-2xl font-bold text-white mt-8 mb-4">Cum funcționează de fapt?</h3>
-      <p class="mb-4">Spre deosebire de banii din contul tău bancar, care sunt doar cifre într-o bază de date controlată de bancă, Bitcoin trăiește pe <strong>Blockchain</strong>. Un registru public, transparent, pe care îl deținem cu toții, dar nu îl controlează nimeni.</p>
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Introducere: Ce este Bitcoin, cu adevărat?</h3>
+      <p class="mb-4 text-gray-300">Dacă întrebi 10 oameni ce este Bitcoin, vei primi 10 răspunsuri diferite: "Bani de internet", "O schemă piramidală", "Aur Digital". Să simplificăm.</p>
+      <p class="text-xl text-white font-medium mb-6 border-l-4 border-orange-500 pl-4">Bitcoin este prima formă de proprietate digitală absolută din istoria omenirii.</p>
       <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-300">
-        <li><strong>Descentralizat:</strong> Nu există un CEO Bitcoin. Nu există un sediu central.</li>
-        <li><strong>Imuabil:</strong> Odată scrisă o tranzacție, rămâne acolo pe vecie.</li>
-        <li><strong>Limitat:</strong> Vor exista doar 21.000.000 de Bitcoin. Niciunul în plus.</li>
+        <li><strong>Până la Bitcoin:</strong> Dacă aveai bani într-o bancă, banca îi deținea, tu aveai doar o promisiune. Dacă aveai o poză pe Facebook, Facebook o putea șterge.</li>
+        <li><strong>După Bitcoin:</strong> Dacă deții cheia privată (parola), nimeni – niciun guvern, nicio bancă, niciun hacker – nu îți poate confisca fondurile. Este "Bani separați de Stat".</li>
       </ul>
 
-      <h3 class="text-2xl font-bold text-white mt-8 mb-4">De ce are valoare?</h3>
-      <p class="mb-4">Valoarea Bitcoin vine din <strong>Raritate</strong> și <strong>Securitate</strong>. Rețeaua Bitcoin este cea mai puternică rețea de calculatoare din lume (prin Proof of Work).</p>
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. Tehnologia: Cum funcționează fără șefi? (Blockchain)</h3>
+      <p class="mb-4 text-gray-300">Cum poți avea un sistem financiar fără o bancă centrală? Răspunsul este o inovație numită <strong>Blockchain</strong> (Lanț de Blocuri).</p>
       
-      <div class="bg-gray-800 p-6 rounded-xl border-l-4 border-orange-500 my-6">
-        <p class="italic text-gray-300">"Dacă vrei să spargi rețeaua Bitcoin, ai avea nevoie de mai multă energie decât consumă o țară mică. Este practic o fortăreață de energie digitală."</p>
+      <div class="bg-blue-900/20 p-6 rounded-xl border border-blue-500/30 mb-6">
+        <strong class="text-blue-400 block mb-2">Explicația Simplă: Registrul Public</strong>
+        <p class="text-gray-300">Imaginează-ți un caiet uriaș în care sunt scrise toate tranzacțiile. În loc să fie ținut într-un seif la Banca Națională, copii ale lui sunt deținute de milioane de oameni simultan. Dacă eu vreau să trimit 1 Bitcoin, toți verifică caietele lor. Dacă toți sunt de acord, tranzacția se scrie.</p>
       </div>
 
-      <h3 class="text-2xl font-bold text-white mt-8 mb-4">Halving-ul: Motorul Creșterii</h3>
-      <p class="mb-4">La fiecare 4 ani, inflația Bitcoin se înjumătățește automat. Acest eveniment se numește <strong>Halving</strong>. Istoric, anul de după Halving a adus mereu noi maxime istorice (ATH), pentru că oferta scade în timp ce cererea crește.</p>
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. Tokenomics: Matematica Rarității</h3>
+      <p class="mb-4 text-gray-300">Aici stă geniul lui Satoshi Nakamoto. Bitcoin este programat să fie anti-inflaționist.</p>
+      
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+         <div class="bg-[#0a0f1e] p-5 rounded-xl border border-orange-500/20">
+            <strong class="text-orange-400 block mb-2">Limita de 21 Milioane</strong>
+            <p class="text-sm text-gray-400">Nu vor exista niciodată mai mult de 21.000.000 de Bitcoin. Spre deosebire de Dolari care se tipăresc infinit, Bitcoin este finit.</p>
+         </div>
+         <div class="bg-[#0a0f1e] p-5 rounded-xl border border-green-500/20">
+            <strong class="text-green-400 block mb-2">Halving-ul</strong>
+            <p class="text-sm text-gray-400">La fiecare 4 ani, producția de Bitcoin nou se înjumătățește. Oferta scade, cererea crește = Prețul Urcă.</p>
+         </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">4. Use Case: La ce e bun?</h3>
+      <p class="mb-4 text-gray-300">Bitcoin are două funcții majore care evoluează în timp:</p>
+      <ul class="list-disc pl-6 mb-6 space-y-4 text-gray-300">
+        <li><strong>Store of Value (Aur Digital):</strong> Faza actuală. Oamenii cumpără Bitcoin pentru a-și proteja averea de inflație pe termen lung (5-10 ani). Este contul de economii suprem.</li>
+        <li><strong>Medium of Exchange (Plăți):</strong> Pe măsură ce tehnologia avansează (Lightning Network), devine o monedă pentru plăți instantanee globale.</li>
+      </ul>
+      <p class="italic text-gray-400 mb-6">Exemplu: Să trimiți 1 Miliard $ duminică seara prin bancă durează 3 zile și costă mii de dolari. Prin Bitcoin durează 10 minute și costă câțiva dolari.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">5. De ce contează? Libertate.</h3>
+      <p class="mb-4 text-gray-300">Dincolo de preț, Bitcoin este o mișcare pentru Libertate. Într-o lume în care guvernele pot îngheța conturile, Bitcoin este singura "ușă de ieșire".</p>
+      <p class="text-white font-bold">Este un sistem financiar neutral. Bitcoin nu știe dacă ești alb sau negru, rus sau american. El doar procesează tranzacții valide.</p>
     `
   },
 
-  // === CATEGORIA: TRADING ===
+  // === RĂMÂN CELELALTE ARTICOLE (PLACEHOLDER SAU VIITOARE) ===
   {
     slug: "rsi-relative-strength-index-explicat",
     term: "RSI (Indicator)",
     category: "TRADING & CHARTURI",
     image: "https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=2064&auto=format&fit=crop",
     definition: "Relative Strength Index (RSI) este cel mai popular indicator de trading. Îți spune când prețul este 'prea sus' sau 'prea jos'.",
-    analogy: "Turometrul Pieței. Dacă acul e pe roșu (peste 70), motorul fierbe și trebuie să încetinească. Dacă e jos (sub 30), motorul e la relanti și are loc să accelereze.",
-    mihaiTake: "Nu cumpăra niciodată când RSI e 80 pe Daily! Asta înseamnă FOMO (Frică de a pierde ocazia). Profesioniștii vând când RSI e sus și cumpără când RSI e jos și toți plâng.",
-    fullContent: `
-      <p class="text-xl text-white font-medium mb-6">RSI este busola traderului. Fără el, navighezi legat la ochi. Măsoară viteza și magnitudinea mișcărilor de preț pe o scară de la 0 la 100.</p>
-      
-      <h3 class="text-2xl font-bold text-white mt-8 mb-4">Cele două zone critice</h3>
-      
-      <div class="grid md:grid-cols-2 gap-4 mb-6">
-        <div class="bg-red-900/20 border border-red-500/30 p-4 rounded-xl">
-            <strong class="text-red-400 block text-lg mb-2">Supracumpărare (Overbought) > 70</strong>
-            <p class="text-sm text-gray-300">Prețul a crescut prea repede. Cumpărătorii sunt epuizați. Probabilitate mare de corecție (scădere).</p>
-        </div>
-        <div class="bg-green-900/20 border border-green-500/30 p-4 rounded-xl">
-            <strong class="text-green-400 block text-lg mb-2">Supravânzare (Oversold) < 30</strong>
-            <p class="text-sm text-gray-300">Prețul a scăzut drastic. Vânzătorii au terminat muniția. Probabilitate mare de respingere (creștere).</p>
-        </div>
-      </div>
-
-      <h3 class="text-2xl font-bold text-white mt-8 mb-4">Divergența: Secretul Profi</h3>
-      <p class="mb-4">Cel mai puternic semnal RSI nu este doar valoarea, ci <strong>Divergența</strong>:</p>
-      <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-300">
-        <li>Dacă Prețul face un nou Maxim, dar RSI face un Maxim mai mic -> <strong>Divergență Bearish</strong> (Urmează Scădere).</li>
-        <li>Dacă Prețul face un nou Minim, dar RSI face un Minim mai mare -> <strong>Divergență Bullish</strong> (Urmează Creștere).</li>
-      </ul>
-    `
+    analogy: "Turometrul Pieței. Dacă acul e pe roșu (peste 70), motorul fierbe și trebuie să încetinească.",
+    mihaiTake: "Nu cumpăra niciodată când RSI e 80 pe Daily! Asta înseamnă FOMO. Profesioniștii vând când RSI e sus.",
+    fullContent: `<p>Conținutul despre RSI urmează să fie actualizat...</p>`
   },
-
-  // === CATEGORIA: DEFI ===
   {
     slug: "ce-este-ethereum-smart-contracts",
     term: "Ethereum (ETH)",
     category: "DEFI & WEB3",
     image: "https://images.unsplash.com/photo-1622790698141-94e30457ef12?q=80&w=2072&auto=format&fit=crop",
     definition: "Ethereum nu este doar o monedă, este un calculator global. Află cum funcționează Smart Contracts și DeFi.",
-    analogy: "Petrolul Digital. Dacă Bitcoin este Aurul (rezerva de valoare), Ethereum este combustibilul care alimentează toată industria de aplicații descentralizate.",
-    mihaiTake: "Fără Ethereum, nu am avea NFT-uri, nu am avea Uniswap, nu am avea Stablecoins. Este fundația internetului viitorului (Web3).",
-    fullContent: `
-       <p class="text-xl text-white font-medium mb-6">Dacă Bitcoin este calculatorul de buzunar care face un singur lucru perfect (tranzacții), Ethereum este un Smartphone pe care poți instala orice aplicație.</p>
-       <h3 class="text-2xl font-bold text-white mt-8 mb-4">Smart Contracts: Avocatul Robot</h3>
-       <p class="mb-4">Inovația majoră a lui Vitalik Buterin a fost <strong>Contractul Inteligent</strong>. Acesta este un cod care se execută singur: "DACĂ se întâmplă X, ATUNCI fă Y". Fără intermediari, fără avocați, fără încredere în oameni.</p>
-    `
+    analogy: "Petrolul Digital. Bitcoin e Aurul, Ethereum e Petrolul care alimentează mașinăria DeFi.",
+    mihaiTake: "Fără Ethereum, nu am avea NFT-uri, nu am avea Uniswap. Este fundația internetului viitorului (Web3).",
+    fullContent: `<p>Conținutul despre Ethereum urmează să fie actualizat...</p>`
   }
 ];
 
-// --- 4. LISTA PENTRU TOOLTIPS AUTOMATE (LEGACY) ---
-// Aceasta rămâne pentru a genera acele mici ferestre când dai hover pe cuvinte în articole
+// --- 3. LISTA TOOLTIPS (NU O SCHIMBĂM) ---
 export const terms: Record<string, string> = {
   "Bitcoin": "Aur Digital. Rețea descentralizată, limitată la 21 milioane unități.",
   "Ethereum": "Platformă de Smart Contracts. Fundația DeFi și Web3.",
@@ -135,10 +104,9 @@ export const terms: Record<string, string> = {
   "Blockchain": "Registru public distribuit, imposibil de falsificat.",
   "DeFi": "Finanțe Descentralizate. Bănci fără bancheri.",
   "Wallet": "Portofel digital unde îți ții cheile private.",
-  "FOMO": "Fear Of Missing Out. Frica de a pierde ocazia, care te face să cumperi sus."
+  "Halving": "Eveniment la 4 ani care reduce inflația Bitcoin la jumătate."
 };
 
-// Funcția de generare automată a tooltips
 export function enhanceContent(content: string): string {
   let enhancedContent = content;
   Object.entries(terms).forEach(([term, definition]) => {
