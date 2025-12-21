@@ -4,9 +4,8 @@ import { useState, useEffect, useRef } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { 
-  Activity, RefreshCw, Layers, 
-  AlertTriangle, Crosshair, Lock, Zap, 
-  BarChart2, Globe, TrendingUp 
+  Activity, RefreshCw, Globe, 
+  Crosshair, Lock, Zap, TrendingUp 
 } from 'lucide-react';
 
 // === HELPER: SKELETON LOADER ===
@@ -32,16 +31,14 @@ export default function MarketPage() {
     fearGreedValue: 50, fearGreedLabel: 'Neutral', loading: true
   });
 
-  // --- 1. ENGINE: FETCH DATA (Doar ce nu luăm din widgeturi) ---
+  // --- 1. ENGINE: FETCH DATA ---
   const fetchMarketData = async () => {
     try {
       setData(prev => ({ ...prev, loading: true }));
-      
       const [globalRes, fgRes] = await Promise.all([
         fetch('https://api.coingecko.com/api/v3/global'),
         fetch('https://api.alternative.me/fng/')
       ]);
-
       const globalJson = await globalRes.json();
       const fgJson = await fgRes.json();
 
@@ -59,7 +56,7 @@ export default function MarketPage() {
 
   useEffect(() => { fetchMarketData(); }, []);
 
-  // --- 2. WIDGET: ADVANCED CHART CU VPVR (LICHIDITATE) ---
+  // --- 2. WIDGET: CHART CU VOLUME & MACD (REPARAT) ---
   useEffect(() => {
     if (chartContainer.current) {
         chartContainer.current.innerHTML = ""; 
@@ -85,7 +82,7 @@ export default function MarketPage() {
             "calendar": false,
             "hide_volume": false,
             "studies": [
-              "VPVR@tv-basicstudies"
+              "MACD@tv-basicstudies"
             ],
             "support_host": "https://www.tradingview.com"
           }`;
@@ -93,7 +90,7 @@ export default function MarketPage() {
     }
   }, []);
 
-  // --- 3. WIDGET: CRYPTO HEATMAP (TOATĂ PIAȚA) ---
+  // --- 3. WIDGET: HEATMAP ---
   useEffect(() => {
     if (heatmapContainer.current) {
         heatmapContainer.current.innerHTML = ""; 
@@ -120,7 +117,7 @@ export default function MarketPage() {
     }
   }, []);
 
-  // --- 4. WIDGET: TECHNICAL ANALYSIS (SPEEDOMETER) ---
+  // --- 4. WIDGET: TECHNICALS ---
   useEffect(() => {
     if (technicalContainer.current) {
         technicalContainer.current.innerHTML = ""; 
@@ -144,37 +141,29 @@ export default function MarketPage() {
     }
   }, []);
 
-  // LOGICĂ: Cycle & Strategy
-  const halvingDate = new Date('2024-04-20');
-  const today = new Date();
-  const daysSinceHalving = Math.floor((today.getTime() - halvingDate.getTime()) / (1000 * 3600 * 24));
-  
-  let strategyAction = "HOLD";
-  if (data.fearGreedValue < 25) strategyAction = "ACCUMULATE";
-  else if (data.fearGreedValue > 75) strategyAction = "TAKE PROFIT";
+  const daysSinceHalving = Math.floor((new Date().getTime() - new Date('2024-04-20').getTime()) / (1000 * 3600 * 24));
 
   return (
     <main className="min-h-screen bg-[#020617] text-white font-[var(--font-inter)] selection:bg-cyan-500/30">
       <Navbar />
 
-      {/* === HEADER === */}
       <div className="pt-28 pb-10 border-b border-white/5 bg-[#020617]">
         <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-end gap-6">
             <div>
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/30 border border-cyan-500/20 text-cyan-400 text-xs font-bold uppercase tracking-widest mb-4">
                     <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse"></div>
-                    Market Intelligence V4.0
+                    Market Intelligence V4.1
                 </div>
                 <h1 className="text-4xl md:text-5xl font-black font-[var(--font-space)] text-white mb-2">
                     PRO DATA <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">DASHBOARD</span>
                 </h1>
                 <p className="text-gray-400 max-w-lg">
-                    Lichiditate. Zone de interes. Heatmap Global. Tot ce ai nevoie pentru a nu fi lichidat.
+                    Analiză tehnică avansată. Heatmap Global. Semnale de lichiditate.
                 </p>
             </div>
             <button 
                 onClick={fetchMarketData}
-                className="bg-white/5 border border-white/10 hover:border-cyan-500/50 px-5 py-3 rounded-xl flex items-center gap-3 transition-all"
+                className="bg-white/5 border border-white/10 hover:border-cyan-500/50 px-5 py-3 rounded-xl flex items-center gap-3 transition-all active:scale-95"
             >
                 <RefreshCw size={18} className={`text-cyan-400 ${data.loading ? "animate-spin" : ""}`} />
                 <span className="font-bold text-sm">Actualizează</span>
@@ -184,24 +173,22 @@ export default function MarketPage() {
 
       <div className="container mx-auto px-6 py-12 space-y-8">
 
-        {/* === RÂNDUL 1: CHART PRINCIPAL + LIQUIDITY ZONES (VPVR) === */}
+        {/* === RÂNDUL 1: CHART PRINCIPAL === */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 h-[600px]">
-            {/* Chart-ul Mare (2/3 din ecran) */}
             <div className="lg:col-span-2 bg-[#050b1d] border border-white/10 rounded-3xl relative overflow-hidden flex flex-col">
                  <div className="absolute top-4 left-4 z-10 bg-[#050b1d]/90 backdrop-blur px-4 py-2 rounded-xl border border-white/10 flex items-center gap-3 pointer-events-none">
                     <Zap size={18} className="text-yellow-400"/>
                     <div>
-                      <h3 className="text-white font-bold text-sm">BTC Futures + Liquidity Nodes</h3>
-                      <p className="text-[10px] text-gray-400">Histograma din dreapta arată unde sunt ordinele mari (Suport/Rezistență)</p>
+                      <h3 className="text-white font-bold text-sm">BTC Futures + Volume & MACD</h3>
+                      <p className="text-[10px] text-gray-400">Date reale Binance Futures. Histograma jos = Volum.</p>
                     </div>
                  </div>
+                 {/* AICI E SCHIMBAREA: Am scos VPVR, am lasat Volume + MACD */}
                  <div className="tradingview-widget-container flex-grow w-full h-full" ref={chartContainer}></div>
             </div>
 
-            {/* Coloana Dreapta: Technicals & Sentiment */}
+            {/* Coloana Dreapta */}
             <div className="flex flex-col gap-6">
-                
-                {/* 1. Technical Speedometer */}
                 <div className="flex-1 bg-[#050b1d] border border-white/10 rounded-3xl p-4 flex flex-col relative overflow-hidden">
                     <div className="absolute top-4 left-4 z-10 flex items-center gap-2">
                         <Activity size={16} className="text-cyan-400"/>
@@ -210,7 +197,6 @@ export default function MarketPage() {
                     <div className="tradingview-widget-container flex-grow w-full h-full mt-6" ref={technicalContainer}></div>
                 </div>
 
-                {/* 2. Sentiment & Cycle */}
                 <div className="flex-1 bg-[#050b1d] border border-white/10 rounded-3xl p-6 flex flex-col justify-between">
                      <div>
                         <h3 className="text-gray-400 text-xs font-bold uppercase mb-2">Fear & Greed</h3>
@@ -220,36 +206,35 @@ export default function MarketPage() {
                      <div className="border-t border-white/5 pt-4 mt-4">
                         <h3 className="text-gray-400 text-xs font-bold uppercase mb-1">Zile Post-Halving</h3>
                         <div className="text-2xl font-bold text-white font-mono">{daysSinceHalving}</div>
-                        <div className="text-[10px] text-gray-500">Target Peak: 2025</div>
+                        <div className="text-[10px] text-gray-500">Bull Run Phase</div>
                      </div>
                 </div>
             </div>
         </div>
 
-        {/* === RÂNDUL 2: MARKET HEATMAP (TOATĂ PIAȚA) === */}
+        {/* === RÂNDUL 2: MARKET HEATMAP === */}
         <div className="h-[500px] bg-[#050b1d] border border-white/10 rounded-3xl p-1 relative overflow-hidden flex flex-col">
             <div className="absolute top-4 left-4 z-10 bg-[#050b1d]/90 backdrop-blur px-4 py-2 rounded-xl border border-white/10 flex items-center gap-3 pointer-events-none">
                 <Globe size={18} className="text-blue-400"/>
                 <div>
                     <h3 className="text-white font-bold text-sm">Global Market Heatmap</h3>
-                    <p className="text-[10px] text-gray-400">Vezi vizual unde curg banii: BTC vs ETH vs ALTS</p>
+                    <p className="text-[10px] text-gray-400">Vizualizare lichiditate (Size = Market Cap, Culoare = Trend)</p>
                 </div>
             </div>
             <div className="tradingview-widget-container flex-grow w-full h-full" ref={heatmapContainer}></div>
         </div>
 
-        {/* === RÂNDUL 3: STRATEGY LOCK (CONVERSION) === */}
+        {/* === RÂNDUL 3: STRATEGY LOCK === */}
         <section className="bg-gradient-to-r from-gray-900 to-black border border-white/10 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="max-w-xl">
                 <h3 className="text-2xl font-black text-white mb-2 flex items-center gap-2">
                     <Crosshair className="text-cyan-400" /> Strategia VIP
                 </h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
-                    Datele de mai sus îți arată "Ce" se întâmplă. În comunitatea VIP discutăm "Cum" profităm.
-                    Primești nivele exacte de intrare (Entry), ieșire (TP) și Stop Loss pentru situația actuală a lichidității.
+                    Datele arată direcția. Noi îți spunem momentul.
+                    Primești nivele exacte de intrare (Entry), ieșire (TP) și Stop Loss calculate pe lichiditatea instituțională.
                 </p>
             </div>
-            
             <a href="/#consultanta" className="group bg-cyan-500 hover:bg-cyan-400 text-black font-bold py-4 px-8 rounded-xl flex items-center gap-3 transition-all hover:scale-105 shadow-[0_0_30px_rgba(6,182,212,0.3)]">
                 <Lock size={18} className="group-hover:unlock transition-all"/>
                 ACCESEAZĂ SEMNALELE VIP
