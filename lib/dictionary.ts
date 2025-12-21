@@ -19,12 +19,12 @@ export type AcademyItem = {
 
 // --- 2. CONȚINUTUL ACADEMIEI ---
 export const dictionary: AcademyItem[] = [
-  // === ✅ ARTICOL NOU: BITCOIN ===
+  // === ✅ ARTICOL: BITCOIN (FUNDAMENTE) ===
   {
     slug: "ce-este-bitcoin-ghid-complet",
     term: "Bitcoin (BTC)",
     category: "BITCOIN & FUNDAMENTE",
-    image: "/bitcoinacademy.jpg", // Imaginea nouă încărcată de tine
+    image: "/bitcoinacademy.jpg", 
     definition: "Ghidul complet despre Bitcoin. Nu este doar o monedă, este prima formă de proprietate digitală absolută din istoria omenirii.",
     analogy: "Registrul Public Indestructibil. Imaginează-ți un caiet uriaș ținut de milioane de oameni simultan. Nimeni nu poate rupe o pagină din el fără ca toți ceilalți să observe.",
     mihaiTake: "Să înțelegi Bitcoin astăzi este ca și cum ai fi înțeles Internetul în 1995. Pare ciudat, pare complicat, dar este tehnologia care va reseta modul în care funcționează lumea. Nu trebuie să fii expert IT, trebuie doar să înțelegi un lucru: Banii s-au schimbat pentru totdeauna.",
@@ -73,6 +73,81 @@ export const dictionary: AcademyItem[] = [
     `
   },
 
+  // === ✅ ARTICOL NOU: ETHEREUM (DEFI & WEB3) ===
+  {
+    slug: "ce-este-ethereum-ghid-suprem",
+    term: "Ethereum (ETH)",
+    category: "DEFI & WEB3",
+    image: "/ethereumexplicat.jpg",
+    definition: "Ghidul Suprem. Ethereum nu este doar o monedă, este un 'World Computer'. Dacă Bitcoin este Nokia, Ethereum este iPhone-ul pe care se construiesc aplicațiile viitorului.",
+    analogy: "Nokia vs iPhone. Bitcoin este telefonul robust, bun pentru apeluri (plăți). Ethereum este smartphone-ul pe care instalezi aplicații (DApps, DeFi, NFT).",
+    mihaiTake: "Bitcoin ne-a dat banii digitali. Ethereum ne-a dat economia digitală. Astăzi, pe Ethereum se construiesc finanțele viitorului. Dacă Bitcoin este Regele, Ethereum este Regatul.",
+    fullContent: `
+        <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Ce este Ethereum? (Definiția Simplă vs. Tehnică)</h3>
+        <p class="mb-4 text-gray-300">Majoritatea oamenilor cred că Ethereum este doar "a doua cea mai mare criptomonedă după Bitcoin". Este o înțelegere limitată.</p>
+        
+        <div class="bg-purple-900/20 p-6 rounded-xl border border-purple-500/30 mb-6">
+            <strong class="text-purple-400 block mb-2">Analoga Simplă:</strong>
+            <p class="text-gray-300">Gândește-te la Bitcoin ca la un telefon Nokia vechi (excelent pentru apeluri/plăți, robust, indestructibil). Gândește-te la Ethereum ca la un iPhone. Are valoare intrinsecă, dar adevărata lui putere vine din faptul că dezvoltatorii pot construi aplicații (Apps) pe el.</p>
+        </div>
+
+        <p class="mb-4 text-gray-300"><strong>Definiția Tehnică:</strong> Ethereum este un blockchain programabil, o platformă globală open-source pentru aplicații descentralizate (dApps). Este un "World Computer" (Computer Mondial) care nu poate fi oprit sau cenzurat.</p>
+        <p class="mb-6 text-gray-300"><strong>Moneda:</strong> Numele rețelei este Ethereum. Numele monedei pe care o cumperi este Ether (ETH). Ether este "combustibilul" (gas) care plătește pentru utilizarea acestui computer global.</p>
+
+        <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. Geneza: Băiatul Geniu și Viziunea (2013-2015)</h3>
+        <p class="mb-4 text-gray-300">Istoria Ethereum începe cu un adolescent: Vitalik Buterin. În 2013, și-a dat seama că Bitcoin are o limitare majoră: era proiectat doar pentru bani. Vitalik a propus comunității Bitcoin să adauge un limbaj de programare complex. Comunitatea a refuzat.</p>
+        <p class="italic text-gray-400 mb-4">Așa că Vitalik a spus celebra frază: "Fine, I'll do it myself" (Bine, o fac singur).</p>
+        <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-300">
+            <li><strong>2013:</strong> Vitalik publică "Ethereum Whitepaper".</li>
+            <li><strong>2014:</strong> Are loc vânzarea inițială (ICO), unde 1 BTC cumpăra 2.000 ETH (o investiție legendară azi).</li>
+            <li><strong>30 Iulie 2015:</strong> Se lansează rețeaua ("Frontier"). Lumea crypto se schimbă pentru totdeauna.</li>
+        </ul>
+
+        <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. Inovația Supremă: Smart Contracts</h3>
+        <p class="mb-4 text-gray-300">Aceasta este "sosul secret" al Ethereum. Un Smart Contract este un cod informatic care se execută singur atunci când sunt îndeplinite anumite condiții. Nu are nevoie de avocat, notar sau bancă.</p>
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-[#0a0f1e] p-4 rounded-lg border border-red-500/20">
+                <strong class="text-red-400 block mb-2">Lumea Veche</strong>
+                <p class="text-sm text-gray-400">Vrei să vinzi o casă. Ai nevoie de agent, notar, bancă, cadastru. Durează luni, costă mii de euro.</p>
+            </div>
+            <div class="bg-[#0a0f1e] p-4 rounded-lg border border-green-500/20">
+                <strong class="text-green-400 block mb-2">Ethereum</strong>
+                <p class="text-sm text-gray-400">Scrii un contract inteligent: "Dacă A trimite 100 ETH, Token-ul casei se transferă automat la A, banii la B." Instant, transparent.</p>
+            </div>
+        </div>
+
+        <h3 class="text-2xl font-bold text-white mt-12 mb-4">4. Istoria Zbuciumată</h3>
+        <p class="mb-4 text-gray-300">Ethereum nu a avut un drum lin. A trecut prin foc și sabie.</p>
+        <ul class="space-y-4 text-gray-300">
+            <li><strong>A. The DAO Hack (2016):</strong> Prima mare aplicație a fost hackuită (50M $). Comunitatea a dat timpul înapoi (Hard Fork) pentru a recupera banii. Așa s-a născut Ethereum Classic (ETC) - cei care au refuzat schimbarea.</li>
+            <li><strong>B. ICO Boom (2017):</strong> Oricine putea crea o monedă nouă. A dus la o manie globală, cimentând Ethereum ca standard al industriei.</li>
+            <li><strong>C. DeFi Summer (2020) & NFT Craze (2021):</strong> Ethereum a demonstrat că poate înlocui băncile (Uniswap) și galeriile de artă (NFT).</li>
+            <li><strong>D. The Merge (2022):</strong> Cel mai complex eveniment. Trecerea de la Proof of Work (Minare) la Proof of Stake. Consumul de energie a scăzut cu 99.95%.</li>
+        </ul>
+
+        <h3 class="text-2xl font-bold text-white mt-12 mb-4">5. Tokenomics: "Ultra Sound Money"</h3>
+        <p class="mb-4 text-gray-300">După upgrade-ul EIP-1559 și The Merge, economia ETH s-a schimbat fundamental.</p>
+        <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-300">
+            <li><strong>Staking:</strong> Dacă blochezi ETH pentru securitate, primești dobândă. ETH devine "Internet Bond".</li>
+            <li><strong>The Burn (Arderea):</strong> La fiecare tranzacție, o parte din taxă este distrusă.</li>
+            <li><strong>Deflație:</strong> În activitate intensă, oferta totală scade. Asta face ETH "Ultra Sound Money".</li>
+        </ul>
+
+        <h3 class="text-2xl font-bold text-white mt-12 mb-4">6. Problema și Soluția: Layer 2</h3>
+        <p class="mb-4 text-gray-300">Ethereum a devenit victima propriului succes (taxe mari). Soluția actuală este <strong>Layer 2 (L2)</strong>.</p>
+        <p class="mb-4 text-gray-300">Imaginează-ți Ethereum ca pe o autostradă sigură dar lentă. L2 (Arbitrum, Optimism) sunt autobuze rapide deasupra autostrăzii. Procesează mii de tranzacții ieftin, apoi scriu rezultatul final pe Ethereum.</p>
+
+        <h3 class="text-2xl font-bold text-white mt-12 mb-4">7. Concluzie: De ce Ethereum este Inevitabil</h3>
+        <p class="mb-4 text-gray-300">Bitcoin ne-a dat banii digitali. Ethereum ne-a dat economia digitală.</p>
+        <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-300">
+            <li><strong>Finanțe:</strong> Stablecoins de trilioane de dolari.</li>
+            <li><strong>Tokenizarea Activelor:</strong> BlackRock lansează fonduri pe Ethereum.</li>
+            <li><strong>Identitate Digitală:</strong> Web3 și controlul datelor.</li>
+        </ul>
+        <p class="text-white font-bold border-l-4 border-purple-500 pl-4">Ethereum nu este perfect. Dar este singurul computer global descentralizat care a supraviețuit tuturor atacurilor. Dacă Bitcoin este Regele, Ethereum este Regatul.</p>
+    `
+  },
+
   // === RĂMÂN CELELALTE ARTICOLE (PLACEHOLDER SAU VIITOARE) ===
   {
     slug: "rsi-relative-strength-index-explicat",
@@ -83,16 +158,6 @@ export const dictionary: AcademyItem[] = [
     analogy: "Turometrul Pieței. Dacă acul e pe roșu (peste 70), motorul fierbe și trebuie să încetinească.",
     mihaiTake: "Nu cumpăra niciodată când RSI e 80 pe Daily! Asta înseamnă FOMO. Profesioniștii vând când RSI e sus.",
     fullContent: `<p>Conținutul despre RSI urmează să fie actualizat...</p>`
-  },
-  {
-    slug: "ce-este-ethereum-smart-contracts",
-    term: "Ethereum (ETH)",
-    category: "DEFI & WEB3",
-    image: "https://images.unsplash.com/photo-1622790698141-94e30457ef12?q=80&w=2072&auto=format&fit=crop",
-    definition: "Ethereum nu este doar o monedă, este un calculator global. Află cum funcționează Smart Contracts și DeFi.",
-    analogy: "Petrolul Digital. Bitcoin e Aurul, Ethereum e Petrolul care alimentează mașinăria DeFi.",
-    mihaiTake: "Fără Ethereum, nu am avea NFT-uri, nu am avea Uniswap. Este fundația internetului viitorului (Web3).",
-    fullContent: `<p>Conținutul despre Ethereum urmează să fie actualizat...</p>`
   }
 ];
 
