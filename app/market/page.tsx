@@ -1,245 +1,158 @@
-'use client';
-
-import { useState, useEffect, useRef } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { 
-  Activity, RefreshCw, Globe, 
-  Crosshair, Lock, Zap, TrendingUp 
-} from 'lucide-react';
+import TradingViewWidget from '@/components/TradingViewWidget';
+import { getGlobalData, getFearGreed } from '@/lib/market-api';
+import { Activity, DollarSign, Layers, BarChart3, TrendingUp, TrendingDown, Zap } from 'lucide-react';
 
-// === HELPER: SKELETON LOADER ===
-const Skeleton = ({ className }: { className: string }) => (
-  <div className={`bg-white/5 animate-pulse rounded ${className}`}></div>
-);
+// Această funcție formatează numerele mari (ex: 2.4T, 80B)
+const formatCurrency = (value: number) => {
+  if (value >= 1e12) return `$${(value / 1e12).toFixed(2)} T`;
+  if (value >= 1e9) return `$${(value / 1e9).toFixed(2)} B`;
+  return `$${value.toLocaleString()}`;
+};
 
-// === INTERFEȚE DATE ===
-interface MarketDataState {
-  btcDominance: number;
-  fearGreedValue: number;
-  fearGreedLabel: string;
-  loading: boolean;
-}
+export default async function MarketPage() {
+  // 1. Aducem datele reale de pe server
+  const globalData = await getGlobalData();
+  const fearGreedData = await getFearGreed();
 
-export default function MarketPage() {
-  const chartContainer = useRef<HTMLDivElement>(null);
-  const heatmapContainer = useRef<HTMLDivElement>(null);
-  const technicalContainer = useRef<HTMLDivElement>(null);
-  
-  const [data, setData] = useState<MarketDataState>({
-    btcDominance: 0, 
-    fearGreedValue: 50, fearGreedLabel: 'Neutral', loading: true
-  });
-
-  // --- 1. ENGINE: FETCH DATA ---
-  const fetchMarketData = async () => {
-    try {
-      setData(prev => ({ ...prev, loading: true }));
-      const [globalRes, fgRes] = await Promise.all([
-        fetch('https://api.coingecko.com/api/v3/global'),
-        fetch('https://api.alternative.me/fng/')
-      ]);
-      const globalJson = await globalRes.json();
-      const fgJson = await fgRes.json();
-
-      setData({
-        btcDominance: globalJson.data.market_cap_percentage.btc,
-        fearGreedValue: parseInt(fgJson.data[0].value),
-        fearGreedLabel: fgJson.data[0].value_classification,
-        loading: false
-      });
-    } catch (error) {
-      console.error("System Error:", error);
-      setData(prev => ({ ...prev, loading: false }));
-    }
-  };
-
-  useEffect(() => { fetchMarketData(); }, []);
-
-  // --- 2. WIDGET: CHART CU VOLUME & MACD (REPARAT) ---
-  useEffect(() => {
-    if (chartContainer.current) {
-        chartContainer.current.innerHTML = ""; 
-        const script = document.createElement("script");
-        script.src = "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js";
-        script.type = "text/javascript";
-        script.async = true;
-        script.innerHTML = `
-          {
-            "autosize": true,
-            "symbol": "BINANCE:BTCUSDT.P",
-            "interval": "60",
-            "timezone": "Europe/Bucharest",
-            "theme": "dark",
-            "style": "1",
-            "locale": "en",
-            "enable_publishing": false,
-            "backgroundColor": "rgba(5, 11, 29, 1)",
-            "gridColor": "rgba(255, 255, 255, 0.05)",
-            "hide_top_toolbar": false,
-            "hide_legend": false,
-            "save_image": false,
-            "calendar": false,
-            "hide_volume": false,
-            "studies": [
-              "MACD@tv-basicstudies"
-            ],
-            "support_host": "https://www.tradingview.com"
-          }`;
-        chartContainer.current.appendChild(script);
-    }
-  }, []);
-
-  // --- 3. WIDGET: HEATMAP ---
-  useEffect(() => {
-    if (heatmapContainer.current) {
-        heatmapContainer.current.innerHTML = ""; 
-        const script = document.createElement("script");
-        script.src = "https://s3.tradingview.com/external-embedding/embed-widget-crypto-coins-heatmap.js";
-        script.type = "text/javascript";
-        script.async = true;
-        script.innerHTML = `
-          {
-            "dataSource": "Crypto",
-            "blockSize": "market_cap_calc",
-            "blockColor": "change",
-            "locale": "en",
-            "symbolUrl": "",
-            "colorTheme": "dark",
-            "hasTopBar": false,
-            "isDataSetEnabled": false,
-            "isZoomEnabled": true,
-            "hasSymbolTooltip": true,
-            "width": "100%",
-            "height": "100%"
-          }`;
-        heatmapContainer.current.appendChild(script);
-    }
-  }, []);
-
-  // --- 4. WIDGET: TECHNICALS ---
-  useEffect(() => {
-    if (technicalContainer.current) {
-        technicalContainer.current.innerHTML = ""; 
-        const script = document.createElement("script");
-        script.src = "https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js";
-        script.type = "text/javascript";
-        script.async = true;
-        script.innerHTML = `
-          {
-            "interval": "1h",
-            "width": "100%",
-            "isTransparent": true,
-            "height": "100%",
-            "symbol": "BINANCE:BTCUSDT.P",
-            "showIntervalTabs": true,
-            "displayMode": "single",
-            "locale": "en",
-            "colorTheme": "dark"
-          }`;
-        technicalContainer.current.appendChild(script);
-    }
-  }, []);
-
-  const daysSinceHalving = Math.floor((new Date().getTime() - new Date('2024-04-20').getTime()) / (1000 * 3600 * 24));
+  // Date de fallback în caz că pică API-ul
+  const marketCap = globalData ? formatCurrency(globalData.marketCap) : "$2.40 T";
+  const volume = globalData ? formatCurrency(globalData.volume) : "$85.2 B";
+  const dominance = globalData ? `${globalData.btcDominance.toFixed(1)}%` : "55.2%";
+  const change = globalData ? globalData.marketCapChange.toFixed(2) : "+1.2";
 
   return (
-    <main className="min-h-screen bg-[#020617] text-white font-[var(--font-inter)] selection:bg-cyan-500/30">
+    <main className="min-h-screen bg-[#020617] text-white selection:bg-blue-500/30">
       <Navbar />
 
-      <div className="pt-28 pb-10 border-b border-white/5 bg-[#020617]">
-        <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-end gap-6">
+      <div className="container mx-auto px-6 py-12">
+        
+        {/* HEADER */}
+        <div className="mb-12 flex flex-col md:flex-row justify-between items-end gap-6">
             <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/30 border border-cyan-500/20 text-cyan-400 text-xs font-bold uppercase tracking-widest mb-4">
-                    <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse"></div>
-                    Market Intelligence V4.1
-                </div>
-                <h1 className="text-4xl md:text-5xl font-black font-[var(--font-space)] text-white mb-2">
-                    PRO DATA <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">DASHBOARD</span>
+                <h1 className="text-4xl font-black text-white mb-2 flex items-center gap-3">
+                    <Activity className="text-green-400" /> Market Intelligence
                 </h1>
-                <p className="text-gray-400 max-w-lg">
-                    Analiză tehnică avansată. Heatmap Global. Semnale de lichiditate.
+                <p className="text-gray-400 max-w-xl">
+                    Date live din blockchain și exchange-uri. 
+                    Monitorizăm pulsul pieței în timp real.
                 </p>
             </div>
-            <button 
-                onClick={fetchMarketData}
-                className="bg-white/5 border border-white/10 hover:border-cyan-500/50 px-5 py-3 rounded-xl flex items-center gap-3 transition-all active:scale-95"
-            >
-                <RefreshCw size={18} className={`text-cyan-400 ${data.loading ? "animate-spin" : ""}`} />
-                <span className="font-bold text-sm">Actualizează</span>
-            </button>
+            
+            {/* STATUS API LIVE */}
+            <div className="flex items-center gap-2 px-3 py-1 bg-green-500/10 border border-green-500/20 rounded-full">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                </span>
+                <span className="text-xs font-mono text-green-400 font-bold">LIVE FEED ACTIVE</span>
+            </div>
         </div>
-      </div>
 
-      <div className="container mx-auto px-6 py-12 space-y-8">
+        {/* --- SECȚIUNEA 1: METRICI LIVE (CoinGecko) --- */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+            
+            {/* Market Cap */}
+            <div className="bg-[#0a0f1e] p-6 rounded-2xl border border-white/10 relative overflow-hidden group">
+                <div className="absolute -right-6 -top-6 w-24 h-24 bg-blue-600/10 rounded-full blur-2xl group-hover:bg-blue-600/20 transition-all"></div>
+                <div className="flex items-center gap-2 text-gray-400 text-sm mb-2"><DollarSign size={16}/> Global Market Cap</div>
+                <div className="text-3xl font-black text-white font-[var(--font-space)]">{marketCap}</div>
+                <div className={`text-xs font-bold mt-2 flex items-center gap-1 ${Number(change) >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                    {Number(change) >= 0 ? <TrendingUp size={12}/> : <TrendingDown size={12}/>} {change}% (24h)
+                </div>
+            </div>
 
-        {/* === RÂNDUL 1: CHART PRINCIPAL === */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 h-[600px]">
-            <div className="lg:col-span-2 bg-[#050b1d] border border-white/10 rounded-3xl relative overflow-hidden flex flex-col">
-                 <div className="absolute top-4 left-4 z-10 bg-[#050b1d]/90 backdrop-blur px-4 py-2 rounded-xl border border-white/10 flex items-center gap-3 pointer-events-none">
-                    <Zap size={18} className="text-yellow-400"/>
-                    <div>
-                      <h3 className="text-white font-bold text-sm">BTC Futures + Volume & MACD</h3>
-                      <p className="text-[10px] text-gray-400">Date reale Binance Futures. Histograma jos = Volum.</p>
+            {/* Volum 24h */}
+            <div className="bg-[#0a0f1e] p-6 rounded-2xl border border-white/10 relative overflow-hidden group">
+                <div className="absolute -right-6 -top-6 w-24 h-24 bg-purple-600/10 rounded-full blur-2xl group-hover:bg-purple-600/20 transition-all"></div>
+                <div className="flex items-center gap-2 text-gray-400 text-sm mb-2"><BarChart3 size={16}/> Volum Total (24h)</div>
+                <div className="text-3xl font-black text-white font-[var(--font-space)]">{volume}</div>
+                <div className="text-xs text-gray-500 mt-2">Lichiditate în piață</div>
+            </div>
+
+            {/* BTC Dominance */}
+            <div className="bg-[#0a0f1e] p-6 rounded-2xl border border-white/10 relative overflow-hidden group">
+                <div className="absolute -right-6 -top-6 w-24 h-24 bg-orange-600/10 rounded-full blur-2xl group-hover:bg-orange-600/20 transition-all"></div>
+                <div className="flex items-center gap-2 text-gray-400 text-sm mb-2"><Layers size={16}/> BTC Dominance</div>
+                <div className="text-3xl font-black text-white font-[var(--font-space)]">{dominance}</div>
+                <div className="text-xs text-gray-500 mt-2">Dacă scade = Altseason</div>
+            </div>
+
+            {/* Fear & Greed LIVE */}
+            <div className="bg-[#0a0f1e] p-6 rounded-2xl border border-white/10 relative overflow-hidden group">
+                <div className={`absolute -right-6 -top-6 w-24 h-24 rounded-full blur-2xl transition-all ${Number(fearGreedData.value) > 50 ? 'bg-green-500/10' : 'bg-red-500/10'}`}></div>
+                <div className="flex items-center gap-2 text-gray-400 text-sm mb-2"><Zap size={16}/> Fear & Greed</div>
+                <div className="flex items-end gap-3">
+                    <div className={`text-3xl font-black font-[var(--font-space)] ${Number(fearGreedData.value) > 50 ? 'text-green-400' : 'text-red-400'}`}>
+                        {fearGreedData.value}
                     </div>
-                 </div>
-                 {/* AICI E SCHIMBAREA: Am scos VPVR, am lasat Volume + MACD */}
-                 <div className="tradingview-widget-container flex-grow w-full h-full" ref={chartContainer}></div>
-            </div>
-
-            {/* Coloana Dreapta */}
-            <div className="flex flex-col gap-6">
-                <div className="flex-1 bg-[#050b1d] border border-white/10 rounded-3xl p-4 flex flex-col relative overflow-hidden">
-                    <div className="absolute top-4 left-4 z-10 flex items-center gap-2">
-                        <Activity size={16} className="text-cyan-400"/>
-                        <span className="text-xs font-bold uppercase text-gray-400">Semnal Tehnic (1H)</span>
-                    </div>
-                    <div className="tradingview-widget-container flex-grow w-full h-full mt-6" ref={technicalContainer}></div>
+                    <div className="text-sm font-bold text-gray-300 mb-1.5">{fearGreedData.value_classification}</div>
                 </div>
-
-                <div className="flex-1 bg-[#050b1d] border border-white/10 rounded-3xl p-6 flex flex-col justify-between">
-                     <div>
-                        <h3 className="text-gray-400 text-xs font-bold uppercase mb-2">Fear & Greed</h3>
-                        <div className="text-4xl font-black text-white">{data.fearGreedValue}</div>
-                        <div className={`text-sm font-bold uppercase ${data.fearGreedValue > 50 ? 'text-green-400' : 'text-red-400'}`}>{data.fearGreedLabel}</div>
-                     </div>
-                     <div className="border-t border-white/5 pt-4 mt-4">
-                        <h3 className="text-gray-400 text-xs font-bold uppercase mb-1">Zile Post-Halving</h3>
-                        <div className="text-2xl font-bold text-white font-mono">{daysSinceHalving}</div>
-                        <div className="text-[10px] text-gray-500">Bull Run Phase</div>
-                     </div>
+                <div className="w-full bg-white/10 h-1.5 rounded-full mt-3 overflow-hidden">
+                    <div 
+                        className={`h-full ${Number(fearGreedData.value) > 50 ? 'bg-green-500' : 'bg-red-500'}`} 
+                        style={{ width: `${fearGreedData.value}%` }}
+                    ></div>
                 </div>
             </div>
         </div>
 
-        {/* === RÂNDUL 2: MARKET HEATMAP === */}
-        <div className="h-[500px] bg-[#050b1d] border border-white/10 rounded-3xl p-1 relative overflow-hidden flex flex-col">
-            <div className="absolute top-4 left-4 z-10 bg-[#050b1d]/90 backdrop-blur px-4 py-2 rounded-xl border border-white/10 flex items-center gap-3 pointer-events-none">
-                <Globe size={18} className="text-blue-400"/>
-                <div>
-                    <h3 className="text-white font-bold text-sm">Global Market Heatmap</h3>
-                    <p className="text-[10px] text-gray-400">Vizualizare lichiditate (Size = Market Cap, Culoare = Trend)</p>
+        {/* --- SECȚIUNEA 2: CHART INTERACTIV (TradingView) --- */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+            
+            {/* GRAFIC PRINCIPAL (Stânga - Mare) */}
+            <div className="lg:col-span-2 space-y-4">
+                <div className="flex justify-between items-center">
+                    <h2 className="text-xl font-bold text-white flex items-center gap-2">
+                        <Activity className="text-blue-400"/> Analiză Tehnică Live (BTC/USDT)
+                    </h2>
+                    <span className="text-xs text-gray-500 bg-white/5 px-2 py-1 rounded">Sursa: TradingView</span>
                 </div>
+                {/* AICI ESTE WIDGETUL REAL */}
+                <TradingViewWidget />
             </div>
-            <div className="tradingview-widget-container flex-grow w-full h-full" ref={heatmapContainer}></div>
-        </div>
 
-        {/* === RÂNDUL 3: STRATEGY LOCK === */}
-        <section className="bg-gradient-to-r from-gray-900 to-black border border-white/10 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="max-w-xl">
-                <h3 className="text-2xl font-black text-white mb-2 flex items-center gap-2">
-                    <Crosshair className="text-cyan-400" /> Strategia VIP
+            {/* EDUCAȚIE & EXPLICATII (Dreapta) */}
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 h-fit">
+                <h3 className="text-lg font-bold text-white mb-4 border-b border-white/10 pb-4">
+                    Cum folosim instrumentele?
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                    Datele arată direcția. Noi îți spunem momentul.
-                    Primești nivele exacte de intrare (Entry), ieșire (TP) și Stop Loss calculate pe lichiditatea instituțională.
-                </p>
+                
+                <div className="space-y-6">
+                    <div>
+                        <h4 className="font-bold text-green-400 text-sm mb-1">1. Market Cap & Volum</h4>
+                        <p className="text-gray-400 text-xs leading-relaxed">
+                            Volumul confirmă trendul. Dacă prețul crește dar volumul scade, este o capcană (Fakeout). 
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 className="font-bold text-orange-400 text-sm mb-1">2. Dominanța BTC</h4>
+                        <p className="text-gray-400 text-xs leading-relaxed">
+                            Când dominanța scade sub 50% agresiv, banii se mută în Altcoins. Atunci e momentul să te uiți la ETH și SOL.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 className="font-bold text-purple-400 text-sm mb-1">3. Fear & Greed</h4>
+                        <p className="text-gray-400 text-xs leading-relaxed">
+                            Cumpără când e "Fear" (frică, roșu) și vinde treptat când e "Greed" (lăcomie, verde peste 75).
+                        </p>
+                    </div>
+
+                    <div className="p-4 bg-blue-500/10 rounded-xl border border-blue-500/20 mt-4">
+                        <p className="text-blue-300 text-xs font-bold text-center">
+                            💡 Vrei să înveți să citești graficul din stânga?
+                        </p>
+                        <a href="/curs" className="block mt-2 text-center text-white bg-blue-600 hover:bg-blue-500 py-2 rounded-lg text-xs font-bold transition-colors">
+                            Vezi Cursul de Trading
+                        </a>
+                    </div>
+                </div>
             </div>
-            <a href="/#consultanta" className="group bg-cyan-500 hover:bg-cyan-400 text-black font-bold py-4 px-8 rounded-xl flex items-center gap-3 transition-all hover:scale-105 shadow-[0_0_30px_rgba(6,182,212,0.3)]">
-                <Lock size={18} className="group-hover:unlock transition-all"/>
-                ACCESEAZĂ SEMNALELE VIP
-            </a>
-        </section>
+
+        </div>
 
       </div>
       <Footer />
