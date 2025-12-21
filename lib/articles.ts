@@ -1,4 +1,77 @@
 export const articles = [
+// ✅ ARTICOL NOU (ON-CHAIN MURPHY - SELLER EXHAUSTION)
+  {
+    slug: "radiografia-secreta-blockchain-maini-slabe-semnal-cumparare",
+    title: "RADIOGRAFIA SECRETĂ: Cum ne arată blockchain-ul că \"mâinile slabe\" au părăsit deja corabia. Semnalul de cumpărare ascuns",
+    date: "21 Dec 2025",
+    category: "ANALIZĂ ON-CHAIN & PSIHOLOGIE",
+    image: "/onchaindec.jpg",
+    impact: "bullish", // Verde, pentru că indică finalul scăderilor
+    summary: "Analistul on-chain Murphy confirmă: Exodul s-a oprit. Datele arată că vânzătorii disperați au ieșit din piață în noiembrie. Află ce înseamnă 'Seller Exhaustion' și de ce lipsa vânzătorilor este cel mai puternic semnal de creștere.",
+    mihaiTake: "Tati, în trading există o regulă nescrisă: Urmărește portofelele, nu doar lumânările. Când vezi că nimeni nu mai vinde, deși prețul e jos, înseamnă că 'mâinile slabe' au plecat. Acum scena e pregătită pentru profesioniști.",
+    content: `
+      <p class="text-xl font-medium text-white mb-6">În trading, există o regulă nescrisă: <em>"Urmărește portofelele, nu doar lumânările de pe grafic."</em></p>
+      
+      <p class="mb-4">Recent, Bitcoin a părut indecis, testând nervii investitorilor. Dar sub suprafața aparent calmă a prețului, a avut loc o bătălie decisivă între frică și convingere.</p>
+      
+      <div class="bg-blue-900/10 border-l-4 border-blue-500 p-4 mb-8">
+        <p class="text-gray-300">Analistul on-chain <strong>Murphy</strong> a identificat pe 21 Decembrie un trend care schimbă perspectiva asupra finalului de an: <span class="text-white font-bold">Exodul s-a oprit. Vânzătorii disperați au terminat muniția.</span></p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">1. Faza de Capitulare (13 - 25 Noiembrie)</h3>
+      <p class="mb-4">Să ne întoarcem puțin în timp. Între 13 și 25 Noiembrie, Bitcoin a suferit o corecție abruptă. Ce s-a întâmplat în spatele cortinei?</p>
+      <p class="mb-4">Datele on-chain arată o explozie a numărului de adrese care și-au golit complet balanța (Zero-Balance Addresses).</p>
+
+      <div class="bg-[#0a0f1e] p-6 rounded-xl border border-red-500/20 mb-6">
+        <strong class="text-red-400 block mb-2 text-lg">Ce înseamnă asta?</strong>
+        <p class="text-gray-300 mb-2">Când un investitor vinde o parte din Bitcoin, e prudent. Când un investitor vinde tot și își lasă portofelul pe zero, e panicat.</p>
+        <p class="text-gray-300">Acea perioadă a fost definiția "Capitulării". Oamenii au ieșit complet din piață, convinși că prețul se va prăbuși. Aceasta a fost "curățenia de toamnă" – momentul în care investitorii slabi (Weak Hands) au cedat presiunii.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">2. Faza de Vindecare (1 - 18 Decembrie)</h3>
+      <p class="mb-4">Aici devine interesant. Deși prețul Bitcoin a continuat să testeze niveluri de suport (să scadă temporar), comportamentul on-chain s-a schimbat radical.</p>
+      
+      <div class="flex items-center gap-4 bg-green-900/10 border border-green-500/30 p-4 rounded-xl mb-6">
+        <div class="text-3xl">📉</div>
+        <div>
+            <strong class="text-green-400 block">Semnalul On-Chain</strong>
+            <span class="text-white">Numărul adreselor care își lichidează total pozițiile a început să scadă abrupt.</span>
+        </div>
+      </div>
+
+      <p class="mb-4"><strong>Traducerea:</strong> Chiar dacă prețul nu a explodat (încă), oamenii au încetat să mai fugă.</p>
+      <p class="mb-4">Cei care au vrut să vândă de frică, au vândut deja în noiembrie. Cine a rămas în piață acum sunt deținătorii convinși (Diamond Hands).</p>
+      <p class="bg-gray-800 p-3 rounded text-gray-300 italic border-l-2 border-green-500 mb-6">Aceasta se numește <strong>"Seller Exhaustion"</strong> (Epuizarea Vânzătorilor). Când nu mai ai pe cineva dispus să vândă la prețuri mici, singura direcție posibilă pentru preț este în sus.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6 border-b border-gray-700 pb-2">3. Confirmarea Futures: Alinierea Planetelor</h3>
+      <p class="mb-4">Murphy notează un detaliu crucial: această scădere a ieșirilor din piață se aliniază perfect cu schimbarea sentimentului pe piața Futures.</p>
+      <p class="mb-6">Traderii profesioniști au început să parieze din nou pe creștere (Bullish positions). Când ai două semnale care spun același lucru:</p>
+
+      <div class="grid md:grid-cols-2 gap-4 mb-8">
+        <div class="bg-[#0a0f1e] p-4 rounded-lg border border-white/10 text-center">
+            <span class="block text-gray-500 text-xs uppercase tracking-widest mb-1">Spot / On-Chain</span>
+            <strong class="text-white">Retail-ul nu mai vinde panicat</strong>
+        </div>
+        <div class="bg-[#0a0f1e] p-4 rounded-lg border border-white/10 text-center">
+             <span class="block text-gray-500 text-xs uppercase tracking-widest mb-1">Derivate / Futures</span>
+            <strong class="text-green-400">Profesioniștii încep să cumpere</strong>
+        </div>
+      </div>
+      <p class="text-center font-bold text-white mb-8">...atunci ai rețeta perfectă pentru o inversare de trend (Reversal).</p>
+
+      <div class="mt-12 pt-8 border-t border-white/10">
+        <h4 class="text-xl font-bold text-white mb-4">Concluzie: Liniștea de după furtună</h4>
+        <p class="text-gray-300 mb-4">Ce ne spune acest indicator? Că furtuna emoțională a trecut. Piața a absorbit șocul din noiembrie. Faptul că adresele nu se mai golesc, deși prețul a testat suportul, arată reziliență.</p>
+        <p class="text-gray-300 mb-6">Suntem în faza de acumulare tăcută. Zgomotul (oamenii care strigau "vând tot!") a dispărut. Acum, scena este pregătită pentru ca cererea să preia controlul asupra unei oferte tot mai limitate.</p>
+        
+        <div class="bg-gradient-to-r from-green-900/20 to-black p-6 rounded-xl border border-green-500/30 text-center">
+            <span class="text-green-400 font-bold uppercase text-xs tracking-[0.2em] block mb-2">Lecția Zilei</span>
+            <p class="text-white text-lg font-medium italic">"Nu vinde când vezi că alții au terminat deja de vândut."</p>
+        </div>
+      </div>
+    `
+  },
+
 // ✅ ARTICOL NOU (ADDRESS POISONING - 50M LOST) - ALERTĂ
   {
     slug: "secunda-neatentie-50-milioane-dolari-address-poisoning",
