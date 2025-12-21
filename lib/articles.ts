@@ -1,4 +1,119 @@
 export const articles = [
+{
+    id: 'distopia-oportunitatilor',
+    slug: 'distopia-oportunitatilor',
+    title: 'DISTOPIA OPORTUNITĂȚILOR: De ce sărăcia începe cu cuvintele tale',
+    excerpt: 'Tu devii cuvintele tale. Portofoliul tău de investiții este oglinda fidelă a conversației tale interioare. O lecție despre vocabularul sărăciei vs. bogăției inspirată de Robert Kiyosaki.',
+    date: '22 Decembrie 2024',
+    category: 'Mindset & Psihologie',
+    author: 'Mihai Daniel',
+    image: '/oportunitatedecembrie.jpg',
+    readTime: '6 min',
+    content: `
+      <div class="bg-blue-900/10 border-l-4 border-blue-500 p-6 rounded-r-xl mb-8">
+        <h3 class="text-xl font-bold text-white mb-2">Introducere: "Cuvântul s-a făcut trup"</h3>
+        <p class="italic text-gray-300">
+          Este duminică, așa că putem împrumuta o lecție veche de 2000 de ani, pe care Robert Kiyosaki a readus-o azi în atenție: "Cuvântul s-a făcut trup și a locuit printre noi."
+        </p>
+      </div>
+
+      <p class="mb-4">
+        În termeni financiari, asta se traduce brutal: <strong>Tu devii cuvintele tale.</strong>
+        Portofoliul tău de investiții este oglinda fidelă a conversației tale interioare.
+      </p>
+      <p class="mb-4">
+        Dacă te uiți la graficul Bitcoin când este roșu și spui <span class="text-red-400 font-bold">"Nu îmi permit să investesc, e criză"</span>, tocmai ai semnat un contract pe viață cu sărăcia.
+      </p>
+      <p class="mb-8">
+        Dacă te uiți la același grafic roșu și întrebi <span class="text-green-400 font-bold">"Cum pot face rost de lichiditate pentru a profita de acest preț?"</span>, tocmai ai deschis ușa către avere.
+      </p>
+      
+      <p class="text-xl font-serif text-white text-center my-8 border-t border-b border-white/10 py-4">
+        Banii sunt o consecință a mentalității, nu invers.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">1. Mentalitatea Bearish vs. Bullish: O problemă de Vocabular</h2>
+      <p class="mb-6">
+        Kiyosaki face o distincție clară între tatăl său sărac și tatăl său bogat. Aceeași distincție o vedem zilnic pe grupurile de crypto.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-8 my-8">
+        <div class="bg-red-500/5 border border-red-500/20 p-6 rounded-2xl">
+          <h3 class="text-red-400 font-bold uppercase text-sm mb-4">Vocabularul Sărăciei (Bearish):</h3>
+          <ul class="space-y-3 list-disc pl-5 marker:text-red-500 text-sm">
+            <li>"Nu îmi permit." (Închide creierul).</li>
+            <li>"Piața s-a prăbușit, e țeapă." (Victimizare).</li>
+            <li>"E prea scump acum, aștept să scadă." (Frică).</li>
+            <li>"Dacă aș fi cumpărat în 2015..." (Trecut).</li>
+          </ul>
+        </div>
+
+        <div class="bg-green-500/5 border border-green-500/20 p-6 rounded-2xl">
+          <h3 class="text-green-400 font-bold uppercase text-sm mb-4">Vocabularul Bogăției (Bullish):</h3>
+          <ul class="space-y-3 list-disc pl-5 marker:text-green-500 text-sm">
+            <li>"Cum pot să îmi permit?" (Deschide creierul).</li>
+            <li>"Activele sunt la reducere." (Oportunitate).</li>
+            <li>"Unde este sângele pe străzi?" (Curaj).</li>
+          </ul>
+        </div>
+      </div>
+      
+      <p class="mb-8 font-bold">
+        Kiyosaki spune simplu: Cuvintele sunt gratis. Dar dacă le alegi pe cele greșite, te costă o avere.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">2. Distopia Oportunităților: Paradoxul Investitorului</h2>
+      <p class="mb-4">
+        Aici intervine conceptul fascinant pe care l-am numit "Distopia Oportunităților".
+        Creierul uman este programat să fugă de pericol (Haos) și să alerge spre siguranță (Euforie).
+        În investiții, acest instinct este fatal.
+      </p>
+      
+      <ul class="space-y-6 mt-6 mb-8">
+        <li class="bg-white/5 p-4 rounded-xl">
+          <strong class="text-red-400 block mb-2">Când lumea pare un Iad (Distopie):</strong>
+          Știri despre război, inflație, Bitcoin scade cu 10%.
+          <br/>
+          <span class="text-green-400 font-bold">Realitatea:</span> Acesta este Paradisul Cumpărătorului. Activele sunt la "lichidare de stoc". Este momentul în care se fac averile generaționale.
+        </li>
+        <li class="bg-white/5 p-4 rounded-xl">
+          <strong class="text-green-400 block mb-2">Când lumea pare un Paradis (Utopie):</strong>
+          Toată lumea face bani, taximetristul îți dă ponturi crypto.
+          <br/>
+          <span class="text-red-400 font-bold">Realitatea:</span> Acesta este Iadul Cumpărătorului. Cumperi vârful (Top). Este momentul de maxim risc financiar.
+        </li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">3. Lecția din 2008 aplicată în 2025</h2>
+      <p class="mb-4">
+        Kiyosaki amintește de Marea Criză Financiară din 2008. Cei care au spus "Nu îmi permit, e criză" au rămas săraci. Cei care au întrebat "Cum pot să cumpăr?" dețin astăzi lumea.
+      </p>
+      <p class="mb-4">
+        În 2025, suntem într-un scenariu similar pe piața crypto. Masa de oameni spune: <em>"Crypto e mort."</em>
+      </p>
+      <p class="mb-8">
+        Investitorul educat spune: <strong>"Acesta este momentul pentru care m-am pregătit. Cum pot acumula mai mult?"</strong>
+      </p>
+
+      <div class="mt-12 bg-gradient-to-br from-blue-900/20 to-black border border-blue-500/30 p-8 rounded-3xl text-center">
+        <h2 class="text-2xl font-bold text-white mb-4">Concluzie: Pune un paznic la gura ta</h2>
+        <p class="mb-6">
+          Înainte să scrii un comentariu negativ despre piață sau să te plângi că nu ai bani, oprește-te.
+        </p>
+        
+        <div class="bg-white/10 inline-block px-8 py-4 rounded-xl border border-white/20 mb-6">
+          <h3 class="text-yellow-400 font-bold uppercase tracking-widest text-xs mb-2">Regula de Duminică:</h3>
+          <p class="text-xl font-bold text-white">
+            Nu mai spune "Nu pot". <br/> Întreabă "CUM pot?".
+          </p>
+        </div>
+        <p class="text-sm text-gray-400">
+          Diferența dintre aceste două fraze este de câteva milioane de dolari pe parcursul unei vieți.
+        </p>
+      </div>
+    `
+  },
+
 // ✅ ARTICOL NOU (ON-CHAIN MURPHY - SELLER EXHAUSTION)
   {
     slug: "radiografia-secreta-blockchain-maini-slabe-semnal-cumparare",
