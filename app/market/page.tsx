@@ -1,15 +1,20 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { 
-  Activity, Zap, RefreshCw, Clock, 
-  Layers, AlertTriangle, Crosshair, Lock, 
-  ArrowRight, Database, TrendingUp 
+  Activity, RefreshCw, Clock, Layers, 
+  AlertTriangle, Crosshair, Lock, TrendingUp, 
+  Info, ArrowRight, Zap 
 } from 'lucide-react';
 
-// Tipuri de date
+// === HELPER: SKELETON LOADER (Pt Loading Elegant) ===
+const Skeleton = ({ className }: { className: string }) => (
+  <div className={`bg-white/5 animate-pulse rounded ${className}`}></div>
+);
+
+// === INTERFEȚE DATE ===
 interface MarketDataState {
   btcPrice: number;
   btcChange24h: number;
@@ -20,9 +25,10 @@ interface MarketDataState {
 }
 
 export default function MarketPage() {
+  const container = useRef<HTMLDivElement>(null);
   const [data, setData] = useState<MarketDataState>({
     btcPrice: 0, btcChange24h: 0, btcDominance: 0, 
-    fearGreedValue: 50, fearGreedLabel: 'Loading...', loading: true
+    fearGreedValue: 50, fearGreedLabel: 'Neutral', loading: true
   });
 
   // --- 1. ENGINE: FETCH DATA ---
@@ -30,13 +36,15 @@ export default function MarketPage() {
     try {
       setData(prev => ({ ...prev, loading: true }));
       
-      const globalRes = await fetch('https://api.coingecko.com/api/v3/global');
-      const globalJson = await globalRes.json();
-      
-      const priceRes = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_24hr_change=true');
-      const priceJson = await priceRes.json();
+      // Fetch paralel pentru viteză
+      const [globalRes, priceRes, fgRes] = await Promise.all([
+        fetch('https://api.coingecko.com/api/v3/global'),
+        fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_24hr_change=true'),
+        fetch('https://api.alternative.me/fng/')
+      ]);
 
-      const fgRes = await fetch('https://api.alternative.me/fng/');
+      const globalJson = await globalRes.json();
+      const priceJson = await priceRes.json();
       const fgJson = await fgRes.json();
 
       setData({
@@ -49,225 +57,308 @@ export default function MarketPage() {
       });
     } catch (error) {
       console.error("System Error:", error);
+      // Fallback in caz de eroare API
       setData(prev => ({ ...prev, loading: false }));
     }
   };
 
   useEffect(() => { fetchMarketData(); }, []);
 
-  // --- 2. LOGIC: CYCLE CLOCK CALCULATOR ---
-  // Data Halving-ului: 20 Aprilie 2024
+  // --- TRADINGVIEW WIDGET ---
+  useEffect(() => {
+    if (container.current) {
+        container.current.innerHTML = ""; 
+        const script = document.createElement("script");
+        script.src = "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js";
+        script.type = "text/javascript";
+        script.async = true;
+        script.innerHTML = `
+          {
+            "autosize": true,
+            "symbol": "BINANCE:BTCUSDT.P",
+            "interval": "60",
+            "timezone": "Europe/Bucharest",
+            "theme": "dark",
+            "style": "1",
+            "locale": "en",
+            "enable_publishing": false,
+            "backgroundColor": "rgba(2, 6, 23, 1)",
+            "gridColor": "rgba(255, 255, 255, 0.05)",
+            "hide_top_toolbar": false,
+            "hide_legend": false,
+            "save_image": false,
+            "calendar": false,
+            "hide_volume": true,
+            "support_host": "https://www.tradingview.com"
+          }`;
+        container.current.appendChild(script);
+    }
+  }, []);
+
+  // --- LOGICĂ: CALCULATOARE ---
+  
+  // 1. Cycle Clock
   const halvingDate = new Date('2024-04-20');
   const today = new Date();
   const daysSinceHalving = Math.floor((today.getTime() - halvingDate.getTime()) / (1000 * 3600 * 24));
-  
-  // Ciclul mediu de Bull Run post-halving e aprox 500-600 zile
   const cycleProgress = Math.min(100, (daysSinceHalving / 600) * 100); 
 
-  // --- 3. LOGIC: MONEY FLOW ---
-  // Definim unde sunt banii in functie de BTC Dominance
-  let moneyFlowStage = 1; // 1=BTC, 2=ETH, 3=ALTS
-  if (data.btcDominance > 55) moneyFlowStage = 1; // Bitcoin Season
-  else if (data.btcDominance > 45) moneyFlowStage = 2; // Ethereum/Large Caps
-  else moneyFlowStage = 3; // Altseason
+  // 2. Money Flow
+  let moneyFlowStage = 1; 
+  if (data.btcDominance > 55) moneyFlowStage = 1; 
+  else if (data.btcDominance > 45) moneyFlowStage = 2; 
+  else moneyFlowStage = 3; 
 
-  // --- 4. LOGIC: THE GENERAL'S ORDER ---
-  let strategy = "ANALYZING...";
-  let strategyColor = "text-gray-400";
+  // 3. Strategy Output
+  let strategyAction = "HOLD";
+  let strategyContext = "Piața este indecisă.";
   
-  if (data.fearGreedValue < 20) {
-      strategy = "DEPLOY CAPITAL (AGGRESSIVE BUY)";
-      strategyColor = "text-green-400";
-  } else if (data.fearGreedValue > 80) {
-      strategy = "TAKE PROFITS (SCALE OUT)";
-      strategyColor = "text-red-400";
-  } else {
-      strategy = "HODL & WAIT (NO ACTION)";
-      strategyColor = "text-yellow-400";
+  if (data.fearGreedValue < 25) {
+      strategyAction = "ACCUMULATE";
+      strategyContext = "Frica este extremă. Istoric, cel mai bun moment de cumpărare.";
+  } else if (data.fearGreedValue > 75) {
+      strategyAction = "TAKE PROFIT";
+      strategyContext = "Lăcomia este extremă. Riscul de corecție este maxim.";
+  } else if (moneyFlowStage === 3) {
+      strategyAction = "ROTATE TO BTC";
+      strategyContext = "Altseason pe final. Securizează profiturile în Bitcoin.";
   }
 
   return (
     <main className="min-h-screen bg-[#020617] text-white font-[var(--font-inter)] selection:bg-cyan-500/30">
       <Navbar />
 
-      {/* === HEADER: TERMINAL STATUS === */}
-      <div className="pt-24 pb-8 border-b border-white/5 bg-[#020617]">
-        <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-end gap-6">
+      {/* === HERO HEADER (Modernizat) === */}
+      <div className="pt-28 pb-10 border-b border-white/5 bg-[#020617] relative overflow-hidden">
+        {/* Ambient Glow */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div className="container mx-auto px-6 relative z-10 flex flex-col md:flex-row justify-between items-end gap-6">
             <div>
-                <div className="flex items-center gap-2 text-cyan-400 text-xs font-mono tracking-widest mb-2 animate-pulse">
-                    <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                    SYSTEM ONLINE // V 2.1
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/30 border border-cyan-500/20 text-cyan-400 text-xs font-bold uppercase tracking-widest mb-4">
+                    <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse"></div>
+                    Market Intelligence V3.0
                 </div>
-                <h1 className="text-4xl md:text-5xl font-black font-[var(--font-space)] tracking-tight text-white">
-                    MD <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">TERMINAL</span>
+                <h1 className="text-4xl md:text-6xl font-black font-[var(--font-space)] tracking-tight text-white mb-2">
+                    MARKET <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">TERMINAL</span>
                 </h1>
-                <p className="text-gray-400 max-w-lg mt-2 font-mono text-sm">
-                    Running diagnostic on Global Liquidity & Market Cycles...
+                <p className="text-gray-400 max-w-lg text-base md:text-lg">
+                    Panoul de control al investitorului inteligent. Cicluri, lichiditate și sentiment, decodificate în timp real.
                 </p>
             </div>
+            
             <button 
                 onClick={fetchMarketData}
-                className="bg-white/5 border border-white/10 hover:border-cyan-500/50 text-xs font-mono px-4 py-2 rounded flex items-center gap-2 transition-all hover:bg-cyan-900/10"
+                disabled={data.loading}
+                className="group bg-white/5 border border-white/10 hover:bg-white/10 hover:border-cyan-500/50 px-5 py-3 rounded-xl flex items-center gap-3 transition-all active:scale-95"
             >
-                <RefreshCw size={12} className={data.loading ? "animate-spin" : ""} />
-                {data.loading ? "FETCHING_DATA..." : "REFRESH_FEED"}
+                <RefreshCw size={18} className={`text-cyan-400 ${data.loading ? "animate-spin" : "group-hover:rotate-180 transition-transform duration-500"}`} />
+                <div className="text-left">
+                    <div className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Data Feed</div>
+                    <div className="text-sm font-bold text-white">{data.loading ? "Updating..." : "Refresh Now"}</div>
+                </div>
             </button>
         </div>
       </div>
 
       <div className="container mx-auto px-6 py-12 space-y-8">
 
-        {/* === SECTION 1: THE CYCLE CLOCK (Context Temporal) === */}
+        {/* === MODULE 1: THE CYCLE CLOCK (Context Temporal) === */}
         <section className="bg-[#050b1d] border border-white/10 rounded-3xl p-8 relative overflow-hidden">
-            <div className="absolute top-0 right-0 p-4 opacity-5"><Clock size={100}/></div>
+            <div className="absolute top-0 right-0 p-8 opacity-[0.03]"><Clock size={150}/></div>
             
-            <div className="flex flex-col md:flex-row gap-12 items-center">
+            <div className="flex flex-col md:flex-row gap-12 items-center relative z-10">
                 {/* Visual Clock */}
-                <div className="relative w-48 h-48 flex-shrink-0">
+                <div className="relative w-48 h-48 flex-shrink-0 group">
                     <svg className="w-full h-full transform -rotate-90">
-                        <circle cx="96" cy="96" r="88" stroke="#1e293b" strokeWidth="12" fill="transparent" />
-                        <circle cx="96" cy="96" r="88" stroke="#06b6d4" strokeWidth="12" fill="transparent" strokeDasharray="552" strokeDashoffset={552 - (552 * cycleProgress) / 100} className="transition-all duration-1000 ease-out" />
+                        <circle cx="96" cy="96" r="88" stroke="#1e293b" strokeWidth="8" fill="transparent" />
+                        <circle cx="96" cy="96" r="88" stroke="#06b6d4" strokeWidth="8" fill="transparent" strokeDasharray="552" strokeDashoffset={552 - (552 * cycleProgress) / 100} className="transition-all duration-1000 ease-out shadow-[0_0_20px_#06b6d4]" />
                     </svg>
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-                        <span className="text-3xl font-black text-white">{daysSinceHalving}</span>
-                        <span className="text-[10px] text-gray-500 uppercase font-bold">Zile Post-Halving</span>
+                        <span className="text-4xl font-black text-white font-mono tracking-tighter">
+                            {daysSinceHalving}
+                        </span>
+                        <span className="text-[10px] text-gray-500 uppercase font-bold tracking-widest mt-1">Zile Post-Halving</span>
                     </div>
                 </div>
 
-                {/* Context Text */}
+                {/* Context Text - Lizibil */}
                 <div className="flex-1">
-                    <h3 className="text-cyan-400 font-mono text-xs uppercase tracking-widest mb-2 flex items-center gap-2">
-                        <Database size={14}/> Cycle Positioning System
+                    <h3 className="text-cyan-400 text-xs font-bold uppercase tracking-widest mb-3 flex items-center gap-2">
+                        <Layers size={14}/> Macro Positioning
                     </h3>
-                    <h2 className="text-2xl font-bold text-white mb-4">Suntem în faza de Expansiune (Bull Run)</h2>
-                    <p className="text-gray-400 leading-relaxed text-sm mb-6">
-                        Istoric, Bitcoin atinge vârful la 12-18 luni după Halving. Suntem la ziua <span className="text-white font-bold">{daysSinceHalving}</span>. 
-                        Asta înseamnă că suntem în "Vara" ciclului. Nu este momentul să fii Bearish. Este momentul să fii atent la exit.
+                    <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                        Faza de Expansiune (Bull Run)
+                    </h2>
+                    <p className="text-gray-400 leading-relaxed text-sm md:text-base mb-8 max-w-2xl">
+                        Suntem în "Vara" ciclului de 4 ani. Istoric, Bitcoin atinge vârful la 12-18 luni după Halving. 
+                        În acest moment, riscul de a nu fi investit este mai mare decât riscul de corecție.
                     </p>
                     
-                    {/* Progress Markers */}
-                    <div className="flex justify-between text-[10px] font-mono text-gray-600 uppercase border-t border-white/5 pt-4">
+                    {/* Progress Bar Simplu */}
+                    <div className="w-full h-2 bg-gray-800 rounded-full overflow-hidden relative">
+                        <div className="absolute top-0 left-0 h-full bg-cyan-500 shadow-[0_0_15px_#06b6d4]" style={{ width: `${cycleProgress}%` }}></div>
+                    </div>
+                    <div className="flex justify-between mt-2 text-[10px] font-mono text-gray-500 uppercase">
                         <span>Halving (Apr '24)</span>
-                        <span className="text-cyan-500 font-bold animate-pulse">YOU ARE HERE</span>
-                        <span>Cycle Peak (Est. Late '25)</span>
+                        <span className="text-cyan-400 font-bold">AZI</span>
+                        <span>Cycle Peak (Est. 2025)</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        {/* === SECTION 2: GRID SYSTEMS (Flow & Pain) === */}
+        {/* === MODULE 2: GRID SYSTEMS (Flow & Sentiment) === */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             
-            {/* MODULE A: MONEY FLOW RADAR */}
+            {/* A. MONEY FLOW RADAR (Vizual Imbunatatit) */}
             <div className="bg-[#050b1d] border border-white/10 rounded-3xl p-8 flex flex-col">
-                <h3 className="text-purple-400 font-mono text-xs uppercase tracking-widest mb-6 flex items-center gap-2">
-                    <Layers size={14}/> Liquidity Waterfall
-                </h3>
+                <div className="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 className="text-purple-400 text-xs font-bold uppercase tracking-widest mb-1 flex items-center gap-2">
+                            <Activity size={14}/> Liquidity Flow
+                        </h3>
+                        <h2 className="text-xl font-bold text-white">Cascada Banilor</h2>
+                    </div>
+                    <div className="bg-white/5 px-3 py-1 rounded-lg border border-white/10 text-xs font-mono text-gray-400">
+                        BTC.D: <span className="text-white font-bold">{data.loading ? "..." : data.btcDominance.toFixed(1)}%</span>
+                    </div>
+                </div>
 
-                <div className="space-y-4 relative">
-                    {/* Linia de conexiune */}
-                    <div className="absolute left-[19px] top-4 bottom-4 w-0.5 bg-gray-800 -z-0"></div>
+                <div className="space-y-3 relative flex-1 flex flex-col justify-center">
+                    {/* Linia de conectare */}
+                    <div className="absolute left-[23px] top-6 bottom-6 w-0.5 bg-gray-800/50 -z-0"></div>
 
-                    {/* STAGE 1: BITCOIN */}
-                    <div className={`relative z-10 flex items-center gap-4 p-4 rounded-xl border transition-all ${moneyFlowStage === 1 ? 'bg-orange-500/10 border-orange-500/50 shadow-[0_0_20px_rgba(249,115,22,0.2)]' : 'bg-[#0a0f1e] border-white/5 opacity-50'}`}>
-                        <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold ${moneyFlowStage === 1 ? 'bg-orange-500 text-black' : 'bg-gray-800 text-gray-500'}`}>1</div>
+                    {/* STAGE 1: BTC */}
+                    <div className={`relative z-10 flex items-center gap-4 p-4 rounded-xl border transition-all duration-500 ${moneyFlowStage === 1 ? 'bg-orange-500/10 border-orange-500/40 translate-x-2' : 'bg-[#0a0f1e] border-white/5 opacity-60'}`}>
+                        <div className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg border-4 ${moneyFlowStage === 1 ? 'bg-orange-500 border-[#050b1d] text-black shadow-lg' : 'bg-gray-800 border-[#050b1d] text-gray-500'}`}>1</div>
                         <div>
-                            <div className="text-sm font-bold text-white">Bitcoin Season</div>
-                            <div className="text-xs text-gray-500">BTC Dominance: {data.loading ? "..." : data.btcDominance.toFixed(1)}%</div>
+                            <div className="font-bold text-white">Bitcoin Season</div>
+                            <div className="text-xs text-gray-500">Lichiditatea intră în BTC</div>
                         </div>
-                        {moneyFlowStage === 1 && <div className="ml-auto text-orange-400 text-xs font-bold animate-pulse">ACTIVE FLOW</div>}
                     </div>
 
-                    {/* STAGE 2: ETHEREUM */}
-                    <div className={`relative z-10 flex items-center gap-4 p-4 rounded-xl border transition-all ${moneyFlowStage === 2 ? 'bg-blue-500/10 border-blue-500/50 shadow-[0_0_20px_rgba(59,130,246,0.2)]' : 'bg-[#0a0f1e] border-white/5 opacity-50'}`}>
-                         <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold ${moneyFlowStage === 2 ? 'bg-blue-500 text-black' : 'bg-gray-800 text-gray-500'}`}>2</div>
+                    {/* STAGE 2: ETH */}
+                    <div className={`relative z-10 flex items-center gap-4 p-4 rounded-xl border transition-all duration-500 ${moneyFlowStage === 2 ? 'bg-blue-500/10 border-blue-500/40 translate-x-2' : 'bg-[#0a0f1e] border-white/5 opacity-60'}`}>
+                         <div className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg border-4 ${moneyFlowStage === 2 ? 'bg-blue-500 border-[#050b1d] text-black shadow-lg' : 'bg-gray-800 border-[#050b1d] text-gray-500'}`}>2</div>
                         <div>
-                            <div className="text-sm font-bold text-white">Large Caps (ETH/SOL)</div>
-                            <div className="text-xs text-gray-500">Urmează după BTC stall</div>
+                            <div className="font-bold text-white">Large Caps (ETH)</div>
+                            <div className="text-xs text-gray-500">Profiturile din BTC se mută</div>
                         </div>
-                        {moneyFlowStage === 2 && <div className="ml-auto text-blue-400 text-xs font-bold animate-pulse">ACTIVE FLOW</div>}
                     </div>
 
                     {/* STAGE 3: ALTS */}
-                    <div className={`relative z-10 flex items-center gap-4 p-4 rounded-xl border transition-all ${moneyFlowStage === 3 ? 'bg-pink-500/10 border-pink-500/50 shadow-[0_0_20px_rgba(236,72,153,0.2)]' : 'bg-[#0a0f1e] border-white/5 opacity-50'}`}>
-                         <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold ${moneyFlowStage === 3 ? 'bg-pink-500 text-black' : 'bg-gray-800 text-gray-500'}`}>3</div>
+                    <div className={`relative z-10 flex items-center gap-4 p-4 rounded-xl border transition-all duration-500 ${moneyFlowStage === 3 ? 'bg-pink-500/10 border-pink-500/40 translate-x-2' : 'bg-[#0a0f1e] border-white/5 opacity-60'}`}>
+                         <div className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg border-4 ${moneyFlowStage === 3 ? 'bg-pink-500 border-[#050b1d] text-black shadow-lg' : 'bg-gray-800 border-[#050b1d] text-gray-500'}`}>3</div>
                         <div>
-                            <div className="text-sm font-bold text-white">Altseason (Mania)</div>
-                            <div className="text-xs text-gray-500">High Risk / High Reward</div>
+                            <div className="font-bold text-white">Altseason (Mania)</div>
+                            <div className="text-xs text-gray-500">Speculație extremă</div>
                         </div>
-                        {moneyFlowStage === 3 && <div className="ml-auto text-pink-400 text-xs font-bold animate-pulse">ACTIVE FLOW</div>}
                     </div>
                 </div>
             </div>
 
-            {/* MODULE B: PAIN & SENTIMENT GAUGE */}
-            <div className="bg-[#050b1d] border border-white/10 rounded-3xl p-8 flex flex-col justify-between">
+            {/* B. FEAR & GREED (Gauge Style) */}
+            <div className="bg-[#050b1d] border border-white/10 rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden">
+                 {/* Gradient Background */}
+                 <div className={`absolute top-0 right-0 w-64 h-64 rounded-full blur-[80px] opacity-20 ${data.fearGreedValue > 50 ? 'bg-green-500' : 'bg-red-500'}`}></div>
+
                  <div>
-                    <h3 className="text-red-400 font-mono text-xs uppercase tracking-widest mb-6 flex items-center gap-2">
-                        <AlertTriangle size={14}/> Risk / Reward Ratio
+                    <h3 className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-6 flex items-center gap-2">
+                        <AlertTriangle size={14}/> Market Sentiment
                     </h3>
                     
-                    <div className="flex items-center justify-center mb-6">
-                        <div className="text-center">
-                            <div className="text-5xl font-black text-white mb-2">{data.loading ? "--" : data.fearGreedValue}</div>
-                            <div className={`inline-block px-3 py-1 rounded border text-xs font-bold uppercase ${data.fearGreedValue > 50 ? 'border-green-500 text-green-400' : 'border-red-500 text-red-400'}`}>
-                                {data.loading ? "LOADING" : data.fearGreedLabel}
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="bg-white/5 p-4 rounded-xl">
-                        <div className="flex justify-between items-center mb-2">
-                            <span className="text-xs text-gray-400 uppercase">Retail Sentiment</span>
-                            <span className="text-xs font-bold text-white">Super Bullish</span>
-                        </div>
-                        <div className="w-full h-1.5 bg-gray-700 rounded-full overflow-hidden">
-                            <div className="h-full bg-green-500 w-[75%]"></div>
-                        </div>
-                        
-                        <div className="flex justify-between items-center mt-4 mb-2">
-                            <span className="text-xs text-gray-400 uppercase">Market Maker Incentive</span>
-                            <span className="text-xs font-bold text-red-400">High (Dump Incoming)</span>
-                        </div>
-                         <div className="w-full h-1.5 bg-gray-700 rounded-full overflow-hidden">
-                            <div className="h-full bg-red-500 w-[60%]"></div>
-                        </div>
+                    <div className="flex flex-col items-center justify-center py-6">
+                        {data.loading ? (
+                            <Skeleton className="w-32 h-16 rounded-2xl" />
+                        ) : (
+                            <>
+                                <div className="text-6xl font-black text-white font-mono mb-2 tracking-tighter">
+                                    {data.fearGreedValue}
+                                </div>
+                                <div className={`inline-block px-4 py-1.5 rounded-full border text-xs font-bold uppercase tracking-wider ${data.fearGreedValue > 50 ? 'bg-green-500/10 border-green-500/50 text-green-400' : 'bg-red-500/10 border-red-500/50 text-red-400'}`}>
+                                    {data.fearGreedLabel}
+                                </div>
+                            </>
+                        )}
                     </div>
                 </div>
-                
-                <p className="text-xs text-gray-500 mt-6 italic">
-                    "Fii lacom când altora le e frică." - Warren Buffett
-                </p>
+
+                <div className="bg-white/5 p-4 rounded-xl border border-white/5 mt-6 backdrop-blur-sm relative z-10">
+                    <div className="flex items-start gap-3">
+                        <Info size={16} className="text-gray-400 mt-0.5" />
+                        <p className="text-xs text-gray-300 leading-relaxed">
+                            <strong className="text-white block mb-1">Contrarian Rule:</strong>
+                            Când indexul este sub 20 (Frică Extremă), "Smart Money" acumulează. 
+                            Când depășește 80 (Lăcomie), instituțiile încep distribuția (vânzarea).
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
 
-        {/* === SECTION 3: THE CHEAT SHEET (Actionable) === */}
-        <section className="bg-gradient-to-r from-gray-900 to-black border-t-4 border-cyan-500 rounded-b-3xl p-8 md:p-12 shadow-[0_0_50px_rgba(6,182,212,0.1)]">
-             <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-                <div>
-                    <h3 className="text-white font-mono text-lg font-bold mb-2 flex items-center gap-2">
-                        <Crosshair className="text-cyan-500 animate-spin-slow" /> 
-                        STRATEGIC_OVERRIDE_COMMAND
+        {/* === MODULE 3: STRATEGY HUD (Conversion Focused) === */}
+        <section className="relative group overflow-hidden rounded-3xl bg-gradient-to-r from-gray-900 to-black border border-white/10">
+             {/* Background Grid */}
+             <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10"></div>
+             
+             <div className="relative z-10 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
+                <div className="flex-1 text-center md:text-left">
+                    <div className="flex items-center gap-2 justify-center md:justify-start mb-3">
+                        <Crosshair className="text-cyan-400 animate-spin-slow" size={20} /> 
+                        <span className="text-cyan-400 font-mono text-xs font-bold uppercase tracking-widest">Live Strategy Override</span>
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-black text-white mb-2 font-[var(--font-space)]">
+                        Ce facem acum?
                     </h3>
-                    <p className="text-gray-400 text-sm max-w-xl">
-                        Pe baza datelor analizate (Ciclu, Flux, Sentiment), algoritmul recomandă următoarea acțiune pentru portofoliul tău:
+                    <p className="text-gray-400 text-sm max-w-lg mx-auto md:mx-0 leading-relaxed">
+                        Pe baza datelor curente (Ciclu Expansiv + {data.fearGreedLabel}), algoritmul indică o fereastră de oportunitate.
                     </p>
                 </div>
                 
-                <div className="bg-black border border-gray-800 p-6 rounded-xl min-w-[300px] text-center">
-                    <div className="text-xs text-gray-600 font-mono mb-2 uppercase tracking-widest">Current Directive</div>
-                    <div className={`text-2xl font-black font-mono ${strategyColor} animate-pulse`}>
-                        {'>'} {strategy}
+                {/* The "Locked" VIP Teaser */}
+                <div className="bg-black/50 backdrop-blur-xl border border-white/10 p-1 rounded-2xl flex-shrink-0 w-full md:w-auto min-w-[320px]">
+                    <div className="bg-[#050b1d] rounded-xl p-6 border border-white/5 relative overflow-hidden">
+                        
+                        {/* Status (Visible) */}
+                        <div className="flex justify-between items-center mb-6 border-b border-white/5 pb-4">
+                            <span className="text-xs text-gray-500 font-bold uppercase">Directive</span>
+                            {data.loading ? <Skeleton className="w-20 h-6" /> : (
+                                <span className={`text-lg font-black font-mono ${data.fearGreedValue > 70 ? 'text-red-400' : 'text-green-400'}`}>
+                                    {strategyAction}
+                                </span>
+                            )}
+                        </div>
+
+                        {/* Hidden Details (Blurred) */}
+                        <div className="space-y-3 filter blur-sm select-none opacity-50">
+                            <div className="flex justify-between text-sm"><span className="text-gray-500">Entry Zone:</span> <span className="text-white">$92,400 - $93,100</span></div>
+                            <div className="flex justify-between text-sm"><span className="text-gray-500">Stop Loss:</span> <span className="text-white">$89,500</span></div>
+                            <div className="flex justify-between text-sm"><span className="text-gray-500">Leverage:</span> <span className="text-white">3x - 5x</span></div>
+                        </div>
+
+                        {/* Unlock Button Overlay */}
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-[2px]">
+                            <a href="/#consultanta" className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold py-3 px-6 rounded-xl flex items-center gap-2 transition-all hover:scale-105 shadow-[0_0_20px_rgba(6,182,212,0.4)]">
+                                <Lock size={16} /> Deblochează Raportul VIP
+                            </a>
+                        </div>
                     </div>
                 </div>
              </div>
-             
-             <div className="mt-8 text-center">
-                <a href="/#consultanta" className="inline-flex items-center gap-2 text-cyan-400 hover:text-white font-bold uppercase tracking-widest text-xs transition-colors border-b border-cyan-500/30 hover:border-cyan-500 pb-1">
-                    Accesează Raportul Complet în VIP <ArrowRight size={12}/>
-                </a>
-             </div>
         </section>
+
+        {/* === MODULE 4: LIVE CHART (TradingView) === */}
+        <div className="h-[600px] bg-[#050b1d] border border-white/10 rounded-3xl p-1 relative overflow-hidden flex flex-col">
+             <div className="absolute top-4 left-4 z-10 bg-[#050b1d]/90 backdrop-blur px-4 py-2 rounded-xl border border-white/10 flex items-center gap-3 pointer-events-none">
+                <Zap size={18} className="text-yellow-400"/>
+                <div>
+                  <h3 className="text-white font-bold text-sm">Live BTC Futures Liquidity</h3>
+                  <p className="text-[10px] text-gray-400">Analiză tehnică în timp real</p>
+                </div>
+             </div>
+             <div className="tradingview-widget-container flex-grow w-full h-full" ref={container}></div>
+        </div>
 
       </div>
       <Footer />
