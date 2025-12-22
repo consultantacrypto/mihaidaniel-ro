@@ -1,5 +1,67 @@
 export const articles = [
 {
+    id: 'marea-decuplare-2025',
+    slug: 'marea-decuplare-wall-street-vs-crypto',
+    title: 'MAREA DECUPLARE: Wall Street la Party, Crypto în "Silent Hill"',
+    summary: 'Analiză Macro: De ce S&P 500 sparge recorduri în timp ce portofoliul tău stagnează? Radiografia "schizofreniei financiare" dintre Tech Stocks și Bitcoin.',
+    category: 'MACRO & PSIHOLOGIE',
+    image: '/decuplarea.jpg',
+    date: '22 Dec 2025',
+    readTime: '7 min',
+    author: 'Mihai Daniel',
+    impact: 'neutral', // Este o analiză de context, nu un semnal de cumpărare imediată
+    content: `
+      <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+        Dacă te uiți pe grafice în aceste zile de decembrie 2025, ai senzația că ești victima unei farse elaborate. Trăim într-o <strong>schizofrenie financiară totală</strong>.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-green-900/10 border border-green-500/20 p-5 rounded-xl">
+            <strong class="text-green-400 block mb-2 text-lg">🍾 Ecranul Stâng: Marele Gatsby</strong>
+            <p class="text-sm text-gray-400">Wall Street-ul este într-o petrecere continuă. Indicele S&P 500 sparge record după record, împins într-o spirală euforică de giganții tech (Nvidia, Microsoft, Apple) și promisiunea AI.</p>
+        </div>
+        <div class="bg-gray-800/30 border border-gray-600/20 p-5 rounded-xl relative overflow-hidden">
+            <div class="absolute inset-0 bg-fog-animation opacity-20"></div>
+            <strong class="text-gray-300 block mb-2 text-lg">🌫️ Ecranul Drept: Silent Hill</strong>
+            <p class="text-sm text-gray-500">În crypto e o liniște apăsătoare. Bitcoin și Ethereum nu mai dansează pe muzica acțiunilor, iar Altcoin-urile arată ca niște orașe fantomă, sângerând lent.</p>
+        </div>
+      </div>
+
+      <p class="mb-6 text-gray-300">Întrebarea care macină fiecare investitor este: <em>De ce s-a rupt legătura? Unde sunt "banii ieftini" care trebuiau să inunde blockchain-ul?</em> Iată radiografia celor 3 cauze majore.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">1. Noua Definiție a Siguranței: "Fortăreața Tech"</h3>
+      <p class="mb-4 text-gray-300">Cea mai mare schimbare de paradigmă din 2025 este aceasta: <strong>S&P 500 nu mai este perceput ca un indice de risc, ci ca noul "safe haven".</strong></p>
+      
+      <div class="bg-blue-900/10 border-l-4 border-blue-500 p-6 rounded-r-xl mb-6">
+        <p class="text-gray-300 italic">
+          "Managerii fondurilor de pensii au de făcut o alegere simplă: Cumpără Microsoft (dividende, cash flow, monopol) sau un Altcoin volatil care poate scădea 40% la un singur tweet?"
+        </p>
+      </div>
+      <p class="text-gray-300 mb-6">Banii mari (Smart Money) au devenit defensivi. S-au baricadat în fortăreața Big Tech, lăsând crypto afară, în frig.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. Epuizarea Narativei ETF: Marea Mahmureală</h3>
+      <p class="mb-4 text-gray-300">Anul 2024 a fost definit de aprobarea ETF-urilor. Acum trăim realitatea post-eveniment. Wall Street-ul a venit, a cumpărat Bitcoin-ul de care avea nevoie (1-3% din portofoliu) și s-a oprit.</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-300">
+        <li><strong>Retailul:</strong> Epuizat financiar sau blocat în poziții vechi ("bag holders").</li>
+        <li><strong>Instituțiile:</strong> Nu au un motiv urgent să cumpere altceva în afară de BTC. Nu există încă un ETF pe Solana care să genereze același entuziasm.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. Mirajul Lichidității: Dobânzile</h3>
+      <p class="mb-4 text-gray-300">Aceasta este cauza tehnică. Crypto prosperă istoric când banii sunt "gratis" (dobânzi zero). În 2025, banii au un cost.</p>
+      <div class="bg-[#0a0f1e] p-6 rounded-xl border border-white/10 mb-8">
+        <strong class="text-white block mb-2">Costul de Oportunitate:</strong>
+        <p class="text-gray-400 text-sm">Când poți obține 4-5% "fără risc" în titluri de stat, apetitul pentru riscul extrem din crypto scade. Robinetul de bani doar picură, nu curge.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">Concluzie: Oportunitate Generațională?</h3>
+      <p class="mb-4 text-gray-300">Este tentant să declari "moartea crypto". Dar istoria ne învață că anomaliile sunt temporare. Suntem într-o fază de <strong>acumulare dureroasă</strong>.</p>
+      <p class="text-lg text-white font-medium border-l-4 border-orange-500 pl-4 mb-6">
+        Când S&P 500 va deveni ridicol de scump, capitalul va începe "Marea Rotație". Banii se vor muta dinspre activele supraevaluate către cele mai subevaluate active asimetrice de pe planetă. Liniștea din "Silent Hill" nu este moarte. Este liniștea dinaintea furtunii.
+      </p>
+    `
+  },
+
+{
     id: 'marea-evacuare-2026',
     slug: 'marea-evacuare-2026',
     title: 'MAREA EVACUARE: De ce 2026 ar putea fi anul în care "Vindem TOT". Cei 7 Indicatori ai Apocalipsei Financiare',
