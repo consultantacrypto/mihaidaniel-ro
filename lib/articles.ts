@@ -1,5 +1,101 @@
 export const articles = [
 {
+    id: 'marea-evacuare-2026',
+    slug: 'marea-evacuare-2026',
+    title: 'MAREA EVACUARE: De ce 2026 ar putea fi anul în care "Vindem TOT". Cei 7 Indicatori ai Apocalipsei Financiare',
+    summary: 'O teză curajoasă circulă acum: Vârful nu va fi în 2025. Analizăm cei 7 indicatori on-chain care ne vor spune exact când să apăsăm butonul de vânzare fără remușcări.',
+    content: `
+      <div class="space-y-8">
+        <p class="text-xl font-medium text-blue-200">
+          Nu te căsători cu investiția ta. Există o zicală brutală pe Wall Street: "Bulls make money, Bears make money, Pigs get slaughtered." (Taurii fac bani, Urșii fac bani, Porcii sunt tăiați).
+        </p>
+        
+        <p>
+          Lăcomia este inamicul. O teză curajoasă circulă acum în cercurile analiștilor de top: <strong>Vârful acestui ciclu (The Top) nu va fi în 2025, ci în 2026.</strong> Și când va veni, trebuie să fii pregătit să apeși butonul de vânzare fără remușcări.
+        </p>
+        <p>
+          Nu este ghiceală. Este matematică pură. Iată "Tabloul de Bord" (Dashboard) cu cei 7 indicatori care vor semnala momentul exact în care petrecerea s-a terminat și trebuie să părăsești sala.
+        </p>
+
+        <hr class="border-white/10 my-8"/>
+
+        <div class="space-y-6">
+          <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+            <h3 class="text-xl font-bold text-red-400 mb-2">1. MVRV Ratio > 3.0 (Termometrul Supraîncălzirii)</h3>
+            <p><strong>Ce este:</strong> Raportul dintre Valoarea de Piață (prețul actual) și Valoarea Realizată (prețul la care au fost cumpărate monedele).</p>
+            <p><strong>Semnalul de TOP:</strong> Când MVRV depășește valoarea de 3.0 sau 3.5.</p>
+            <p class="text-gray-400 italic">Traducere: Asta înseamnă că investitorii stau pe profituri nerealizate uriașe. Istoric, la acest nivel, tentația de a vinde devine irezistibilă pentru balene. Când MVRV e sus, aerul e rarefiat.</p>
+          </div>
+
+          <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+            <h3 class="text-xl font-bold text-blue-400 mb-2">2. NUPL în zona "Euforie" (Psihologia Mulțimii)</h3>
+            <p><strong>Ce este:</strong> Net Unrealized Profit/Loss. Măsoară cât de multă "fericire" sau "durere" este în piață.</p>
+            <p><strong>Semnalul de TOP:</strong> Când graficul intră în zona Albastră (Euforie).</p>
+            <p class="text-gray-400 italic">Traducere: Când vezi pe Twitter că toată lumea e bogată, că șoferul de Uber îți recomandă crypto și bunica întreabă de Bitcoin, NUPL este probabil albastru. Acesta este momentul de maxim risc financiar.</p>
+          </div>
+
+          <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+            <h3 class="text-xl font-bold text-yellow-400 mb-2">3. Influxul către Exchange-uri (Pregătirea Balenelor)</h3>
+            <p><strong>Ce este:</strong> Monitorizarea monedelor care se mută din portofele reci (Ledger/Trezor) către Binance/Coinbase.</p>
+            <p><strong>Semnalul de TOP:</strong> Creșterea bruscă a Exchange Inflows.</p>
+            <p class="text-gray-400 italic">Traducere: Balenele nu țin banii pe exchange decât dacă vor să vândă. Dacă vezi miliarde de dolari în BTC mutați brusc pe burse, nu e pentru "siguranță". E pentru lichidare.</p>
+          </div>
+
+          <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+            <h3 class="text-xl font-bold text-purple-400 mb-2">4. Activitatea Portofelelor Adormite (Trezirea Giganților)</h3>
+            <p><strong>Ce este:</strong> Dormant Wallet Activity sau Coin Days Destroyed.</p>
+            <p><strong>Semnalul de TOP:</strong> Monede care nu s-au mișcat de 5-7 ani încep brusc să tranzacționeze.</p>
+            <p class="text-gray-400 italic">Traducere: OG-ii (cei care au cumpărat Bitcoin la 100$ sau 1000$) se trezesc. Ei știu cel mai bine când să vândă. Dacă "bătrânii" vând, tu de ce mai cumperi?</p>
+          </div>
+
+          <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+            <h3 class="text-xl font-bold text-green-400 mb-2">5. SOPR (Marcarea Agresivă a Profitului)</h3>
+            <p><strong>Ce este:</strong> Spent Output Profit Ratio. Arată dacă monedele mutate azi sunt vândute în profit sau pierdere.</p>
+            <p><strong>Semnalul de TOP:</strong> Valori extreme ale SOPR.</p>
+            <p class="text-gray-400 italic">Traducere: Indică faptul că profiturile sunt marcate agresiv, în masă. Distribuția de la "Smart Money" la "Dumb Money" este în plină desfășurare.</p>
+          </div>
+
+          <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+            <h3 class="text-xl font-bold text-orange-400 mb-2">6. Scăderea Dominanței BTC la 45% (Capcana Altcoin)</h3>
+            <p><strong>Ce este:</strong> Procentul din piață deținut de Bitcoin.</p>
+            <p><strong>Semnalul de TOP:</strong> O prăbușire rapidă a Dominanței BTC spre 40-45%, în timp ce Altcoin-urile explodează vertical.</p>
+            <p class="text-gray-400 italic">Traducere: Aceasta este "Rotația Finală". Banii pleacă din Bitcoin spre Ethereum, apoi spre Solana, apoi spre Meme-coins. Este ultima fază a balonului speculativ (Altseason). Când și cel mai obscur coin face 100x, muzica se oprește.</p>
+          </div>
+
+          <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+            <h3 class="text-xl font-bold text-pink-400 mb-2">7. Retail FOMO (Semnalul Social)</h3>
+            <p><strong>Ce este:</strong> Numărul de descărcări ale aplicațiilor Coinbase/Binance în AppStore.</p>
+            <p><strong>Semnalul de TOP:</strong> Aplicațiile Crypto devin #1 în AppStore.</p>
+            <p class="text-gray-400 italic">Traducere: Când "masele" intră, nu mai există nimeni altcineva care să cumpere. Când nu mai sunt cumpărători noi, prețul se prăbușește sub propria greutate.</p>
+          </div>
+        </div>
+
+        <hr class="border-white/10 my-8"/>
+
+        <h2 class="text-2xl font-black text-white mb-4">Concluzie: 2026 - Anul Adevărului</h2>
+        <p class="mb-4">
+          <strong>De ce 2026 și nu 2025?</strong><br/>
+          Intrarea giganților instituționali (BlackRock, fonduri de pensii) a stabilizat piața, făcând ciclurile mai lente și mai lungi ("Lengthening Cycles"). Este foarte posibil ca vârful euforic să fie împins până în prima parte a anului 2026.
+        </p>
+        
+        <div class="bg-red-500/10 border border-red-500/20 p-6 rounded-xl">
+            <h4 class="text-red-400 font-bold mb-2">Strategia Câștigătoare:</h4>
+            <ul class="list-disc pl-5 space-y-2 text-gray-300">
+                <li>Nu ghici data. Urmărește datele.</li>
+                <li>Printează această listă. Când 5 din cei 7 indicatori sunt pe roșu, vinde.</li>
+                <li>Nu contează dacă te urăsc alții. Nu contează dacă râd de tine că ai ieșit "prea devreme".</li>
+            </ul>
+            <p class="mt-4 font-bold text-white">Istoria arată că cine pleacă de la petrecere cu o oră mai devreme, pleacă cu toți banii. Cine pleacă ultimul, plătește nota.</p>
+        </div>
+      </div>
+    `,
+    category: 'STRATEGIE & ON-CHAIN',
+    date: '22 Dec 2024',
+    image: '/thebigexit.jpg',
+    impact: 'neutral'
+},
+
+{
     id: 'distopia-oportunitatilor',
     slug: 'distopia-oportunitatilor',
     title: 'DISTOPIA OPORTUNITĂȚILOR: De ce sărăcia începe cu cuvintele tale',
