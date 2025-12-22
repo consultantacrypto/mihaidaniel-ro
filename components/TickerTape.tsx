@@ -20,7 +20,7 @@ function TickerTape() {
             },
             {
               "proName": "TVC:DXY",
-              "title": "DXY (USD Index)"
+              "title": "DXY"
             },
             {
               "proName": "BINANCE:BTCUSDT",
@@ -58,7 +58,8 @@ function TickerTape() {
   }, []);
 
   return (
-    <div className="w-full bg-[#020617] border-b border-white/5 relative z-40">
+    // ✅ FIX: Am adăugat 'h-[50px]' și 'overflow-hidden' pentru mobil
+    <div className="w-full h-[50px] bg-[#020617] border-b border-white/5 relative z-40 overflow-hidden">
         <div className="tradingview-widget-container" ref={container}>
            <div className="tradingview-widget-container__widget"></div>
         </div>
