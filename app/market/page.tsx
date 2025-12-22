@@ -1,7 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import TradingViewWidget from '@/components/TradingViewWidget';
-import AffiliateSection from '@/components/AffiliateSection'; // ✅ AICI ESTE SECȚIUNEA NOUĂ
+import AffiliateSection from '@/components/AffiliateSection'; // ✅ Secțiunea de Afilieri
 import { getGlobalData, getFearGreed } from '@/lib/market-api';
 import { Activity, DollarSign, Layers, BarChart3, TrendingUp, TrendingDown, Zap, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
@@ -52,9 +52,19 @@ export default async function MarketPage() {
                     <span className="text-xs font-mono text-green-400 font-bold">LIVE FEED ACTIVE</span>
                 </div>
 
-                {/* ✅ BUTON NOU: HARTA LICHIDĂRILOR */}
-                <Link href="/lichidari" className="flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-sm text-gray-300 hover:text-white transition-all group">
-                    Harta Lichidărilor <ExternalLink size={14} className="group-hover:translate-x-0.5 transition-transform"/>
+                {/* ✅ BUTON LICHIDĂRI - DESIGN NOU (MAKE IT POP) */}
+                <Link href="/lichidari" className="relative group overflow-hidden rounded-lg px-5 py-2.5 font-bold text-white shadow-[0_0_20px_rgba(234,179,8,0.2)] hover:shadow-[0_0_30px_rgba(234,179,8,0.4)] transition-all">
+                    {/* Background Gradient Animat */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-orange-600 group-hover:from-yellow-500 group-hover:to-orange-500 transition-colors"></div>
+                    
+                    {/* Efect de strălucire */}
+                    <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-shine"></div>
+
+                    <div className="relative flex items-center gap-2">
+                        <Activity size={16} className="animate-pulse"/> 
+                        <span>Harta Lichidărilor</span>
+                        <ExternalLink size={14} className="opacity-70 group-hover:translate-x-0.5 transition-transform"/>
+                    </div>
                 </Link>
             </div>
         </div>
