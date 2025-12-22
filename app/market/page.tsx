@@ -1,8 +1,10 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import TradingViewWidget from '@/components/TradingViewWidget';
+import AffiliateSection from '@/components/AffiliateSection'; // ✅ AICI ESTE SECȚIUNEA NOUĂ
 import { getGlobalData, getFearGreed } from '@/lib/market-api';
-import { Activity, DollarSign, Layers, BarChart3, TrendingUp, TrendingDown, Zap } from 'lucide-react';
+import { Activity, DollarSign, Layers, BarChart3, TrendingUp, TrendingDown, Zap, ExternalLink } from 'lucide-react';
+import Link from 'next/link';
 
 // Această funcție formatează numerele mari (ex: 2.4T, 80B)
 const formatCurrency = (value: number) => {
@@ -40,13 +42,20 @@ export default async function MarketPage() {
                 </p>
             </div>
             
-            {/* STATUS API LIVE */}
-            <div className="flex items-center gap-2 px-3 py-1 bg-green-500/10 border border-green-500/20 rounded-full">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                </span>
-                <span className="text-xs font-mono text-green-400 font-bold">LIVE FEED ACTIVE</span>
+            <div className="flex items-center gap-4">
+                {/* STATUS API LIVE */}
+                <div className="flex items-center gap-2 px-3 py-1 bg-green-500/10 border border-green-500/20 rounded-full">
+                    <span className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                    </span>
+                    <span className="text-xs font-mono text-green-400 font-bold">LIVE FEED ACTIVE</span>
+                </div>
+
+                {/* ✅ BUTON NOU: HARTA LICHIDĂRILOR */}
+                <Link href="/lichidari" className="flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-sm text-gray-300 hover:text-white transition-all group">
+                    Harta Lichidărilor <ExternalLink size={14} className="group-hover:translate-x-0.5 transition-transform"/>
+                </Link>
             </div>
         </div>
 
@@ -101,7 +110,6 @@ export default async function MarketPage() {
         {/* --- SECȚIUNEA 2: CHART INTERACTIV (TradingView) --- */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
             
-            {/* GRAFIC PRINCIPAL (Stânga - Mare) */}
             <div className="lg:col-span-2 space-y-4">
                 <div className="flex justify-between items-center">
                     <h2 className="text-xl font-bold text-white flex items-center gap-2">
@@ -109,11 +117,10 @@ export default async function MarketPage() {
                     </h2>
                     <span className="text-xs text-gray-500 bg-white/5 px-2 py-1 rounded">Sursa: TradingView</span>
                 </div>
-                {/* AICI ESTE WIDGETUL REAL */}
+                {/* AICI ESTE WIDGETUL REAL (Cu link-ul tău de afiliat) */}
                 <TradingViewWidget />
             </div>
 
-            {/* EDUCAȚIE & EXPLICATII (Dreapta) */}
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 h-fit">
                 <h3 className="text-lg font-bold text-white mb-4 border-b border-white/10 pb-4">
                     Cum folosim instrumentele?
@@ -145,14 +152,17 @@ export default async function MarketPage() {
                         <p className="text-blue-300 text-xs font-bold text-center">
                             💡 Vrei să înveți să citești graficul din stânga?
                         </p>
-                        <a href="/curs" className="block mt-2 text-center text-white bg-blue-600 hover:bg-blue-500 py-2 rounded-lg text-xs font-bold transition-colors">
-                            Vezi Cursul de Trading
+                        <a href="/academie" className="block mt-2 text-center text-white bg-blue-600 hover:bg-blue-500 py-2 rounded-lg text-xs font-bold transition-colors">
+                            Vezi Academia
                         </a>
                     </div>
                 </div>
             </div>
 
         </div>
+
+        {/* ✅ AICI ESTE NOUA SECȚIUNE DE AFILIERI */}
+        <AffiliateSection />
 
       </div>
       <Footer />
