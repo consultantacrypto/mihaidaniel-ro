@@ -147,6 +147,80 @@ export const dictionary: AcademyItem[] = [
         <p class="text-white font-bold border-l-4 border-purple-500 pl-4">Ethereum nu este perfect. Dar este singurul computer global descentralizat care a supraviețuit tuturor atacurilor. Dacă Bitcoin este Regele, Ethereum este Regatul.</p>
     `
   },
+// === ✅ ARTICOL NOU: PORTOFELE & SECURITATE ===
+  {
+    slug: "portofele-crypto-hot-vs-cold-ghid",
+    term: "Hot vs. Cold Wallets",
+    category: "SECURITATE & WALLETS",
+    image: "/hotcoldwalletacademie.jpg",
+    definition: "Ghidul de Supraviețuire. Portofelul tău crypto NU conține niciun Bitcoin, ci doar cheile de acces. Învață diferența critică dintre a ține banii 'în buzunar' (Hot) și 'în seif' (Cold).",
+    analogy: "Bani de buzunar vs. Seiful Băncii. Un Hot Wallet (telefon) este portofelul cu mărunțiș pentru cafea. Un Cold Wallet (Ledger) este seiful îngropat în pământ unde ții lingourile de aur.",
+    mihaiTake: "Să deții crypto fără un Cold Wallet este ca și cum ai ține lingouri de aur pe o bancă în parc. Libertatea vine cu responsabilitate. Fii propria ta bancă, nu doar un client al ei.",
+    fullContent: `
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Marea Concepție Greșită: Unde sunt banii tăi?</h3>
+      <div class="bg-blue-900/20 p-6 rounded-xl border border-blue-500/30 mb-6">
+        <p class="text-gray-300 mb-2">Primul lucru pe care trebuie să-l afli o să te șocheze: <strong class="text-white">Portofelul tău crypto NU conține niciun Bitcoin.</strong></p>
+        <p class="text-gray-300">Spre deosebire de un portofel fizic, un portofel crypto (Wallet) este de fapt un <strong>Breloc de Chei</strong>.</p>
+        <ul class="list-disc pl-6 mt-4 space-y-2 text-gray-300">
+            <li><strong>Blockchain-ul</strong> este seiful comun, aflat pe internet, care conține toți banii.</li>
+            <li><strong>Portofelul tău</strong> conține doar Cheia Privată (parola) care îți permite să muți banii din acel seif.</li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. Tipuri de Portofele: Fierbinți vs. Reci</h3>
+      <p class="mb-6 text-gray-300">Aici se face diferența între "bani de cheltuială" și "avere".</p>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+         <div class="bg-[#0a0f1e] p-5 rounded-xl border border-red-500/20 relative overflow-hidden">
+            <div class="absolute top-2 right-2 text-2xl opacity-20">🔥</div>
+            <strong class="text-red-400 block mb-2 text-lg">A. Hot Wallets (Fierbinți)</strong>
+            <p class="text-xs text-gray-500 mb-3 uppercase">Ex: MetaMask, Phantom, Trust Wallet</p>
+            <p class="text-sm text-gray-400 mb-2"><strong>Ce sunt:</strong> Aplicații pe telefon sau extensii conectate permanent la internet.</p>
+            <p class="text-sm text-gray-400 mb-2"><strong>Riscuri:</strong> Vulnerabile la hackeri, viruși și link-uri malițioase.</p>
+            <p class="text-sm text-white font-bold mt-3 border-t border-white/10 pt-2">Regula: Ține aici doar bani de cheltuială.</p>
+         </div>
+
+         <div class="bg-[#0a0f1e] p-5 rounded-xl border border-cyan-500/20 relative overflow-hidden">
+            <div class="absolute top-2 right-2 text-2xl opacity-20">❄️</div>
+            <strong class="text-cyan-400 block mb-2 text-lg">B. Cold Wallets (Reci)</strong>
+            <p class="text-xs text-gray-500 mb-3 uppercase">Ex: Ledger, Trezor, Tangem</p>
+            <p class="text-sm text-gray-400 mb-2"><strong>Ce sunt:</strong> Dispozitive fizice (stick USB) care țin cheile OFFLINE.</p>
+            <p class="text-sm text-gray-400 mb-2"><strong>Siguranță:</strong> Hackerul nu poate apăsa butonul fizic de la distanță.</p>
+            <p class="text-sm text-white font-bold mt-3 border-t border-white/10 pt-2">Regula: Aici se ține averea (HODL).</p>
+         </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. Cele 12 Cuvinte: Seed Phrase</h3>
+      <div class="bg-yellow-500/10 p-6 rounded-xl border border-yellow-500/30 mb-6 relative">
+         <strong class="text-yellow-400 block mb-4 text-xl">⚠️ Regulile de Aur</strong>
+         <p class="text-gray-300 mb-4">Când îți creezi un portofel, primești 12-24 de cuvinte. Aceasta este "Cheia Master". Cine are cuvintele, are banii.</p>
+         <ul class="space-y-3 text-gray-300">
+            <li class="flex items-start gap-2"><span class="text-red-500 font-bold">1.</span> Nu le scrie niciodată digital (poze, notițe, mail).</li>
+            <li class="flex items-start gap-2"><span class="text-green-500 font-bold">2.</span> Scrie-le pe hârtie sau metal și ascunde-le.</li>
+            <li class="flex items-start gap-2"><span class="text-white font-bold">3.</span> Niciun "Suport Tehnic" nu îți va cere vreodată cele 12 cuvinte.</li>
+         </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">4. Custodial vs. Non-Custodial</h3>
+      <ul class="space-y-4 text-gray-300 mb-6">
+        <li class="bg-white/5 p-4 rounded-lg">
+            <strong>Custodial (Bursa/Exchange):</strong> Când ții banii pe Binance. Ei au cheia. Dacă dau faliment (FTX), pierzi tot. Tu ai doar o promisiune (IOU).
+        </li>
+        <li class="bg-white/5 p-4 rounded-lg">
+            <strong>Non-Custodial (Self-Custody):</strong> Când muți banii pe Ledger. Tu ai cheia. Tu ești responsabil. Dacă pierzi cuvintele, nu există "Reset Password".
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">5. Cum să nu fii jefuit: Igiena Digitală</h3>
+      <p class="mb-4 text-gray-300">Securitatea nu este un soft, este un comportament.</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-300">
+        <li><strong>Burner Wallets:</strong> Vrei să cumperi un NFT dubios? Folosește un portofel gol, nu pe cel principal.</li>
+        <li><strong>Address Poisoning:</strong> Verifică mereu primele și ultimele 4 caractere ale adresei unde trimiți.</li>
+        <li><strong>Nu te grăbi:</strong> O tranzacție greșită în crypto este ireversibilă.</li>
+      </ul>
+    `
+  },
+
 
   // === RĂMÂN CELELALTE ARTICOLE (PLACEHOLDER SAU VIITOARE) ===
   {
