@@ -1,6 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import CryptoTicker from '@/components/CryptoTicker';
+import TickerTape from '@/components/TickerTape'; // ✅ 1. IMPORTUL NOU
 import LiquidationFeed from '@/components/LiquidationChart'; 
 import { AlertTriangle, TrendingUp, Skull, Globe2, ShieldCheck, Zap, ExternalLink, Crown } from 'lucide-react';
 import { Metadata } from 'next';
@@ -14,8 +14,9 @@ export const metadata: Metadata = {
 export default function LiquidationsPage() {
   return (
     <main className="min-h-screen bg-[#020617] text-white flex flex-col">
-      <CryptoTicker />
       <Navbar />
+      {/* ✅ 2. BARA CU PREȚURI (Sub Navbar, consistent cu celelalte pagini) */}
+      <TickerTape />
 
       <div className="container mx-auto px-4 py-12 max-w-7xl flex-grow">
         
@@ -35,7 +36,8 @@ export default function LiquidationsPage() {
         <div className="grid lg:grid-cols-12 gap-8 items-start">
             
             {/* --- COLOANA STÂNGA: INSTRUMENTE & AFILIERE (Sticky) --- */}
-            <div className="lg:col-span-4 space-y-6 lg:sticky lg:top-24">
+            {/* ✅ MODIFICARE: order-2 pe mobil (apare jos), order-1 pe desktop (apare stânga) */}
+            <div className="lg:col-span-4 space-y-6 lg:sticky lg:top-24 order-2 lg:order-1">
                 
                 {/* 1. Explicația Tehnică */}
                 <div className="bg-gray-900/50 border border-gray-800 p-6 rounded-2xl relative overflow-hidden">
@@ -59,7 +61,6 @@ export default function LiquidationsPage() {
                 <div className="space-y-4">
                     <div className="flex items-center gap-2 mb-2">
                         <ShieldCheck size={16} className="text-blue-400"/>
-                        {/* ✅ CORECTAT: Tranzacționează */}
                         <span className="text-xs font-bold uppercase tracking-widest text-gray-400">Tranzacționează pe Platforme Sigure</span>
                     </div>
 
@@ -127,7 +128,8 @@ export default function LiquidationsPage() {
             </div>
 
             {/* --- COLOANA DREAPTA: FEED-UL LIVE (Mai lată) --- */}
-            <div className="lg:col-span-8">
+            {/* ✅ MODIFICARE: order-1 pe mobil (apare primul), order-2 pe desktop (apare dreapta) */}
+            <div className="lg:col-span-8 order-1 lg:order-2">
                 <LiquidationFeed />
                 
                 <div className="mt-6 flex flex-col md:flex-row gap-4">
@@ -144,7 +146,6 @@ export default function LiquidationsPage() {
             </div>
 
         </div>
-
     
       </div>
       <Footer />

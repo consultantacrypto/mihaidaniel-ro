@@ -2,10 +2,11 @@ import { articles } from '@/lib/articles';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CategoryFilter from '@/components/CategoryFilter';
-import FearGreed from '@/components/FearGreed'; // Asigură-te că ai modificat componenta mai sus
+import FearGreed from '@/components/FearGreed';
+import TickerTape from '@/components/TickerTape'; // ✅ 1. IMPORTUL NOU
 import Link from 'next/link';
 import Image from 'next/image';
-import { Calendar, ArrowRight, TrendingUp, TrendingDown, Minus, ChevronLeft, ChevronRight, Activity, Terminal } from 'lucide-react';
+import { Calendar, ArrowRight, TrendingUp, TrendingDown, Minus, ChevronLeft, ChevronRight, Terminal } from 'lucide-react';
 
 export const metadata = {
   title: 'Market Intelligence | Știri Crypto Explicate',
@@ -45,10 +46,12 @@ export default async function NewsPage({
     <main className="min-h-screen bg-[#020617] text-white selection:bg-blue-500/30 flex flex-col">
       <Navbar />
       
+      {/* ✅ 2. AICI ESTE BARA CU PREȚURI (S&P500, DXY, BTC...) */}
+      <TickerTape />
+
       <div className="container mx-auto px-6 py-12 flex-grow">
           
-          {/* --- HEADER NOU: DASHBOARD STYLE --- */}
-          {/* Am creat un chenar închis (bg-dark) care încadrează totul */}
+          {/* --- HEADER DASHBOARD STYLE --- */}
           <div className="max-w-6xl mx-auto mb-16 relative">
             
             {/* Background Grid Decorativ */}
@@ -59,7 +62,7 @@ export default async function NewsPage({
                 {/* Linia de accent sus */}
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 via-cyan-400 to-transparent opacity-50"></div>
 
-                {/* COL 1: TEXTUL (Stânga - 7 unități) */}
+                {/* COL 1: TEXTUL */}
                 <div className="lg:col-span-7 flex flex-col gap-6 relative z-10">
                     <div className="inline-flex items-center gap-2 text-blue-400 text-xs font-bold uppercase tracking-[0.2em] bg-blue-500/10 px-3 py-1 rounded border border-blue-500/20 w-fit">
                         <Terminal size={12}/> Market Intelligence Unit
@@ -78,8 +81,7 @@ export default async function NewsPage({
                     </p>
                 </div>
 
-                {/* COL 2: INDICATORUL (Dreapta - 5 unități) */}
-                {/* Aici stă noul Fear & Greed, izolat vizual */}
+                {/* COL 2: INDICATORUL (Fear & Greed) */}
                 <div className="lg:col-span-5 flex justify-center lg:justify-end relative z-10">
                     <div className="transform hover:scale-105 transition-transform duration-500">
                         <FearGreed />

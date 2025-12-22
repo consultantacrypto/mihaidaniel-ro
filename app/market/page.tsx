@@ -1,7 +1,8 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import TradingViewWidget from '@/components/TradingViewWidget';
-import AffiliateSection from '@/components/AffiliateSection'; // ✅ Secțiunea de Afilieri
+import AffiliateSection from '@/components/AffiliateSection'; 
+import TickerTape from '@/components/TickerTape'; // ✅ 1. IMPORTUL NOU
 import { getGlobalData, getFearGreed } from '@/lib/market-api';
 import { Activity, DollarSign, Layers, BarChart3, TrendingUp, TrendingDown, Zap, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
@@ -27,6 +28,9 @@ export default async function MarketPage() {
   return (
     <main className="min-h-screen bg-[#020617] text-white selection:bg-blue-500/30">
       <Navbar />
+      
+      {/* ✅ 2. BARA CU PREȚURI (S&P500, DXY, BTC...) */}
+      <TickerTape />
 
       <div className="container mx-auto px-6 py-12">
         
@@ -52,7 +56,7 @@ export default async function MarketPage() {
                     <span className="text-xs font-mono text-green-400 font-bold">LIVE FEED ACTIVE</span>
                 </div>
 
-                {/* ✅ BUTON LICHIDĂRI - DESIGN NOU (MAKE IT POP) */}
+                {/* BUTON LICHIDĂRI - DESIGN NOU (MAKE IT POP) */}
                 <Link href="/lichidari" className="relative group overflow-hidden rounded-lg px-5 py-2.5 font-bold text-white shadow-[0_0_20px_rgba(234,179,8,0.2)] hover:shadow-[0_0_30px_rgba(234,179,8,0.4)] transition-all">
                     {/* Background Gradient Animat */}
                     <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-orange-600 group-hover:from-yellow-500 group-hover:to-orange-500 transition-colors"></div>
@@ -117,7 +121,7 @@ export default async function MarketPage() {
             </div>
         </div>
 
-        {/* --- SECȚIUNEA 2: CHART INTERACTIV (TradingView) --- */}
+        {/* --- CHART INTERACTIV (TradingView) --- */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
             
             <div className="lg:col-span-2 space-y-4">
@@ -127,7 +131,6 @@ export default async function MarketPage() {
                     </h2>
                     <span className="text-xs text-gray-500 bg-white/5 px-2 py-1 rounded">Sursa: TradingView</span>
                 </div>
-                {/* AICI ESTE WIDGETUL REAL (Cu link-ul tău de afiliat) */}
                 <TradingViewWidget />
             </div>
 
@@ -171,7 +174,7 @@ export default async function MarketPage() {
 
         </div>
 
-        {/* ✅ AICI ESTE NOUA SECȚIUNE DE AFILIERI */}
+        {/* SECȚIUNEA DE AFILIERI */}
         <AffiliateSection />
 
       </div>
