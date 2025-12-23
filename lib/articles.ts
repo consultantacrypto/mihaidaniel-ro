@@ -1,5 +1,95 @@
 export const articles = [
 {
+    id: 'criza-datoriei-globale-2025',
+    slug: 'criza-invizibila-datorii-spirala-mortii',
+    title: 'CRIZA INVIZIBILĂ: Lumea intră în "Spirala Morții" a Datoriilor',
+    summary: 'Analiză Critică: De ce banii tăi din bancă sunt în pericol și Bitcoin este barca de salvare. Matematica datoriilor globale a ajuns la scadență.',
+    category: 'MACRO & ANALIZĂ',
+    image: '/crizainvizibila.jpg',
+    date: '23 Dec 2025',
+    readTime: '6 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Bullish pentru Bitcoin (Safe Haven), Bearish pentru Fiat
+    content: `
+      <div class="flex items-center gap-2 mb-6">
+        <span class="bg-red-500/20 text-red-400 border border-red-500/30 px-3 py-1 rounded text-xs font-bold uppercase animate-pulse">🚨 Urgență: Critică</span>
+        <span class="text-gray-400 text-xs uppercase">Macroeconomie & Analiză Fundamentală</span>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mb-4">Introducere: Matematica nu are sentimente</h3>
+      <p class="mb-4 text-gray-300">Nimeni nu vorbește corect despre asta la știri. Auzim de "deficit", de "buget", dar ignorăm monstrul din cameră. Nu este vorba doar despre SUA. Este o criză sistemică globală.</p>
+      <p class="mb-6 text-gray-300">Fiecare economie majoră (SUA, Europa, Japonia, China) se împrumută astăzi mai repede decât poate crește economic. <strong>Trăim pe datorie. Și scadența se apropie.</strong></p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">1. Cifrele care ar trebui să te sperie</h3>
+      <p class="mb-4 text-gray-300">Să punem lucrurile în perspectivă, pentru că creierul uman nu poate procesa aceste zerouri:</p>
+      
+      <div class="grid md:grid-cols-2 gap-4 mb-8">
+         <div class="bg-red-900/10 border border-red-500/20 p-5 rounded-xl">
+            <strong class="text-red-400 block mb-1 text-2xl">300 Trilioane $</strong>
+            <p class="text-xs text-gray-400 uppercase">Datoria Globală Totală</p>
+         </div>
+         <div class="bg-orange-900/10 border border-orange-500/20 p-5 rounded-xl">
+            <strong class="text-orange-400 block mb-1 text-2xl">38-40 Trilioane $</strong>
+            <p class="text-xs text-gray-400 uppercase">Datoria SUA (în creștere rapidă)</p>
+         </div>
+      </div>
+      <p class="mb-6 text-gray-300"><strong>Raportul:</strong> Datoria este de 3 ori mai mare decât tot ce produce planeta într-un an (Global Output). Dacă lumea ar fi o companie, ar fi în faliment de mult. Până acum, guvernele au folosit un truc simplu: au ținut dobânzile la 0% și au printat bani. Dar trucul nu mai funcționează.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. Capcana Dobânzilor: De ce "Acum" e diferit</h3>
+      <p class="mb-4 text-gray-300">Aici este problema pe care majoritatea o ignoră. Poți să ai datorii imense dacă dobânda este 0%. E ca și cum ai avea un card de credit cu dobândă zero pe viață. Dar când dobânzile au crescut la 4-5% (pentru a lupta cu inflația), costul datoriei a explodat.</p>
+      
+      <div class="bg-[#0a0f1e] p-6 rounded-xl border border-white/10 mb-6">
+        <strong class="text-white block mb-2">Exemplul Brutal:</strong>
+        <p class="text-gray-400 text-sm mb-4">SUA, Franța, Germania trebuie să refinanțeze datoriile vechi (luate cu 1% dobândă) cu datorii noi (cu 4-5% dobândă).</p>
+        <p class="text-white font-bold text-sm">Rezultatul:</p>
+        <p class="text-gray-400 text-sm">O parte uriașă din taxele pe care le plătești nu se mai duc în drumuri, spitale sau școli. Se duc direct la creditori, doar pentru a plăti dobânda.</p>
+      </div>
+      <p class="mb-6 text-gray-300"><strong>Spirala:</strong> Guvernele nu au acești bani. Așa că... se împrumută și mai mult doar pentru a plăti dobânda la împrumutul vechi. Aceasta este definiția unui Sistem Ponzi.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. Cele 3 Ieșiri (Și de ce doar una e posibilă)</h3>
+      <p class="mb-6 text-gray-300">Când o țară ajunge în acest punct, are doar 3 opțiuni matematice:</p>
+      
+      <div class="space-y-4 mb-8">
+        <div class="border-l-4 border-gray-500 pl-4 py-2">
+            <strong class="text-white block">1. Austeritate (Faliment Onest)</strong>
+            <p class="text-sm text-gray-400 mb-1">Să taie cheltuielile masiv. Să oprească pensiile, să închidă spitale.</p>
+            <span class="text-gray-500 text-xs font-mono bg-gray-800 px-2 py-1 rounded">Probabilitate: 0% (Sinucidere Politică)</span>
+        </div>
+        <div class="border-l-4 border-gray-500 pl-4 py-2">
+            <strong class="text-white block">2. Default (Refuzul de Plată)</strong>
+            <p class="text-sm text-gray-400 mb-1">Să spună "Nu vă mai dăm banii înapoi".</p>
+            <span class="text-gray-500 text-xs font-mono bg-gray-800 px-2 py-1 rounded">Probabilitate: 0% (Colaps Bancar Global)</span>
+        </div>
+        <div class="border-l-4 border-green-500 pl-4 py-2 bg-green-900/5">
+            <strong class="text-green-400 block">3. Inflație Monetară (The Money Printer)</strong>
+            <p class="text-sm text-gray-300 mb-1">Să printeze banii necesari pentru a plăti datoria.</p>
+            <span class="text-green-400 text-xs font-mono bg-green-900/20 px-2 py-1 rounded border border-green-500/20">Probabilitate: 100% (Singura Cale)</span>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">4. Impactul asupra Piețelor: Distrugerea Banilor Fiat</h3>
+      <p class="mb-4 text-gray-300">Această presiune se va simți în ORICE piață. Când investitorii realizează că singura cale de ieșire a guvernelor este devalorizarea monedei, încrederea în banii de hârtie dispare.</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-300">
+        <li>Obligațiunile devin riscante (nimeni nu vrea 5% dobândă dacă inflația reală e 10%).</li>
+        <li>Imobiliarele devin inaccesibile.</li>
+        <li><strong>Activele Rare (Hard Assets) explodează.</strong> Aici intră în scenă Aurul și Bitcoin.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">Concluzie: Oportunitatea Generațională</h3>
+      <div class="bg-blue-900/20 p-6 rounded-xl border border-blue-500/30">
+        <p class="mb-4 text-gray-300">Să nu intrăm în panică, dar să ieșim din ignoranță. Aceasta este o Criză a Datoriei Globale. Nu este o "posibilitate", se întâmplă chiar acum, sub ochii noștri.</p>
+        <ul class="space-y-3 mb-4 text-gray-300">
+            <li class="flex items-start gap-2">❌ Dacă stai pe Cash (Euro/Dolari), ești victima sigură. Puterea ta de cumpărare va fi sacrificată.</li>
+            <li class="flex items-start gap-2">✅ Dacă deții active rare (Bitcoin), ești protejat.</li>
+        </ul>
+        <p class="text-white font-bold border-t border-blue-500/30 pt-4 mt-2">
+            Marile averi se transferă în timpul crizelor de datorie. Banii nu dispar, doar își schimbă mâinile: de la cei care cred în hârtie, la cei care înțeleg matematica. Tu de care parte a transferului vrei să fii?
+        </p>
+      </div>
+    `
+  },
+
+{
     id: 'marea-decuplare-2025',
     slug: 'marea-decuplare-wall-street-vs-crypto',
     title: 'MAREA DECUPLARE: Wall Street la Party, Crypto în "Silent Hill"',
