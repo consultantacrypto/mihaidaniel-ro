@@ -300,16 +300,86 @@ export const dictionary: AcademyItem[] = [
   },
 
 
-  // === RĂMÂN CELELALTE ARTICOLE (PLACEHOLDER SAU VIITOARE) ===
+ // === ✅ ARTICOL ACTUALIZAT: RSI (TRADING & CHARTURI) ===
   {
     slug: "rsi-relative-strength-index-explicat",
-    term: "RSI (Indicator)",
+    term: "RSI (Relative Strength Index)",
     category: "TRADING & CHARTURI",
-    image: "https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=2064&auto=format&fit=crop",
-    definition: "Relative Strength Index (RSI) este cel mai popular indicator de trading. Îți spune când prețul este 'prea sus' sau 'prea jos'.",
-    analogy: "Turometrul Pieței. Dacă acul e pe roșu (peste 70), motorul fierbe și trebuie să încetinească.",
-    mihaiTake: "Nu cumpăra niciodată când RSI e 80 pe Daily! Asta înseamnă FOMO. Profesioniștii vând când RSI e sus.",
-    fullContent: `<p>Conținutul despre RSI urmează să fie actualizat...</p>`
+    image: "/rsiexplicat.jpg",
+    definition: "Busola Pieței. Un oscilator care măsoară 'viteza' banilor. Îți spune dacă piața a alergat prea tare (Supra-cumpărat) și trebuie să se odihnească, sau dacă a fost pedepsită prea mult (Supravânzare).",
+    analogy: "Turometrul Mașinii. Dacă motorul stă prea mult în zona roșie (peste 70), riscă să se supraîncălzească și trebuie să încetinească. Dacă e subturat (sub 30), are loc de accelerare.",
+    mihaiTake: "Nu vinde doar pentru că RSI e sus! Într-un Bull Market, RSI poate sta la 90 săptămâni întregi. Secretul veteranilor nu este nivelul, ci DIVERGENȚA (când prețul urcă, dar RSI coboară).",
+    fullContent: `
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Ce este RSI? (Definiția Simplă)</h3>
+      <p class="mb-4 text-gray-300">RSI (Relative Strength Index) este un oscilator dezvoltat în 1978 care se mișcă între 0 și 100.</p>
+      <div class="bg-blue-900/20 p-6 rounded-xl border border-blue-500/30 mb-6">
+        <strong class="text-blue-400 block mb-2">Scopul Principal:</strong>
+        <p class="text-gray-300">Să identifice condițiile extreme. Ne spune cât de repede se mișcă piața și dacă "s-a întins prea mult".</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. Nivelul 1: Citirea de Bază (Începători)</h3>
+      <p class="mb-4 text-gray-300">Regula standard este simplă, dar periculoasă dacă e folosită singură:</p>
+      
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+         <div class="bg-red-900/10 p-5 rounded-xl border border-red-500/20">
+            <strong class="text-red-400 block mb-2">Zona de Supra-cumpărare (> 70)</strong>
+            <p class="text-sm text-gray-400">Prețul a crescut prea repede. Probabilitate de corecție.</p>
+            <p class="text-xs text-white font-bold mt-2">Acțiune: Căutăm Short.</p>
+         </div>
+         <div class="bg-green-900/10 p-5 rounded-xl border border-green-500/20">
+            <strong class="text-green-400 block mb-2">Zona de Supravânzare (< 30)</strong>
+            <p class="text-sm text-gray-400">Panica a fost prea mare, vânzătorii au obosit.</p>
+            <p class="text-xs text-white font-bold mt-2">Acțiune: Căutăm Long.</p>
+         </div>
+      </div>
+      <p class="text-yellow-400 text-sm font-bold border-l-4 border-yellow-500 pl-4 mb-6">⚠️ Atenție: Într-un Bull Market puternic (cum a fost 2021), RSI poate sta peste 70 săptămâni întregi. Nu vinde doar pentru că indicatorul e sus!</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. Nivelul 2: Divergențele (Secretul Veteranilor)</h3>
+      <p class="mb-4 text-gray-300">Aici se face diferența dintre amatori și profesioniști. RSI-ul este cel mai puternic atunci când <strong>nu este de acord cu prețul</strong>.</p>
+      
+      <ul class="space-y-4 mb-6">
+        <li class="bg-[#0a0f1e] p-4 rounded-lg border-l-4 border-green-500">
+            <strong class="text-green-400 block text-lg">🐂 Divergența Bullish (De Cumpărare)</strong>
+            <ul class="list-disc pl-5 mt-2 text-gray-400 text-sm">
+                <li><strong>Prețul:</strong> Face un minim mai jos (Lower Low) - pare că scade.</li>
+                <li><strong>RSI:</strong> Face un minim mai sus (Higher Low) - forța de vânzare scade.</li>
+                <li><strong>Semnal:</strong> Motorul se pregătește de urcare.</li>
+            </ul>
+        </li>
+        <li class="bg-[#0a0f1e] p-4 rounded-lg border-l-4 border-red-500">
+            <strong class="text-red-400 block text-lg">🐻 Divergența Bearish (De Vânzare)</strong>
+            <ul class="list-disc pl-5 mt-2 text-gray-400 text-sm">
+                <li><strong>Prețul:</strong> Face un maxim mai sus (Higher High) - pare că rupe norii.</li>
+                <li><strong>RSI:</strong> Face un maxim mai jos (Lower High) - cumpărătorii pierd suflu.</li>
+                <li><strong>Semnal:</strong> Rechinilor le lipsește convingerea. Urmează prăbușirea.</li>
+            </ul>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">4. Nivelul 3: RSI ca Suport și Rezistență</h3>
+      <p class="mb-4 text-gray-300">Poți trasa linii de trend direct pe RSI. De asemenea, linia de 50 este crucială:</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-300">
+        <li><strong>Peste 50:</strong> Suntem în Uptrend. Orice atingere a liniei de 50 e oportunitate de "Buy the Dip".</li>
+        <li><strong>Sub 50:</strong> Suntem în Downtrend. Taurii nu au forță.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">5. RSI Failure Swing (Expert)</h3>
+      <p class="mb-4 text-gray-300">O formațiune de precizie descrisă de creatorul Wilder, care ignoră prețul complet:</p>
+      <div class="bg-gray-800/50 p-4 rounded-lg border border-gray-600">
+        <strong class="text-white">Failure Swing Top (Semnal Sell):</strong>
+        <ol class="list-decimal pl-5 mt-2 text-gray-300 text-sm space-y-1">
+            <li>RSI urcă peste 70.</li>
+            <li>RSI scade sub 70.</li>
+            <li>RSI urcă din nou, dar nu atinge vârful anterior (Lower High).</li>
+            <li>RSI sparge punctul minim anterior.</li>
+        </ol>
+        <p class="text-orange-400 text-xs mt-2 font-bold">Trendul s-a rupt înainte ca prețul să o arate!</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">Concluzie: Unelte, nu Globuri de Cristal</h3>
+      <p class="mb-4 text-gray-300">RSI îți spune "Cât de tare este apăsată pedala de accelerație", nu "Unde merge mașina".</p>
+      <p class="text-white font-bold border-l-4 border-blue-500 pl-4">Folosește-l pentru a vedea Divergențele (când prețul minte). Nu îl folosi niciodată singur.</p>
+    `
   }
 ];
 
