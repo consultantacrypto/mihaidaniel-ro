@@ -4,7 +4,8 @@ export type AcademyCategory =
   | 'TRADING & CHARTURI' 
   | 'DEFI & WEB3' 
   | 'SECURITATE & WALLETS' 
-  | 'PSIHOLOGIE & CICLE';
+  | 'PSIHOLOGIE & CICLE'
+  | 'ANALIZĂ FUNDAMENTALĂ'; // ✅ AM ADĂUGAT CATEGORIA NOUĂ AICI
 
 export type AcademyItem = {
   slug: string;       
@@ -73,7 +74,7 @@ export const dictionary: AcademyItem[] = [
     `
   },
 
-  // === ✅ ARTICOL NOU: ETHEREUM (DEFI & WEB3) ===
+  // === ✅ ARTICOL: ETHEREUM (DEFI & WEB3) ===
   {
     slug: "ce-este-ethereum-ghid-suprem",
     term: "Ethereum (ETH)",
@@ -147,7 +148,7 @@ export const dictionary: AcademyItem[] = [
         <p class="text-white font-bold border-l-4 border-purple-500 pl-4">Ethereum nu este perfect. Dar este singurul computer global descentralizat care a supraviețuit tuturor atacurilor. Dacă Bitcoin este Regele, Ethereum este Regatul.</p>
     `
   },
-// === ✅ ARTICOL NOU: PORTOFELE & SECURITATE ===
+  // === ✅ ARTICOL: PORTOFELE & SECURITATE ===
   {
     slug: "portofele-crypto-hot-vs-cold-ghid",
     term: "Hot vs. Cold Wallets",
@@ -218,6 +219,83 @@ export const dictionary: AcademyItem[] = [
         <li><strong>Address Poisoning:</strong> Verifică mereu primele și ultimele 4 caractere ale adresei unde trimiți.</li>
         <li><strong>Nu te grăbi:</strong> O tranzacție greșită în crypto este ireversibilă.</li>
       </ul>
+    `
+  },
+
+  // === ✅ ARTICOL NOU: TOKENOMICS (ANALIZĂ FUNDAMENTALĂ) ===
+  {
+    slug: "tokenomics-ghid-market-cap-fdv",
+    term: "Tokenomics",
+    category: "ANALIZĂ FUNDAMENTALĂ",
+    image: "/tokenimicsexplicat.jpg",
+    definition: "Matematica din spatele câștigurilor. De ce prețul unei monede este o iluzie și ce contează cu adevărat (Market Cap vs FDV).",
+    analogy: "Pizza feliată. O pizza tăiată în 100 de felii nu are mai multă mâncare decât una tăiată în 4. Doar feliile (monedele) par mai mici și mai ieftine.",
+    mihaiTake: "Dacă vrei să știi dacă o monedă mai poate face 100x, nu te uita la grafic, uită-te la Market Cap. Un 0.00001$ poate fi mult mai scump decât un 60.000$ dacă există trilioane de monede.",
+    fullContent: `
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Marea Iluzie: "Unit Bias"</h3>
+      <p class="mb-4 text-gray-300">Începem cu greșeala #1 a începătorilor: Prejudecata Unității.</p>
+      
+      <div class="bg-red-900/10 p-6 rounded-xl border border-red-500/20 mb-6">
+         <strong class="text-red-400 block mb-2">Gândirea greșită:</strong>
+         <p class="text-gray-300 italic mb-2">"Bitcoin e prea scump (90.000$), nu pot lua unul întreg. Mai bine iau XRP că e doar 2$ și poate ajunge și el la 90.000$."</p>
+         <p class="text-white font-bold border-t border-red-500/20 pt-2 mt-2">Realitatea: Pentru ca XRP să ajungă la prețul Bitcoin, ar trebui să valoreze mai mult decât toți banii de pe planetă.</p>
+      </div>
+      <p class="text-gray-300 mb-6">Prețul unei singure monede este irelevant fără context. Este ca și cum ai spune că o felie de pizza e "ieftină" fără să știi dacă pizza a fost tăiată în 4 felii sau în 1.000 de felii.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. Formula Sfântă: Market Cap</h3>
+      <p class="mb-4 text-gray-300">Valoarea reală a unui proiect nu este Prețul, ci Capitalizarea de Piață.</p>
+      
+      <div class="bg-[#0a0f1e] p-6 rounded-xl border border-blue-500/30 text-center mb-6">
+        <p class="text-2xl text-blue-400 font-mono font-bold mb-2">Market Cap = Preț × Monede în Circulație</p>
+        <p class="text-gray-400 text-sm">Ex: Bitcoin are preț mare x număr mic. Meme Coins au preț mic x număr infinit.</p>
+      </div>
+      <p class="text-gray-300 mb-6"><strong>Regula:</strong> Compară Market Cap-ul, nu prețul. Dacă un proiect nou are deja 10 Miliarde $, e greu să mai facă 100x (ar trebui să devină mai mare ca Facebook).</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. Cei 3 Mușchetari ai Ofertei (Supply)</h3>
+      <p class="mb-4 text-gray-300">Când citești datele pe CoinGecko, trebuie să înțelegi trei termeni critici:</p>
+      <ul class="space-y-4 text-gray-300 mb-6">
+         <li class="bg-white/5 p-4 rounded-lg">
+            <strong class="text-green-400">🟢 Circulating Supply (În Circulație)</strong>
+            <p class="text-sm text-gray-400">Câte monede sunt în piață acum. Asta determină prețul actual.</p>
+         </li>
+         <li class="bg-white/5 p-4 rounded-lg">
+            <strong class="text-yellow-400">🟡 Total Supply (Totalul)</strong>
+            <p class="text-sm text-gray-400">Câte monede există, dar unele pot fi blocate sau arse.</p>
+         </li>
+         <li class="bg-white/5 p-4 rounded-lg">
+            <strong class="text-red-400">🔴 Max Supply (Maximul)</strong>
+            <p class="text-sm text-gray-400">Câte vor exista vreodată. Bitcoin are 21M. Altele au trilioane sau sunt infinite.</p>
+         </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">4. FDV: The Silent Killer</h3>
+      <div class="bg-orange-900/10 p-6 rounded-xl border border-orange-500/20 mb-6 relative">
+         <strong class="text-orange-400 block mb-2 text-lg">⚠️ Secretul VC-urilor (Venture Capital)</strong>
+         <p class="text-gray-300 mb-4"><strong>FDV (Fully Diluted Valuation) = Preț Actual × Max Supply.</strong></p>
+         <p class="text-gray-300">Este valoarea proiectului "în viitor", când toate monedele vor fi deblocate. Multe proiecte noi ("Worldcoin") au un Market Cap mic (par ieftine), dar un FDV monstruos. </p>
+         <p class="text-white font-bold mt-2">Lecția: Nu cumpăra proiecte cu FDV uriaș și Market Cap mic. Urmează ani de inflație și vânzări agresive.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">5. Alocarea și Vesting-ul</h3>
+      <p class="mb-4 text-gray-300">Înainte să cumperi, verifică cine deține "plăcinta".</p>
+      <div class="grid md:grid-cols-2 gap-6 mb-6">
+         <div class="bg-green-900/10 p-4 rounded-lg border border-green-500/20">
+            <strong class="text-green-400 block mb-1">✅ Fair Launch (Bun)</strong>
+            <p class="text-sm text-gray-400">Majoritatea monedelor sunt la comunitate (ex: Bitcoin).</p>
+         </div>
+         <div class="bg-red-900/10 p-4 rounded-lg border border-red-500/20">
+            <strong class="text-red-400 block mb-1">❌ VC Owned (Rău)</strong>
+            <p class="text-sm text-gray-400">20% echipă, 30% investitori privați, doar 10% public. Când investitorii primesc monedele ("Vesting"), prețul se prăbușește.</p>
+         </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">Concluzie: Nu fi "Exit Liquidity"</h3>
+      <p class="mb-4 text-gray-300">Tokenomics este studiul cererii și ofertei.</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-300">
+         <li>Dacă oferta crește constant (inflație, deblocări), prețul scade.</li>
+         <li>Dacă oferta este fixă sau scade (deflație, ca la BTC/ETH), prețul are șanse să crească.</li>
+      </ul>
+      <p class="text-white font-bold border-l-4 border-blue-500 pl-4">Învață să citești dincolo de preț. Un 0.00001$ poate fi mult mai scump decât un 60.000$.</p>
     `
   },
 
