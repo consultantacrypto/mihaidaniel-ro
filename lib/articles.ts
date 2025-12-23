@@ -1,5 +1,64 @@
 export const articles = [
 {
+    id: 'paradoxul-macro-gdp-crypto',
+    slug: 'paradoxul-macro-gdp-relatia-secreta',
+    title: '🧠 PARADOXUL MACRO: De ce ne dorim o economie "slabă"?',
+    summary: 'Relația secretă dintre GDP și Portofelul tău Crypto. De ce Bitcoin explodează tocmai când economia pare că frânează? Explicația mecanismului "Bad News is Good News".',
+    category: 'MACRO & FED',
+    image: '/gdpdecembriesua.jpg',
+    date: '23 Dec 2025',
+    readTime: '4 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish',
+    content: `
+      <h3 class="text-2xl font-bold text-white mb-4">Intro:</h3>
+      <p class="mb-4 text-gray-300">Ai observat vreodată ceva ciudat? La știri se anunță că "Economia încetinește, șomajul crește", iar Bitcoin... crește exploziv?</p>
+      <p class="mb-6 text-gray-300">Pare ilogic. Dacă economia merge prost, nu ar trebui să scadă totul? Bine ai venit în <strong>"Paradoxul Lichidității"</strong>.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">1. Ce este GDP-ul și de ce îi pasă Fed-ului?</h3>
+      <p class="mb-4 text-gray-300">GDP (Gross Domestic Product / PIB) este vitezometrul economiei.</p>
+      <ul class="space-y-3 mb-6">
+        <li class="bg-red-900/10 p-3 rounded-lg border border-red-500/20">
+            <strong class="text-red-400">GDP Mare:</strong> Economia aleargă, lumea cheltuie, prețurile cresc (Inflație).
+        </li>
+        <li class="bg-blue-900/10 p-3 rounded-lg border border-blue-500/20">
+            <strong class="text-blue-400">GDP Mic:</strong> Economia frânează, lumea strânge cureaua (Risc de Recesiune).
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. Dilema Fed (Băncii Centrale)</h3>
+      <p class="mb-6 text-gray-300">Fed are un singur job principal: să țină inflația sub control, dar să nu omoare economia. Instrumentul lor principal? <strong>Dobânda de Referință (Costul Banilor).</strong></p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. Mecanismul "Bad News is Good News"</h3>
+      <p class="mb-4 text-gray-300">Aici este cheia pe care trebuie să o înțelegi ca investitor crypto:</p>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-[#0a0f1e] p-5 rounded-xl border-l-4 border-red-500">
+            <strong class="text-red-400 block mb-2 text-lg">Când GDP-ul este PREA MARE (>3.3%)</strong>
+            <p class="text-sm text-gray-400 mb-2">Fed se sperie de inflație. Reacția lor? Țin dobânzile sus sau le cresc.</p>
+            <p class="text-sm text-white font-bold">Efect: Banii devin scumpi. Creditele se opresc. Nimeni nu mai are bani de speculații. Crypto Scade.</p>
+        </div>
+
+        <div class="bg-[#0a0f1e] p-5 rounded-xl border-l-4 border-green-500">
+            <strong class="text-green-400 block mb-2 text-lg">Când GDP-ul este MIC (<3.1%)</strong>
+            <p class="text-sm text-gray-400 mb-2">Fed se sperie de recesiune (colaps economic). Reacția lor? Trebuie să "pornească imprimanta" și să taie dobânzile pentru a stimula consumul.</p>
+            <p class="text-sm text-white font-bold">Efect: Banii devin ieftini. Lichiditatea inundă piața. Investitorii caută randament mai mare decât la bancă. Crypto Crește.</p>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">Concluzie:</h3>
+      <div class="bg-blue-900/20 p-6 rounded-xl border border-blue-500/30">
+        <p class="text-gray-300 leading-relaxed">
+            În ciclul actual, Bitcoin nu se comportă ca o acțiune a unei companii (care vrea economie puternică), ci ca un <strong>burete de lichiditate</strong>.
+        </p>
+        <p class="text-white font-bold mt-4 border-t border-blue-500/20 pt-4">
+            Când economia "tușește" (GDP mic), Fed-ul oferă "siropul" (bani printați), iar Bitcoin se hrănește.
+        </p>
+      </div>
+    `
+  },
+
+{
     id: 'criza-datoriei-globale-2025',
     slug: 'criza-invizibila-datorii-spirala-mortii',
     title: 'CRIZA INVIZIBILĂ: Lumea intră în "Spirala Morții" a Datoriilor',
