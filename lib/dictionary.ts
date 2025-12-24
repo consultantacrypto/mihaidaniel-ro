@@ -5,7 +5,7 @@ export type AcademyCategory =
   | 'DEFI & WEB3' 
   | 'SECURITATE & WALLETS' 
   | 'PSIHOLOGIE & CICLE'
-  | 'ANALIZĂ FUNDAMENTALĂ'; // ✅ AM ADĂUGAT CATEGORIA NOUĂ AICI
+  | 'ANALIZĂ FUNDAMENTALĂ';
 
 export type AcademyItem = {
   slug: string;       
@@ -222,7 +222,7 @@ export const dictionary: AcademyItem[] = [
     `
   },
 
-  // === ✅ ARTICOL NOU: TOKENOMICS (ANALIZĂ FUNDAMENTALĂ) ===
+  // === ✅ ARTICOL: TOKENOMICS (ANALIZĂ FUNDAMENTALĂ) ===
   {
     slug: "tokenomics-ghid-market-cap-fdv",
     term: "Tokenomics",
@@ -299,8 +299,7 @@ export const dictionary: AcademyItem[] = [
     `
   },
 
-
- // === ✅ ARTICOL ACTUALIZAT: RSI (TRADING & CHARTURI) ===
+  // === ✅ ARTICOL: RSI (TRADING & CHARTURI) ===
   {
     slug: "rsi-relative-strength-index-explicat",
     term: "RSI (Relative Strength Index)",
@@ -379,6 +378,84 @@ export const dictionary: AcademyItem[] = [
       <h3 class="text-2xl font-bold text-white mt-12 mb-4">Concluzie: Unelte, nu Globuri de Cristal</h3>
       <p class="mb-4 text-gray-300">RSI îți spune "Cât de tare este apăsată pedala de accelerație", nu "Unde merge mașina".</p>
       <p class="text-white font-bold border-l-4 border-blue-500 pl-4">Folosește-l pentru a vedea Divergențele (când prețul minte). Nu îl folosi niciodată singur.</p>
+    `
+  },
+
+  // === ✅ ARTICOL NOU: CICLUL PIEȚEI (PSIHOLOGIE & CICLE) ===
+  {
+    slug: "ciclul-pietei-wyckoff-ghid-faze",
+    term: "Ciclul Pieței (Market Cycles)",
+    category: "PSIHOLOGIE & CICLE",
+    image: "/cicluldepiataacademie.jpg",
+    definition: "Harta Secretă a Banilor Mari. Piața nu se mișcă haotic, ci într-un tipar logic orchestrat de 'Smart Money'. Învață cele 4 anotimpuri: Acumulare, Mark-Up, Distribuție, Mark-Down.",
+    analogy: "Cele 4 Anotimpuri. Iarna (Acumulare) e plictisitoare dar necesară. Vara (Mark-Up) e caldă și profitabilă. Toamna (Distribuție) e înșelătoare. Iarna Nucleară (Mark-Down) e fatală.",
+    mihaiTake: "Piața este un mecanism de transfer al averii de la cei care nu înțeleg aceste 4 faze, către cei care le stăpânesc. Nu fi 'Exit Liquidity'. Cumpără când ești plictisit, vinde când ești euforic.",
+    fullContent: `
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">Introducere: De ce pierzi când piața pare bună?</h3>
+      <p class="mb-4 text-gray-300">Ai cumpărat vreodată o monedă pentru că știrile erau fantastice, toată lumea vorbea despre ea, prețul stagna puțin... și apoi s-a prăbușit?</p>
+      <p class="mb-4 text-gray-300">Ai vândut vreodată o monedă pentru că "nu făcea nimic" timp de 3 luni, doar ca să o vezi explodând a doua zi după ce ai vândut?</p>
+      <p class="mb-6 text-gray-300">Nu ai avut ghinion. Ai fost victima Ciclului de Piață.</p>
+      
+      <div class="bg-blue-900/20 p-6 rounded-xl border border-blue-500/30 mb-8">
+        <p class="text-gray-300 font-medium">Piața nu se mișcă haotic. Se mișcă într-un tipar logic, orchestrat de "Smart Money" (Balene, Instituții) pentru a transfera banii din buzunarul "Nerăbdătorilor" în buzunarul "Răbdătorilor".</p>
+        <p class="text-blue-400 mt-2 text-sm">Richard Wyckoff a descifrat acest cod acum 100 de ani. Iată cele 4 anotimpuri ale banilor:</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">Faza 1: ACUMULAREA (Iarna Plictisitoare)</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-300">
+        <li><strong>Locația:</strong> După o scădere mare (Bear Market).</li>
+        <li><strong>Ce se întâmplă:</strong> Prețul merge lateral (Range). Nu crește, nu scade mult. E liniște. Știrile sunt rele sau inexistente.</li>
+        <li><strong>Psihologia:</strong> "Crypto e mort". Retailul (micii investitori) este plictisit, speriat și își vinde monedele în pierdere, doar ca să scape.</li>
+        <li><strong>Ce fac Balenele:</strong> CUMPĂRĂ. Ei absorb oferta vândută de micii investitori disperați. Ei construiesc "cauza" pentru viitoarea creștere.</li>
+      </ul>
+      <p class="text-green-400 font-bold border-l-4 border-green-500 pl-4 mb-8">Lecția: Cumpără când ești plictisit, nu când ești entuziasmat. Acesta este momentul maximului de oportunitate financiară.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">Faza 2: MARK-UP (Primăvara / Vara Explozivă)</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-300">
+        <li><strong>Locația:</strong> Prețul sparge rezistența zonei de acumulare.</li>
+        <li><strong>Ce se întâmplă:</strong> Începe trendul ascendent (Uptrend). Prețul face maxime în creștere (Higher Highs).</li>
+        <li><strong>Psihologia:</strong> Speranța revine. Apoi Lăcomia. Apoi FOMO (Frica de a pierde ocazia). Știrile devin pozitive.</li>
+        <li><strong>Ce fac Balenele:</strong> Țin de monede și încep să vândă puțin câte puțin pe măsură ce prețul urcă.</li>
+      </ul>
+      <p class="text-green-400 font-bold border-l-4 border-green-500 pl-4 mb-8">Lecția: Aici faci banii. Trend is your friend. Nu vinde prea devreme, dar nici nu intra "all in" la final.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">Faza 3: DISTRIBUȚIA (Toamna Înșelătoare)</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-300">
+        <li><strong>Locația:</strong> La vârful pieței (Top).</li>
+        <li><strong>Ce se întâmplă:</strong> Prețul se oprește din creștere și intră iar într-un Range lateral. Volatilitatea e mare.</li>
+        <li><strong>Psihologia:</strong> EUFORIE MAXIMĂ. "Bitcoin la 1 Milion!". Toată lumea e geniu. Șoferul de Uber îți dă ponturi crypto.</li>
+        <li><strong>Ce fac Balenele:</strong> VÂND TOT. Ei au nevoie de cererea uriașă a mulțimii euforice pentru a-și descărca sacii uriași de monede fără a prăbuși prețul instant.</li>
+        <li><strong>Capcana:</strong> Pare o pauză înainte de o nouă creștere. De fapt, este sfârșitul.</li>
+      </ul>
+      <p class="text-red-400 font-bold border-l-4 border-red-500 pl-4 mb-8">Lecția: Când știrile sunt perfecte, vinde. Distribuția este oglinda Acumulării.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">Faza 4: MARK-DOWN (Iarna Nucleară)</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-300">
+        <li><strong>Locația:</strong> Prețul sparge suportul distribuției.</li>
+        <li><strong>Ce se întâmplă:</strong> Prăbușire. Panic Sell.</li>
+        <li><strong>Psihologia:</strong> Negare ("E doar o corecție") -> Frică -> Capitulare ("Vând tot, e țeapă").</li>
+        <li><strong>Ce fac Balenele:</strong> Așteaptă cu cash-ul pregătit la baza muntelui.</li>
+      </ul>
+      <p class="text-red-400 font-bold border-l-4 border-red-500 pl-4 mb-8">Lecția: Nu prinde cuțitul care cade. Așteaptă să înceapă din nou Faza 1.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">Cum identifici unde ești ACUM?</h3>
+      <p class="mb-4 text-gray-300">Nu ghici. Privește Volumul și Sentimentul.</p>
+      
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+         <div class="bg-[#0a0f1e] p-5 rounded-xl border border-green-500/20">
+            <strong class="text-green-400 block mb-2">Acumulare (CUMPĂRĂ)</strong>
+            <p class="text-sm text-gray-400">Preț Jos + Frică/Plictiseală + Volum Constant</p>
+         </div>
+         <div class="bg-[#0a0f1e] p-5 rounded-xl border border-red-500/20">
+            <strong class="text-red-400 block mb-2">Distribuție (VINDE)</strong>
+            <p class="text-sm text-gray-400">Preț Sus + Euforie + Volum Uriaș (dar prețul nu mai crește)</p>
+         </div>
+      </div>
+
+      <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
+        <p class="text-gray-300 italic mb-4">"Piața este un mecanism de transfer al averii de la cei care nu înțeleg aceste 4 faze, către cei care le stăpânesc."</p>
+        <p class="text-white font-bold">Tu în ce fază crezi că suntem?</p>
+      </div>
     `
   }
 ];
