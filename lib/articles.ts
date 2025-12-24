@@ -1,4 +1,73 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU (RESET IANUARIE 2026) - ON TOP
+  {
+    id: 'decodificare-reset-ianuarie-2026',
+    slug: 'linistea-piata-reset-institutional-ianuarie-2026',
+    title: '🧠 DECODIFICARE: De ce liniștea din piață este, de fapt, zgomotul de încărcare al "armelor" instituționale. Fenomenul "Ianuarie 2026"',
+    summary: 'Dacă privești graficele, pare că Bitcoin și-a pierdut suflul. În realitate, asistăm la o frână tactică instituțională. Află despre "Tax-Loss Harvesting" și resetarea bugetelor de risc.',
+    category: 'ANALIZĂ INSTITUȚIONALĂ',
+    image: '/reset2025.jpg',
+    date: '24 Dec 2025',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish',
+    content: `
+      <h3 class="text-2xl font-bold text-white mb-4">Introducere: Iluzia Slăbiciunii</h3>
+      <p class="mb-4 text-gray-300">Dacă privești graficele în aceste zile de final de decembrie, ești tentat să spui că Bitcoin și-a pierdut suflul. După șocul din toamnă, prețul pare prins într-o menghină, iar volatilitatea a dispărut aproape complet.</p>
+      <p class="mb-4 text-gray-300">Mulți investitori de retail au obosit. "De ce nu creștem?", "Unde e raliul de Crăciun?".</p>
+      <p class="mb-6 text-gray-300">Răspunsul nu este pe grafic, ci în calendarele fiscale și în departamentele de risc ale marilor fonduri de investiții. Ceea ce vedem acum nu este o lipsă de interes. Este o frână tactică. Și vestea bună este că această frână are o dată de expirare precisă.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">1. Fenomenul "Tax-Loss Harvesting" (Vânzarea pentru Taxe)</h3>
+      <p class="mb-4 text-gray-300">Pentru a înțelege prezentul, trebuie să gândești ca un contabil de pe Wall Street. În lunile noiembrie și decembrie, marii jucători (fonduri, balene) au un singur obiectiv: Optimizarea Fiscală.</p>
+      <p class="mb-6 text-gray-300">Dacă au avut câștiguri mari în prima parte a anului, ei sunt obligați să plătească taxe uriașe. Ce fac? Vând activele care sunt pe minus sau care stagnează ("pierzătorii") pentru a marca pierderi fiscale care să compenseze câștigurile.</p>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+         <div class="bg-red-900/10 p-5 rounded-xl border border-red-500/20">
+            <strong class="text-red-400 block mb-2">Efectul:</strong>
+            <p class="text-sm text-gray-300">O presiune constantă, artificială, de vânzare, care ține prețul jos indiferent de știri.</p>
+         </div>
+         <div class="bg-green-900/10 p-5 rounded-xl border border-green-500/20">
+            <strong class="text-green-400 block mb-2">Vestea bună:</strong>
+            <p class="text-sm text-gray-300">Această vânzare are un termen limită: <strong>31 Decembrie</strong>. În secunda în care anul s-a încheiat, presiunea de vânzare dispare instantaneu. Nu mai există niciun motiv fiscal să vinzi.</p>
+         </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. Resetarea "Bugetelor de Risc" (Risk Budgets)</h3>
+      <p class="mb-4 text-gray-300">Acesta este cel mai puternic motor pentru luna Ianuarie. Managerii de portofoliu au obiective anuale. Dacă în Decembrie și-au atins deja ținta de profit, nu vor risca nimic în ultimele zile ale anului. Își protejează bonusurile. Intră în "modul defensiv".</p>
+      
+      <div class="bg-blue-900/20 p-6 rounded-xl border border-blue-500/30 mb-6">
+        <p class="text-white font-bold text-lg mb-4">Dar pe 1 Ianuarie 2026, tabela de marcaj se resetează la zero.</p>
+        <ul class="list-disc pl-6 space-y-2 text-gray-300">
+            <li>Au un an nou în față.</li>
+            <li>Au bugete noi de alocat.</li>
+            <li>Au presiunea de a genera randament (Yield) de la început.</li>
+        </ul>
+      </div>
+      
+      <p class="mb-4 text-gray-300"><strong class="text-white">Ce înseamnă asta?</strong> În prima săptămână din ianuarie, miliarde de dolari care stăteau "pe margine" (în Cash) primesc ordinul de intrare în piață. Este o rotație masivă de capital dinspre defensivă (Cash/Bonds) către ofensivă (Crypto/Tech).</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. Expirarea Opțiunilor și "Capacul" de pe Oală</h3>
+      <p class="mb-4 text-gray-300">Un alt motiv tehnic pentru stagnarea actuală este piața derivatelor. Ne apropiem de cea mai mare expirare de opțiuni din an.</p>
+      <p class="mb-6 text-gray-300">Când există un volum imens de opțiuni deschise (pariuri pe preț), marii "Market Makers" (cei care vând opțiunile) au interesul financiar ca prețul să NU se miște violent până la data expirării, pentru a încasa primele. Ei "țintuiesc" prețul (Pinning the price).</p>
+      <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-yellow-500">
+        <p class="text-gray-300 italic">Odată ce expirarea trece (final de an), "capacul" este luat de pe oală. Compresia prețului din ultimele săptămâni va acționa ca un arc eliberat.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">Concluzie: Liniștea dinaintea Furtunii (Pozitive)</h3>
+      <p class="mb-4 text-gray-300">Dacă punem cap la cap aceste trei elemente, obținem imaginea clară:</p>
+      <ul class="list-disc pl-6 space-y-2 text-gray-300 mb-6">
+        <li>Vânzătorii fiscali dispar pe 31 Decembrie.</li>
+        <li>Cumpărătorii instituționali (cu bugete noi) apar pe 2 Ianuarie.</li>
+        <li>Manipularea opțiunilor încetează.</li>
+      </ul>
+
+      <div class="p-6 bg-gradient-to-r from-gray-900 to-black border border-green-500/30 rounded-2xl mt-8 shadow-xl text-center">
+        <p class="text-gray-300 mb-4">Suntem într-o zonă de acumulare tactică. Smart Money nu cumpără când prețul explodează la știri. Ei cumpără acum, în liniște, când volatilitatea este minimă și retailul este plictisit.</p>
+        <p class="text-white font-bold text-lg italic">"Nu te lăsa păcălit de lipsa de acțiune. Este doar liniștea dinaintea resetării jocului. Pregătiți-vă pentru Ianuarie."</p>
+      </div>
+    `
+  },
+
 {
     id: 'gdp-sua-q3-2025',
     slug: 'gdp-sua-crestere-economica-bitcoin',
