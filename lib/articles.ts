@@ -1,5 +1,60 @@
 export const articles = [
 {
+  id: 4, // Sau următorul număr disponibil
+  title: '🇺🇸 BREAKING: Economia SUA "Explodează" cu o creștere de 4.3%. De ce o veste bună pentru America poate fi o frână pentru Bitcoin?',
+  date: "23 Dec 2025",
+  category: "Macro Economics",
+  author: "Mihai Daniel",
+  image: "/gdp4dec.jpg",
+  excerpt: "Economia americană tocmai a dat peste cap toate prognozele. Raportul GDP (PIB) pentru Trimestrul 3 arată o creștere anualizată de 4.3%.",
+  content: `
+    <div class="space-y-6 text-gray-300">
+      <p class="font-bold text-white">Știrea pe scurt: Șocul de la ora 15:30</p>
+      <p>Economia americană tocmai a dat peste cap toate prognozele. Raportul GDP (PIB) pentru Trimestrul 3 arată o creștere anualizată de 4.3%.</p>
+      
+      <ul class="list-disc pl-5 space-y-2">
+        <li><strong class="text-white">Context:</strong> Este cel mai rapid ritm de creștere din ultimii 2 ani.</li>
+        <li><strong class="text-white">Așteptări:</strong> Analiștii se așteptau la cifre mult mai mici, semne de încetinire. În schimb, au primit o "explozie".</li>
+      </ul>
+
+      <p class="font-bold text-white text-lg mt-4">Motorul din spate: Cine a cumpărat?</p>
+      <p>Nu a fost o creștere artificială. A fost o creștere organică, condusă de:</p>
+      <ul class="list-disc pl-5 space-y-2">
+        <li><strong class="text-white">Consumatorul American:</strong> Cheltuielile gospodăriilor au explodat (oamenii cumpără, nu economisesc).</li>
+        <li><strong class="text-white">Exporturi Masive:</strong> Cerere puternică din Asia și America Latină pentru bunuri SUA.</li>
+        <li><strong class="text-white">Investiții Guvernamentale:</strong> Statul a pompat bani în infrastructură.</li>
+      </ul>
+      <p>Așa cum au prezis Trump și Secretarul Bessent, economia arată o reziliență incredibilă. Nu există semne de recesiune.</p>
+
+      <hr class="border-gray-700 my-6" />
+
+      <p class="font-bold text-white text-xl">IMPACT CRYPTO: Paradoxul "Veste Bună = Veste Proastă"</p>
+      <p>Aici trebuie să fii foarte atent. Deși o economie puternică e bună pe termen lung, pe termen scurt, acest raport poate pune presiune pe Bitcoin.</p>
+      
+      <p class="font-semibold text-blue-400">De ce? (Logica Fed-ului)</p>
+      <p>Jerome Powell (Fed) taie dobânzile și printează bani doar când economia e "bolnavă" și are nevoie de medicament (lichiditate). Dacă economia aleargă cu 4.3% (e sănătoasă tun):</p>
+      <ul class="list-disc pl-5 space-y-2">
+        <li>Fed-ul NU are niciun motiv să se grăbească cu tăierile de dobândă.</li>
+        <li>Dobânzile rămân "Higher for Longer" (Sus pentru mai mult timp).</li>
+        <li>Dolarul (DXY) se întărește.</li>
+        <li>Activele de risc (Crypto/Stocks) pierd speranța unei injecții rapide de lichiditate.</li>
+      </ul>
+
+      <p class="font-bold text-white mt-4">Ce să urmărești azi?</p>
+      <ul class="list-disc pl-5 space-y-2">
+        <li><strong class="text-white">DXY (Indexul Dolarului):</strong> Dacă sare în sus după această știre, Bitcoin va avea de suferit temporar.</li>
+        <li><strong class="text-white">Randamentele Obligațiunilor (US 10Y Yield):</strong> Dacă cresc, banii pleacă din risc (crypto) spre siguranță (bonds).</li>
+      </ul>
+
+      <div class="bg-blue-500/10 border border-blue-500/20 p-4 rounded-lg mt-6">
+        <p class="font-bold text-white">Concluzie:</p>
+        <p>Avem "Soft Landing" confirmat (chiar "No Landing"). Recesiunea a fost anulată. Dar, pentru Bitcoin, asta înseamnă că trebuie să urce pe propriile puteri, nu ajutat de "imprimanta" Fed-ului. Banii gratis se amână.</p>
+      </div>
+    </div>
+  `
+},
+
+{
     id: 'paradoxul-macro-gdp-crypto',
     slug: 'paradoxul-macro-gdp-relatia-secreta',
     title: '🧠 PARADOXUL MACRO: De ce ne dorim o economie "slabă"?',
