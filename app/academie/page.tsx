@@ -6,7 +6,8 @@ import Image from 'next/image';
 import { dictionary, AcademyItem } from '@/lib/dictionary';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Search, X, ArrowUpRight, ShieldCheck, BookOpen, Activity, BrainCircuit, Database, Zap } from 'lucide-react';
+// ✅ 1. AM ADĂUGAT ICONIȚELE NOI AICI (Brain, TrendingUp)
+import { Search, X, ArrowUpRight, ShieldCheck, BookOpen, Activity, BrainCircuit, Database, Zap, Brain, TrendingUp } from 'lucide-react';
 
 // Categorii pentru tab-uri (Navigare clară stil Binance)
 const CATEGORIES = [
@@ -14,7 +15,10 @@ const CATEGORIES = [
   { id: 'BITCOIN & FUNDAMENTE', label: 'Bitcoin & Baze', icon: <Database size={16}/> },
   { id: 'TRADING & CHARTURI', label: 'Trading', icon: <Activity size={16}/> },
   { id: 'DEFI & WEB3', label: 'DeFi & Web3', icon: <BrainCircuit size={16}/> },
-  { id: 'SECURITATE & WALLETS', label: 'Securitate', icon: <ShieldCheck size={16}/> }, // ✅ Categoria Nouă
+  { id: 'SECURITATE & WALLETS', label: 'Securitate', icon: <ShieldCheck size={16}/> },
+  // ✅ 2. AM ADĂUGAT CELE DOUĂ CATEGORII NOI
+  { id: 'ANALIZĂ FUNDAMENTALĂ', label: 'Analiză Fund.', icon: <TrendingUp size={16}/> },
+  { id: 'PSIHOLOGIE & CICLE', label: 'Psihologie', icon: <Brain size={16}/> },
 ];
 
 export default function AcademyPage() {
@@ -26,9 +30,6 @@ export default function AcademyPage() {
 
   // Logică de Filtrare
   const filteredArticles = dictionary.filter((item) => {
-    // Dacă suntem pe "TOATE", nu mai arătăm articolul Hero în listă ca să nu se dubleze (opțional)
-    // if (activeFilter === 'TOATE' && item.slug === featuredArticle.slug) return false;
-
     const matchesSearch = item.term.toLowerCase().includes(searchQuery.toLowerCase()) || 
                           item.definition.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesFilter = activeFilter === 'TOATE' || item.category === activeFilter;
@@ -124,6 +125,10 @@ function ArticleCard({ item }: { item: AcademyItem }) {
         if (cat.includes('SECURITATE')) return 'text-red-400 bg-red-500/10 border-red-500/20';
         if (cat.includes('BITCOIN')) return 'text-orange-400 bg-orange-500/10 border-orange-500/20';
         if (cat.includes('DEFI')) return 'text-purple-400 bg-purple-500/10 border-purple-500/20';
+        // ✅ 3. AM ADĂUGAT CULORILE PENTRU NOILE CATEGORII
+        if (cat.includes('PSIHOLOGIE')) return 'text-pink-400 bg-pink-500/10 border-pink-500/20';
+        if (cat.includes('ANALIZĂ')) return 'text-green-400 bg-green-500/10 border-green-500/20';
+        
         return 'text-blue-400 bg-blue-500/10 border-blue-500/20';
     };
 
