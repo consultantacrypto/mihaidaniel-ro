@@ -457,6 +457,87 @@ export const dictionary: AcademyItem[] = [
         <p class="text-white font-bold">Tu în ce fază crezi că suntem?</p>
       </div>
     `
+  },
+  // === ✅ ARTICOL NOU: MANAGEMENTUL RISCULUI (TRADING) ===
+  {
+    slug: "managementul-riscului-matematica-supravietuirii",
+    term: "Managementul Riscului (Risk Management)",
+    category: "TRADING & CHARTURI",
+    image: "/managementulriscului.jpg",
+    definition: "Matematica Supraviețuirii. Cum să pierzi de 5 ori la rând și totuși să fii pe profit. Secretul nu este să ai dreptate, ci să nu rămâi fără bani.",
+    analogy: "Frânele de la mașină. Nu le ai pentru că plănuiești să faci accident, ci pentru a putea opri în siguranță când apare un obstacol neprevăzut. Fără frâne (Stop Loss), viteza te omoară.",
+    mihaiTake: "Secretul pe care nu ți-l spune nimeni este că Tradingul nu este despre a avea dreptate. Este despre a nu muri. Dacă capitalul tău ajunge la zero, jocul s-a terminat. Azi învățăm cum să devenim nemuritori în piață.",
+    fullContent: `
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">Introducere: De ce falimentează traderii buni?</h3>
+      <p class="mb-4 text-gray-300">Ai auzit povestea? <em>"Am avut dreptate! Știam că Bitcoin se duce la 100k! Dar m-a lichidat înainte să ajungă acolo..."</em></p>
+      <p class="mb-6 text-gray-300">Aceasta este tragedia clasică. Să ai dreptate pe direcție, dar să pierzi banii.</p>
+      
+      <div class="bg-blue-900/20 p-6 rounded-xl border border-blue-500/30 mb-8">
+        <strong class="text-blue-400 block mb-2 text-lg">Adevărul Suprem:</strong>
+        <p class="text-gray-300">Tradingul nu este despre a avea dreptate. Este despre a nu muri. Dacă capitalul tău ajunge la zero, jocul s-a terminat.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">1. Regula de Aur a Supraviețuirii: 1-2% Per Trade</h3>
+      <p class="mb-4 text-gray-300">Aceasta este legea pe care o respectă orice trader de pe Wall Street. Niciodată, sub nicio formă, nu risca mai mult de 1% (maxim 2%) din portofoliul tău total pe o singură tranzacție.</p>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-6">
+         <div class="bg-[#0a0f1e] p-5 rounded-xl border border-green-500/20">
+            <strong class="text-green-400 block mb-2">Exemplul Corect (1%)</strong>
+            <p class="text-sm text-gray-400 mb-2">Ai 10.000$. Riscul tău maxim pe un trade este <strong>100$</strong>.</p>
+            <p class="text-sm text-gray-300 border-t border-white/10 pt-2">Dacă pierzi de 20 de ori la rând, încă mai ai 80% din capital. Ești încă în joc.</p>
+         </div>
+         <div class="bg-[#0a0f1e] p-5 rounded-xl border border-red-500/20">
+            <strong class="text-red-400 block mb-2">Exemplul Fatal (10%)</strong>
+            <p class="text-sm text-gray-400 mb-2">Dacă riști 10% pe un trade și prinzi o serie proastă de 5 pierderi (se întâmplă oricui), ai pierdut <strong>50% din bani</strong>.</p>
+            <p class="text-sm text-gray-300 border-t border-white/10 pt-2">Ca să recuperezi o pierdere de 50%, trebuie să faci un profit de 100%. E matematic greu.</p>
+         </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. Raportul R:R (Risk to Reward Ratio)</h3>
+      <p class="mb-4 text-gray-300">Aici se face diferența dintre amatori și profesioniști. Nu intra niciodată într-o poziție dacă nu poți câștiga de cel puțin 3 ori mai mult decât riști.</p>
+      
+      <div class="bg-gray-800 p-6 rounded-xl border-l-4 border-yellow-500 mb-6">
+        <p class="text-xl font-mono text-yellow-400 font-bold mb-2">R:R = 1:3</p>
+        <p class="text-gray-300">Risc 100$ ca să câștig 300$.</p>
+      </div>
+
+      <p class="mb-4 text-white font-bold">Magia Matematică:</p>
+      <p class="mb-4 text-gray-300">Dacă respecți raportul 1:3, poți să PIERZI în 60% din tranzacțiile tale și totuși să faci bani.</p>
+
+      <div class="bg-[#0a0f1e] p-6 rounded-xl border border-white/10 mb-8 font-mono text-sm">
+        <p class="text-gray-500 mb-2">// Scenariu: 10 Tranzacții</p>
+        <div class="flex justify-between mb-1">
+            <span class="text-red-400">6 pierderi x 100$</span>
+            <span class="text-red-400">= -600$</span>
+        </div>
+        <div class="flex justify-between mb-3 border-b border-gray-700 pb-3">
+            <span class="text-green-400">4 câștiguri x 300$</span>
+            <span class="text-green-400">= +1200$</span>
+        </div>
+        <div class="flex justify-between font-bold text-lg">
+            <span class="text-white">Profit Total</span>
+            <span class="text-green-400">= +600$</span>
+        </div>
+        <p class="text-xs text-gray-500 mt-2 italic">(Deși ai greșit de mai multe ori decât ai avut dreptate!)</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. Stop Loss-ul nu este o opțiune, este oxigenul</h3>
+      <p class="mb-4 text-gray-300">Mersul fără Stop Loss este ca condusul fără frâne. Poate merge o vreme, dar la prima curbă strânsă (Flash Crash), ai murit.</p>
+
+      <ul class="space-y-4 mb-6">
+        <li class="bg-red-900/10 p-4 rounded-lg border border-red-500/20">
+            <strong class="text-red-400 block mb-1">❌ Stop Loss Mental? Nu există.</strong>
+            <p class="text-sm text-gray-400">Emoțiile te vor bloca. <em>"Lasă că își revine, nu vând acum"</em>. Până te decizi, pierderea devine insuportabilă.</p>
+        </li>
+        <li class="bg-green-900/10 p-4 rounded-lg border border-green-500/20">
+            <strong class="text-green-400 block mb-1">✅ Stop Loss Automat</strong>
+            <p class="text-sm text-gray-400">Singurul prieten adevărat. Îl pui în momentul în care deschizi tranzacția.</p>
+        </li>
+      </ul>
+
+      <p class="text-white font-bold mb-2">Unde îl pui?</p>
+      <p class="text-gray-300 mb-6">Nu îl pui la o sumă fixă ("Vând dacă pierd 10 dolari"). Îl pui unde <strong>TEZA TA ESTE INVALIDATĂ</strong>. Dacă ai crezut că suportul ține, pune Stop Loss-ul sub suport. Dacă suportul s-a rupt, motivul pentru care ai cumpărat a dispărut. Ieși afară.</p>
+    `
   }
 ];
 
