@@ -6,7 +6,7 @@ export const articles = [
     title: '📉 SCENARIU DE COȘMAR sau GLITCH? Bitcoin a atins 24.000$ pe Binance într-o secundă. Adevărul din spatele "Crash-ului" de Crăciun',
     summary: 'Imaginează-ți că te trezești cu Bitcoin la 24.000$. Asta s-a întâmplat azi pe Binance pe paritatea BTC/USD1. Nu e panică, e o lecție dură despre lichiditate. Analizăm anatomia unui Flash Crash.',
     category: 'ȘTIRI & EDUCAȚIE',
-    image: '/flashcarash25.jpg', // <--- IMAGINEA ACTUALIZATĂ
+    image: '/flashcrash25.jpg', // <--- IMAGINEA ACTUALIZATĂ
     date: '25 Dec 2025',
     readTime: '3 min',
     author: 'Mihai Daniel',
