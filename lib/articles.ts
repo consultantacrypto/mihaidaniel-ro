@@ -1,4 +1,79 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU (ALERTA 26 DECEMBRIE - GAMMA) - ON TOP
+  {
+    id: 'alerta-craciun-bitcoin-26-decembrie-gamma',
+    slug: 'alerta-craciun-bitcoin-24h-liniste-artificiala',
+    title: '🚨 ALERTA DE CRĂCIUN: Bitcoin mai are 24 de ore de "Liniște Artificială". Mâine, 26 Decembrie, se rupe lanțul.',
+    summary: 'Dacă te uiți la grafic, pare că piața a luat o pauză de cozonac. Nu te lăsa păcălit. Suntem într-o "cămașă de forță" mecanică. Mâine expiră opțiunile și dealerii nu te mai pot proteja.',
+    category: 'MARKET STRUCTURE',
+    image: '/bitcoin26dec.jpg',
+    date: '25 Dec 2025',
+    readTime: '4 min',
+    author: 'Mihai Daniel',
+    impact: 'neutral', // Volatilitate mare (sus sau jos), deci Neutral/High Risk
+    content: `
+      <h3 class="text-2xl font-bold text-white mb-4">Introducere: Liniștea înșelătoare de sărbători</h3>
+      <p class="mb-4 text-gray-300">Dacă te uiți la grafic astăzi, în ziua de Crăciun, Bitcoin pare adormit între 87.000$ și 88.000$. Pare că și piața a luat o pauză de cozonac.</p>
+      <p class="mb-6 text-white font-bold text-lg border-l-4 border-yellow-500 pl-4">Nu te lăsa păcălit.</p>
+      <p class="mb-4 text-gray-300">Această liniște nu este naturală. Este rezultatul unei menghine mecanice calculate care își trăiește ultimele ore. În spatele cortinei, dealerii instituționali muncesc din greu pentru a ține prețul blocat... dar doar până mâine.</p>
+      <p class="mb-6 text-gray-300">Cronometrul arată acum mai puțin de 24 de ore până la cel mai mare eveniment structural al finalului de an.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">1. Ultima zi în "Cămașa de Forță" ($85k - $90k)</h3>
+      <p class="mb-4 text-gray-300">De ce nu ne mișcăm azi? Suntem prinși într-un "Range Mecanic" dominat de pozițiile dealerilor (Market Makers) care trebuie protejate până la expirare.</p>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+         <div class="bg-red-900/10 p-5 rounded-xl border border-red-500/20">
+            <strong class="text-red-400 block mb-2">🛑 Tavanul Artificial ($90,000)</strong>
+            <p class="text-sm text-gray-300">Un "Call Wall" masiv. Orice încercare de a urca spre 90k azi va fi întâmpinată de vânzări automate ale dealerilor pentru hedging.</p>
+         </div>
+         <div class="bg-green-900/10 p-5 rounded-xl border border-green-500/20">
+            <strong class="text-green-400 block mb-2">🟢 Podeaua Artificială ($85,000)</strong>
+            <p class="text-sm text-gray-300">Un "Put Wall" solid. Orice scădere spre 85k azi va fi oprită de cumpărări automate.</p>
+         </div>
+      </div>
+      <p class="text-gray-300 mb-6 italic">Azi, piața este obligată să stea în această bandă. Este o comprimare forțată.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. Mâine, 26 Decembrie: DETONAREA</h3>
+      <p class="mb-4 text-gray-300">Mâine nu este doar a doua zi de Crăciun. Este ziua în care <strong>58.8% din Gamma-ul total al pieței expiră</strong>.</p>
+      <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 mb-6">
+        <strong class="text-white block mb-3">În momentul expirării:</strong>
+        <ul class="list-disc pl-5 space-y-2 text-gray-300">
+            <li>Zidurile invizibile de la 85k și 90k dispar instantaneu.</li>
+            <li>Obligația dealerilor de a suprima volatilitatea dispare.</li>
+            <li>Piața este liberă să se miște violent.</li>
+        </ul>
+      </div>
+      <p class="text-white font-bold mb-6">Pregătește-te pentru o explozie de volatilitate imediat ce piața americană se reactivează mâine.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. Avertisment Critic: Pericolul Imediat (Zona Alunecoasă)</h3>
+      <p class="mb-4 text-gray-300">Acesta este cel mai important paragraf. Citește-l de două ori.</p>
+      <p class="mb-4 text-gray-300">Modelul structural arată că suntem în teritoriu de "Negative Gamma" (sub nivelul de flip de $88,985).</p>
+      
+      <div class="bg-red-950/30 border border-red-500/30 p-6 rounded-xl mb-8 relative overflow-hidden">
+         <div class="absolute top-0 right-0 w-20 h-20 bg-red-500/10 rounded-full blur-xl"></div>
+         <strong class="text-red-400 block mb-2 text-lg">Ce înseamnă asta pentru ziua de mâine?</strong>
+         <p class="text-gray-300 mb-3">În secunda în care lanțurile se rup, dacă prețul începe să scadă puțin, dealerii NU vor mai cumpăra pentru a stabiliza. Din contră, ei vor <strong>VINDE</strong> pentru a se proteja, accelerând căderea.</p>
+         <p class="text-white font-bold">Există un risc major de "Initial Flush" (o curățare rapidă și violentă) în zona 80.000$ - 82.000$ imediat după expirare.</p>
+      </div>
+      <p class="text-gray-300 mb-6">Mișcările în jos vor fi mult mai rapide decât cele în sus în primele ore după expirare.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">4. Concluzia: Nu te panica la primul "Dip"</h3>
+      <p class="mb-4 text-gray-300">Imaginea de ansamblu este clară:</p>
+      <ul class="list-disc pl-6 space-y-2 text-gray-300 mb-6">
+        <li>Tavanul de 90k este o iluzie care dispare mâine.</li>
+        <li>Magnetul de 100k este structural și așteaptă.</li>
+        <li>Dar, drumul spre 100k s-ar putea să treacă mai întâi printr-o sperietură scurtă spre 80k-82k mâine.</li>
+      </ul>
+
+      <div class="bg-blue-900/20 border border-blue-500/30 p-6 rounded-2xl text-center">
+        <p class="text-gray-300 mb-4">Acea scădere NU este un Crash. Este eliberarea elasticului (Negative Gamma flush) înainte de direcția reală.</p>
+        <p class="text-white font-bold italic border-t border-blue-500/30 pt-4 mt-2">
+            "Sfatul Meu: Bucură-te de Crăciun azi. Dar mâine, fii pregătit. Liniștea artificială se termină brusc."
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU (FLASH CRASH CRĂCIUN) - ON TOP
   {
     id: 'bitcoin-flash-crash-24k-binance',
