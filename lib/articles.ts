@@ -1,4 +1,89 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU (FLASH CRASH CRĂCIUN) - ON TOP
+  {
+    id: 'bitcoin-flash-crash-24k-binance',
+    slug: 'bitcoin-flash-crash-24000-binance-glitch-craciun',
+    title: '📉 SCENARIU DE COȘMAR sau GLITCH? Bitcoin a atins 24.000$ pe Binance într-o secundă. Adevărul din spatele "Crash-ului" de Crăciun',
+    summary: 'Imaginează-ți că te trezești cu Bitcoin la 24.000$. Asta s-a întâmplat azi pe Binance pe paritatea BTC/USD1. Nu e panică, e o lecție dură despre lichiditate. Analizăm anatomia unui Flash Crash.',
+    category: 'ȘTIRI & EDUCAȚIE',
+    image: '/flashcarash25.jpg', // <--- IMAGINEA ACTUALIZATĂ
+    date: '25 Dec 2025',
+    readTime: '3 min',
+    author: 'Mihai Daniel',
+    impact: 'neutral',
+    content: `
+      <h3 class="text-2xl font-bold text-white mb-4">Intro: Cadoul nedorit de sub brad</h3>
+      <p class="mb-4 text-gray-300">Imaginează-ți că te trezești în dimineața de Crăciun, îți verifici portofoliul și vezi că Bitcoin a scăzut de la 88.000$ la... <strong>24.111$</strong>.</p>
+      <p class="mb-4 text-gray-300">Panică? Colaps total? Sfârșitul Bull Market-ului?</p>
+      <p class="mb-6 text-white font-bold text-lg">Din fericire, nu.</p>
+      <p class="mb-6 text-gray-300">Asta s-a întâmplat astăzi pe Binance, cea mai mare bursă crypto din lume, dar situația este mult mai nuanțată. A fost un eveniment izolat, un "Flash Crash" care a durat câteva secunde, dar care ne oferă o lecție brutală despre unde și cum tranzacționăm.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">Ce s-a întâmplat exact? (Anatomia Glitch-ului)</h3>
+      <p class="mb-4 text-gray-300">Incidentul a avut loc strict pe paritatea <strong>BTC/USD1</strong>.</p>
+      
+      <div class="bg-yellow-900/10 border-l-4 border-yellow-500 p-4 my-6">
+        <strong class="text-yellow-500 block mb-1">⚠️ Atenție:</strong>
+        <p class="text-gray-300">Nu pe USDT (Tether), ci pe <strong>USD1</strong>, un stablecoin mai nou și cu lichiditate mult mai mică, susținut de World Liberty Financial.</p>
+      </div>
+
+      <p class="mb-4 text-gray-300">Graficele au înregistrat un fitil (wick) roșu masiv până la zona de 24.111$, pentru ca în secunda următoare prețul să revină instantaneu la nivelul real al pieței, în zona 87.600$.</p>
+      <p class="mb-6 text-gray-300">Dacă te uitai pe orice altă pereche (BTC/USDT, BTC/FDUSD) sau pe alte exchange-uri (Coinbase, Bybit), prețul a rămas stabil. Nu a existat nicio vânzare reală în piața globală.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">De ce a picat prețul cu 70% într-o secundă?</h3>
+      <p class="mb-4 text-gray-300">Nu a fost un hack și nici un atac speculativ. A fost fizică elementară a pieței: <strong>VID DE LICHIDITATE (Liquidity Vacuum)</strong>.</p>
+
+      <div class="space-y-4 mb-8">
+        <div class="bg-gray-800 p-4 rounded-xl border border-gray-700">
+            <strong class="text-red-400 block mb-1">1. Carnet de Ordine "Subțire"</strong>
+            <p class="text-sm text-gray-300">Pe paritatea BTC/USD1 nu existau suficienți cumpărători (ordine de Buy Limit) plasați în carnețel.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-xl border border-gray-700">
+            <strong class="text-orange-400 block mb-1">2. Vânzătorul Neglijent</strong>
+            <p class="text-sm text-gray-300">Cineva (probabil un algoritm sau o "balenă" neatentă) a dat un ordin de vânzare la piață (Market Sell) foarte mare.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-xl border border-gray-700">
+            <strong class="text-blue-400 block mb-1">3. Cascada</strong>
+            <p class="text-sm text-gray-300">Pentru că nu erau cumpărători la 87k, 86k, 80k... motorul de matching al Binance a căutat următorul cumpărător disponibil. Și l-a găsit tocmai la 24.000$.</p>
+        </div>
+      </div>
+      <p class="text-gray-300 italic mb-6">Acesta este riscul tranzacționării pe perechi exotice sau cu volum mic. Prețul trece prin podea ca prin brânză.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">Lecția pentru Traderi: Cum să nu fii victima unui Flash Crash</h3>
+      <p class="mb-4 text-gray-300">Acest eveniment este un avertisment serios, mai ales în perioadele de sărbători când lichiditatea este scăzută (balenele și market makerii sunt în vacanță).</p>
+
+      <ul class="space-y-4 mb-8">
+        <li class="flex items-start gap-3">
+            <span class="text-green-500 text-xl">✅</span>
+            <div>
+                <strong class="text-white">Evită perechile fără volum</strong>
+                <p class="text-sm text-gray-400">Tranzacționează întotdeauna pe perechile principale (USDT, USDC, USD) unde lichiditatea este de miliarde de dolari. Perechile noi (ca USD1) sunt fragile.</p>
+            </div>
+        </li>
+        <li class="flex items-start gap-3">
+            <span class="text-green-500 text-xl">✅</span>
+            <div>
+                <strong class="text-white">Folosește Limit Orders</strong>
+                <p class="text-sm text-gray-400">Nu vinde/cumpăra niciodată "la Market" pe o pereche ilichidă. Vei suferi un "Slippage" (alunecare de preț) masiv.</p>
+            </div>
+        </li>
+        <li class="flex items-start gap-3">
+            <span class="text-red-500 text-xl">❌</span>
+            <div>
+                <strong class="text-white">Atenție la Stop Loss</strong>
+                <p class="text-sm text-gray-400">Dacă aveai un Stop Loss pus pe această pereche, ai fi fost scos din piață la cel mai prost preț posibil, chiar dacă piața și-a revenit într-o secundă.</p>
+            </div>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">Concluzie: Doar o sperietură</h3>
+      <div class="bg-blue-900/20 border border-blue-500/30 p-6 rounded-2xl text-center">
+        <p class="text-gray-300 mb-4">Pentru piața largă, acest eveniment este un "non-event". Nu reflectă sentimentul real, nu reflectă prețul real. Este doar o eroare tehnică cauzată de lipsa de lichiditate pe un stablecoin secundar.</p>
+        <p class="text-white font-bold mb-4">Bitcoin rămâne stabil în zona 87.000$ - 88.000$. Structura este intactă.</p>
+        <p class="text-green-400 italic font-medium border-t border-blue-500/30 pt-4">"Dar, pentru cineva care a avut un ordin de cumpărare uitat la 24.111$ pe acea pereche... Moș Crăciun a venit cu adevărat cu cel mai mare discount al anului."</p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU (RESET IANUARIE 2026) - ON TOP
   {
     id: 'decodificare-reset-ianuarie-2026',
