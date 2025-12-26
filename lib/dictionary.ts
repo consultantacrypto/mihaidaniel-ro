@@ -538,6 +538,85 @@ export const dictionary: AcademyItem[] = [
       <p class="text-white font-bold mb-2">Unde îl pui?</p>
       <p class="text-gray-300 mb-6">Nu îl pui la o sumă fixă ("Vând dacă pierd 10 dolari"). Îl pui unde <strong>TEZA TA ESTE INVALIDATĂ</strong>. Dacă ai crezut că suportul ține, pune Stop Loss-ul sub suport. Dacă suportul s-a rupt, motivul pentru care ai cumpărat a dispărut. Ieși afară.</p>
     `
+  },
+  // === ✅ ARTICOL NOU: LICHIDITATEA (TRADING & MARKET MECHANICS) ===
+  {
+    slug: "lichiditatea-explicata-orderbook-slippage-amm",
+    term: "Lichiditatea (Liquidity)",
+    category: "TRADING & CHARTURI",
+    image: "/lichiditatea-academie.jpg", // ✅ Corectat conform numelui fișierului
+    definition: "Oxigenul Pieței. Capacitatea de a transforma un activ în bani cash instantaneu, fără a-i prăbuși prețul. Diferența dintre a putea vinde 1 milion de dolari într-o secundă (Bitcoin) sau în 10 ani (Imobiliare).",
+    analogy: "Paharul cu Apă vs. Oceanul. Dacă arunci o piatră (un ordin de vânzare) într-un pahar, apa sare peste tot (prețul se prăbușește). Dacă arunci aceeași piatră în ocean, nivelul apei nu se schimbă. Bitcoin e Oceanul, Shitcoin-urile sunt Paharul.",
+    mihaiTake: "Volumul este vanitate, Lichiditatea este realitate. Poți vedea un token care a crescut 10.000% azi, dar dacă are o lichiditate de 5.000$, acea creștere este o iluzie. Nu poți marca profitul. Nu cumpăra niciodată ceva ce nu poți vinde.",
+    fullContent: `
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Ce este Lichiditatea, de fapt?</h3>
+      <p class="mb-4 text-gray-300">Mulți confundă Lichiditatea cu Volumul. Sunt diferite.</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-300">
+        <li><strong>Volumul:</strong> Câți bani s-au schimbat azi (Trecut).</li>
+        <li><strong>Lichiditatea:</strong> Câți bani stau în așteptare în "Carnetul de Ordine" (Prezent și Viitor).</li>
+      </ul>
+      
+      <div class="bg-blue-900/20 p-6 rounded-xl border border-blue-500/30 mb-8">
+        <strong class="text-blue-400 block mb-2 text-lg">Testul Suprem:</strong>
+        <p class="text-gray-300">Ai 100.000$ în Bitcoin. Poți să-i vinzi acum? <strong>DA</strong>, prețul nu se va mișca nici măcar cu 1$.</p>
+        <p class="text-gray-300 mt-2">Ai 100.000$ într-un Meme Coin obscur. Poți să-i vinzi acum? <strong>NU</strong>. Dacă încerci, vei prăbuși prețul cu 50% și vei încasa doar jumătate. Asta înseamnă "Lipsă de Lichiditate".</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. The Order Book (Carnetul de Ordine)</h3>
+      <p class="mb-4 text-gray-300">Pe o bursă centralizată (Binance), lichiditatea este vizualizată prin Order Book. Sunt "Zidurile" de cumpărare și vânzare.</p>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-6">
+         <div class="bg-[#0a0f1e] p-5 rounded-xl border border-green-500/20">
+            <strong class="text-green-400 block mb-2">Bid Walls (Cumpărătorii)</strong>
+            <p class="text-sm text-gray-400">Ordinele care așteaptă mai jos. Ele sunt "plasa de siguranță". Cu cât sunt mai multe (Deep Liquidity), cu atât e mai greu ca prețul să scadă brusc.</p>
+         </div>
+         <div class="bg-[#0a0f1e] p-5 rounded-xl border border-red-500/20">
+            <strong class="text-red-400 block mb-2">Ask Walls (Vânzătorii)</strong>
+            <p class="text-sm text-gray-400">Ordinele care așteaptă mai sus. Ele acționează ca un "tavan". Trebuie să cumperi tot ce vând ei ca să urci prețul.</p>
+         </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. Inamicul Tăcut: SLIPPAGE (Alunecarea)</h3>
+      <p class="mb-4 text-gray-300">Acesta este modul în care piața te taxează pentru nerăbdare în piețe ilichide.</p>
+      
+      <div class="bg-red-900/10 p-6 rounded-xl border border-red-500/20 mb-6">
+         <strong class="text-red-400 block mb-2 text-xl">⚠️ Scenariul de Coșmar</strong>
+         <p class="text-gray-300 mb-2">Vrei să vinzi rapid (Market Order) token-uri de 10.000$.</p>
+         <p class="text-gray-300 mb-2">Dar în Order Book, cumpărătorii sunt așa:</p>
+         <ul class="text-sm font-mono text-gray-400 mb-4 bg-black/30 p-2 rounded">
+            <li>Gigel vrea de 100$ la prețul de 1.00$</li>
+            <li>Costel vrea de 500$ la prețul de 0.98$</li>
+            <li>Ionel vrea de 9000$ la prețul de 0.50$</li>
+         </ul>
+         <p class="text-white font-bold">Rezultat:</p>
+         <p class="text-gray-300">Sistemul îți va vinde automat la toți, în ordine. Vei vinde majoritatea token-urilor la 0.50$, pierzând instant jumătate din bani. Acesta este Slippage-ul.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">4. Revoluția DeFi: Liquidity Pools (AMM)</h3>
+      <p class="mb-4 text-gray-300">Pe Uniswap sau PancakeSwap nu există Order Book. Există o "Piscină de Lichiditate".</p>
+      <p class="mb-6 text-gray-300">Aici, utilizatorii (ca tine) devin "Banca". Tu depui o pereche de token-uri (ex: ETH + USDT) în piscină. Când cineva vrea să facă schimb, ia din piscină și plătește o taxă. Acea taxă ajunge la tine.</p>
+      
+      <ul class="space-y-4 mb-6">
+        <li class="bg-white/5 p-4 rounded-lg border-l-4 border-purple-500">
+            <strong class="text-purple-400 block mb-1">Conceptul AMM (Automated Market Maker)</strong>
+            <p class="text-sm text-gray-400">Un robot matematic care echilibrează balanța. Formula clasică: <em>x * y = k</em>. Dacă iei mult ETH din piscină, robotul crește exponențial prețul ETH rămas pentru a proteja piscina.</p>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">5. Riscul "Rug Pull" prin Lichiditate</h3>
+      <p class="mb-4 text-gray-300">Cum dau țeapă escrocii?</p>
+      <ol class="list-decimal pl-6 mb-6 space-y-2 text-gray-300">
+         <li>Creează un token nou.</li>
+         <li>Adaugă lichiditate inițială (pun 10.000$ reali în piscină).</li>
+         <li>Lumea cumpără, prețul crește, în piscină se strâng 100.000$ reali.</li>
+         <li><strong>Rug Pull:</strong> Escrocul are o funcție secretă prin care <strong>RETRAGE LIQUIDITATEA</strong>.</li>
+         <li>El pleacă cu cei 100.000$, iar tu rămâi cu token-uri pe care nu le mai poți schimba nicăieri, pentru că nu mai există "piscină" în care să le vinzi.</li>
+      </ol>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">Concluzie: Apa adâncă e sigură</h3>
+      <p class="mb-4 text-gray-300">Înainte să investești în orice proiect, verifică lichiditatea.</p>
+      <p class="text-white font-bold border-l-4 border-yellow-500 pl-4">Nu te uita doar la "Cât pot să câștig?". Întreabă-te: "Dacă fac 1 milion de dolari, există suficienți bani în partea cealaltă ca să pot încasa?"</p>
+    `
   }
 ];
 
