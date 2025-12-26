@@ -1,3 +1,5 @@
+// lib/dictionary.ts
+
 // --- 1. DEFINIREA TIPURILOR (STRUCTURA) ---
 export type AcademyCategory = 
   | 'BITCOIN & FUNDAMENTE' 
@@ -18,9 +20,9 @@ export type AcademyItem = {
   fullContent: string;
 };
 
-// --- 2. CONȚINUTUL ACADEMIEI ---
+// --- 2. CONȚINUTUL ACADEMIEI (FULL CONTENT) ---
 export const dictionary: AcademyItem[] = [
-  // === ✅ ARTICOL: BITCOIN (FUNDAMENTE) ===
+  // === 1. BITCOIN (FUNDAMENTE) ===
   {
     slug: "ce-este-bitcoin-ghid-complet",
     term: "Bitcoin (BTC)",
@@ -74,7 +76,7 @@ export const dictionary: AcademyItem[] = [
     `
   },
 
-  // === ✅ ARTICOL: ETHEREUM (DEFI & WEB3) ===
+  // === 2. ETHEREUM (DEFI & WEB3) ===
   {
     slug: "ce-este-ethereum-ghid-suprem",
     term: "Ethereum (ETH)",
@@ -148,7 +150,8 @@ export const dictionary: AcademyItem[] = [
         <p class="text-white font-bold border-l-4 border-purple-500 pl-4">Ethereum nu este perfect. Dar este singurul computer global descentralizat care a supraviețuit tuturor atacurilor. Dacă Bitcoin este Regele, Ethereum este Regatul.</p>
     `
   },
-  // === ✅ ARTICOL: PORTOFELE & SECURITATE ===
+
+  // === 3. PORTOFELE & SECURITATE ===
   {
     slug: "portofele-crypto-hot-vs-cold-ghid",
     term: "Hot vs. Cold Wallets",
@@ -222,7 +225,7 @@ export const dictionary: AcademyItem[] = [
     `
   },
 
-  // === ✅ ARTICOL: TOKENOMICS (ANALIZĂ FUNDAMENTALĂ) ===
+  // === 4. TOKENOMICS (ANALIZĂ FUNDAMENTALĂ) ===
   {
     slug: "tokenomics-ghid-market-cap-fdv",
     term: "Tokenomics",
@@ -299,7 +302,7 @@ export const dictionary: AcademyItem[] = [
     `
   },
 
-  // === ✅ ARTICOL: RSI (TRADING & CHARTURI) ===
+  // === 5. RSI (TRADING & CHARTURI) ===
   {
     slug: "rsi-relative-strength-index-explicat",
     term: "RSI (Relative Strength Index)",
@@ -381,7 +384,7 @@ export const dictionary: AcademyItem[] = [
     `
   },
 
-  // === ✅ ARTICOL NOU: CICLUL PIEȚEI (PSIHOLOGIE & CICLE) ===
+  // === 6. CICLUL PIEȚEI (PSIHOLOGIE & CICLE) ===
   {
     slug: "ciclul-pietei-wyckoff-ghid-faze",
     term: "Ciclul Pieței (Market Cycles)",
@@ -458,7 +461,8 @@ export const dictionary: AcademyItem[] = [
       </div>
     `
   },
-  // === ✅ ARTICOL NOU: MANAGEMENTUL RISCULUI (TRADING) ===
+
+  // === 7. MANAGEMENTUL RISCULUI (TRADING) ===
   {
     slug: "managementul-riscului-matematica-supravietuirii",
     term: "Managementul Riscului (Risk Management)",
@@ -539,12 +543,13 @@ export const dictionary: AcademyItem[] = [
       <p class="text-gray-300 mb-6">Nu îl pui la o sumă fixă ("Vând dacă pierd 10 dolari"). Îl pui unde <strong>TEZA TA ESTE INVALIDATĂ</strong>. Dacă ai crezut că suportul ține, pune Stop Loss-ul sub suport. Dacă suportul s-a rupt, motivul pentru care ai cumpărat a dispărut. Ieși afară.</p>
     `
   },
-  // === ✅ ARTICOL NOU: LICHIDITATEA (TRADING & MARKET MECHANICS) ===
+
+  // === 8. LICHIDITATEA (TRADING & MARKET MECHANICS) ===
   {
     slug: "lichiditatea-explicata-orderbook-slippage-amm",
     term: "Lichiditatea (Liquidity)",
     category: "TRADING & CHARTURI",
-    image: "/lichiditatea-academie.jpg", // ✅ Corectat conform numelui fișierului
+    image: "/lichiditatea-academie.jpg",
     definition: "Oxigenul Pieței. Capacitatea de a transforma un activ în bani cash instantaneu, fără a-i prăbuși prețul. Diferența dintre a putea vinde 1 milion de dolari într-o secundă (Bitcoin) sau în 10 ani (Imobiliare).",
     analogy: "Paharul cu Apă vs. Oceanul. Dacă arunci o piatră (un ordin de vânzare) într-un pahar, apa sare peste tot (prețul se prăbușește). Dacă arunci aceeași piatră în ocean, nivelul apei nu se schimbă. Bitcoin e Oceanul, Shitcoin-urile sunt Paharul.",
     mihaiTake: "Volumul este vanitate, Lichiditatea este realitate. Poți vedea un token care a crescut 10.000% azi, dar dacă are o lichiditate de 5.000$, acea creștere este o iluzie. Nu poți marca profitul. Nu cumpăra niciodată ceva ce nu poți vinde.",
@@ -621,7 +626,6 @@ export const dictionary: AcademyItem[] = [
 ];
 
 // --- 3. LISTA TERMENI & LINK-URI (INTERCONECTARE) ---
-// Aici definim termenul, explicația scurtă (tooltip) și link-ul către articolul mare (dacă există)
 export const terms: Record<string, { def: string, url?: string }> = {
   "Bitcoin": {
     def: "Aur Digital. Rețea descentralizată, limitată la 21 milioane unități.",
@@ -637,7 +641,7 @@ export const terms: Record<string, { def: string, url?: string }> = {
   },
   "Blockchain": {
     def: "Registru public distribuit, imposibil de falsificat.",
-    url: "/academie/ce-este-bitcoin-ghid-complet" // Link către Bitcoin ca exemplu
+    url: "/academie/ce-este-bitcoin-ghid-complet" 
   },
   "DeFi": {
     def: "Finanțe Descentralizate. Bănci fără bancheri, bazate pe cod.",
@@ -666,22 +670,24 @@ export const terms: Record<string, { def: string, url?: string }> = {
   "Acumulare": {
     def: "Faza în care balenele cumpără în liniște, înainte de explozia prețului.",
     url: "/academie/ciclul-pietei-wyckoff-ghid-faze"
+  },
+  "Lichiditatea": {
+    def: "Capacitatea de a vinde rapid fără slippage.",
+    url: "/academie/lichiditatea-explicata-orderbook-slippage-amm"
   }
 };
 
+// --- 4. FUNCȚIA DE PROCESARE TEXT (Fără erori!) ---
 export function enhanceContent(content: string): string {
   let enhancedContent = content;
   
-  // Sortăm termenii după lungime (descrescător) ca să nu înlocuim "Wallet" în interiorul lui "Cold Wallet"
   const sortedTerms = Object.keys(terms).sort((a, b) => b.length - a.length);
 
   sortedTerms.forEach((term) => {
     const info = terms[term];
-    // Regex care caută cuvântul, dar ignoră dacă e deja într-un link sau tag HTML
     const regex = new RegExp(`(?<!<[^>]*)\\b(${term})\\b(?![^<]*>)`, 'g');
     
     enhancedContent = enhancedContent.replace(regex, (match) => {
-      // Dacă avem URL, facem link. Dacă nu, doar tooltip.
       if (info.url) {
         return `
           <a href="${info.url}" class="group relative inline-block text-blue-400 font-medium hover:text-blue-300 transition-colors border-b border-blue-500/30 hover:border-blue-400 cursor-pointer">

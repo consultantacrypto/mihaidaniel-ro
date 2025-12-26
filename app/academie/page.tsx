@@ -6,7 +6,6 @@ import Image from 'next/image';
 import { dictionary, AcademyItem } from '@/lib/dictionary';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-// ✅ Am adăugat CheckCircle2 pentru bifa verde
 import { Search, X, ArrowUpRight, ShieldCheck, BookOpen, Activity, BrainCircuit, Database, Zap, Brain, TrendingUp, CheckCircle2 } from 'lucide-react';
 
 // Categorii pentru tab-uri (Navigare clară stil Binance)
@@ -23,28 +22,36 @@ const CATEGORIES = [
 export default function AcademyPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeFilter, setActiveFilter] = useState<string>('TOATE');
-
-  // === 🧠 GAME MECHANICS: MEMORIA LOCALĂ ===
   const [readArticles, setReadArticles] = useState<string[]>([]);
 
-  // 1. La încărcare, citim din memoria browserului ce a citit omul
-  useEffect(() => {
+  // === 🧠 GAME MECHANICS: MEMORIA LOCALĂ ===
+  
+  // Funcție de reîmprospătare a progresului (poate fi apelată oricând)
+  const refreshProgress = () => {
     const saved = localStorage.getItem('mihai_academy_progress');
     if (saved) {
       setReadArticles(JSON.parse(saved));
     }
-  }, []);
-
-  // 2. Funcție ca să marcăm un articol ca citit (O apelăm la click)
-  const markAsRead = (slug: string) => {
-    if (!readArticles.includes(slug)) {
-      const newRead = [...readArticles, slug];
-      setReadArticles(newRead);
-      localStorage.setItem('mihai_academy_progress', JSON.stringify(newRead));
-    }
   };
 
-  // 3. Calculăm procentajul pentru bara de progres
+  useEffect(() => {
+    // 1. Citim la încărcarea paginii
+    refreshProgress();
+
+    // 2. Ascultăm evenimentul de "focus" (când utilizatorul revine în tab/pagină după ce a citit)
+    window.addEventListener('focus', refreshProgress);
+    
+    // 3. Ascultăm evenimentul custom "storage" (dacă modifică în alt tab)
+    window.addEventListener('storage', refreshProgress);
+
+    // Curățăm ascultătorii când pleacă de pe pagină
+    return () => {
+      window.removeEventListener('focus', refreshProgress);
+      window.removeEventListener('storage', refreshProgress);
+    };
+  }, []);
+
+  // Calculăm procentajul
   const progressPercentage = Math.round((readArticles.length / dictionary.length) * 100);
 
   // Logică de Filtrare
@@ -59,7 +66,7 @@ export default function AcademyPage() {
     <main className="min-h-screen bg-[#020617] text-white font-[var(--font-inter)] selection:bg-blue-500/30">
       <Navbar />
       
-      {/* === 1. HERO SECTION === */}
+      {/* === HERO SECTION === */}
       <div className="relative pt-32 pb-12 px-6 container mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-black mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 font-[var(--font-space)]">
               Academia Crypto
@@ -72,7 +79,7 @@ export default function AcademyPage() {
           <div className="max-w-xl mx-auto mb-10 bg-white/5 border border-white/10 rounded-2xl p-4 backdrop-blur-md shadow-2xl">
             <div className="flex justify-between items-center mb-2 text-sm">
                 <span className="text-gray-400 font-medium">Nivelul tău de cunoștințe</span>
-                <span className="text-blue-400 font-bold">{readArticles.length} / {dictionary.length} Articole</span>
+                <span className="text-blue-400 font-bold">{readArticles.length} / {dictionary.length} Articole ({progressPercentage}%)</span>
             </div>
             <div className="w-full bg-gray-800 rounded-full h-2.5 overflow-hidden">
                 <div 
@@ -85,7 +92,7 @@ export default function AcademyPage() {
             </p>
           </div>
 
-          {/* SEARCH BAR (Centrat) */}
+          {/* SEARCH BAR */}
           <div className="max-w-xl mx-auto relative group">
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-blue-500 transition-colors" size={20} />
                 <input 
@@ -99,7 +106,7 @@ export default function AcademyPage() {
           </div>
       </div>
 
-      {/* === 2. CATEGORY TABS (Stil Binance - Navigare Clară) === */}
+      {/* === CATEGORY TABS === */}
       <div className="border-b border-white/5 sticky top-20 z-30 bg-[#020617]/80 backdrop-blur-xl">
           <div className="container mx-auto px-6 overflow-x-auto no-scrollbar">
               <div className="flex gap-8 min-w-max pb-1">
@@ -121,7 +128,7 @@ export default function AcademyPage() {
           </div>
       </div>
 
-      {/* === 3. CONTENT GRID (Uniform & Curat) === */}
+      {/* === CONTENT GRID === */}
       <div className="container mx-auto px-6 py-12 min-h-[50vh]">
           
           <div className="flex justify-between items-center mb-8">
@@ -137,8 +144,7 @@ export default function AcademyPage() {
                   <ArticleCard 
                     key={item.slug} 
                     item={item} 
-                    isRead={readArticles.includes(item.slug)} // Spunem cardului dacă e citit
-                    onRead={() => markAsRead(item.slug)}       // Îi dăm funcția de marcare
+                    isRead={readArticles.includes(item.slug)} 
                   />
               ))}
           </div>
@@ -159,17 +165,18 @@ export default function AcademyPage() {
   );
 }
 
-// --- COMPONENTA CARD (Acum știe dacă e citit) ---
-function ArticleCard({ item, isRead, onRead }: { item: AcademyItem, isRead: boolean, onRead: () => void }) {
+// --- COMPONENTA CARD CU LOGICĂ PREMIUM DE CULORI ---
+function ArticleCard({ item, isRead }: { item: AcademyItem, isRead: boolean }) {
     
-    // Culori dinamice în funcție de categorie
+    // ✅ Aceasta este funcția pe care o scurtasem din greșeală
     const getCategoryColor = (cat: string) => {
-        if (cat.includes('SECURITATE')) return 'text-red-400 bg-red-500/10 border-red-500/20';
-        if (cat.includes('BITCOIN')) return 'text-orange-400 bg-orange-500/10 border-orange-500/20';
-        if (cat.includes('DEFI')) return 'text-purple-400 bg-purple-500/10 border-purple-500/20';
-        if (cat.includes('PSIHOLOGIE')) return 'text-pink-400 bg-pink-500/10 border-pink-500/20';
-        if (cat.includes('ANALIZĂ')) return 'text-green-400 bg-green-500/10 border-green-500/20';
-        return 'text-blue-400 bg-blue-500/10 border-blue-500/20';
+        if (cat.includes('SECURITATE')) return 'text-red-400 bg-red-950/30 border-red-500/20 shadow-red-900/10';
+        if (cat.includes('BITCOIN')) return 'text-orange-400 bg-orange-950/30 border-orange-500/20 shadow-orange-900/10';
+        if (cat.includes('DEFI')) return 'text-purple-400 bg-purple-950/30 border-purple-500/20 shadow-purple-900/10';
+        if (cat.includes('PSIHOLOGIE')) return 'text-pink-400 bg-pink-950/30 border-pink-500/20 shadow-pink-900/10';
+        if (cat.includes('ANALIZĂ')) return 'text-green-400 bg-green-950/30 border-green-500/20 shadow-green-900/10';
+        if (cat.includes('TRADING')) return 'text-blue-400 bg-blue-950/30 border-blue-500/20 shadow-blue-900/10';
+        return 'text-gray-400 bg-gray-800 border-gray-700';
     };
 
     const badgeStyle = getCategoryColor(item.category);
@@ -177,9 +184,8 @@ function ArticleCard({ item, isRead, onRead }: { item: AcademyItem, isRead: bool
     return (
         <Link 
             href={`/academie/${item.slug}`} 
-            onClick={onRead} // ✅ Când dă click, se activează progresul
-            className={`group bg-[#0a0f1e] rounded-2xl border overflow-hidden hover:border-blue-500/30 hover:shadow-2xl hover:shadow-blue-900/10 transition-all duration-300 flex flex-col h-full ${
-                isRead ? 'border-green-500/30 opacity-75 hover:opacity-100' : 'border-white/5'
+            className={`group bg-[#0a0f1e] rounded-2xl border overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full ${
+                isRead ? 'border-green-500/30 opacity-75 hover:opacity-100' : 'border-white/5 hover:border-blue-500/30'
             }`}
         >
             
@@ -194,14 +200,14 @@ function ArticleCard({ item, isRead, onRead }: { item: AcademyItem, isRead: bool
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1e] to-transparent opacity-60"></div>
                 
-                {/* Badge Categorie */}
-                <div className={`absolute top-4 left-4 px-3 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider border backdrop-blur-md ${badgeStyle}`}>
+                {/* Badge Categorie - Aici se aplică culoarea specifică */}
+                <div className={`absolute top-4 left-4 px-3 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider border backdrop-blur-md shadow-lg ${badgeStyle}`}>
                     {item.category.split(' &')[0]}
                 </div>
 
-                {/* ✅ Badge "CITIT" (Doar dacă e citit) */}
+                {/* ✅ Badge CITIT (Dopamina) */}
                 {isRead && (
-                    <div className="absolute top-4 right-4 bg-green-500 text-black px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 shadow-lg shadow-green-500/20 z-10">
+                    <div className="absolute top-4 right-4 bg-green-500 text-black px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 shadow-lg shadow-green-500/20 z-10 animate-in fade-in zoom-in duration-300">
                         <CheckCircle2 size={12} />
                         CITIT
                     </div>
@@ -209,7 +215,7 @@ function ArticleCard({ item, isRead, onRead }: { item: AcademyItem, isRead: bool
             </div>
 
             {/* Conținut Text */}
-            <div className="p-6 flex flex-col flex-grow">
+            <div className="p-6 flex flex-col flex-grow relative">
                 <h3 className={`text-xl font-bold mb-3 transition-colors line-clamp-2 ${isRead ? 'text-gray-400 group-hover:text-white' : 'text-white group-hover:text-blue-400'}`}>
                     {item.term}
                 </h3>
