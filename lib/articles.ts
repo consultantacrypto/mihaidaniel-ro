@@ -1,4 +1,61 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU (CAPCANA POLYMARKET) - ON TOP
+  {
+    id: 'polymarket-bot-trap-1-million-scam',
+    slug: 'capcana-polymarket-boti-arbitraj-scam-explicat',
+    title: '🚨 Capcana de 1 Milion de Dolari pe Polymarket: De ce boții te vor transforma în "carne de tun", nu în milionar',
+    summary: 'Viralul momentului promite milioane din "arbitraj simplu" pe Polymarket. Află de ce este o minciună matematică și descoperă cele 4 capcane tehnice (Front-running, Toxic Flow, Gas) care pândesc amatorii.',
+    category: 'EDUCAȚIE & AVERTISMENT',
+    image: '/capcana-polymarket.jpg',
+    date: '26 Dec 2025',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'neutral', // Neutral pentru analiză educativă
+    content: `
+      <p class="mb-6 text-gray-300">Circulă o narativă periculoasă pe internet: <em>"Programatorii fac 1 Milion $ pe lună pe Polymarket în timp ce dorm, folosind boți simpli."</em></p>
+      <p class="mb-4 text-gray-300">Se arată screenshot-uri cu profituri uriașe, conturi de arbitraj și strategii "fără risc". Pare visul oricărui investitor, nu? <strong>Greșit.</strong></p>
+      <p class="mb-8 text-gray-300">Hai să dăm cortina la o parte și să vedem capcanele pe care influencerii (care au link-uri de afiliere în acele postări) "uită" să ți le spună.</p>
+
+      <div class="bg-red-900/10 border border-red-500/30 p-6 rounded-xl mb-8">
+        <h3 class="text-xl font-bold text-red-400 mb-4 flex items-center gap-2">🔥 Capcana 1: Războiul vitezei (Nu ai nicio șansă cu Python)</h3>
+        <p class="text-gray-300 mb-4">Textul viral spune că boții scanează "în fiecare secundă". În <strong>High Frequency Trading (HFT)</strong>, o secundă este o eternitate.</p>
+        <p class="text-gray-300 mb-4">Adevărații rechini nu folosesc scripturi de amatori. Ei au servere colocate direct lângă nodurile blockchain-ului, execuție în milisecunde și cod optimizat în <strong>Rust sau C++</strong>.</p>
+        <div class="bg-black/30 p-4 rounded border-l-4 border-red-500">
+            <strong class="text-white block mb-1">Realitatea:</strong>
+            <p class="text-sm text-gray-400">Dacă încerci să faci arbitraj cu un script copiat de pe GitHub, vei fi <strong>"front-run"</strong>. Adică, botul profesionist vede comanda ta, o execută înaintea ta, crește prețul, și tu ajungi să cumperi scump. Ești doar lichiditate pentru ei.</p>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">Capcana 2: Iluzia Arbitrajului (YES + NO = Pierdere)</h3>
+      <p class="mb-4 text-gray-300">Teoria zice așa: Dacă YES costă 0.45$ și NO costă 0.50$, le cumperi pe ambele cu 0.95$ și la final primești 1.00$. Profit garantat 5 cenți, nu?</p>
+      
+      <div class="bg-yellow-500/10 border border-yellow-500/30 p-6 rounded-xl mb-8">
+         <strong class="text-yellow-400 block mb-2">⚠️ Riscul Real:</strong>
+         <p class="text-gray-300">Taxele de rețea (Gas fees) și <strong>"Slippage-ul"</strong>. Până se execută tranzacția ta, prețul s-a schimbat. Dacă lichiditatea e mică, ai rămas blocat cu poziții pe care nu le poți vinde fără pierdere.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">Capcana 3: "Toxic Flow" (Sursa pierderilor)</h3>
+      <p class="mb-4 text-gray-300">Boții de "Market Making" (cei care oferă lichiditate automat) sunt adesea victimele informației asimetrice.</p>
+      <p class="mb-4 text-gray-300">Dacă apare o știre de ultimă oră (ex: un candidat se retrage), un om sau un bot mai rapid va vinde masiv către botul tău. Botul tău va cumpăra (că așa e programat), crezând că face o afacere, dar de fapt cumpără un bilet pierzător.</p>
+      <p class="text-white font-bold border-l-4 border-blue-500 pl-4 mb-8">Rezultatul: Cei 500k profit dintr-o lună se pot evapora într-o oră de volatilitate extremă.</p>
+
+      <div class="bg-green-900/10 border border-green-500/30 p-6 rounded-xl mb-8">
+        <h3 class="text-xl font-bold text-green-400 mb-4">💰 Capcana 4: Schema "Lopata în timpul goanei după aur"</h3>
+        <p class="text-gray-300 mb-4">Ai observat că toate aceste postări virale au link-uri de genul <code>?via=igor</code>?</p>
+        <p class="text-gray-300">Acesta este adevăratul business pentru autorii postărilor. Ei nu vor să te învețe să programezi; ei vor să îți faci cont prin link-ul lor. <strong>Ei câștigă un comision din fiecare tranzacție pe care o faci tu (chiar dacă tu pierzi bani).</strong></p>
+      </div>
+
+      <div class="mt-12 p-8 border border-gray-700 rounded-2xl bg-[#0a0f1e] text-center">
+        <h4 class="text-2xl font-bold text-white mb-4">Concluzie Dură:</h4>
+        <p class="text-gray-400 mb-4">Polymarket nu mai este un "casino" de predicții. A devenit o bursă algoritmică sofisticată.</p>
+        <ul class="text-left text-gray-300 space-y-2 max-w-lg mx-auto mb-6">
+            <li class="flex gap-2">❌ Profiturile acelea de 1M$ sunt excepția (0.01% dintre useri), realizate de echipe de profesioniști cu capital imens.</li>
+            <li class="flex gap-2">❌ Pentru utilizatorul obișnuit care încearcă să bage un bot simplu, rezultatul e aproape garantat: <strong>Rekt</strong>.</li>
+        </ul>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU (ALERTĂ TRUST WALLET) - ON TOP
   {
     id: 'alert-trust-wallet-hack-update-269',
