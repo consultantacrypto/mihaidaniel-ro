@@ -620,24 +620,90 @@ export const dictionary: AcademyItem[] = [
   }
 ];
 
-// --- 3. LISTA TOOLTIPS (NU O SCHIMBĂM) ---
-export const terms: Record<string, string> = {
-  "Bitcoin": "Aur Digital. Rețea descentralizată, limitată la 21 milioane unități.",
-  "Ethereum": "Platformă de Smart Contracts. Fundația DeFi și Web3.",
-  "RSI": "Indicator (0-100). Peste 70 = Scump, Sub 30 = Ieftin.",
-  "Blockchain": "Registru public distribuit, imposibil de falsificat.",
-  "DeFi": "Finanțe Descentralizate. Bănci fără bancheri.",
-  "Wallet": "Portofel digital unde îți ții cheile private.",
-  "Halving": "Eveniment la 4 ani care reduce inflația Bitcoin la jumătate."
+// --- 3. LISTA TERMENI & LINK-URI (INTERCONECTARE) ---
+// Aici definim termenul, explicația scurtă (tooltip) și link-ul către articolul mare (dacă există)
+export const terms: Record<string, { def: string, url?: string }> = {
+  "Bitcoin": {
+    def: "Aur Digital. Rețea descentralizată, limitată la 21 milioane unități.",
+    url: "/academie/ce-este-bitcoin-ghid-complet"
+  },
+  "Ethereum": {
+    def: "Platformă de Smart Contracts. Fundația DeFi și Web3.",
+    url: "/academie/ce-este-ethereum-ghid-suprem"
+  },
+  "RSI": {
+    def: "Indicator (0-100). Măsoară dacă piața e supra-cumpărată (>70) sau supra-vândută (<30).",
+    url: "/academie/rsi-relative-strength-index-explicat"
+  },
+  "Blockchain": {
+    def: "Registru public distribuit, imposibil de falsificat.",
+    url: "/academie/ce-este-bitcoin-ghid-complet" // Link către Bitcoin ca exemplu
+  },
+  "DeFi": {
+    def: "Finanțe Descentralizate. Bănci fără bancheri, bazate pe cod.",
+    url: "/academie/ce-este-ethereum-ghid-suprem"
+  },
+  "Wallet": {
+    def: "Portofel digital. Nu ține banii, ci cheile tale private.",
+    url: "/academie/portofele-crypto-hot-vs-cold-ghid"
+  },
+  "Cold Wallet": {
+    def: "Portofel hardware (offline). Cel mai sigur mod de a păstra crypto.",
+    url: "/academie/portofele-crypto-hot-vs-cold-ghid"
+  },
+  "Halving": {
+    def: "Eveniment la 4 ani care reduce inflația Bitcoin la jumătate.",
+    url: "/academie/ce-este-bitcoin-ghid-complet"
+  },
+  "Market Cap": {
+    def: "Valoarea totală a unei monede (Preț x Monede în circulație).",
+    url: "/academie/tokenomics-ghid-market-cap-fdv"
+  },
+  "Smart Money": {
+    def: "Investitorii instituționali (Balene, Fonduri). Cei care fac piața.",
+    url: "/academie/ciclul-pietei-wyckoff-ghid-faze"
+  },
+  "Acumulare": {
+    def: "Faza în care balenele cumpără în liniște, înainte de explozia prețului.",
+    url: "/academie/ciclul-pietei-wyckoff-ghid-faze"
+  }
 };
 
 export function enhanceContent(content: string): string {
   let enhancedContent = content;
-  Object.entries(terms).forEach(([term, definition]) => {
+  
+  // Sortăm termenii după lungime (descrescător) ca să nu înlocuim "Wallet" în interiorul lui "Cold Wallet"
+  const sortedTerms = Object.keys(terms).sort((a, b) => b.length - a.length);
+
+  sortedTerms.forEach((term) => {
+    const info = terms[term];
+    // Regex care caută cuvântul, dar ignoră dacă e deja într-un link sau tag HTML
     const regex = new RegExp(`(?<!<[^>]*)\\b(${term})\\b(?![^<]*>)`, 'g');
+    
     enhancedContent = enhancedContent.replace(regex, (match) => {
-      return `<span class="group relative cursor-help border-b border-dotted border-blue-500 hover:border-blue-400 text-blue-100 transition-colors">${match}<span class="invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300 absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 p-3 bg-blue-900/95 text-white text-xs rounded-lg shadow-xl border border-blue-500/30 z-50 backdrop-blur-sm pointer-events-none text-center leading-relaxed">${definition}</span></span>`;
+      // Dacă avem URL, facem link. Dacă nu, doar tooltip.
+      if (info.url) {
+        return `
+          <a href="${info.url}" class="group relative inline-block text-blue-400 font-medium hover:text-blue-300 transition-colors border-b border-blue-500/30 hover:border-blue-400 cursor-pointer">
+            ${match}
+            <span class="invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300 absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 p-3 bg-blue-900/95 text-white text-xs rounded-lg shadow-xl border border-blue-500/30 z-50 backdrop-blur-sm pointer-events-none text-center leading-relaxed normal-case font-normal">
+              ${info.def}
+              <span class="block mt-2 text-blue-300 font-bold text-[10px] uppercase tracking-wider">Click pentru Ghid Complet →</span>
+            </span>
+          </a>
+        `;
+      } else {
+        return `
+          <span class="group relative cursor-help border-b border-dotted border-gray-500 hover:border-gray-300 text-gray-300 transition-colors">
+            ${match}
+            <span class="invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300 absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 p-3 bg-gray-900/95 text-white text-xs rounded-lg shadow-xl border border-gray-700 z-50 backdrop-blur-sm pointer-events-none text-center leading-relaxed">
+              ${info.def}
+            </span>
+          </span>
+        `;
+      }
     });
   });
+  
   return enhancedContent;
 }
