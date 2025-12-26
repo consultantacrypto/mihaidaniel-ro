@@ -1,6 +1,7 @@
-import { dictionary } from '@/lib/dictionary';
+import { dictionary, enhanceContent } from '@/lib/dictionary'; // ✅ Am importat enhanceContent
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import ArticleTracker from '@/components/ArticleTracker'; // ✅ Am importat Senzorul
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowLeft, Lightbulb, Zap, Clock } from 'lucide-react';
@@ -20,8 +21,14 @@ export default async function TermPage({ params }: { params: Promise<{ slug: str
 
   if (!term) return null;
 
+  // ✅ Transformăm textul simplu în text cu Link-uri Inteligente
+  const processedContent = enhanceContent(term.fullContent || '');
+
   return (
     <main className="min-h-screen bg-[#020617] text-white selection:bg-cyan-500/30 flex flex-col">
+      {/* ✅ Activăm Senzorul Invizibil */}
+      <ArticleTracker slug={term.slug} />
+      
       <Navbar />
 
       {/* HERO HEADER */}
@@ -75,9 +82,10 @@ export default async function TermPage({ params }: { params: Promise<{ slug: str
         </div>
 
         {/* CONTINUTUL PRINCIPAL (ARTICLE BODY) */}
+        {/* ✅ Aici injectăm conținutul procesat cu link-uri */}
         <div 
             className="prose prose-lg prose-invert max-w-none prose-headings:font-bold prose-headings:text-white prose-p:text-gray-300 prose-a:text-cyan-400 hover:prose-a:text-cyan-300 prose-strong:text-white prose-li:text-gray-300"
-            dangerouslySetInnerHTML={{ __html: term.fullContent || '' }}
+            dangerouslySetInnerHTML={{ __html: processedContent }}
         />
 
         {/* CTA FINAL */}
