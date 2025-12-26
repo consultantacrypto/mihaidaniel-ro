@@ -20,7 +20,7 @@ export type AcademyItem = {
   fullContent: string;
 };
 
-// --- 2. CONȚINUTUL ACADEMIEI (FULL CONTENT) ---
+// --- 2. CONȚINUTUL ACADEMIEI (FULL CONTENT - NEMODIFICAT) ---
 export const dictionary: AcademyItem[] = [
   // === 1. BITCOIN (FUNDAMENTE) ===
   {
@@ -641,7 +641,7 @@ export const terms: Record<string, { def: string, url?: string }> = {
   },
   "Blockchain": {
     def: "Registru public distribuit, imposibil de falsificat.",
-    url: "/academie/ce-este-bitcoin-ghid-complet" 
+    url: "/academie/ce-este-bitcoin-ghid-complet" // Link către Bitcoin ca exemplu
   },
   "DeFi": {
     def: "Finanțe Descentralizate. Bănci fără bancheri, bazate pe cod.",
@@ -681,13 +681,16 @@ export const terms: Record<string, { def: string, url?: string }> = {
 export function enhanceContent(content: string): string {
   let enhancedContent = content;
   
+  // Sortăm termenii după lungime (descrescător) ca să nu înlocuim "Wallet" în interiorul lui "Cold Wallet"
   const sortedTerms = Object.keys(terms).sort((a, b) => b.length - a.length);
 
   sortedTerms.forEach((term) => {
     const info = terms[term];
+    // Regex care caută cuvântul, dar ignoră dacă e deja într-un link sau tag HTML
     const regex = new RegExp(`(?<!<[^>]*)\\b(${term})\\b(?![^<]*>)`, 'g');
     
     enhancedContent = enhancedContent.replace(regex, (match) => {
+      // Dacă avem URL, facem link. Dacă nu, doar tooltip.
       if (info.url) {
         return `
           <a href="${info.url}" class="group relative inline-block text-blue-400 font-medium hover:text-blue-300 transition-colors border-b border-blue-500/30 hover:border-blue-400 cursor-pointer">
