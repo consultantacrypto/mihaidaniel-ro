@@ -1,4 +1,96 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU (ALERTĂ TRUST WALLET) - ON TOP
+  {
+    id: 'alert-trust-wallet-hack-update-269',
+    slug: 'alerta-critica-trust-wallet-hack-extensie-browser-update-269',
+    title: '🚨 BREAKING: Alertă Critică pentru utilizatorii Trust Wallet (Extensia Browser). Ce trebuie să faci ACUM pentru a fi în siguranță.',
+    summary: 'Alertă Activă: Vulnerabilitate critică în extensia de browser Trust Wallet (v2.68). Pierderi de 7 Milioane $. Află cum faci update la v2.69 și cum îți recuperezi banii dacă ai fost afectat.',
+    category: 'SECURITATE & ALERTĂ',
+    image: '/trustwalletalert.jpg',
+    date: '26 Dec 2025',
+    readTime: '2 min',
+    author: 'Mihai Daniel',
+    impact: 'bearish', // Roșu pentru Alertă de Securitate
+    content: `
+      <div class="flex items-center gap-2 mb-6">
+        <span class="bg-red-500/20 text-red-400 border border-red-500/30 px-3 py-1 rounded text-xs font-bold uppercase animate-pulse">🔴 Status: Alertă Activă</span>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mb-4">Ce s-a întâmplat? (Pe scurt)</h3>
+      <p class="mb-4 text-gray-300">În această dimineață, spațiul crypto a fost zguduit de rapoarte conform cărora unii utilizatori Trust Wallet au început să piardă fonduri din portofele.</p>
+      <p class="mb-6 text-gray-300">Problema nu este la aplicația de mobil, ci specific la <strong>Extensia de Browser (Chrome Extension)</strong>.</p>
+
+      <div class="bg-red-900/10 border border-red-500/30 p-6 rounded-xl mb-8">
+        <ul class="space-y-4 text-gray-300">
+            <li class="flex items-start gap-3">
+                <span class="text-red-500 text-xl">❌</span>
+                <div>
+                    <strong class="text-white block">Vulnerabilitatea:</strong>
+                    Un update recent (versiunea 2.68) a conținut o breșă de securitate care a permis atacatorilor să sustragă fonduri.
+                </div>
+            </li>
+            <li class="flex items-start gap-3">
+                <span class="text-red-500 text-xl">💸</span>
+                <div>
+                    <strong class="text-white block">Pagubele:</strong>
+                    CZ (fondatorul Binance) a confirmat atacul, estimând pierderi de aproximativ 7 Milioane de Dolari.
+                </div>
+            </li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">Soluția Oficială: UPDATE IMEDIAT</h3>
+      <p class="mb-4 text-gray-300">Trust Wallet a reacționat rapid și a confirmat problema. Ei au lansat deja un patch de securitate.</p>
+
+      <div class="bg-green-900/10 border border-green-500/30 p-6 rounded-xl mb-8">
+         <h4 class="text-xl font-bold text-green-400 mb-4 flex items-center gap-2">⚠️ ACȚIUNE OBLIGATORIE:</h4>
+         <p class="text-white mb-4">Verifică imediat versiunea extensiei tale Trust Wallet din browser.</p>
+         <div class="grid md:grid-cols-2 gap-4 mb-6">
+            <div class="bg-black/40 p-3 rounded border border-red-500/50 text-red-300 text-center">
+                Versiunea 2.68 <br/> <strong>❌ VULNERABIL</strong>
+            </div>
+            <div class="bg-black/40 p-3 rounded border border-green-500/50 text-green-300 text-center">
+                Versiunea 2.69+ <br/> <strong>✅ SIGUR</strong>
+            </div>
+         </div>
+         
+         <div class="bg-black/20 p-4 rounded-lg">
+            <strong class="text-white block mb-2">Cum faci update manual în Chrome:</strong>
+            <ol class="list-decimal pl-5 space-y-1 text-sm text-gray-300">
+                <li>Click pe iconița "Puzzle" (Extensii) din dreapta sus.</li>
+                <li>Selectează "Manage Extensions" (Gestionare Extensii).</li>
+                <li>Activează "Developer Mode" (colțul dreapta sus).</li>
+                <li>Apasă butonul "Update".</li>
+            </ol>
+         </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">Vestea Bună: "Funds are SAFU"</h3>
+      <p class="mb-4 text-gray-300">Într-o mișcare rară și lăudabilă pentru industria crypto, echipa Trust Wallet a anunțat oficial că <strong>va rambursa integral (100%)</strong> toți utilizatorii care au pierdut fonduri din cauza acestei vulnerabilități.</p>
+      <p class="mb-6 text-gray-300">Acesta este diferența dintre un proiect serios și unul anonim. Deși hack-ul este regretabil, asumarea responsabilității este exemplară.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">Opinia și Analiza Noastră (Mihai Daniel Take)</h3>
+      <div class="bg-blue-900/20 border-l-4 border-blue-500 p-6 rounded-r-xl">
+        <p class="text-gray-300 mb-4">Acest incident ne oferă două lecții valoroase pe care le tot repetăm în Academie:</p>
+        <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+                <span class="text-blue-400 font-bold">1. Riscul "Hot Wallet":</span>
+                <span class="text-gray-300">Portofelele conectate permanent la internet (extensii de browser, aplicații mobile) sunt comode, dar vulnerabile la bug-uri, update-uri malițioase sau phishing. <br/><span class="text-white font-bold text-sm">Sfat: Nu ține niciodată sume mari ("Life Savings") pe un Hot Wallet.</span></span>
+            </li>
+            <li class="flex items-start gap-3">
+                <span class="text-blue-400 font-bold">2. Supremația Cold Wallet:</span>
+                <span class="text-gray-300">Un Ledger sau Trezor nu ar fi fost afectat de acest update de extensie, deoarece cheia privată nu părăsește niciodată dispozitivul fizic, indiferent ce software rulează pe calculator.</span>
+            </li>
+        </ul>
+      </div>
+
+      <div class="mt-8 p-6 border border-gray-700 rounded-2xl text-center">
+        <strong class="text-white block mb-2">Concluzie:</strong>
+        <p class="text-gray-400 text-sm">Dacă folosești Trust Wallet Extension: Nu te panica. Fă update la v2.69. Dacă ai fost afectat, contactează suportul Trust Wallet pentru rambursare.</p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU (ALERTA 26 DECEMBRIE - GAMMA) - ON TOP
   {
     id: 'alerta-craciun-bitcoin-26-decembrie-gamma',
