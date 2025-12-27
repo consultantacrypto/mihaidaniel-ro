@@ -1,4 +1,77 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU (PSIHOLOGIE TRADING - LAG INTERN) - ON TOP
+  {
+    id: 'trading-psychology-internal-lag-paralysis',
+    slug: 'analiza-psihologica-trading-lag-intern-paralizie',
+    title: 'ANALIZĂ PSIHOLOGICĂ: De ce pierzi bani deși știi Graficele? Fenomenul de "Lag Intern" și Paralizia prin Analiză',
+    summary: 'Nu ești leneș, ești traumatizat. De ce mâna ta îngheață pe mouse chiar dacă știi teoria? O analiză brutal de sinceră despre cum pierderile vechi îți sabotează câștigurile de azi și matematica emoțională a succesului.',
+    category: 'PSIHOLOGIE & TRADING',
+    image: '/emotiiledecembrie.jpg',
+    date: '27 Dec 2025',
+    readTime: '4 min',
+    author: 'Mihai Daniel',
+    impact: 'neutral', // Educațional
+    content: `
+      <div class="flex items-center gap-2 mb-6">
+        <span class="bg-pink-500/20 text-pink-300 border border-pink-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🧠 Psihologie de Trading</span>
+      </div>
+
+      <p class="mb-4 text-gray-300"><strong>Subiect:</strong> Execuția Emoțională vs. Cunoștințele Tehnice</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Simptomul: "Știam că o să crească, dar n-am intrat..."</h3>
+      <p class="mb-4 text-gray-300">Ți s-a întâmplat vreodată?</p>
+      <p class="mb-4 text-gray-300">Vezi graficul. Identifici suportul. Totul arată perfect. Teoria spune "BUY". Dar mâna ta îngheață pe mouse. Eziți. Aștepți o confirmare în plus. Și încă una.</p>
+      <p class="mb-6 text-gray-300">Și când te decizi în sfârșit să intri... prețul a plecat deja, iar tu cumperi vârful (FOMO).</p>
+      
+      <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 mb-8">
+        <p class="text-gray-300">Acesta nu este ghinion. Și nu este nici lipsă de educație.</p>
+        <strong class="text-white block mt-2 text-lg">Acesta este LAG-UL INTERN.</strong>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. Diagnosticul: Nu ești leneș, ești traumatizat</h3>
+      <p class="mb-4 text-gray-300">Trebuie să fim sinceri cu noi înșine. Pentru mulți dintre noi, cei care suntem în piață din 2017 sau 2020, acest "Lag" este de fapt un mecanism de apărare.</p>
+      
+      <div class="bg-purple-900/20 p-6 rounded-xl border border-purple-500/30 mb-6">
+        <p class="text-gray-300 mb-4">Acei ani de "neînțelegere" a pieței, acele pierderi vechi, au creat o cicatrice. Astăzi, chiar dacă tu înțelegi tehnic ce vezi pe ecran, subconștientul tău urlă: <em>"Atenție! Ții minte când ai pierdut data trecută?"</em></p>
+        <p class="text-white font-bold border-t border-purple-500/30 pt-4">Adevărul dur: Atunci când eziți să intri într-un trade valid, tu nu tranzacționezi graficul din fața ta. Tu tranzacționezi regretele tale din trecut.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. Conflictul: Capul vs. Mâna</h3>
+      <p class="mb-4 text-gray-300">Marea barieră în trecerea de la amator la profesionist nu este Analiza Tehnică (asta se învață în 3 luni). Bariera este Execuția.</p>
+      <ul class="space-y-3 mb-6 text-gray-300">
+        <li class="flex items-center gap-3"><span class="text-blue-400 font-bold">🧠 Knowledge (Capul):</span> Știe probabilistic că setup-ul e bun.</li>
+        <li class="flex items-center gap-3"><span class="text-red-400 font-bold">✋ Execution (Mâna):</span> Caută certitudine 100%.</li>
+      </ul>
+      <p class="mb-8 text-gray-300">Dar piața nu oferă certitudini, oferă doar probabilități. Căutarea certitudinii absolute este ceea ce creează paralizia. Aștepți atât de mult să fii sigur, încât oportunitatea dispare.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">4. Matematică Emoțională (Formula Succesului)</h3>
+      <p class="mb-4 text-gray-300">Dacă am pune acest fenomen într-o ecuație matematică, ar arăta așa:</p>
+      
+      <div class="bg-black border border-white/10 p-6 rounded-xl text-center mb-6 overflow-x-auto">
+        <code class="text-xl md:text-2xl font-mono text-green-400">Rezultat = (Cunoștințe × Execuție) - Emoție^{Lag}</code>
+      </div>
+
+      <p class="mb-4 text-gray-300">Observă puterea exponențială a "Emoției Lag". Poți avea Cunoștințe de nota 10.</p>
+      <p class="mb-8 text-gray-300">Dacă Emoția ta (frica/lăcomia) este ridicată, ea va mânca tot profitul rezultat din cunoștințe. Secretul nu este să înveți mai multe modele de lumânări, ci să reduci exponentul Lag.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">5. Soluția: Reîncadrarea Trecutului</h3>
+      <p class="mb-4 text-gray-300">Mulți spun: "Dacă aș fi știut în 2017 ce știu acum, aș fi fost milionar. Am pierdut 7 ani." Această gândire este toxică.</p>
+      <p class="mb-6 text-gray-300">Hai să schimbăm perspectiva: Acei 7 ani NU au fost timp pierdut. Au fost <strong>Taxa de Școlarizare (Tuition Fees)</strong>. Nu poți avea maturitatea de azi fără durerea de ieri.</p>
+      <p class="mb-8 text-gray-300">Faptul că acum recunoști acest "Lag" înseamnă că școlarizarea s-a terminat și ești gata să treci la "Procesul de Absolvire".</p>
+
+      <div class="bg-green-900/10 border border-green-500/30 p-6 rounded-xl">
+        <h4 class="text-xl font-bold text-green-400 mb-4 flex items-center gap-2">📝 Tema de casă:</h4>
+        <p class="text-gray-300 mb-4">Următoarea dată când vezi un setup clar și simți acel "nod în gât":</p>
+        <ul class="list-decimal pl-6 space-y-2 text-gray-300 mb-4">
+            <li><strong>Recunoaște-l:</strong> "Asta e frica din 2021, nu realitatea din 2025".</li>
+            <li><strong>Micșorează poziția:</strong> Intră cu o sumă care nu te sperie.</li>
+            <li><strong>Execută.</strong></li>
+        </ul>
+        <p class="text-white font-bold italic">Vindecarea vine prin acțiune, nu prin analiză.</p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU (PETER SCHIFF - EDITORIAL) - ON TOP
   {
     id: 'peter-schiff-bitcoin-gold-marketing-genius',
