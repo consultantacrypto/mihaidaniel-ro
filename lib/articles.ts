@@ -1,4 +1,102 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU (PETER SCHIFF - EDITORIAL) - ON TOP
+  {
+    id: 'peter-schiff-bitcoin-gold-marketing-genius',
+    slug: 'peter-schiff-bufon-sau-geniu-bitcoin-aur-editorial',
+    title: 'BUFONUL SAU GENIUL? Cum a transformat Peter Schiff cea mai mare greșeală financiară din istorie într-un Imperiu Media',
+    summary: 'Peter Schiff a ratat Bitcoin la 10$ și la 3.000$. Totuși, este mai relevant ca niciodată. O analiză despre cum "Regele Aurului" a transformat ura comunității Crypto într-un imperiu media și de ce Bitcoin este, de fapt, cel mai bun departament al lui de marketing.',
+    category: 'EDITORIAL & ANALIZĂ',
+    image: '/peter-schiff-decembrie.jpg',
+    date: '27 Dec 2025',
+    readTime: '6 min',
+    author: 'Mihai Daniel',
+    impact: 'neutral', // Editorial de opinie
+    content: `
+      <div class="flex items-center gap-2 mb-6">
+        <span class="bg-purple-500/20 text-purple-300 border border-purple-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🎭 Editorial / Cancan Financiar</span>
+      </div>
+      
+      <p class="mb-4 text-gray-300"><strong>Personaj Principal:</strong> Peter Schiff (The Gold Bug)</p>
+      <p class="mb-8 text-gray-300"><strong>Subiect:</strong> Bitcoin vs. Gold & Arta de a face bani fiind Gică-Contra</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Momentul "Dubai": Șah Mat la Regele Aurului</h3>
+      <p class="mb-4 text-gray-300">Începem cu scena de film. Acum trei săptămâni, în Dubai.</p>
+      <p class="mb-4 text-gray-300">Peter Schiff, omul care de 15 ani urlă că "Bitcoin este aer" și "Aurul este singurul ban real", se întâlnește cu CZ (Changpeng Zhao), fondatorul Binance.</p>
+      
+      <div class="bg-blue-900/20 p-6 rounded-xl border border-blue-500/30 mb-6">
+        <p class="text-gray-300 mb-2">CZ face o mișcare de maestru. Îi pune lui Schiff un lingou de aur în mână și îl întreabă:</p>
+        <strong class="text-white block text-lg">"Este real?"</strong>
+        <p class="text-gray-300 mt-2">Răspunsul lui Schiff?</p>
+        <strong class="text-white block text-lg">"Nu știu."</strong>
+        <p class="text-blue-400 font-bold mt-4 text-xl">Boom. 💥</p>
+      </div>
+
+      <p class="mb-4 text-gray-300">Aici este ironia supremă. Cel mai mare avocat al aurului din lume nu poate verifica metalul pe care îl promovează fără să-l topească sau să-l dea cu acid.</p>
+      <p class="mb-6 text-gray-300">În schimb, un puști de 12 ani poate verifica autenticitatea unui Bitcoin în 10 minute, de pe un laptop, fără să ceară permisiunea nimănui.</p>
+      <p class="text-white font-bold border-l-4 border-yellow-500 pl-4 mb-8">Aceasta este Inversiunea Costului de Verificare. Aurul e scump de verificat. Bitcoin se verifică singur.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. "Cea mai proastă predicție din istorie"</h3>
+      <p class="mb-4 text-gray-300">Să ne uităm pe tabelul de marcaj. Schiff nu a greșit puțin. A greșit monumental.</p>
+
+      <div class="bg-red-900/10 border border-red-500/30 p-6 rounded-xl mb-8">
+        <ul class="space-y-4 text-gray-300">
+            <li class="flex items-start gap-3">
+                <span class="text-red-500 font-bold">2011:</span>
+                <span>Schiff spune să vinzi BTC la 10$.</span>
+            </li>
+            <li class="flex items-start gap-3">
+                <span class="text-red-500 font-bold">2018:</span>
+                <span>Schiff spune: "Nu cumpărați Bitcoin la 3.800$. Chiar și la 750$ ar fi scump."</span>
+            </li>
+            <li class="flex items-start gap-3 border-t border-red-500/20 pt-3 mt-2">
+                <span class="text-green-500 font-bold">Astăzi (2025):</span>
+                <span class="text-white font-bold">Bitcoin este 88.000$+.</span>
+            </li>
+        </ul>
+      </div>
+
+      <p class="mb-4 text-gray-300">Dacă îl ascultai în 2018, ai ratat un multiplicator de 23x. Dacă îl ascultai în 2011, ai ratat un randament de 1.800.000%.</p>
+      <p class="mb-4 text-gray-300">Între timp, aurul lui iubit a făcut +165% în 14 ani. Abia a bătut inflația reală.</p>
+      <p class="mb-8 text-gray-300 italic">De asemenea, propria lui familie l-a "trădat". Fiul său, Spencer Schiff, este un Bitcoiner convins. Când sângele tău alege tabăra adversă, știi că ai o problemă de argumentare.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. Adevărul dureros: Schiff nu e prost. E un geniu al Marketingului.</h3>
+      <p class="mb-4 text-gray-300">Aici schimbăm unghiul. Mulți cred că Schiff este un dinozaur care nu înțelege tehnologia. <strong>Greșit.</strong> Peter Schiff este un om de afaceri strălucit.</p>
+      
+      <div class="bg-[#0a0f1e] p-6 rounded-xl border border-gray-700 mb-6">
+        <p class="text-gray-300 mb-4">Uită-te atent la ce face, nu la ce spune:</p>
+        <ul class="list-disc pl-6 space-y-2 text-gray-300">
+            <li>Este invitat principal (Keynote Speaker) la conferințe Bitcoin.</li>
+            <li>Postările lui anti-Bitcoin fac de 100 de ori mai multe vizualizări decât cele despre aur.</li>
+            <li>Își construiește brandul pe spatele comunității crypto.</li>
+        </ul>
+      </div>
+
+      <p class="mb-4 text-gray-300">Peter Schiff a înțeles un lucru: <strong>Ura vinde.</strong></p>
+      <p class="mb-4 text-gray-300">Fiecare reply furios de la un "Bitcoin Maxi", fiecare meme, fiecare articol (inclusiv acesta!) îi ține numele în trending.</p>
+      <p class="mb-8 text-white font-bold">Bitcoin nu este dușmanul lui. Bitcoin este departamentul lui de Marketing. El este "Troll-ul Suprem". Și ghici ce? Funcționează. Comunitatea Crypto îi plătește indirect facturile.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">4. Concluzie: Mulțumim, Peter!</h3>
+      <p class="mb-4 text-gray-300">Peter Schiff susține că "cea mai mare greșeală a lui" a fost că a subestimat credulitatea oamenilor care cumpără Bitcoin.</p>
+      <p class="mb-4 text-gray-300">Nu, Peter. Cea mai mare greșeală a fost să confunzi timp de 14 ani "a avea dreptate" cu "a fi contrarian".</p>
+      <p class="mb-4 text-gray-300">Dar, în final, trebuie să-i mulțumim. Avem nevoie de un Peter Schiff. Avem nevoie de cineva care să ne spună că mergem la zero, în timp ce noi mergem la 100.000$.</p>
+      <p class="mb-4 text-gray-300">El este sarea și piperul acestui Bull Market.</p>
+      
+      <div class="bg-green-900/10 p-6 rounded-xl border border-green-500/30 text-center mb-8">
+        <strong class="text-green-400 block text-xl mb-2">Well played, Peter.</strong>
+        <p class="text-gray-300">Ai transformat o eroare de 23x într-un imperiu media. Noi suntem "Exit Liquidity-ul" atenției tale, iar tu ești sursa noastră de divertisment. E un schimb echitabil.</p>
+      </div>
+
+      <div class="mt-12 p-6 border-t border-gray-800">
+        <h4 class="text-xl font-bold text-white mb-4 flex items-center gap-2">📚 Termeni Educaționali din Articol:</h4>
+        <ul class="space-y-4 text-sm text-gray-400">
+            <li><strong class="text-white">Verification Cost (Cost de Verificare):</strong> Cât te costă să demonstrezi că un activ este real. La aur e mare (experți, chimie). La Bitcoin e zero (matematică).</li>
+            <li><strong class="text-white">Store of Value (Păstrător de Valoare):</strong> Un activ care își menține puterea de cumpărare în timp. Aurul a reușit parțial, Bitcoin a reușit spectaculos.</li>
+            <li><strong class="text-white">Contrarian:</strong> Un investitor care merge intenționat împotriva curentului. Uneori e genial (Michael Burry în 2008), alteori e Peter Schiff (2011-2025).</li>
+        </ul>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU (CAPCANA POLYMARKET) - ON TOP
   {
     id: 'polymarket-bot-trap-1-million-scam',
