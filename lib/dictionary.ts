@@ -629,7 +629,7 @@ export const dictionary: AcademyItem[] = [
     slug: "stablecoins-ghid-usdt-usdc-dai",
     term: "Stablecoins (Monede Stabile)",
     category: "DEFI & WEB3",
-    image: "/stablecoinsexplicat.jpg",
+    image: "/stablecoinsacademie.jpg",
     definition: "Ancora de stabilitate în furtuna crypto. Criptomonede concepute să aibă o valoare fixă (de obicei 1$ = 1 Monedă). Sunt puntea dintre banii vechi (Fiat) și banii noi.",
     analogy: "Jetoanele de la Cazino. Când intri în cazino, nu pariezi cu bancnote de lei. Schimbi banii în jetoane de plastic. Un jeton valorează mereu 1 Leu. Le folosești ca să joci, iar la final le schimbi înapoi în bani reali. USDT este jetonul.",
     mihaiTake: "Cash is a Position. Să stai în USDT nu înseamnă că 'nu ești în piață'. Înseamnă că ai ales să fii lunetist. Stablecoins sunt 'praf de pușcă' (Dry Powder). Cine nu are USDT când piața sângerează, este doar un spectator neputincios.",
