@@ -6,8 +6,8 @@ export const articles = [
     title: 'BUFONUL SAU GENIUL? Cum a transformat Peter Schiff cea mai mare greșeală financiară din istorie într-un Imperiu Media',
     summary: 'Peter Schiff a ratat Bitcoin la 10$ și la 3.000$. Totuși, este mai relevant ca niciodată. O analiză despre cum "Regele Aurului" a transformat ura comunității Crypto într-un imperiu media și de ce Bitcoin este, de fapt, cel mai bun departament al lui de marketing.',
     category: 'EDITORIAL & ANALIZĂ',
-    image: '/peter-schiff-decembrie.jpg',
-    date: '27 Dec 2025',
+    image: '/preterschiffdecembrie.jpg',
+    date: '27 Dec 2025', 
     readTime: '6 min',
     author: 'Mihai Daniel',
     impact: 'neutral', // Editorial de opinie
