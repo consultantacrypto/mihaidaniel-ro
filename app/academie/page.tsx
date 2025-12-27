@@ -168,7 +168,7 @@ export default function AcademyPage() {
 // --- COMPONENTA CARD CU LOGICĂ PREMIUM DE CULORI ---
 function ArticleCard({ item, isRead }: { item: AcademyItem, isRead: boolean }) {
     
-    // ✅ Aceasta este funcția pe care o scurtasem din greșeală
+    // ✅ Aceasta este funcția pentru culori pe categorii
     const getCategoryColor = (cat: string) => {
         if (cat.includes('SECURITATE')) return 'text-red-400 bg-red-950/30 border-red-500/20 shadow-red-900/10';
         if (cat.includes('BITCOIN')) return 'text-orange-400 bg-orange-950/30 border-orange-500/20 shadow-orange-900/10';

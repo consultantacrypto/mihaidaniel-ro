@@ -20,7 +20,7 @@ export type AcademyItem = {
   fullContent: string;
 };
 
-// --- 2. CONȚINUTUL ACADEMIEI (FULL CONTENT - NEMODIFICAT) ---
+// --- 2. CONȚINUTUL ACADEMIEI (FULL CONTENT) ---
 export const dictionary: AcademyItem[] = [
   // === 1. BITCOIN (FUNDAMENTE) ===
   {
@@ -622,10 +622,81 @@ export const dictionary: AcademyItem[] = [
       <p class="mb-4 text-gray-300">Înainte să investești în orice proiect, verifică lichiditatea.</p>
       <p class="text-white font-bold border-l-4 border-yellow-500 pl-4">Nu te uita doar la "Cât pot să câștig?". Întreabă-te: "Dacă fac 1 milion de dolari, există suficienți bani în partea cealaltă ca să pot încasa?"</p>
     `
+  },
+
+  // === 9. ✅ ARTICOL NOU: STABLECOINS (DEFI & FUNDAMENTE) ===
+  {
+    slug: "stablecoins-ghid-usdt-usdc-dai",
+    term: "Stablecoins (Monede Stabile)",
+    category: "DEFI & WEB3",
+    image: "/stablecoinsexplicat.jpg",
+    definition: "Ancora de stabilitate în furtuna crypto. Criptomonede concepute să aibă o valoare fixă (de obicei 1$ = 1 Monedă). Sunt puntea dintre banii vechi (Fiat) și banii noi.",
+    analogy: "Jetoanele de la Cazino. Când intri în cazino, nu pariezi cu bancnote de lei. Schimbi banii în jetoane de plastic. Un jeton valorează mereu 1 Leu. Le folosești ca să joci, iar la final le schimbi înapoi în bani reali. USDT este jetonul.",
+    mihaiTake: "Cash is a Position. Să stai în USDT nu înseamnă că 'nu ești în piață'. Înseamnă că ai ales să fii lunetist. Stablecoins sunt 'praf de pușcă' (Dry Powder). Cine nu are USDT când piața sângerează, este doar un spectator neputincios.",
+    fullContent: `
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. De ce avem nevoie de "Crypto care nu crește"?</h3>
+      <p class="mb-4 text-gray-300">Pare un paradox. De ce ai cumpăra o criptomonedă care nu face 100x?</p>
+      <div class="bg-blue-900/20 p-6 rounded-xl border border-blue-500/30 mb-8">
+        <strong class="text-blue-400 block mb-2 text-lg">Problema Volatilității:</strong>
+        <p class="text-gray-300">Vrei să cumperi o cafea cu Bitcoin. Până ajunge comanda, prețul BTC a scăzut cu 5%. Cafeaua a devenit brusc mai scumpă. Avem nevoie de un mediu de schimb stabil.</p>
+        <p class="text-gray-300 mt-2">Mai mult, când vinzi Bitcoin pe profit, nu vrei să retragi mereu în bancă (impozite, timp, comisioane). Vrei să parchezi banii digital, gata pentru următoarea oportunitate.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. Cele 3 Tipuri de Stablecoins (Riscuri Diferite)</h3>
+      <p class="mb-4 text-gray-300">Nu toate sunt create egal. Dacă nu știi diferența, poți pierde tot (vezi cazul Terra Luna).</p>
+
+      <div class="grid md:grid-cols-1 gap-6 mb-6">
+         <div class="bg-[#0a0f1e] p-5 rounded-xl border border-green-500/20">
+            <strong class="text-green-400 block mb-2 text-lg">A. Fiat-Backed (Susținute de Bani Reali)</strong>
+            <p class="text-xs text-gray-500 mb-2 uppercase">Exemple: USDT (Tether), USDC (Circle)</p>
+            <p class="text-sm text-gray-300"><strong>Cum funcționează:</strong> Pentru fiecare 1 USDT emis digital, compania ar trebui să aibă 1$ real (sau echivalent) într-un cont bancar.</p>
+            <p class="text-sm text-red-400 mt-2"><strong>Risc:</strong> Centralizare. Compania (Tether) îți poate îngheța contul la cererea autorităților. Nu sunt banii tăi, sunt banii lor digitali.</p>
+         </div>
+         
+         <div class="bg-[#0a0f1e] p-5 rounded-xl border border-yellow-500/20">
+            <strong class="text-yellow-400 block mb-2 text-lg">B. Crypto-Backed (Susținute de Crypto)</strong>
+            <p class="text-xs text-gray-500 mb-2 uppercase">Exemple: DAI</p>
+            <p class="text-sm text-gray-300"><strong>Cum funcționează:</strong> Nu există o bancă. Blochezi Ethereum într-un Smart Contract și primești DAI. Este supra-colateralizat (blochezi 150$ ETH ca să scoți 100$ DAI).</p>
+            <p class="text-sm text-green-400 mt-2"><strong>Avantaj:</strong> Descentralizat. Nimeni nu îți poate îngheța fondurile.</p>
+         </div>
+
+         <div class="bg-[#0a0f1e] p-5 rounded-xl border border-red-600/30">
+            <strong class="text-red-500 block mb-2 text-lg">C. Algorithmic (Pericol Mortal)</strong>
+            <p class="text-xs text-gray-500 mb-2 uppercase">Exemple: UST (Terra - Decedată), USDD</p>
+            <p class="text-sm text-gray-300"><strong>Cum funcționează:</strong> Nu au bani în spate. Se bazează pe un algoritm care creează sau distruge monede pentru a menține prețul.</p>
+            <p class="text-sm text-white font-bold mt-2">VERDICT: Ferește-te de ele. Când algoritmul intră în "Spirala Morții", valoarea merge la ZERO.</p>
+         </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. USDT vs. USDC: Războiul Titanilor</h3>
+      <p class="mb-4 text-gray-300">Ce alegi?</p>
+      <ul class="space-y-4 mb-6">
+        <li class="bg-white/5 p-4 rounded-lg border-l-4 border-green-500">
+            <strong class="text-green-400 block mb-1">USDT (Tether) - Regele Volumului</strong>
+            <p class="text-sm text-gray-400">Este cel mai vechi și cel mai folosit. Este "Offshore" (necontrolat direct de SUA). Este preferat de traderi și zonele gri ale economiei. Dar auditurile lor sunt mereu controversate.</p>
+        </li>
+        <li class="bg-white/5 p-4 rounded-lg border-l-4 border-blue-500">
+            <strong class="text-blue-400 block mb-1">USDC (Circle) - Regele Reglementării</strong>
+            <p class="text-sm text-gray-400">Este "Onshore" (SUA). Susținut de BlackRock și bănci americane. Este cel mai transparent și sigur legal, dar cel mai ușor de cenzurat de guvernul SUA.</p>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">4. Riscul de De-Peg (Dezlipire)</h3>
+      <div class="bg-red-900/10 p-6 rounded-xl border border-red-500/20 mb-6 relative">
+         <strong class="text-red-400 block mb-2 text-xl">⚠️ 1$ nu este mereu 1$</strong>
+         <p class="text-gray-300 mb-2">Într-o criză majoră, oamenii vând stablecoins panicat pentru dolari reali. Dacă emitentul nu are lichiditate, prețul scade sub 1$ (0.98$, 0.90$...).</p>
+         <p class="text-white font-bold">Lecția: Nu îți ține 100% din avere în stablecoins. Diversifică între USDT, USDC și Fiat (Bancă).</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">Concluzie: Dry Powder</h3>
+      <p class="mb-4 text-gray-300">În Crypto, oportunitățile apar când sângele curge pe străzi (scăderi de 30-50%).</p>
+      <p class="text-white font-bold border-l-4 border-yellow-500 pl-4">Dacă ești 100% investit, nu poți profita de reduceri. Profesioniștii țin mereu 20-30% din portofoliu în Stablecoins (Dry Powder) pentru a "vâna" aceste momente.</p>
+    `
   }
 ];
 
 // --- 3. LISTA TERMENI & LINK-URI (INTERCONECTARE) ---
+// Aici definim termenul, explicația scurtă (tooltip) și link-ul către articolul mare (dacă există)
 export const terms: Record<string, { def: string, url?: string }> = {
   "Bitcoin": {
     def: "Aur Digital. Rețea descentralizată, limitată la 21 milioane unități.",
@@ -641,7 +712,7 @@ export const terms: Record<string, { def: string, url?: string }> = {
   },
   "Blockchain": {
     def: "Registru public distribuit, imposibil de falsificat.",
-    url: "/academie/ce-este-bitcoin-ghid-complet" // Link către Bitcoin ca exemplu
+    url: "/academie/ce-este-bitcoin-ghid-complet" 
   },
   "DeFi": {
     def: "Finanțe Descentralizate. Bănci fără bancheri, bazate pe cod.",
@@ -674,10 +745,22 @@ export const terms: Record<string, { def: string, url?: string }> = {
   "Lichiditatea": {
     def: "Capacitatea de a vinde rapid fără slippage.",
     url: "/academie/lichiditatea-explicata-orderbook-slippage-amm"
+  },
+  "Stablecoin": {
+    def: "Monedă stabilă (1$ = 1 Coin). Puntea dintre Fiat și Crypto.",
+    url: "/academie/stablecoins-ghid-usdt-usdc-dai"
+  },
+  "USDT": {
+    def: "Tether. Cel mai popular Stablecoin. Regele volumului.",
+    url: "/academie/stablecoins-ghid-usdt-usdc-dai"
+  },
+  "USDC": {
+    def: "USD Coin. Stablecoin reglementat în SUA, susținut de bănci.",
+    url: "/academie/stablecoins-ghid-usdt-usdc-dai"
   }
 };
 
-// --- 4. FUNCȚIA DE PROCESARE TEXT (Fără erori!) ---
+// --- 4. FUNCȚIA DE PROCESARE TEXT (LINK-URI INTELIGENTE) ---
 export function enhanceContent(content: string): string {
   let enhancedContent = content;
   
