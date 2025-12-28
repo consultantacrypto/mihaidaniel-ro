@@ -1,4 +1,85 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU (JAF COINBASE - SECURITATE) - ON TOP
+  {
+    id: 'coinbase-vishing-scam-243m-tomar',
+    slug: 'jaful-243-milioane-coinbase-fake-agent-vishing',
+    title: '🚨 JAFUL DE 243 MILIOANE $: Cum a ajuns un "Agent Coinbase" fals să trăiască în lux pe banii utilizatorilor. Lecția dură despre "Vishing"',
+    summary: 'Povestea incredibilă a lui Chirag Tomar: de la Lamborghini în Dubai la închisoare în SUA. Află cum funcționează metoda "Vishing", cum clonele site-urilor crypto te pot lăsa fără bani și cele 3 Reguli de Aur pentru a nu fi următoarea victimă.',
+    category: 'SECURITATE & SCAM',
+    image: '/coinbasedec.jpg',
+    date: '28 Dec 2025',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'bearish', // Scam/Furt
+    content: `
+      <div class="flex items-center gap-2 mb-6">
+        <span class="bg-red-500/20 text-red-300 border border-red-500/30 px-3 py-1 rounded text-xs font-bold uppercase animate-pulse">🛡️ Securitate / Social Engineering</span>
+      </div>
+
+      <p class="mb-2 text-gray-300"><strong>Sursa:</strong> CoinCu / Departamentul de Justiție SUA</p>
+      <p class="mb-4 text-gray-300"><strong>Personaj Negativ:</strong> Chirag Tomar</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Povestea: De la Lamborghini la Celula de Închisoare</h3>
+      <p class="mb-4 text-gray-300">Imaginează-ți viața asta: Conduci Lamborghini-uri prin Dubai, porți Rolex-uri de zeci de mii de euro, zbori la clasa întâi în Thailanda.</p>
+      <p class="mb-4 text-gray-300">Așa trăia Chirag Tomar (31 de ani), un cetățean indian care tocmai a fost arestat în SUA.</p>
+      <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-yellow-500 mb-6">
+        <p class="text-gray-300">Sursa averii lui? Nu, nu a fost un trader genial. A fost creierul din spatele unei rețele care a furat peste <strong>20 de milioane de dolari</strong> (parte dintr-o schemă mai largă de 243M$) de la investitori crypto, impersonând agenți de suport Coinbase.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. Metoda: "Vishing" și Site-uri Clonă</h3>
+      <p class="mb-6 text-gray-300">Cum a reușit să păcălească sute de oameni? Nu a scris nicio linie de cod complex. A folosit Psihologia.</p>
+
+      <div class="space-y-4 mb-8">
+        <div class="bg-[#0a0f1e] border border-red-500/20 p-4 rounded-xl">
+            <strong class="text-red-400 block mb-1">Pasul 1: Capcana (Spoofing)</strong>
+            <p class="text-gray-400 text-sm">Tomar a creat o clonă perfectă a site-ului Coinbase Pro. Arăta identic, dar URL-ul era ușor modificat.</p>
+        </div>
+        <div class="bg-[#0a0f1e] border border-red-500/20 p-4 rounded-xl">
+            <strong class="text-red-400 block mb-1">Pasul 2: Panica</strong>
+            <p class="text-gray-400 text-sm">Când victimele încercau să se logheze pe site-ul fals, primeau o eroare: <em>"Contul tău este blocat. Sună la acest număr pentru deblocare."</em></p>
+        </div>
+        <div class="bg-[#0a0f1e] border border-red-500/20 p-4 rounded-xl">
+            <strong class="text-red-400 block mb-1">Pasul 3: Salvatorul Fals (Vishing)</strong>
+            <p class="text-gray-400 text-sm">Victima, panicată, suna la numărul afișat. La telefon răspundea Tomar sau echipa lui, vorbind politicos, profesional, pretinzând că sunt de la "Coinbase Security".</p>
+        </div>
+        <div class="bg-[#0a0f1e] border border-red-500/20 p-4 rounded-xl">
+            <strong class="text-red-400 block mb-1">Pasul 4: Execuția</strong>
+            <p class="text-gray-400 text-sm">Sub pretextul verificării identității, falsul agent cerea <strong>codul 2FA</strong> (Autentificarea în 2 pași). Odată ce victima îl dicta, Tomar intra în contul real și golea tot. A reușit chiar să instaleze softuri de "Remote Desktop" pe calculatoarele victimelor.</p>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. De ce este acest caz important?</h3>
+      <p class="mb-4 text-gray-300">Victimele nu au fost doar începători. Printre cei păcăliți s-a numărat și un creditor al platformei Genesis, care a pierdut o sumă colosală.</p>
+      <p class="mb-4 text-gray-300">Asta ne arată că în fața ingineriei sociale, toți suntem vulnerabili dacă nu suntem atenți.</p>
+      <p class="mb-6 text-gray-300">Tomar a pledat vinovat pentru conspirație la fraudă electronică și riscă acum 20 de ani de închisoare. Lamborghini-urile au fost confiscate. Dar banii victimelor? Greu de recuperat.</p>
+
+      <div class="bg-green-900/10 border border-green-500/30 p-6 rounded-xl mt-8">
+        <h4 class="text-xl font-bold text-green-400 mb-4 flex items-center gap-2">🎓 LECȚIA EDUCATIVĂ: Cum să nu fii următoarea victimă</h4>
+        <p class="text-gray-300 mb-4">Acest caz ne învață 3 Reguli de Aur pe care trebuie să le repeți în fiecare zi:</p>
+        
+        <ul class="space-y-4">
+            <li class="bg-black/20 p-3 rounded-lg">
+                <strong class="text-white block">1. Suportul NU te sună niciodată primul.</strong>
+                <span class="text-gray-400 text-sm">Exchange-urile (Binance, Coinbase, Kraken) nu au echipe care te sună. Dacă primești un apel de la "Binance Support", închide. E țeapă.</span>
+            </li>
+            <li class="bg-black/20 p-3 rounded-lg">
+                <strong class="text-white block">2. Verifică URL-ul.</strong>
+                <span class="text-gray-400 text-sm">Nu da click pe reclamele plătite din Google când cauți "Coinbase Login". Hackerii cumpără reclamele de sus. Scrie manual adresa site-ului.</span>
+            </li>
+            <li class="bg-red-500/20 border border-red-500/50 p-3 rounded-lg">
+                <strong class="text-red-300 block">3. REGULA SFÂNTĂ: Nu dicta niciodată codul 2FA.</strong>
+                <span class="text-gray-300 text-sm">Niciun angajat real nu îți va cere să îi dictezi codul primit prin SMS sau Google Authenticator. Acel cod este DOAR pentru tine. <strong>Dacă cineva ți-l cere, vrea să te fure.</strong></span>
+            </li>
+        </ul>
+      </div>
+
+      <div class="mt-8 p-6 border-t border-gray-800 text-center">
+        <strong class="text-white text-lg block mb-2">Concluzie: Hackerul nu sparge Blockchain-ul, te sparge pe tine.</strong>
+        <p class="text-gray-400">Securitatea ta nu depinde de cât de sigur e Bitcoin, ci de cât de atent ești tu la telefon. Chirag Tomar merge la închisoare, dar mâine va apărea altul. Fii paranoic. Fii în siguranță.</p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU (PSIHOLOGIE TRADING - LAG INTERN) - ON TOP
   {
     id: 'trading-psychology-internal-lag-paralysis',
