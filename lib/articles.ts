@@ -1,4 +1,78 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU (BITMINE 1 MILIARD ETH - INSTITUTIONAL) - ON TOP
+  {
+    id: 'bitmine-ethereum-staking-1-billion-supply-shock',
+    slug: 'bitmine-1-miliard-ethereum-staking-supply-shock',
+    title: '1 MILIARD DE DOLARI "SCOS DIN PRIZĂ". BitMine blochează o avere în Ethereum în 48 de ore. Începe era "Yield-ului Instituțional".',
+    summary: 'O singură entitate a scos din circulație 342,000 ETH în 48 de ore. Cine este BitMine, de ce au blocat 1 Miliard $ în staking și cum acest "Supply Shock" validează Ethereum ca generator de cashflow instituțional.',
+    category: 'ON-CHAIN & INSTITUTIONAL',
+    image: '/bitminedecembrie.jpg',
+    date: '28 Dec 2025',
+    readTime: '4 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Instituțional + Supply Shock = Bullish
+    content: `
+      <div class="flex items-center gap-2 mb-6">
+        <span class="bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded text-xs font-bold uppercase animate-pulse">✅ Status: CONFIRMAT</span>
+        <span class="text-xs text-gray-500">Sursa: On-Chain Data / BitMine Immersion</span>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Știrea care a rupt normele (Ce s-a întâmplat?)</h3>
+      <p class="mb-4 text-gray-300">În ultimele 48 de ore, o singură entitate a făcut valuri uriașe pe blockchain.</p>
+      <p class="mb-4 text-gray-300">Compania <strong>BitMine Immersion Technologies (BMNR)</strong> a depus la staking <strong>342,560 ETH</strong>.</p>
+      
+      <div class="bg-blue-900/20 border border-blue-500/30 p-6 rounded-xl mb-8">
+        <strong class="text-blue-400 block mb-2 text-xl">💰 Valoarea: Aproximativ 1 Miliard $</strong>
+        <p class="text-gray-300">Acesta nu este un zvon. Este vizibil on-chain. Acești bani au ieșit din circulație (de pe exchange-uri sau portofele lichide) și au intrat în contractul de depozit Ethereum (Beacon Chain).</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. Cine este BitMine și de ce contează?</h3>
+      <p class="mb-4 text-gray-300">Mulți nu au auzit de ei, dar devin rapid "Balena Supremă" pe Ethereum.</p>
+      <ul class="space-y-3 text-gray-300 mb-6">
+        <li class="bg-[#0a0f1e] p-3 rounded-lg border border-gray-800">
+            <strong class="text-white">Jucătorul:</strong> BitMine este o companie listată public (NYSE American: BMNR), condusă de președintele Tom Lee (de la Fundstrat, un nume uriaș pe Wall Street).
+        </li>
+        <li class="bg-[#0a0f1e] p-3 rounded-lg border border-gray-800">
+            <strong class="text-white">Trezoreria:</strong> Ei dețin acum peste 4 milioane de ETH (cca 3.3% din totalul ofertei de Ethereum!), poziționându-se ca trezoreria #1 de Ethereum din lume.
+        </li>
+        <li class="bg-[#0a0f1e] p-3 rounded-lg border border-gray-800">
+            <strong class="text-white">Scopul:</strong> Nu vor doar să dețină ETH (ca MicroStrategy cu BTC). Ei vor să producă mai mult ETH.
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. Proiectul "MAVAN" - Educație despre Validatorii Instituționali</h3>
+      <p class="mb-4 text-gray-300">BitMine nu doar a "parcat" banii. Ei lansează MAVAN (Made in America Validator Network).</p>
+      
+      <div class="bg-yellow-500/10 border border-yellow-500/30 p-6 rounded-xl mb-8">
+         <strong class="text-yellow-400 block mb-4 text-lg">🎓 Lecția Educativă: HODL vs. Staking</strong>
+         <div class="grid md:grid-cols-2 gap-4">
+            <div>
+                <strong class="text-white block">Bitcoin (MicroStrategy)</strong>
+                <p class="text-sm text-gray-400">Cumperi BTC și îl ții în seif. Speri să crească prețul. E pasiv.</p>
+            </div>
+            <div>
+                <strong class="text-white block">Ethereum (BitMine)</strong>
+                <p class="text-sm text-gray-400">Cumperi ETH și îl pui la "muncă" (Staking).</p>
+            </div>
+         </div>
+         <p class="text-gray-300 mt-4 border-t border-yellow-500/20 pt-2">BitMine a devenit Validator. Prin blocarea acelui miliard de dolari, ei securizează rețeaua Ethereum.</p>
+         <p class="text-white font-bold mt-2">Matematica: La 1 Miliard $, un randament de 3% înseamnă 30 de Milioane de $ pe an venit pasiv.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">4. Impactul asupra Pieței: SUPPLY SHOCK</h3>
+      <p class="mb-4 text-gray-300">De ce să ne pese nouă, micilor investitori? <strong>Pentru că Lichiditatea a scăzut.</strong></p>
+      <p class="mb-4 text-gray-300">Acei 342,000 ETH sunt acum blocați. Nu pot fi vânduți mâine la panică. Când scoți 1 miliard de dolari de la vânzare într-un timp atât de scurt, creezi o presiune artificială asupra ofertei.</p>
+      <p class="text-green-400 font-bold mb-8">Dacă cererea rămâne constantă și oferta scade brusc -> Prețul trebuie să urce.</p>
+
+      <div class="bg-gradient-to-r from-blue-900/20 to-black border-l-4 border-cyan-500 p-8 rounded-r-xl mt-8">
+        <h3 class="text-cyan-400 font-bold text-xs uppercase mb-2">Concluzia lui Mihai Daniel (Take-ul Nostru):</h3>
+        <p class="text-xl italic text-white mb-4">"BitMine tocmai a validat teza: Ethereum este Bond-ul Internetului."</p>
+        <p class="text-gray-300">Instituțiile nu mai sunt interesate doar de speculă. Sunt interesate de Randament (Yield).</p>
+        <p class="text-gray-300 mt-2">Dacă MicroStrategy a demonstrat că poți folosi Bitcoin ca rezervă de valoare, BitMine demonstrează că poți folosi Ethereum ca Generator de Cashflow.</p>
+        <p class="text-white font-bold mt-4">1 Miliard de dolari tocmai a ieșit de pe masă. Cine vinde acum, vinde unei balene care nu are de gând să returneze monedele prea curând.</p>
+      </div>
+    `
+  },  
 // ✅ 0. ARTICOL NOU (JAF COINBASE - SECURITATE) - ON TOP
   {
     id: 'coinbase-vishing-scam-243m-tomar',
