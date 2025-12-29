@@ -1,4 +1,84 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU (TIMPUL DE VINDECARE - BITCOIN) - ON TOP
+  {
+    id: 'bitcoin-correction-time-healing-analysis',
+    slug: 'cat-dureaza-durerea-analiza-timp-vindecare-bitcoin',
+    title: 'CÂT DUREAZĂ DUREREA? Analiza "Timpului de Vindecare" al Bitcoin. De ce răbdarea este matematică, nu virtute.',
+    summary: 'O zi de scădere se simte ca o lună. Analiza istorică a duratei corecțiilor (2017-2025) și cele 3 faze ale vindecării pieței. De ce plictiseala este mai periculoasă decât frica.',
+    category: 'ANALIZĂ DE CICLU / PSIHOLOGIE',
+    image: '/hodldecembrie.jpg',
+    date: '29 Dec 2025',
+    readTime: '3 min',
+    author: 'Mihai Daniel',
+    impact: 'neutral', // Educațional
+    content: `
+      <div class="flex items-center gap-2 mb-6">
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">⏳ Analiză de Ciclu</span>
+      </div>
+
+      <p class="mb-4 text-gray-300"><strong>Subiect:</strong> Durata istorică a corecțiilor în Bull Market</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Întrebarea de pe buzele tuturor: "Când se termină?"</h3>
+      <p class="mb-4 text-gray-300">Când piața scade, timpul pare să se dilate. O zi de scădere se simte ca o lună. Dar dacă dăm zoom-out și ne uităm la ultimii 4-8 ani, Bitcoin respectă un calendar al durerii destul de precis.</p>
+      <p class="mb-4 text-gray-300">Să demontăm mitul "V-Shape Recovery" (Revenirea instantă). Aceasta se întâmplă rar. De obicei, piața are nevoie de timp pentru a "digera" o scădere bruscă.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. Istoria nu minte: Calendarul Corecțiilor (2017 - 2025)</h3>
+      <p class="mb-4 text-gray-300">Hai să ne uităm la datele reci din timpul Bull Market-urilor precedente. Cât a durat de la "Vârf Local" până la "Noul Maxim"?</p>
+      
+      <div class="space-y-4 mb-8">
+        <div class="bg-[#0a0f1e] p-5 rounded-xl border border-blue-500/20">
+           <strong class="text-blue-400 block mb-2 text-lg">A. Corecțiile "Normale" (20-30%)</strong>
+           <ul class="list-disc pl-5 text-gray-300 space-y-1">
+               <li><strong>Durata medie:</strong> 14 - 21 de zile.</li>
+               <li><strong>Exemplu:</strong> În 2017, am avut 6 corecții de 30%. Fiecare a durat aproximativ 2-3 săptămâni până când prețul s-a stabilizat și a început să urce din nou.</li>
+           </ul>
+           <p class="text-xs text-gray-500 mt-2 italic">Lecția: Dacă suntem în prima săptămână de scădere, e prematur să aștepți ATH (All Time High).</p>
+        </div>
+
+        <div class="bg-[#0a0f1e] p-5 rounded-xl border border-purple-500/20">
+           <strong class="text-purple-400 block mb-2 text-lg">B. Corecțiile "Mid-Cycle" (Resetări Majore)</strong>
+           <ul class="list-disc pl-5 text-gray-300 space-y-1">
+               <li><strong>Durata medie:</strong> 2 - 3 Luni.</li>
+               <li><strong>Exemplu (Mai 2021):</strong> După prăbușire, piața a stat în "plictiseală" și frică toată vara (Mai-Iulie), înainte de a exploda în toamnă.</li>
+               <li><strong>Exemplu (Vara 2023):</strong> Luni de zile de stagnare înainte de explozia ETF-urilor.</li>
+           </ul>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. Anatomia unei Corecții: Cele 3 Faze</h3>
+      <p class="mb-4 text-gray-300">O corecție nu este doar o linie roșie în jos. Are o structură:</p>
+      <ul class="space-y-4 mb-6">
+        <li class="bg-red-900/10 p-3 rounded-lg border border-red-500/20">
+           <strong class="text-red-400 block">Faza 1: Șocul (Zilele 1-3)</strong>
+           <span class="text-gray-400 text-sm">Scăderea violentă. Lichidări. Panică. Aici vând "mâinile slabe".</span>
+        </li>
+        <li class="bg-yellow-500/10 p-3 rounded-lg border border-yellow-500/20">
+           <strong class="text-yellow-400 block">Faza 2: Măcinarea (Săptămânile 1-3)</strong>
+           <span class="text-gray-400 text-sm">Prețul nu mai scade mult, dar nici nu crește. Merge lateral (Chop). <strong>Scopul:</strong> Să-i facă pe traderi să renunțe din plictiseală. Este "Tortura Timpului".</span>
+        </li>
+        <li class="bg-green-900/10 p-3 rounded-lg border border-green-500/20">
+           <strong class="text-green-400 block">Faza 3: Reconstrucția</strong>
+           <span class="text-gray-400 text-sm">Minimele încep să fie mai sus (Higher Lows). Volumul revine. Încrederea se instalează treptat.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">4. Unde suntem acum? (Context Decembrie 2025)</h3>
+      <p class="mb-4 text-gray-300">Dacă ne raportăm la volatilitatea recentă de Crăciun, suntem probabil la tranziția dintre <strong>Șoc</strong> și <strong>Măcinare</strong>.</p>
+      <p class="mb-4 text-gray-300">Istoric vorbind, sfârșitul de an și începutul lui Ianuarie sunt perioade de rebalansare a portofoliilor instituționale. Dacă istoria se repetă, nu te aștepta ca mâine să fim la 100k.</p>
+      <p class="text-white font-bold border-l-4 border-blue-500 pl-4">Așteaptă-te la volatilitate și consolidare timp de încă 7-14 zile.</p>
+
+      <div class="bg-gradient-to-r from-gray-900 to-black border border-gray-700 p-6 rounded-xl mt-12">
+        <h4 class="text-xl font-bold text-white mb-2 flex items-center gap-2">🧠 Mihai Daniel Take: "Capitularea prin Timp"</h4>
+        <p class="text-gray-300 mb-4">Există două feluri în care piața te scoate din joc:</p>
+        <ul class="list-disc pl-6 text-gray-400 mb-4 space-y-1">
+           <li><strong>Price Capitulation:</strong> Prețul scade atât de tare încât vinzi de frică.</li>
+           <li><strong>Time Capitulation:</strong> Prețul stă pe loc atât de mult timp încât vinzi de plictiseală (sau ca să cumperi altceva care "se mișcă").</li>
+        </ul>
+        <p class="text-gray-300 mb-2">În Bull Market, Timpul este inamicul tău psihologic, dar prietenul tău financiar. Dacă ai supraviețuit șocului inițial, cea mai mare greșeală este să vinzi în perioada de "Măcinare". Acea perioadă este, de fapt, fundația pentru următorul impuls.</p>
+        <p class="text-white font-bold mt-4 italic">Sfatul meu: Nu te uita la grafic la fiecare oră. Uită-te la fiecare 3 zile. Lasă timpul să vindece graficul.</p>
+      </div>
+    `
+  },  
 // ✅ 0. ARTICOL NOU (BITMINE 1 MILIARD ETH - INSTITUTIONAL) - ON TOP
   {
     id: 'bitmine-ethereum-staking-1-billion-supply-shock',
