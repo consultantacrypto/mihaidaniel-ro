@@ -1,4 +1,102 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU (BTC vs GOLD vs SILVER - ANALIZA FINAL AN) - ON TOP
+  {
+    id: 'bitcoin-gold-silver-battle-2026',
+    slug: 'batalia-averii-bitcoin-aur-argint-analiza-2026',
+    title: 'BĂTĂLIA PENTRU AVEREA TA: Bitcoin vs. Aur vs. Argint. Retrospectiva 2025 și Predicțiile Realiste pentru 2026',
+    summary: 'Este momentul inventarului banilor grei (Hard Money). Analiză fundamentală: Cine a câștigat cursa în 2025? Bitcoin (Viteză), Aurul (Siguranță) sau Argintul (Industrie)? Strategia "Barbell" pentru 2026.',
+    category: 'ANALIZĂ FUNDAMENTALĂ',
+    image: '/btcaurargint.jpg',
+    date: '29 Dec 2025',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'neutral', // Analiză Macro
+    content: `
+      <div class="flex items-center gap-2 mb-6">
+        <span class="bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🏛️ Macroeconomie</span>
+      </div>
+
+      <p class="mb-4 text-gray-300"><strong>Subiect:</strong> Inventarul banilor grei (Hard Money) și Strategia de Portofoliu.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">Introducere: Trei Cai, O Singură Cursă (Fuga de Inflație)</h3>
+      <p class="mb-4 text-gray-300">Anul 2025 a fost anul în care "Banii Fiat" și-au arătat slăbiciunea finală. Tiparnițele au duduit global, iar investitorii inteligenți au fugit către active care nu pot fi printate.</p>
+      <p class="mb-8 text-gray-300">Dar cine a câștigat cursa? Calul Digital (Bitcoin), Calul Antic (Aurul) sau Calul Industrial (Argintul)? Răspunsul depinde de ce cauți: Viteză sau Siguranță.</p>
+
+      <div class="space-y-8">
+        
+        {/* BITCOIN */}
+        <div class="bg-[#0a0f1e] p-6 rounded-xl border-l-4 border-orange-500">
+            <h3 class="text-2xl font-bold text-orange-500 mb-2">1. BITCOIN (Regele Volatilității)</h3>
+            <p class="text-gray-400 text-sm mb-4 uppercase font-bold tracking-wider">Rol: Wealth Generation (Crearea Averei)</p>
+            
+            <p class="text-gray-300 mb-4"><strong>Cum a fost 2025?</strong> A fost anul Instituționalizării Totale. A supraperformat orice altă clasă de active. Narațiunea a trecut de la "Monedă Speculativă" la "Activ de Trezorerie" (vezi modelul MicroStrategy și BitMine).</p>
+            
+            <div class="bg-orange-900/10 p-4 rounded-lg">
+                <strong class="text-orange-400 block mb-2">Ce așteptăm în 2026?</strong>
+                <ul class="list-disc pl-5 text-gray-300 space-y-1">
+                    <li><strong>Adopția Suverană:</strong> Zvonurile despre o "Rezervă Strategică" a națiunilor G7 vor deveni realitate.</li>
+                    <li><strong>Prețul:</strong> 100.000$ este doar pragul psihologic. Urmează "Price Discovery" reală.</li>
+                    <li><strong>Riscul:</strong> Reglementarea DeFi și atacul asupra intimității.</li>
+                </ul>
+            </div>
+        </div>
+
+        {/* AUR */}
+        <div class="bg-[#0a0f1e] p-6 rounded-xl border-l-4 border-yellow-500">
+            <h3 class="text-2xl font-bold text-yellow-500 mb-2">2. AURUL (Scutul Imperiului)</h3>
+            <p class="text-gray-400 text-sm mb-4 uppercase font-bold tracking-wider">Rol: Wealth Preservation (Păstrarea Averei)</p>
+            
+            <p class="text-gray-300 mb-4"><strong>Cum a fost 2025?</strong> Un an "silențios dar profitabil". Băncile Centrale (China, Rusia, India) au cumpărat record pentru a se proteja de colapsul dolarului. Când Bitcoin scădea cu 10%, Aurul se mișca cu 0.5%.</p>
+            
+            <div class="bg-yellow-900/10 p-4 rounded-lg">
+                <strong class="text-yellow-400 block mb-2">Ce așteptăm în 2026?</strong>
+                <ul class="list-disc pl-5 text-gray-300 space-y-1">
+                    <li><strong>Recesiunea:</strong> În caz de "Hard Landing", Aurul va străluci. Nu are risc de contrapartidă.</li>
+                    <li><strong>Ținta:</strong> Creștere lentă (+10-15%), care bate inflația. Nu te îmbogățește peste noapte, dar te asigură că rămâi bogat.</li>
+                </ul>
+            </div>
+        </div>
+
+        {/* ARGINT */}
+        <div class="bg-[#0a0f1e] p-6 rounded-xl border-l-4 border-gray-400">
+            <h3 class="text-2xl font-bold text-gray-300 mb-2">3. ARGINTUL (Gigantul Adormit)</h3>
+            <p class="text-gray-500 text-sm mb-4 uppercase font-bold tracking-wider">Rol: Speculație Industrială</p>
+            
+            <p class="text-gray-300 mb-4"><strong>Cum a fost 2025?</strong> Frustrant. A promis mult și a livrat cu întârziere, rămânând în umbra Aurului și fiind manipulat pe piețele de hârtie.</p>
+            
+            <div class="bg-gray-800 p-4 rounded-lg">
+                <strong class="text-white block mb-2">Ce așteptăm în 2026? (Marea Surpriză)</strong>
+                <p class="text-gray-300 mb-2">Acesta este pariul "Dark Horse". Argintul este esențial pentru Panouri Solare, EV, Cipuri AI.</p>
+                <p class="text-gray-300"><strong>Explozia:</strong> Cererea industrială va depăși oferta minieră. Are cel mai mare potențial de "Catch-up" masiv față de Aur.</p>
+            </div>
+        </div>
+
+      </div>
+
+      <div class="mt-12 bg-gradient-to-r from-blue-900/40 to-black p-8 rounded-2xl border border-blue-500/30">
+        <h4 class="text-xl font-bold text-white mb-4">⚖️ Verdictul lui Mihai Daniel: Strategia "Barbell"</h4>
+        <p class="text-gray-300 mb-6">Nu trebuie să alegi doar unul. Secretul este Alocarea.</p>
+        
+        <div class="space-y-3 mb-8">
+            <div class="flex items-center justify-between bg-black/40 p-3 rounded">
+                <span class="text-orange-400 font-bold">Bitcoin (50-60%)</span>
+                <span class="text-gray-400 text-sm text-right">Ești tânăr, vrei multiplicare, tolerezi volatilitatea.</span>
+            </div>
+            <div class="flex items-center justify-between bg-black/40 p-3 rounded">
+                <span class="text-yellow-400 font-bold">Aur (20-30%)</span>
+                <span class="text-gray-400 text-sm text-right">Banii de Siguranță. Fondul de urgență apocaliptic.</span>
+            </div>
+            <div class="flex items-center justify-between bg-black/40 p-3 rounded">
+                <span class="text-gray-300 font-bold">Argint (10-20%)</span>
+                <span class="text-gray-400 text-sm text-right">Pariul speculativ pe viitorul tehnologic.</span>
+            </div>
+        </div>
+
+        <p class="text-gray-300 italic mb-4">"Dacă ții banii în Fiat (Bancă), pierzi garantat 5-10% pe an. Oricare dintre cei trei 'Cai' este mai bun decât banii de hârtie."</p>
+        <p class="text-white font-bold text-lg text-center mt-6">Alege-ți calul în funcție de cât de tare îți bate inima când te uiți la grafice.</p>
+      </div>
+    `
+  },  
 // ✅ 0. ARTICOL NOU (TIMPUL DE VINDECARE - BITCOIN) - ON TOP
   {
     id: 'bitcoin-correction-time-healing-analysis',
