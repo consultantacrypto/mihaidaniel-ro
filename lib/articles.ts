@@ -1,4 +1,80 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU (MACRO - ISM CYCLE VS HALVING) - ON TOP
+  {
+    id: 'macro-ism-cycle-bitcoin-demystified',
+    slug: 'marea-demitizare-ciclu-4-ani-ism-macro',
+    title: 'MAREA DEMITIZARE: De ce Ciclul de 4 Ani e o coincidență și de ce Adevăratul Bull Run abia începe.',
+    summary: 'Halving-ul este doar Pistolul, Lichiditatea este Glonțul. O analiză Macro profundă despre cum datoria SUA a decalat ciclul economic și de ce indicatorul ISM ne arată că suntem la început, nu la final.',
+    category: 'ANALIZĂ MACRO',
+    image: '/lichiditateamacro.jpg',
+    date: '30 Dec 2025',
+    readTime: '4 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Macro Liquidity Returning = Bullish
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🌍 Analiză Macro</span>
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">📊 Sursa: Raoul Pal / Julien Bittel</span>
+      </div>
+
+      <p class="mb-4 text-gray-300"><strong>Subiect:</strong> Ciclul Economic (ISM) vs. Halving</p>
+      <p class="mb-4 text-green-400 font-bold border-l-4 border-green-500 pl-4">Verdict: Suntem la început, nu la final.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Mitul: "Halving-ul dictează totul"</h3>
+      <p class="mb-4 text-gray-300">Toată lumea știe povestea: "La fiecare 4 ani, Bitcoin se înjumătățește și prețul explodează." Dar dacă acest narativ este fals? Sau cel puțin, incomplet?</p>
+      <div class="bg-[#0a0f1e] p-5 rounded-xl border border-gray-700 mb-6">
+        <strong class="text-white block mb-2">Analiza propusă sugerează ceva șocant:</strong>
+        <p class="text-gray-300">Ciclul de 4 ani al Bitcoin a existat doar pentru că, în ultimii 12 ani, Ciclul Economic Global a durat coincidențial tot ~4 ani.</p>
+        <p class="text-gray-300 mt-2">Bitcoin nu a dansat după muzica Halving-ului, ci după muzica Economiei Globale.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. Adevăratul Șofer: ISM (Pulsul Economiei)</h3>
+      <p class="mb-4 text-gray-300">Ce mișcă prețul? Lichiditatea (Banii din piață). Indicatorul cheie este <strong>ISM (Institute for Supply Management)</strong>.</p>
+      
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+         <div class="bg-green-900/10 p-4 rounded-xl border border-green-500/20">
+            <strong class="text-green-400 block mb-1">ISM > 50 (Creștere)</strong>
+            <p class="text-gray-400 text-sm">Economia crește, fabricile produc, există bani -> Bitcoin explodează.</p>
+         </div>
+         <div class="bg-red-900/10 p-4 rounded-xl border border-red-500/20">
+            <strong class="text-red-400 block mb-1">ISM < 50 (Contracție)</strong>
+            <p class="text-gray-400 text-sm">Economia scade, recesiune, lipsă de bani -> Bitcoin stagnează.</p>
+         </div>
+      </div>
+      
+      <p class="mb-4 text-gray-300"><strong>De ce ultimii 3 ani au fost ciudați?</strong></p>
+      <p class="mb-4 text-gray-300">Pentru că ISM-ul a fost "plat" sau sub 50. Am avut un "mini-ciclu" slab. Indiferent de Halving, dacă nu există "benzină" (lichiditate macro), mașina (Bitcoin) nu pleacă în cursă parabolică.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. De ce a întârziat explozia? (Secretul Datoriei SUA)</h3>
+      <p class="mb-4 text-gray-300">Aici este partea genială a analizei. De obicei, datoria SUA se refinanțează la fiecare 3-4 ani. Asta crea ritmul ciclului.</p>
+      <p class="mb-4 text-gray-300">DAR, în timpul COVID, dobânzile au fost zero. Ce a făcut SUA? A profitat și s-a împrumutat pe termen mai lung.</p>
+      
+      <div class="bg-blue-900/20 p-6 rounded-xl border border-blue-500/30 mb-8">
+        <strong class="text-blue-400 block mb-2">Efectul: Maturitatea datoriei s-a extins cu ~1.5 ani.</strong>
+        <p class="text-gray-300">Asta a lungit ciclul economic. De aceea Bull Market-ul nu s-a terminat în 2025, ci s-a "întins".</p>
+        <p class="text-white font-bold text-lg mt-4 text-center">Nu suntem "Late Cycle" (la final). Suntem doar "Delayed" (întârziați).</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">4. Vestea Bună: Semaforul se face Verde</h3>
+      <p class="mb-4 text-gray-300">Dacă te uiți pe graficele lunare și trimestriale (nu pe cele de o oră), semnalul de lichiditate tocmai a început să urce.</p>
+      <ul class="list-disc pl-6 text-gray-300 mb-6 space-y-2">
+         <li>ISM-ul dă semne că se ridică de la podea (peste 50).</li>
+         <li>Istoria de 15 ani ne arată un singur lucru: <strong>Când ISM-ul revine din zona de jos, Bitcoin intră în faza PARABOLICĂ.</strong></li>
+      </ul>
+
+      <div class="mt-8 bg-gradient-to-r from-gray-900 to-black p-8 rounded-2xl border border-indigo-500/30 relative">
+        <h4 class="text-xl font-bold text-white mb-4">🧠 Concluzia lui Mihai Daniel:</h4>
+        <p class="text-gray-300 mb-4 italic">"Nu vă mai uitați la ceas așteptând să sune alarma de 4 ani. Ceasul a fost decalat."</p>
+        
+        <div class="bg-black/40 p-4 rounded-lg border-l-4 border-yellow-500 mb-4">
+            <p class="text-white font-bold">Halving-ul este Pistolul. Lichiditatea Macro (ISM) este Glonțul.</p>
+        </div>
+
+        <p class="text-gray-300 mb-4">Până acum am avut pistolul, dar nu am avut gloanțe. Acum, datele macro ne arată că vin gloanțele.</p>
+        <p class="text-white font-bold mt-2">Faptul că Bitcoin stă la 90k-100k FĂRĂ ajutorul macro este incredibil. Imaginați-vă ce face când economia globală începe să sufle vânt în pânze.</p>
+      </div>
+    `
+  },  
 // ✅ 0. ARTICOL NOU (LTH STOP SELLING - ON CHAIN BULLISH) - ON TOP
   {
     id: 'lth-stopped-selling-supply-shock-on-chain',
