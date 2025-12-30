@@ -1,4 +1,78 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU (LTH STOP SELLING - ON CHAIN BULLISH) - ON TOP
+  {
+    id: 'lth-stopped-selling-supply-shock-on-chain',
+    slug: 'vestea-diminetii-lth-robinet-vanzare-inchis-supply-shock',
+    title: 'VESTEA DIMINEȚII: S-a închis "Robinetul de Vânzare". Deținătorii pe termen lung (LTH) au terminat de marcat profitul. Ce urmează?',
+    summary: 'Semnal On-Chain Major: "Veteranii" au încetat să mai vândă. Analiza indicatorului LTH Net Position Change și de ce "Vacuum-ul de Ofertă" pregătește terenul pentru explozia din 2026.',
+    category: 'ON-CHAIN & MARKET DATA',
+    image: '/goodnewsbtc2025.jpg',
+    date: '30 Dec 2025',
+    readTime: '3 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // LTH Accumulation = Bullish
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded text-xs font-bold uppercase animate-pulse">✅ Status: CONFIRMAT</span>
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">📊 Indicator: LTH Net Position</span>
+        <span class="bg-purple-500/20 text-purple-300 border border-purple-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🚀 Semnal: Bullish</span>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Fenomenul: Mâinile de Diamant au revenit la HODL</h3>
+      <p class="mb-4 text-gray-300">Din luna Iulie și până acum, piața a simțit o presiune constantă. De ce? Pentru că "Veteranii" (Long-Term Holders - cei care țin monedele de peste 155 de zile) au vândut treptat pentru a marca profituri. Este un comportament normal într-un Bull Market.</p>
+      
+      <div class="bg-green-900/10 border-l-4 border-green-500 p-6 rounded-r-xl mb-6">
+        <strong class="text-green-400 block mb-2 text-lg">Dar, datele de azi dimineață arată o schimbare de trend majoră:</strong>
+        <p class="text-white font-bold text-xl mb-2">Vânzările masive s-au oprit.</p>
+        <p class="text-gray-300">Graficele on-chain arată că portofelele vechi au încetat să mai trimită Bitcoin către exchange-uri.</p>
+        <p class="text-gray-400 text-sm mt-2 italic">Traducere: "Smart Money" consideră că prețul actual nu mai este atractiv pentru vânzare. Ei cred că Bitcoin va valora mult mai mult în curând, așa că au reînceput să acumuleze sau să stea pe loc.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. De ce contează asta? (Mecanica Pieței)</h3>
+      <p class="mb-4 text-gray-300">Imaginează-ți piața ca pe o balanță:</p>
+      
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+         <div class="bg-[#0a0f1e] p-4 rounded-xl border border-red-500/20">
+            <strong class="text-red-400 block mb-1">🔴 Partea Stângă</strong>
+            <p class="text-gray-400 text-sm">Vânzătorii (LTH care marcau profit + Minerii).</p>
+         </div>
+         <div class="bg-[#0a0f1e] p-4 rounded-xl border border-green-500/20">
+            <strong class="text-green-400 block mb-1">🟢 Partea Dreaptă</strong>
+            <p class="text-gray-400 text-sm">Cumpărătorii (ETF-urile, MicroStrategy, Retail-ul).</p>
+         </div>
+      </div>
+      
+      <p class="mb-4 text-gray-300">Din Iulie până în Decembrie, Vânzătorii au fost agresivi, anulând cererea venită de la ETF-uri. De asta am mers lateral.</p>
+      <p class="mb-6 text-gray-300">Acum, dacă Vânzătorii se retrag de pe piață, dar Cumpărătorii (BlackRock & Co) continuă să cumpere...</p>
+      <p class="text-white font-bold border-l-4 border-blue-500 pl-4 mb-8">Rezultatul matematic: Prețul întâmpină rezistență zero la creștere.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. Pronostic pentru Q1 2026: "Vacuum-ul de Ofertă"</h3>
+      <p class="mb-4 text-gray-300">Istoric vorbind, când LTH se opresc din vândut, urmează faza de Re-Acumulare, succedată rapid de Expansiunea Parabolică.</p>
+      
+      <div class="bg-[#0a0f1e] p-6 rounded-xl border border-gray-700 mb-8">
+        <ul class="space-y-4">
+            <li>
+                <strong class="text-blue-400 block">Scenariul Probabil:</strong>
+                <span class="text-gray-300">Următoarele săptămâni vor fi caracterizate de o scădere a volumului de vânzare. Orice știre pozitivă (sau achiziție mare) va mișca prețul mult mai agresiv în sus, pentru că nu mai există cine să vândă "în capul" cumpărătorilor.</span>
+            </li>
+            <li>
+                <strong class="text-purple-400 block">Ținta:</strong>
+                <span class="text-gray-300">Acesta este combustibilul necesar pentru a sparge definitiv zona de 90k-100k și a intra în "Price Discovery" real în 2026.</span>
+            </li>
+        </ul>
+      </div>
+
+      <div class="mt-8 bg-gradient-to-r from-gray-900 to-black p-8 rounded-2xl border border-blue-500/30 relative overflow-hidden">
+        <div class="absolute top-0 right-0 p-4 opacity-10">
+            <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h4 class="text-xl font-bold text-white mb-4 z-10 relative">💎 Mihai Daniel Take: Liniștea dinaintea exploziei</h4>
+        <p class="text-gray-300 mb-4 z-10 relative italic">"Dacă te întrebai de ce prețul nu scade mai mult deși sunt vești proaste, iată răspunsul: Cei care au Bitcoin mulți și vechi nu mai sunt dispuși să îți vândă ție ieftin."</p>
+        <p class="text-gray-300 mb-4 z-10 relative">Veteranii și-au închis portofelele. Dacă vrei Bitcoin, va trebui să plătești prețul cerut de ei, nu prețul sperat de tine.</p>
+        <p class="text-white font-bold text-lg mt-6 z-10 relative">Oferta scade. Cererea rămâne. Restul e matematică.</p>
+      </div>
+    `
+  },  
 // ✅ 0. ARTICOL NOU (BTC vs GOLD vs SILVER - ANALIZA FINAL AN) - ON TOP
   {
     id: 'bitcoin-gold-silver-battle-2026',
