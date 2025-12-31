@@ -1,4 +1,92 @@
 export const articles = [
+// ✅ 0. ULTIMUL ARTICOL 2025 (CORPORATE FOMO - 1M BTC) - ON TOP
+  {
+    id: 'corporate-fomo-1-million-bitcoin-treasuries',
+    slug: 'fenomenul-corporate-fomo-companii-acumulare-bitcoin',
+    title: 'FENOMENUL "CORPORATE FOMO": Companiile listate la bursă au acumulat 1.09 Milioane de Bitcoin. Retailul doarme, CEO-ii cumpără tot.',
+    summary: 'Ultimul avertisment pe 2025. În timp ce micii investitori așteaptă corecții, companiile publice au securizat 5.1% din toți Bitcoin-ii existenți. Analiza fenomenului "MicroStrategy Global" și de ce urmează o "Gaură Neagră" de lichiditate.',
+    category: 'INSTITUTIONAL & ON-CHAIN',
+    image: '/btcbigbuy2025.jpg',
+    date: '31 Dec 2025',
+    readTime: '4 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Institutional Accumulation
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded text-xs font-bold uppercase animate-pulse">✅ Status: CONFIRMAT</span>
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">📈 Trend: Institutional Accumulation</span>
+        <span class="bg-orange-500/20 text-orange-300 border border-orange-500/30 px-3 py-1 rounded text-xs font-bold uppercase">⚠️ Pericol: Supply Shock</span>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Marea Divergență: Tu vinzi, Ei cumpără</h3>
+      <p class="mb-4 text-gray-300">Există un grafic care ar trebui să te țină treaz noaptea.</p>
+      <p class="mb-4 text-gray-300">În timp ce investitorul mic (Retail) este plictisit, speriat sau așteaptă "o corecție mai mare", companiile publice (listate la bursă) cumpără Bitcoin ca și cum nu ar exista ziua de mâine.</p>
+      
+      <div class="bg-[#0a0f1e] p-6 rounded-xl border border-blue-500/30 mb-8 text-center">
+        <span class="text-gray-400 text-sm uppercase tracking-widest">Cifra Magică</span>
+        <strong class="text-4xl md:text-5xl font-bold text-white block my-2">1.090.000 BTC</strong>
+        <p class="text-blue-400 font-bold mt-2">Companiile publice dețin acum 5.1% din toți Bitcoin-ii care vor exista vreodată.</p>
+        <p class="text-gray-500 text-xs mt-2">Dacă adăugăm și ETF-urile și monedele pierdute, realitatea este crudă: Mai există foarte puțin Bitcoin liber pe piață.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. Strategia "MicroStrategy" a devenit Globală</h3>
+      <p class="mb-4 text-gray-300">Până acum, Michael Saylor (MicroStrategy) era "nebunul" singuratic. Acum, el este Modelul.</p>
+      
+      <ul class="space-y-4 mb-6">
+        <li class="bg-gray-900/50 p-4 rounded-lg border-l-4 border-orange-500">
+            <strong class="text-white block">🇺🇸 Liderul: MicroStrategy</strong>
+            <span class="text-gray-400 text-sm">Continuă să cumpere mii de BTC lunar, folosind bani împrumutați ieftin. Ei au transformat acțiunea companiei într-un "Bitcoin cu levier".</span>
+        </li>
+        <li class="bg-gray-900/50 p-4 rounded-lg border-l-4 border-red-500">
+            <strong class="text-white block">🇯🇵 Discipolul Asiatic: Metaplanet (Japonia)</strong>
+            <span class="text-gray-400 text-sm">A adoptat exact aceeași strategie. Cumpără agresiv (4.2K BTC în Decembrie) pentru a se proteja de prăbușirea Yen-ului.</span>
+        </li>
+        <li class="bg-gray-900/50 p-4 rounded-lg border-l-4 border-gray-500">
+            <strong class="text-white block">🌍 Noua Gardă</strong>
+            <span class="text-gray-400 text-sm">Cango Inc., Bitdeer, Anap Holdings.</span>
+        </li>
+      </ul>
+      <p class="text-white font-bold mb-8">Ce ne spune asta? Modelul "Bitcoin Treasury" s-a validat. Nu mai este un risc de carieră pentru un CEO să cumpere Bitcoin. A devenit un risc de carieră SĂ NU cumperi Bitcoin și să ții cash care se devalorizează.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. De ce este Retailul (Micii Investitori) "Orb"?</h3>
+      <div class="grid md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-red-900/10 p-4 rounded-xl">
+            <strong class="text-red-400 block mb-2">Retailul</strong>
+            <p class="text-gray-300 text-sm">Se uită la Preț (care merge lateral/scade). Va intra în piață doar când prețul va fi +30%, mânat de FOMO.</p>
+        </div>
+        <div class="bg-green-900/10 p-4 rounded-xl">
+            <strong class="text-green-400 block mb-2">Instituțiile</strong>
+            <p class="text-gray-300 text-sm">Se uită la Valoare și la Lichiditate. Companiile văd "Zidul de Datorie" din 2026. Schimbă hârtia pe "Aur Digital" acum, când prețul e stabil.</p>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">4. Predicția pentru 2026: "Gaura Neagră" Instituțională</h3>
+      <p class="mb-4 text-gray-300">Ce înseamnă acest trend pentru următorii 2 ani?</p>
+      
+      <div class="space-y-4 mb-8">
+        <div>
+            <strong class="text-purple-400 block">🛑 Dispariția Lichidității de Vânzare:</strong>
+            <p class="text-gray-300">Companiile publice nu sunt traderi. Ele nu vând când crește prețul cu 10%. Ele fac HODL pe termen lung (10+ ani). Acei 1.09 milioane de BTC sunt, practic, scoși din circulație.</p>
+        </div>
+        <div>
+            <strong class="text-purple-400 block">🍋 Squeeze-ul Inevitabil:</strong>
+            <p class="text-gray-300">Când Retailul se va trezi în 2026 și va vrea să cumpere, va realiza că exchange-urile sunt goale. Singurul mod de a obține expunere va fi să cumperi acțiuni la aceste companii.</p>
+        </div>
+        <div>
+            <strong class="text-purple-400 block">🏆 Bitcoin ca Standard:</strong>
+            <p class="text-gray-300">În 2026, a avea Bitcoin în trezoreria firmei va fi la fel de normal ca a avea Dolari sau Aur.</p>
+        </div>
+      </div>
+
+      <div class="mt-12 bg-gradient-to-r from-purple-900/40 to-black p-8 rounded-2xl border border-purple-500/30">
+        <h4 class="text-xl font-bold text-white mb-4">💎 Mihai Daniel Take: Nu fiți "Exit Liquidity"</h4>
+        <p class="text-gray-300 mb-4 font-bold">"Acesta este ultimul avertisment pe anul acesta."</p>
+        <p class="text-gray-300 mb-4 italic">Dacă te uiți la grafic și te plictisești, pierzi esențialul. În spatele cortinei, se duce o luptă surdă pentru fiecare Satoshi. Companiile publice aspiră totul. Ele au răbdare, au capital și au viziune.</p>
+        <p class="text-gray-300 mb-4">Dacă tu vinzi acum de plictiseală, le faci lor un cadou.</p>
+        <p class="text-white font-bold text-lg text-center mt-6">Nu le da Bitcoin-ul tău ieftin. În 2026, nu ți-l vor vinde înapoi.</p>
+      </div>
+    `
+  },  
 // ✅ 0. ARTICOL NOU (US DEBT WALL 2026 - FISCAL DOMINANCE) - ON TOP
   {
     id: 'us-debt-wall-2026-fiscal-dominance-bitcoin',
