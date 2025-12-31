@@ -1,4 +1,98 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU (US DEBT WALL 2026 - FISCAL DOMINANCE) - ON TOP
+  {
+    id: 'us-debt-wall-2026-fiscal-dominance-bitcoin',
+    slug: 'zidul-datorie-sua-2026-faliment-matematic-bitcoin',
+    title: '"Zidul de Datorie" al Americii din 2026. De ce falimentul matematic al SUA este cel mai puternic argument pentru Bitcoin.',
+    summary: 'În 2026, trilioane de dolari datorie SUA ajung la scadență. Diferența dintre dobânzile de 0.25% și 4.5% creează o bombă matematică. De ce "Fiscal Dominance" forțează tiparnița de bani și de ce Bitcoin este singura barcă de salvare.',
+    category: 'MACROECONOMIE & DEBT',
+    image: '/datoriesua2025.jpg',
+    date: '31 Dec 2025',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Fiscal Dominance = Money Printing = Bitcoin Up
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded text-xs font-bold uppercase animate-pulse">✅ Status: CONFIRMAT (Date US Treasury)</span>
+        <span class="bg-red-500/20 text-red-300 border border-red-500/30 px-3 py-1 rounded text-xs font-bold uppercase">📉 Subiect: Refinanțare & Fiscal Dominance</span>
+      </div>
+
+      <p class="mb-4 text-gray-300"><strong>Impact Crypto:</strong> Volatilitate pe termen scurt -> <span class="text-green-400 font-bold">Explozie pe termen lung</span></p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Realitatea: Ce se întâmplă în 2026?</h3>
+      <p class="mb-4 text-gray-300">Postarea virală are dreptate într-un punct critic: <strong>Calendarul de Maturitate.</strong></p>
+      <p class="mb-4 text-gray-300">În timpul pandemiei (2020-2021), Trezoreria SUA a emis cantități industriale de datorie pe termen scurt (bonuri de trezorerie) pentru că dobânzile erau aproape zero (0.25%). A fost "bani gratis".</p>
+      <p class="mb-4 text-gray-300">Dar datoria pe termen scurt expiră repede. În 2025 și 2026, trilioane de dolari din acea datorie ajung la scadență.</p>
+      <div class="bg-[#0a0f1e] p-4 rounded-xl border-l-4 border-yellow-500 mb-6">
+        <p class="text-gray-300">Guvernul SUA nu are banii să o plătească. Așa că trebuie să facă "Roll Over" (Refinanțare). Adică, se împrumută din nou pentru a plăti datoria veche.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. Problema Matematică: Șocul Dobânzilor</h3>
+      <p class="mb-4 text-gray-300">Aici apare "Bomba" menționată în știre.</p>
+      
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+         <div class="bg-green-900/10 p-4 rounded-xl border border-green-500/20">
+            <strong class="text-green-400 block mb-1">Datoria Veche</strong>
+            <p class="text-gray-400 text-sm">A fost emisă la dobânzi de 0.5% - 1%.</p>
+         </div>
+         <div class="bg-red-900/10 p-4 rounded-xl border border-red-500/20">
+            <strong class="text-red-400 block mb-1">Datoria Nouă</strong>
+            <p class="text-gray-400 text-sm">Trebuie emisă la dobânzile actuale de 4% - 4.5%.</p>
+         </div>
+      </div>
+
+      <div class="bg-[#0a0f1e] p-6 rounded-xl border border-red-500/30 mb-8">
+        <strong class="text-red-400 block mb-2 text-lg">Exemplu Simplu:</strong>
+        <ul class="space-y-2 text-gray-300">
+            <li>Dacă ai o datorie de 1 Trilion $ la 1%, plătești <strong>10 Miliarde</strong> dobândă pe an.</li>
+            <li>Dacă o refinanțezi la 4.5%, plătești <strong>45 Miliarde</strong> dobândă pe an.</li>
+        </ul>
+        <p class="text-white font-bold mt-4 border-t border-gray-700 pt-4">Rezultatul: Costul dobânzii SUA a depășit deja bugetul pentru Apărare (1 Trilion $/an). În 2026, acest cost va exploda, făcând deficitul bugetar nesustenabil.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. Cele 3 Soluții ale Americii (Și de ce Crypto câștigă)</h3>
+      <p class="mb-4 text-gray-300">Când un stat ajunge în acest punct, are doar 3 opțiuni. Să vedem cum afectează fiecare Crypto:</p>
+      
+      <div class="space-y-4 mb-8">
+        <div class="bg-gray-800 p-4 rounded-lg opacity-60">
+            <strong class="text-gray-400">1. Austeritate (Tăierea cheltuielilor)</strong>
+            <p class="text-sm text-gray-500">Probabilitate: 0%. Niciun politician nu va tăia pensiile sau armata.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg opacity-60">
+            <strong class="text-gray-400">2. Default (Faliment/Neplată)</strong>
+            <p class="text-sm text-gray-500">Probabilitate: 0%. SUA nu va anunța niciodată oficial că nu plătește, pentru că are tiparnița de bani.</p>
+        </div>
+        <div class="bg-green-900/20 p-4 rounded-lg border border-green-500">
+            <strong class="text-green-400">3. Money Printing (Monetizarea Datoriei / Yield Curve Control)</strong>
+            <p class="text-sm text-gray-300 mt-1">Probabilitate: 99%.</p>
+            <p class="text-sm text-gray-300 mt-1">Fed-ul va fi forțat să tipărească bani pentru a cumpăra datoria pe care piața nu o mai vrea (QE). Sau va tăia dobânzile forțat, chiar dacă inflația e mare, doar ca guvernul să nu falimenteze.</p>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">4. Corelația cu Bitcoin: Teza "Fiscal Dominance"</h3>
+      <p class="mb-4 text-gray-300">Sursa spune că "Totul va fi lovit: Stocks, Bonds, Crypto". Aici greșește parțial.</p>
+      
+      <ul class="space-y-4 mb-6 text-gray-300">
+        <li class="pl-4 border-l-2 border-red-500"><strong>Faza 1 (Șocul):</strong> Da, când piața realizează gravitatea situației, poate exista un moment de panică (Lichiditate scăzută). Crypto poate avea o corecție rapidă.</li>
+        <li class="pl-4 border-l-2 border-green-500"><strong>Faza 2 (Reacția):</strong> Dar imediat ce "Bomba" stă să explodeze, FED-ul va porni Money Printer-ul pentru a salva piața de obligațiuni.</li>
+      </ul>
+
+      <p class="mb-4 text-gray-300"><strong>Istoria ne învață:</strong> Când masa monetară (M2) crește pentru a acoperi datoria, activele cu ofertă limitată (Hard Assets) absorb acea inflație monetară.</p>
+      <div class="flex items-center gap-4 bg-black p-4 rounded-lg mb-6 text-sm md:text-base">
+        <span>💵 Dolarul: Se devalorizează</span>
+        <span>➡️</span>
+        <span class="text-orange-400 font-bold">₿ Bitcoin: Se apreciază</span>
+      </div>
+      <p class="mb-6 text-gray-300">Bitcoin a fost creat exact pentru acest scenariu: momentul în care banca centrală trebuie să sacrifice valoarea monedei pentru a salva datoria statului.</p>
+
+      <div class="mt-8 bg-gradient-to-r from-blue-900/30 to-black p-8 rounded-2xl border border-blue-500/30">
+        <h4 class="text-xl font-bold text-white mb-4">🛡️ Mihai Daniel Take: Nu e sfârșitul lumii, e sfârșitul Dolarului puternic</h4>
+        <p class="text-gray-300 mb-4 italic">"Zidul de Datorie din 2026 nu este un motiv să vinzi Bitcoin și să fugi. Este motivul pentru care deții Bitcoin."</p>
+        <p class="text-gray-300 mb-4">Postarea virală are dreptate că urmează o furtună. Dar în acea furtună, Guvernul va arunca cu bani (lichiditate) pentru a nu se scufunda. Bitcoin este barca care plutește pe acel ocean de lichiditate nou tipărită.</p>
+        <p class="text-white font-bold mt-4 text-center">Nu vă temeți de refinanțare. Temeți-vă să țineți cash când refinanțarea va fi plătită cu bani proaspăt tipăriți.</p>
+      </div>
+    `
+  },  
 // ✅ 0. ARTICOL NOU (MACRO - ISM CYCLE VS HALVING) - ON TOP
   {
     id: 'macro-ism-cycle-bitcoin-demystified',
