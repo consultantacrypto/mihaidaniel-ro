@@ -6,7 +6,7 @@ export const articles = [
     title: '"Zidul de Datorie" al Americii din 2026. De ce falimentul matematic al SUA este cel mai puternic argument pentru Bitcoin.',
     summary: 'În 2026, trilioane de dolari datorie SUA ajung la scadență. Diferența dintre dobânzile de 0.25% și 4.5% creează o bombă matematică. De ce "Fiscal Dominance" forțează tiparnița de bani și de ce Bitcoin este singura barcă de salvare.',
     category: 'MACROECONOMIE & DEBT',
-    image: '/datoriesua2025.jpg',
+    image: '/datoriasua2025.jpg',
     date: '31 Dec 2025',
     readTime: '5 min',
     author: 'Mihai Daniel',
