@@ -1,4 +1,88 @@
 export const articles = [ 
+// ✅ 0. ARTICOL NOU (CICLUL DE 4 ANI MORT - SUPERCYCLE) - ON TOP
+  {
+    id: 'bitcoin-4-year-cycle-dead-supercycle-analysis',
+    slug: 's-a-rupt-ceasul-ciclu-4-ani-bitcoin-mort-2026',
+    title: 'S-A RUPT CEASUL? De ce Ciclul de 4 Ani al Bitcoin este oficial "Mort" și ce înseamnă asta pentru 2026.',
+    summary: 'Bitcoin a încălcat regula de aur și a spart maximul înainte de Halving. De ce ETF-urile au ucis ciclul fix, teoria Superciclului și de ce în 2026 nu mai contează calendarul, ci tiparnița de bani.',
+    category: 'ANALIZĂ DE CICLU',
+    image: '/ciclulde4ani.jpg',
+    date: '01 Jan 2026',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'neutral', // Educațional / Schimbare de paradigmă
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase animate-pulse">✅ Status: CONFIRMAT (Prin Preț)</span>
+        <span class="bg-purple-500/20 text-purple-300 border border-purple-500/30 px-3 py-1 rounded text-xs font-bold uppercase">📉 Fenomen: Decuplarea de Halving</span>
+      </div>
+
+      <p class="mb-4 text-gray-300"><strong>Noua Realitate:</strong> Ciclul de Lichiditate Globală</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Dovada: "Anomalia" din Martie 2024</h3>
+      <p class="mb-4 text-gray-300">Timp de 12 ani, regula a fost sfântă:</p>
+      <ul class="list-decimal pl-6 text-gray-300 mb-4 space-y-1">
+        <li>Vine Halving-ul (înjumătățirea).</li>
+        <li>Urmează șocul de ofertă.</li>
+        <li>Prețul explodează după 6-12 luni.</li>
+      </ul>
+      
+      <div class="bg-[#0a0f1e] p-6 rounded-xl border-l-4 border-red-500 mb-6">
+        <strong class="text-red-400 block mb-2">În acest ciclu, regula a fost încălcată.</strong>
+        <p class="text-gray-300">Bitcoin a spart maximul istoric în Martie 2024, cu o lună înainte de Halving. Acesta a fost "glonțul" care a ucis teoria ciclului fix.</p>
+        <p class="text-white font-bold mt-2 border-t border-gray-700 pt-2">Cauza: ETF-urile Spot (BlackRock, Fidelity). Cererea instituțională a fost atât de mare încât a devansat șocul de ofertă al minerilor.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. Ce înseamnă "Ruperea Ciclului"?</h3>
+      <p class="mb-4 text-gray-300">Înseamnă că Bitcoin s-a maturizat.</p>
+      
+      <div class="grid md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-gray-800 p-4 rounded-xl opacity-80">
+            <strong class="text-gray-400 block mb-1">👶 Copilăria (2009-2020)</strong>
+            <p class="text-sm text-gray-400">Bitcoin era mic, volatil și controlat strict de mecanica internă (Halving). Era ca un copil care doarme după un orar fix.</p>
+        </div>
+        <div class="bg-blue-900/20 p-4 rounded-xl border border-blue-500/50">
+            <strong class="text-blue-400 block mb-1">👨‍💼 Maturitatea (Prezent)</strong>
+            <p class="text-sm text-gray-300">Bitcoin este acum un activ macro-economic global, de trilioane de dolari. Nu mai dansează doar după muzica minerilor. Dansează după muzica Lichidității Globale (FED, Dobânzi, ISM).</p>
+        </div>
+      </div>
+      <p class="text-white font-bold italic mb-8">Dacă Wall Street vrea să cumpere, cumpără ACUM, nu așteaptă Halving-ul.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. Cele două Scenarii pentru Ce Urmează (2026 și după)</h3>
+      <p class="mb-4 text-gray-300">Dacă harta veche nu mai e bună, după ce ne ghidăm? Există două teorii majore acum:</p>
+
+      <div class="space-y-6 mb-8">
+        <div class="bg-[#0a0f1e] p-5 rounded-xl border border-green-500/30">
+            <h4 class="text-green-400 font-bold text-lg mb-2">A. SUPERCICLUL (The Supercycle)</h4>
+            <p class="text-gray-300 mb-2"><strong>Teoria:</strong> Bitcoin nu va mai avea acele "Bear Markets" criminale de -80% și nici acele creșteri verticale de 100x în 6 luni.</p>
+            <p class="text-gray-300"><strong>Ce urmează:</strong> O creștere mai lentă, dar constantă (Grind Up), similară cu aurul sau S&P500. Corecțiile vor fi de 20-30%, nu de 80%.</p>
+            <p class="text-green-500 text-sm mt-2 font-bold">Vestea bună: Nu mai există "Iarna Crypto" de 2 ani. Există doar "Sezoane Ploioase".</p>
+        </div>
+
+        <div class="bg-[#0a0f1e] p-5 rounded-xl border border-yellow-500/30">
+            <h4 class="text-yellow-400 font-bold text-lg mb-2">B. LEFT-TRANSLATED CYCLE (Ciclul Devansat)</h4>
+            <p class="text-gray-300 mb-2"><strong>Teoria:</strong> Pentru că am început creșterea mai devreme (Martie 2024), vârful ciclului va veni și el mai devreme decât credem (poate deja în 2025 s-a consumat mare parte din energie).</p>
+            <p class="text-gray-300"><strong>Pericolul:</strong> Cei care așteaptă vârful clasic (sfârșitul lui 2026) s-ar putea să rămână cu monedele în mână, pentru că petrecerea s-a terminat mai repede.</p>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">4. Concluzia: Nu te uita la Calendar, uită-te la Bani</h3>
+      <p class="mb-4 text-gray-300">Ciclul de 4 ani era "roțile ajutătoare" pentru investitori. Acum le-am scos. Bitcoin a devenit un activ Legat de Lichiditate.</p>
+      
+      <div class="bg-gray-900 p-4 rounded-lg mb-8 text-center">
+        <p class="text-green-400 font-bold">Dacă FED tipărește -> Bitcoin crește <span class="text-gray-500 text-xs font-normal">(indiferent de Halving)</span></p>
+        <div class="h-px bg-gray-700 my-2"></div>
+        <p class="text-red-400 font-bold">Dacă economia intră în recesiune -> Bitcoin scade <span class="text-gray-500 text-xs font-normal">(indiferent de Halving)</span></p>
+      </div>
+
+      <div class="mt-8 bg-gradient-to-r from-gray-900 to-black p-8 rounded-2xl border border-blue-500/30">
+        <h4 class="text-xl font-bold text-white mb-4">🧠 Mihai Daniel Take: Suntem pe teritoriu necunoscut</h4>
+        <p class="text-gray-300 mb-4 italic">"Faptul că ciclul de 4 ani s-a rupt este cea mai bună veste posibilă, deși pare înfricoșătoare. Arată că Bitcoin nu mai este o schemă predictibilă de 'Pump & Dump' programată la 4 ani."</p>
+        <p class="text-gray-300 mb-4">A devenit un activ financiar real. Nu vă mai bazați pe datele din 2017 sau 2021. Acelea au fost alte ere.</p>
+        <p class="text-white font-bold text-lg text-center mt-6">În 2026, nu ne întrebăm 'Câte luni au trecut de la Halving?', ci 'Câți bani a tipărit Banca Centrală azi?'</p>
+      </div>
+    `
+  },  
 // ✅ 0. ARTICOL NOU (FED REPO INJECTION - NEW YEAR 2026) - ON TOP
   {
     id: 'fed-repo-injection-new-year-2026-liquidity-crisis',
