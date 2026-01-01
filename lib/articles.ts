@@ -1,4 +1,84 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU (FED REPO INJECTION - NEW YEAR 2026) - ON TOP
+  {
+    id: 'fed-repo-injection-new-year-2026-liquidity-crisis',
+    slug: 'fed-injectie-31-miliarde-repo-revelion-2026',
+    title: 'BREAKING NEWS 2026: "La Mulți Ani" cu Bani de la FED. Sistemul bancar american a avut nevoie de o injecție de urgență de 31 Miliarde $ în noaptea de Revelion.',
+    summary: 'Alarmă pe Wall Street în noaptea de Revelion. FED a pompat 31 Miliarde $ prin piața Repo. Ce înseamnă acest "Canar în mină" pentru sistemul bancar și de ce este semnalul final că tiparnița de bani (QE) se va redeschide masiv în 2026.',
+    category: 'MACRO & BANKING',
+    image: '/fedpump1.jpg',
+    date: '01 Ian 2026',
+    readTime: '4 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Liquidity Injection = Bullish for Assets
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-red-500/20 text-red-300 border border-red-500/30 px-3 py-1 rounded text-xs font-bold uppercase animate-pulse">🚨 Status: CONFIRMAT (Fed Data)</span>
+        <span class="bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🏦 Subiect: Criza de Lichiditate / Repo</span>
+        <span class="bg-purple-500/20 text-purple-300 border border-purple-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🔄 Semnal: Sfârșitul "Tightening"</span>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Ce s-a întâmplat în timp ce tu dormeai?</h3>
+      <p class="mb-4 text-gray-300">În ultimele ore ale anului 2025, o alarmă silențioasă a sunat pe Wall Street.</p>
+      <p class="mb-4 text-gray-300">Rezerva Federală (FED) a pompat <strong class="text-white">30.8 Miliarde de dolari</strong> în sistemul bancar prin operațiuni "Overnight Repo".</p>
+      
+      <div class="bg-red-900/10 border-l-4 border-red-500 p-6 rounded-r-xl mb-6">
+        <strong class="text-red-400 block mb-2 text-lg">De ce este șocant?</strong>
+        <p class="text-gray-300 mb-2">Această facilitate este, în mod normal, o plasă de siguranță nefolosită.</p>
+        <p class="text-gray-300">Faptul că a fost accesată la un nivel record (cel mai mare de la criza bancară sau chiar criza Dot Com, ajustat la context) ne spune un singur lucru:</p>
+        <p class="text-white font-bold mt-2">Băncile nu mai au cash. "Instalația" financiară a Americii a început să scârțâie violent la trecerea dintre ani.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. EDUCAȚIE: Ce este piața REPO? (Amanetul Băncilor)</h3>
+      <p class="mb-4 text-gray-300">Pentru a înțelege gravitatea, trebuie să înțelegem mecanismul. Piața Repo este "uleiul" motorului financiar global.</p>
+      
+      
+
+      <div class="bg-[#0a0f1e] p-6 rounded-xl border border-gray-700 mb-8">
+        <ul class="space-y-4">
+            <li>
+                <strong class="text-blue-400 block">Cum funcționează:</strong>
+                <span class="text-gray-300">Băncile au multe active (Titluri de Stat/Obligațiuni), dar uneori rămân fără Cash lichid pentru plăți imediate.</span>
+            </li>
+            <li>
+                <strong class="text-blue-400 block">Repo (Repurchase Agreement):</strong>
+                <span class="text-gray-300">Banca merge la FED și spune: <em>"Îți las aceste titluri de stat garanție (Amanet) până mâine dimineață, dă-mi cash să trec noaptea."</em></span>
+            </li>
+            <li class="border-t border-gray-700 pt-4">
+                <strong class="text-red-400 block">Problema:</strong>
+                <span class="text-gray-300">Într-un sistem sănătos, băncile se împrumută între ele. Când băncile sunt nevoite să meargă la "Tăticul FED" pentru bani, înseamnă că nimeni altcineva nu are bani sau nu are încredere să împrumute.</span>
+            </li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. Semnalul "Canarului din Mină"</h3>
+      <p class="mb-4 text-gray-300">Titlul viral spune că depășește criza "Dot Com". Trebuie să fim nuanțați: ca valoare nominală, inflația distorsionează cifrele. Dar ca SIMPTOM, este identic cu criza din septembrie 2019 (Repo Crisis).</p>
+      <p class="mb-4 text-gray-300">Acesta este primul semn al "Zidului de Datorie din 2026" despre care am vorbit. Guvernul SUA a emis atât de multă datorie, încât a "aspirat" tot cash-ul din piață. Băncile sunt pline de hârtii (obligațiuni), dar goale de bani.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">4. De ce este Bullish pentru Crypto și Active (Paradoxul)</h3>
+      <p class="mb-4 text-gray-300">Poate suna ciudat: "Dacă băncile au probleme, de ce e bine pentru Bitcoin?" Răspunsul este <strong>PIVOTUL</strong>.</p>
+      <p class="mb-4 text-gray-300">Această injecție de 31 Miliarde $ este un "plasture". Plasturii nu țin la infinit. Când piața Repo se blochează, FED-ul are o singură soluție istorică pentru a preveni colapsul total: <strong>QE (Quantitative Easing)</strong>. Adică, pornirea tiparniței la scară largă.</p>
+
+      <div class="grid md:grid-cols-2 gap-4 mb-8">
+         <div class="bg-gray-800 p-4 rounded-xl text-center">
+            <strong class="text-gray-400 block mb-2">Faza 1 (Acum)</strong>
+            <p class="text-sm text-gray-300">Injecții temporare (Repo) -> Arată că sistemul e fragil.</p>
+         </div>
+         <div class="bg-green-900/20 p-4 rounded-xl border border-green-500 text-center">
+            <strong class="text-green-400 block mb-2">Faza 2 (Curând)</strong>
+            <p class="text-sm text-gray-300">Tipărire permanentă -> Dolarul scade, Activele (BTC, Aur) explodează.</p>
+         </div>
+      </div>
+
+      <div class="mt-12 bg-gradient-to-r from-blue-900/40 to-black p-8 rounded-2xl border border-blue-500/30">
+        <h4 class="text-xl font-bold text-white mb-4">💎 Concluzia lui Mihai Daniel pentru 2026:</h4>
+        <p class="text-gray-300 mb-4 italic">"Anul începe cu un foc de avertisment. Sistemul bancar este însetat și cere apă. FED-ul le-a dat o gură de apă (31B) de Revelion."</p>
+        <p class="text-gray-300 mb-4">Dar setea va reveni. În 2026, FED-ul va fi forțat să deschidă barajul.</p>
+        <p class="text-gray-300 mb-4">Bitcoin a fost creat exact pentru momentul în care 'Amanetul' Băncii Centrale devine singura sursă de lichiditate.</p>
+        <p class="text-white font-bold text-lg text-center mt-6">La mulți ani! Pregătiți-vă portofoliile, pentru că lichiditatea vine.</p>
+      </div>
+    `
+  },  
 // ✅ 0. ULTIMUL ARTICOL 2025 (CORPORATE FOMO - 1M BTC) - ON TOP
   {
     id: 'corporate-fomo-1-million-bitcoin-treasuries',
