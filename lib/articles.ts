@@ -7,7 +7,7 @@ export const articles = [
     summary: 'Alarmă pe Wall Street în noaptea de Revelion. FED a pompat 31 Miliarde $ prin piața Repo. Ce înseamnă acest "Canar în mină" pentru sistemul bancar și de ce este semnalul final că tiparnița de bani (QE) se va redeschide masiv în 2026.',
     category: 'MACRO & BANKING',
     image: '/fedpump1.jpg',
-    date: '01 Ian 2026',
+    date: '01 Jan 2026',
     readTime: '4 min',
     author: 'Mihai Daniel',
     impact: 'bullish', // Liquidity Injection = Bullish for Assets
