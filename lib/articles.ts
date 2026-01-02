@@ -1,4 +1,5 @@
-export const   // ✅ 0. ARTICOL NOU (TAXE CRYPTO EUROPA 2026) - ON TOP
+export const articles = [      
+// ✅ 0. ARTICOL NOU (TAXE CRYPTO EUROPA 2026) - ON TOP
   {
     id: 'crypto-tax-guide-europe-2025-2026-romania-heaven',
     slug: 'harta-banilor-taxe-crypto-europa-2025-2026',
@@ -100,9 +101,6 @@ export const   // ✅ 0. ARTICOL NOU (TAXE CRYPTO EUROPA 2026) - ON TOP
       </div>
     `
   },
-
-
-
 // ✅ 0. ARTICOL NOU (CICLUL DE 4 ANI MORT - SUPERCYCLE) - ON TOP
   {
     id: 'bitcoin-4-year-cycle-dead-supercycle-analysis',
