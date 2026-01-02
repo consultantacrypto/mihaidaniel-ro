@@ -1,4 +1,108 @@
-export const articles = [ 
+export const   // ✅ 0. ARTICOL NOU (TAXE CRYPTO EUROPA 2026) - ON TOP
+  {
+    id: 'crypto-tax-guide-europe-2025-2026-romania-heaven',
+    slug: 'harta-banilor-taxe-crypto-europa-2025-2026',
+    title: 'HARTA BANILOR TĂI: Ghidul Taxelor Crypto în Europa (2025-2026). Unde ești "Boier" și unde ești "Jecmănit"?',
+    summary: 'Ghidul complet al fiscalității crypto în Era MiCA. Comparație între "Raiurile Fiscale" (Germania, Portugalia), "Iadul Fiscal" (Scandinavia) și de ce România rămâne "Goldilocks" pentru investitori. Un material educativ esențial.',
+    category: 'FISCALITATE & EDUCAȚIE',
+    image: '/taxeeu2.jpg',
+    date: '02 Jan 2026',
+    readTime: '6 min',
+    author: 'Mihai Daniel',
+    impact: 'neutral', // Educativ
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🇪🇺 Fiscalitate Comparată</span>
+        <span class="bg-purple-500/20 text-purple-300 border border-purple-500/30 px-3 py-1 rounded text-xs font-bold uppercase">📜 Context: Era MiCA</span>
+      </div>
+
+      <div class="bg-yellow-500/10 border border-yellow-500/30 p-4 rounded-lg mb-8">
+        <p class="text-yellow-200 text-sm font-bold">⚠️ Avertisment: Acesta este un material educativ, nu consultanță fiscală. Legile se schimbă.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Marea Confuzie: MiCA ne mărește taxele?</h3>
+      <p class="mb-4 text-gray-300">Să lămurim din start "elefantul din cameră". Toată lumea vorbește de MiCA.</p>
+      <ul class="list-disc pl-6 text-gray-300 mb-4 space-y-2">
+        <li><strong>Ce face MiCA:</strong> Obligă Binance, Kraken etc. să fie transparenți, să aibă rezerve și să raporteze tranzacțiile suspecte.</li>
+        <li><strong>Ce NU face MiCA:</strong> Nu impune un impozit unic european.</li>
+      </ul>
+      <p class="mb-6 text-gray-300">Asta înseamnă că locația ta fiscală (unde ai rezidența) este mai importantă ca niciodată. Dacă ești rezident în România, plătești după legea română, chiar dacă tranzacționezi pe o platformă reglementată în Franța.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. Categoria "Raiul Investitorilor" (Condiționat)</h3>
+      <p class="mb-6 text-gray-300">Aici sunt țările unde poți plăti 0%, dar trebuie să respecți reguli stricte de timp (HODL).</p>
+      
+      <div class="space-y-4 mb-8">
+        <div class="bg-[#0a0f1e] p-4 rounded-xl border-l-4 border-green-500">
+            <strong class="text-green-400 block text-lg">🇩🇪 GERMANIA</strong>
+            <p class="text-gray-300 text-sm mt-2"><strong>Regula:</strong> Dacă deții crypto mai mult de 1 an, impozitul este 0%.</p>
+            <p class="text-gray-300 text-sm"><strong>Capcana:</strong> Dacă vinzi sub 1 an, plătești impozit pe venit progresiv (până la 45%).</p>
+            <p class="text-white font-bold text-xs mt-2 uppercase">Verdict: Paradis pentru HODL-eri, Iad pentru Traderi.</p>
+        </div>
+
+        <div class="bg-[#0a0f1e] p-4 rounded-xl border-l-4 border-green-500">
+            <strong class="text-green-400 block text-lg">🇵🇹 PORTUGALIA</strong>
+            <p class="text-gray-300 text-sm mt-2"><strong>Regula:</strong> S-a schimbat recent. Acum este 0% doar dacă deții activele mai mult de 365 de zile.</p>
+            <p class="text-gray-300 text-sm"><strong>Capcana:</strong> Dacă vinzi sub 1 an, impozitul este 28%.</p>
+            <p class="text-white font-bold text-xs mt-2 uppercase">Verdict: Nu mai este "Vestul Sălbatic", dar rămâne excelent pentru investitorii pe termen lung.</p>
+        </div>
+
+        <div class="bg-[#0a0f1e] p-4 rounded-xl border-l-4 border-green-500">
+            <strong class="text-green-400 block text-lg">🇨🇭 ELVEȚIA</strong>
+            <p class="text-gray-300 text-sm mt-2"><strong>Regula:</strong> Pentru investitorii privați (nu profesioniști), câștigul de capital este scutit de impozit (0%).</p>
+            <p class="text-gray-300 text-sm"><strong>Capcana:</strong> Există "Wealth Tax" (Impozit pe Avere). Plătești anual un mic procent din valoarea totală a portofoliului, chiar dacă nu vinzi.</p>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. Categoria "Goldilocks" (Echilibrat & Prietenos)</h3>
+      <p class="mb-6 text-gray-300">Aici intră țările cu cote unice, rezonabile. Surpriză: România este lider aici.</p>
+
+      <div class="bg-blue-900/20 p-5 rounded-xl border border-blue-500 mb-6">
+        <strong class="text-blue-400 block text-xl mb-2">🇷🇴 ROMÂNIA</strong>
+        <ul class="space-y-2 text-gray-300">
+            <li><strong>Impozit:</strong> 10% pe câștig (diferența dintre preț vânzare și preț cumpărare).</li>
+            <li><strong>Extra:</strong> CASS (Sănătate) plafonat la 6, 12 sau 24 de salarii minime, doar dacă depășești plafoanele.</li>
+        </ul>
+        <p class="text-white font-bold mt-4">Verdict: Unul dintre cele mai bune regimuri din UE. Simplu, cotă mică, predictibil.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-4 mb-8">
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <strong class="text-white">🇧🇬 BULGARIA</strong>
+            <p class="text-gray-400 text-sm">Impozit: 10% Flat Tax. <br> Verdict: Similar cu România, foarte competitiv.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <strong class="text-white">🇮🇹 ITALIA</strong>
+            <p class="text-gray-400 text-sm">Impozit: S-a mărit la 26% (pentru câștiguri peste 2.000€). <br> Verdict: A devenit scumpă recent.</p>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">4. Categoria "Iadul Fiscal" (Taxe Uriașe)</h3>
+      <p class="mb-6 text-gray-300">Țările unde statul îți devine "partener de afaceri" forțat și îți ia jumătate din profit.</p>
+      
+      <div class="space-y-4 mb-8">
+        <div class="bg-red-900/10 p-4 rounded-xl border border-red-500/30">
+            <strong class="text-red-400 block">🇫🇷 FRANȚA</strong>
+            <p class="text-gray-300 text-sm"><strong>Impozit:</strong> Flat Tax de 30% (Prélèvement Forfaitaire Unique). Verdict: Dureros, dar simplu.</p>
+        </div>
+        <div class="bg-red-900/10 p-4 rounded-xl border border-red-500/30">
+            <strong class="text-red-400 block">🇩🇰 DANEMARCA & SCANDINAVIA</strong>
+            <p class="text-gray-300 text-sm"><strong>Impozit:</strong> Crypto este considerat venit personal. Impozitul poate ajunge la 52% sau chiar mai mult.</p>
+            <p class="text-gray-300 text-sm"><strong>Capcana:</strong> În unele cazuri, pierderile nu sunt deductibile 100%, dar câștigurile sunt taxate full. Verdict: "No-Go Zone" pentru crypto.</p>
+        </div>
+      </div>
+
+      <div class="mt-8 bg-gradient-to-r from-gray-900 to-black p-8 rounded-2xl border border-blue-500/30">
+        <h4 class="text-xl font-bold text-white mb-4">🏠 Mihai Daniel Take: Apreciază ce ai acasă</h4>
+        <p class="text-gray-300 mb-4 italic">"De multe ori ne uităm peste gard și credem că iarba e mai verde. În realitate, un investitor român care plătește 10% impozit este invidiat de un francez care plătește 30% sau de un danez care plătește 50%."</p>
+        <p class="text-gray-300 mb-4">Nu fugiți după fente. 'Paradisurile' precum Dubai sau Monaco vin cu costuri de viață care, de multe ori, depășesc economia făcută la taxe (dacă nu ai portofoliu de milioane).</p>
+        <p class="text-gray-300 mb-4 font-bold text-white">România rămâne, în 2026, un hub fiscal excelent pentru crypto.</p>
+        <p class="text-white font-bold text-lg text-center mt-6">Plătiți-vă cei 10% și dormiți liniștiți. E un preț mic pentru libertate.</p>
+      </div>
+    `
+  },
+
+
+
 // ✅ 0. ARTICOL NOU (CICLUL DE 4 ANI MORT - SUPERCYCLE) - ON TOP
   {
     id: 'bitcoin-4-year-cycle-dead-supercycle-analysis',
