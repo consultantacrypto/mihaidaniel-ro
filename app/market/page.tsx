@@ -95,7 +95,7 @@ export default async function MarketPage() {
             {/* STÂNGA: INSTITUTIONAL TRACKER (Ocupă 9 coloane pe TV, Full pe Mobil) */}
             <div className="xl:col-span-9 flex flex-col gap-6">
                 
-                {/* Butoane Navigare Rapidă - AICI AM PUS BUTONUL WAW INAPOI */}
+                {/* Butoane Navigare Rapidă */}
                 <div className="flex flex-wrap items-center gap-3">
                      <div className="hidden md:flex items-center gap-2 px-3 py-1.5 bg-green-500/10 border border-green-500/20 rounded-full">
                         <span className="relative flex h-2 w-2">
@@ -105,7 +105,7 @@ export default async function MarketPage() {
                         <span className="text-[10px] md:text-xs font-mono text-green-400 font-bold tracking-wider">LIVE DATA STREAM</span>
                     </div>
 
-                    {/* ✅ BUTONUL WAW REPARAT */}
+                    {/* ✅ BUTONUL WAW PASTRAT */}
                     <Link href="/lichidari" className="relative group overflow-hidden rounded-lg px-5 py-2.5 font-bold text-white shadow-[0_0_20px_rgba(234,179,8,0.2)] hover:shadow-[0_0_30px_rgba(234,179,8,0.4)] transition-all">
                         <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-orange-600 group-hover:from-yellow-500 group-hover:to-orange-500 transition-colors"></div>
                         <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-shine"></div>
@@ -121,15 +121,15 @@ export default async function MarketPage() {
                     </Link>
                 </div>
 
-                {/* COMPONENTA PRINCIPALĂ + FIX SCROLL MOBIL */}
-                {/* Am adăugat h-[80vh] pe mobil ca să forțăm bara de scroll să fie vizibilă în ecran */}
-                <div className="w-full h-[75vh] md:h-auto overflow-y-auto md:overflow-visible rounded-2xl border border-gray-800 md:border-none bg-[#0a0f1e] md:bg-transparent">
+                {/* COMPONENTA PRINCIPALĂ - FARA LIMITA DE INALTIME */}
+                {/* Am scos overflow-y-auto si h-75vh ca sa lasam pagina sa faca scroll natural */}
+                <div className="w-full rounded-2xl border border-gray-800 md:border-none bg-[#0a0f1e] md:bg-transparent">
                     <InstitutionalTracker />
                 </div>
                 
                 {/* Hint vizual pentru Mobil */}
-                <div className="md:hidden flex items-center justify-center gap-2 text-xs text-gray-500 animate-pulse">
-                    <span>↔️ Swipe stânga-dreapta pentru detalii</span>
+                <div className="md:hidden flex items-center justify-center gap-2 text-xs text-gray-500 animate-pulse mt-2">
+                    <span>↔️ Swipe stânga-dreapta pe tabel / ↕️ Scroll pagină</span>
                 </div>
             </div>
 
