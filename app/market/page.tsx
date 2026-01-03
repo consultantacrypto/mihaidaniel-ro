@@ -95,7 +95,7 @@ export default async function MarketPage() {
             {/* STÂNGA: INSTITUTIONAL TRACKER (Ocupă 9 coloane pe TV, Full pe Mobil) */}
             <div className="xl:col-span-9 flex flex-col gap-6">
                 
-                {/* Butoane Navigare Rapidă */}
+                {/* Butoane Navigare Rapidă - AICI AM PUS BUTONUL WAW INAPOI */}
                 <div className="flex flex-wrap items-center gap-3">
                      <div className="hidden md:flex items-center gap-2 px-3 py-1.5 bg-green-500/10 border border-green-500/20 rounded-full">
                         <span className="relative flex h-2 w-2">
@@ -104,17 +104,32 @@ export default async function MarketPage() {
                         </span>
                         <span className="text-[10px] md:text-xs font-mono text-green-400 font-bold tracking-wider">LIVE DATA STREAM</span>
                     </div>
-                    <Link href="/lichidari" className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 hover:border-yellow-500/50 transition-all text-xs md:text-sm font-bold text-gray-300 hover:text-yellow-400">
-                        <Activity size={14} /> Harta Lichidărilor
+
+                    {/* ✅ BUTONUL WAW REPARAT */}
+                    <Link href="/lichidari" className="relative group overflow-hidden rounded-lg px-5 py-2.5 font-bold text-white shadow-[0_0_20px_rgba(234,179,8,0.2)] hover:shadow-[0_0_30px_rgba(234,179,8,0.4)] transition-all">
+                        <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-orange-600 group-hover:from-yellow-500 group-hover:to-orange-500 transition-colors"></div>
+                        <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-shine"></div>
+                        <div className="relative flex items-center gap-2 text-xs md:text-sm">
+                            <Activity size={16} className="animate-pulse"/> 
+                            <span>Harta Lichidărilor</span>
+                            <ExternalLink size={14} className="opacity-70 group-hover:translate-x-0.5 transition-transform"/>
+                        </div>
                     </Link>
-                    <Link href="/raport-2026" className="flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600/20 border border-blue-500/30 hover:bg-blue-600/30 transition-all text-xs md:text-sm font-bold text-blue-300">
+
+                    <Link href="/raport-2026" className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-blue-600/20 border border-blue-500/30 hover:bg-blue-600/30 transition-all text-xs md:text-sm font-bold text-blue-300">
                         <MonitorPlay size={14} /> Vezi Analiza Video
                     </Link>
                 </div>
 
-                {/* COMPONENTA PRINCIPALĂ */}
-                <div className="w-full min-h-[600px] h-full">
+                {/* COMPONENTA PRINCIPALĂ + FIX SCROLL MOBIL */}
+                {/* Am adăugat h-[80vh] pe mobil ca să forțăm bara de scroll să fie vizibilă în ecran */}
+                <div className="w-full h-[75vh] md:h-auto overflow-y-auto md:overflow-visible rounded-2xl border border-gray-800 md:border-none bg-[#0a0f1e] md:bg-transparent">
                     <InstitutionalTracker />
+                </div>
+                
+                {/* Hint vizual pentru Mobil */}
+                <div className="md:hidden flex items-center justify-center gap-2 text-xs text-gray-500 animate-pulse">
+                    <span>↔️ Swipe stânga-dreapta pentru detalii</span>
                 </div>
             </div>
 
