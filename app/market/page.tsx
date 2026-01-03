@@ -5,7 +5,7 @@ import TickerTape from '@/components/TickerTape';
 import SmartMoneyWidget from '@/components/SmartMoneyWidget'; 
 import InstitutionalTracker from '@/components/InstitutionalTracker'; 
 import { getGlobalData, getFearGreed } from '@/lib/market-api';
-import { Activity, DollarSign, Layers, BarChart3, TrendingUp, TrendingDown, Zap, ExternalLink, MonitorPlay } from 'lucide-react';
+import { Activity, DollarSign, Layers, BarChart3, TrendingUp, TrendingDown, Zap, ExternalLink, Globe } from 'lucide-react';
 import Link from 'next/link';
 
 const formatCurrency = (value: number) => {
@@ -105,7 +105,7 @@ export default async function MarketPage() {
                         <span className="text-[10px] md:text-xs font-mono text-green-400 font-bold tracking-wider">LIVE DATA STREAM</span>
                     </div>
 
-                    {/* ✅ BUTONUL WAW PASTRAT */}
+                    {/* ✅ BUTONUL WAW (LICHIDĂRI) */}
                     <Link href="/lichidari" className="relative group overflow-hidden rounded-lg px-5 py-2.5 font-bold text-white shadow-[0_0_20px_rgba(234,179,8,0.2)] hover:shadow-[0_0_30px_rgba(234,179,8,0.4)] transition-all">
                         <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-orange-600 group-hover:from-yellow-500 group-hover:to-orange-500 transition-colors"></div>
                         <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-shine"></div>
@@ -116,13 +116,14 @@ export default async function MarketPage() {
                         </div>
                     </Link>
 
-                    <Link href="/raport-2026" className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-blue-600/20 border border-blue-500/30 hover:bg-blue-600/30 transition-all text-xs md:text-sm font-bold text-blue-300">
-                        <MonitorPlay size={14} /> Vezi Analiza Video
+                    {/* ✅ BUTONUL NOU: DOSARUL STRATEGIC (În loc de Video) */}
+                    <Link href="/raport-strategic" className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-blue-600/20 border border-blue-500/30 hover:bg-blue-600/30 transition-all text-xs md:text-sm font-bold text-blue-300 group">
+                        <Globe size={14} className="group-hover:rotate-12 transition-transform" /> 
+                        Dosarul Strategic: Top 20
                     </Link>
                 </div>
 
-                {/* COMPONENTA PRINCIPALĂ - FARA LIMITA DE INALTIME */}
-                {/* Am scos overflow-y-auto si h-75vh ca sa lasam pagina sa faca scroll natural */}
+                {/* COMPONENTA PRINCIPALĂ (FĂRĂ LIMITĂ SCROLL MOBIL) */}
                 <div className="w-full rounded-2xl border border-gray-800 md:border-none bg-[#0a0f1e] md:bg-transparent">
                     <InstitutionalTracker />
                 </div>
