@@ -1,9 +1,9 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import TradingViewWidget from '@/components/TradingViewWidget';
 import AffiliateSection from '@/components/AffiliateSection'; 
 import TickerTape from '@/components/TickerTape'; 
-import SmartMoneyWidget from '@/components/SmartMoneyWidget'; // ✅ 1. IMPORT NOU
+import SmartMoneyWidget from '@/components/SmartMoneyWidget'; // Widgetul Vechi (Analiști)
+import InstitutionalTracker from '@/components/InstitutionalTracker'; // ✅ 1. IMPORT NOU (TABELUL)
 import { getGlobalData, getFearGreed } from '@/lib/market-api';
 import { Activity, DollarSign, Layers, BarChart3, TrendingUp, TrendingDown, Zap, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
@@ -111,24 +111,18 @@ export default async function MarketPage() {
             </div>
         </div>
 
-        {/* --- LAYOUT PRINCIPAL: CHART + WIDGET --- */}
+        {/* --- LAYOUT PRINCIPAL: TABLE + WIDGET --- */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
             
-            {/* Coloana Stângă (Mare) - 2/3 */}
-            <div className="lg:col-span-2 space-y-4">
-                <div className="flex justify-between items-center">
-                    <h2 className="text-xl font-bold text-white flex items-center gap-2">
-                        <Activity className="text-blue-400"/> Analiză Tehnică Live (BTC/USDT)
-                    </h2>
-                    <span className="text-xs text-gray-500 bg-white/5 px-2 py-1 rounded border border-white/5">Sursa: TradingView</span>
-                </div>
-                <TradingViewWidget />
+            {/* ✅ 2. Coloana Stângă (Mare) - AICI AM PUS TABELUL NOU */}
+            <div className="lg:col-span-2">
+                <InstitutionalTracker />
             </div>
 
             {/* Coloana Dreaptă (Sidebar) - 1/3 */}
             <div className="flex flex-col gap-6">
                 
-                {/* ✅ 2. WIDGET-UL SMART MONEY (NOU) */}
+                {/* WIDGET-UL VECHI CU ANALIȘTII (Rămâne) */}
                 <SmartMoneyWidget />
 
                 {/* Explicații rapide (Compacte) */}
