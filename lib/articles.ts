@@ -1,4 +1,76 @@
 export const articles = [   
+// ✅ 0. ARTICOL NOU (SOC CALIFORNIA CONFISCARE - ALERTĂ CRITICĂ) - ON TOP
+  {
+    id: 'california-crypto-seizure-unclaimed-property-law-shock',
+    slug: 'soc-california-confisca-bitcoin-inactiv-exchange',
+    title: 'ȘOC ÎN CALIFORNIA: Statul va CONFISCA Bitcoin-ul "inactiv" de pe Exchange-uri. De ce ești în pericol dacă faci HODL pe Binance/Coinbase?',
+    summary: 'O lege veche aplicată brutal pe active digitale: Dacă nu te loghezi 3 ani, statul îți ia Bitcoin-ul și îl vinde instant. De ce "Escheatment" este coșmarul oricărui HODLer și cum self-custody devine obligatoriu.',
+    category: 'REGLEMENTARE & ALERTĂ',
+    image: '/socbitcoincalifornia.jpg',
+    date: '03 Jan 2026',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'bearish', // Semnal de alarmă pentru Exchange-uri
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-red-500/20 text-red-300 border border-red-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🇺🇸 Alertă Critică</span>
+        <span class="bg-orange-500/20 text-orange-300 border border-orange-500/30 px-3 py-1 rounded text-xs font-bold uppercase">⚠️ Risc de Confiscare</span>
+      </div>
+
+      <div class="bg-red-900/20 border border-red-500/40 p-4 rounded-xl mb-8">
+        <ul class="space-y-1 text-sm text-gray-300">
+            <li><strong>Subiect:</strong> Reglementare / Custodie</li>
+            <li><strong>Nivel de Alertă:</strong> <span class="text-red-400 font-bold">CRITIC</span> pentru investitorii pasivi</li>
+            <li><strong>Impact:</strong> Precedent periculos pentru toată lumea</li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Știrea pe scurt: Statul vrea cheile tale</h3>
+      <p class="mb-4 text-gray-300">California, a 5-a economie a lumii și casa Silicon Valley, a semnat o lege care permite statului să preia custodia activelor cripto lăsate "inactive" pe exchange-uri centralizate (Coinbase, Kraken, etc.) timp de 3 ani.</p>
+      <p class="mb-4 text-gray-300">Aceasta nu este o lege anti-crypto nouă, ci aplicarea unei legi vechi (Unclaimed Property Law) asupra activelor digitale. Până acum, se aplica conturilor bancare uitate sau cecurilor neîncasate. Acum, se aplică portofoliului tău de Bitcoin.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Mecanismul "Escheatment": Cum funcționează capcana?</h3>
+      <p class="mb-4 text-gray-300">Procesul este automat și brutal pentru un HODLer pe termen lung care uită să se logheze:</p>
+      <ul class="list-disc pl-6 text-gray-300 mb-6 space-y-2">
+        <li><strong>Inactivitatea:</strong> Dacă nu te loghezi în contul tău de pe Exchange sau nu faci nicio tranzacție timp de 3 ani.</li>
+        <li><strong>Notificarea:</strong> Exchange-ul este obligat să încerce să te contacteze. Dacă nu răspunzi (email ajuns în Spam, telefon schimbat)...</li>
+        <li><strong>Sechestrul (Escheatment):</strong> Exchange-ul este obligat legal să trimită fondurile tale către State Controller’s Office.</li>
+        <li class="text-red-300 font-bold">Lichidarea (Marea Problemă): Statul California, de obicei, NU păstrează criptomonedele. Le vinde imediat pentru Dolari (USD) și păstrează dolarii într-un fond comun.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. De ce este asta un dezastru pentru investitorii Crypto?</h3>
+      <p class="mb-4 text-gray-300">Dacă ai un cont bancar cu 1000$ și statul îl ia, peste 10 ani primești înapoi tot 1000$. Nu e mare pagubă (exceptând inflația). Dar la Bitcoin, situația este tragică:</p>
+      
+      <div class="bg-[#0a0f1e] p-5 rounded-lg border border-gray-700 mb-6">
+        <p class="text-gray-300 mb-2"><strong>Scenariu:</strong> Ai 1 BTC luat de stat azi la 90.000$. Statul îl vinde imediat.</p>
+        <p class="text-gray-300 mb-2"><strong>Peste 5 ani:</strong> Îți amintești, revendici bunurile. Bitcoin este acum 500.000$.</p>
+        <p class="text-gray-300 mb-2"><strong>Rezultat:</strong> Statul îți dă înapoi 90.000$.</p>
+        <p class="text-red-400 font-bold border-t border-gray-700 pt-2 mt-2">Pierdere: Ai pierdut tot upside-ul de 410.000$. Practic, statul te-a forțat să faci "Panic Sell".</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. Impactul Global: Efectul de Domino</h3>
+      <p class="mb-4 text-gray-300">De ce ne pasă nouă, în România sau Europa?</p>
+      <ul class="list-disc pl-6 text-gray-300 mb-6 space-y-2">
+        <li><strong>Precedentul:</strong> California dă tonul. Ce face California azi, face New York mâine, și Uniunea Europeană (MiCA 2.0) poimâine. Guvernele sunt flămânde după lichiditate.</li>
+        <li><strong>Utilizatori Coinbase/Kraken:</strong> Mulți români folosesc exchange-uri cu sediul sau licență în SUA. Termenii și condițiile se pot actualiza global.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">5. Soluția: Cum te aperi de Stat?</h3>
+      <p class="mb-4 text-gray-300">Această lege se aplică DOAR custozilor terți (Exchange-uri). Ea NU se poate aplica portofelelor personale (Cold Wallets), pentru că statul nu are acces la cheile tale private.</p>
+      <p class="mb-4 text-gray-300">Acesta este cel mai puternic argument pentru Self-Custody din ultimii ani.</p>
+      <ul class="list-disc pl-6 text-gray-300 mb-6 space-y-2">
+        <li>Dacă ții banii pe Exchange, ești <strong>chiriaș</strong>. Proprietarul (Statul) te poate evacua dacă nu "treci pe acasă" timp de 3 ani.</li>
+        <li>Dacă ții banii pe Ledger/Trezor, ești <strong>proprietar</strong>. Nimeni nu îți poate declara Bitcoin-ul "abandonat" atâta timp cât ai cheia.</li>
+      </ul>
+
+      <div class="mt-8 bg-gradient-to-r from-gray-900 to-black p-8 rounded-2xl border border-blue-500/30">
+        <h4 class="text-xl font-bold text-white mb-4">🛡️ Sfatul lui Tati:</h4>
+        <p class="text-gray-300 mb-4">"Mută pe Cold Wallet. E sfânt. Acolo nu există 'Unclaimed Property', există doar 'My Property'."</p>
+        <p class="text-white font-bold">Dacă insiști să ții pe Exchange: Loghează-te o dată la 6 luni. Generează activitate. Nu fi o 'fantomă' digitală.</p>
+      </div>
+    `
+  },
+
   // ✅ 0. ARTICOL NOU (RAPORT STRATEGIC GLOBAL 2026 - FULL VERSION) - ON TOP
   {
     id: 'global-strategic-report-2025-2026-capital-architects',
