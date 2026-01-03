@@ -1,4 +1,332 @@
-export const articles = [      
+export const articles = [   
+  // ✅ 0. ARTICOL NOU (RAPORT STRATEGIC GLOBAL 2026 - FULL VERSION) - ON TOP
+  {
+    id: 'global-strategic-report-2025-2026-capital-architects',
+    slug: 'raport-strategic-global-arhitectii-capitalului-2026',
+    title: 'Raport Strategic Global: Arhitecții Capitalului (2015-2025) și Orizontul Investițional 2026',
+    summary: 'Investigație de profunzime asupra Top 20 Firme de Investiții Globale. Analiza completă a strategiilor BlackRock, Citadel, a16z și MicroStrategy. De ce "Marea De-dolarizare" și "Superciclul AI" sunt temele dominante pentru 2026.',
+    category: 'INVESTIGAȚIE & MARKET INTEL',
+    image: '/analizatopinvestitori.jpg',
+    date: '03 Jan 2026',
+    readTime: '18 min', 
+    author: 'Mihai Daniel',
+    impact: 'neutral',
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🌍 Investigație Globală</span>
+        <span class="bg-purple-500/20 text-purple-300 border border-purple-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🧠 Smart Money Analysis</span>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Introducere: O Decadă de Metamorfoză Financiară</h3>
+      <p class="mb-4 text-gray-300">Perioada cuprinsă între 2015 și 2025 va rămâne în istoria financiară drept "Deceniul Marii Divergențe". Am fost martorii unei transformări structurale a piețelor de capital, dictată de tranziția brutală de la era dobânzilor zero (ZIRP - Zero Interest Rate Policy), care a alimentat bule speculative și evaluări "fără gravitație" în tehnologie, către un regim de inflație structurală și costuri reale ale capitalului. În acest creuzet macroeconomic, ierarhiile au fost răsturnate, iar strategiile de investiții au trebuit reinventate din temelii.</p>
+      <p class="mb-4 text-gray-300">Acest raport își propune să discearnă nu doar cifrele, ci și filozofiile care au guvernat mișcările tectonice de capital de-a lungul acestor zece ani. Analizăm 20 de entități care nu doar participă la piață, ci o constituie: de la giganții pasivi care au democratizat accesul la bursă, până la fondurile speculative care extrag valoare din microsecundele de ineficiență, și vizionarii care pariază pe rescrierea codului genetic al economiei globale prin Inteligență Artificială și Blockchain.</p>
+      
+      <div class="bg-[#0a0f1e] p-6 rounded-xl border border-gray-700 mb-8">
+        <strong class="text-white block mb-4 text-lg">Analiza noastră relevă trei teme dominante care au definit traiectoria acestor titani:</strong>
+        <ul class="space-y-3 text-gray-300">
+            <li class="pl-4 border-l-2 border-blue-500"><strong>Industrializarea Alpha-ului:</strong> Trecerea de la "star stock pickers" la platforme multi-manager (Pod Shops) și algoritmi cantitativi care elimină eroarea umană.</li>
+            <li class="pl-4 border-l-2 border-orange-500"><strong>Instituționalizarea Activelor Digitale:</strong> Procesul prin care Bitcoin a migrat din portofelele cypherpunk în bilanțurile trezoreriilor corporative și în produsele ETF ale celor mai conservatoare instituții financiare.</li>
+            <li class="pl-4 border-l-2 border-green-500"><strong>Hegemonia Tehnologică:</strong> Convergența dintre capitalul financiar și infrastructura fizică a AI (centre de date, energie), devenită noua "marfă" strategică a secolului XXI.</li>
+        </ul>
+      </div>
+
+      <p class="mb-8 text-gray-300">În paginile următoare, vom deconstrui profilul fiecărui actor major, evaluând activele sub administrare (AUM), semnătura strategică care i-a definit succesul sau eșecul, portofoliile actuale și pariurile existențiale pentru anul fiscal 2026.</p>
+
+      <div class="h-px bg-gray-800 my-12"></div>
+
+      <h2 class="text-3xl font-black text-blue-400 mb-6">Partea I: Leviatanii Gestionării Activelor</h2>
+      <p class="mb-8 text-gray-400 italic">Acești giganți definesc "beta-ul" pieței. Prin scara lor monumentală, ei au devenit infrastructura critică a sistemului financiar global, dictând fluxurile de capital pasiv și standardele de guvernanță corporativă.</p>
+
+      <div class="bg-gray-900/40 p-6 rounded-2xl border border-blue-500/20 mb-8">
+        <h3 class="text-2xl font-bold text-white mb-2">1. BlackRock Inc.</h3>
+        <p class="text-sm text-blue-300 font-bold mb-4 uppercase tracking-widest">Arhitectul Sistemului Financiar Modern</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6 text-xs text-gray-400 border-b border-gray-700 pb-4">
+            <div><strong>Tip:</strong> Asset Manager Global</div>
+            <div><strong>AUM (2025):</strong> $11.55 Trilioane</div>
+            <div><strong>Sediul:</strong> New York, SUA</div>
+            <div><strong>CEO:</strong> Larry Fink</div>
+        </div>
+        <p class="text-gray-300 mb-4"><strong>Analiză Strategică (2015-2025):</strong> BlackRock a definit deceniul nu doar prin creșterea activelor, ci prin transformarea sa într-o platformă tehnologică indispensabilă. Sistemul său, Aladdin, gestionează riscul pentru portofolii ce depășesc cu mult propriul AUM, oferindu-i o "vedere de la înălțime" asupra întregii piețe globale. Între 2015 și 2021, BlackRock a fost campionul investițiilor ESG. Totuși, pivotul definitoriu a avut loc în 2023-2024, când firma a abandonat retorica ESG în favoarea "Infrastructurii de Tranziție" și, surprinzător, a adoptat agresiv Bitcoin-ul. Larry Fink a realizat o piruetă strategică, trecând de la scepticismul față de crypto ("index de spălare a banilor") la a deveni cel mai vocal susținător instituțional al acestuia.</p>
+        <p class="text-gray-300 mb-4"><strong>Semnătura Strategică:</strong> Legitimarea Bitcoin prin IBIT. Lansarea iShares Bitcoin Trust (IBIT) a fost mișcarea de șah care a forțat mâna SEC și a deschis ecluzele capitalului instituțional. Aceasta nu a fost doar o lansare de produs, ci o declarație geopolitică: BlackRock a validat activele digitale ca parte integrantă a sistemului financiar.</p>
+        <div class="bg-black/30 p-4 rounded-lg mb-4">
+            <strong class="text-white text-sm block mb-2">Top 3 Dețineri (Portofoliu Public):</strong>
+            <ul class="text-sm text-gray-400 list-disc pl-5">
+                <li>Nvidia Corporation (NVDA): 6.34%</li>
+                <li>Apple Inc (AAPL): 5.48%</li>
+                <li>Microsoft Corp (MSFT): 5.05%</li>
+            </ul>
+        </div>
+        <p class="text-gray-300 text-sm mb-4"><strong class="text-green-400">Poziția față de Crypto:</strong> Arhitect Instituțional. BlackRock nu mai este un spectator, ci un constructor. Explorează tokenizarea activelor reale (RWA) pe blockchain-ul Ethereum (fondul BUIDL).</p>
+        <div class="flex items-center gap-2 text-blue-400 text-sm font-bold border-t border-gray-700 pt-3">
+            <span>🎯 Pariul pentru 2026:</span> Infrastructura AI și Tokenizarea
+        </div>
+      </div>
+
+      <div class="bg-gray-900/40 p-6 rounded-2xl border border-gray-600/20 mb-8">
+        <h3 class="text-2xl font-bold text-white mb-2">2. The Vanguard Group</h3>
+        <p class="text-sm text-gray-400 font-bold mb-4 uppercase tracking-widest">Fortăreața Conservatorismului Pasiv</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6 text-xs text-gray-400 border-b border-gray-700 pb-4">
+            <div><strong>Tip:</strong> Mutual Structure</div>
+            <div><strong>AUM (2025):</strong> $10.10 Trilioane</div>
+            <div><strong>Sediul:</strong> Pennsylvania, SUA</div>
+            <div><strong>CEO:</strong> Mortimer J. Buckley</div>
+        </div>
+        <p class="text-gray-300 mb-4"><strong>Analiză Strategică:</strong> Vanguard a rămas "Imperiul Costurilor Minime". În timp ce concurenții au diversificat, Vanguard a "săpat șanțul" mai adânc, reducând comisioanele și concentrându-se obsesiv pe investitorul de retail pe termen lung. Structura sa unică îi permite să opereze la costuri imposibile pentru rivali. Deceniul a fost marcat de o rezistență stoică în fața tendințelor "la modă". Vanguard a refuzat explicit să lanseze ETF-uri tematice speculative sau produse crypto, protejându-și clienții de volatilitate.</p>
+        <p class="text-gray-300 mb-4"><strong>Semnătura Strategică:</strong> Marele Refuz Crypto. Într-un moment de euforie generală în 2024-2025, când toate marile firme se grăbeau să listeze ETF-uri Bitcoin, Vanguard a blocat accesul clienților săi la aceste produse. Această decizie controversată a definit brandul Vanguard: un gardian al valorii intrinseci și al prudenței.</p>
+        <p class="text-gray-300 text-sm mb-4"><strong class="text-red-400">Poziția față de Crypto:</strong> Ostilitate Principială. Consideră criptomonedele o clasă de active speculativă, fără fluxuri de numerar.</p>
+        <div class="flex items-center gap-2 text-blue-400 text-sm font-bold border-t border-gray-700 pt-3">
+            <span>🎯 Pariul pentru 2026:</span> Revenirea la Fundamente (Income Investing)
+        </div>
+      </div>
+
+      <div class="bg-gray-900/40 p-6 rounded-2xl border border-green-500/20 mb-8">
+        <h3 class="text-2xl font-bold text-white mb-2">3. Fidelity Investments</h3>
+        <p class="text-sm text-green-400 font-bold mb-4 uppercase tracking-widest">Supermarketul Financiar Agil</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6 text-xs text-gray-400 border-b border-gray-700 pb-4">
+            <div><strong>Tip:</strong> Asset Manager Privat</div>
+            <div><strong>AUM (2025):</strong> $5.52 Trilioane</div>
+            <div><strong>Sediul:</strong> Boston, SUA</div>
+            <div><strong>CEO:</strong> Abigail Johnson</div>
+        </div>
+        <p class="text-gray-300 mb-4"><strong>Analiză Strategică:</strong> Fidelity, sub conducerea vizionară a lui Abigail Johnson, a realizat ceea ce părea imposibil: a fi un gigant tradițional și, simultan, un pionier al activelor digitale. Spre deosebire de Vanguard, Fidelity a îmbrățișat viitorul. Încă din 2014, firma a început să mineze Bitcoin în scop educațional, iar în deceniul următor a construit o infrastructură completă de custodie și tranzacționare pentru investitorii instituționali (Fidelity Digital Assets).</p>
+        <p class="text-gray-300 mb-4"><strong>Semnătura Strategică:</strong> Bitcoin în Planurile 401(k). Fidelity a spart tabuurile industriei permițând angajatorilor să ofere Bitcoin ca opțiune de investiție în planurile de pensionare 401(k). Această mișcare a normalizat ideea că activele digitale pot face parte din planificarea financiară pe termen lung.</p>
+        <p class="text-gray-300 text-sm mb-4"><strong class="text-green-400">Poziția față de Crypto:</strong> Integrare Totală. Ei văd blockchain-ul ca pe noul "internet al valorii" și vor să fie principalul furnizor de servicii.</p>
+        <div class="flex items-center gap-2 text-blue-400 text-sm font-bold border-t border-gray-700 pt-3">
+            <span>🎯 Pariul pentru 2026:</span> DeFi Instituțional
+        </div>
+      </div>
+
+      <div class="bg-gray-900/40 p-6 rounded-2xl border border-blue-400/20 mb-8">
+        <h3 class="text-2xl font-bold text-white mb-2">4. State Street Global Advisors (SSGA)</h3>
+        <p class="text-sm text-blue-300 font-bold mb-4 uppercase tracking-widest">Instalatorul Sistemului Financiar</p>
+        <p class="text-gray-300 mb-4"><strong>Analiză Strategică:</strong> State Street este "motorul invizibil" al piețelor. Ca administrator al SPY (cel mai mare și lichid ETF din lume), SSGA a beneficiat enorm de pe urma bull market-ului secular. În ultimii ani, firma s-a concentrat pe tehnologie și servicii de "middle office". Parteneriatul cu Galaxy Digital pentru lansarea de noi produse crypto semnalează o adaptare la cerințele clienților instituționali care doresc expunere la active digitale, dar prin vehicule familiare și reglementate.</p>
+        <p class="text-gray-300 mb-4"><strong>Semnătura Strategică:</strong> Hegemonia SPY și Digital Assets. Menținerea SPY ca standardul de aur pentru lichiditate globală, în timp ce pivotează subtil către active digitale prin parteneriate strategice.</p>
+        <p class="text-gray-300 text-sm mb-4"><strong class="text-blue-400">Poziția față de Crypto:</strong> Pragmatism Infrastructural. Văd oportunitatea în custodie și contabilitate.</p>
+        <div class="flex items-center gap-2 text-blue-400 text-sm font-bold border-t border-gray-700 pt-3">
+            <span>🎯 Pariul pentru 2026:</span> "Incomod de Optimist" (Uncomfortably Bullish)
+        </div>
+      </div>
+
+      <div class="bg-gray-900/40 p-6 rounded-2xl border border-blue-800/20 mb-8">
+        <h3 class="text-2xl font-bold text-white mb-2">5. J.P. Morgan Asset Management</h3>
+        <p class="text-sm text-gray-400 font-bold mb-4 uppercase tracking-widest">Bancherul Global</p>
+        <p class="text-gray-300 mb-4"><strong>Analiză Strategică:</strong> Sub umbrela celei mai mari bănci din SUA, JPMAM a navigat deceniul combinând cercetarea profundă cu capacitatea de distribuție globală. Jamie Dimon, CEO-ul grupului, a fost un critic vocal al Bitcoin, dar divizia de asset management a fost pragmatică, dezvoltând blockchain-ul privat Onyx și oferind clienților acces la fonduri crypto. Această dualitate (scepticism public, inovație privată) a definit abordarea lor.</p>
+        <p class="text-gray-300 mb-4"><strong>Semnătura Strategică:</strong> Onyx și Tokenizarea Intrabancară. Crearea rețelei Onyx pentru plăți interbancare instantanee și repo-uri tokenizate a demonstrat utilitatea tehnologiei blockchain într-un mediu controlat.</p>
+        <div class="flex items-center gap-2 text-blue-400 text-sm font-bold border-t border-gray-700 pt-3">
+            <span>🎯 Pariul pentru 2026:</span> AI Supercycle și Diversificare Globală
+        </div>
+      </div>
+
+      <div class="bg-gray-900/40 p-6 rounded-2xl border border-gray-600/20 mb-8">
+        <h3 class="text-2xl font-bold text-white mb-2">6. Capital Group</h3>
+        <p class="text-sm text-gray-400 font-bold mb-4 uppercase tracking-widest">Giganții Tăcuți ai Managementului Activ</p>
+        <p class="text-gray-300 mb-4"><strong>Analiză Strategică:</strong> Capital Group, administratorul familiei "American Funds", a rămas bastionul investițiilor active. Într-o lume care fugea spre ETF-uri pasive, Capital Group a demonstrat că selecția atentă a acțiunilor (stock picking) poate genera surperfomanță pe termen lung. Ei au evitat "modele" volatile și s-au concentrat pe companii multinaționale cu bilanțuri solide.</p>
+        <p class="text-gray-300 mb-4"><strong>Semnătura Strategică:</strong> Sistemul Multi-Manager. Utilizarea sistemului lor unic unde portofoliul este divizat între mai mulți manageri cu convingeri independente a permis o diversificare internă robustă.</p>
+        <div class="flex items-center gap-2 text-blue-400 text-sm font-bold border-t border-gray-700 pt-3">
+            <span>🎯 Pariul pentru 2026:</span> Companiile Industriale și Sănătatea
+        </div>
+      </div>
+
+      <div class="h-px bg-gray-800 my-12"></div>
+
+      <h2 class="text-3xl font-black text-purple-400 mb-6">Partea II: Fabricile de Alpha (Hedge Funds & PE)</h2>
+
+      <div class="bg-gray-900/40 p-6 rounded-2xl border border-purple-500/20 mb-8">
+        <h3 class="text-2xl font-bold text-white mb-2">7. Blackstone Inc.</h3>
+        <p class="text-sm text-purple-300 font-bold mb-4 uppercase tracking-widest">Împăratul Piețelor Private</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6 text-xs text-gray-400 border-b border-gray-700 pb-4">
+            <div><strong>Tip:</strong> Private Equity</div>
+            <div><strong>AUM (2025):</strong> $1.21 Trilioane</div>
+            <div><strong>Sediul:</strong> New York, SUA</div>
+            <div><strong>CEO:</strong> Stephen Schwarzman</div>
+        </div>
+        <p class="text-gray-300 mb-4"><strong>Analiză Strategică:</strong> Blackstone a redefinit conceptul de investiții alternative. Prin crearea BREIT, a adus activele imobiliare private în portofoliile investitorilor individuali. Concomitent, a devenit "banca din umbră" a lumii, oferind credit privat. În 2024-2025, Blackstone a pivotat masiv către infrastructura digitală, devenind cel mai mare proprietar de centre de date din lume.</p>
+        <p class="text-gray-300 mb-4"><strong>Semnătura Strategică:</strong> Pariul pe Centre de Date. Achiziția QTS Realty Trust și expansiunea agresivă în centre de date a fost mișcarea definitorie. Blackstone a înțeles înaintea pieței că AI-ul nu este doar software, ci necesită active imobiliare și energetice masive.</p>
+        <div class="flex items-center gap-2 text-purple-400 text-sm font-bold border-t border-gray-700 pt-3">
+            <span>🎯 Pariul pentru 2026:</span> "The Deal Dam Breaking" (Energie & Credit Privat)
+        </div>
+      </div>
+
+      <div class="bg-gray-900/40 p-6 rounded-2xl border border-green-500/20 mb-8">
+        <h3 class="text-2xl font-bold text-white mb-2">8. Citadel & Citadel Securities</h3>
+        <p class="text-sm text-green-400 font-bold mb-4 uppercase tracking-widest">Stăpânii Volatilității</p>
+        <p class="text-gray-300 mb-4"><strong>Analiză Strategică:</strong> Citadel a dominat deceniul prin consistență brutală. Fondul Wellington a generat randamente pozitive an de an. Ken Griffin a construit o mașinărie dublă: fondul speculativ care face pariuri direcționale și Citadel Securities, care procesează o mare parte din volumul de tranzacționare retail din SUA. Mutarea sediului din Chicago în Miami a simbolizat ascensiunea unui nou centru financiar.</p>
+        <p class="text-gray-300 mb-4"><strong>Semnătura Strategică:</strong> Dominanța Market Making-ului și Trading-ul de Bază. Excelența în "Basis Trade" a transformat Citadel într-o instituție "prea importantă pentru a eșua".</p>
+        <p class="text-gray-300 text-sm mb-4"><strong class="text-green-400">Poziția față de Crypto:</strong> De la Sceptic la Jucător. Ken Griffin a trecut de la a numi crypto un "jihadist call" la a deschide un desk de trading crypto.</p>
+        <div class="flex items-center gap-2 text-purple-400 text-sm font-bold border-t border-gray-700 pt-3">
+            <span>🎯 Pariul pentru 2026:</span> "The Debasement Trade"
+        </div>
+      </div>
+
+      <div class="bg-gray-900/40 p-6 rounded-2xl border border-yellow-600/20 mb-8">
+        <h3 class="text-2xl font-bold text-white mb-2">9. Bridgewater Associates</h3>
+        <p class="text-sm text-yellow-500 font-bold mb-4 uppercase tracking-widest">Filozofii Macroeconomiei Radicale</p>
+        <p class="text-gray-300 mb-4"><strong>Analiză Strategică:</strong> Bridgewater a navigat tranziția dificilă de la fondatorul Ray Dalio la o nouă generație. Fondul a rămas fidel strategiei "Pure Alpha", încercând să prezică mișcările macroeconomice globale. Au pariat corect pe persistența inflației post-COVID.</p>
+        <p class="text-gray-300 mb-4"><strong>Semnătura Strategică:</strong> Analiza Ciclurilor Datoriei. Modelul lui Dalio privind "Schimbarea Ordinii Mondiale" și ciclurile de îndatorare pe termen lung a ghidat poziționarea fondului: short pe obligațiunile guvernamentale vestice și long pe aur și active reale.</p>
+        <div class="flex items-center gap-2 text-purple-400 text-sm font-bold border-t border-gray-700 pt-3">
+            <span>🎯 Pariul pentru 2026:</span> Criza Datoriei Suverane
+        </div>
+      </div>
+
+      <div class="bg-gray-900/40 p-6 rounded-2xl border border-blue-500/20 mb-8">
+        <h3 class="text-2xl font-bold text-white mb-2">10. Millennium Management</h3>
+        <p class="text-sm text-blue-300 font-bold mb-4 uppercase tracking-widest">Uzina de Alpha Fragmentat</p>
+        <p class="text-gray-300 mb-4"><strong>Analiză Strategică:</strong> Millennium a perfecționat modelul "Pod Shop": sute de echipe de trading independente, fiecare cu propriul buget de risc, concurând intern. Dacă pierzi bani, ești eliminat. În 2024-2025, Millennium a surprins piața devenind unul dintre cei mai mari cumpărători de ETF-uri Bitcoin, nu din convingere ideologică, ci pentru arbitraj.</p>
+        <p class="text-gray-300 mb-4"><strong>Semnătura Strategică:</strong> Arbitrajul ETF Bitcoin. Millennium a acumulat poziții masive în IBIT și FBTC ($1.31 Mld în IBIT) pentru a executa strategii de "basis trading" (cumpărare spot/ETF, vânzare futures).</p>
+        <div class="flex items-center gap-2 text-purple-400 text-sm font-bold border-t border-gray-700 pt-3">
+            <span>🎯 Pariul pentru 2026:</span> Dispersia Randamentelor
+        </div>
+      </div>
+
+      <div class="bg-gray-900/40 p-6 rounded-2xl border border-purple-500/20 mb-8">
+        <h3 class="text-2xl font-bold text-white mb-2">11. Renaissance Technologies (RenTech)</h3>
+        <p class="text-sm text-purple-300 font-bold mb-4 uppercase tracking-widest">Alchimiștii Matematici</p>
+        <p class="text-gray-300 mb-4"><strong>Analiză Strategică:</strong> Fondul Medallion a continuat să genereze randamente legendare (+30-66% anualizat), sfidând logica piețelor eficiente. Chiar și după moartea fondatorului Jim Simons, "mașina" a continuat să funcționeze. RenTech a integrat tehnici de Machine Learning avansat mult înaintea hype-ului AI actual.</p>
+        <p class="text-gray-300 mb-4"><strong>Semnătura Strategică:</strong> "Cutia Neagră" a Medallion. Capacitatea de a extrage profit din modele matematice complexe pe mii de instrumente simultan.</p>
+        <div class="flex items-center gap-2 text-purple-400 text-sm font-bold border-t border-gray-700 pt-3">
+            <span>🎯 Pariul pentru 2026:</span> Machine Learning și Semnale Alternative
+        </div>
+      </div>
+
+      <div class="bg-gray-900/40 p-6 rounded-2xl border border-orange-500/20 mb-8">
+        <h3 class="text-2xl font-bold text-white mb-2">12. Tiger Global Management</h3>
+        <p class="text-sm text-orange-400 font-bold mb-4 uppercase tracking-widest">Călăreții Unicornilor</p>
+        <p class="text-gray-300 mb-4"><strong>Analiză Strategică:</strong> Tiger Global a definit modelul de investiții "Crossover": investind agresiv atât în companii private (pre-IPO), cât și în cele publice. Au accelerat viteza de investiție în VC la un nivel frenetic în 2020-2021, ceea ce a dus la pierderi masive în 2022. Totuși, firma a revenit spectaculos în 2024-2025 prin pariuri concentrate pe AI și tehnologie.</p>
+        <p class="text-gray-300 mb-4"><strong>Semnătura Strategică:</strong> Viteza de Execuție în VC. Abilitatea de a închide runde de finanțare în câteva zile, oferind condiții prietenoase fondatorilor și evaluări mari.</p>
+        <div class="flex items-center gap-2 text-purple-400 text-sm font-bold border-t border-gray-700 pt-3">
+            <span>🎯 Pariul pentru 2026:</span> India și AI
+        </div>
+      </div>
+
+      <div class="h-px bg-gray-800 my-12"></div>
+
+      <h2 class="text-3xl font-black text-orange-400 mb-6">Partea III: Arhitecții Viitorului (Venture Visionaries)</h2>
+
+      <div class="bg-gray-900/40 p-6 rounded-2xl border border-blue-600/20 mb-8">
+        <h3 class="text-2xl font-bold text-white mb-2">13. Andreessen Horowitz (a16z)</h3>
+        <p class="text-sm text-blue-400 font-bold mb-4 uppercase tracking-widest">Software-ul și Dinamismul American</p>
+        <div class="grid grid-cols-2 gap-4 mb-4 text-xs text-gray-400">
+            <div><strong>AUM:</strong> ~$52 Mld</div>
+            <div><strong>Sediul:</strong> Silicon Valley</div>
+        </div>
+        <p class="text-gray-300 mb-4"><strong>Analiză Strategică:</strong> a16z a reinventat modelul VC, construind o firmă care arată mai mult ca o agenție de talente de la Hollywood + o firmă de lobby. Au creat fonduri dedicate masive pentru Crypto, Bio și Jocuri. În ultimii ani, au lansat conceptul de "American Dynamism", investind în companii care rezolvă probleme naționale critice (apărare, producție, spațiu).</p>
+        <p class="text-gray-300 mb-4"><strong>Semnătura Strategică:</strong> "State of Crypto" și Lobby-ul Politic. a16z a devenit vocea industriei crypto la Washington, publicând rapoarte influente și susținând legislația favorabilă. Au mutat discuția de la "crypto ca speculă" la "crypto ca noul internet".</p>
+        <p class="text-gray-300 text-sm mb-4"><strong class="text-green-400">Poziția față de Crypto:</strong> All-In. Cu fonduri dedicate de miliarde (CSX), a16z este cel mai influent investitor.</p>
+        <div class="flex items-center gap-2 text-orange-400 text-sm font-bold border-t border-gray-700 pt-3">
+            <span>🎯 Pariul pentru 2026:</span> Agentic AI și Apărare
+        </div>
+      </div>
+
+      <div class="bg-gray-900/40 p-6 rounded-2xl border border-green-500/20 mb-8">
+        <h3 class="text-2xl font-bold text-white mb-2">14. Sequoia Capital</h3>
+        <p class="text-sm text-green-400 font-bold mb-4 uppercase tracking-widest">Evergreen-ul din Silicon Valley</p>
+        <p class="text-gray-300 mb-4"><strong>Analiză Strategică:</strong> Sequoia a demonstrat o capacitate incredibilă de adaptare. Au supraviețuit scandalului FTX și tensiunilor geopolitice. Transformarea în fond "Evergreen" (Sequoia Capital Fund) le permite să dețină acțiuni pe termen nelimitat, rupând ciclul de 10 ani al fondurilor VC tradiționale și permițând acumularea de valoare pe termen foarte lung (compounding).</p>
+        <p class="text-gray-300 mb-4"><strong>Semnătura Strategică:</strong> Structura Evergreen. Această inovație le permite să nu vândă companii precum Stripe sau SpaceX prematur, maximizând randamentele.</p>
+        <div class="flex items-center gap-2 text-orange-400 text-sm font-bold border-t border-gray-700 pt-3">
+            <span>🎯 Pariul pentru 2026:</span> Superciclul AI
+        </div>
+      </div>
+
+      <div class="bg-gray-900/40 p-6 rounded-2xl border border-purple-500/20 mb-8">
+        <h3 class="text-2xl font-bold text-white mb-2">15. Founders Fund</h3>
+        <p class="text-sm text-purple-300 font-bold mb-4 uppercase tracking-widest">Contrarienii Libertarieni (Peter Thiel)</p>
+        <p class="text-gray-300 mb-4"><strong>Analiză Strategică:</strong> Founders Fund a pariat constant împotriva consensului: pe Bitcoin când era obscur (2014), pe SpaceX când rachetele explodau, și pe tehnologie de apărare când Silicon Valley o respingea etic. Manifestul lor, "Am vrut mașini zburătoare, am primit 140 de caractere", a ghidat investițiile către "Deep Tech".</p>
+        <p class="text-gray-300 mb-4"><strong>Semnătura Strategică:</strong> Pariul pe Bitcoin și Hard Tech. Achiziția de Bitcoin în bilanț și susținerea Anduril Industries au fost mișcări care au definit direcția industriei ani mai târziu.</p>
+        <p class="text-gray-300 text-sm mb-4"><strong class="text-orange-400">Poziția față de Crypto:</strong> Maximalistă. Văd Bitcoin ca un instrument de suveranitate.</p>
+        <div class="flex items-center gap-2 text-orange-400 text-sm font-bold border-t border-gray-700 pt-3">
+            <span>🎯 Pariul pentru 2026:</span> Tehnologia Duală și Spațiul
+        </div>
+      </div>
+
+      <div class="bg-gray-900/40 p-6 rounded-2xl border border-yellow-500/20 mb-8">
+        <h3 class="text-2xl font-bold text-white mb-2">16. Paradigm</h3>
+        <p class="text-sm text-yellow-400 font-bold mb-4 uppercase tracking-widest">Nativii Web3</p>
+        <p class="text-gray-300 mb-4"><strong>Analiză Strategică:</strong> Paradigm a introdus modelul de "VC tehnic". Ei nu doar investesc bani, ci contribuie cu cod (ex. Uniswap v3, Ethereum clients Reth). Această abordare le-a câștigat respectul dezvoltatorilor și accesul la cele mai bune tranzacții. Au rămas fideli crypto-ului chiar și în "iernile" pieței.</p>
+        <p class="text-gray-300 mb-4"><strong>Semnătura Strategică:</strong> Incubarea Uniswap și Monad. Paradigm a fost instrumental în crearea modelului AMM (Automated Market Maker) care stă la baza DeFi-ului și acum susține Monad, un blockchain de nouă generație.</p>
+        <div class="flex items-center gap-2 text-orange-400 text-sm font-bold border-t border-gray-700 pt-3">
+            <span>🎯 Pariul pentru 2026:</span> Parallel EVM și Finanțe Agentice
+        </div>
+      </div>
+
+      <div class="bg-gray-900/40 p-6 rounded-2xl border border-pink-500/20 mb-8">
+        <h3 class="text-2xl font-bold text-white mb-2">17. Pantera Capital</h3>
+        <p class="text-sm text-pink-400 font-bold mb-4 uppercase tracking-widest">Pionierii Ciclurilor Crypto</p>
+        <p class="text-gray-300 mb-4"><strong>Analiză Strategică:</strong> Lansat în 2013, Pantera este veteranul industriei. Au navigat multiple bule și prăbușiri. În 2024-2025, au făcut o mișcare curajoasă investind masiv în ecosistemul TON (Telegram) și Solana, diversificându-se dincolo de "Maximalismul Bitcoin" tradițional.</p>
+        <p class="text-gray-300 mb-4"><strong>Semnătura Strategică:</strong> Pariul pe TON și Social Crypto. Investiția în TON a fost bazată pe teza că onboarding-ul a 900 de milioane de utilizatori Telegram în crypto este cea mai rapidă cale spre adopție de masă.</p>
+        <div class="flex items-center gap-2 text-orange-400 text-sm font-bold border-t border-gray-700 pt-3">
+            <span>🎯 Pariul pentru 2026:</span> Claritate Regulatorie
+        </div>
+      </div>
+
+      <div class="bg-gray-900/40 p-6 rounded-2xl border border-gray-500/20 mb-8">
+        <h3 class="text-2xl font-bold text-white mb-2">18. SoftBank Vision Fund</h3>
+        <p class="text-sm text-gray-400 font-bold mb-4 uppercase tracking-widest">Gamblerul Global</p>
+        <p class="text-gray-300 mb-4"><strong>Analiză Strategică:</strong> SoftBank a distorsionat piața VC prin dimensiunea Vision Fund ($100 mld în 2017). Au avut eșecuri spectaculoase (WeWork), dar și succese critice (ARM). Masayoshi Son a pivotat de la "internetul lucrurilor" la "AI revolution", folosind ARM ca pivot central.</p>
+        <p class="text-gray-300 mb-4"><strong>Semnătura Strategică:</strong> IPO-ul ARM și Pivotul AI. Listarea ARM și utilizarea acesteia ca bază pentru un nou ecosistem de cipuri AI marchează revenirea SoftBank în jocul mare.</p>
+        <div class="flex items-center gap-2 text-orange-400 text-sm font-bold border-t border-gray-700 pt-3">
+            <span>🎯 Pariul pentru 2026:</span> Superinteligența Artificială (ASI)
+        </div>
+      </div>
+
+      <div class="h-px bg-gray-800 my-12"></div>
+
+      <h2 class="text-3xl font-black text-white mb-6">Partea IV: Disruptorii Corporativi</h2>
+
+      <div class="bg-gradient-to-r from-orange-900/40 to-black p-6 rounded-2xl border border-orange-500/40 mb-8">
+        <h3 class="text-2xl font-bold text-white mb-2">19. MicroStrategy</h3>
+        <p class="text-sm text-orange-400 font-bold mb-4 uppercase tracking-widest">Banca Centrală a Bitcoin-ului</p>
+        <div class="grid grid-cols-2 gap-4 mb-4 text-xs text-white">
+            <div><strong>Dețineri BTC:</strong> ~671,268 BTC</div>
+            <div><strong>Valoare BTC:</strong> ~$74 Miliarde</div>
+        </div>
+        <p class="text-gray-300 mb-4"><strong>Analiză Strategică:</strong> Michael Saylor a realizat probabil cea mai spectaculoasă transformare corporativă din istorie. Confruntat cu o afacere software stagnantă și o trezorerie care pierdea valoare reală, a pariat totul pe Bitcoin în 2020. A creat un "flywheel": emite datorie/acțiuni -> cumpără BTC -> prețul acțiunii crește -> emite mai mult. Strategia a funcționat, MSTR depășind performanța S&P 500.</p>
+        <p class="text-gray-300 mb-4"><strong>Semnătura Strategică:</strong> <span class="text-white font-bold">Atacul Speculativ asupra Fiat.</span> MicroStrategy se împrumută în dolari (monedă care se devalorizează) pentru a cumpăra Bitcoin (activ care se apreciază), arbitrând diferența.</p>
+        <div class="flex items-center gap-2 text-white text-sm font-bold border-t border-orange-500/30 pt-3">
+            <span>🎯 Pariul pentru 2026:</span> Standardul Bitcoin Global
+        </div>
+      </div>
+
+      <div class="bg-gray-900/40 p-6 rounded-2xl border border-red-500/20 mb-8">
+        <h3 class="text-2xl font-bold text-white mb-2">20. Tesla</h3>
+        <p class="text-sm text-red-400 font-bold mb-4 uppercase tracking-widest">Tehnocrația Energetică</p>
+        <p class="text-gray-300 mb-4"><strong>Analiză Strategică:</strong> Tesla a integrat Bitcoin în bilanț în 2021, validând activul. Deși a vândut o parte în 2022, a păstrat un nucleu strategic. Dar adevărata poveste este pivotul către AI și Robotică (Optimus, Robotaxi), transformând Tesla dintr-un producător auto într-o companie de inteligență artificială aplicată.</p>
+        <p class="text-gray-300 mb-4"><strong>Semnătura Strategică:</strong> Rețeaua Autonomă și HODL-ul Strategic. Menținerea Bitcoin în bilanț ("Diamond Hands") în ciuda presiunilor pieței, semnalând încredere în activ.</p>
+        <div class="flex items-center gap-2 text-white text-sm font-bold border-t border-gray-700 pt-3">
+            <span>🎯 Pariul pentru 2026:</span> Autonomie și Robotică
+        </div>
+      </div>
+
+      <div class="bg-[#0a0f1e] p-8 rounded-2xl border border-blue-500/30 mt-12">
+        <h2 class="text-2xl font-bold text-white mb-6">Partea V: Analiza Tendințelor și Outlook 2026</h2>
+        
+        <div class="space-y-6 text-gray-300">
+            <div>
+                <strong class="text-blue-400 block text-lg mb-2">1. Marea De-dolarizare a Portofoliilor</strong>
+                <p>Există un consens tot mai larg (de la Citadel la Bridgewater și MicroStrategy) că datoria suverană a SUA a devenit problematică. Răspunsul nu este neapărat vânzarea dolarului, ci cumpărarea de Active Hard: Aur, Bitcoin, Infrastructură. Pentru 2026, ne așteptăm ca această tendință să accelereze. "Debasement Trade" (pariul pe devalorizare) va deveni standard instituțional.</p>
+            </div>
+            <div>
+                <strong class="text-purple-400 block text-lg mb-2">2. Micro devine Macro: AI ca Destin Economic</strong>
+                <p>Investițiile în AI nu mai sunt doar o verticală a tehnologiei, ci motorul economic global. BlackRock și Blackstone investesc în energie pentru AI. Sequoia și a16z investesc în agenți AI. SoftBank și Nvidia construiesc cipurile. Pariul 2026: Infrastructura fizică (energie, centre de date) va fi constrângerea principală, iar capitalul va curge masiv în rezolvarea acestei probleme (inclusiv energie nucleară).</p>
+            </div>
+            <div>
+                <strong class="text-green-400 block text-lg mb-2">3. Convergența Public-Privat</strong>
+                <p>Companiile rămân private mai mult timp (trend susținut de VC-uri). Ca răspuns, managerii de active publici (Vanguard, BlackRock) creează vehicule pentru a oferi acces investitorilor de rând la piețele private. Granița dintre Private Equity și Public Equity se va estompa total în 2026.</p>
+            </div>
+            <div>
+                <strong class="text-orange-400 block text-lg mb-2">4. Instituționalizarea Crypto este Completă</strong>
+                <p>Cu BlackRock deținând zeci de miliarde în Bitcoin și Fidelity integrând crypto în pensii, faza de "adoptare timpurie" s-a încheiat. Urmează faza de integrare financiară: folosirea token-urilor ca garanție (collateral), plăți internaționale (stablecoins) și infrastructură de piață.</p>
+            </div>
+        </div>
+        
+        <div class="mt-8 pt-6 border-t border-gray-700">
+            <h4 class="text-xl font-bold text-white mb-2">Concluzie Finală</h4>
+            <p class="text-white font-bold italic mb-4">"Peisajul investițional al anului 2026 va fi dominat de cei care dețin active rare (Bitcoin, Aur, Proprietate Intelectuală AI, Energie) și de cei care construiesc infrastructura noii economii. Vechea gardă (Vanguard, Berkshire) pariază pe prudență și revenirea la medie, în timp ce noua gardă (BlackRock, a16z, MicroStrategy) pariază pe o schimbare de paradigmă accelerată de tehnologie și devalorizare monetară. Divergența continuă."</p>
+            <p class="text-xs text-gray-500 mt-4">Raport redactat de Analist Senior pentru uz intern. Sursele datelor sunt indicate în paranteze.</p>
+        </div>
+      </div>
+    `
+  }, 
+  
 // ✅ 0. ARTICOL NOU (TAXE CRYPTO EUROPA 2026) - ON TOP
   {
     id: 'crypto-tax-guide-europe-2025-2026-romania-heaven',
