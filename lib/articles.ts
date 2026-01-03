@@ -1,4 +1,854 @@
-export const articles = [
+export const articles = [      
+// ✅ 0. ARTICOL NOU (TAXE CRYPTO EUROPA 2026) - ON TOP
+  {
+    id: 'crypto-tax-guide-europe-2025-2026-romania-heaven',
+    slug: 'harta-banilor-taxe-crypto-europa-2025-2026',
+    title: 'HARTA BANILOR TĂI: Ghidul Taxelor Crypto în Europa (2025-2026). Unde ești "Boier" și unde ești "Jecmănit"?',
+    summary: 'Ghidul complet al fiscalității crypto în Era MiCA. Comparație între "Raiurile Fiscale" (Germania, Portugalia), "Iadul Fiscal" (Scandinavia) și de ce România rămâne "Goldilocks" pentru investitori. Un material educativ esențial.',
+    category: 'FISCALITATE & EDUCAȚIE',
+    image: '/taxeeu2.jpg',
+    date: '02 Jan 2026',
+    readTime: '6 min',
+    author: 'Mihai Daniel',
+    impact: 'neutral', // Educativ
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🇪🇺 Fiscalitate Comparată</span>
+        <span class="bg-purple-500/20 text-purple-300 border border-purple-500/30 px-3 py-1 rounded text-xs font-bold uppercase">📜 Context: Era MiCA</span>
+      </div>
+
+      <div class="bg-yellow-500/10 border border-yellow-500/30 p-4 rounded-lg mb-8">
+        <p class="text-yellow-200 text-sm font-bold">⚠️ Avertisment: Acesta este un material educativ, nu consultanță fiscală. Legile se schimbă.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Marea Confuzie: MiCA ne mărește taxele?</h3>
+      <p class="mb-4 text-gray-300">Să lămurim din start "elefantul din cameră". Toată lumea vorbește de MiCA.</p>
+      <ul class="list-disc pl-6 text-gray-300 mb-4 space-y-2">
+        <li><strong>Ce face MiCA:</strong> Obligă Binance, Kraken etc. să fie transparenți, să aibă rezerve și să raporteze tranzacțiile suspecte.</li>
+        <li><strong>Ce NU face MiCA:</strong> Nu impune un impozit unic european.</li>
+      </ul>
+      <p class="mb-6 text-gray-300">Asta înseamnă că locația ta fiscală (unde ai rezidența) este mai importantă ca niciodată. Dacă ești rezident în România, plătești după legea română, chiar dacă tranzacționezi pe o platformă reglementată în Franța.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. Categoria "Raiul Investitorilor" (Condiționat)</h3>
+      <p class="mb-6 text-gray-300">Aici sunt țările unde poți plăti 0%, dar trebuie să respecți reguli stricte de timp (HODL).</p>
+      
+      <div class="space-y-4 mb-8">
+        <div class="bg-[#0a0f1e] p-4 rounded-xl border-l-4 border-green-500">
+            <strong class="text-green-400 block text-lg">🇩🇪 GERMANIA</strong>
+            <p class="text-gray-300 text-sm mt-2"><strong>Regula:</strong> Dacă deții crypto mai mult de 1 an, impozitul este 0%.</p>
+            <p class="text-gray-300 text-sm"><strong>Capcana:</strong> Dacă vinzi sub 1 an, plătești impozit pe venit progresiv (până la 45%).</p>
+            <p class="text-white font-bold text-xs mt-2 uppercase">Verdict: Paradis pentru HODL-eri, Iad pentru Traderi.</p>
+        </div>
+
+        <div class="bg-[#0a0f1e] p-4 rounded-xl border-l-4 border-green-500">
+            <strong class="text-green-400 block text-lg">🇵🇹 PORTUGALIA</strong>
+            <p class="text-gray-300 text-sm mt-2"><strong>Regula:</strong> S-a schimbat recent. Acum este 0% doar dacă deții activele mai mult de 365 de zile.</p>
+            <p class="text-gray-300 text-sm"><strong>Capcana:</strong> Dacă vinzi sub 1 an, impozitul este 28%.</p>
+            <p class="text-white font-bold text-xs mt-2 uppercase">Verdict: Nu mai este "Vestul Sălbatic", dar rămâne excelent pentru investitorii pe termen lung.</p>
+        </div>
+
+        <div class="bg-[#0a0f1e] p-4 rounded-xl border-l-4 border-green-500">
+            <strong class="text-green-400 block text-lg">🇨🇭 ELVEȚIA</strong>
+            <p class="text-gray-300 text-sm mt-2"><strong>Regula:</strong> Pentru investitorii privați (nu profesioniști), câștigul de capital este scutit de impozit (0%).</p>
+            <p class="text-gray-300 text-sm"><strong>Capcana:</strong> Există "Wealth Tax" (Impozit pe Avere). Plătești anual un mic procent din valoarea totală a portofoliului, chiar dacă nu vinzi.</p>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. Categoria "Goldilocks" (Echilibrat & Prietenos)</h3>
+      <p class="mb-6 text-gray-300">Aici intră țările cu cote unice, rezonabile. Surpriză: România este lider aici.</p>
+
+      <div class="bg-blue-900/20 p-5 rounded-xl border border-blue-500 mb-6">
+        <strong class="text-blue-400 block text-xl mb-2">🇷🇴 ROMÂNIA</strong>
+        <ul class="space-y-2 text-gray-300">
+            <li><strong>Impozit:</strong> 10% pe câștig (diferența dintre preț vânzare și preț cumpărare).</li>
+            <li><strong>Extra:</strong> CASS (Sănătate) plafonat la 6, 12 sau 24 de salarii minime, doar dacă depășești plafoanele.</li>
+        </ul>
+        <p class="text-white font-bold mt-4">Verdict: Unul dintre cele mai bune regimuri din UE. Simplu, cotă mică, predictibil.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-4 mb-8">
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <strong class="text-white">🇧🇬 BULGARIA</strong>
+            <p class="text-gray-400 text-sm">Impozit: 10% Flat Tax. <br> Verdict: Similar cu România, foarte competitiv.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <strong class="text-white">🇮🇹 ITALIA</strong>
+            <p class="text-gray-400 text-sm">Impozit: S-a mărit la 26% (pentru câștiguri peste 2.000€). <br> Verdict: A devenit scumpă recent.</p>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">4. Categoria "Iadul Fiscal" (Taxe Uriașe)</h3>
+      <p class="mb-6 text-gray-300">Țările unde statul îți devine "partener de afaceri" forțat și îți ia jumătate din profit.</p>
+      
+      <div class="space-y-4 mb-8">
+        <div class="bg-red-900/10 p-4 rounded-xl border border-red-500/30">
+            <strong class="text-red-400 block">🇫🇷 FRANȚA</strong>
+            <p class="text-gray-300 text-sm"><strong>Impozit:</strong> Flat Tax de 30% (Prélèvement Forfaitaire Unique). Verdict: Dureros, dar simplu.</p>
+        </div>
+        <div class="bg-red-900/10 p-4 rounded-xl border border-red-500/30">
+            <strong class="text-red-400 block">🇩🇰 DANEMARCA & SCANDINAVIA</strong>
+            <p class="text-gray-300 text-sm"><strong>Impozit:</strong> Crypto este considerat venit personal. Impozitul poate ajunge la 52% sau chiar mai mult.</p>
+            <p class="text-gray-300 text-sm"><strong>Capcana:</strong> În unele cazuri, pierderile nu sunt deductibile 100%, dar câștigurile sunt taxate full. Verdict: "No-Go Zone" pentru crypto.</p>
+        </div>
+      </div>
+
+      <div class="mt-8 bg-gradient-to-r from-gray-900 to-black p-8 rounded-2xl border border-blue-500/30">
+        <h4 class="text-xl font-bold text-white mb-4">🏠 Mihai Daniel Take: Apreciază ce ai acasă</h4>
+        <p class="text-gray-300 mb-4 italic">"De multe ori ne uităm peste gard și credem că iarba e mai verde. În realitate, un investitor român care plătește 10% impozit este invidiat de un francez care plătește 30% sau de un danez care plătește 50%."</p>
+        <p class="text-gray-300 mb-4">Nu fugiți după fente. 'Paradisurile' precum Dubai sau Monaco vin cu costuri de viață care, de multe ori, depășesc economia făcută la taxe (dacă nu ai portofoliu de milioane).</p>
+        <p class="text-gray-300 mb-4 font-bold text-white">România rămâne, în 2026, un hub fiscal excelent pentru crypto.</p>
+        <p class="text-white font-bold text-lg text-center mt-6">Plătiți-vă cei 10% și dormiți liniștiți. E un preț mic pentru libertate.</p>
+      </div>
+    `
+  },
+// ✅ 0. ARTICOL NOU (CICLUL DE 4 ANI MORT - SUPERCYCLE) - ON TOP
+  {
+    id: 'bitcoin-4-year-cycle-dead-supercycle-analysis',
+    slug: 's-a-rupt-ceasul-ciclu-4-ani-bitcoin-mort-2026',
+    title: 'S-A RUPT CEASUL? De ce Ciclul de 4 Ani al Bitcoin este oficial "Mort" și ce înseamnă asta pentru 2026.',
+    summary: 'Bitcoin a încălcat regula de aur și a spart maximul înainte de Halving. De ce ETF-urile au ucis ciclul fix, teoria Superciclului și de ce în 2026 nu mai contează calendarul, ci tiparnița de bani.',
+    category: 'ANALIZĂ DE CICLU',
+    image: '/ciclulde4ani.jpg',
+    date: '01 Jan 2026',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'neutral', // Educațional / Schimbare de paradigmă
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase animate-pulse">✅ Status: CONFIRMAT (Prin Preț)</span>
+        <span class="bg-purple-500/20 text-purple-300 border border-purple-500/30 px-3 py-1 rounded text-xs font-bold uppercase">📉 Fenomen: Decuplarea de Halving</span>
+      </div>
+
+      <p class="mb-4 text-gray-300"><strong>Noua Realitate:</strong> Ciclul de Lichiditate Globală</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Dovada: "Anomalia" din Martie 2024</h3>
+      <p class="mb-4 text-gray-300">Timp de 12 ani, regula a fost sfântă:</p>
+      <ul class="list-decimal pl-6 text-gray-300 mb-4 space-y-1">
+        <li>Vine Halving-ul (înjumătățirea).</li>
+        <li>Urmează șocul de ofertă.</li>
+        <li>Prețul explodează după 6-12 luni.</li>
+      </ul>
+      
+      <div class="bg-[#0a0f1e] p-6 rounded-xl border-l-4 border-red-500 mb-6">
+        <strong class="text-red-400 block mb-2">În acest ciclu, regula a fost încălcată.</strong>
+        <p class="text-gray-300">Bitcoin a spart maximul istoric în Martie 2024, cu o lună înainte de Halving. Acesta a fost "glonțul" care a ucis teoria ciclului fix.</p>
+        <p class="text-white font-bold mt-2 border-t border-gray-700 pt-2">Cauza: ETF-urile Spot (BlackRock, Fidelity). Cererea instituțională a fost atât de mare încât a devansat șocul de ofertă al minerilor.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. Ce înseamnă "Ruperea Ciclului"?</h3>
+      <p class="mb-4 text-gray-300">Înseamnă că Bitcoin s-a maturizat.</p>
+      
+      <div class="grid md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-gray-800 p-4 rounded-xl opacity-80">
+            <strong class="text-gray-400 block mb-1">👶 Copilăria (2009-2020)</strong>
+            <p class="text-sm text-gray-400">Bitcoin era mic, volatil și controlat strict de mecanica internă (Halving). Era ca un copil care doarme după un orar fix.</p>
+        </div>
+        <div class="bg-blue-900/20 p-4 rounded-xl border border-blue-500/50">
+            <strong class="text-blue-400 block mb-1">👨‍💼 Maturitatea (Prezent)</strong>
+            <p class="text-sm text-gray-300">Bitcoin este acum un activ macro-economic global, de trilioane de dolari. Nu mai dansează doar după muzica minerilor. Dansează după muzica Lichidității Globale (FED, Dobânzi, ISM).</p>
+        </div>
+      </div>
+      <p class="text-white font-bold italic mb-8">Dacă Wall Street vrea să cumpere, cumpără ACUM, nu așteaptă Halving-ul.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. Cele două Scenarii pentru Ce Urmează (2026 și după)</h3>
+      <p class="mb-4 text-gray-300">Dacă harta veche nu mai e bună, după ce ne ghidăm? Există două teorii majore acum:</p>
+
+      <div class="space-y-6 mb-8">
+        <div class="bg-[#0a0f1e] p-5 rounded-xl border border-green-500/30">
+            <h4 class="text-green-400 font-bold text-lg mb-2">A. SUPERCICLUL (The Supercycle)</h4>
+            <p class="text-gray-300 mb-2"><strong>Teoria:</strong> Bitcoin nu va mai avea acele "Bear Markets" criminale de -80% și nici acele creșteri verticale de 100x în 6 luni.</p>
+            <p class="text-gray-300"><strong>Ce urmează:</strong> O creștere mai lentă, dar constantă (Grind Up), similară cu aurul sau S&P500. Corecțiile vor fi de 20-30%, nu de 80%.</p>
+            <p class="text-green-500 text-sm mt-2 font-bold">Vestea bună: Nu mai există "Iarna Crypto" de 2 ani. Există doar "Sezoane Ploioase".</p>
+        </div>
+
+        <div class="bg-[#0a0f1e] p-5 rounded-xl border border-yellow-500/30">
+            <h4 class="text-yellow-400 font-bold text-lg mb-2">B. LEFT-TRANSLATED CYCLE (Ciclul Devansat)</h4>
+            <p class="text-gray-300 mb-2"><strong>Teoria:</strong> Pentru că am început creșterea mai devreme (Martie 2024), vârful ciclului va veni și el mai devreme decât credem (poate deja în 2025 s-a consumat mare parte din energie).</p>
+            <p class="text-gray-300"><strong>Pericolul:</strong> Cei care așteaptă vârful clasic (sfârșitul lui 2026) s-ar putea să rămână cu monedele în mână, pentru că petrecerea s-a terminat mai repede.</p>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">4. Concluzia: Nu te uita la Calendar, uită-te la Bani</h3>
+      <p class="mb-4 text-gray-300">Ciclul de 4 ani era "roțile ajutătoare" pentru investitori. Acum le-am scos. Bitcoin a devenit un activ Legat de Lichiditate.</p>
+      
+      <div class="bg-gray-900 p-4 rounded-lg mb-8 text-center">
+        <p class="text-green-400 font-bold">Dacă FED tipărește -> Bitcoin crește <span class="text-gray-500 text-xs font-normal">(indiferent de Halving)</span></p>
+        <div class="h-px bg-gray-700 my-2"></div>
+        <p class="text-red-400 font-bold">Dacă economia intră în recesiune -> Bitcoin scade <span class="text-gray-500 text-xs font-normal">(indiferent de Halving)</span></p>
+      </div>
+
+      <div class="mt-8 bg-gradient-to-r from-gray-900 to-black p-8 rounded-2xl border border-blue-500/30">
+        <h4 class="text-xl font-bold text-white mb-4">🧠 Mihai Daniel Take: Suntem pe teritoriu necunoscut</h4>
+        <p class="text-gray-300 mb-4 italic">"Faptul că ciclul de 4 ani s-a rupt este cea mai bună veste posibilă, deși pare înfricoșătoare. Arată că Bitcoin nu mai este o schemă predictibilă de 'Pump & Dump' programată la 4 ani."</p>
+        <p class="text-gray-300 mb-4">A devenit un activ financiar real. Nu vă mai bazați pe datele din 2017 sau 2021. Acelea au fost alte ere.</p>
+        <p class="text-white font-bold text-lg text-center mt-6">În 2026, nu ne întrebăm 'Câte luni au trecut de la Halving?', ci 'Câți bani a tipărit Banca Centrală azi?'</p>
+      </div>
+    `
+  },  
+// ✅ 0. ARTICOL NOU (FED REPO INJECTION - NEW YEAR 2026) - ON TOP
+  {
+    id: 'fed-repo-injection-new-year-2026-liquidity-crisis',
+    slug: 'fed-injectie-31-miliarde-repo-revelion-2026',
+    title: 'BREAKING NEWS 2026: "La Mulți Ani" cu Bani de la FED. Sistemul bancar american a avut nevoie de o injecție de urgență de 31 Miliarde $ în noaptea de Revelion.',
+    summary: 'Alarmă pe Wall Street în noaptea de Revelion. FED a pompat 31 Miliarde $ prin piața Repo. Ce înseamnă acest "Canar în mină" pentru sistemul bancar și de ce este semnalul final că tiparnița de bani (QE) se va redeschide masiv în 2026.',
+    category: 'MACRO & BANKING',
+    image: '/fedpump1.jpg',
+    date: '01 Jan 2026',
+    readTime: '4 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Liquidity Injection = Bullish for Assets
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-red-500/20 text-red-300 border border-red-500/30 px-3 py-1 rounded text-xs font-bold uppercase animate-pulse">🚨 Status: CONFIRMAT (Fed Data)</span>
+        <span class="bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🏦 Subiect: Criza de Lichiditate / Repo</span>
+        <span class="bg-purple-500/20 text-purple-300 border border-purple-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🔄 Semnal: Sfârșitul "Tightening"</span>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Ce s-a întâmplat în timp ce tu dormeai?</h3>
+      <p class="mb-4 text-gray-300">În ultimele ore ale anului 2025, o alarmă silențioasă a sunat pe Wall Street.</p>
+      <p class="mb-4 text-gray-300">Rezerva Federală (FED) a pompat <strong class="text-white">30.8 Miliarde de dolari</strong> în sistemul bancar prin operațiuni "Overnight Repo".</p>
+      
+      <div class="bg-red-900/10 border-l-4 border-red-500 p-6 rounded-r-xl mb-6">
+        <strong class="text-red-400 block mb-2 text-lg">De ce este șocant?</strong>
+        <p class="text-gray-300 mb-2">Această facilitate este, în mod normal, o plasă de siguranță nefolosită.</p>
+        <p class="text-gray-300">Faptul că a fost accesată la un nivel record (cel mai mare de la criza bancară sau chiar criza Dot Com, ajustat la context) ne spune un singur lucru:</p>
+        <p class="text-white font-bold mt-2">Băncile nu mai au cash. "Instalația" financiară a Americii a început să scârțâie violent la trecerea dintre ani.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. EDUCAȚIE: Ce este piața REPO? (Amanetul Băncilor)</h3>
+      <p class="mb-4 text-gray-300">Pentru a înțelege gravitatea, trebuie să înțelegem mecanismul. Piața Repo este "uleiul" motorului financiar global.</p>
+      
+      
+
+      <div class="bg-[#0a0f1e] p-6 rounded-xl border border-gray-700 mb-8">
+        <ul class="space-y-4">
+            <li>
+                <strong class="text-blue-400 block">Cum funcționează:</strong>
+                <span class="text-gray-300">Băncile au multe active (Titluri de Stat/Obligațiuni), dar uneori rămân fără Cash lichid pentru plăți imediate.</span>
+            </li>
+            <li>
+                <strong class="text-blue-400 block">Repo (Repurchase Agreement):</strong>
+                <span class="text-gray-300">Banca merge la FED și spune: <em>"Îți las aceste titluri de stat garanție (Amanet) până mâine dimineață, dă-mi cash să trec noaptea."</em></span>
+            </li>
+            <li class="border-t border-gray-700 pt-4">
+                <strong class="text-red-400 block">Problema:</strong>
+                <span class="text-gray-300">Într-un sistem sănătos, băncile se împrumută între ele. Când băncile sunt nevoite să meargă la "Tăticul FED" pentru bani, înseamnă că nimeni altcineva nu are bani sau nu are încredere să împrumute.</span>
+            </li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. Semnalul "Canarului din Mină"</h3>
+      <p class="mb-4 text-gray-300">Titlul viral spune că depășește criza "Dot Com". Trebuie să fim nuanțați: ca valoare nominală, inflația distorsionează cifrele. Dar ca SIMPTOM, este identic cu criza din septembrie 2019 (Repo Crisis).</p>
+      <p class="mb-4 text-gray-300">Acesta este primul semn al "Zidului de Datorie din 2026" despre care am vorbit. Guvernul SUA a emis atât de multă datorie, încât a "aspirat" tot cash-ul din piață. Băncile sunt pline de hârtii (obligațiuni), dar goale de bani.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">4. De ce este Bullish pentru Crypto și Active (Paradoxul)</h3>
+      <p class="mb-4 text-gray-300">Poate suna ciudat: "Dacă băncile au probleme, de ce e bine pentru Bitcoin?" Răspunsul este <strong>PIVOTUL</strong>.</p>
+      <p class="mb-4 text-gray-300">Această injecție de 31 Miliarde $ este un "plasture". Plasturii nu țin la infinit. Când piața Repo se blochează, FED-ul are o singură soluție istorică pentru a preveni colapsul total: <strong>QE (Quantitative Easing)</strong>. Adică, pornirea tiparniței la scară largă.</p>
+
+      <div class="grid md:grid-cols-2 gap-4 mb-8">
+         <div class="bg-gray-800 p-4 rounded-xl text-center">
+            <strong class="text-gray-400 block mb-2">Faza 1 (Acum)</strong>
+            <p class="text-sm text-gray-300">Injecții temporare (Repo) -> Arată că sistemul e fragil.</p>
+         </div>
+         <div class="bg-green-900/20 p-4 rounded-xl border border-green-500 text-center">
+            <strong class="text-green-400 block mb-2">Faza 2 (Curând)</strong>
+            <p class="text-sm text-gray-300">Tipărire permanentă -> Dolarul scade, Activele (BTC, Aur) explodează.</p>
+         </div>
+      </div>
+
+      <div class="mt-12 bg-gradient-to-r from-blue-900/40 to-black p-8 rounded-2xl border border-blue-500/30">
+        <h4 class="text-xl font-bold text-white mb-4">💎 Concluzia lui Mihai Daniel pentru 2026:</h4>
+        <p class="text-gray-300 mb-4 italic">"Anul începe cu un foc de avertisment. Sistemul bancar este însetat și cere apă. FED-ul le-a dat o gură de apă (31B) de Revelion."</p>
+        <p class="text-gray-300 mb-4">Dar setea va reveni. În 2026, FED-ul va fi forțat să deschidă barajul.</p>
+        <p class="text-gray-300 mb-4">Bitcoin a fost creat exact pentru momentul în care 'Amanetul' Băncii Centrale devine singura sursă de lichiditate.</p>
+        <p class="text-white font-bold text-lg text-center mt-6">La mulți ani! Pregătiți-vă portofoliile, pentru că lichiditatea vine.</p>
+      </div>
+    `
+  },  
+// ✅ 0. ULTIMUL ARTICOL 2025 (CORPORATE FOMO - 1M BTC) - ON TOP
+  {
+    id: 'corporate-fomo-1-million-bitcoin-treasuries',
+    slug: 'fenomenul-corporate-fomo-companii-acumulare-bitcoin',
+    title: 'FENOMENUL "CORPORATE FOMO": Companiile listate la bursă au acumulat 1.09 Milioane de Bitcoin. Retailul doarme, CEO-ii cumpără tot.',
+    summary: 'Ultimul avertisment pe 2025. În timp ce micii investitori așteaptă corecții, companiile publice au securizat 5.1% din toți Bitcoin-ii existenți. Analiza fenomenului "MicroStrategy Global" și de ce urmează o "Gaură Neagră" de lichiditate.',
+    category: 'INSTITUTIONAL & ON-CHAIN',
+    image: '/btcbigbuy2025.jpg',
+    date: '31 Dec 2025',
+    readTime: '4 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Institutional Accumulation
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded text-xs font-bold uppercase animate-pulse">✅ Status: CONFIRMAT</span>
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">📈 Trend: Institutional Accumulation</span>
+        <span class="bg-orange-500/20 text-orange-300 border border-orange-500/30 px-3 py-1 rounded text-xs font-bold uppercase">⚠️ Pericol: Supply Shock</span>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Marea Divergență: Tu vinzi, Ei cumpără</h3>
+      <p class="mb-4 text-gray-300">Există un grafic care ar trebui să te țină treaz noaptea.</p>
+      <p class="mb-4 text-gray-300">În timp ce investitorul mic (Retail) este plictisit, speriat sau așteaptă "o corecție mai mare", companiile publice (listate la bursă) cumpără Bitcoin ca și cum nu ar exista ziua de mâine.</p>
+      
+      <div class="bg-[#0a0f1e] p-6 rounded-xl border border-blue-500/30 mb-8 text-center">
+        <span class="text-gray-400 text-sm uppercase tracking-widest">Cifra Magică</span>
+        <strong class="text-4xl md:text-5xl font-bold text-white block my-2">1.090.000 BTC</strong>
+        <p class="text-blue-400 font-bold mt-2">Companiile publice dețin acum 5.1% din toți Bitcoin-ii care vor exista vreodată.</p>
+        <p class="text-gray-500 text-xs mt-2">Dacă adăugăm și ETF-urile și monedele pierdute, realitatea este crudă: Mai există foarte puțin Bitcoin liber pe piață.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. Strategia "MicroStrategy" a devenit Globală</h3>
+      <p class="mb-4 text-gray-300">Până acum, Michael Saylor (MicroStrategy) era "nebunul" singuratic. Acum, el este Modelul.</p>
+      
+      <ul class="space-y-4 mb-6">
+        <li class="bg-gray-900/50 p-4 rounded-lg border-l-4 border-orange-500">
+            <strong class="text-white block">🇺🇸 Liderul: MicroStrategy</strong>
+            <span class="text-gray-400 text-sm">Continuă să cumpere mii de BTC lunar, folosind bani împrumutați ieftin. Ei au transformat acțiunea companiei într-un "Bitcoin cu levier".</span>
+        </li>
+        <li class="bg-gray-900/50 p-4 rounded-lg border-l-4 border-red-500">
+            <strong class="text-white block">🇯🇵 Discipolul Asiatic: Metaplanet (Japonia)</strong>
+            <span class="text-gray-400 text-sm">A adoptat exact aceeași strategie. Cumpără agresiv (4.2K BTC în Decembrie) pentru a se proteja de prăbușirea Yen-ului.</span>
+        </li>
+        <li class="bg-gray-900/50 p-4 rounded-lg border-l-4 border-gray-500">
+            <strong class="text-white block">🌍 Noua Gardă</strong>
+            <span class="text-gray-400 text-sm">Cango Inc., Bitdeer, Anap Holdings.</span>
+        </li>
+      </ul>
+      <p class="text-white font-bold mb-8">Ce ne spune asta? Modelul "Bitcoin Treasury" s-a validat. Nu mai este un risc de carieră pentru un CEO să cumpere Bitcoin. A devenit un risc de carieră SĂ NU cumperi Bitcoin și să ții cash care se devalorizează.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. De ce este Retailul (Micii Investitori) "Orb"?</h3>
+      <div class="grid md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-red-900/10 p-4 rounded-xl">
+            <strong class="text-red-400 block mb-2">Retailul</strong>
+            <p class="text-gray-300 text-sm">Se uită la Preț (care merge lateral/scade). Va intra în piață doar când prețul va fi +30%, mânat de FOMO.</p>
+        </div>
+        <div class="bg-green-900/10 p-4 rounded-xl">
+            <strong class="text-green-400 block mb-2">Instituțiile</strong>
+            <p class="text-gray-300 text-sm">Se uită la Valoare și la Lichiditate. Companiile văd "Zidul de Datorie" din 2026. Schimbă hârtia pe "Aur Digital" acum, când prețul e stabil.</p>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">4. Predicția pentru 2026: "Gaura Neagră" Instituțională</h3>
+      <p class="mb-4 text-gray-300">Ce înseamnă acest trend pentru următorii 2 ani?</p>
+      
+      <div class="space-y-4 mb-8">
+        <div>
+            <strong class="text-purple-400 block">🛑 Dispariția Lichidității de Vânzare:</strong>
+            <p class="text-gray-300">Companiile publice nu sunt traderi. Ele nu vând când crește prețul cu 10%. Ele fac HODL pe termen lung (10+ ani). Acei 1.09 milioane de BTC sunt, practic, scoși din circulație.</p>
+        </div>
+        <div>
+            <strong class="text-purple-400 block">🍋 Squeeze-ul Inevitabil:</strong>
+            <p class="text-gray-300">Când Retailul se va trezi în 2026 și va vrea să cumpere, va realiza că exchange-urile sunt goale. Singurul mod de a obține expunere va fi să cumperi acțiuni la aceste companii.</p>
+        </div>
+        <div>
+            <strong class="text-purple-400 block">🏆 Bitcoin ca Standard:</strong>
+            <p class="text-gray-300">În 2026, a avea Bitcoin în trezoreria firmei va fi la fel de normal ca a avea Dolari sau Aur.</p>
+        </div>
+      </div>
+
+      <div class="mt-12 bg-gradient-to-r from-purple-900/40 to-black p-8 rounded-2xl border border-purple-500/30">
+        <h4 class="text-xl font-bold text-white mb-4">💎 Mihai Daniel Take: Nu fiți "Exit Liquidity"</h4>
+        <p class="text-gray-300 mb-4 font-bold">"Acesta este ultimul avertisment pe anul acesta."</p>
+        <p class="text-gray-300 mb-4 italic">Dacă te uiți la grafic și te plictisești, pierzi esențialul. În spatele cortinei, se duce o luptă surdă pentru fiecare Satoshi. Companiile publice aspiră totul. Ele au răbdare, au capital și au viziune.</p>
+        <p class="text-gray-300 mb-4">Dacă tu vinzi acum de plictiseală, le faci lor un cadou.</p>
+        <p class="text-white font-bold text-lg text-center mt-6">Nu le da Bitcoin-ul tău ieftin. În 2026, nu ți-l vor vinde înapoi.</p>
+      </div>
+    `
+  },  
+// ✅ 0. ARTICOL NOU (US DEBT WALL 2026 - FISCAL DOMINANCE) - ON TOP
+  {
+    id: 'us-debt-wall-2026-fiscal-dominance-bitcoin',
+    slug: 'zidul-datorie-sua-2026-faliment-matematic-bitcoin',
+    title: '"Zidul de Datorie" al Americii din 2026. De ce falimentul matematic al SUA este cel mai puternic argument pentru Bitcoin.',
+    summary: 'În 2026, trilioane de dolari datorie SUA ajung la scadență. Diferența dintre dobânzile de 0.25% și 4.5% creează o bombă matematică. De ce "Fiscal Dominance" forțează tiparnița de bani și de ce Bitcoin este singura barcă de salvare.',
+    category: 'MACROECONOMIE & DEBT',
+    image: '/datoriasua2025.jpg',
+    date: '31 Dec 2025',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Fiscal Dominance = Money Printing = Bitcoin Up
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded text-xs font-bold uppercase animate-pulse">✅ Status: CONFIRMAT (Date US Treasury)</span>
+        <span class="bg-red-500/20 text-red-300 border border-red-500/30 px-3 py-1 rounded text-xs font-bold uppercase">📉 Subiect: Refinanțare & Fiscal Dominance</span>
+      </div>
+
+      <p class="mb-4 text-gray-300"><strong>Impact Crypto:</strong> Volatilitate pe termen scurt -> <span class="text-green-400 font-bold">Explozie pe termen lung</span></p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Realitatea: Ce se întâmplă în 2026?</h3>
+      <p class="mb-4 text-gray-300">Postarea virală are dreptate într-un punct critic: <strong>Calendarul de Maturitate.</strong></p>
+      <p class="mb-4 text-gray-300">În timpul pandemiei (2020-2021), Trezoreria SUA a emis cantități industriale de datorie pe termen scurt (bonuri de trezorerie) pentru că dobânzile erau aproape zero (0.25%). A fost "bani gratis".</p>
+      <p class="mb-4 text-gray-300">Dar datoria pe termen scurt expiră repede. În 2025 și 2026, trilioane de dolari din acea datorie ajung la scadență.</p>
+      <div class="bg-[#0a0f1e] p-4 rounded-xl border-l-4 border-yellow-500 mb-6">
+        <p class="text-gray-300">Guvernul SUA nu are banii să o plătească. Așa că trebuie să facă "Roll Over" (Refinanțare). Adică, se împrumută din nou pentru a plăti datoria veche.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. Problema Matematică: Șocul Dobânzilor</h3>
+      <p class="mb-4 text-gray-300">Aici apare "Bomba" menționată în știre.</p>
+      
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+         <div class="bg-green-900/10 p-4 rounded-xl border border-green-500/20">
+            <strong class="text-green-400 block mb-1">Datoria Veche</strong>
+            <p class="text-gray-400 text-sm">A fost emisă la dobânzi de 0.5% - 1%.</p>
+         </div>
+         <div class="bg-red-900/10 p-4 rounded-xl border border-red-500/20">
+            <strong class="text-red-400 block mb-1">Datoria Nouă</strong>
+            <p class="text-gray-400 text-sm">Trebuie emisă la dobânzile actuale de 4% - 4.5%.</p>
+         </div>
+      </div>
+
+      <div class="bg-[#0a0f1e] p-6 rounded-xl border border-red-500/30 mb-8">
+        <strong class="text-red-400 block mb-2 text-lg">Exemplu Simplu:</strong>
+        <ul class="space-y-2 text-gray-300">
+            <li>Dacă ai o datorie de 1 Trilion $ la 1%, plătești <strong>10 Miliarde</strong> dobândă pe an.</li>
+            <li>Dacă o refinanțezi la 4.5%, plătești <strong>45 Miliarde</strong> dobândă pe an.</li>
+        </ul>
+        <p class="text-white font-bold mt-4 border-t border-gray-700 pt-4">Rezultatul: Costul dobânzii SUA a depășit deja bugetul pentru Apărare (1 Trilion $/an). În 2026, acest cost va exploda, făcând deficitul bugetar nesustenabil.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. Cele 3 Soluții ale Americii (Și de ce Crypto câștigă)</h3>
+      <p class="mb-4 text-gray-300">Când un stat ajunge în acest punct, are doar 3 opțiuni. Să vedem cum afectează fiecare Crypto:</p>
+      
+      <div class="space-y-4 mb-8">
+        <div class="bg-gray-800 p-4 rounded-lg opacity-60">
+            <strong class="text-gray-400">1. Austeritate (Tăierea cheltuielilor)</strong>
+            <p class="text-sm text-gray-500">Probabilitate: 0%. Niciun politician nu va tăia pensiile sau armata.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg opacity-60">
+            <strong class="text-gray-400">2. Default (Faliment/Neplată)</strong>
+            <p class="text-sm text-gray-500">Probabilitate: 0%. SUA nu va anunța niciodată oficial că nu plătește, pentru că are tiparnița de bani.</p>
+        </div>
+        <div class="bg-green-900/20 p-4 rounded-lg border border-green-500">
+            <strong class="text-green-400">3. Money Printing (Monetizarea Datoriei / Yield Curve Control)</strong>
+            <p class="text-sm text-gray-300 mt-1">Probabilitate: 99%.</p>
+            <p class="text-sm text-gray-300 mt-1">Fed-ul va fi forțat să tipărească bani pentru a cumpăra datoria pe care piața nu o mai vrea (QE). Sau va tăia dobânzile forțat, chiar dacă inflația e mare, doar ca guvernul să nu falimenteze.</p>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">4. Corelația cu Bitcoin: Teza "Fiscal Dominance"</h3>
+      <p class="mb-4 text-gray-300">Sursa spune că "Totul va fi lovit: Stocks, Bonds, Crypto". Aici greșește parțial.</p>
+      
+      <ul class="space-y-4 mb-6 text-gray-300">
+        <li class="pl-4 border-l-2 border-red-500"><strong>Faza 1 (Șocul):</strong> Da, când piața realizează gravitatea situației, poate exista un moment de panică (Lichiditate scăzută). Crypto poate avea o corecție rapidă.</li>
+        <li class="pl-4 border-l-2 border-green-500"><strong>Faza 2 (Reacția):</strong> Dar imediat ce "Bomba" stă să explodeze, FED-ul va porni Money Printer-ul pentru a salva piața de obligațiuni.</li>
+      </ul>
+
+      <p class="mb-4 text-gray-300"><strong>Istoria ne învață:</strong> Când masa monetară (M2) crește pentru a acoperi datoria, activele cu ofertă limitată (Hard Assets) absorb acea inflație monetară.</p>
+      <div class="flex items-center gap-4 bg-black p-4 rounded-lg mb-6 text-sm md:text-base">
+        <span>💵 Dolarul: Se devalorizează</span>
+        <span>➡️</span>
+        <span class="text-orange-400 font-bold">₿ Bitcoin: Se apreciază</span>
+      </div>
+      <p class="mb-6 text-gray-300">Bitcoin a fost creat exact pentru acest scenariu: momentul în care banca centrală trebuie să sacrifice valoarea monedei pentru a salva datoria statului.</p>
+
+      <div class="mt-8 bg-gradient-to-r from-blue-900/30 to-black p-8 rounded-2xl border border-blue-500/30">
+        <h4 class="text-xl font-bold text-white mb-4">🛡️ Mihai Daniel Take: Nu e sfârșitul lumii, e sfârșitul Dolarului puternic</h4>
+        <p class="text-gray-300 mb-4 italic">"Zidul de Datorie din 2026 nu este un motiv să vinzi Bitcoin și să fugi. Este motivul pentru care deții Bitcoin."</p>
+        <p class="text-gray-300 mb-4">Postarea virală are dreptate că urmează o furtună. Dar în acea furtună, Guvernul va arunca cu bani (lichiditate) pentru a nu se scufunda. Bitcoin este barca care plutește pe acel ocean de lichiditate nou tipărită.</p>
+        <p class="text-white font-bold mt-4 text-center">Nu vă temeți de refinanțare. Temeți-vă să țineți cash când refinanțarea va fi plătită cu bani proaspăt tipăriți.</p>
+      </div>
+    `
+  },  
+// ✅ 0. ARTICOL NOU (MACRO - ISM CYCLE VS HALVING) - ON TOP
+  {
+    id: 'macro-ism-cycle-bitcoin-demystified',
+    slug: 'marea-demitizare-ciclu-4-ani-ism-macro',
+    title: 'MAREA DEMITIZARE: De ce Ciclul de 4 Ani e o coincidență și de ce Adevăratul Bull Run abia începe.',
+    summary: 'Halving-ul este doar Pistolul, Lichiditatea este Glonțul. O analiză Macro profundă despre cum datoria SUA a decalat ciclul economic și de ce indicatorul ISM ne arată că suntem la început, nu la final.',
+    category: 'ANALIZĂ MACRO',
+    image: '/lichiditateamacro.jpg',
+    date: '30 Dec 2025',
+    readTime: '4 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Macro Liquidity Returning = Bullish
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🌍 Analiză Macro</span>
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">📊 Sursa: Raoul Pal / Julien Bittel</span>
+      </div>
+
+      <p class="mb-4 text-gray-300"><strong>Subiect:</strong> Ciclul Economic (ISM) vs. Halving</p>
+      <p class="mb-4 text-green-400 font-bold border-l-4 border-green-500 pl-4">Verdict: Suntem la început, nu la final.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Mitul: "Halving-ul dictează totul"</h3>
+      <p class="mb-4 text-gray-300">Toată lumea știe povestea: "La fiecare 4 ani, Bitcoin se înjumătățește și prețul explodează." Dar dacă acest narativ este fals? Sau cel puțin, incomplet?</p>
+      <div class="bg-[#0a0f1e] p-5 rounded-xl border border-gray-700 mb-6">
+        <strong class="text-white block mb-2">Analiza propusă sugerează ceva șocant:</strong>
+        <p class="text-gray-300">Ciclul de 4 ani al Bitcoin a existat doar pentru că, în ultimii 12 ani, Ciclul Economic Global a durat coincidențial tot ~4 ani.</p>
+        <p class="text-gray-300 mt-2">Bitcoin nu a dansat după muzica Halving-ului, ci după muzica Economiei Globale.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. Adevăratul Șofer: ISM (Pulsul Economiei)</h3>
+      <p class="mb-4 text-gray-300">Ce mișcă prețul? Lichiditatea (Banii din piață). Indicatorul cheie este <strong>ISM (Institute for Supply Management)</strong>.</p>
+      
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+         <div class="bg-green-900/10 p-4 rounded-xl border border-green-500/20">
+            <strong class="text-green-400 block mb-1">ISM > 50 (Creștere)</strong>
+            <p class="text-gray-400 text-sm">Economia crește, fabricile produc, există bani -> Bitcoin explodează.</p>
+         </div>
+         <div class="bg-red-900/10 p-4 rounded-xl border border-red-500/20">
+            <strong class="text-red-400 block mb-1">ISM < 50 (Contracție)</strong>
+            <p class="text-gray-400 text-sm">Economia scade, recesiune, lipsă de bani -> Bitcoin stagnează.</p>
+         </div>
+      </div>
+      
+      <p class="mb-4 text-gray-300"><strong>De ce ultimii 3 ani au fost ciudați?</strong></p>
+      <p class="mb-4 text-gray-300">Pentru că ISM-ul a fost "plat" sau sub 50. Am avut un "mini-ciclu" slab. Indiferent de Halving, dacă nu există "benzină" (lichiditate macro), mașina (Bitcoin) nu pleacă în cursă parabolică.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. De ce a întârziat explozia? (Secretul Datoriei SUA)</h3>
+      <p class="mb-4 text-gray-300">Aici este partea genială a analizei. De obicei, datoria SUA se refinanțează la fiecare 3-4 ani. Asta crea ritmul ciclului.</p>
+      <p class="mb-4 text-gray-300">DAR, în timpul COVID, dobânzile au fost zero. Ce a făcut SUA? A profitat și s-a împrumutat pe termen mai lung.</p>
+      
+      <div class="bg-blue-900/20 p-6 rounded-xl border border-blue-500/30 mb-8">
+        <strong class="text-blue-400 block mb-2">Efectul: Maturitatea datoriei s-a extins cu ~1.5 ani.</strong>
+        <p class="text-gray-300">Asta a lungit ciclul economic. De aceea Bull Market-ul nu s-a terminat în 2025, ci s-a "întins".</p>
+        <p class="text-white font-bold text-lg mt-4 text-center">Nu suntem "Late Cycle" (la final). Suntem doar "Delayed" (întârziați).</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">4. Vestea Bună: Semaforul se face Verde</h3>
+      <p class="mb-4 text-gray-300">Dacă te uiți pe graficele lunare și trimestriale (nu pe cele de o oră), semnalul de lichiditate tocmai a început să urce.</p>
+      <ul class="list-disc pl-6 text-gray-300 mb-6 space-y-2">
+         <li>ISM-ul dă semne că se ridică de la podea (peste 50).</li>
+         <li>Istoria de 15 ani ne arată un singur lucru: <strong>Când ISM-ul revine din zona de jos, Bitcoin intră în faza PARABOLICĂ.</strong></li>
+      </ul>
+
+      <div class="mt-8 bg-gradient-to-r from-gray-900 to-black p-8 rounded-2xl border border-indigo-500/30 relative">
+        <h4 class="text-xl font-bold text-white mb-4">🧠 Concluzia lui Mihai Daniel:</h4>
+        <p class="text-gray-300 mb-4 italic">"Nu vă mai uitați la ceas așteptând să sune alarma de 4 ani. Ceasul a fost decalat."</p>
+        
+        <div class="bg-black/40 p-4 rounded-lg border-l-4 border-yellow-500 mb-4">
+            <p class="text-white font-bold">Halving-ul este Pistolul. Lichiditatea Macro (ISM) este Glonțul.</p>
+        </div>
+
+        <p class="text-gray-300 mb-4">Până acum am avut pistolul, dar nu am avut gloanțe. Acum, datele macro ne arată că vin gloanțele.</p>
+        <p class="text-white font-bold mt-2">Faptul că Bitcoin stă la 90k-100k FĂRĂ ajutorul macro este incredibil. Imaginați-vă ce face când economia globală începe să sufle vânt în pânze.</p>
+      </div>
+    `
+  },  
+// ✅ 0. ARTICOL NOU (LTH STOP SELLING - ON CHAIN BULLISH) - ON TOP
+  {
+    id: 'lth-stopped-selling-supply-shock-on-chain',
+    slug: 'vestea-diminetii-lth-robinet-vanzare-inchis-supply-shock',
+    title: 'VESTEA DIMINEȚII: S-a închis "Robinetul de Vânzare". Deținătorii pe termen lung (LTH) au terminat de marcat profitul. Ce urmează?',
+    summary: 'Semnal On-Chain Major: "Veteranii" au încetat să mai vândă. Analiza indicatorului LTH Net Position Change și de ce "Vacuum-ul de Ofertă" pregătește terenul pentru explozia din 2026.',
+    category: 'ON-CHAIN & MARKET DATA',
+    image: '/goodnewsbtc2025.jpg',
+    date: '30 Dec 2025',
+    readTime: '3 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // LTH Accumulation = Bullish
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded text-xs font-bold uppercase animate-pulse">✅ Status: CONFIRMAT</span>
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">📊 Indicator: LTH Net Position</span>
+        <span class="bg-purple-500/20 text-purple-300 border border-purple-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🚀 Semnal: Bullish</span>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Fenomenul: Mâinile de Diamant au revenit la HODL</h3>
+      <p class="mb-4 text-gray-300">Din luna Iulie și până acum, piața a simțit o presiune constantă. De ce? Pentru că "Veteranii" (Long-Term Holders - cei care țin monedele de peste 155 de zile) au vândut treptat pentru a marca profituri. Este un comportament normal într-un Bull Market.</p>
+      
+      <div class="bg-green-900/10 border-l-4 border-green-500 p-6 rounded-r-xl mb-6">
+        <strong class="text-green-400 block mb-2 text-lg">Dar, datele de azi dimineață arată o schimbare de trend majoră:</strong>
+        <p class="text-white font-bold text-xl mb-2">Vânzările masive s-au oprit.</p>
+        <p class="text-gray-300">Graficele on-chain arată că portofelele vechi au încetat să mai trimită Bitcoin către exchange-uri.</p>
+        <p class="text-gray-400 text-sm mt-2 italic">Traducere: "Smart Money" consideră că prețul actual nu mai este atractiv pentru vânzare. Ei cred că Bitcoin va valora mult mai mult în curând, așa că au reînceput să acumuleze sau să stea pe loc.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. De ce contează asta? (Mecanica Pieței)</h3>
+      <p class="mb-4 text-gray-300">Imaginează-ți piața ca pe o balanță:</p>
+      
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+         <div class="bg-[#0a0f1e] p-4 rounded-xl border border-red-500/20">
+            <strong class="text-red-400 block mb-1">🔴 Partea Stângă</strong>
+            <p class="text-gray-400 text-sm">Vânzătorii (LTH care marcau profit + Minerii).</p>
+         </div>
+         <div class="bg-[#0a0f1e] p-4 rounded-xl border border-green-500/20">
+            <strong class="text-green-400 block mb-1">🟢 Partea Dreaptă</strong>
+            <p class="text-gray-400 text-sm">Cumpărătorii (ETF-urile, MicroStrategy, Retail-ul).</p>
+         </div>
+      </div>
+      
+      <p class="mb-4 text-gray-300">Din Iulie până în Decembrie, Vânzătorii au fost agresivi, anulând cererea venită de la ETF-uri. De asta am mers lateral.</p>
+      <p class="mb-6 text-gray-300">Acum, dacă Vânzătorii se retrag de pe piață, dar Cumpărătorii (BlackRock & Co) continuă să cumpere...</p>
+      <p class="text-white font-bold border-l-4 border-blue-500 pl-4 mb-8">Rezultatul matematic: Prețul întâmpină rezistență zero la creștere.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. Pronostic pentru Q1 2026: "Vacuum-ul de Ofertă"</h3>
+      <p class="mb-4 text-gray-300">Istoric vorbind, când LTH se opresc din vândut, urmează faza de Re-Acumulare, succedată rapid de Expansiunea Parabolică.</p>
+      
+      <div class="bg-[#0a0f1e] p-6 rounded-xl border border-gray-700 mb-8">
+        <ul class="space-y-4">
+            <li>
+                <strong class="text-blue-400 block">Scenariul Probabil:</strong>
+                <span class="text-gray-300">Următoarele săptămâni vor fi caracterizate de o scădere a volumului de vânzare. Orice știre pozitivă (sau achiziție mare) va mișca prețul mult mai agresiv în sus, pentru că nu mai există cine să vândă "în capul" cumpărătorilor.</span>
+            </li>
+            <li>
+                <strong class="text-purple-400 block">Ținta:</strong>
+                <span class="text-gray-300">Acesta este combustibilul necesar pentru a sparge definitiv zona de 90k-100k și a intra în "Price Discovery" real în 2026.</span>
+            </li>
+        </ul>
+      </div>
+
+      <div class="mt-8 bg-gradient-to-r from-gray-900 to-black p-8 rounded-2xl border border-blue-500/30 relative overflow-hidden">
+        <div class="absolute top-0 right-0 p-4 opacity-10">
+            <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h4 class="text-xl font-bold text-white mb-4 z-10 relative">💎 Mihai Daniel Take: Liniștea dinaintea exploziei</h4>
+        <p class="text-gray-300 mb-4 z-10 relative italic">"Dacă te întrebai de ce prețul nu scade mai mult deși sunt vești proaste, iată răspunsul: Cei care au Bitcoin mulți și vechi nu mai sunt dispuși să îți vândă ție ieftin."</p>
+        <p class="text-gray-300 mb-4 z-10 relative">Veteranii și-au închis portofelele. Dacă vrei Bitcoin, va trebui să plătești prețul cerut de ei, nu prețul sperat de tine.</p>
+        <p class="text-white font-bold text-lg mt-6 z-10 relative">Oferta scade. Cererea rămâne. Restul e matematică.</p>
+      </div>
+    `
+  },  
+// ✅ 0. ARTICOL NOU (BTC vs GOLD vs SILVER - ANALIZA FINAL AN) - ON TOP
+  {
+    id: 'bitcoin-gold-silver-battle-2026',
+    slug: 'batalia-averii-bitcoin-aur-argint-analiza-2026',
+    title: 'BĂTĂLIA PENTRU AVEREA TA: Bitcoin vs. Aur vs. Argint. Retrospectiva 2025 și Predicțiile Realiste pentru 2026',
+    summary: 'Este momentul inventarului banilor grei (Hard Money). Analiză fundamentală: Cine a câștigat cursa în 2025? Bitcoin (Viteză), Aurul (Siguranță) sau Argintul (Industrie)? Strategia "Barbell" pentru 2026.',
+    category: 'ANALIZĂ FUNDAMENTALĂ',
+    image: '/btcaurargint.jpg',
+    date: '29 Dec 2025',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'neutral', // Analiză Macro
+    content: `
+      <div class="flex items-center gap-2 mb-6">
+        <span class="bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🏛️ Macroeconomie</span>
+      </div>
+
+      <p class="mb-4 text-gray-300"><strong>Subiect:</strong> Inventarul banilor grei (Hard Money) și Strategia de Portofoliu.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">Introducere: Trei Cai, O Singură Cursă (Fuga de Inflație)</h3>
+      <p class="mb-4 text-gray-300">Anul 2025 a fost anul în care "Banii Fiat" și-au arătat slăbiciunea finală. Tiparnițele au duduit global, iar investitorii inteligenți au fugit către active care nu pot fi printate.</p>
+      <p class="mb-8 text-gray-300">Dar cine a câștigat cursa? Calul Digital (Bitcoin), Calul Antic (Aurul) sau Calul Industrial (Argintul)? Răspunsul depinde de ce cauți: Viteză sau Siguranță.</p>
+
+      <div class="space-y-8">
+        
+        {/* BITCOIN */}
+        <div class="bg-[#0a0f1e] p-6 rounded-xl border-l-4 border-orange-500">
+            <h3 class="text-2xl font-bold text-orange-500 mb-2">1. BITCOIN (Regele Volatilității)</h3>
+            <p class="text-gray-400 text-sm mb-4 uppercase font-bold tracking-wider">Rol: Wealth Generation (Crearea Averei)</p>
+            
+            <p class="text-gray-300 mb-4"><strong>Cum a fost 2025?</strong> A fost anul Instituționalizării Totale. A supraperformat orice altă clasă de active. Narațiunea a trecut de la "Monedă Speculativă" la "Activ de Trezorerie" (vezi modelul MicroStrategy și BitMine).</p>
+            
+            <div class="bg-orange-900/10 p-4 rounded-lg">
+                <strong class="text-orange-400 block mb-2">Ce așteptăm în 2026?</strong>
+                <ul class="list-disc pl-5 text-gray-300 space-y-1">
+                    <li><strong>Adopția Suverană:</strong> Zvonurile despre o "Rezervă Strategică" a națiunilor G7 vor deveni realitate.</li>
+                    <li><strong>Prețul:</strong> 100.000$ este doar pragul psihologic. Urmează "Price Discovery" reală.</li>
+                    <li><strong>Riscul:</strong> Reglementarea DeFi și atacul asupra intimității.</li>
+                </ul>
+            </div>
+        </div>
+
+        {/* AUR */}
+        <div class="bg-[#0a0f1e] p-6 rounded-xl border-l-4 border-yellow-500">
+            <h3 class="text-2xl font-bold text-yellow-500 mb-2">2. AURUL (Scutul Imperiului)</h3>
+            <p class="text-gray-400 text-sm mb-4 uppercase font-bold tracking-wider">Rol: Wealth Preservation (Păstrarea Averei)</p>
+            
+            <p class="text-gray-300 mb-4"><strong>Cum a fost 2025?</strong> Un an "silențios dar profitabil". Băncile Centrale (China, Rusia, India) au cumpărat record pentru a se proteja de colapsul dolarului. Când Bitcoin scădea cu 10%, Aurul se mișca cu 0.5%.</p>
+            
+            <div class="bg-yellow-900/10 p-4 rounded-lg">
+                <strong class="text-yellow-400 block mb-2">Ce așteptăm în 2026?</strong>
+                <ul class="list-disc pl-5 text-gray-300 space-y-1">
+                    <li><strong>Recesiunea:</strong> În caz de "Hard Landing", Aurul va străluci. Nu are risc de contrapartidă.</li>
+                    <li><strong>Ținta:</strong> Creștere lentă (+10-15%), care bate inflația. Nu te îmbogățește peste noapte, dar te asigură că rămâi bogat.</li>
+                </ul>
+            </div>
+        </div>
+
+        {/* ARGINT */}
+        <div class="bg-[#0a0f1e] p-6 rounded-xl border-l-4 border-gray-400">
+            <h3 class="text-2xl font-bold text-gray-300 mb-2">3. ARGINTUL (Gigantul Adormit)</h3>
+            <p class="text-gray-500 text-sm mb-4 uppercase font-bold tracking-wider">Rol: Speculație Industrială</p>
+            
+            <p class="text-gray-300 mb-4"><strong>Cum a fost 2025?</strong> Frustrant. A promis mult și a livrat cu întârziere, rămânând în umbra Aurului și fiind manipulat pe piețele de hârtie.</p>
+            
+            <div class="bg-gray-800 p-4 rounded-lg">
+                <strong class="text-white block mb-2">Ce așteptăm în 2026? (Marea Surpriză)</strong>
+                <p class="text-gray-300 mb-2">Acesta este pariul "Dark Horse". Argintul este esențial pentru Panouri Solare, EV, Cipuri AI.</p>
+                <p class="text-gray-300"><strong>Explozia:</strong> Cererea industrială va depăși oferta minieră. Are cel mai mare potențial de "Catch-up" masiv față de Aur.</p>
+            </div>
+        </div>
+
+      </div>
+
+      <div class="mt-12 bg-gradient-to-r from-blue-900/40 to-black p-8 rounded-2xl border border-blue-500/30">
+        <h4 class="text-xl font-bold text-white mb-4">⚖️ Verdictul lui Mihai Daniel: Strategia "Barbell"</h4>
+        <p class="text-gray-300 mb-6">Nu trebuie să alegi doar unul. Secretul este Alocarea.</p>
+        
+        <div class="space-y-3 mb-8">
+            <div class="flex items-center justify-between bg-black/40 p-3 rounded">
+                <span class="text-orange-400 font-bold">Bitcoin (50-60%)</span>
+                <span class="text-gray-400 text-sm text-right">Ești tânăr, vrei multiplicare, tolerezi volatilitatea.</span>
+            </div>
+            <div class="flex items-center justify-between bg-black/40 p-3 rounded">
+                <span class="text-yellow-400 font-bold">Aur (20-30%)</span>
+                <span class="text-gray-400 text-sm text-right">Banii de Siguranță. Fondul de urgență apocaliptic.</span>
+            </div>
+            <div class="flex items-center justify-between bg-black/40 p-3 rounded">
+                <span class="text-gray-300 font-bold">Argint (10-20%)</span>
+                <span class="text-gray-400 text-sm text-right">Pariul speculativ pe viitorul tehnologic.</span>
+            </div>
+        </div>
+
+        <p class="text-gray-300 italic mb-4">"Dacă ții banii în Fiat (Bancă), pierzi garantat 5-10% pe an. Oricare dintre cei trei 'Cai' este mai bun decât banii de hârtie."</p>
+        <p class="text-white font-bold text-lg text-center mt-6">Alege-ți calul în funcție de cât de tare îți bate inima când te uiți la grafice.</p>
+      </div>
+    `
+  },  
+// ✅ 0. ARTICOL NOU (TIMPUL DE VINDECARE - BITCOIN) - ON TOP
+  {
+    id: 'bitcoin-correction-time-healing-analysis',
+    slug: 'cat-dureaza-durerea-analiza-timp-vindecare-bitcoin',
+    title: 'CÂT DUREAZĂ DUREREA? Analiza "Timpului de Vindecare" al Bitcoin. De ce răbdarea este matematică, nu virtute.',
+    summary: 'O zi de scădere se simte ca o lună. Analiza istorică a duratei corecțiilor (2017-2025) și cele 3 faze ale vindecării pieței. De ce plictiseala este mai periculoasă decât frica.',
+    category: 'ANALIZĂ DE CICLU / PSIHOLOGIE',
+    image: '/hodldecembrie.jpg',
+    date: '29 Dec 2025',
+    readTime: '3 min',
+    author: 'Mihai Daniel',
+    impact: 'neutral', // Educațional
+    content: `
+      <div class="flex items-center gap-2 mb-6">
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">⏳ Analiză de Ciclu</span>
+      </div>
+
+      <p class="mb-4 text-gray-300"><strong>Subiect:</strong> Durata istorică a corecțiilor în Bull Market</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Întrebarea de pe buzele tuturor: "Când se termină?"</h3>
+      <p class="mb-4 text-gray-300">Când piața scade, timpul pare să se dilate. O zi de scădere se simte ca o lună. Dar dacă dăm zoom-out și ne uităm la ultimii 4-8 ani, Bitcoin respectă un calendar al durerii destul de precis.</p>
+      <p class="mb-4 text-gray-300">Să demontăm mitul "V-Shape Recovery" (Revenirea instantă). Aceasta se întâmplă rar. De obicei, piața are nevoie de timp pentru a "digera" o scădere bruscă.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. Istoria nu minte: Calendarul Corecțiilor (2017 - 2025)</h3>
+      <p class="mb-4 text-gray-300">Hai să ne uităm la datele reci din timpul Bull Market-urilor precedente. Cât a durat de la "Vârf Local" până la "Noul Maxim"?</p>
+      
+      <div class="space-y-4 mb-8">
+        <div class="bg-[#0a0f1e] p-5 rounded-xl border border-blue-500/20">
+           <strong class="text-blue-400 block mb-2 text-lg">A. Corecțiile "Normale" (20-30%)</strong>
+           <ul class="list-disc pl-5 text-gray-300 space-y-1">
+               <li><strong>Durata medie:</strong> 14 - 21 de zile.</li>
+               <li><strong>Exemplu:</strong> În 2017, am avut 6 corecții de 30%. Fiecare a durat aproximativ 2-3 săptămâni până când prețul s-a stabilizat și a început să urce din nou.</li>
+           </ul>
+           <p class="text-xs text-gray-500 mt-2 italic">Lecția: Dacă suntem în prima săptămână de scădere, e prematur să aștepți ATH (All Time High).</p>
+        </div>
+
+        <div class="bg-[#0a0f1e] p-5 rounded-xl border border-purple-500/20">
+           <strong class="text-purple-400 block mb-2 text-lg">B. Corecțiile "Mid-Cycle" (Resetări Majore)</strong>
+           <ul class="list-disc pl-5 text-gray-300 space-y-1">
+               <li><strong>Durata medie:</strong> 2 - 3 Luni.</li>
+               <li><strong>Exemplu (Mai 2021):</strong> După prăbușire, piața a stat în "plictiseală" și frică toată vara (Mai-Iulie), înainte de a exploda în toamnă.</li>
+               <li><strong>Exemplu (Vara 2023):</strong> Luni de zile de stagnare înainte de explozia ETF-urilor.</li>
+           </ul>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. Anatomia unei Corecții: Cele 3 Faze</h3>
+      <p class="mb-4 text-gray-300">O corecție nu este doar o linie roșie în jos. Are o structură:</p>
+      <ul class="space-y-4 mb-6">
+        <li class="bg-red-900/10 p-3 rounded-lg border border-red-500/20">
+           <strong class="text-red-400 block">Faza 1: Șocul (Zilele 1-3)</strong>
+           <span class="text-gray-400 text-sm">Scăderea violentă. Lichidări. Panică. Aici vând "mâinile slabe".</span>
+        </li>
+        <li class="bg-yellow-500/10 p-3 rounded-lg border border-yellow-500/20">
+           <strong class="text-yellow-400 block">Faza 2: Măcinarea (Săptămânile 1-3)</strong>
+           <span class="text-gray-400 text-sm">Prețul nu mai scade mult, dar nici nu crește. Merge lateral (Chop). <strong>Scopul:</strong> Să-i facă pe traderi să renunțe din plictiseală. Este "Tortura Timpului".</span>
+        </li>
+        <li class="bg-green-900/10 p-3 rounded-lg border border-green-500/20">
+           <strong class="text-green-400 block">Faza 3: Reconstrucția</strong>
+           <span class="text-gray-400 text-sm">Minimele încep să fie mai sus (Higher Lows). Volumul revine. Încrederea se instalează treptat.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">4. Unde suntem acum? (Context Decembrie 2025)</h3>
+      <p class="mb-4 text-gray-300">Dacă ne raportăm la volatilitatea recentă de Crăciun, suntem probabil la tranziția dintre <strong>Șoc</strong> și <strong>Măcinare</strong>.</p>
+      <p class="mb-4 text-gray-300">Istoric vorbind, sfârșitul de an și începutul lui Ianuarie sunt perioade de rebalansare a portofoliilor instituționale. Dacă istoria se repetă, nu te aștepta ca mâine să fim la 100k.</p>
+      <p class="text-white font-bold border-l-4 border-blue-500 pl-4">Așteaptă-te la volatilitate și consolidare timp de încă 7-14 zile.</p>
+
+      <div class="bg-gradient-to-r from-gray-900 to-black border border-gray-700 p-6 rounded-xl mt-12">
+        <h4 class="text-xl font-bold text-white mb-2 flex items-center gap-2">🧠 Mihai Daniel Take: "Capitularea prin Timp"</h4>
+        <p class="text-gray-300 mb-4">Există două feluri în care piața te scoate din joc:</p>
+        <ul class="list-disc pl-6 text-gray-400 mb-4 space-y-1">
+           <li><strong>Price Capitulation:</strong> Prețul scade atât de tare încât vinzi de frică.</li>
+           <li><strong>Time Capitulation:</strong> Prețul stă pe loc atât de mult timp încât vinzi de plictiseală (sau ca să cumperi altceva care "se mișcă").</li>
+        </ul>
+        <p class="text-gray-300 mb-2">În Bull Market, Timpul este inamicul tău psihologic, dar prietenul tău financiar. Dacă ai supraviețuit șocului inițial, cea mai mare greșeală este să vinzi în perioada de "Măcinare". Acea perioadă este, de fapt, fundația pentru următorul impuls.</p>
+        <p class="text-white font-bold mt-4 italic">Sfatul meu: Nu te uita la grafic la fiecare oră. Uită-te la fiecare 3 zile. Lasă timpul să vindece graficul.</p>
+      </div>
+    `
+  },  
+// ✅ 0. ARTICOL NOU (BITMINE 1 MILIARD ETH - INSTITUTIONAL) - ON TOP
+  {
+    id: 'bitmine-ethereum-staking-1-billion-supply-shock',
+    slug: 'bitmine-1-miliard-ethereum-staking-supply-shock',
+    title: '1 MILIARD DE DOLARI "SCOS DIN PRIZĂ". BitMine blochează o avere în Ethereum în 48 de ore. Începe era "Yield-ului Instituțional".',
+    summary: 'O singură entitate a scos din circulație 342,000 ETH în 48 de ore. Cine este BitMine, de ce au blocat 1 Miliard $ în staking și cum acest "Supply Shock" validează Ethereum ca generator de cashflow instituțional.',
+    category: 'ON-CHAIN & INSTITUTIONAL',
+    image: '/bitminedecembrie.jpg',
+    date: '28 Dec 2025',
+    readTime: '4 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Instituțional + Supply Shock = Bullish
+    content: `
+      <div class="flex items-center gap-2 mb-6">
+        <span class="bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded text-xs font-bold uppercase animate-pulse">✅ Status: CONFIRMAT</span>
+        <span class="text-xs text-gray-500">Sursa: On-Chain Data / BitMine Immersion</span>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Știrea care a rupt normele (Ce s-a întâmplat?)</h3>
+      <p class="mb-4 text-gray-300">În ultimele 48 de ore, o singură entitate a făcut valuri uriașe pe blockchain.</p>
+      <p class="mb-4 text-gray-300">Compania <strong>BitMine Immersion Technologies (BMNR)</strong> a depus la staking <strong>342,560 ETH</strong>.</p>
+      
+      <div class="bg-blue-900/20 border border-blue-500/30 p-6 rounded-xl mb-8">
+        <strong class="text-blue-400 block mb-2 text-xl">💰 Valoarea: Aproximativ 1 Miliard $</strong>
+        <p class="text-gray-300">Acesta nu este un zvon. Este vizibil on-chain. Acești bani au ieșit din circulație (de pe exchange-uri sau portofele lichide) și au intrat în contractul de depozit Ethereum (Beacon Chain).</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">2. Cine este BitMine și de ce contează?</h3>
+      <p class="mb-4 text-gray-300">Mulți nu au auzit de ei, dar devin rapid "Balena Supremă" pe Ethereum.</p>
+      <ul class="space-y-3 text-gray-300 mb-6">
+        <li class="bg-[#0a0f1e] p-3 rounded-lg border border-gray-800">
+            <strong class="text-white">Jucătorul:</strong> BitMine este o companie listată public (NYSE American: BMNR), condusă de președintele Tom Lee (de la Fundstrat, un nume uriaș pe Wall Street).
+        </li>
+        <li class="bg-[#0a0f1e] p-3 rounded-lg border border-gray-800">
+            <strong class="text-white">Trezoreria:</strong> Ei dețin acum peste 4 milioane de ETH (cca 3.3% din totalul ofertei de Ethereum!), poziționându-se ca trezoreria #1 de Ethereum din lume.
+        </li>
+        <li class="bg-[#0a0f1e] p-3 rounded-lg border border-gray-800">
+            <strong class="text-white">Scopul:</strong> Nu vor doar să dețină ETH (ca MicroStrategy cu BTC). Ei vor să producă mai mult ETH.
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">3. Proiectul "MAVAN" - Educație despre Validatorii Instituționali</h3>
+      <p class="mb-4 text-gray-300">BitMine nu doar a "parcat" banii. Ei lansează MAVAN (Made in America Validator Network).</p>
+      
+      <div class="bg-yellow-500/10 border border-yellow-500/30 p-6 rounded-xl mb-8">
+         <strong class="text-yellow-400 block mb-4 text-lg">🎓 Lecția Educativă: HODL vs. Staking</strong>
+         <div class="grid md:grid-cols-2 gap-4">
+            <div>
+                <strong class="text-white block">Bitcoin (MicroStrategy)</strong>
+                <p class="text-sm text-gray-400">Cumperi BTC și îl ții în seif. Speri să crească prețul. E pasiv.</p>
+            </div>
+            <div>
+                <strong class="text-white block">Ethereum (BitMine)</strong>
+                <p class="text-sm text-gray-400">Cumperi ETH și îl pui la "muncă" (Staking).</p>
+            </div>
+         </div>
+         <p class="text-gray-300 mt-4 border-t border-yellow-500/20 pt-2">BitMine a devenit Validator. Prin blocarea acelui miliard de dolari, ei securizează rețeaua Ethereum.</p>
+         <p class="text-white font-bold mt-2">Matematica: La 1 Miliard $, un randament de 3% înseamnă 30 de Milioane de $ pe an venit pasiv.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-4">4. Impactul asupra Pieței: SUPPLY SHOCK</h3>
+      <p class="mb-4 text-gray-300">De ce să ne pese nouă, micilor investitori? <strong>Pentru că Lichiditatea a scăzut.</strong></p>
+      <p class="mb-4 text-gray-300">Acei 342,000 ETH sunt acum blocați. Nu pot fi vânduți mâine la panică. Când scoți 1 miliard de dolari de la vânzare într-un timp atât de scurt, creezi o presiune artificială asupra ofertei.</p>
+      <p class="text-green-400 font-bold mb-8">Dacă cererea rămâne constantă și oferta scade brusc -> Prețul trebuie să urce.</p>
+
+      <div class="bg-gradient-to-r from-blue-900/20 to-black border-l-4 border-cyan-500 p-8 rounded-r-xl mt-8">
+        <h3 class="text-cyan-400 font-bold text-xs uppercase mb-2">Concluzia lui Mihai Daniel (Take-ul Nostru):</h3>
+        <p class="text-xl italic text-white mb-4">"BitMine tocmai a validat teza: Ethereum este Bond-ul Internetului."</p>
+        <p class="text-gray-300">Instituțiile nu mai sunt interesate doar de speculă. Sunt interesate de Randament (Yield).</p>
+        <p class="text-gray-300 mt-2">Dacă MicroStrategy a demonstrat că poți folosi Bitcoin ca rezervă de valoare, BitMine demonstrează că poți folosi Ethereum ca Generator de Cashflow.</p>
+        <p class="text-white font-bold mt-4">1 Miliard de dolari tocmai a ieșit de pe masă. Cine vinde acum, vinde unei balene care nu are de gând să returneze monedele prea curând.</p>
+      </div>
+    `
+  },  
 // ✅ 0. ARTICOL NOU (JAF COINBASE - SECURITATE) - ON TOP
   {
     id: 'coinbase-vishing-scam-243m-tomar',
