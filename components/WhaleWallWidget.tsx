@@ -22,7 +22,7 @@ export default function WhaleWallWidget() {
   useEffect(() => {
     const fetchOrderBook = async () => {
       try {
-        // Luăm adâncime mare (500) ca să găsim zidurile reale
+        // Luăm adâncime mare ca să găsim zidurile reale
         const res = await fetch('https://api.binance.com/api/v3/depth?symbol=BTCUSDT&limit=100');
         const tickerRes = await fetch('https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT');
         
@@ -37,7 +37,6 @@ export default function WhaleWallWidget() {
         const ratio = (totalBids / (totalBids + totalAsks)) * 100;
 
         // 2. Găsim "Zidurile" (Cele mai mari ordine individuale)
-        // Sortăm descrescător după volum și luăm top 3
         const sortedBids = [...depth.bids]
             .sort((a, b) => parseFloat(b[1]) - parseFloat(a[1]))
             .slice(0, 3)
@@ -90,23 +89,27 @@ export default function WhaleWallWidget() {
       </div>
 
       {/* 1. VISUAL PRESSURE BAR */}
-      <div className="mb-6">
+      <div className="mb-6 relative z-10">
         <div className="flex justify-between text-[9px] font-bold text-gray-400 mb-1.5 uppercase tracking-wider">
-            <span>🐂 Tauri ({data.bidVol.toFixed(0)} BTC)</span>
-            <span>🐻 Urși ({data.askVol.toFixed(0)} BTC)</span>
+            <span className="flex items-center gap-1">
+                🐂 Tauri ({data.bidVol.toFixed(0)} <span className="text-orange-500 drop-shadow-[0_0_3px_rgba(249,115,22,0.8)]">₿</span>)
+            </span>
+            <span className="flex items-center gap-1">
+                🐻 Urși ({data.askVol.toFixed(0)} <span className="text-orange-500 drop-shadow-[0_0_3px_rgba(249,115,22,0.8)]">₿</span>)
+            </span>
         </div>
-        <div className="relative h-4 w-full bg-gray-900 rounded-sm overflow-hidden flex">
+        <div className="relative h-4 w-full bg-gray-900 rounded-sm overflow-hidden flex border border-white/5">
             <div 
-                className="h-full bg-green-500 transition-all duration-700 ease-out shadow-[0_0_10px_rgba(34,197,94,0.5)]"
+                className="h-full bg-green-500 transition-all duration-700 ease-out shadow-[0_0_15px_rgba(34,197,94,0.6)]"
                 style={{ width: `${data.ratio}%` }}
             ></div>
             <div 
-                className="h-full bg-red-500 transition-all duration-700 ease-out shadow-[0_0_10px_rgba(239,68,68,0.5)]"
+                className="h-full bg-red-500 transition-all duration-700 ease-out shadow-[0_0_15px_rgba(239,68,68,0.6)]"
                 style={{ width: `${100 - data.ratio}%` }}
             ></div>
             
             {/* Middle Marker */}
-            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-black/50 z-10"></div>
+            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-black/80 z-10"></div>
         </div>
       </div>
 
@@ -119,9 +122,12 @@ export default function WhaleWallWidget() {
                 <ArrowDown size={10} /> Rezistență (Ask)
             </div>
             {data.topAsks.map((ask, i) => (
-                <div key={i} className="flex justify-between items-center text-xs group/item hover:bg-red-500/10 rounded px-1 transition-colors cursor-default">
-                    <span className="text-red-300 font-mono font-bold">${ask.price}</span>
-                    <span className="text-gray-400 text-[10px]">{ask.vol} ₿</span>
+                <div key={i} className="flex justify-between items-center group/item hover:bg-red-500/10 rounded px-1 transition-colors cursor-default py-0.5">
+                    <span className="text-red-300 font-mono text-xs">${ask.price}</span>
+                    <div className="flex items-center gap-1">
+                        <span className="text-white font-bold text-xs">{ask.vol}</span>
+                        <span className="text-orange-500 text-sm font-bold drop-shadow-[0_0_5px_rgba(249,115,22,0.8)]">₿</span>
+                    </div>
                 </div>
             ))}
         </div>
@@ -132,9 +138,12 @@ export default function WhaleWallWidget() {
                 <ArrowUp size={10} /> Suport (Bid)
             </div>
             {data.topBids.map((bid, i) => (
-                <div key={i} className="flex justify-between items-center text-xs group/item hover:bg-green-500/10 rounded px-1 transition-colors cursor-default">
-                    <span className="text-green-300 font-mono font-bold">${bid.price}</span>
-                    <span className="text-gray-400 text-[10px]">{bid.vol} ₿</span>
+                <div key={i} className="flex justify-between items-center group/item hover:bg-green-500/10 rounded px-1 transition-colors cursor-default py-0.5">
+                    <span className="text-green-300 font-mono text-xs">${bid.price}</span>
+                    <div className="flex items-center gap-1">
+                        <span className="text-white font-bold text-xs">{bid.vol}</span>
+                        <span className="text-orange-500 text-sm font-bold drop-shadow-[0_0_5px_rgba(249,115,22,0.8)]">₿</span>
+                    </div>
                 </div>
             ))}
         </div>
