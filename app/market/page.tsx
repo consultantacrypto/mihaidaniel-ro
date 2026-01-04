@@ -4,10 +4,12 @@ import AffiliateSection from '@/components/AffiliateSection';
 import TickerTape from '@/components/TickerTape'; 
 import SmartMoneyWidget from '@/components/SmartMoneyWidget'; 
 import InstitutionalTracker from '@/components/InstitutionalTracker';
-// ✅ IMPORT NOU PENTRU WIDGETUL DE PRESIUNE 
 import WhaleWallWidget from '@/components/WhaleWallWidget'; 
+// ✅ 1. IMPORTURI NOI PENTRU INTERACȚIUNE
+import SentimentPoll from '@/components/SentimentPoll';
+import MarketNarrative from '@/components/MarketNarrative';
 import { getGlobalData, getFearGreed } from '@/lib/market-api';
-import { Activity, DollarSign, Layers, BarChart3, Zap, ExternalLink, Globe, MonitorPlay } from 'lucide-react';
+import { Activity, DollarSign, Layers, BarChart3, Zap, ExternalLink, Globe } from 'lucide-react';
 import Link from 'next/link';
 
 const formatCurrency = (value: number) => {
@@ -30,8 +32,11 @@ export default async function MarketPage() {
       <Navbar />
       <TickerTape />
 
+      {/* ✅ 2. NARAȚIUNEA SĂPTĂMÂNII (SUB NAVBAR) */}
+      <MarketNarrative />
+
       {/* --- LAYOUT FLUID PENTRU ECRANE GIGANT (TV) --- */}
-      <div className="w-full max-w-[2400px] mx-auto px-4 md:px-6 xl:px-8 py-8 md:py-12">
+      <div className="w-full max-w-[2400px] mx-auto px-4 md:px-6 xl:px-8 py-4 md:py-8">
         
         {/* 1. HEADER & GLOBAL METRICS (Full Width) */}
         <div className="flex flex-col xl:flex-row justify-between items-start xl:items-end gap-8 mb-10 border-b border-gray-800 pb-8">
@@ -107,7 +112,7 @@ export default async function MarketPage() {
                         <span className="text-[10px] md:text-xs font-mono text-green-400 font-bold tracking-wider">LIVE DATA STREAM</span>
                     </div>
 
-                    {/* ✅ BUTONUL WAW (LICHIDĂRI) */}
+                    {/* BUTONUL WAW (LICHIDĂRI) */}
                     <Link href="/lichidari" className="relative group overflow-hidden rounded-lg px-5 py-2.5 font-bold text-white shadow-[0_0_20px_rgba(234,179,8,0.2)] hover:shadow-[0_0_30px_rgba(234,179,8,0.4)] transition-all">
                         <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-orange-600 group-hover:from-yellow-500 group-hover:to-orange-500 transition-colors"></div>
                         <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-shine"></div>
@@ -118,14 +123,14 @@ export default async function MarketPage() {
                         </div>
                     </Link>
 
-                    {/* ✅ BUTONUL NOU: DOSARUL STRATEGIC */}
+                    {/* BUTONUL: DOSARUL STRATEGIC */}
                     <Link href="/raport-strategic" className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-blue-600/20 border border-blue-500/30 hover:bg-blue-600/30 transition-all text-xs md:text-sm font-bold text-blue-300 group">
                         <Globe size={14} className="group-hover:rotate-12 transition-transform" /> 
                         Dosarul Strategic: Top 20
                     </Link>
                 </div>
 
-                {/* COMPONENTA PRINCIPALĂ (FĂRĂ LIMITĂ SCROLL MOBIL) */}
+                {/* COMPONENTA PRINCIPALĂ */}
                 <div className="w-full rounded-2xl border border-gray-800 md:border-none bg-[#0a0f1e] md:bg-transparent">
                     <InstitutionalTracker />
                 </div>
@@ -140,11 +145,13 @@ export default async function MarketPage() {
             <div className="xl:col-span-3 flex flex-col gap-6">
                 
                 <div className="sticky top-24 space-y-6">
-                    {/* Widget Smart Money (Sentimet Analiști) */}
+                    {/* ✅ 3. VOTUL SENTIMENTULUI (AICI ÎL PUNEM PRIMUL PENTRU INTERACȚIUNE) */}
+                    <SentimentPoll />
+
+                    {/* Widget Smart Money */}
                     <SmartMoneyWidget />
 
-                    {/* ✅ WHALE WALL WIDGET (Orderbook Pressure) */}
-                    {/* Acesta înlocuiește textul static. Arată presiunea de cumpărare/vânzare LIVE */}
+                    {/* Whale Wall Widget */}
                     <WhaleWallWidget />
 
                     {/* Link Academia */}
