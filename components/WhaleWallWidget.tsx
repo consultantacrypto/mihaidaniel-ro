@@ -1,8 +1,7 @@
 'use client';
 
 import React, { useEffect, useState, useRef } from 'react';
-// ✅ AM ADĂUGAT ShieldAlert AICI
-import { ArrowDown, ArrowUp, Crosshair, Zap, Activity, Waves, ShieldAlert } from 'lucide-react';
+import { ArrowDown, ArrowUp, Zap, Activity, Waves, ShieldAlert } from 'lucide-react';
 
 interface Trade {
   p: string; // Preț
@@ -17,9 +16,6 @@ export default function WhaleWallWidget() {
   const [price, setPrice] = useState<string>("0");
   const [lastTradeType, setLastTradeType] = useState<'buy' | 'sell'>('buy');
   
-  // Ref pentru a ține tranzacțiile fără a cauza re-render infinit
-  const tradesRef = useRef<Trade[]>([]);
-
   useEffect(() => {
     // 1. FETCH INITIAL PENTRU ORDERBOOK (ZIDURILE)
     const fetchDepth = async () => {
@@ -79,7 +75,7 @@ export default function WhaleWallWidget() {
   if (!depth) return (
     <div className="bg-[#0a0f1e] p-6 rounded-2xl border border-gray-800 animate-pulse h-[350px] flex flex-col items-center justify-center gap-4 text-gray-500 text-xs">
         <div className="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-        <div>Inițializare Quantum Radar...</div>
+        <div>Se încarcă Quantum Radar...</div>
     </div>
   );
 
@@ -108,10 +104,10 @@ export default function WhaleWallWidget() {
          </div>
 
          {/* IMBALANCE METER (Bara de putere) */}
-         <div className="relative h-2 w-full bg-gray-800 rounded-full overflow-hidden mt-2">
+         <div className="relative h-2 w-full bg-gray-800 rounded-full overflow-hidden mt-2 border border-white/5">
             <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-white z-10 h-full"></div> {/* Center Line */}
             <div 
-                className="h-full bg-gradient-to-r from-green-500 to-emerald-300 transition-all duration-700 ease-out"
+                className="h-full bg-gradient-to-r from-green-500 to-emerald-300 transition-all duration-700 ease-out shadow-[0_0_10px_rgba(34,197,94,0.8)]"
                 style={{ width: `${depth.ratio}%` }}
             ></div>
          </div>
@@ -123,30 +119,41 @@ export default function WhaleWallWidget() {
 
       {/* --- SECTION 2: THE TAPE (Live Transactions) --- */}
       <div className="p-4 bg-[#050912]">
-        <div className="text-[9px] font-bold text-gray-500 uppercase mb-2 flex justify-between items-center">
-            <span>Recent Trades (Binance)</span>
-            <Activity size={10} className="text-gray-600"/>
+        <div className="text-[9px] font-bold text-gray-500 uppercase mb-3 flex justify-between items-center tracking-wider">
+            <span>BANDA LIVE (ULTIMELE TRANZACȚII)</span>
+            <Activity size={10} className="text-blue-500"/>
         </div>
         
-        <div className="space-y-1.5 min-h-[140px]">
+        <div className="space-y-2 min-h-[150px]">
             {trades.map((t, i) => {
-                // isBuyerMaker = true înseamnă că Maker-ul a fost Buyer -> Taker-ul a fost Seller (Deci SELL - Roșu)
-                // isBuyerMaker = false înseamnă că Maker-ul a fost Seller -> Taker-ul a fost Buyer (Deci BUY - Verde)
+                // Determine trade type
                 const type = t.m ? 'sell' : 'buy'; 
-                const isWhale = parseFloat(t.q) > 0.5; // Peste 0.5 BTC considerăm Whale mic pentru vizual
+                // Highlight whales (> 0.1 BTC visually)
+                const isWhale = parseFloat(t.q) > 0.1; 
 
                 return (
-                    <div key={t.time + i} className={`flex justify-between items-center text-xs p-1.5 rounded border border-transparent ${isWhale ? 'bg-white/5 border-white/10' : ''} animate-in slide-in-from-right duration-300`}>
-                        <div className="flex items-center gap-2">
-                            <span className={`font-bold font-mono ${type === 'buy' ? 'text-green-400' : 'text-red-400'}`}>
-                                {parseFloat(t.p).toLocaleString()}
+                    <div key={t.time + i} className={`flex justify-between items-center text-xs p-2 rounded border ${isWhale ? 'bg-white/5 border-white/10' : 'border-transparent'} animate-in slide-in-from-right duration-300`}>
+                        
+                        {/* Preț & Direcție */}
+                        <div className="flex items-center gap-2 w-1/3">
+                            {type === 'buy' ? 
+                                <span className="text-[9px] bg-green-900/30 text-green-400 px-1 rounded font-bold">CUMPĂRĂ</span> : 
+                                <span className="text-[9px] bg-red-900/30 text-red-400 px-1 rounded font-bold">VINDE</span>
+                            }
+                            <span className={`font-mono font-bold ${type === 'buy' ? 'text-green-300' : 'text-red-300'}`}>
+                                ${parseFloat(t.p).toLocaleString()}
                             </span>
                         </div>
-                        <div className="flex items-center gap-2">
-                            <span className={`font-mono font-bold ${isWhale ? 'text-white' : 'text-gray-500'}`}>
-                                {parseFloat(t.q).toFixed(4)} ₿
+
+                        {/* Cantitate & Bitcoin Glow */}
+                        <div className="flex items-center justify-end gap-1.5">
+                            <span className={`font-mono font-bold text-sm ${isWhale ? 'text-white' : 'text-gray-400'}`}>
+                                {parseFloat(t.q).toFixed(4)}
                             </span>
-                            {type === 'buy' ? <ArrowUp size={10} className="text-green-500"/> : <ArrowDown size={10} className="text-red-500"/>}
+                            <span className="text-orange-500 font-bold text-sm drop-shadow-[0_0_8px_rgba(249,115,22,0.8)]">
+                                ₿
+                            </span>
+                             {type === 'buy' ? <ArrowUp size={12} className="text-green-500"/> : <ArrowDown size={12} className="text-red-500"/>}
                         </div>
                     </div>
                 )
@@ -157,7 +164,7 @@ export default function WhaleWallWidget() {
       {/* --- SECTION 3: WHALE WALLS SUMMARY --- */}
       <div className="p-3 bg-gray-900/50 border-t border-gray-800 flex justify-between items-center text-[10px]">
          <div className="text-gray-400">
-            Ziduri Identificate:
+            Ziduri Identificate (Adâncime):
          </div>
          <div className="flex gap-3">
              <span className="text-green-400 font-bold flex items-center gap-1">
