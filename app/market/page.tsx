@@ -2,10 +2,9 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import AffiliateSection from '@/components/AffiliateSection'; 
 import TickerTape from '@/components/TickerTape'; 
-import SmartMoneyWidget from '@/components/SmartMoneyWidget'; 
+// ❌ AM SCOS IMPORTUL DE SMART MONEY
 import InstitutionalTracker from '@/components/InstitutionalTracker';
 import WhaleWallWidget from '@/components/WhaleWallWidget'; 
-// ✅ 1. IMPORTURI NOI PENTRU INTERACȚIUNE
 import SentimentPoll from '@/components/SentimentPoll';
 import MarketNarrative from '@/components/MarketNarrative';
 import { getGlobalData, getFearGreed } from '@/lib/market-api';
@@ -32,13 +31,13 @@ export default async function MarketPage() {
       <Navbar />
       <TickerTape />
 
-      {/* ✅ 2. NARAȚIUNEA SĂPTĂMÂNII (SUB NAVBAR) */}
+      {/* NARAȚIUNEA SĂPTĂMÂNII */}
       <MarketNarrative />
 
-      {/* --- LAYOUT FLUID PENTRU ECRANE GIGANT (TV) --- */}
+      {/* --- LAYOUT FLUID --- */}
       <div className="w-full max-w-[2400px] mx-auto px-4 md:px-6 xl:px-8 py-4 md:py-8">
         
-        {/* 1. HEADER & GLOBAL METRICS (Full Width) */}
+        {/* 1. HEADER & GLOBAL METRICS */}
         <div className="flex flex-col xl:flex-row justify-between items-start xl:items-end gap-8 mb-10 border-b border-gray-800 pb-8">
             
             {/* Titlu & Intro */}
@@ -59,7 +58,7 @@ export default async function MarketPage() {
                 </p>
             </div>
 
-            {/* Metricile Rapide (Carduri) */}
+            {/* Metricile Rapide */}
             <div className="w-full xl:w-auto grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
                 {/* Market Cap */}
                 <div className="bg-[#0b1221] p-4 rounded-xl border border-white/5 hover:border-blue-500/30 transition-colors group">
@@ -99,7 +98,7 @@ export default async function MarketPage() {
         {/* 2. MAIN DASHBOARD GRID (12 Columns System) */}
         <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 xl:gap-8">
             
-            {/* STÂNGA: INSTITUTIONAL TRACKER (Ocupă 9 coloane pe TV, Full pe Mobil) */}
+            {/* STÂNGA: INSTITUTIONAL TRACKER */}
             <div className="xl:col-span-9 flex flex-col gap-6">
                 
                 {/* Butoane Navigare Rapidă */}
@@ -112,7 +111,6 @@ export default async function MarketPage() {
                         <span className="text-[10px] md:text-xs font-mono text-green-400 font-bold tracking-wider">LIVE DATA STREAM</span>
                     </div>
 
-                    {/* BUTONUL WAW (LICHIDĂRI) */}
                     <Link href="/lichidari" className="relative group overflow-hidden rounded-lg px-5 py-2.5 font-bold text-white shadow-[0_0_20px_rgba(234,179,8,0.2)] hover:shadow-[0_0_30px_rgba(234,179,8,0.4)] transition-all">
                         <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-orange-600 group-hover:from-yellow-500 group-hover:to-orange-500 transition-colors"></div>
                         <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-shine"></div>
@@ -123,7 +121,6 @@ export default async function MarketPage() {
                         </div>
                     </Link>
 
-                    {/* BUTONUL: DOSARUL STRATEGIC */}
                     <Link href="/raport-strategic" className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-blue-600/20 border border-blue-500/30 hover:bg-blue-600/30 transition-all text-xs md:text-sm font-bold text-blue-300 group">
                         <Globe size={14} className="group-hover:rotate-12 transition-transform" /> 
                         Dosarul Strategic: Top 20
@@ -141,20 +138,17 @@ export default async function MarketPage() {
                 </div>
             </div>
 
-            {/* DREAPTA: SIDEBAR WIDGETS (Sticky pe Desktop) */}
+            {/* DREAPTA: SIDEBAR CURĂȚAT */}
             <div className="xl:col-span-3 flex flex-col gap-6">
                 
                 <div className="sticky top-24 space-y-6">
-                    {/* ✅ 3. VOTUL SENTIMENTULUI (AICI ÎL PUNEM PRIMUL PENTRU INTERACȚIUNE) */}
+                    {/* 1. VOTUL (Sentiment) */}
                     <SentimentPoll />
 
-                    {/* Widget Smart Money */}
-                    <SmartMoneyWidget />
-
-                    {/* Whale Wall Widget */}
+                    {/* 2. WHALE RADAR (Acum e mai sus, perfect vizibil!) */}
                     <WhaleWallWidget />
 
-                    {/* Link Academia */}
+                    {/* 3. Link Academia (Discret) */}
                     <div className="pt-2">
                         <Link href="/academie" className="block w-full text-center py-2.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-bold text-gray-300 transition-all">
                             Accesează Academia Completă &rarr;
@@ -166,7 +160,7 @@ export default async function MarketPage() {
 
         </div>
 
-        {/* 3. FOOTER SECTION */}
+        {/* FOOTER SECTION */}
         <div className="mt-12 md:mt-20">
              <AffiliateSection />
         </div>
