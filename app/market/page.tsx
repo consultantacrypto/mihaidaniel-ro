@@ -3,9 +3,11 @@ import Footer from '@/components/Footer';
 import AffiliateSection from '@/components/AffiliateSection'; 
 import TickerTape from '@/components/TickerTape'; 
 import SmartMoneyWidget from '@/components/SmartMoneyWidget'; 
-import InstitutionalTracker from '@/components/InstitutionalTracker'; 
+import InstitutionalTracker from '@/components/InstitutionalTracker';
+// ✅ IMPORT NOU PENTRU WIDGETUL DE PRESIUNE 
+import WhaleWallWidget from '@/components/WhaleWallWidget'; 
 import { getGlobalData, getFearGreed } from '@/lib/market-api';
-import { Activity, DollarSign, Layers, BarChart3, TrendingUp, TrendingDown, Zap, ExternalLink, Globe } from 'lucide-react';
+import { Activity, DollarSign, Layers, BarChart3, Zap, ExternalLink, Globe, MonitorPlay } from 'lucide-react';
 import Link from 'next/link';
 
 const formatCurrency = (value: number) => {
@@ -116,7 +118,7 @@ export default async function MarketPage() {
                         </div>
                     </Link>
 
-                    {/* ✅ BUTONUL NOU: DOSARUL STRATEGIC (În loc de Video) */}
+                    {/* ✅ BUTONUL NOU: DOSARUL STRATEGIC */}
                     <Link href="/raport-strategic" className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-blue-600/20 border border-blue-500/30 hover:bg-blue-600/30 transition-all text-xs md:text-sm font-bold text-blue-300 group">
                         <Globe size={14} className="group-hover:rotate-12 transition-transform" /> 
                         Dosarul Strategic: Top 20
@@ -138,39 +140,18 @@ export default async function MarketPage() {
             <div className="xl:col-span-3 flex flex-col gap-6">
                 
                 <div className="sticky top-24 space-y-6">
-                    {/* Widget Smart Money */}
+                    {/* Widget Smart Money (Sentimet Analiști) */}
                     <SmartMoneyWidget />
 
-                    {/* Mini Ghid Vizual */}
-                    <div className="bg-gradient-to-b from-[#0b1221] to-[#020617] border border-white/10 rounded-2xl p-5">
-                        <h3 className="text-xs font-bold text-gray-400 mb-4 uppercase tracking-widest border-b border-white/5 pb-2">
-                            Semnale Cheie
-                        </h3>
-                        <div className="space-y-4">
-                            <div className="flex gap-3">
-                                <div className="mt-1 w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.5)]"></div>
-                                <div>
-                                    <h4 className="text-xs font-bold text-white">Acumulare Instituțională</h4>
-                                    <p className="text-[10px] text-gray-500 leading-relaxed mt-0.5">
-                                        Când BlackRock & Fidelity cumpără (vezi tabelul), trendul este susținut pe termen lung.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="flex gap-3">
-                                <div className="mt-1 w-1.5 h-1.5 rounded-full bg-orange-500 shadow-[0_0_8px_rgba(249,115,22,0.5)]"></div>
-                                <div>
-                                    <h4 className="text-xs font-bold text-white">Dominanța Bitcoin {'>'} 55%</h4>
-                                    <p className="text-[10px] text-gray-500 leading-relaxed mt-0.5">
-                                        Altcoin-urile suferă. Rămâi pe BTC până scade dominanța sub 50%.
-                                    </p>
-                                </div>
-                            </div>
-                             <div className="pt-2">
-                                <Link href="/academie" className="block w-full text-center py-2.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-bold text-gray-300 transition-all">
-                                    Accesează Academia &rarr;
-                                </Link>
-                            </div>
-                        </div>
+                    {/* ✅ WHALE WALL WIDGET (Orderbook Pressure) */}
+                    {/* Acesta înlocuiește textul static. Arată presiunea de cumpărare/vânzare LIVE */}
+                    <WhaleWallWidget />
+
+                    {/* Link Academia */}
+                    <div className="pt-2">
+                        <Link href="/academie" className="block w-full text-center py-2.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-bold text-gray-300 transition-all">
+                            Accesează Academia Completă &rarr;
+                        </Link>
                     </div>
                 </div>
 
