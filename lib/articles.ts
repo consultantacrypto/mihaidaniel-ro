@@ -1,4 +1,66 @@
 export const articles = [   
+// ✅ 0. ARTICOL NOU (COSMARUL DE 7 ANI - SECURITATE) - ON TOP
+  {
+    id: 'cosmarul-de-7-ani-bitcoin-blocat-bip38-typo',
+    slug: 'cosmarul-de-7-ani-bitcoin-blocat-bip38',
+    title: 'COȘMARUL DE 7 ANI: Cum o singură tastă apăsată greșit a blocat o avere în Bitcoin din 2017 până azi. Lecția dură despre "Paranoia Securității"',
+    summary: 'Povestea incredibilă a unui investitor care a stat 7 ani blocat în afara portofelului Bitcoin din cauza unei singure litere. De ce criptarea BIP38 este o sabie cu două tăișuri și de ce trebuie să îți testezi mereu backup-urile.',
+    category: 'EDUCAȚIE & SECURITATE',
+    image: '/bitcoinblocat7ani.jpg',
+    date: '04 Jan 2026',
+    readTime: '4 min',
+    author: 'Mihai Daniel',
+    impact: 'neutral',
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-red-500/20 text-red-300 border border-red-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🔒 Security Nightmare</span>
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🥶 Forced HODL</span>
+      </div>
+
+      <div class="bg-gray-900/50 border border-gray-700 p-4 rounded-xl mb-8">
+        <ul class="space-y-1 text-sm text-gray-400">
+            <li><strong>Sursa:</strong> Reddit (r/Bitcoin) / User AdExternal209</li>
+            <li><strong>Subiect:</strong> Securitate / Self-Custody / BIP38</li>
+            <li><strong>Nivel:</strong> <span class="text-yellow-400 font-bold">Educațional / Avertisment</span></li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Povestea: "Paranoia m-a costat scump"</h3>
+      <p class="mb-4 text-gray-300">În 2017, în plin Bull Market, un investitor a decis să fie responsabil. A vrut să fie propria lui bancă. A creat un Paper Wallet (portofel de hârtie) și, fiind paranoic în privința securității, l-a criptat folosind standardul BIP38.</p>
+      <p class="mb-4 text-gray-300">A ales o parolă pe care o considera "memorabilă", bazată pe formația sa preferată. A scris-o, a criptat portofelul și a pus Bitcoin-ul la păstrare.</p>
+      <p class="mb-4 text-red-400 font-bold border-l-4 border-red-500 pl-4">Greșeala fatală: Nu a testat decriptarea imediat după creare.</p>
+      <p class="mb-4 text-gray-300">Fast forward în 2024: Omul nostru vrea să acceseze averea. Introduce parola. EROARE. O introduce din nou. EROARE. Timp de luni de zile, a trăit iadul oricărui investitor crypto: știe parola "în capul lui", dar matematica spune "NU".</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. De ce a durat 7 ani? (Capcana BIP38)</h3>
+      <p class="mb-4 text-gray-300">Mulți vor spune: "De ce nu a folosit un program de spart parole (Brute Force)?" Aici intervine detaliul tehnic pe care mulți îl ignoră.</p>
+      <p class="mb-4 text-gray-300">Criptarea BIP38 este concepută intenționat să fie lentă și grea de procesat pentru calculatoare (folosește scrypt și EC-multiply). Utilizatorul a explicat că unelte standard precum btcrecover sau hashcat reușeau să testeze doar 5-10 parole pe secundă. La o parolă complexă, ar fi durat milenii să ghicească toate combinațiile.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Soluția: Ingineria inversă a propriilor degete</h3>
+      <p class="mb-4 text-gray-300">Disperat, omul și-a construit propriul soft. Nu a încercat să ghicească orice parolă, ci a încercat să ghicească "Greșelile Umane":</p>
+      <ul class="list-disc pl-6 text-gray-300 mb-6 space-y-2">
+        <li>A analizat tastele pe care le apasă des din greșeală (Fat Finger).</li>
+        <li>A verificat erorile de Caps Lock.</li>
+        <li>A verificat diferențele dintre tastaturile AZERTY și QWERTY.</li>
+      </ul>
+      <p class="mb-4 text-gray-300"><strong>Rezultat? A găsit-o.</strong> Parola avea UN SINGUR CARACTER GREȘIT. O tastă apăsată exact lângă cea pe care voia să o apese acum 7 ani. O simplă atingere greșită l-a ținut blocat pe dinafară timp de un ciclu și jumătate de piață.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. Concluzia: "Forced HODL" este real, dar periculos</h3>
+      <p class="mb-4 text-gray-300">Deși povestea are un final fericit (omul și-a recuperat Bitcoin-ul, care acum valorează mult mai mult decât în 2017 - practic a fost forțat să facă HODL), riscul a fost imens.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-blue-900/20 p-6 rounded-2xl border border-blue-500/40">
+        <h4 class="text-xl font-bold text-blue-300 mb-4 flex items-center gap-2">
+            🛡️ Lecția lui Tati (Mihai Daniel Take):
+        </h4>
+        <p class="text-gray-300 italic mb-4">
+            "Securitatea nu înseamnă complexitate infinită. Securitatea înseamnă accesibilitate pentru TINE și imposibilitate pentru ALȚII."
+        </p>
+        <p class="text-white font-bold">
+            Dacă îți criptezi portofelul cu o parolă pe care nu o scrii pe o placă de metal și nu o testezi de 3 ori înainte să pui banii... joci Ruleta Rusească cu viitorul tău.
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU (SOC CALIFORNIA CONFISCARE - ALERTĂ CRITICĂ) - ON TOP
   {
     id: 'california-crypto-seizure-unclaimed-property-law-shock',
