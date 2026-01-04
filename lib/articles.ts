@@ -1,4 +1,75 @@
 export const articles = [   
+// ✅ 0. ARTICOL NOU (HARVARD VS BITCOIN - POVESTEA SERII) - ON TOP
+  {
+    id: 'harvard-vs-bitcoin-rogoff-100k-mistake',
+    slug: 'razbunarea-matematicii-harvard-bitcoin-greseala',
+    title: 'RĂZBUNAREA MATEMATICII: Cum a greșit Harvard cu 100.000%. De la "Bitcoin va ajunge la 100$" la cumpărături de milioane la vârf.',
+    summary: 'În 2018, economistul Kenneth Rogoff de la Harvard prezicea că Bitcoin va ajunge la 100$. Astăzi, universitățile de elită cumpără la peste 100.000$. O lecție brutală despre costul oportunității și aroganța academică.',
+    category: 'PSIHOLOGIE DE PIAȚĂ',
+    image: '/harvardgreseala.jpg',
+    date: '04 Jan 2026',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish',
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-red-500/20 text-red-300 border border-red-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🎓 Aroganță Academică</span>
+        <span class="bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded text-xs font-bold uppercase">💸 Costul Scepticismului</span>
+      </div>
+
+      <div class="bg-gray-900/50 border border-gray-700 p-4 rounded-xl mb-8">
+        <ul class="space-y-1 text-sm text-gray-400">
+            <li><strong>Sursa:</strong> CNBC (Arhiva 2018) / Rapoarte Recente 2025</li>
+            <li><strong>Personaj:</strong> Kenneth Rogoff (Harvard) vs. Realitatea</li>
+            <li><strong>Subiect:</strong> <span class="text-blue-400 font-bold">Psihologia Pieței / Adopție</span></li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. 2018: Aroganța Academică</h3>
+      <p class="mb-4 text-gray-300">Să ne întoarcem în timp. Este 5 Martie 2018. Piața Crypto este în Bear Market. Sânge pe străzi.</p>
+      <p class="mb-4 text-gray-300">În acest context, Kenneth Rogoff, un economist renumit de la Harvard, iese pe CNBC și face o predicție care a îmbătrânit ca laptele lăsat la soare:</p>
+      
+      <blockquote class="border-l-4 border-red-500 pl-4 italic text-gray-400 my-6 bg-red-900/10 p-4 rounded-r-lg">
+        "Peste un deceniu, este mult mai probabil ca Bitcoin să fie 100$ decât 100.000$."
+      </blockquote>
+      
+      <p class="mb-4 text-gray-300">El argumenta că guvernele nu vor permite existența tranzacțiilor anonime și că utilizarea reală este mică. Harvard ne spunea, practic: "E o țeapă. Merge la zero."</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. 2025: Capitularea Tăcută</h3>
+      <p class="mb-4 text-gray-300">Fast forward 7 ani. Nu suntem la 100$. Suntem la peste 100.000$.</p>
+      <p class="mb-4 text-gray-300">Ironia supremă? Rapoartele recente indică faptul că fondurile de investiții asociate universităților de elită (inclusiv Harvard) au început să acumuleze Bitcoin și ETF-uri crypto.</p>
+      <div class="bg-[#0a0f1e] p-5 rounded-lg border border-gray-700 mb-6">
+        <p class="text-gray-300">Conform datelor din piață, Harvard (prin endowment-ul său) a intrat în poziții de Bitcoin la prețuri de peste <span class="text-white font-bold">116.000$</span>.</p>
+        <p class="text-gray-300 mt-2">Au așteptat să vadă dacă "e sigur". Acest "safety check" i-a costat un randament de <strong>1000x</strong>.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Lecția Dură: Fiecare primește prețul pe care îl merită</h3>
+      <p class="mb-4 text-gray-300">Aceasta este legea universală a Bitcoin-ului:</p>
+      <ul class="list-disc pl-6 text-gray-300 mb-6 space-y-3">
+        <li>Cei curioși și deschiși la minte au cumpărat când Harvard râdea (2018). <strong>Ei au plătit 3.800$.</strong></li>
+        <li>Cei sceptici dar pragmatici au cumpărat când BlackRock a intrat (2023). <strong>Ei au plătit 30.000$.</strong></li>
+        <li>Cei aroganți (Academia) cumpără acum, când nu mai au încotro. <strong>Ei plătesc 116.000$.</strong></li>
+      </ul>
+      <p class="mb-4 text-orange-400 font-bold">Scepticismul nu este gratuit. Scepticismul se plătește cu cea mai scumpă monedă: Costul de Oportunitate.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-blue-900/20 p-6 rounded-2xl border border-blue-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-blue-300 mb-4 flex items-center gap-2">
+            🧠 Opinia lui Tati (Mihai Daniel Take):
+        </h4>
+        <p class="text-gray-300 italic mb-4 leading-relaxed">
+            "Să ai un doctorat în economie nu te ajută să înțelegi banii. Te ajută doar să explici complex de ce ai greșit.
+            În 2018, oamenii simpli, 'degen-ii' de pe internet, au înțeles mai bine viitorul banilor decât profesorii de la Ivy League."
+        </p>
+        <p class="text-gray-300 italic mb-4">
+             "De ce? Pentru că noi am studiat Codul, ei au studiat Trecutul."
+        </p>
+        <p class="text-white font-black text-lg border-t border-blue-500/30 pt-4 mt-2">
+            Harvard tocmai a devenit Exit Liquidity-ul vostru. Felicitări celor care au avut încredere în matematică, nu în titluri academice.
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU (COSMARUL DE 7 ANI - SECURITATE) - ON TOP
   {
     id: 'cosmarul-de-7-ani-bitcoin-blocat-bip38-typo',
