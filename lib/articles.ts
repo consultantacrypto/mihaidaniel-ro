@@ -1,4 +1,81 @@
 export const articles = [  
+// ✅ 0. ARTICOL NOU (ALERTĂ LEDGER - SECURITATE) - ON TOP
+  {
+    id: 'ledger-data-breach-global-e-phishing-alert-2026',
+    slug: 'alerta-ledger-date-personale-expuse-global-e',
+    title: 'ALERTĂ LEDGER: Datele personale ale clienților expuse printr-un partener terț. De ce fondurile sunt sigure, dar tu ești în pericol de Phishing.',
+    summary: 'Ledger a confirmat o scurgere de date prin partenerul Global-e. Fondurile sunt sigure pe dispozitiv, dar numele și adresele au fost expuse. Pregătiți-vă pentru un val masiv de atacuri Phishing.',
+    category: 'SECURITATE & ALERTĂ',
+    image: '/ledgeralert5ianuarie.jpg',
+    date: '05 Jan 2026',
+    readTime: '4 min',
+    author: 'Mihai Daniel',
+    impact: 'neutral', // Impact neutru pe preț, dar critic pe securitate personală
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-red-500/20 text-red-300 border border-red-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🚨 Data Breach</span>
+        <span class="bg-orange-500/20 text-orange-300 border border-orange-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🎣 Phishing Risk</span>
+      </div>
+
+      <div class="bg-gray-900/50 border border-gray-700 p-4 rounded-xl mb-8">
+        <ul class="space-y-1 text-sm text-gray-400">
+            <li><strong>Sursa:</strong> Rapoarte de Securitate / Ledger Official</li>
+            <li><strong>Subiect:</strong> Securitate Cibernetică / Data Breach</li>
+            <li><strong>Nivel:</strong> <span class="text-red-400 font-bold">Critic pentru deținătorii de Hardware Wallets</span></li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Ce s-a întâmplat? (Nu, dispozitivul tău nu e stricat)</h3>
+      <p class="mb-4 text-gray-300">Ledger, cel mai mare producător de portofele hardware, a confirmat o scurgere masivă de date.</p>
+      <p class="mb-4 text-gray-300"><strong>FOARTE IMPORTANT:</strong> Atacul NU a avut loc asupra serverelor Ledger și nici asupra firmware-ului dispozitivelor. Breșa de securitate a avut loc la <strong>Global-e</strong>, un partener terț pe care Ledger îl folosește pentru procesarea plăților și a comenzilor.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Ce date au fost furate? (Vestea Bună și Vestea Proastă)</h3>
+      <p class="mb-4 text-gray-300">Hai să separăm apele:</p>
+      
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div class="bg-green-900/20 border border-green-500/30 p-4 rounded-lg">
+              <h4 class="font-bold text-green-400 mb-2">✅ Ce este SIGUR:</h4>
+              <p class="text-sm text-gray-300">Fondurile tale, Cheile Private, Seed Phrase-ul (cele 24 de cuvinte) și parolele tale. Acestea stau pe cipul securizat al dispozitivului și nu au fost atinse. <strong>Niciun ban nu a fost furat.</strong></p>
+          </div>
+          <div class="bg-red-900/20 border border-red-500/30 p-4 rounded-lg">
+              <h4 class="font-bold text-red-400 mb-2">❌ Ce a fost EXPUS:</h4>
+              <p class="text-sm text-gray-300">Numele, prenumele, adresa de email, numărul de telefon și adresa fizică de livrare.</p>
+          </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Riscul Real: Atacul Psihologic (Phishing)</h3>
+      <p class="mb-4 text-gray-300">De ce este grav dacă nu s-au furat bani? Pentru că hackerii știu acum două lucruri despre tine:</p>
+      <ul class="list-disc pl-6 text-gray-300 mb-4 space-y-1">
+          <li>Cum te cheamă și unde stai.</li>
+          <li>Că deții crypto (pentru că ai cumpărat un Ledger).</li>
+      </ul>
+      <p class="mb-4 text-gray-300">Asta deschide ușa pentru atacuri de tip <strong>Phishing Țintit</strong>.</p>
+      <p class="mb-4 text-gray-300 bg-gray-800 p-3 rounded border-l-4 border-yellow-500">
+        ⚠️ Vei primi mailuri care par a fi de la "Ledger Support", care îți vor spune (ironic): <em>"Datele tale au fost expuse, te rugăm să intri AICI să îți muți fondurile pe un portofel nou de siguranță"</em>.
+      </p>
+      <p class="mb-4 text-white font-bold">Dacă dai click și îți introduci cele 24 de cuvinte... atunci pierzi tot.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. Lecția de Securitate: "Lanțul e la fel de puternic ca veriga slabă"</h3>
+      <p class="mb-4 text-gray-300">Acest incident este un caz clasic de vulnerabilitate a lanțului de aprovizionare. Ledger poate avea cea mai bună securitate din lume, dar dacă firma care le procesează comenzile (Global-e) nu are aceleași standarde, datele clienților sunt compromise.</p>
+      <p class="mb-4 text-gray-300">Este o repetare a incidentului din 2020, când peste 1 milion de email-uri au fost expuse.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-blue-900/20 p-6 rounded-2xl border border-blue-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-blue-300 mb-4 flex items-center gap-2">
+            🛡️ Mihai Daniel Take (Opinia lui Tati):
+        </h4>
+        <p class="text-gray-300 italic mb-4 leading-relaxed">
+            "Să ai un Ledger este în continuare cea mai sigură metodă de a păstra crypto. Dispozitivul și-a făcut treaba: cheile sunt offline."
+        </p>
+        <p class="text-gray-300 italic mb-4">
+            "Dar acest leak ne reamintește o regulă sfântă: <strong>NIMENI, NICIODATĂ, nu îți va cere cele 24 de cuvinte.</strong> Nici Ledger, nici Poliția, nici Papa de la Roma."
+        </p>
+        <p class="text-white font-black text-lg border-t border-blue-500/30 pt-4 mt-2">
+            Pregătiți-vă de un val de mailuri false. Nu dați click. Nu vă panicați. Fondurile sunt SAFU, dar inbox-ul vostru este acum un câmp de luptă.
+        </p>
+      </div>
+    `
+  },
+
   // ✅ 0. ARTICOL NOU (ERC-8004 AI AGENTS) - ON TOP
   {
     id: 'erc-8004-agentic-crypto-ethereum-ai-revolution',
