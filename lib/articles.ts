@@ -1,4 +1,80 @@
-export const articles = [   
+export const articles = [  
+  // ✅ 0. ARTICOL NOU (ERC-8004 AI AGENTS) - ON TOP
+  {
+    id: 'erc-8004-agentic-crypto-ethereum-ai-revolution',
+    slug: 'revolutia-agentic-crypto-erc-8004-ethereum-ai',
+    title: 'REVOLUȚIA "AGENTIC CRYPTO": Ethereum nu mai este doar despre bani. Faceți cunoștință cu ERC-8004, standardul care dă "permis de conducere" Roboților AI.',
+    summary: 'Dacă ai un Bot de Trading AI, trebuie să-i dai acces total la portofel? Nu și cu ERC-8004. Descoperă standardul care transformă Ethereum în infrastructura de muncă pentru agenții autonomi.',
+    category: 'TEHNOLOGIE & AI',
+    image: '/etherc8004.jpg',
+    date: '05 Jan 2026',
+    readTime: '4 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish',
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-purple-500/20 text-purple-300 border border-purple-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🤖 AI Revolution</span>
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">💎 Ethereum Alpha</span>
+      </div>
+
+      <div class="bg-gray-900/50 border border-gray-700 p-4 rounded-xl mb-8">
+        <ul class="space-y-1 text-sm text-gray-400">
+            <li><strong>Sursa:</strong> Merlijn The Trader / Ethereum Developers</li>
+            <li><strong>Subiect:</strong> AI x Crypto / ERC-8004</li>
+            <li><strong>Nivel:</strong> <span class="text-purple-400 font-bold">Alpha / Tehnologie Avansată</span></li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Problema Actuală: AI-ul e deștept, dar "fără mâini"</h3>
+      <p class="mb-4 text-gray-300">Imaginează-ți că ai un Bot de Trading AI super inteligent. Vrei să tranzacționeze pentru tine. Ca să facă asta azi, trebuie să-i dai Cheia Privată (acces total la portofel).</p>
+      <p class="mb-4 text-gray-300">Asta e ca și cum i-ai da cheile de la casă menajerei. Dacă o ia razna sau e hackuită, îți fură tot. Din acest motiv, "AI Agents" în crypto au rămas doar un vis frumos... până acum.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Soluția: ERC-8004 (Cheia de Valet)</h3>
+      <p class="mb-4 text-gray-300">Noul standard propus, ERC-8004, introduce conceptul de <strong>"Session-Based Authorization" (Autorizare pe Sesiune)</strong>.</p>
+      
+      <div class="bg-[#0a0f1e] p-5 rounded-lg border border-gray-700 mb-6">
+          <p class="font-bold text-white mb-2">Analogie Simplă (Cheia de Valet):</p>
+          <p class="text-gray-300 mb-2">Gândește-te la Cheia de Valet de la o mașină scumpă. Îi dai valetului o cheie specială care îi permite:</p>
+          <ul class="list-disc pl-6 text-gray-300 space-y-1">
+              <li>Să conducă mașina pe o distanță scurtă (parcare).</li>
+              <li>Să o încuie.</li>
+              <li class="text-red-300">DAR NU îi permite să deschidă portbagajul sau să conducă cu mai mult de 30 km/h.</li>
+          </ul>
+      </div>
+
+      <p class="mb-4 text-gray-300"><strong>ERC-8004 face asta pentru portofelul tău:</strong> Poți crea un "Agent AI" și îi poți spune: <em>"Ai voie să tranzacționezi doar Uniswap, doar suma de 1000 USDT, și doar pentru următoarele 24 de ore."</em></p>
+      <p class="mb-4 text-gray-300">Totul este scris în cod, on-chain, auditabil și imposibil de încălcat de robot.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Ce devine posibil? (Viitorul Agentic)</h3>
+      <p class="mb-4 text-gray-300">Nu mai vorbim doar de tranzacții. Vorbim de Coordonare Autonomă.</p>
+      <ul class="list-disc pl-6 text-gray-300 mb-6 space-y-3">
+        <li><strong>Trading Agents:</strong> Boți care fac arbitraj 24/7 cu un buget limitat, fără risc de lichidare totală.</li>
+        <li><strong>Billing Agents:</strong> Un bot care îți plătește automat abonamentele (Netflix, Utilități) doar dacă sunt sub o anumită sumă.</li>
+        <li><strong>Trezorerie Automată:</strong> Companii DAO unde plățile de salarii sunt gestionate de agenți, nu de oameni.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. Concluzie: Ethereum se transformă</h3>
+      <p class="mb-4 text-gray-300">Până acum, Ethereum a fost "Bani Programabili". Odată cu ERC-8004, devine <strong>"Platforma de Muncă pentru AI"</strong>.</p>
+      <p class="mb-4 text-gray-300">Nu mai scalează doar tranzacții, scalează forța de muncă digitală.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-purple-900/20 p-6 rounded-2xl border border-purple-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-purple-300 mb-4 flex items-center gap-2">
+            🧠 Opinia lui Tati (Mihai Daniel Take):
+        </h4>
+        <p class="text-gray-300 italic mb-4 leading-relaxed">
+            "Dacă credeați că DeFi a fost mare, stați să vedeți 'Agentic Crypto'. Viitorul economiei nu va fi Oameni plătind Oameni. Va fi Mașini plătind Mașini."
+        </p>
+        <p class="text-gray-300 italic mb-4">
+            "ERC-8004 este infrastructura care permite unui AI să aibă propriul cont bancar, limitat și sigur."
+        </p>
+        <p class="text-white font-black text-lg border-t border-purple-500/30 pt-4 mt-2">
+            Cine înțelege asta acum, investește în infrastructura anului 2030.
+        </p>
+      </div>
+    `
+  },
+  
+
 // ✅ 0. ARTICOL NOU (HARVARD VS BITCOIN - POVESTEA SERII) - ON TOP
   {
     id: 'harvard-vs-bitcoin-rogoff-100k-mistake',
