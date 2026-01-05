@@ -5,6 +5,8 @@ import TickerTape from '@/components/TickerTape';
 import InstitutionalTracker from '@/components/InstitutionalTracker';
 import WhaleWallWidget from '@/components/WhaleWallWidget'; 
 import SentimentPoll from '@/components/SentimentPoll';
+// ✅ IMPORT NOU PENTRU GAMIFICATION
+import AlphaStreak from '@/components/AlphaStreak'; 
 import MarketNarrative from '@/components/MarketNarrative';
 import { getGlobalData, getFearGreed } from '@/lib/market-api';
 import { Activity, DollarSign, Layers, BarChart3, Zap, Calendar, ArrowRight, Flame, Clock, ExternalLink, Globe } from 'lucide-react';
@@ -32,7 +34,7 @@ export default async function MarketPage() {
 
       <MarketNarrative />
 
-      {/* --- LAYOUT FLUID --- */}
+      {/* --- LAYOUT FLUID PENTRU ECRANE GIGANT (TV) --- */}
       <div className="w-full max-w-[2400px] mx-auto px-4 md:px-6 xl:px-8 py-4 md:py-8">
         
         {/* 1. HEADER & GLOBAL METRICS (CMC STYLE - HORIZONTAL SCROLL) */}
@@ -57,10 +59,9 @@ export default async function MarketPage() {
             </div>
 
             {/* --- BANDA ORIZONTALĂ (SWIPEABLE ON MOBILE) --- */}
-            {/* Aici e magia CMC: overflow-x-auto permite scroll orizontal */}
             <div className="w-full xl:w-[70%] flex gap-4 overflow-x-auto pb-4 xl:pb-0 scrollbar-hide snap-x">
                 
-                {/* 1. CARD NOU: CALENDARUL EVENIMENTELOR (Forex Factory Style) */}
+                {/* 1. CALENDARUL EVENIMENTELOR */}
                 <div className="min-w-[260px] md:min-w-[280px] bg-gradient-to-br from-indigo-900/40 to-[#0b1221] p-4 rounded-xl border border-indigo-500/30 relative group snap-start">
                     <div className="absolute top-2 right-2 animate-pulse">
                         <span className="relative flex h-2 w-2">
@@ -126,7 +127,7 @@ export default async function MarketPage() {
         {/* 2. MAIN DASHBOARD GRID (12 Columns System) */}
         <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 xl:gap-8">
             
-            {/* STÂNGA: INSTITUTIONAL TRACKER */}
+            {/* STÂNGA: INSTITUTIONAL TRACKER (Ocupă 9 coloane pe TV, Full pe Mobil) */}
             <div className="xl:col-span-9 flex flex-col gap-6">
                 
                 {/* Butoane Navigare Rapidă */}
@@ -164,17 +165,27 @@ export default async function MarketPage() {
                 </div>
             </div>
 
-            {/* DREAPTA: SIDEBAR */}
+            {/* DREAPTA: SIDEBAR WIDGETS (Sticky pe Desktop) */}
             <div className="xl:col-span-3 flex flex-col gap-6">
+                
                 <div className="sticky top-24 space-y-6">
+                    {/* 1. VOTUL (Tribalism) */}
                     <SentimentPoll />
+
+                    {/* ✅ 2. ALPHA STREAK (Gamification) - NOU! */}
+                    <AlphaStreak />
+
+                    {/* 3. QUANTUM WHALE RADAR */}
                     <WhaleWallWidget />
+
+                    {/* Link Academia */}
                     <div className="pt-2">
                         <Link href="/academie" className="block w-full text-center py-2.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-bold text-gray-300 transition-all">
                             Accesează Academia Completă &rarr;
                         </Link>
                     </div>
                 </div>
+
             </div>
 
         </div>
