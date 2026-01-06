@@ -6,9 +6,9 @@ export const articles = [
     title: 'ALARMĂ MACRO: Motorul economiei SUA "s-a gripat". ISM Manufacturing cade la minimul ultimelor 14 luni (47.9). De ce Bitcoin tremură?',
     summary: 'Datele ISM Manufacturing au venit sub așteptări (47.9), semnalând o contracție severă. Află de ce Bitcoin suferă când economia SUA intră în zona de risc de recesiune, în ciuda narativului de "Safe Haven".',
     category: 'MACROECONOMIE',
-    image: '/alaramaismus.jpg', // Asigură-te că imaginea e în public
+    image: '/alarmaismus.jpg', // Asigură-te că imaginea e în public
     date: '06 Jan 2026',
-    readTime: '3 min',
+    readTime: '3 min', 
     author: 'Mihai Daniel',
     impact: 'bearish', // Impact negativ pe termen scurt
     content: `
