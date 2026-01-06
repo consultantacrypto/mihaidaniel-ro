@@ -1,4 +1,80 @@
 export const articles = [ 
+// ✅ 0. ARTICOL NOU (COREEA DE SUD - PAYMENT FREEZE) - ON TOP
+  {
+    id: 'south-korea-crypto-payment-freeze-anti-manipulation-2026',
+    slug: 'cosmarul-manipulatorilor-coreea-sud-inghetare-crypto',
+    title: 'COȘMARUL MANIPULATORILOR: Coreea de Sud activează "Butonul de Înghețare". Cum blochează statul câștigurile ilicite în secunda doi.',
+    summary: 'Coreea de Sud introduce un sistem revoluționar: "Payment Freeze". Află cum autoritățile pot bloca instantaneu profiturile manipulatorilor de piață, înainte ca aceștia să poată fugi cu banii.',
+    category: 'REGLEMENTARE & LEGISLAȚIE',
+    image: '/coreeadesudfreeze.jpg',
+    date: '06 Jan 2026',
+    readTime: '4 min',
+    author: 'Mihai Daniel',
+    impact: 'neutral', // E bullish pe termen lung pentru siguranță, dar neutru pe preț imediat
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">👮‍♂️ Anti-Manipulation</span>
+        <span class="bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🇰🇷 Global Model</span>
+      </div>
+
+      <div class="bg-gray-900/50 border border-gray-700 p-4 rounded-xl mb-8">
+        <ul class="space-y-1 text-sm text-gray-400">
+            <li><strong>Sursa:</strong> Financial Services Commission (FSC) / Surse oficiale Coreea de Sud</li>
+            <li><strong>Subiect:</strong> Reglementare Crypto / Anti-Manipulare</li>
+            <li><strong>Impact:</strong> <span class="text-green-400 font-bold">Global (Model de urmat)</span></li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Știrea: "Înghețare" înainte de "Confiscare"</h3>
+      <p class="mb-4 text-gray-300">Autoritățile financiare din Coreea de Sud sunt pe cale să introducă un sistem revoluționar numit <strong>"Payment Freeze"</strong>.</p>
+      <p class="mb-4 text-gray-300"><strong>Scopul este simplu:</strong> Să oprească suspecții de manipulare a prețurilor crypto să își ascundă sau să își retragă profiturile ilegale.</p>
+      <p class="mb-4 text-gray-300">Spre deosebire de sechestrele tradiționale care durează săptămâni (timp în care banii dispar), acest mecanism este conceput să acționeze instantaneu. Odată activat, suspectul nu mai poate retrage, transfera sau muta niciun fond.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Studiu de Caz: Operațiunea de 75 Milioane $</h3>
+      <p class="mb-4 text-gray-300">De ce au luat această decizie? Avem un exemplu concret discutat de autorități în Noiembrie.</p>
+      
+      <div class="bg-[#0a0f1e] p-5 rounded-lg border border-gray-700 mb-6">
+          <h4 class="text-white font-bold mb-4 border-b border-gray-700 pb-2">Anatomia unei Manipulări:</h4>
+          <p class="text-gray-300 mb-2">O grupare a mobilizat aproximativ <strong>100 miliarde Won (~75 Milioane $)</strong> pentru a umfla artificial prețul unei monede virtuale.</p>
+          <ul class="space-y-2 mt-4 text-sm">
+              <li class="flex justify-between items-center p-2 bg-gray-800 rounded">
+                  <span class="text-gray-400">Profit Generat:</span>
+                  <span class="text-green-400 font-bold">40 miliarde Won (~30 Milioane $)</span>
+              </li>
+              <li class="flex justify-between items-center p-2 bg-gray-800 rounded">
+                  <span class="text-gray-400">Status la blocare:</span>
+                  <span class="text-yellow-400">50% Cash / 50% Crypto</span>
+              </li>
+          </ul>
+          <p class="mt-4 text-gray-300 text-sm">Prin înghețarea rapidă a conturilor, autoritățile au reușit să blocheze retragerea banilor. Acum, se discută penalități de până la <strong>80 miliarde Won</strong> (dublul profitului ilegal) și confiscarea capitalului inițial.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. De ce este diferit de Bursa Clasică?</h3>
+      <p class="mb-4 text-gray-300">Regulatorii au recunoscut o realitate dură: <strong>Crypto este prea rapid.</strong></p>
+      <p class="mb-4 text-gray-300">Spre deosebire de acțiuni, activele crypto pot fi transferate instantaneu peste graniță. Odată mutați banii într-un portofel privat sau offshore, recuperarea lor devine aproape imposibilă (<em>"Post hoc recovery is difficult"</em>).</p>
+      <p class="mb-4 text-gray-300">Sistemul "Payment Freeze" este răspunsul la această viteză. Este o măsură preventivă care aliniază uneltele poliției cu viteza pieței.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. Mesajul: Toleranță Zero</h3>
+      <p class="mb-4 text-gray-300">Autoritățile spun clar: Scopul nu este doar pedeapsa, ci descurajarea.</p>
+      <p class="mb-4 text-gray-300">Vor să trimită un semnal clar că manipularea pieței crypto ("Pump and Dump") va fi întâmpinată cu acțiuni rapide și decisive. <strong>Nu mai ai timp să fugi cu banii.</strong></p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-indigo-900/20 p-6 rounded-2xl border border-indigo-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-indigo-300 mb-4 flex items-center gap-2">
+            🧠 Opinia lui Tati (Mihai Daniel Take):
+        </h4>
+        <p class="text-gray-300 italic mb-4 leading-relaxed">
+            "Acesta este viitorul reglementării. Dacă până acum 'Vestul Sălbatic' însemna că puteai să furi și să fugi, acum șeriful are un lasou digital care te prinde instant."
+        </p>
+        <p class="text-gray-300 italic mb-4">
+            "Coreea de Sud este un laborator pentru restul lumii. Dacă acest sistem funcționează acolo, așteptați-vă să îl vedeți adoptat rapid și în Europa (MiCA) și SUA."
+        </p>
+        <p class="text-white font-black text-lg border-t border-indigo-500/30 pt-4 mt-2">
+            Pentru investitorii cinstiți, e o veste bună: mai puțini 'balene' care manipulează prețul. Pentru escroci? Game Over.
+        </p>
+      </div>
+    `
+  },
+
   // ✅ 0. ARTICOL NOU (ISM MANUFACTURING - MACRO) - ON TOP
   {
     id: 'ism-manufacturing-crash-us-economy-bitcoin-risk-2026',
