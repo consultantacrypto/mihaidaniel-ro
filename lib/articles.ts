@@ -1,4 +1,81 @@
-export const articles = [  
+export const articles = [ 
+  // ✅ 0. ARTICOL NOU (ISM MANUFACTURING - MACRO) - ON TOP
+  {
+    id: 'ism-manufacturing-crash-us-economy-bitcoin-risk-2026',
+    slug: 'alarma-macro-ism-manufacturing-sua-bitcoin-tremura',
+    title: 'ALARMĂ MACRO: Motorul economiei SUA "s-a gripat". ISM Manufacturing cade la minimul ultimelor 14 luni (47.9). De ce Bitcoin tremură?',
+    summary: 'Datele ISM Manufacturing au venit sub așteptări (47.9), semnalând o contracție severă. Află de ce Bitcoin suferă când economia SUA intră în zona de risc de recesiune, în ciuda narativului de "Safe Haven".',
+    category: 'MACROECONOMIE',
+    image: '/alaramaismus.jpg', // Asigură-te că imaginea e în public
+    date: '06 Jan 2026',
+    readTime: '3 min',
+    author: 'Mihai Daniel',
+    impact: 'bearish', // Impact negativ pe termen scurt
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-red-500/20 text-red-300 border border-red-500/30 px-3 py-1 rounded text-xs font-bold uppercase">📉 Recession Risk</span>
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🇺🇸 US Economy</span>
+      </div>
+
+      <div class="bg-gray-900/50 border border-gray-700 p-4 rounded-xl mb-8">
+        <ul class="space-y-1 text-sm text-gray-400">
+            <li><strong>Sursa:</strong> Date Oficiale ISM / Analiză Macro</li>
+            <li><strong>Subiect:</strong> Date Macroeconomice / Risc de Recesiune</li>
+            <li><strong>Nivel:</strong> <span class="text-yellow-400 font-bold">Intermediar (Macro)</span></li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Știrea pe scurt: Sub așteptări, sub linia de plutire</h3>
+      <p class="mb-4 text-gray-300">Tocmai au ieșit datele <strong>ISM Manufacturing PMI</strong> din SUA și arată urât.</p>
+      
+      <div class="grid grid-cols-2 gap-4 mb-6 text-center">
+          <div class="bg-gray-800 p-3 rounded border border-gray-600">
+              <div class="text-xs text-gray-400 uppercase">Așteptare</div>
+              <div class="text-xl font-bold text-gray-300">48.4</div>
+          </div>
+          <div class="bg-red-900/20 p-3 rounded border border-red-500/50">
+              <div class="text-xs text-red-300 uppercase">Realitate</div>
+              <div class="text-xl font-black text-red-400">47.9 📉</div>
+          </div>
+      </div>
+
+      <p class="mb-4 text-gray-300"><strong>Context:</strong> Este cel mai scăzut nivel din ultimele 14 luni.</p>
+      <div class="bg-[#0a0f1e] p-5 rounded-lg border border-gray-700 mb-6">
+          <p class="font-bold text-white mb-2">Traducerea pentru noi:</p>
+          <p class="text-gray-300 mb-2">În limbajul PMI, orice cifră <strong>sub 50</strong> înseamnă <strong>CONTRACȚIE</strong> (scădere). Orice cifră peste 50 înseamnă EXPANSIUNE.</p>
+          <p class="text-red-300 font-bold">Suntem adânc în teritoriul roșu. Fabricile americane produc mai puțin, angajează mai puțin și văd viitorul mai sumbru.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. De ce contează pentru Bitcoin și Ethereum?</h3>
+      <p class="mb-4 text-gray-300">Există o concepție greșită că <em>"Dacă economia merge prost, Bitcoin crește pentru că e aur digital"</em>. Pe termen scurt, este <strong>FALS</strong>.</p>
+      <p class="mb-4 text-gray-300">Istoria ne arată că Bitcoin (fiind un activ de risc) performează cel mai bine când economia este în zona de Expansiune (PMI > 50). Când PMI scade sub 48 (cum e acum), intrăm în zona de <strong>Risc de Recesiune</strong>.</p>
+      
+      <ul class="list-disc pl-6 text-gray-300 space-y-2 mb-6">
+          <li><strong>Frica Investitorilor:</strong> Într-o recesiune, lichiditatea se evaporă. Oamenii vând crypto ca să-și acopere pierderile din alte părți sau pur și simplu ca să aibă dolari cash.</li>
+          <li><strong>Corelația:</strong> Dacă bursele (S&P 500) scad de frică că profiturile companiilor vor scădea, Bitcoin este adesea tras în jos de algoritm.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Concluzia: Avem nevoie de >50</h3>
+      <p class="mb-4 text-gray-300">Pentru ca Bitcoin să aibă un "Golden Age" real, nu doar un pump artificial din bani printați, avem nevoie ca economia să respire. Datele de azi ne spun că pacientul (Economia SUA) este încă la terapie intensivă.</p>
+      <p class="mb-4 text-gray-300">Fed-ul este acum sub o presiune uriașă. Dacă nu taie dobânzile agresiv pentru a ridica acest PMI, riscă un "Hard Landing" (Prăbușire). Iar într-un Hard Landing, inițial, totul scade.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-blue-900/20 p-6 rounded-2xl border border-blue-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-blue-300 mb-4 flex items-center gap-2">
+            🧠 Opinia lui Tati (Mihai Daniel Take):
+        </h4>
+        <p class="text-gray-300 italic mb-4 leading-relaxed">
+            "Nu deschideți șampania încă. Faptul că economia SUA încetinește este un semnal de alarmă, nu de sărbătoare. Bitcoin iubește lichiditatea, dar urăște panica."
+        </p>
+        <p class="text-gray-300 italic mb-4">
+            "Până nu vedem PMI-ul revenind peste 50, suntem într-un joc periculos de 'Bad News is Good News', sperând că Fed-ul va veni să ne salveze cu imprimanta înainte ca recesiunea să ne lovească portofelele."
+        </p>
+        <p class="text-white font-black text-lg border-t border-blue-500/30 pt-4 mt-2">
+            Azi, Cash-ul este Rege, iar Răbdarea este Regina.
+        </p>
+      </div>
+    `
+  },
+  
 // ✅ 0. ARTICOL NOU (ALERTĂ LEDGER - SECURITATE) - ON TOP
   {
     id: 'ledger-data-breach-global-e-phishing-alert-2026',
