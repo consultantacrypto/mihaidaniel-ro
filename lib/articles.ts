@@ -1,5 +1,5 @@
 export const articles = [
-  // ✅ ARTICOL UNIC: HARTA MiCA 2026 (CU LINK-URI AFILIATE)
+  // ✅ 1. HARTA MiCA 2026 (CU LINK-URI AFILIATE)
   {
     id: 'mica-regulation-map-2026-exchanges-safety-january-update',
     slug: 'harta-oficiala-mica-2026-ghid-siguranta-crypto',
@@ -10,7 +10,7 @@ export const articles = [
     date: '08 Jan 2026',
     readTime: '7 min',
     author: 'Mihai Daniel',
-    impact: 'neutral', // Informativ / Educational
+    impact: 'neutral',
     content: `
       <div class="flex flex-wrap items-center gap-2 mb-6">
         <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🇪🇺 MiCA Compliant</span>
@@ -52,13 +52,11 @@ export const articles = [
 
       <p class="mb-6 text-white font-bold text-lg border-b border-gray-700 pb-2">Iată clasamentul actualizat al siguranței, bazat pe licențele oficiale din Ianuarie 2026.</p>
 
-      {/* --- CATEGORIA A --- */}
       <h3 class="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-200 mt-10 mb-6 flex items-center gap-2">
          🏆 CATEGORIA A: "Buncărele"
       </h3>
       <p class="mb-6 text-gray-400 italic">Aceste platforme au trecut auditurile finale și dețin licența "Gold Standard" care le permite operarea legală în toată Uniunea Europeană.</p>
 
-      {/* 1. BYBIT */}
       <div class="bg-[#0a0f1e] p-6 rounded-2xl border border-yellow-500/30 mb-8 relative overflow-hidden group">
           <div class="absolute top-0 right-0 bg-yellow-500 text-black text-[10px] font-bold px-3 py-1 rounded-bl-lg">NO. 1 CHOICE</div>
           <h4 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
@@ -77,7 +75,6 @@ export const articles = [
           </a>
       </div>
 
-      {/* 2. OKX */}
       <div class="bg-[#0a0f1e] p-6 rounded-2xl border border-gray-700 mb-8 hover:border-white/20 transition-colors">
           <h4 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
              2. OKX <span class="text-sm font-normal text-gray-400">(Hub: Malta 🇲🇹)</span>
@@ -95,7 +92,6 @@ export const articles = [
           </a>
       </div>
 
-      {/* 3. COINBASE */}
       <div class="mb-8">
           <h4 class="text-lg font-bold text-white mb-1">3. COINBASE <span class="text-sm font-normal text-gray-400">(Luxemburg 🇱🇺 / Irlanda 🇮🇪)</span></h4>
           <p class="text-sm text-gray-400 mb-2">Status: Fortăreața Instituțională.</p>
@@ -103,7 +99,6 @@ export const articles = [
           <p class="text-gray-400 text-sm italic">Verdict: Cel mai sigur loc pentru sume de ordinul milioanelor, dar rămâne scump și limitat pentru traderul de retail.</p>
       </div>
 
-      {/* 4. BITPANDA */}
       <div class="mb-8">
           <h4 class="text-lg font-bold text-white mb-1">4. BITPANDA <span class="text-sm font-normal text-gray-400">(Austria 🇦🇹 / Germania 🇩🇪)</span></h4>
           <p class="text-sm text-gray-400 mb-2">Status: Campionul Reglementării.</p>
@@ -111,20 +106,17 @@ export const articles = [
           <p class="text-gray-400 text-sm italic">Verdict: Ideal pentru investitori pasivi și începători. Zero bătăi de cap, siguranță maximă.</p>
       </div>
 
-      {/* 5. KRAKEN */}
       <div class="mb-10">
           <h4 class="text-lg font-bold text-white mb-1">5. KRAKEN <span class="text-sm font-normal text-gray-400">(Irlanda 🇮🇪)</span></h4>
           <p class="text-sm text-gray-400 mb-2">Status: Veteranul Live.</p>
           <p class="text-gray-300 text-sm mb-2">A obținut licența MiCA completă în Irlanda (Iunie 2025) și este operațional legal în toate țările din Spațiul Economic European (EEA).</p>
       </div>
 
-      {/* --- CATEGORIA B --- */}
       <h3 class="text-2xl font-black text-gray-400 mt-10 mb-6 flex items-center gap-2">
          ⏳ CATEGORIA B: "Giganții sub Presiune"
       </h3>
       <p class="mb-6 text-gray-400 italic">Platforme care operează legal, dar depind de ferestrele de tranziție care se închid diferit de la o țară la alta.</p>
 
-      {/* 6. BINANCE */}
       <div class="bg-[#0a0f1e] p-6 rounded-2xl border border-orange-500/20 mb-8">
           <h4 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
              6. BINANCE <span class="text-sm font-normal text-gray-400">(Franța 🇫🇷 / Polonia 🇵🇱)</span>
@@ -164,8 +156,7 @@ export const articles = [
         </p>
       </div>
     `
-  }
-];
+  },
 
   // ✅ 2. ARTICOL: CHINA (7 IAN 2026)
   {
@@ -407,7 +398,7 @@ export const articles = [
       </div>
     `
   }
-]; 
+];
 
   // ✅ 1. ARTICOL NOU: CHINA (7 IAN 2026)
   {
