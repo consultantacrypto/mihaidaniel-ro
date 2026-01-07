@@ -1,5 +1,5 @@
 export const articles = [
-  // ✅ 0. ARTICOL NOU (HARTA MiCA 2026 - INVESTIGAȚIE)
+  // ✅ 1. ARTICOL: HARTA MiCA 2026 (CU LINK-URI AFILIATE)
   {
     id: 'mica-regulation-map-2026-exchanges-safety-january-update',
     slug: 'harta-oficiala-mica-2026-ghid-siguranta-crypto',
@@ -10,7 +10,7 @@ export const articles = [
     date: '08 Jan 2026',
     readTime: '7 min',
     author: 'Mihai Daniel',
-    impact: 'neutral', // Informativ / Educational
+    impact: 'neutral', 
     content: `
       <div class="flex flex-wrap items-center gap-2 mb-6">
         <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🇪🇺 MiCA Compliant</span>
@@ -52,13 +52,11 @@ export const articles = [
 
       <p class="mb-6 text-white font-bold text-lg border-b border-gray-700 pb-2">Iată clasamentul actualizat al siguranței, bazat pe licențele oficiale din Ianuarie 2026.</p>
 
-      {/* --- CATEGORIA A --- */}
       <h3 class="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-200 mt-10 mb-6 flex items-center gap-2">
          🏆 CATEGORIA A: "Buncărele"
       </h3>
       <p class="mb-6 text-gray-400 italic">Aceste platforme au trecut auditurile finale și dețin licența "Gold Standard" care le permite operarea legală în toată Uniunea Europeană.</p>
 
-      {/* 1. BYBIT */}
       <div class="bg-[#0a0f1e] p-6 rounded-2xl border border-yellow-500/30 mb-8 relative overflow-hidden group">
           <div class="absolute top-0 right-0 bg-yellow-500 text-black text-[10px] font-bold px-3 py-1 rounded-bl-lg">NO. 1 CHOICE</div>
           <h4 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
@@ -77,7 +75,6 @@ export const articles = [
           </a>
       </div>
 
-      {/* 2. OKX */}
       <div class="bg-[#0a0f1e] p-6 rounded-2xl border border-gray-700 mb-8 hover:border-white/20 transition-colors">
           <h4 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
              2. OKX <span class="text-sm font-normal text-gray-400">(Hub: Malta 🇲🇹)</span>
@@ -95,7 +92,6 @@ export const articles = [
           </a>
       </div>
 
-      {/* 3. COINBASE */}
       <div class="mb-8">
           <h4 class="text-lg font-bold text-white mb-1">3. COINBASE <span class="text-sm font-normal text-gray-400">(Luxemburg 🇱🇺 / Irlanda 🇮🇪)</span></h4>
           <p class="text-sm text-gray-400 mb-2">Status: Fortăreața Instituțională.</p>
@@ -103,7 +99,6 @@ export const articles = [
           <p class="text-gray-400 text-sm italic">Verdict: Cel mai sigur loc pentru sume de ordinul milioanelor, dar rămâne scump și limitat pentru traderul de retail.</p>
       </div>
 
-      {/* 4. BITPANDA */}
       <div class="mb-8">
           <h4 class="text-lg font-bold text-white mb-1">4. BITPANDA <span class="text-sm font-normal text-gray-400">(Austria 🇦🇹 / Germania 🇩🇪)</span></h4>
           <p class="text-sm text-gray-400 mb-2">Status: Campionul Reglementării.</p>
@@ -111,20 +106,17 @@ export const articles = [
           <p class="text-gray-400 text-sm italic">Verdict: Ideal pentru investitori pasivi și începători. Zero bătăi de cap, siguranță maximă.</p>
       </div>
 
-      {/* 5. KRAKEN */}
       <div class="mb-10">
           <h4 class="text-lg font-bold text-white mb-1">5. KRAKEN <span class="text-sm font-normal text-gray-400">(Irlanda 🇮🇪)</span></h4>
           <p class="text-sm text-gray-400 mb-2">Status: Veteranul Live.</p>
           <p class="text-gray-300 text-sm mb-2">A obținut licența MiCA completă în Irlanda (Iunie 2025) și este operațional legal în toate țările din Spațiul Economic European (EEA).</p>
       </div>
 
-      {/* --- CATEGORIA B --- */}
       <h3 class="text-2xl font-black text-gray-400 mt-10 mb-6 flex items-center gap-2">
          ⏳ CATEGORIA B: "Giganții sub Presiune"
       </h3>
       <p class="mb-6 text-gray-400 italic">Platforme care operează legal, dar depind de ferestrele de tranziție care se închid diferit de la o țară la alta.</p>
 
-      {/* 6. BINANCE */}
       <div class="bg-[#0a0f1e] p-6 rounded-2xl border border-orange-500/20 mb-8">
           <h4 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
              6. BINANCE <span class="text-sm font-normal text-gray-400">(Franța 🇫🇷 / Polonia 🇵🇱)</span>
@@ -164,8 +156,249 @@ export const articles = [
         </p>
       </div>
     `
+  },
+
+  // ✅ 2. ARTICOL: CHINA (7 IAN 2026)
+  {
+    id: 'china-m2-money-supply-48-trillion-commodities-squeeze-2026',
+    slug: 'china-imprimanta-nucleara-48-trilioane-short-squeeze',
+    title: 'CHINA A PORNIT "IMPRIMANTA NUCLEARĂ": 48 de Trilioane $ inundați în piață. Urmează cel mai mare "Short Squeeze" pe Mărfuri și Crypto din istorie?',
+    summary: 'China a atins o masă monetară record de 48 Trilioane $, dublu față de SUA. Află cum această inundație de lichiditate pregătește terenul pentru un Super-Ciclu pe Aur, Argint și Bitcoin.',
+    category: 'MACROECONOMIE',
+    image: '/chinainflatieianuarie.jpg',
+    date: '07 Jan 2026',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish',
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🇨🇳 China Stimulus</span>
+        <span class="bg-orange-500/20 text-orange-300 border border-orange-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🪙 Commodities Supercycle</span>
+      </div>
+
+      <div class="bg-gray-900/50 border border-gray-700 p-4 rounded-xl mb-8">
+        <ul class="space-y-1 text-sm text-gray-400">
+            <li><strong>Sursa:</strong> Macro Charts / Analiză M2 Money Supply</li>
+            <li><strong>Subiect:</strong> Macroeconomie / China Stimulus</li>
+            <li><strong>Nivel:</strong> <span class="text-red-400 font-bold">CRITIC pentru orice investitor în Hard Assets (Aur, Bitcoin, Argint)</span></li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Șocul Macro: China a rupt graficul</h3>
+      
+      <p class="mb-4 text-gray-300">Priviți <strong>imaginea de copertă a acestui articol</strong>. Linia care merge vertical nu este un shitcoin. Este <strong>Masa Monetară (M2) a Chinei</strong>.</p>
+      
+      <p class="mb-4 text-gray-300">China tocmai a injectat trilioane de dolari (echivalent Yuan) în economie, cea mai mare expansiune monetară de la COVID încoace. Suntem la un nivel record de <strong>48 TRILIOANE $</strong>.</p>
+      
+      <div class="bg-[#0a0f1e] p-5 rounded-lg border border-gray-700 mb-6">
+          <p class="font-bold text-white mb-2">De ce contează?</p>
+          <ul class="list-disc pl-6 text-gray-300 space-y-2">
+              <li>SUA are o masă monetară de ~21 Trilioane $. <strong>China are acum mai mult de DUBLU.</strong></li>
+              <li>Când China printează, banii nu rămân în China. Ei se scurg ("leak") în economia globală.</li>
+              <li>Istoric, acești bani se duc în Active Reale (Hard Assets): Aur, Petrol, Cupru, Argint și... <strong>Bitcoin</strong>.</li>
+          </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Teoria "Silver Squeeze": Capcana Băncilor Vestice</h3>
+      <p class="mb-4 text-gray-300">Aici devine periculos. Avem o coliziune frontală între Est și Vest.</p>
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div class="bg-red-900/10 border border-red-500/20 p-4 rounded">
+              <strong class="text-red-400 block mb-1">ESTUL (China):</strong>
+              <span class="text-sm text-gray-400">Printează bani de hârtie (care se devalorizează) pentru a cumpăra Resurse Fizice (care se apreciază).</span>
+          </div>
+          <div class="bg-blue-900/10 border border-blue-500/20 p-4 rounded">
+              <strong class="text-blue-400 block mb-1">VESTUL (Băncile):</strong>
+              <span class="text-sm text-gray-400">Rapoartele indică faptul că giganți precum Bank of America sau Citi ar putea avea poziții "Short" masive pe Argint (pariază că prețul scade).</span>
+          </div>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold">Matematica Imposibilă:</p>
+      <ul class="list-disc pl-6 text-gray-300 space-y-2 mb-6">
+          <li>Se estimează că băncile au poziții short de <strong>4.4 Miliarde de uncii</strong> (pe hârtie/derivate).</li>
+          <li>Producția globală a planetei este de doar <strong>0.8 Miliarde de uncii</strong> pe an.</li>
+          <li class="text-yellow-400 font-bold">Băncile sunt "Short" de 5 ori mai mult decât tot argintul scos din pământ într-un an.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Scenariul "Super-Ciclul Mărfurilor 2.0"</h3>
+      <p class="mb-4 text-gray-300">Dacă cererea industrială din China (panouri solare, mașini electrice - mari consumatoare de argint) crește din cauza banilor printați, prețul argintului va exploda.</p>
+      <p class="mb-4 text-gray-300">Băncile care sunt "Short" vor fi forțate să acopere pozițiile. Dar nu au de unde să cumpere 4 miliarde de uncii. Nu există fizic.</p>
+      <p class="mb-4 text-gray-300 font-bold text-red-400">Asta duce la un Margin Call din Iad și o repricing violent al activelor reale.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. Ce înseamnă asta pentru Bitcoin?</h3>
+      <p class="mb-4 text-gray-300">Bitcoin este "cel mai rapid cal" din cursa activelor reale.</p>
+      <p class="mb-4 text-gray-300">Dacă lumea intră într-un ciclu de Debasement (Devalorizare Monetară) condus de China, investitorii inteligenți fug de banii fiat.</p>
+      <p class="mb-4 text-gray-300">Aurul ajunge la 3.000$+, Argintul la 50$+, iar Bitcoin (care are o ofertă fixă, imposibil de printat) devine principalul beneficiar al lichidității excesive.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-yellow-900/20 p-6 rounded-2xl border border-yellow-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-yellow-400 mb-4 flex items-center gap-2">
+            🧠 Opinia lui Tati (Mihai Daniel Take):
+        </h4>
+        <p class="text-gray-300 italic mb-4 leading-relaxed">
+            "Situația este simplă: China a ales inflația. Ei printează bani falși ca să cumpere resurse adevărate. Vestul se joacă cu 'hârtii' (derivate) și riscă să fie prins pe picior greșit."
+        </p>
+        <p class="text-gray-300 italic mb-4">
+            "Într-o lume în care Băncile Centrale se întrec cine își distruge moneda mai repede, singura mișcare câștigătoare este să deții ceea ce ei nu pot printa: Aur, Argint și Bitcoin."
+        </p>
+        <p class="text-white font-black text-lg border-t border-yellow-500/30 pt-4 mt-2">
+            Nu pariați împotriva inflației când China apasă pedala la podea.
+        </p>
+      </div>
+    `
+  },
+
+  // ✅ 3. ARTICOL: COREEA DE SUD (6 IAN 2026)
+  {
+    id: 'south-korea-crypto-payment-freeze-anti-manipulation-2026',
+    slug: 'cosmarul-manipulatorilor-coreea-sud-inghetare-crypto',
+    title: 'COȘMARUL MANIPULATORILOR: Coreea de Sud activează "Butonul de Înghețare". Cum blochează statul câștigurile ilicite în secunda doi.',
+    summary: 'Coreea de Sud introduce un sistem revoluționar: "Payment Freeze". Află cum autoritățile pot bloca instantaneu profiturile manipulatorilor de piață, înainte ca aceștia să poată fugi cu banii.',
+    category: 'REGLEMENTARE & LEGISLAȚIE',
+    image: '/coreeadesudfreeze.jpg',
+    date: '06 Jan 2026',
+    readTime: '4 min',
+    author: 'Mihai Daniel',
+    impact: 'neutral',
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">👮‍♂️ Anti-Manipulation</span>
+        <span class="bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🇰🇷 Global Model</span>
+      </div>
+
+      <div class="bg-gray-900/50 border border-gray-700 p-4 rounded-xl mb-8">
+        <ul class="space-y-1 text-sm text-gray-400">
+            <li><strong>Sursa:</strong> Financial Services Commission (FSC) / Surse oficiale Coreea de Sud</li>
+            <li><strong>Subiect:</strong> Reglementare Crypto / Anti-Manipulare</li>
+            <li><strong>Impact:</strong> <span class="text-green-400 font-bold">Global (Model de urmat)</span></li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Știrea: "Înghețare" înainte de "Confiscare"</h3>
+      <p class="mb-4 text-gray-300">Autoritățile financiare din Coreea de Sud sunt pe cale să introducă un sistem revoluționar numit <strong>"Payment Freeze"</strong>.</p>
+      <p class="mb-4 text-gray-300"><strong>Scopul este simplu:</strong> Să oprească suspecții de manipulare a prețurilor crypto să își ascundă sau să își retragă profiturile ilegale.</p>
+      <p class="mb-4 text-gray-300">Spre deosebire de sechestrele tradiționale care durează săptămâni (timp în care banii dispar), acest mecanism este conceput să acționeze instantaneu. Odată activat, suspectul nu mai poate retrage, transfera sau muta niciun fond.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Studiu de Caz: Operațiunea de 75 Milioane $</h3>
+      <p class="mb-4 text-gray-300">De ce au luat această decizie? Avem un exemplu concret discutat de autorități în Noiembrie.</p>
+      
+      <div class="bg-[#0a0f1e] p-5 rounded-lg border border-gray-700 mb-6">
+          <h4 class="text-white font-bold mb-4 border-b border-gray-700 pb-2">Anatomia unei Manipulări:</h4>
+          <p class="text-gray-300 mb-2">O grupare a mobilizat aproximativ <strong>100 miliarde Won (~75 Milioane $)</strong> pentru a umfla artificial prețul unei monede virtuale.</p>
+          <ul class="space-y-2 mt-4 text-sm">
+              <li class="flex justify-between items-center p-2 bg-gray-800 rounded">
+                  <span class="text-gray-400">Profit Generat:</span>
+                  <span class="text-green-400 font-bold">40 miliarde Won (~30 Milioane $)</span>
+              </li>
+              <li class="flex justify-between items-center p-2 bg-gray-800 rounded">
+                  <span class="text-gray-400">Status la blocare:</span>
+                  <span class="text-yellow-400">50% Cash / 50% Crypto</span>
+              </li>
+          </ul>
+          <p class="mt-4 text-gray-300 text-sm">Prin înghețarea rapidă a conturilor, autoritățile au reușit să blocheze retragerea banilor. Acum, se discută penalități de până la <strong>80 miliarde Won</strong> (dublul profitului ilegal) și confiscarea capitalului inițial.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. De ce este diferit de Bursa Clasică?</h3>
+      <p class="mb-4 text-gray-300">Regulatorii au recunoscut o realitate dură: <strong>Crypto este prea rapid.</strong></p>
+      <p class="mb-4 text-gray-300">Spre deosebire de acțiuni, activele crypto pot fi transferate instantaneu peste graniță. Odată mutați banii într-un portofel privat sau offshore, recuperarea lor devine aproape imposibilă (<em>"Post hoc recovery is difficult"</em>).</p>
+      <p class="mb-4 text-gray-300">Sistemul "Payment Freeze" este răspunsul la această viteză. Este o măsură preventivă care aliniază uneltele poliției cu viteza pieței.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. Mesajul: Toleranță Zero</h3>
+      <p class="mb-4 text-gray-300">Autoritățile spun clar: Scopul nu este doar pedeapsa, ci descurajarea.</p>
+      <p class="mb-4 text-gray-300">Vor să trimită un semnal clar că manipularea pieței crypto ("Pump and Dump") va fi întâmpinată cu acțiuni rapide și decisive. <strong>Nu mai ai timp să fugi cu banii.</strong></p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-indigo-900/20 p-6 rounded-2xl border border-indigo-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-indigo-300 mb-4 flex items-center gap-2">
+            🧠 Opinia lui Tati (Mihai Daniel Take):
+        </h4>
+        <p class="text-gray-300 italic mb-4 leading-relaxed">
+            "Acesta este viitorul reglementării. Dacă până acum 'Vestul Sălbatic' însemna că puteai să furi și să fugi, acum șeriful are un lasou digital care te prinde instant."
+        </p>
+        <p class="text-gray-300 italic mb-4">
+            "Coreea de Sud este un laborator pentru restul lumii. Dacă acest sistem funcționează acolo, așteptați-vă să îl vedeți adoptat rapid și în Europa (MiCA) și SUA."
+        </p>
+        <p class="text-white font-black text-lg border-t border-indigo-500/30 pt-4 mt-2">
+            Pentru investitorii cinstiți, e o veste bună: mai puțini 'balene' care manipulează prețul. Pentru escroci? Game Over.
+        </p>
+      </div>
+    `
+  },
+
+  // ✅ 4. ARTICOL: ISM MANUFACTURING (6 IAN 2026)
+  {
+    id: 'ism-manufacturing-crash-us-economy-bitcoin-risk-2026',
+    slug: 'alarma-macro-ism-manufacturing-sua-bitcoin-tremura',
+    title: 'ALARMĂ MACRO: Motorul economiei SUA "s-a gripat". ISM Manufacturing cade la minimul ultimelor 14 luni (47.9). De ce Bitcoin tremură?',
+    summary: 'Datele ISM Manufacturing au venit sub așteptări (47.9), semnalând o contracție severă. Află de ce Bitcoin suferă când economia SUA intră în zona de risc de recesiune, în ciuda narativului de "Safe Haven".',
+    category: 'MACROECONOMIE',
+    image: '/alaramaismus.jpg',
+    date: '06 Jan 2026',
+    readTime: '3 min',
+    author: 'Mihai Daniel',
+    impact: 'bearish', 
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-red-500/20 text-red-300 border border-red-500/30 px-3 py-1 rounded text-xs font-bold uppercase">📉 Recession Risk</span>
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🇺🇸 US Economy</span>
+      </div>
+
+      <div class="bg-gray-900/50 border border-gray-700 p-4 rounded-xl mb-8">
+        <ul class="space-y-1 text-sm text-gray-400">
+            <li><strong>Sursa:</strong> Date Oficiale ISM / Analiză Macro</li>
+            <li><strong>Subiect:</strong> Date Macroeconomice / Risc de Recesiune</li>
+            <li><strong>Nivel:</strong> <span class="text-yellow-400 font-bold">Intermediar (Macro)</span></li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Știrea pe scurt: Sub așteptări, sub linia de plutire</h3>
+      <p class="mb-4 text-gray-300">Tocmai au ieșit datele <strong>ISM Manufacturing PMI</strong> din SUA și arată urât.</p>
+      
+      <div class="grid grid-cols-2 gap-4 mb-6 text-center">
+          <div class="bg-gray-800 p-3 rounded border border-gray-600">
+              <div class="text-xs text-gray-400 uppercase">Așteptare</div>
+              <div class="text-xl font-bold text-gray-300">48.4</div>
+          </div>
+          <div class="bg-red-900/20 p-3 rounded border border-red-500/50">
+              <div class="text-xs text-red-300 uppercase">Realitate</div>
+              <div class="text-xl font-black text-red-400">47.9 📉</div>
+          </div>
+      </div>
+
+      <p class="mb-4 text-gray-300"><strong>Context:</strong> Este cel mai scăzut nivel din ultimele 14 luni.</p>
+      <div class="bg-[#0a0f1e] p-5 rounded-lg border border-gray-700 mb-6">
+          <p class="font-bold text-white mb-2">Traducerea pentru noi:</p>
+          <p class="text-gray-300 mb-2">În limbajul PMI, orice cifră <strong>sub 50</strong> înseamnă <strong>CONTRACȚIE</strong> (scădere). Orice cifră peste 50 înseamnă EXPANSIUNE.</p>
+          <p class="text-red-300 font-bold">Suntem adânc în teritoriul roșu. Fabricile americane produc mai puțin, angajează mai puțin și văd viitorul mai sumbru.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. De ce contează pentru Bitcoin și Ethereum?</h3>
+      <p class="mb-4 text-gray-300">Există o concepție greșită că <em>"Dacă economia merge prost, Bitcoin crește pentru că e aur digital"</em>. Pe termen scurt, este <strong>FALS</strong>.</p>
+      <p class="mb-4 text-gray-300">Istoria ne arată că Bitcoin (fiind un activ de risc) performează cel mai bine când economia este în zona de Expansiune (PMI > 50). Când PMI scade sub 48 (cum e acum), intrăm în zona de <strong>Risc de Recesiune</strong>.</p>
+      
+      <ul class="list-disc pl-6 text-gray-300 space-y-2 mb-6">
+          <li><strong>Frica Investitorilor:</strong> Într-o recesiune, lichiditatea se evaporă. Oamenii vând crypto ca să-și acopere pierderile din alte părți sau pur și simplu ca să aibă dolari cash.</li>
+          <li><strong>Corelația:</strong> Dacă bursele (S&P 500) scad de frică că profiturile companiilor vor scădea, Bitcoin este adesea tras în jos de algoritm.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Concluzia: Avem nevoie de >50</h3>
+      <p class="mb-4 text-gray-300">Pentru ca Bitcoin să aibă un "Golden Age" real, nu doar un pump artificial din bani printați, avem nevoie ca economia să respire. Datele de azi ne spun că pacientul (Economia SUA) este încă la terapie intensivă.</p>
+      <p class="mb-4 text-gray-300">Fed-ul este acum sub o presiune uriașă. Dacă nu taie dobânzile agresiv pentru a ridica acest PMI, riscă un "Hard Landing" (Prăbușire). Iar într-un Hard Landing, inițial, totul scade.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-blue-900/20 p-6 rounded-2xl border border-blue-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-blue-300 mb-4 flex items-center gap-2">
+            🧠 Opinia lui Tati (Mihai Daniel Take):
+        </h4>
+        <p class="text-gray-300 italic mb-4 leading-relaxed">
+            "Nu deschideți șampania încă. Faptul că economia SUA încetinește este un semnal de alarmă, nu de sărbătoare. Bitcoin iubește lichiditatea, dar urăște panica."
+        </p>
+        <p class="text-gray-300 italic mb-4">
+            "Până nu vedem PMI-ul revenind peste 50, suntem într-un joc periculos de 'Bad News is Good News', sperând că Fed-ul va veni să ne salveze cu imprimanta înainte ca recesiunea să ne lovească portofelele."
+        </p>
+        <p class="text-white font-black text-lg border-t border-blue-500/30 pt-4 mt-2">
+            Azi, Cash-ul este Rege, iar Răbdarea este Regina.
+        </p>
+      </div>
+    `
   }
-];
+]; 
 
   // ✅ 1. ARTICOL NOU: CHINA (7 IAN 2026)
   {
