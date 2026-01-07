@@ -1,4 +1,90 @@
 export const articles = [ 
+// ✅ 0. ARTICOL NOU (CHINA M2 MONEY PRINTER - MACRO) - ON TOP
+  {
+    id: 'china-m2-money-supply-48-trillion-commodities-squeeze-2026',
+    slug: 'china-imprimanta-nucleara-48-trilioane-short-squeeze',
+    title: 'CHINA A PORNIT "IMPRIMANTA NUCLEARĂ": 48 de Trilioane $ inundați în piață. Urmează cel mai mare "Short Squeeze" pe Mărfuri și Crypto din istorie?',
+    summary: 'China a atins o masă monetară record de 48 Trilioane $, dublu față de SUA. Află cum această inundație de lichiditate pregătește terenul pentru un Super-Ciclu pe Aur, Argint și Bitcoin.',
+    category: 'MACROECONOMIE',
+    image: '/chinainflatieianuarie.jpg',
+    date: '07 Jan 2026',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Extrem de bullish pentru Hard Assets
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🇨🇳 China Stimulus</span>
+        <span class="bg-orange-500/20 text-orange-300 border border-orange-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🪙 Commodities Supercycle</span>
+      </div>
+
+      <div class="bg-gray-900/50 border border-gray-700 p-4 rounded-xl mb-8">
+        <ul class="space-y-1 text-sm text-gray-400">
+            <li><strong>Sursa:</strong> Macro Charts / Analiză M2 Money Supply</li>
+            <li><strong>Subiect:</strong> Macroeconomie / China Stimulus</li>
+            <li><strong>Nivel:</strong> <span class="text-red-400 font-bold">CRITIC pentru orice investitor în Hard Assets (Aur, Bitcoin, Argint)</span></li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Șocul Macro: China a rupt graficul</h3>
+      <p class="mb-4 text-gray-300">Priviți graficul din stânga. Linia care merge vertical nu este un shitcoin. Este <strong>Masa Monetară (M2) a Chinei</strong>.</p>
+      <p class="mb-4 text-gray-300">China tocmai a injectat trilioane de dolari (echivalent Yuan) în economie, cea mai mare expansiune monetară de la COVID încoace. Suntem la un nivel record de <strong>48 TRILIOANE $</strong>.</p>
+      
+      <div class="bg-[#0a0f1e] p-5 rounded-lg border border-gray-700 mb-6">
+          <p class="font-bold text-white mb-2">De ce contează?</p>
+          <ul class="list-disc pl-6 text-gray-300 space-y-2">
+              <li>SUA are o masă monetară de ~21 Trilioane $. <strong>China are acum mai mult de DUBLU.</strong></li>
+              <li>Când China printează, banii nu rămân în China. Ei se scurg ("leak") în economia globală.</li>
+              <li>Istoric, acești bani se duc în Active Reale (Hard Assets): Aur, Petrol, Cupru, Argint și... <strong>Bitcoin</strong>.</li>
+          </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Teoria "Silver Squeeze": Capcana Băncilor Vestice</h3>
+      <p class="mb-4 text-gray-300">Aici devine periculos. Avem o coliziune frontală între Est și Vest.</p>
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div class="bg-red-900/10 border border-red-500/20 p-4 rounded">
+              <strong class="text-red-400 block mb-1">ESTUL (China):</strong>
+              <span class="text-sm text-gray-400">Printează bani de hârtie (care se devalorizează) pentru a cumpăra Resurse Fizice (care se apreciază).</span>
+          </div>
+          <div class="bg-blue-900/10 border border-blue-500/20 p-4 rounded">
+              <strong class="text-blue-400 block mb-1">VESTUL (Băncile):</strong>
+              <span class="text-sm text-gray-400">Rapoartele indică faptul că giganți precum Bank of America sau Citi ar putea avea poziții "Short" masive pe Argint (pariază că prețul scade).</span>
+          </div>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold">Matematica Imposibilă:</p>
+      <ul class="list-disc pl-6 text-gray-300 space-y-2 mb-6">
+          <li>Se estimează că băncile au poziții short de <strong>4.4 Miliarde de uncii</strong> (pe hârtie/derivate).</li>
+          <li>Producția globală a planetei este de doar <strong>0.8 Miliarde de uncii</strong> pe an.</li>
+          <li class="text-yellow-400 font-bold">Băncile sunt "Short" de 5 ori mai mult decât tot argintul scos din pământ într-un an.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Scenariul "Super-Ciclul Mărfurilor 2.0"</h3>
+      <p class="mb-4 text-gray-300">Dacă cererea industrială din China (panouri solare, mașini electrice - mari consumatoare de argint) crește din cauza banilor printați, prețul argintului va exploda.</p>
+      <p class="mb-4 text-gray-300">Băncile care sunt "Short" vor fi forțate să acopere pozițiile. Dar nu au de unde să cumpere 4 miliarde de uncii. Nu există fizic.</p>
+      <p class="mb-4 text-gray-300 font-bold text-red-400">Asta duce la un Margin Call din Iad și o repricing violent al activelor reale.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. Ce înseamnă asta pentru Bitcoin?</h3>
+      <p class="mb-4 text-gray-300">Bitcoin este "cel mai rapid cal" din cursa activelor reale.</p>
+      <p class="mb-4 text-gray-300">Dacă lumea intră într-un ciclu de Debasement (Devalorizare Monetară) condus de China, investitorii inteligenți fug de banii fiat.</p>
+      <p class="mb-4 text-gray-300">Aurul ajunge la 3.000$+, Argintul la 50$+, iar Bitcoin (care are o ofertă fixă, imposibil de printat) devine principalul beneficiar al lichidității excesive.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-yellow-900/20 p-6 rounded-2xl border border-yellow-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-yellow-400 mb-4 flex items-center gap-2">
+            🧠 Opinia lui Tati (Mihai Daniel Take):
+        </h4>
+        <p class="text-gray-300 italic mb-4 leading-relaxed">
+            "Situația este simplă: China a ales inflația. Ei printează bani falși ca să cumpere resurse adevărate. Vestul se joacă cu 'hârtii' (derivate) și riscă să fie prins pe picior greșit."
+        </p>
+        <p class="text-gray-300 italic mb-4">
+            "Într-o lume în care Băncile Centrale se întrec cine își distruge moneda mai repede, singura mișcare câștigătoare este să deții ceea ce ei nu pot printa: Aur, Argint și Bitcoin."
+        </p>
+        <p class="text-white font-black text-lg border-t border-yellow-500/30 pt-4 mt-2">
+            Nu pariați împotriva inflației când China apasă pedala la podea.
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU (COREEA DE SUD - PAYMENT FREEZE) - ON TOP
   {
     id: 'south-korea-crypto-payment-freeze-anti-manipulation-2026',
