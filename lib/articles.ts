@@ -1,4 +1,172 @@
 export const articles = [
+  // ✅ 0. ARTICOL NOU (HARTA MiCA 2026 - INVESTIGAȚIE)
+  {
+    id: 'mica-regulation-map-2026-exchanges-safety-january-update',
+    slug: 'harta-oficiala-mica-2026-ghid-siguranta-crypto',
+    title: 'HARTA OFICIALĂ MiCA 2026: Ghidul Final al Siguranței Crypto în Europa. Cine deține "Pașaportul de Aur"? (Update Ianuarie)',
+    summary: 'S-a închis "Vestul Sălbatic". Află care sunt singurele platforme crypto care au obținut licența completă MiCA și pot opera legal în toată Uniunea Europeană în 2026.',
+    category: 'REGLEMENTARE & LEGISLAȚIE',
+    image: '/exchangesmicaeu.jpg',
+    date: '08 Jan 2026',
+    readTime: '7 min',
+    author: 'Mihai Daniel',
+    impact: 'neutral', // Informativ / Educational
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🇪🇺 MiCA Compliant</span>
+        <span class="bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🛡️ Safety Guide</span>
+      </div>
+
+      <div class="bg-gray-900/50 border border-gray-700 p-4 rounded-xl mb-8">
+        <ul class="space-y-1 text-sm text-gray-400">
+            <li><strong>Tip:</strong> Investigație / Ghid Oficial de Siguranță</li>
+            <li><strong>Context:</strong> Ianuarie 2026 (MiCA Activ)</li>
+            <li><strong>Status:</strong> <span class="text-green-400 font-bold">AUDITAT & VERIFICAT</span></li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Introducere: Nu mai există "Zone Gri"</h3>
+      <p class="mb-4 text-gray-300">Începând cu Decembrie 2024, Regulamentul MiCA (Markets in Crypto-Assets) este complet aplicabil pentru furnizorii de servicii (CASP).</p>
+      <p class="mb-4 text-gray-300">Asta înseamnă că "Vestul Sălbatic" s-a închis oficial. În Europa, există acum doar două tipuri de platforme:</p>
+      
+      <ul class="space-y-4 mb-6">
+          <li class="flex gap-3 bg-green-900/10 border border-green-500/20 p-3 rounded-lg">
+              <span class="text-2xl">✅</span>
+              <div>
+                  <strong class="text-green-400 block">Platforme cu "Pașaport UE" (Categoria A):</strong>
+                  <span class="text-sm text-gray-300">Au obținut licența completă CASP într-un stat membru și pot opera liber în toate cele 27 de țări UE (+3 EEA).</span>
+              </div>
+          </li>
+          <li class="flex gap-3 bg-yellow-900/10 border border-yellow-500/20 p-3 rounded-lg">
+              <span class="text-2xl">⚠️</span>
+              <div>
+                  <strong class="text-yellow-400 block">Platforme în Tranziție (Categoria B):</strong>
+                  <span class="text-sm text-gray-300">Funcționează pe baza vechilor înregistrări naționale ("Grandfathering"), dar timpul lor este limitat.</span>
+              </div>
+          </li>
+      </ul>
+
+      <div class="bg-red-900/20 border border-red-500/30 p-4 rounded-lg mb-8">
+          <p class="text-red-200 text-sm"><strong>⚠️ Atenție la Nuanțe:</strong> Perioada de tranziție NU este uniformă! Deși limita maximă este Iulie 2026, țări precum Olanda sau Polonia au scurtat termenele la 6-12 luni. Presiunea este uriașă.</p>
+      </div>
+
+      <p class="mb-6 text-white font-bold text-lg border-b border-gray-700 pb-2">Iată clasamentul actualizat al siguranței, bazat pe licențele oficiale din Ianuarie 2026.</p>
+
+      {/* --- CATEGORIA A --- */}
+      <h3 class="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-200 mt-10 mb-6 flex items-center gap-2">
+         🏆 CATEGORIA A: "Buncărele"
+      </h3>
+      <p class="mb-6 text-gray-400 italic">Aceste platforme au trecut auditurile finale și dețin licența "Gold Standard" care le permite operarea legală în toată Uniunea Europeană.</p>
+
+      {/* 1. BYBIT */}
+      <div class="bg-[#0a0f1e] p-6 rounded-2xl border border-yellow-500/30 mb-8 relative overflow-hidden group">
+          <div class="absolute top-0 right-0 bg-yellow-500 text-black text-[10px] font-bold px-3 py-1 rounded-bl-lg">NO. 1 CHOICE</div>
+          <h4 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+             1. BYBIT <span class="text-sm font-normal text-gray-400">(Hub: Austria 🇦🇹)</span>
+          </h4>
+          <p class="text-green-400 text-sm font-bold mb-4">Status: LICENȚĂ COMPLETĂ FMA.</p>
+          <p class="text-gray-300 mb-3 text-sm">Bybit a făcut mutarea deceniului. Prin entitatea Bybit EU GmbH, a primit licența CASP de la FMA Austria (Mai 2025).</p>
+          <ul class="list-disc pl-5 text-gray-300 text-sm mb-4 space-y-1">
+              <li><strong>De ce e Top:</strong> Are hub-ul central la Viena și beneficiază de dreptul de "Passporting" în toată UE.</li>
+              <li>Parteneriatul cu SATOS (Olanda) rămâne activ pentru procesarea fiat, dar fundația legală este acum 100% austriacă.</li>
+          </ul>
+          <p class="text-white text-sm font-bold italic mb-4">Verdict: Alegerea #1 pentru traderii activi care vor derivate și viteză sub protecție UE.</p>
+          
+          <a href="https://partner.bybit.eu/b/LUCKY7777" target="_blank" class="block w-full md:w-auto text-center bg-yellow-500 hover:bg-yellow-400 text-black font-black py-3 px-6 rounded-lg transition-transform transform hover:scale-[1.02] shadow-[0_0_15px_rgba(234,179,8,0.3)]">
+              👉 DESCHIDE CONT BYBIT (Bonus de Bun Venit)
+          </a>
+      </div>
+
+      {/* 2. OKX */}
+      <div class="bg-[#0a0f1e] p-6 rounded-2xl border border-gray-700 mb-8 hover:border-white/20 transition-colors">
+          <h4 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+             2. OKX <span class="text-sm font-normal text-gray-400">(Hub: Malta 🇲🇹)</span>
+          </h4>
+          <p class="text-green-400 text-sm font-bold mb-4">Status: UPGRADE MAJOR -> CATEGORIA A.</p>
+          <p class="text-gray-300 mb-3 text-sm">Corecție importantă: OKX nu mai este în tranziție. A obținut licența MiCA completă în Malta (Ianuarie 2025).</p>
+          <ul class="list-disc pl-5 text-gray-300 text-sm mb-4 space-y-1">
+              <li><strong>Impact:</strong> Această mutare le permite să opereze legal în Olanda și restul UE, concurând direct cu Bybit.</li>
+              <li>Este o platformă "heavyweight" care a ales calea conformității totale.</li>
+          </ul>
+          <p class="text-white text-sm font-bold italic mb-4">Verdict: Alternativa perfectă la Bybit pentru cei care preferă lichiditatea și ecosistemul Web3 al OKX.</p>
+          
+          <a href="https://www.okx.com/join/77249876" target="_blank" class="block w-full md:w-auto text-center bg-gray-800 hover:bg-white hover:text-black border border-gray-600 text-white font-bold py-2 px-6 rounded-lg transition-all">
+              DESCHIDE CONT OKX
+          </a>
+      </div>
+
+      {/* 3. COINBASE */}
+      <div class="mb-8">
+          <h4 class="text-lg font-bold text-white mb-1">3. COINBASE <span class="text-sm font-normal text-gray-400">(Luxemburg 🇱🇺 / Irlanda 🇮🇪)</span></h4>
+          <p class="text-sm text-gray-400 mb-2">Status: Fortăreața Instituțională.</p>
+          <p class="text-gray-300 text-sm mb-2">Deși are licențe istorice în Irlanda și Germania (BaFin), Coinbase și-a stabilit hub-ul central MiCA în Luxemburg (Licență CSSF Iunie 2025), locația preferată a giganților financiari.</p>
+          <p class="text-gray-400 text-sm italic">Verdict: Cel mai sigur loc pentru sume de ordinul milioanelor, dar rămâne scump și limitat pentru traderul de retail.</p>
+      </div>
+
+      {/* 4. BITPANDA */}
+      <div class="mb-8">
+          <h4 class="text-lg font-bold text-white mb-1">4. BITPANDA <span class="text-sm font-normal text-gray-400">(Austria 🇦🇹 / Germania 🇩🇪)</span></h4>
+          <p class="text-sm text-gray-400 mb-2">Status: Campionul Reglementării.</p>
+          <p class="text-gray-300 text-sm mb-2">Bitpanda este probabil cea mai reglementată entitate din Europa, deținând 3 Licențe MiCA (Austria, Germania, Malta). Funcționează aproape ca o bancă.</p>
+          <p class="text-gray-400 text-sm italic">Verdict: Ideal pentru investitori pasivi și începători. Zero bătăi de cap, siguranță maximă.</p>
+      </div>
+
+      {/* 5. KRAKEN */}
+      <div class="mb-10">
+          <h4 class="text-lg font-bold text-white mb-1">5. KRAKEN <span class="text-sm font-normal text-gray-400">(Irlanda 🇮🇪)</span></h4>
+          <p class="text-sm text-gray-400 mb-2">Status: Veteranul Live.</p>
+          <p class="text-gray-300 text-sm mb-2">A obținut licența MiCA completă în Irlanda (Iunie 2025) și este operațional legal în toate țările din Spațiul Economic European (EEA).</p>
+      </div>
+
+      {/* --- CATEGORIA B --- */}
+      <h3 class="text-2xl font-black text-gray-400 mt-10 mb-6 flex items-center gap-2">
+         ⏳ CATEGORIA B: "Giganții sub Presiune"
+      </h3>
+      <p class="mb-6 text-gray-400 italic">Platforme care operează legal, dar depind de ferestrele de tranziție care se închid diferit de la o țară la alta.</p>
+
+      {/* 6. BINANCE */}
+      <div class="bg-[#0a0f1e] p-6 rounded-2xl border border-orange-500/20 mb-8">
+          <h4 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+             6. BINANCE <span class="text-sm font-normal text-gray-400">(Franța 🇫🇷 / Polonia 🇵🇱)</span>
+          </h4>
+          <p class="text-orange-400 text-sm font-bold mb-4">Status: În Tranziție (Grandfathering).</p>
+          <p class="text-gray-300 mb-3 text-sm">Binance operează legal baza înregistrărilor existente (ex: PSAN în Franța), pregătindu-se pentru licența finală.</p>
+          <div class="bg-orange-900/10 border border-orange-500/20 p-3 rounded mb-4">
+              <p class="text-xs text-orange-200"><strong>⚠️ Riscul de Calendar:</strong> Atenție! Polonia a scurtat perioada de tranziție la 6 luni (expiră în Iunie 2025), ceea ce pune presiune pe operațiunile din acea regiune. Binance a făcut curățenie (delistare USDT neconform), dar juridic este încă în etapa de "șantier".</p>
+          </div>
+          <p class="text-white text-sm font-bold italic mb-4">Verdict: Regele volumului rămâne o opțiune validă, dar trebuie monitorizat statusul licenței finale în 2026.</p>
+
+          <a href="https://www.binance.com/join?ref=35329648" target="_blank" class="block w-full md:w-auto text-center bg-gray-800 hover:bg-orange-500 hover:text-white border border-gray-600 text-gray-300 font-bold py-2 px-6 rounded-lg transition-all">
+              DESCHIDE CONT BINANCE
+          </a>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6">Concluzia lui Tati: Ce alegi în 2026?</h3>
+      <p class="mb-4 text-gray-300">Piața s-a maturizat. Nu mai avem doar "bănci plictisitoare" (Coinbase) sau "cazinouri offshore". Avem platforme de trading performante care au devenit 100% legale.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-blue-900/20 to-purple-900/20 p-6 rounded-2xl border border-blue-500/30 shadow-lg">
+        <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+                <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center font-bold text-xs mt-0.5">1</span>
+                <p class="text-gray-300 text-sm"><strong class="text-white">Pentru TRADERI (Derivate & Viteză):</strong> Bătălia se dă între <strong>BYBIT</strong> (Austria) și <strong>OKX</strong> (Malta). Ambele sunt acum în Categoria A.</p>
+            </li>
+            <li class="flex items-start gap-3">
+                <span class="bg-purple-500 text-white rounded-full w-6 h-6 flex items-center justify-center font-bold text-xs mt-0.5">2</span>
+                <p class="text-gray-300 text-sm"><strong class="text-white">Pentru HODL & Instituțional:</strong> COINBASE (Luxemburg) sau BITPANDA (Austria).</p>
+            </li>
+            <li class="flex items-start gap-3">
+                <span class="bg-orange-500 text-white rounded-full w-6 h-6 flex items-center justify-center font-bold text-xs mt-0.5">3</span>
+                <p class="text-gray-300 text-sm"><strong class="text-white">Pentru Volum Masiv:</strong> BINANCE (încă în tranziție, dar "too big to fail").</p>
+            </li>
+        </ul>
+        <p class="text-gray-500 text-xs italic mt-6 border-t border-white/10 pt-4">
+            Disclaimer: Reglementările evoluează. Verificați periodic registrul ESMA pentru actualizări.
+        </p>
+      </div>
+    `
+  }
+];
+
   // ✅ 1. ARTICOL NOU: CHINA (7 IAN 2026)
   {
     id: 'china-m2-money-supply-48-trillion-commodities-squeeze-2026',
