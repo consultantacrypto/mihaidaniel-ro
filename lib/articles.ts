@@ -27,7 +27,7 @@ export const articles = [
 
       <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Șocul Macro: China a rupt graficul</h3>
       
-      {/* AM CORECTAT AICI TEXTUL */}
+    
       <p class="mb-4 text-gray-300">Priviți <strong>imaginea de copertă a acestui articol</strong>. Linia care merge vertical nu este un shitcoin. Este <strong>Masa Monetară (M2) a Chinei</strong>.</p>
       
       <p class="mb-4 text-gray-300">China tocmai a injectat trilioane de dolari (echivalent Yuan) în economie, cea mai mare expansiune monetară de la COVID încoace. Suntem la un nivel record de <strong>48 TRILIOANE $</strong>.</p>
