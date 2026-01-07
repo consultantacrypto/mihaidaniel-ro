@@ -1,5 +1,4 @@
-export const articles = [ 
-// ✅ 0. ARTICOL NOU (CHINA M2 MONEY PRINTER - MACRO) - ON TOP
+// ✅ 0. ARTICOL NOU (CHINA M2 MONEY PRINTER - MACRO) - CORECAT
   {
     id: 'china-m2-money-supply-48-trillion-commodities-squeeze-2026',
     slug: 'china-imprimanta-nucleara-48-trilioane-short-squeeze',
@@ -10,7 +9,7 @@ export const articles = [
     date: '07 Jan 2026',
     readTime: '5 min',
     author: 'Mihai Daniel',
-    impact: 'bullish', // Extrem de bullish pentru Hard Assets
+    impact: 'bullish',
     content: `
       <div class="flex flex-wrap items-center gap-2 mb-6">
         <span class="bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🇨🇳 China Stimulus</span>
@@ -26,7 +25,10 @@ export const articles = [
       </div>
 
       <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Șocul Macro: China a rupt graficul</h3>
-      <p class="mb-4 text-gray-300">Priviți graficul din stânga. Linia care merge vertical nu este un shitcoin. Este <strong>Masa Monetară (M2) a Chinei</strong>.</p>
+      
+      {/* AM CORECTAT AICI TEXTUL */}
+      <p class="mb-4 text-gray-300">Priviți <strong>imaginea de copertă a acestui articol</strong>. Linia care merge vertical nu este un shitcoin. Este <strong>Masa Monetară (M2) a Chinei</strong>.</p>
+      
       <p class="mb-4 text-gray-300">China tocmai a injectat trilioane de dolari (echivalent Yuan) în economie, cea mai mare expansiune monetară de la COVID încoace. Suntem la un nivel record de <strong>48 TRILIOANE $</strong>.</p>
       
       <div class="bg-[#0a0f1e] p-5 rounded-lg border border-gray-700 mb-6">
