@@ -1,4 +1,5 @@
-// ✅ 0. ARTICOL NOU (CHINA M2 MONEY PRINTER - MACRO) - CORECAT
+export const articles = [
+  // ✅ 1. ARTICOL NOU: CHINA (7 IAN 2026)
   {
     id: 'china-m2-money-supply-48-trillion-commodities-squeeze-2026',
     slug: 'china-imprimanta-nucleara-48-trilioane-short-squeeze',
