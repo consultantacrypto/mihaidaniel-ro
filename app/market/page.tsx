@@ -26,18 +26,23 @@ export default async function MarketPage() {
   const dominance = globalData ? `${globalData.btcDominance.toFixed(1)}%` : "54.2%";
   const change = globalData ? globalData.marketCapChange.toFixed(2) : "+1.2";
 
-  // ✅ LOGICA NOUĂ DE CULORI PENTRU "FRICĂ & LĂCOMIE"
+  // ✅ LOGICA NOUĂ: CULORI & TEXTE PERSONALIZATE
   const fgValue = fearGreedData?.value || 50;
-  let fgColor = 'text-orange-400'; // Default
+  let fgColor = 'text-orange-400';
+  let fgText = 'CALM';
   
   if (fgValue >= 70) {
-      fgColor = 'text-green-400'; // Verde Intens (>70)
+      fgColor = 'text-green-400'; // Verde Neon
+      fgText = 'EUFORIE';
   } else if (fgValue >= 50) {
-      fgColor = 'text-emerald-500'; // Verde Normal (50-70)
+      fgColor = 'text-emerald-500'; // Verde
+      fgText = 'LĂCOMIE';
   } else if (fgValue >= 30) {
-      fgColor = 'text-orange-400'; // Portocaliu (30-50)
+      fgColor = 'text-orange-400'; // Portocaliu
+      fgText = 'CALM';
   } else {
-      fgColor = 'text-red-500'; // Roșu (<30)
+      fgColor = 'text-red-500'; // Roșu
+      fgText = 'TEAMĂ';
   }
 
   return (
@@ -73,11 +78,11 @@ export default async function MarketPage() {
             {/* STANGA */}
             <div className="xl:col-span-9 space-y-6">
                 
-                {/* 1. METRICS CARDS - Acum cu flex-shrink-0 ca să nu se suprapună */}
-                <div className="flex gap-4 overflow-x-auto pb-4 md:pb-0 md:grid md:grid-cols-5 snap-x hide-scrollbar">
+                {/* 1. METRICS CARDS - Acum cu flex-shrink-0 și gap mai mare */}
+                <div className="flex gap-4 md:gap-6 overflow-x-auto pb-4 md:pb-0 md:grid md:grid-cols-5 snap-x hide-scrollbar">
                     
-                    {/* CARD 1: CALENDAR */}
-                    <div className="min-w-[200px] flex-shrink-0 bg-[#0b1221] p-4 rounded-xl border border-white/5 hover:border-blue-500/30 transition-colors snap-start flex flex-col justify-between h-full">
+                    {/* CARD 1: CALENDAR (Cu margine dreapta extra pentru siguranță vizuală) */}
+                    <div className="min-w-[200px] flex-shrink-0 bg-[#0b1221] p-4 rounded-xl border border-white/5 hover:border-blue-500/30 transition-colors snap-start flex flex-col justify-between h-full mr-2 md:mr-0">
                         <div className="text-indigo-300 text-xs font-bold uppercase mb-2 flex items-center gap-1">
                             <Calendar size={12}/> Calendar Economic
                         </div>
@@ -120,14 +125,14 @@ export default async function MarketPage() {
                         <div className="text-xs text-gray-400">Restul e Altseason?</div>
                     </div>
 
-                    {/* CARD 5: FRICĂ & LĂCOMIE (Actualizat) */}
+                    {/* CARD 5: FRICĂ & LĂCOMIE (Actualizat cu textele tale) */}
                     <div className="min-w-[160px] flex-shrink-0 bg-[#0b1221] p-4 rounded-xl border border-white/5 hover:border-blue-500/30 transition-colors snap-start flex flex-col justify-center h-full">
                         <div className="text-gray-500 text-xs font-bold uppercase mb-1 flex items-center gap-1"><Zap size={12}/> Frică & Lăcomie</div>
                         <div className={`text-2xl font-black font-[var(--font-space)] ${fgColor}`}>
                             {fgValue}
                         </div>
-                        <div className="text-xs text-gray-400 uppercase">
-                            {fearGreedData ? fearGreedData.value_classification : "Loading..."}
+                        <div className={`text-xs font-bold uppercase ${fgColor}`}>
+                            {fgText}
                         </div>
                     </div>
 
