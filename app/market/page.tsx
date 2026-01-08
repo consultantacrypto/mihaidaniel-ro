@@ -9,7 +9,7 @@ import SentimentPoll from '@/components/SentimentPoll';
 import AlphaStreak from '@/components/AlphaStreak'; 
 import MarketNarrative from '@/components/MarketNarrative';
 import { getGlobalData, getFearGreed } from '@/lib/market-api';
-import { Activity, DollarSign, Layers, BarChart3, Zap, Calendar, Flame, Clock, TrendingUp, Skull } from 'lucide-react';
+import { Activity, DollarSign, Layers, BarChart3, Zap, Calendar, Flame, Clock, TrendingUp, Skull, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 // --- TIPURI ---
@@ -103,7 +103,7 @@ export default async function MarketPage() {
         <div className="grid grid-cols-1 xl:grid-cols-12 gap-6">
             
             {/* STANGA (MAIN CONTENT) */}
-            <div className="xl:col-span-9 space-y-6">
+            <div className="xl:col-span-9 space-y-8">
                 
                 {/* 1. METRICS CARDS */}
                 <div className="flex gap-4 md:gap-6 overflow-x-auto pb-4 md:pb-0 md:grid md:grid-cols-5 snap-x hide-scrollbar">
@@ -158,49 +158,62 @@ export default async function MarketPage() {
                 {/* 2. NARRATIVE */}
                 <MarketNarrative />
 
-                {/* 3. INSTITUTIONAL TRACKER + BUTON "CEI 20" */}
-                <div>
+                {/* 3. INSTITUTIONAL TRACKER */}
+                <div className="space-y-6">
                     <div className="bg-[#0b1221] rounded-2xl border border-white/5 overflow-hidden shadow-2xl relative z-10 md:static sticky left-0 right-0 bg-[#0a0f1e] md:bg-transparent">
                         <InstitutionalTracker />
                     </div>
-                    {/* ✅ BUTON RE-ADĂUGAT: TOP 20 INVESTITORI */}
-                    <div className="mt-3 flex justify-end">
-                        <Link 
-                            href="/stiri/sezonul-celor-20-investitori-titani" 
-                            className="inline-flex items-center gap-2 text-xs font-bold text-blue-400 hover:text-blue-300 transition-colors bg-blue-500/10 px-4 py-2 rounded-lg border border-blue-500/20 hover:border-blue-500/50"
-                        >
-                            <TrendingUp size={14} />
-                            Cine sunt cei "20 de Titani" care controlează piața? &rarr;
-                        </Link>
+                    
+                    <div className="md:hidden flex items-center justify-center gap-2 text-xs text-gray-500 animate-pulse mt-2">
+                        <span>↔️ Swipe stânga-dreapta pe tabel / ↕️ Scroll pagină</span>
                     </div>
-                </div>
-                
-                <div className="md:hidden flex items-center justify-center gap-2 text-xs text-gray-500 animate-pulse mt-2">
-                    <span>↔️ Swipe stânga-dreapta pe tabel / ↕️ Scroll pagină</span>
+
+                    {/* ✅ BUTON TOP 20 - MARE ȘI DISTINCT (SCOS DIN BOX) */}
+                    <Link href="/stiri/sezonul-celor-20-investitori-titani" className="block group">
+                        <div className="w-full bg-gradient-to-r from-blue-900/50 to-indigo-900/50 hover:from-blue-800 hover:to-indigo-800 border border-blue-500/30 p-6 rounded-xl flex items-center justify-between transition-all shadow-lg hover:shadow-blue-900/20 hover:-translate-y-1">
+                            <div>
+                                <h3 className="text-xl font-bold text-white mb-1 flex items-center gap-2">
+                                    <TrendingUp className="text-blue-400" />
+                                    Cei "20 de Titani"
+                                </h3>
+                                <p className="text-sm text-gray-300">Vezi cine controlează de fapt piața în 2026</p>
+                            </div>
+                            <div className="bg-blue-600 text-white p-2 rounded-full group-hover:bg-blue-500 transition-colors">
+                                <ArrowRight />
+                            </div>
+                        </div>
+                    </Link>
                 </div>
             </div>
 
             {/* DREAPTA: SIDEBAR WIDGETS */}
             <div className="xl:col-span-3 flex flex-col gap-6">
                 
-                <div className="sticky top-24 space-y-6">
+                <div className="sticky top-24 space-y-8">
+                    {/* 1. LICHIDĂRI LIVE - MARE ȘI PORTOCALIU (VIBE DE DIMINEAȚĂ) 🔥 */}
+                    <Link 
+                        href="/stiri/lichidari-crypto-global-live-mihai-daniel" 
+                        className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-500 hover:to-red-500 p-4 rounded-xl shadow-lg shadow-orange-900/20 transform hover:scale-[1.02] transition-all group border border-orange-400/20"
+                    >
+                        <div className="flex items-center justify-center gap-2 text-white font-black text-lg animate-pulse">
+                            <Skull className="text-white" size={24} />
+                            LICHIDĂRI LIVE
+                        </div>
+                        <div className="text-center text-orange-100 text-xs font-bold mt-1 uppercase tracking-wider">
+                            Vezi Harta Durerii &rarr;
+                        </div>
+                    </Link>
+
+                    {/* 2. SENTIMENT */}
                     <SentimentPoll />
+
+                    {/* 3. ALPHA STREAK */}
                     <AlphaStreak />
                     
-                    {/* WHALE WALL + BUTON LICHIDĂRI */}
-                    <div className="space-y-3">
-                        <WhaleWallWidget />
-                        
-                        {/* ✅ BUTON RE-ADĂUGAT: LICHIDĂRI */}
-                        <Link 
-                            href="/stiri/lichidari-crypto-global-live-mihai-daniel" 
-                            className="w-full bg-red-500/10 border border-red-500/30 hover:bg-red-500/20 hover:border-red-500/60 p-3 rounded-xl flex items-center justify-center gap-2 text-red-400 font-bold transition-all text-xs group"
-                        >
-                            <Skull size={14} className="group-hover:animate-pulse"/>
-                            VEZI LICHIDĂRI LIVE (Harta Durerii) &rarr;
-                        </Link>
-                    </div>
+                    {/* 4. WHALE WALL */}
+                    <WhaleWallWidget />
 
+                    {/* Link Academia */}
                     <div className="pt-2">
                         <Link href="/academie" className="block w-full text-center py-2.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-bold text-gray-300 transition-all">
                             Accesează Academia Completă &rarr;
