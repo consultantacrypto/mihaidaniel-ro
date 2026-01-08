@@ -1,4 +1,81 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: MSCI BITCOIN GREEN LIGHT (MSTR SAVED)
+  {
+    id: 'msci-green-light-bitcoin-treasury-mstr-saved-january-2026',
+    slug: 'msci-unda-verde-bitcoin-mstr-salvat',
+    title: 'S-A TERMINAT COȘMARUL: MSCI dă "Undă Verde" Bitcoin-ului. Motivul real al prăbușirii din 10 Octombrie a fost rezolvat. $MSTR este salvat.',
+    summary: 'Gigantul MSCI a decis oficial să păstreze companiile cu expunere Bitcoin (precum MicroStrategy) în indicii globali. Află cum această decizie deblochează fluxurile pasive de trilioane de dolari.',
+    category: 'PIEȚE DE CAPITAL',
+    image: '/mscibitcoinianuarie.jpg',
+    date: '09 Jan 2026',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish',
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded text-xs font-bold uppercase">✅ MSCI Approved</span>
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🏛️ Institutional Flows</span>
+      </div>
+
+      <div class="bg-gray-900/50 border border-gray-700 p-4 rounded-xl mb-8">
+        <ul class="space-y-1 text-sm text-gray-400">
+            <li><strong>Subiect:</strong> Piețe de Capital / Indici Globali (MSCI)</li>
+            <li><strong>Impact:</strong> <span class="text-green-400 font-bold">Masiv pentru MicroStrategy ($MSTR) și fluxurile instituționale</span></li>
+            <li><strong>Nivel:</strong> Educație Financiară Avansată</li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Breaking News: "Arbitrul Pieței" a decis în favoarea noastră</h3>
+      <p class="mb-4 text-gray-300">Gigantul <strong>MSCI</strong> (compania care construiește indicii bursieri globali urmăriți de fonduri de trilioane de dolari) a anunțat oficial că <strong>VA PĂSTRA</strong> companiile care dețin Bitcoin în trezorerie (precum MicroStrategy, Tesla, Block) în indicii săi standard.</p>
+      <p class="mb-4 text-gray-300">Aceasta nu este doar o știre tehnică. Este decizia care oprește o bombă cu ceas financiară.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. De ce a căzut piața pe 10 Octombrie? (Mecanica Fricii)</h3>
+      <p class="mb-4 text-gray-300">Pe 10 Octombrie, piața crypto a pierdut 19 miliarde de dolari într-o singură zi. Nimeni nu înțelegea de ce. <strong>Motivul a fost o propunere internă a MSCI de a schimba regulile jocului.</strong></p>
+      
+      <div class="bg-[#0a0f1e] p-5 rounded-lg border border-gray-700 mb-6">
+          <p class="font-bold text-white mb-2 border-b border-gray-600 pb-2">Explicația Educativă:</p>
+          <p class="text-gray-300 mb-3 text-sm">Indicii MSCI sunt ca niște "Liste VIP" ale bursei. Dacă ești pe listă, miile de fonduri de pensii și ETF-uri pasive sunt <strong>OBLIGATE</strong> să te cumpere automat.</p>
+          <p class="text-gray-300 mb-2 text-sm">Zvonul din Octombrie era că MSCI vrea să elimine companiile care sunt "prea expuse la crypto" (considerându-le riscante).</p>
+      </div>
+
+      <div class="bg-red-900/10 border border-red-500/20 p-4 rounded mb-6">
+          <strong class="text-red-400 block mb-2">🔥 Reacția în Lanț (Domino-ul Evitat):</strong>
+          <p class="text-sm text-gray-300">Dacă MSCI ar fi scos MicroStrategy ($MSTR) din indice:</p>
+          <ul class="list-disc pl-5 text-sm text-gray-300 mt-2 space-y-1">
+              <li>Toate fondurile pasive ar fi trebuit să vândă automat acțiunile MSTR în secunda doi.</li>
+              <li>Prețul MSTR s-ar fi prăbușit.</li>
+              <li>Michael Saylor ar fi pierdut capacitatea de a se împrumuta pentru a cumpăra mai mult Bitcoin.</li>
+          </ul>
+      </div>
+      <p class="mb-4 text-gray-300 italic">Piața a anticipat acest dezastru și a vândut preventiv pe 10 Octombrie.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Sfârșitul FUD-ului MicroStrategy ($MSTR)</h3>
+      <p class="mb-4 text-gray-300">Anunțul de azi elimină cel mai mare risc pentru strategia lui Michael Saylor.</p>
+      <p class="mb-4 text-gray-300">Criticii ("Urșii") pariau pe faptul că MicroStrategy va fi forțată să vândă Bitcoin-ul deținut (care valorează miliarde) dacă acțiunile sale sunt delistate din indicii majori.</p>
+      <p class="mb-4 text-gray-300 font-bold text-green-400">MSCI tocmai a confirmat: Strategia Bitcoin Treasury este legitimă.</p>
+      <p class="mb-4 text-gray-300">MicroStrategy rămâne în "Clubul VIP". Fluxurile pasive de bani (banii de pensii ai oamenilor obișnuiți) vor continua să curgă automat către MSTR și, implicit, către Bitcoin.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. Ce înseamnă "Fluxuri Pasive" și de ce sunt Bullish?</h3>
+      <p class="mb-4 text-gray-300">Acesta este secretul banilor mari. Majoritatea banilor din lume nu sunt tranzacționați de traderi activi, ci stau în <strong>Fonduri Pasive</strong> care copiază indicii MSCI World sau S&P 500.</p>
+      <p class="mb-4 text-gray-300">Decizia MSCI înseamnă că Bitcoin a devenit, oficial, parte din infrastructura financiară plictisitoare. Nu mai este un activ "exotic" care trebuie izolat. Este un activ care stă în bilanțul companiilor din indicii globali.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-green-900/20 p-6 rounded-2xl border border-green-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-green-400 mb-4 flex items-center gap-2">
+            🧠 Opinia lui Tati (Mihai Daniel Take):
+        </h4>
+        <p class="text-gray-300 italic mb-4 leading-relaxed">
+            "Uneori, cele mai importante știri nu sunt despre preț, ci despre 'țevărie' (infrastructură). MSCI este instalatorul șef al fluxurilor de bani globali."
+        </p>
+        <p class="text-gray-300 italic mb-4">
+            "Dacă ei închideau robinetul pentru companiile crypto, aveam o iarnă grea. Faptul că au spus 'DA' este validarea supremă. MicroStrategy nu mai este un experiment nebun, este un standard de industrie acceptat."
+        </p>
+        <p class="text-white font-black text-lg border-t border-green-500/30 pt-4 mt-2">
+            Cei care au vândut pe 10 Octombrie de frică... au fost scuturați de instituțiile care știau că acest anunț va veni.
+        </p>
+      </div>
+    `
+  },
+
   // ✅ ARTICOL UNIC: HARTA MiCA 2026 (CU LINK-URI AFILIATE)
   {
     id: 'mica-regulation-map-2026-exchanges-safety-january-update',
