@@ -27,7 +27,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* 2. PLATFORMĂ (Navigare) */}
+          {/* 2. PLATFORMĂ */}
           <div>
             <h3 className="text-white font-bold mb-6 flex items-center gap-2">
                 <Globe size={18} className="text-blue-500"/> Platformă
@@ -40,7 +40,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* 3. COMPANIE (Link-urile Noi - CRITIC PENTRU GOOGLE NEWS) */}
+          {/* 3. COMPANIE */}
           <div>
             <h3 className="text-white font-bold mb-6 flex items-center gap-2">
                 <ShieldCheck size={18} className="text-green-500"/> Companie
@@ -61,7 +61,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* 4. CONTACT RAPID (Adresă/Email) */}
+          {/* 4. CONTACT RAPID */}
           <div>
             <h3 className="text-white font-bold mb-6 flex items-center gap-2">
                 <MapPin size={18} className="text-purple-500"/> Sediu
@@ -73,7 +73,8 @@ export default function Footer() {
                 </li>
                 <li className="flex items-center gap-3">
                     <Mail className="text-gray-600 shrink-0" size={16} />
-                    <a href="mailto:contact@mihaidaniel.ro" className="hover:text-white transition-colors">contact@mihaidaniel.ro</a>
+                    {/* ✅ EMAIL ACTUALIZAT AICI */}
+                    <a href="mailto:consultantacrypto.ro@gmail.com" className="hover:text-white transition-colors">consultantacrypto.ro@gmail.com</a>
                 </li>
                 <li className="flex items-center gap-3">
                     <Clock className="text-gray-600 shrink-0" size={16} />
@@ -84,7 +85,7 @@ export default function Footer() {
 
         </div>
 
-        {/* === DISCLAIMER & COPYRIGHT === */}
+        {/* DISCLAIMER */}
         <div className="border-t border-white/5 pt-8 mb-8">
             <p className="text-xs text-gray-500 leading-relaxed text-justify opacity-70 hover:opacity-100 transition-opacity">
                 Informațiile de pe mihaidaniel.ro au caracter educativ și NU reprezintă sfaturi financiare. 
@@ -92,6 +93,7 @@ export default function Footer() {
             </p>
         </div>
 
+        {/* COPYRIGHT */}
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-gray-600">
             &copy; {currentYear} Mihai Daniel. Toate drepturile rezervate.
@@ -107,7 +109,7 @@ export default function Footer() {
   );
 }
 
-// Componentă Helper pentru Iconițe Social Media
+// Componentă Helper (o las la fel)
 function SocialLink({ href, icon, label }: { href: string, icon: React.ReactNode, label: string }) {
     return (
         <a 

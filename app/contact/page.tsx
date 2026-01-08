@@ -24,9 +24,9 @@ export default function ContactPage() {
               <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                 <Mail className="text-blue-500" /> Email
               </h3>
-              <p className="text-gray-400 mb-2">Pentru suport și întrebări generale:</p>
-              <a href="mailto:contact@mihaidaniel.ro" className="text-blue-400 hover:text-blue-300 transition-colors font-medium">
-                contact@mihaidaniel.ro
+              <p className="text-gray-400 mb-2">Pentru suport, întrebări și parteneriate:</p>
+              <a href="mailto:consultantacrypto.ro@gmail.com" className="text-blue-400 hover:text-blue-300 transition-colors font-medium break-all">
+                consultantacrypto.ro@gmail.com
               </a>
             </div>
 
@@ -34,9 +34,9 @@ export default function ContactPage() {
               <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                 <MessageSquare className="text-green-500" /> Consultanță
               </h3>
-              <p className="text-gray-400 mb-2">Pentru sesiuni 1-la-1 și strategie:</p>
-              <a href="mailto:business@mihaidaniel.ro" className="text-green-400 hover:text-green-300 transition-colors font-medium">
-                business@mihaidaniel.ro
+              <p className="text-gray-400 mb-2">Programează o sesiune de strategie:</p>
+              <a href="mailto:consultantacrypto.ro@gmail.com" className="text-green-400 hover:text-green-300 transition-colors font-medium break-all">
+                consultantacrypto.ro@gmail.com
               </a>
             </div>
 
@@ -61,7 +61,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Formular Contact (Vizual - funcționalitatea se leagă ulterior la email) */}
+          {/* Formular Contact */}
           <div className="bg-[#0b1221] p-8 rounded-2xl border border-white/5">
             <form className="space-y-6">
               <div>
@@ -78,6 +78,7 @@ export default function ContactPage() {
                 <label className="block text-sm font-bold text-gray-300 mb-2">Subiect</label>
                 <select className="w-full bg-[#02050a] border border-gray-800 rounded-lg p-3 text-white focus:border-blue-500 outline-none transition-colors">
                   <option>Suport General</option>
+                  <option>Consultanță 1-la-1</option>
                   <option>Problemă Acces Academie</option>
                   <option>Propunere Parteneriat</option>
                   <option>Presă / Media</option>
