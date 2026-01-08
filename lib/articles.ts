@@ -1,4 +1,140 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: DAC8 & PRIVACY (TEXT INTEGRAL)
+  {
+    id: 'dac8-crypto-privacy-end-january-2026-anaf-reporting',
+    slug: 'adio-privacy-dac8-noua-realitate-2026',
+    title: 'ADIO, „CRYPTO PRIVACY”? Tot ce trebuie să știi despre DAC8 – Noua Realitate din Ianuarie 2026. Ce date ajung la ANAF?',
+    summary: '1 Ianuarie 2026 a marcat sfârșitul erei "sub radar". Directiva DAC8 este activă. Află ce date trimit automat exchange-urile către ANAF, de ce wallet-ul privat nu te salvează total și calendarul raportărilor.',
+    category: 'LEGISLAȚIE & TAXE',
+    image: '/dac8europaianuarie.jpg',
+    date: '10 Jan 2026',
+    readTime: '8 min',
+    author: 'Mihai Daniel',
+    impact: 'neutral', 
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🇪🇺 DAC8 Active</span>
+        <span class="bg-red-500/20 text-red-300 border border-red-500/30 px-3 py-1 rounded text-xs font-bold uppercase">👮‍♂️ ANAF Alert</span>
+      </div>
+
+      <div class="bg-gray-900/50 border border-gray-700 p-4 rounded-xl mb-8">
+        <ul class="space-y-1 text-sm text-gray-400">
+            <li><strong>Subiect:</strong> Fiscalitate / Raportare Automată (DAC8)</li>
+            <li><strong>Impact:</strong> <span class="text-white font-bold">Total asupra intimității financiare</span></li>
+            <li><strong>Status:</strong> <span class="text-green-400 font-bold">ÎN VIGOARE (1 Ian 2026)</span></li>
+        </ul>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Dacă locuiești în Uniunea Europeană (inclusiv România) și deții criptomonede, 1 ianuarie 2026 a marcat sfârșitul unei ere.</p>
+      <p class="mb-4 text-gray-300">Epoca în care puteai opera „sub radar”, bazându-te pe anonimitatea blockchain-ului și pe lipsa de reglementare, s-a încheiat oficial.</p>
+      <p class="mb-4 text-gray-300">Directiva Europeană DAC8 (a 8-a Directivă privind Cooperarea Administrativă) a intrat în vigoare, iar mecanismul de supraveghere fiscală este acum activ. Nu este doar o sperietură, ci un cadru legal care obligă furnizorii de servicii crypto să devină, practic, informatori ai fiscului.</p>
+      <p class="mb-6 text-gray-300 border-l-4 border-blue-500 pl-4 italic">Iată o analiză detaliată, pe înțelesul tuturor, despre ce se întâmplă cu banii tăi, cine are acces la date și ce poți face.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Ce este DAC8 și de ce contează acum?</h3>
+      <p class="mb-4 text-gray-300">Până în 2025, autoritățile fiscale (precum ANAF în România) aveau o problemă majoră: nu vedeau ce se întâmplă în conturile tale de pe Binance, Kraken sau Coinbase decât dacă le cereau explicit sau dacă tu declarai singur câștigurile.</p>
+      <p class="mb-4 text-gray-300"><strong>Din 1 ianuarie 2026, acest lucru s-a schimbat.</strong></p>
+      <p class="mb-4 text-gray-300">DAC8 extinde schimbul automat de informații existent în sistemul bancar și asupra pieței crypto. Scopul declarat este combaterea evaziunii fiscale și a spălării de bani.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Cine te raportează? (RCASPs)</h3>
+      <p class="mb-4 text-gray-300">Toți furnizorii de servicii crypto reglementați – numiți tehnic RCASPs (Reporting Crypto-Asset Service Providers) – sunt obligați legal să colecteze date despre tine. Aici intră:</p>
+      <ul class="list-disc pl-5 text-gray-300 mb-6 space-y-1">
+          <li>Exchange-urile centralizate (CEX).</li>
+          <li>Brokerii de crypto.</li>
+          <li>Operatorii de ATM-uri crypto.</li>
+      </ul>
+      <div class="bg-blue-900/20 border border-blue-500/30 p-3 rounded mb-6">
+        <p class="text-sm text-blue-200">ℹ️ <strong>Regula simplă:</strong> Dacă folosești o platformă care îți cere buletinul (KYC), acea platformă va raporta activitatea ta.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Ce date ajung la ANAF?</h3>
+      <p class="mb-4 text-gray-300">Nu se trimite doar faptul că „ai crypto”. Raportarea este extrem de detaliată. Exchange-ul trimite către autoritatea fiscală din țara sa (care apoi trimite automat către țara ta de reședință) următoarele:</p>
+      
+      <div class="bg-[#0a0f1e] p-5 rounded-lg border border-gray-700 mb-6">
+          <ul class="space-y-3 text-gray-300 text-sm">
+              <li class="flex items-start gap-2">
+                  <span class="text-red-400 font-bold">➢ Identitatea ta:</span> Nume complet, adresă, data nașterii.
+              </li>
+              <li class="flex items-start gap-2">
+                  <span class="text-red-400 font-bold">➢ Identificatorul Fiscal:</span> CNP-ul (în România) sau TIN (Tax Identification Number) în alte țări.
+              </li>
+              <li class="flex items-start gap-2">
+                  <span class="text-red-400 font-bold">➢ Tranzacțiile (Agregate):</span>
+                  <ul class="pl-4 mt-1 space-y-1 text-gray-400">
+                    <li>• Conversiile Crypto-to-Fiat (ex: ai vândut BTC pentru Euro/Lei).</li>
+                    <li>• Conversiile Crypto-to-Crypto (ex: ai schimbat BTC în ETH).</li>
+                  </ul>
+              </li>
+              <li class="flex items-start gap-2">
+                  <span class="text-red-400 font-bold">➢ Dobânzile:</span> Serviciile de Staking și Lending.
+              </li>
+              <li class="flex items-start gap-2">
+                  <span class="text-red-400 font-bold">➢ Transferurile Externe:</span> Valoarea transferurilor către wallet-uri private (Ledger, Trezor, MetaMask).
+              </li>
+          </ul>
+      </div>
+      <p class="text-xs text-gray-400 italic mb-6">Atenție: Nu este o monitorizare în timp real (live), ci o raportare anuală. Totuși, este suficientă pentru ca fiscul să reconstituie istoricul tău financiar.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. Mitul „Wallet-ului Privat” (Self-Custody)</h3>
+      <p class="mb-4 text-gray-300">Mulți cred că dacă își mută banii pe un Ledger sau Trezor, sunt invizibili. <strong>Greșit.</strong></p>
+      <p class="mb-4 text-gray-300">Deși DAC8 nu poate obliga un dispozitiv hardware să raporteze (pentru că nu este un intermediar), Directiva monitorizează <strong>intrările și ieșirile</strong>.</p>
+      <ul class="list-disc pl-5 text-gray-300 mb-6 space-y-2">
+          <li>Când trimiți 1 Bitcoin de pe Exchange pe Ledger, ANAF vede că ai scos o valoare de piață de X dolari.</li>
+          <li>Când vrei să cheltuiești acei bani și îi trimiți înapoi pe Exchange sau îi convertești în bunuri, tranzacția devine vizibilă din nou.</li>
+      </ul>
+      <p class="mb-4 text-gray-300 font-bold">Practic, wallet-ul tău privat este ca o cutie neagră: fiscul nu vede ce faci înăuntru, dar știe exact cât ai băgat în ea și cât ai scos.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">5. Calendarul: Când începe „vânătoarea”?</h3>
+      <p class="mb-4 text-gray-300">Este important să înțelegem cronologia pentru a nu intra în panică inutil, dar nici să nu fim luați prin surprindere:</p>
+      
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div class="bg-gray-800 p-4 rounded border border-gray-600">
+              <div class="text-sm text-gray-400 uppercase">1 Ian 2026 – 31 Dec 2026</div>
+              <div class="text-lg font-bold text-white">Perioada de Colectare</div>
+              <p class="text-xs text-gray-400 mt-2">Exchange-urile înregistrează tot ce faci acum.</p>
+          </div>
+          <div class="bg-red-900/20 p-4 rounded border border-red-500/50">
+              <div class="text-sm text-red-300 uppercase">Septembrie 2027</div>
+              <div class="text-lg font-bold text-red-400">Prima Raportare</div>
+              <p class="text-xs text-red-300 mt-2">Datele colectate în 2026 vor fi trimise către autoritățile fiscale.</p>
+          </div>
+      </div>
+      <p class="mb-6 text-gray-300">Așadar, activitatea ta de acum va ajunge pe masa inspectorilor fiscali în toamna anului viitor.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">6. Nu poți fugi în afara UE? (Efectul CARF)</h3>
+      <p class="mb-4 text-gray-300">Poate te gândești să folosești un exchange din Asia sau din insule exotice. Uniunea Europeană a anticipat asta și a adoptat cadrul global <strong>CARF (Crypto-Asset Reporting Framework)</strong> dezvoltat de OECD.</p>
+      <ul class="list-disc pl-5 text-gray-300 mb-4 space-y-1">
+        <li>Peste 75 de țări (inclusiv SUA, Marea Britanie, Canada, Elveția, Japonia etc.) au semnat acest acord.</li>
+        <li>Exchange-urile din aceste țări care au clienți europeni sunt obligate să respecte aceleași reguli de raportare.</li>
+      </ul>
+      <p class="mb-6 text-gray-300">Dacă un exchange refuză conformarea, riscă să fie blocat în UE și să piardă accesul la sistemul bancar.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">7. Ce se întâmplă dacă refuzi să dai datele?</h3>
+      <p class="mb-4 text-gray-300">Dacă un exchange îți cere să actualizezi datele fiscale (CNP/rezidență) și tu refuzi, consecințele sunt imediate: <strong>înghețarea contului</strong>.</p>
+      <div class="bg-red-900/10 border border-red-500/20 p-3 rounded mb-6">
+        <p class="text-sm text-red-200">⚠️ <strong>Atenție:</strong> Conform noilor proceduri, exchange-urile nu au voie să proceseze tranzacții pentru utilizatori neidentificați fiscal. Banii tăi rămân blocați până la conformare.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">Concluzie: Ce avem de făcut?</h3>
+      <p class="mb-4 text-gray-300">Sfârșitul privacy-ului financiar în forma sa „sălbatică” a sosit. Pentru investitorul obișnuit, curat, asta înseamnă doar mai multă birocrație. Pentru cei care evitau taxele, fereastra de oportunitate s-a închis.</p>
+      <p class="mb-6 text-gray-300">Opțiunile rămase pentru cei care țin la anonimitate sunt tot mai tehnice și mai riscante (DEX-uri descentralizate, tranzacții P2P, monede de tip privacy), dar conversia finală în bani reali (fiat) devine punctul vulnerabil.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-blue-900/20 p-6 rounded-2xl border border-blue-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-blue-300 mb-4 flex items-center gap-2">
+            🧠 Opinia lui Tati (Mihai Daniel Take):
+        </h4>
+        <p class="text-gray-300 italic mb-4 leading-relaxed">
+            "Sfatul nostru? Dacă ai portofoliu crypto în 2026, tratează-l cu seriozitatea unui cont bancar."
+        </p>
+        <p class="text-gray-300 italic mb-4">
+            "Ține evidența tranzacțiilor și pregătește-te pentru transparență totală. ANAF va ști."
+        </p>
+        <p class="text-white font-black text-lg border-t border-blue-500/30 pt-4 mt-2">
+            Întrebarea e: tu vei fi pregătit când vor întreba?
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: MSCI BITCOIN GREEN LIGHT (MSTR SAVED)
   {
     id: 'msci-green-light-bitcoin-treasury-mstr-saved-january-2026',
