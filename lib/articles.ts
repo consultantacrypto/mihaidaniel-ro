@@ -1,4 +1,88 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: CHEN ZHI & PRINCE GROUP (14 MILIARDE $ SEIZED)
+  {
+    id: 'chen-zhi-prince-group-extradited-us-seizes-14-billion-bitcoin',
+    slug: 'imperiul-prince-group-a-cazut-chen-zhi-extradat-14-miliarde-confiscate',
+    title: 'IMPERIUL „PRINCE GROUP” A CĂZUT: Chen Zhi Extrădat în China, iar SUA Confiscă 14 Miliarde $ în Bitcoin',
+    summary: 'Sfârșitul unui imperiu criminal de 40 miliarde $. Chen Zhi a fost predat Chinei, iar SUA a pus sechestru pe 127.271 BTC. Află legătura cu mining-ul Lubian și ce urmează pentru piață.',
+    category: 'CRIMINALITATE & ON-CHAIN',
+    image: '/chenziscam.jpg',
+    date: '16 Jan 2026',
+    readTime: '7 min',
+    author: 'Mihai Daniel',
+    impact: 'bearish', // Frica de dumping din partea SUA
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-red-500/20 text-red-300 border border-red-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🚨 127k BTC Seized</span>
+        <span class="bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🇨🇳 vs 🇺🇸 Geopolitics</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Este sfârșitul unui imperiu criminal de 40 de miliarde de dolari.</p>
+      
+      <p class="mb-4 text-gray-300">Chen Zhi, fondatorul infamului „Prince Group” și arhitectul unora dintre cele mai mari operațiuni de tip „Pig Butchering” (Măcelărirea Porcului), a fost transferat în custodia autorităților chineze. În același timp, Statele Unite au pus sechestru pe o avere în Bitcoin care ar putea destabiliza piața.</p>
+
+      <div class="bg-gray-900/50 border border-red-500/30 p-4 rounded-xl mb-8 mt-6">
+        <h4 class="text-red-400 font-bold mb-2 flex items-center gap-2">⚠️ De ce ne pasă?</h4>
+        <p class="text-sm text-gray-300">
+            Aceasta nu este doar o știre despre arestarea unui escroc. Este povestea modului în care o rețea de criminalitate a folosit <strong>infrastructura de minat Bitcoin</strong> pentru a spăla miliarde, și cum cele două superputeri (SUA și China) se luptă acum pe rămășițe.
+        </p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Cine este Chen Zhi și „Prince Group”?</h3>
+      <p class="mb-4 text-gray-300">Prince Group nu a fost o simplă companie, ci un stat în stat, operat din Cambodgia. Sub fațada unor afaceri imobiliare și de turism, anchetatorii susțin că organizația conducea un imperiu de 40 de miliarde de dolari bazat pe fraudă online.</p>
+      <p class="mb-4 text-gray-300">Metoda lor preferată? <strong>„Pig Butchering”</strong>: escrocherii sentimentale și de investiții în care victimele sunt „îngrășate” cu promisiuni de câștiguri fabuloase, înainte de a fi „tăiate” – adică golite de toate economiile. China îi investighează din 2020, dar abia acum, prin cooperare internațională, "Regele" a fost prins.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Conexiunea LUBIAN: Cum speli miliarde prin minat Bitcoin</h3>
+      <p class="mb-4 text-gray-300">Aici devine interesant pentru noi, investitorii crypto. Cum ascunzi miliarde de dolari furați? Îi amesteci cu Bitcoin proaspăt minat.</p>
+      <p class="mb-4 text-gray-300">Investigațiile on-chain, confirmate de datele <strong>Arkham Intelligence</strong>, au identificat o legătură directă între portofelele Prince Group și <strong>Lubian</strong>, una dintre cele mai mari companii de minat Bitcoin din lume.</p>
+      
+      <div class="bg-[#0b1221] p-5 rounded-lg border border-blue-500/30 mb-6">
+          <ul class="space-y-3 text-gray-300 text-sm">
+              <li class="flex items-start gap-2">
+                  <span class="text-blue-400 font-bold">➢ Schema:</span> Fondurile furate erau canalizate prin operațiuni de mining. Bitcoin-ul rezultat părea „curat” (Virgin BTC), proaspăt generat de rețea.
+              </li>
+              <li class="flex items-start gap-2">
+                  <span class="text-blue-400 font-bold">➢ Dovada Vizuală:</span> Graficul Arkham arată o rețea complexă de tranzacții care pleacă de la entități asociate cu Lubian și ajung într-un punct final masiv: <strong>Guvernul Statelor Unite</strong>.
+              </li>
+          </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Documentul care confirmă sechestrul istoric (127.271 BTC)</h3>
+      <p class="mb-4 text-gray-300">Statele Unite nu au stat degeaba. Documentul oficial (Criminal Forfeiture Allegation) arată dimensiunea colosală a confiscării: aproximativ <strong>127.271 Bitcoin</strong>. La prețul actual, valoarea este de ~14 miliarde $.</p>
+      
+      <div class="bg-red-900/10 border border-red-500/50 p-4 rounded-lg mb-6 font-mono text-sm text-red-200">
+        <p class="font-bold mb-2 underline">DIN DOSARUL INSTANȚEI:</p>
+        <ul class="list-disc pl-5 space-y-1">
+            <li>Portofel principal (3Pja5...T9Ye): <strong>20.452 BTC</strong></li>
+            <li>Portofel secundar 1: <strong>15.033 BTC</strong></li>
+            <li>Portofel secundar 2: <strong>14.139 BTC</strong></li>
+            <li>STATUS: <strong>SEIZED (CONTROL US MARSHALS)</strong></li>
+        </ul>
+      </div>
+      <p class="text-xs text-gray-400 italic mb-6">Faptul că aceste fonduri sunt blocate înseamnă că au fost scoase din circulație, ceea ce explică parțial lipsa de lichiditate din anumite zone ale pieței.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. Războiul Geopolitic: China are Omul, SUA au Banii</h3>
+      <p class="mb-4 text-gray-300">Situația creează un precedent complicat:</p>
+      <ul class="list-disc pl-5 text-gray-300 mb-6 space-y-2">
+          <li><strong>China</strong> l-a recuperat pe Chen Zhi și va dori fondurile pentru a despăgubi milioanele de victime chineze.</li>
+          <li><strong>SUA</strong> dețin cheile private ale Bitcoin-ului minat/spălat prin Lubian.</li>
+      </ul>
+      <p class="mb-6 text-gray-300">Întrebarea de 14 miliarde de dolari este: <em>Ce va face SUA cu acești Bitcoin? Îi va vinde (dumping pe piață), îi va returna Chinei sau îi va păstra în rezervele strategice?</em></p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-blue-900/20 p-6 rounded-2xl border border-blue-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-blue-300 mb-4 flex items-center gap-2">
+            🧠 Concluzia lui Tati:
+        </h4>
+        <p class="text-gray-300 italic mb-4 leading-relaxed">
+            "Căderea lui Chen Zhi este un avertisment dur: blockchain-ul nu uită și nu iartă. Indiferent cât de complexă este schema de spălare (chiar și prin mining pool-uri), instrumentele de analiză on-chain pot da de urma banilor."
+        </p>
+        <p class="text-white font-black text-lg border-t border-blue-500/30 pt-4 mt-2">
+            Pentru piață, vestea este mixtă: un actor malițios a fost eliminat, dar o cantitate imensă de Bitcoin stă acum în pixul guvernului american. Atenție la volatilitate!
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: CLARITY ACT (VOT CRUCIAL 15 IAN)
   {
     id: 'clarity-act-vote-january-15-2026-crypto-regulation-usa',
