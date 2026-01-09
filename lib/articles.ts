@@ -1,4 +1,90 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: CLARITY ACT (VOT CRUCIAL 15 IAN)
+  {
+    id: 'clarity-act-vote-january-15-2026-crypto-regulation-usa',
+    slug: 'ziua-judecatii-crypto-sua-15-ianuarie-clarity-act',
+    title: '🇺🇸 ZIUA JUDECĂȚII PENTRU CRYPTO ÎN SUA? Pe 15 Ianuarie se votează „CLARITY ACT”. Sfârșitul Vestului Sălbatic?',
+    summary: 'Toți ochii sunt ațintiți pe Washington. Pe 15 Ianuarie, Senatul SUA votează legea care poate transforma "Vestul Sălbatic" crypto într-o piață matură pentru instituționali. Află miza reală.',
+    category: 'LEGISLAȚIE & REGLEMENTARE',
+    image: '/15ianuarieclarity.jpg',
+    date: '15 Jan 2026',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', 
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🇺🇸 Washington Alert</span>
+        <span class="bg-purple-500/20 text-purple-300 border border-purple-500/30 px-3 py-1 rounded text-xs font-bold uppercase">⚖️ Clarity Act</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Data de 15 ianuarie 2026 ar putea rămâne în istorie ca momentul în care „Vestul Sălbatic” al criptomonedelor s-a transformat într-o piață matură, pregătită pentru miliardele investitorilor instituționali.</p>
+      
+      <p class="mb-4 text-gray-300">Toți ochii sunt ațintiți pe Washington, unde Comisia Bancară a Senatului SUA organizează un vot crucial (markup) pentru <strong>Digital Asset Market Clarity Act (CLARITY Act)</strong>. După ani de haos legislativ, SUA trebuie să decidă: îngroapă industria sau o transformă în noua locomotivă economică?</p>
+
+      <div class="bg-gray-900/50 border border-gray-700 p-4 rounded-xl mb-8 mt-6">
+        <h4 class="text-white font-bold mb-2 flex items-center gap-2">🎯 Miza Votului:</h4>
+        <p class="text-sm text-gray-400">
+            Acest vot îți poate influența direct portofoliul. Legea promite să oprească manipulările și să deschidă porțile pentru Altcoins.
+        </p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Ce se întâmplă pe 15 Ianuarie?</h3>
+      <p class="mb-4 text-gray-300">Nu este încă votul final, dar este testul de foc. Senatorul Tim Scott conduce un „markup” – o ședință tehnică unde se discută și se votează amendamentele la legea H.R. 3633.</p>
+      <ul class="list-disc pl-5 text-gray-300 mb-6 space-y-2">
+          <li><strong>Dacă trece de comisie:</strong> Legea merge în plenul Senatului (Semnal Bullish).</li>
+          <li><strong>Dacă se blochează aici:</strong> Incertitudinea continuă (Volatilitate).</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. CLARITY Act: Sfârșitul manipulării pieței?</h3>
+      <p class="mb-4 text-gray-300">Piața crypto a suferit mult timp de pe urma lipsei de transparență. CLARITY Act vine cu măsuri draconice, similare cu Wall Street:</p>
+      
+      <div class="grid gap-4 mb-6">
+          <div class="bg-[#0b1221] p-4 rounded-lg border border-white/5">
+              <div class="font-bold text-red-400 mb-1">🛑 Stop „Wash Trading” & „Spoofing”</div>
+              <div class="text-sm text-gray-400">Legea incriminează practicile prin care balenele sau exchange-urile creează volume false sau pun ordine fantomă pentru a manipula prețul.</div>
+          </div>
+          <div class="bg-[#0b1221] p-4 rounded-lg border border-white/5">
+              <div class="font-bold text-blue-400 mb-1">🔍 Supraveghere în Timp Real</div>
+              <div class="text-sm text-gray-400">Autoritățile nu vor mai investiga doar post-factum. Vor avea unelte de monitorizare live a pieței.</div>
+          </div>
+          <div class="bg-[#0b1221] p-4 rounded-lg border border-white/5">
+              <div class="font-bold text-green-400 mb-1">🛡️ Proof of Reserves</div>
+              <div class="text-sm text-gray-400">Pentru a evita un nou caz FTX, exchange-urile (Coinbase, Binance.US) vor fi obligate să dovedească prin audituri că dețin real fondurile.</div>
+          </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. De ce este nevoie de această lege ACUM?</h3>
+      <p class="mb-4 text-gray-300">Urgența vine pe fondul instabilității recente. Să nu uităm <strong>Crash-ul din 10 Octombrie 2025</strong>, când Bitcoin a picat de la 120k$ la 110k$ într-o clipită, ștergând 20 de miliarde $.</p>
+      <p class="mb-4 text-gray-300">De atunci, piața se comportă „anormal”: veștile bune sunt vândute, iar lichiditatea pare fragilă. CLARITY Act vrea să elimine ceața: să știm cine vinde, cine cumpără și să reducem levierul toxic.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. SEC vs. CFTC: Cine e șeriful?</h3>
+      <p class="mb-4 text-gray-300">Poate cea mai mare victorie a legii este clarificarea jurisdicției.</p>
+      <ul class="list-disc pl-5 text-gray-300 mb-6 space-y-2">
+          <li>Până acum, <strong>SEC</strong> trata aproape orice crypto ca pe o acțiune, sufocând inovația.</li>
+          <li><strong>CLARITY Act</strong> propune reguli clare pentru a decide când un activ este marfă (Commodity - sub CFTC) și când este securitate. De asemenea, oferă definiții legale pentru DeFi și Stablecoins.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">5. Miza: Banii Instituționali (BlackRock, Fidelity)</h3>
+      <p class="mb-4 text-gray-300">Dacă legea trece, efectul asupra prețului poate fi masiv. În acest moment, giganții financiari se limitează la Bitcoin. Le este frică să atingă Altcoins (Ethereum, Solana) din riscuri legale.</p>
+      <div class="bg-green-900/20 border-l-4 border-green-500 p-4 mb-6">
+        <p class="text-gray-200 font-bold">
+            CLARITY Act = Undă verde pentru Altcoins.
+        </p>
+        <p class="text-sm text-gray-400 mt-1">
+            Odată ce regulile sunt clare, robinetul banilor instituționali s-ar putea deschide către tot ecosistemul.
+        </p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">Concluzie: Ce facem noi?</h3>
+      <p class="mb-4 text-gray-300">Pe 15 ianuarie, nu ne așteptăm la artificii instantanee, dar direcția vântului se va schimba.</p>
+      <ul class="space-y-2 mb-6 text-gray-300">
+        <li>🟢 <strong>Scenariu Pozitiv:</strong> Legea trece de comisie -> optimism -> posibil raliu pe Altcoins.</li>
+        <li>🔴 <strong>Scenariu Negativ:</strong> Blocaj politic -> incertitudine -> volatilitate crescută.</li>
+      </ul>
+      <p class="text-white font-bold italic">2026 pare să fie anul în care Crypto se maturizează. Rămâneți conectați pentru update-uri imediat după vot!</p>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: DAC8 & PRIVACY (TEXT INTEGRAL)
   {
     id: 'dac8-crypto-privacy-end-january-2026-anaf-reporting',
