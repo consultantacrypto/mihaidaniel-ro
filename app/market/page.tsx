@@ -168,7 +168,7 @@ export default async function MarketPage() {
                         <span>↔️ Swipe stânga-dreapta pe tabel / ↕️ Scroll pagină</span>
                     </div>
 
-                    {/* ✅ BUTON TOP 20 - MARE ȘI DISTINCT (SCOS DIN BOX) */}
+                    {/* BUTON TOP 20 - MARE */}
                     <Link href="/stiri/sezonul-celor-20-investitori-titani" className="block group">
                         <div className="w-full bg-gradient-to-r from-blue-900/50 to-indigo-900/50 hover:from-blue-800 hover:to-indigo-800 border border-blue-500/30 p-6 rounded-xl flex items-center justify-between transition-all shadow-lg hover:shadow-blue-900/20 hover:-translate-y-1">
                             <div>
@@ -190,11 +190,20 @@ export default async function MarketPage() {
             <div className="xl:col-span-3 flex flex-col gap-6">
                 
                 <div className="sticky top-24 space-y-8">
-                    {/* 1. LICHIDĂRI LIVE - MARE ȘI PORTOCALIU (VIBE DE DIMINEAȚĂ) 🔥 */}
+                    {/* 1. LICHIDĂRI LIVE - CU BADGE PULSÂND! 🔥 */}
                     <Link 
                         href="/stiri/lichidari-crypto-global-live-mihai-daniel" 
-                        className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-500 hover:to-red-500 p-4 rounded-xl shadow-lg shadow-orange-900/20 transform hover:scale-[1.02] transition-all group border border-orange-400/20"
+                        className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-500 hover:to-red-500 p-4 rounded-xl shadow-lg shadow-orange-900/20 transform hover:scale-[1.02] transition-all group border border-orange-400/20 relative overflow-hidden"
                     >
+                        {/* ✨ BADGE LIVE PULSÂND */}
+                        <div className="absolute top-2 right-2 flex items-center gap-1">
+                            <span className="relative flex h-2 w-2">
+                              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                              <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                            </span>
+                            <span className="text-[10px] font-bold text-orange-100 uppercase tracking-wider">LIVE</span>
+                        </div>
+
                         <div className="flex items-center justify-center gap-2 text-white font-black text-lg animate-pulse">
                             <Skull className="text-white" size={24} />
                             LICHIDĂRI LIVE
