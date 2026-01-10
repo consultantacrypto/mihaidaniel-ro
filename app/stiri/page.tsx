@@ -24,7 +24,7 @@ export default async function NewsPage({
   const currentPage = Number(params?.page) || 1;
   const categoryFilter = (params?.category as string) || 'all';
 
-  // --- FILTRARE STANDARD (Fără Taxe) ---
+  // --- LOGICA DE FILTRARE (SIMPLĂ, ORIGINALĂ) ---
   const filteredArticles = articles.filter((article) => {
     const text = (article.title + article.summary + article.category).toLowerCase();
     
@@ -39,9 +39,8 @@ export default async function NewsPage({
         return text.includes('altcoin') || text.includes('solana') || text.includes('xrp') || text.includes('cardano') || text.includes('binance');
       case 'edu': 
         return text.includes('educatie') || text.includes('ghid') || text.includes('tutorial') || text.includes('explicat');
-      
       default: 
-        return true; // Arată tot
+        return true; // Toate
     }
   });
 
@@ -58,7 +57,7 @@ export default async function NewsPage({
 
       <main className="pt-24 pb-20 px-4 md:px-8 max-w-7xl mx-auto">
         
-        {/* HEADER ZONA ȘTIRI */}
+        {/* HEADER */}
         <div className="mb-12 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-900/30 border border-blue-500/30 text-blue-400 text-xs font-bold uppercase mb-4 animate-pulse">
                 <Terminal size={12} />
@@ -69,21 +68,22 @@ export default async function NewsPage({
             </h1>
             <p className="text-gray-400 max-w-2xl mx-auto text-lg">
               Nu doar știri. Înțelege <span className="text-white font-bold">de ce</span> se mișcă piața.
-              Analize instituționale traduse pe limba investitorilor.
             </p>
         </div>
 
-        {/* COMPONENTE DATE PIAȚĂ */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="md:col-span-2">
-                 <TickerTape />
-            </div>
-            <div className="md:col-span-1">
-                 <FearGreed />
-            </div>
+        {/* ✅ FIX: TICKER TAPE LIBER (Pe toată lățimea) */}
+        <div className="mb-8 w-full">
+             <TickerTape />
         </div>
 
-        {/* FILTRE CATEGORII */}
+        {/* ✅ FIX: FEAR & GREED CENTRAT (Sub bandă) */}
+        <div className="flex justify-center mb-16">
+             <div className="w-full max-w-md">
+                <FearGreed />
+             </div>
+        </div>
+
+        {/* FILTRE (Fără Props care dau eroare) */}
         <CategoryFilter />
 
         {/* LISTA ARTICOLE */}
@@ -95,18 +95,20 @@ export default async function NewsPage({
                 key={article.id}
                 className="group bg-[#0b1221] border border-white/5 rounded-2xl overflow-hidden hover:border-blue-500/50 transition-all hover:shadow-2xl hover:shadow-blue-900/20 flex flex-col h-full"
               >
-                {/* Image Container */}
-                <div className="relative h-48 overflow-hidden">
+                {/* ✅ FIX: CONTAINER IMAGINE CORECT (Relative + Fill) */}
+                <div className="relative h-48 w-full overflow-hidden bg-gray-900">
                   <Image 
                     src={article.image} 
                     alt={article.title} 
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
+                  {/* Overlay Gradient */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0b1221] via-transparent to-transparent opacity-60"></div>
                   
-                  {/* Category Badge */}
-                  <div className="absolute top-4 left-4">
+                  {/* Badge Categorie */}
+                  <div className="absolute top-4 left-4 z-10">
                     <span className={`px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider border backdrop-blur-md
                       ${article.impact === 'bullish' ? 'bg-green-500/20 border-green-500/30 text-green-400' : 
                         article.impact === 'bearish' ? 'bg-red-500/20 border-red-500/30 text-red-400' : 
