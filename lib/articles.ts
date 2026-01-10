@@ -1,4 +1,76 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: CLARITY ACT & INSIDER TRADING (10 IAN)
+  {
+    id: 'clarity-act-insider-trading-signals-january-2026',
+    slug: 'adio-crash-10-octombrie-clarity-act-insideri',
+    title: '🛑 ADIO, CRASH-URI DE TIP "10 OCTOMBRIE"? De ce "CLARITY ACT" și mișcările Insiderilor schimbă totul',
+    summary: 'Pe 15 Ianuarie se votează legea care schimbă regulile jocului. Dar adevăratul motiv de optimism nu e textul legii, ci faptul că politicienii americani au început să cumpere Bitcoin masiv chiar înainte de vot.',
+    category: 'LEGISLAȚIE & INSIDERI',
+    image: '/clarityact10ianuarie.jpg',
+    date: '10 Jan 2026',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Insiderii cumpără = Bullish
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🤑 Smart Money Flows</span>
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🏛️ Washington</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Țineți minte data de 10 Octombrie 2025? Ziua în care piața a sângerat, portofoliile au fost decimate, iar nimeni nu a știut exact cine a apăsat pe trăgaci.</p>
+      
+      <p class="mb-4 text-gray-300">Ei bine, acel tip de masacru anonim ar putea deveni istorie. Pe 15 Ianuarie 2026, Comisia Bancară a Senatului SUA se pregătește să voteze <strong>Clarity Act</strong>. Dacă trece, regulile jocului se schimbă definitiv. Dar adevăratul motiv pentru care suntem optimiști nu e legea în sine, ci ce fac cei care o scriu.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Ce este Clarity Act și cum oprește manipularea?</h3>
+      <p class="mb-4 text-gray-300">Piața crypto actuală este încă un "Vest Sălbatic". Manipularea prețului, wash-trading-ul și flash-crash-urile orchestrate sunt la ordinea zilei. Clarity Act își propune să elimine barierele regulatorii și să impună standarde de transparență similare cu bursele tradiționale (TradFi).</p>
+      
+      <div class="bg-[#0b1221] p-5 rounded-lg border border-blue-500/30 mb-6">
+          <ul class="space-y-3 text-gray-300 text-sm">
+              <li class="flex items-start gap-2">
+                  <span class="text-blue-400 font-bold">➢ Promisiunea:</span> Experții estimează că manipularea pieței va scădea cu 70-80%.
+              </li>
+              <li class="flex items-start gap-2">
+                  <span class="text-green-400 font-bold">➢ Efectul:</span> Crypto nu se va mai tranzacționa ca un activ speculativ haotic, ci ca un activ matur, stabil, unde instituțiile pot intra cu miliarde fără teama că un "whale" anonim le fură lichiditatea.
+              </li>
+          </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Semnalul Suprem: "Insiderii" Cumpără Acum</h3>
+      <p class="mb-4 text-gray-300">De ce credem că legea va trece? Pentru că oamenii din interior își pun banii la bătaie. Rapoarte recente au scos la iveală mișcări extrem de interesante ale legiuitorilor americani:</p>
+      
+      <div class="bg-green-900/10 border border-green-500/30 p-4 rounded-xl mb-6">
+        <ul class="space-y-2">
+            <li class="flex items-center gap-3 text-gray-200">
+                <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                <span>Un Congresman din subcomisia pentru Active Digitale a dezvăluit o achiziție de <strong>$100.000 în BTC</strong>.</span>
+            </li>
+            <li class="flex items-center gap-3 text-gray-200">
+                <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                <span>Byron Donalds (membru cheie republican) a dezvăluit o achiziție de <strong>$200.000 în ETF-ul Bitwise</strong>.</span>
+            </li>
+        </ul>
+      </div>
+      <p class="mb-4 text-gray-300 italic">Coincidență? Greu de crezut. Când oamenii care decid soarta legii cumpără activul pe care îl reglementează cu câteva zile înainte de vot, mesajul pentru noi este clar: <strong>Ei știu că legea va trece.</strong></p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Calendarul: Când intră banii grei?</h3>
+      <p class="mb-4 text-gray-300">Dacă votul din comisie de pe 15 ianuarie este pozitiv (ceea ce pare sigur, având în vedere poziționarea membrilor), traseul este următorul:</p>
+      <ol class="list-decimal pl-5 text-gray-300 mb-6 space-y-1">
+          <li>Vot în plenul Senatului.</li>
+          <li>Vot final în Camera Reprezentanților.</li>
+          <li>Semnătura Președintelui Trump.</li>
+      </ol>
+      <p class="text-gray-300 mb-6">Estimăm că Clarity Act ar putea deveni lege oficială până în <strong>Martie 2026</strong>. Asta înseamnă că suntem la 60 de zile distanță de momentul în care "zăgazurile" capitalului instituțional se vor deschide complet.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-blue-900/20 p-6 rounded-2xl border border-blue-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-white mb-2">Concluzia lui Tati:</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            10 Octombrie a fost dureros pentru că a fost irațional. Viitorul sub Clarity Act promite să fie diferit. Nu spunem că prețul nu va mai scădea niciodată, dar spunem că vremea manipulărilor obscure se apropie de sfârșit. <br/><br/>
+            <span class="text-green-400 font-bold">Urmăriți banii insiderilor. Ei nu pariază pe eșec.</span>
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: WASHINGTON SILENCE & TRUMP TARIFFS (10 IAN)
   {
     id: 'washington-silence-supreme-court-delay-tariffs-trump-ieepa-january-2026',
