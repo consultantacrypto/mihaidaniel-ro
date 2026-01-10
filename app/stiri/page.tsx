@@ -41,7 +41,7 @@ export default async function NewsPage({
       case 'edu': 
         return text.includes('educatie') || text.includes('ghid') || text.includes('tutorial') || text.includes('explicat');
       
-      // ✅ LOGICA PENTRU TAXE (Aici prindem articolele tale de top)
+      // ✅ LOGICA PENTRU TAXE (Aici prindem articolele tale de top despre ANAF, DAC8, MiCA)
       case 'taxe': 
         return text.includes('anaf') || text.includes('taxe') || text.includes('dac8') || text.includes('legislatie') || text.includes('mica') || text.includes('impozit') || text.includes('legal');
 
@@ -88,7 +88,7 @@ export default async function NewsPage({
             </div>
         </div>
 
-        {/* 🔍 FILTRE CATEGORII - AICI AM SCOS PROPS-UL CARE DĂDEA EROARE */}
+        {/* 🔍 FILTRE CATEGORII - FĂRĂ EROARE */}
         <CategoryFilter />
 
         {/* LISTA ARTICOLE */}
