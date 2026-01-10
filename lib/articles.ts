@@ -1,4 +1,75 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: WASHINGTON SILENCE & TRUMP TARIFFS (10 IAN)
+  {
+    id: 'washington-silence-supreme-court-delay-tariffs-trump-ieepa-january-2026',
+    slug: 'tacere-washington-curtea-suprema-amana-decizia-tarife-trump',
+    title: '🇺🇸 TĂCERE ASURZITOARE LA WASHINGTON. Curtea Supremă amână decizia, dar Casa Albă scoate „Pistolul de pe masă”',
+    summary: 'Ziua Judecății s-a transformat într-un război al nervilor. Curtea Supremă a amânat verdictul pe tarife, dar administrația Trump a confirmat activarea "Planului B". Ce ne așteaptă luni dimineața?',
+    category: 'MACRO & GEOPOLITICĂ',
+    image: '/clarityactianuarie10.jpg',
+    date: '10 Jan 2026',
+    readTime: '4 min',
+    author: 'Mihai Daniel',
+    impact: 'neutral', // Incertitudine maximă = Volatilitate
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-blue-900/40 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🇺🇸 US Politics</span>
+        <span class="bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 px-3 py-1 rounded text-xs font-bold uppercase">⚖️ Supreme Court</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Sâmbătă, 10 Ianuarie 2026. Ceea ce trebuia să fie „Ziua Judecății” pentru comerțul global s-a transformat într-un război al nervilor.</p>
+      
+      <p class="mb-4 text-gray-300">Ieri, la ora limită, Curtea Supremă a SUA a ales să nu publice verdictul privind tarifele președintelui Trump, lăsând piețele financiare și partenerii comerciali într-o ceață totală. Dar, deși judecătorii au tăcut, administrația Trump a vorbit tare și răspicat.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Marea Amânare: Ce s-a întâmplat ieri?</h3>
+      <p class="mb-4 text-gray-300">Investitorii au stat cu ochii pe site-ul Curții Supreme până la ultimul refresh. Nimic. Judecătorii au încheiat ziua fără a se pronunța asupra constituționalității tarifelor impuse pe baza <em>Section 232</em> (securitate națională).</p>
+      
+      <div class="bg-gray-900/50 border-l-4 border-blue-500 p-4 mb-6">
+        <p class="text-gray-300 text-sm">
+            <strong>Ce înseamnă asta?</strong> Experții juridici susțin că o amânare în acest stadiu indică o diviziune profundă între judecători. Nu este o simplă formalitate; este semnul că se duce o luptă grea în spatele ușilor închise.
+        </p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Avertismentul lui Kevin Hassett: „Suntem pregătiți de orice”</h3>
+      <p class="mb-4 text-gray-300">Chiar dacă Curtea nu a dat verdictul, știrea zilei vine de la <strong>Kevin Hassett</strong>, directorul Consiliului Economic Național. Într-o mișcare preventivă, acesta a confirmat ieri presei că președintele Trump are pregătite „alternative strategice” care nu depind de Curte.</p>
+      <p class="mb-4 text-gray-300 italic">Hassett a transmis un mesaj subtil, dar brutal: „Echipa noastră legală a identificat mai multe căi statutare care rămân disponibile indiferent de decizia Curții”.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. „Planul B”: Legea IEEPA rămâne în picioare</h3>
+      <p class="mb-4 text-gray-300">Analiza noastră anterioară rămâne mai validă ca oricând. Dacă Curtea va decide săptămâna viitoare împotriva lui Trump, Casa Albă a semnalat clar că va activa <strong>IEEPA (International Emergency Economic Powers Act)</strong> din 1977.</p>
+      
+      <div class="grid gap-4 md:grid-cols-2 mb-6">
+          <div class="bg-[#0b1221] p-4 rounded-lg border border-red-500/20">
+              <div class="font-bold text-red-400 mb-1">Traducere</div>
+              <div class="text-sm text-gray-400">Trump nu are nevoie de permisiunea Curții pentru a declara o „urgență economică”.</div>
+          </div>
+          <div class="bg-[#0b1221] p-4 rounded-lg border border-red-500/20">
+              <div class="font-bold text-red-400 mb-1">Pericolul</div>
+              <div class="text-sm text-gray-400">Această mutare ar transforma o dispută comercială într-o criză de securitate națională, blindând tarifele.</div>
+          </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. Ce ne așteaptă Luni?</h3>
+      <p class="mb-4 text-gray-300">Pentru traderi și investitori, weekendul acesta este unul de analiză, nu de relaxare.</p>
+      <ul class="space-y-3 mb-6">
+        <li class="flex items-start gap-3">
+            <div class="bg-orange-500/20 p-1 rounded mt-1"><span class="text-orange-400 font-bold">₿</span></div>
+            <p class="text-gray-300 text-sm"><strong>Crypto:</strong> Bitcoin ar putea reacționa pozitiv la această incertitudine continuă. Când guvernul pare instabil sau impredictibil, narativul de „store of value” (activ de refugiu) se activează.</p>
+        </li>
+        <li class="flex items-start gap-3">
+            <div class="bg-blue-500/20 p-1 rounded mt-1"><span class="text-blue-400 font-bold">📉</span></div>
+            <p class="text-gray-300 text-sm"><strong>Bursele (S&P500):</strong> Luni dimineața ne putem aștepta la o deschidere nervoasă. Piețele urăsc incertitudinea mai mult decât veștile proaste. Faptul că nu știm regulile jocului (Tarife DA sau NU?) blochează investițiile majore.</p>
+        </li>
+      </ul>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-gray-800 p-6 rounded-2xl border border-gray-600 shadow-lg">
+        <h4 class="text-xl font-bold text-white mb-2">Concluzia lui Tati:</h4>
+        <p class="text-gray-300 mb-4 leading-relaxed">
+            "Meciul nu s-a terminat, s-a intrat doar în prelungiri. Trump a arătat că nu are de gând să cedeze, indiferent ce spun judecătorii. Pentru noi, mesajul e clar: Pregătiți-vă pentru o săptămână viitoare extrem de volatilă."
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: CHEN ZHI & PRINCE GROUP (14 MILIARDE $ SEIZED)
   {
     id: 'chen-zhi-prince-group-extradited-us-seizes-14-billion-bitcoin',
