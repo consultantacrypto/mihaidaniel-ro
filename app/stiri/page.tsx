@@ -24,9 +24,8 @@ export default async function NewsPage({
   const currentPage = Number(params?.page) || 1;
   const categoryFilter = (params?.category as string) || 'all';
 
-  // --- FILTRARE INTELIGENTĂ ---
+  // --- FILTRARE STANDARD (Fără Taxe) ---
   const filteredArticles = articles.filter((article) => {
-    // Transformăm totul în litere mici pentru căutare ușoară
     const text = (article.title + article.summary + article.category).toLowerCase();
     
     switch (categoryFilter) {
@@ -41,10 +40,6 @@ export default async function NewsPage({
       case 'edu': 
         return text.includes('educatie') || text.includes('ghid') || text.includes('tutorial') || text.includes('explicat');
       
-      // ✅ LOGICA PENTRU TAXE (Aici prindem articolele tale de top despre ANAF, DAC8, MiCA)
-      case 'taxe': 
-        return text.includes('anaf') || text.includes('taxe') || text.includes('dac8') || text.includes('legislatie') || text.includes('mica') || text.includes('impozit') || text.includes('legal');
-
       default: 
         return true; // Arată tot
     }
@@ -88,7 +83,7 @@ export default async function NewsPage({
             </div>
         </div>
 
-        {/* 🔍 FILTRE CATEGORII - FĂRĂ EROARE */}
+        {/* FILTRE CATEGORII */}
         <CategoryFilter />
 
         {/* LISTA ARTICOLE */}

@@ -7,8 +7,7 @@ import {
   Layers, 
   Landmark, 
   GraduationCap, 
-  Zap,
-  Scale // ✅ Iconița pentru Taxe
+  Zap 
 } from 'lucide-react';
 
 export default function CategoryFilter() {
@@ -21,8 +20,6 @@ export default function CategoryFilter() {
     { id: 'btc', label: 'Bitcoin', icon: Bitcoin, color: 'text-orange-500' },
     { id: 'eth', label: 'Ethereum', icon: Zap, color: 'text-purple-500' },
     { id: 'macro', label: 'Macro & Fed', icon: Landmark, color: 'text-green-500' },
-    // ✅ NOUL BUTON:
-    { id: 'taxe', label: 'Taxe & ANAF', icon: Scale, color: 'text-red-400' },
     { id: 'alts', label: 'Altcoins', icon: Layers, color: 'text-blue-500' },
     { id: 'edu', label: 'Educație', icon: GraduationCap, color: 'text-pink-500' },
   ];
