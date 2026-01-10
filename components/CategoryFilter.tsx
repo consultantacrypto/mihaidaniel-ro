@@ -7,7 +7,8 @@ import {
   Layers, 
   Landmark, 
   GraduationCap, 
-  Zap 
+  Zap,
+  Scale // ✅ Importăm iconița de Balanță (Justiție/Taxe)
 } from 'lucide-react';
 
 export default function CategoryFilter() {
@@ -18,8 +19,10 @@ export default function CategoryFilter() {
   const categories = [
     { id: 'all', label: 'Toate', icon: LayoutGrid, color: 'text-gray-400' },
     { id: 'btc', label: 'Bitcoin', icon: Bitcoin, color: 'text-orange-500' },
-    { id: 'eth', label: 'Ethereum', icon: Zap, color: 'text-purple-500' }, // Folosim Zap pt ETH ca simbol de putere/gas
+    { id: 'eth', label: 'Ethereum', icon: Zap, color: 'text-purple-500' },
     { id: 'macro', label: 'Macro & Fed', icon: Landmark, color: 'text-green-500' },
+    // ✅ NOUL BUTON AICI:
+    { id: 'taxe', label: 'Taxe & ANAF', icon: Scale, color: 'text-red-400' },
     { id: 'alts', label: 'Altcoins', icon: Layers, color: 'text-blue-500' },
     { id: 'edu', label: 'Educație', icon: GraduationCap, color: 'text-pink-500' },
   ];
@@ -31,7 +34,8 @@ export default function CategoryFilter() {
     } else {
       params.set('category', catId);
     }
-    params.delete('page'); // Resetăm la pagina 1 când schimbăm filtrul
+    // Resetăm pagina la 1 când schimbăm filtrul
+    params.set('page', '1');
     router.push(`/stiri?${params.toString()}`, { scroll: false });
   };
 
@@ -60,10 +64,8 @@ export default function CategoryFilter() {
                 <span className="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent rounded-xl pointer-events-none" />
               )}
               
-              <Icon size={18} className={isActive ? cat.color : 'opacity-50'} />
-              <span className="whitespace-nowrap font-[var(--font-space)] text-sm">
-                {cat.label}
-              </span>
+              <Icon size={18} className={`${isActive ? cat.color : 'text-gray-600 group-hover:text-gray-400'}`} />
+              <span className={isActive ? 'text-white' : ''}>{cat.label}</span>
             </button>
           );
         })}
