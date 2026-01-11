@@ -1,4 +1,71 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: SEC CAPITULARE & SUPER CYCLE (11 IAN)
+  {
+    id: 'sec-drops-crypto-risk-list-2026-supercycle-cz-binance',
+    slug: 'sec-capituleaza-crypto-eliminat-lista-riscuri-2026',
+    title: '🇺🇸 SEC A CAPITULAT? Cripto Eliminat Oficial de pe Lista de "Riscuri" pentru 2026. Super-Ciclul a Început',
+    summary: 'Documentul oficial SEC pentru 2026 a fost curățat: Bitcoin nu mai este Inamicul Public Nr. 1. Află de ce CZ anunță "Super Ciclul" și cum această veste deschide porțile instituționale.',
+    category: 'LEGISLAȚIE & ADOPȚIE',
+    image: '/secryptoriskianuarie.jpg',
+    date: '11 Jan 2026',
+    readTime: '4 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Maxim Bullish
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded text-xs font-bold uppercase">✅ SEC Green Light</span>
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🌊 Super Cycle</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Dacă aveai nevoie de un semnal că "era întunecată" a reglementării prin procese s-a terminat, acesta este.</p>
+      
+      <p class="mb-4 text-gray-300">Documentul oficial care ghidează inspectorii SEC pentru anul 2026 a fost curățat. Inamicul public numărul 1 nu mai este Bitcoin sau Ethereum. Știrea circulă viral pe X, iar analiștii o confirmă: <strong>U.S. Securities and Exchange Commission (SEC) a făcut o întoarcere de 180 de grade.</strong></p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Marea Dispariție: Unde e Crypto?</h3>
+      <p class="mb-4 text-gray-300">În fiecare an, Divizia de Examinări a SEC publică o "Listă a Priorităților" – practic, un ghid despre cine va fi controlat la sânge și amendat. Diferența e șocantă:</p>
+      
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div class="bg-red-900/10 border border-red-500/20 p-4 rounded-lg">
+              <div class="font-bold text-red-400 mb-1">❌ În 2025</div>
+              <div class="text-sm text-gray-400">Documentul avea secțiuni întregi dedicate "Active Crypto", avertizând despre volatilitate, blockchain și riscuri iminente.</div>
+          </div>
+          <div class="bg-green-900/10 border border-green-500/20 p-4 rounded-lg">
+              <div class="font-bold text-green-400 mb-1">✅ În 2026</div>
+              <div class="text-sm text-gray-400">Liniște totală. Toate referințele la "crypto assets" au fost șterse de pe lista de priorități de top. Focusul s-a mutat pe AI și Cybersecurity.</div>
+          </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Efectul Trump & Noua Administrație</h3>
+      <p class="mb-4 text-gray-300">Această schimbare nu este întâmplătoare. Este rezultatul direct al promisiunii noii administrații de a face din SUA "Capitala Crypto a Lumii".</p>
+      <p class="mb-4 text-gray-300">Sub noua conducere, SEC a trecut de la strategia veche de "Reglementare prin Enforcement" (amenzi tip Ripple/Coinbase) la o abordare de "Inovare și Conformitate". Mesajul pentru Wall Street este clar: <em>Nu vă mai temeți să atingeți Bitcoin. Inspectorii nu mai vin după voi doar pentru că dețineți active digitale.</em></p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. De ce este "Ultra-Bullish"?</h3>
+      <p class="mb-4 text-gray-300">Piața urăște incertitudinea. Când SEC vâna companiile crypto, instituțiile mari (fonduri de pensii, bănci) stăteau pe margine de frică.</p>
+      
+      <div class="bg-[#0b1221] p-5 rounded-lg border border-blue-500/30 mb-6">
+        <p class="text-gray-300 italic mb-2">"I could be wrong, but Super Cycle incoming." — <strong>CZ (Binance Founder)</strong></p>
+        <p class="text-sm text-blue-400 font-bold">Semnificația:</p>
+        <p class="text-sm text-gray-400">Când autoritatea supremă nu te mai consideră o amenințare sistemică, prețul nu mai are acea "frână de mână" trasă. Este un "Green Light" pentru capitalul instituțional.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. Săptămâna de Foc (Conexiunea cu 15 Ianuarie)</h3>
+      <p class="mb-4 text-gray-300">Această veste vine perfect înaintea votului de pe 15 Ianuarie pentru <strong>CLARITY Act</strong>. Gândește-te la puzzle-ul complet:</p>
+      <ul class="list-disc pl-5 text-gray-300 mb-6 space-y-2">
+          <li>SEC se retrage din rolul de "polițist rău".</li>
+          <li>Senatul (prin Clarity Act) se pregătește să ofere legi clare.</li>
+          <li>Insiderii cumpără (vezi articolul nostru anterior).</li>
+      </ul>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-green-900/20 p-6 rounded-2xl border border-green-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-green-400 mb-2">Concluzia lui Tati:</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            Nu înseamnă că nu mai există reguli. Înseamnă doar că vânătoarea de vrăjitoare s-a terminat. Crypto a câștigat legitimitate. Dacă până acum investeai cu frică de SEC, din 2026 investești într-o piață recunoscută oficial. <br/><br/>
+            <strong>Pregătiți-vă. Dacă CZ are dreptate și Super Ciclul începe, 93K la Bitcoin va părea ieftin.</strong>
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: POLYGON (POL) +50% ANALIZA FUNDAMENTALĂ
   {
     id: 'polygon-pol-surge-50-percent-fundamental-analysis-january-2026',
