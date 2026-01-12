@@ -1,4 +1,99 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: RUSSELL 2000 ATH & ALTCOINS (12 IAN) - VARIANTA FULL
+  {
+    id: 'russell-2000-ath-risk-on-signal-altcoins-january-2026',
+    slug: 'semnalul-asteptat-russell-2000-maxime-istorice-urmeaza-altcoins',
+    title: '📈 SEMNALUL PE CARE ÎL AȘTEPTAM: RUSSELL 2000 A SPART MAXIMELE ISTORICE! Urmează Altcoins?',
+    summary: 'Pe 8 Ianuarie, indicele Russell 2000 a depășit pragul psihologic de 2600. Este semnalul oficial "Risk-On" pe Wall Street. Istoria ne arată că Ethereum și Altcoins sunt următoarele la rând.',
+    category: 'MACRO & LICHIDITATE',
+    image: '/rut2603.jpg',
+    date: '12 Jan 2026',
+    readTime: '6 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish',
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🚀 Risk-On Mode</span>
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🏦 Wall Street</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">S-a întâmplat pe 8 ianuarie 2026. În liniște, fără tam-tam la știri, indicele Russell 2000 a depășit pragul psihologic de 2600 de puncte (închizând la 2603.90).</p>
+      
+      <p class="mb-4 text-gray-300">Pentru investitorul de rând, asta e doar o cifră. Pentru noi, cei din crypto, este <strong>canarul din mină</strong>. Este semnalul oficial că "apetitul pentru risc" (Risk-On) a revenit pe Wall Street. Și istoria ne învață un lucru simplu: unde se duce Russell 2000, Ethereum și Altcoins urmează.</p>
+      <p class="mb-6 text-gray-300">Hai să desfacem firul în patru și să vedem de ce 2026 începe în forță.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Ce este Russell 2000 și de ce ne pasă?</h3>
+      <p class="mb-4 text-gray-300">Gândește-te la S&P 500 ca la "băieții mari și siguri" (Apple, Microsoft). Acolo investești când vrei siguranță. <strong>Russell 2000</strong> reprezintă cele 2000 de companii mici din SUA ("small-caps"). Sunt volatile, riscante și sensibile.</p>
+      
+      <div class="bg-[#0b1221] p-5 rounded-lg border border-yellow-500/30 mb-6">
+          <ul class="space-y-3 text-gray-300 text-sm">
+              <li class="flex items-start gap-2">
+                  <span class="text-yellow-400 font-bold">➢ Regula de Aur:</span> Când investitorii au curaj să bage bani în Russell 2000, înseamnă că au exces de lichiditate și caută profituri mari.
+              </li>
+              <li class="flex items-start gap-2">
+                  <span class="text-blue-400 font-bold">➢ Corelația Crypto:</span> Istoric, Bitcoin și mai ales Ethereum au o corelație de <strong>0.7-0.75</strong> cu acest indice. Când micii giganți americani cresc, banii se varsă ulterior în cea mai riscantă clasă de active: Crypto.
+              </li>
+          </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. De unde vin banii? (Lichiditatea e Rege)</h3>
+      <p class="mb-4 text-gray-300">Russell 2000 nu a crescut din aer. A crescut pentru că "robinetul" de bani s-a deschis din toate părțile în acest început de 2026:</p>
+      
+      <div class="space-y-4 mb-6">
+        <div class="flex items-start gap-3">
+            <div class="mt-1 bg-green-500/20 p-1 rounded text-green-400">💸</div>
+            <div>
+                <strong class="text-white">Fed Cumpără Datorii:</strong>
+                <p class="text-sm text-gray-400">Rezerva Federală cumpără T-Bills (titluri de stat) de 40 miliarde $ pe lună. Asta înseamnă injecție directă de cash în sistem.</p>
+            </div>
+        </div>
+        <div class="flex items-start gap-3">
+            <div class="mt-1 bg-blue-500/20 p-1 rounded text-blue-400">🏠</div>
+            <div>
+                <strong class="text-white">Ordinul lui Trump (MBS):</strong>
+                <p class="text-sm text-gray-400">Președintele a ordonat achiziții de 200 miliarde $ în obligațiuni ipotecare (prin Fannie Mae/Freddie Mac) pentru a stimula piața imobiliară.</p>
+            </div>
+        </div>
+        <div class="flex items-start gap-3">
+            <div class="mt-1 bg-purple-500/20 p-1 rounded text-purple-400">🏦</div>
+            <div>
+                <strong class="text-white">Trezoreria Eliberează Cash (TGA):</strong>
+                <p class="text-sm text-gray-400">Contul General al Trezoreriei a scăzut de la 959 mld. la 925 mld., ceea ce înseamnă că banii au ieșit din seif și au intrat în economie.</p>
+            </div>
+        </div>
+        <div class="flex items-start gap-3">
+            <div class="mt-1 bg-orange-500/20 p-1 rounded text-orange-400">🎁</div>
+            <div>
+                <strong class="text-white">"Tariff Dividends":</strong>
+                <p class="text-sm text-gray-400">Se discută tot mai serios despre cecuri de 2000$ pentru cetățeni, plătite din taxele vamale, undeva la jumătatea anului 2026.</p>
+            </div>
+        </div>
+      </div>
+      <p class="mb-4 text-gray-300 font-bold border-l-4 border-green-500 pl-4">Traducere: Piața este inundată de lichiditate. Banii trebuie să meargă undeva.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Contextul Crypto: Liniștea dinaintea Furtunii</h3>
+      <p class="mb-4 text-gray-300">Să fim realiști. După Crash-ul din 10 Octombrie 2025 (când frica de tarife a șters 19 miliarde $ din piață), crypto a fost într-o zonă neutră. Bitcoin stă la ~93.000$, dar "mâinile slabe" au fost curățate.</p>
+      <ul class="list-disc pl-5 text-gray-300 mb-6 space-y-1">
+          <li>Leverage-ul excesiv a dispărut.</li>
+          <li>Cartea de ordine este "subțire" (lichiditate scăzută pe exchange-uri).</li>
+      </ul>
+      <p class="text-gray-300 mb-6">Asta creează mediul perfect pentru o mișcare explozivă în sus, acum că macro-economia suflă vânt din pupa.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. Ce Urmează? 15 Ianuarie este Cheia</h3>
+      <p class="mb-4 text-gray-300">Avem lichiditate (Russell 2000 confirmă). Avem un preț stabilizat (după crash). Ce lipsește? <strong>Scânteia.</strong></p>
+      <p class="mb-4 text-gray-300">Scânteia este <strong>CLARITY Act</strong>, care intră la vot (markup) pe 15 Ianuarie în Senat.</p>
+      <p class="mb-6 text-gray-300 italic">Dacă legea trece, combinată cu lichiditatea actuală, am putea vedea startul acelui "Super Cycle" de care vorbește și CZ.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-blue-900/20 p-6 rounded-2xl border border-blue-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-white mb-2">Concluzie</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            Piața tradițională ne-a dat undă verde. Russell 2000 la maxime istorice înseamnă că frica a dispărut. <br/><br/>
+            Nu e momentul să vinzi. E momentul să fii atent. <span class="text-green-400 font-bold">Dacă istoria se repetă, Altcoins se pregătesc de decolare în Q1 2026.</span>
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: SEC CAPITULARE & SUPER CYCLE (11 IAN)
   {
     id: 'sec-drops-crypto-risk-list-2026-supercycle-cz-binance',
