@@ -1,4 +1,81 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: COREEA DE SUD RIDICĂ INTERDICȚIA (12 IAN)
+  {
+    id: 'south-korea-lifts-crypto-ban-corporations-january-2026',
+    slug: 'bomba-din-asia-coreea-de-sud-ridica-interdictia-corporatii',
+    title: '🇰🇷 BOMBA DIN ASIA: COREEA DE SUD RIDICĂ INTERDICȚIA DE 9 ANI! Corporațiile intră în joc',
+    summary: 'După 9 ani de restricții, Coreea de Sud permite oficial firmelor listate să investească în crypto. Limita e de 5%, dar doar în TOP 20 monede. Află de ce asta va pompa Altcoin-urile majore.',
+    category: 'ADOPȚIE & INSTITUȚIONAL',
+    image: '/coreeabullishianuarie.jpg',
+    date: '12 Jan 2026',
+    readTime: '4 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish',
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🇰🇷 Asia Market</span>
+        <span class="bg-purple-500/20 text-purple-300 border border-purple-500/30 px-3 py-1 rounded text-xs font-bold uppercase">💼 Corporate Money</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Este oficial. Zidul a căzut. Pe 12 Ianuarie 2026, FSC (Comisia pentru Servicii Financiare din Coreea de Sud) a anunțat sfârșitul unei ere de restricții draconice.</p>
+      
+      <p class="mb-4 text-gray-300">Din 2017, firmele listate la bursă și investitorii profesioniști din Coreea de Sud aveau interzis să dețină sau să tranzacționeze crypto. Astăzi, această barieră a fost eliminată. Dar nu oricum, ci cu reguli clare care favorizează proiectele mari.</p>
+      <p class="mb-6 text-gray-300">Iată de ce această știre poate împinge piața și mai sus în Q1 2026:</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Detaliile Deciziei: Cine și Cât poate cumpăra?</h3>
+      <p class="mb-4 text-gray-300">FSC nu a dat liber la "jocuri de noroc", ci a creat un cadru pentru investiții serioase:</p>
+      
+      <div class="bg-[#0b1221] p-5 rounded-lg border border-blue-500/30 mb-6">
+          <ul class="space-y-3 text-gray-300 text-sm">
+              <li class="flex items-start gap-2">
+                  <span class="text-blue-400 font-bold">➢ Cine:</span> Companiile listate la bursă și investitorii instituționali.
+              </li>
+              <li class="flex items-start gap-2">
+                  <span class="text-blue-400 font-bold">➢ Limita:</span> Pot investi până la <strong>5% din capitalul propriu</strong> (equity). Poate părea puțin, dar pentru giganții coreeni (Samsung, LG, giganți de gaming), 5% înseamnă miliarde de dolari.
+              </li>
+              <li class="flex items-start gap-2">
+                  <span class="text-green-400 font-bold">➢ În ce:</span> Doar în <strong>TOP 20 monede</strong> după capitalizare.
+              </li>
+          </ul>
+      </div>
+      <p class="mb-4 text-gray-300 italic">Ce înseamnă asta pentru noi? Banii nu se vor duce în "meme coins" obscure, ci vor pompa direct în Bitcoin, Ethereum, Solana, XRP, Polygon (POL) și restul elitei. Este o presiune de cumpărare garantată pentru proiectele solide.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. De ce acum? (Sfârșitul "Kimchi Premium")</h3>
+      <p class="mb-4 text-gray-300">Coreea de Sud este celebră pentru "Kimchi Premium" – fenomenul în care Bitcoin costă mai mult în Seul decât în New York, din cauza cererii enorme din partea populației și a lipsei de ofertă instituțională.</p>
+      <p class="mb-4 text-gray-300">Prin permiterea corporațiilor să intre în piață, Coreea aliniază prețurile și aduce lichiditate stabilă. Guvernul a înțeles că nu poate lăsa SUA (cu Clarity Act) și Europa (cu MiCA) să fure startul tehnologic.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Impactul Financiar: "Zeci de Trilioane de Won"</h3>
+      <p class="mb-4 text-gray-300">Analiștii estimează că această măsură va debloca zeci de trilioane de woni (echivalentul a zeci de miliarde de dolari) care stăteau pe margine.</p>
+      <p class="mb-6 text-gray-300">Gândește-te la trezoreriile companiilor de gaming, IT și metaverse din Coreea. Până ieri, nu aveau voie să atingă crypto. De azi, au o limită de 5% pe care mulți vor dori să o atingă pentru diversificare.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. Conexiunea Globală</h3>
+      <p class="mb-4 text-gray-300">Nu privi știrea asta izolat. Este o piesă dintr-un puzzle uriaș:</p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6 text-center">
+          <div class="bg-blue-900/20 border border-blue-500/20 p-3 rounded-lg">
+              <div class="text-2xl mb-1">🇺🇸</div>
+              <div class="text-xs font-bold text-blue-300">SUA: Clarity Act</div>
+          </div>
+          <div class="bg-yellow-900/20 border border-yellow-500/20 p-3 rounded-lg">
+              <div class="text-2xl mb-1">🇪🇺</div>
+              <div class="text-xs font-bold text-yellow-300">UE: MiCA / SEC</div>
+          </div>
+          <div class="bg-pink-900/20 border border-pink-500/20 p-3 rounded-lg">
+              <div class="text-2xl mb-1">🇰🇷</div>
+              <div class="text-xs font-bold text-pink-300">Coreea: Corporate</div>
+          </div>
+      </div>
+      <p class="mb-4 text-gray-300 font-bold">Este o coordonare globală tacită. Marile puteri economice își pregătesc infrastructura pentru a integra crypto în sistemul financiar mainstream în 2026.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-purple-900/20 p-6 rounded-2xl border border-purple-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-purple-300 mb-2">Concluzie</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            Dacă "retail-ul" (oamenii de rând) au dus Bitcoin la 90k, corporațiile au puterea să-l ducă la nivelul următor. <br/><br/>
+            Faptul că investițiile sunt limitate la TOP 20 este cel mai bun semnal posibil: <span class="text-white font-bold">Mizați pe Calitate, nu pe Cantitate.</span> Altcoin-urile majore sunt marii câștigători ai acestei decizii.
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: RUSSELL 2000 ATH & ALTCOINS (12 IAN) - VARIANTA FULL
   {
     id: 'russell-2000-ath-risk-on-signal-altcoins-january-2026',
