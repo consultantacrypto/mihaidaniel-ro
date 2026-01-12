@@ -6,7 +6,7 @@ export const articles = [
     title: '📈 SEMNALUL PE CARE ÎL AȘTEPTAM: RUSSELL 2000 A SPART MAXIMELE ISTORICE! Urmează Altcoins?',
     summary: 'Pe 8 Ianuarie, indicele Russell 2000 a depășit pragul psihologic de 2600. Este semnalul oficial "Risk-On" pe Wall Street. Istoria ne arată că Ethereum și Altcoins sunt următoarele la rând.',
     category: 'MACRO & LICHIDITATE',
-    image: '/rut2603.jpg',
+    image: '/rutianuarie.jpg',
     date: '12 Jan 2026',
     readTime: '6 min',
     author: 'Mihai Daniel',
