@@ -1,4 +1,70 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: ERIC ADAMS & MARKET CAP ILLUSION (13 IAN)
+  {
+    id: 'eric-adams-memecoin-crash-market-cap-illusion-january-2026',
+    slug: 'lectia-500-milioane-eric-adams-teapa-market-cap',
+    title: '📉 LECȚIA DE 500 MILIOANE $: Fostul Primar Eric Adams și "Țeapa" de Câteva Minute',
+    summary: 'Memecoin-ul lansat de Eric Adams a atins 580 milioane $ Market Cap, apoi a picat 80% instant. Află diferența critică dintre Market Cap și Lichiditate ca să nu fii "carne de tun".',
+    category: 'EDUCAȚIE & SCAM ALERT',
+    image: '/nycmayorericadams.jpg',
+    date: '13 Jan 2026',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'bearish', // Semnal de alarmă
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-red-500/20 text-red-300 border border-red-500/30 px-3 py-1 rounded text-xs font-bold uppercase">⚠️ Pump & Dump</span>
+        <span class="bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🎓 Lecție Critică</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Breaking News: Fostul primar al New York-ului, Eric Adams, a lansat un memecoin care a sfidat gravitația... pentru exact câteva minute.</p>
+      
+      <p class="mb-4 text-gray-300">Moneda a atins o capitalizare de piață (Market Cap) amețitoare de <strong>580 milioane de dolari</strong>, doar pentru a se prăbuși cu <strong>-80% aproape instantaneu</strong>. Aproape jumătate de miliard de dolari "valoare" s-au evaporat într-o clipită.</p>
+      <p class="mb-6 text-gray-300">Cum e posibil așa ceva? Și, mai important, ce trebuie să învățăm noi ca să nu fim "carnea de tun" (exit liquidity)? Iată anatomia unui dezastru:</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Iluzia "Market Cap-ului" (Capitalizarea de Piață)</h3>
+      <p class="mb-4 text-gray-300">Acesta este cel mai important punct educativ. Mulți confundă "valoarea pe hârtie" cu "banii reali".</p>
+      
+      <div class="bg-[#0b1221] p-5 rounded-lg border border-red-500/30 mb-6">
+          <ul class="space-y-3 text-gray-300 text-sm">
+              <li class="flex items-start gap-2">
+                  <span class="text-white font-bold">➢ Titlul spune:</span> "580 Milioane Market Cap".
+              </li>
+              <li class="flex items-start gap-2">
+                  <span class="text-blue-400 font-bold">➢ Realitatea:</span> Market Cap = Prețul ultimei tranzacții x Numărul total de monede. E o cifră teoretică.
+              </li>
+              <li class="flex items-start gap-2">
+                  <span class="text-red-400 font-bold">➢ Capcana (Lichiditatea):</span> Dacă lansezi o monedă cu lichiditate mică (ex: pui doar 10.000$ reali în piscină), e nevoie de foarte puțini bani ca prețul să urce exploziv. Dacă cineva cumpără de 5.000$, prețul se dublează, iar Market Cap-ul arată cifre astronomice. Dar <strong>banii reali nu sunt acolo</strong>.
+              </li>
+          </ul>
+      </div>
+      <p class="mb-4 text-gray-300 italic">În cazul lui Adams, cifra de 580M$ a fost o iluzie optică ("vanity metric"). Când primii cumpărători au vrut să marcheze profitul, nu existau suficienți bani reali în spate (lichiditate) să-i plătească pe toți, așa că prețul a picat în gol.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Cine a vândut? (Insiderii și Sniperii)</h3>
+      <p class="mb-4 text-gray-300">Un crash de -80% în câteva minute nu este făcut de oameni obișnuiți care dau click pe "Sell". Este opera roboților (snipers) și a insiderilor.</p>
+      <ul class="list-disc pl-5 text-gray-300 mb-6 space-y-2">
+          <li><strong>Insiderii:</strong> Cei din echipa lui Adams sau apropiații care au primit monede gratis sau au cumpărat în prima secundă.</li>
+          <li><strong>Sniper Bots:</strong> Softuri automate care detectează lansarea, cumpără în milisecunda 1 și vând automat când văd că intră "retail-ul" (oamenii de rând).</li>
+      </ul>
+      <p class="text-red-400 font-bold mb-6">Când vezi graficul vertical, de obicei e prea târziu. Tu cumperi vârful, ei vând pe tine.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Fenomenul "Grifting" Politic</h3>
+      <p class="mb-4 text-gray-300">Eric Adams nu e singurul. În lipsa unei cariere politice active, mulți foști oficiali își folosesc numele pentru a lansa tokenuri. De obicei, aceștia pretind că "susțin comunitatea crypto", dar realitatea este brutală: folosesc faima pentru a atrage atenția, iar tokenul nu are nicio utilitate reală. Este doar un vehicul speculativ.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-red-900/20 p-6 rounded-2xl border border-red-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-red-400 mb-2">🛡️ Regula de Aur a lui Tati:</h4>
+        <p class="text-gray-300 mb-4 leading-relaxed">
+            Când vezi o știre de genul "Politician/Vedetă a lansat o monedă": <strong>NU CUMPĂRA.</strong> Ești deja ultima verigă din lanț.
+        </p>
+        <ul class="text-sm text-gray-400 space-y-2">
+            <li>✅ <strong>Verifică Lichiditatea:</strong> Dacă Market Cap e 500M$ și Lichiditatea e 200k$, e o capcană mortală.</li>
+            <li>✅ <strong>Verifică Distribuția:</strong> Dacă primii 10 deținători au 50% din monede, ei pot prăbuși prețul oricând.</li>
+        </ul>
+        <p class="text-white font-bold mt-4">Cei care au cumpărat la vârful de 580M$ au pierdut totul. Cei care au stat pe margine au primit o lecție gratuită.</p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: COREEA DE SUD RIDICĂ INTERDICȚIA (12 IAN)
   {
     id: 'south-korea-lifts-crypto-ban-corporations-january-2026',
