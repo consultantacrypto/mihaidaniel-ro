@@ -1,4 +1,74 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: USDT ENIGMA IN EUROPA (13 IAN)
+  {
+    id: 'usdt-europe-mica-coinbase-binance-delisting-mystery-july-2026',
+    slug: 'enigma-usdt-europa-de-ce-coinbase-a-scos-dar-binance-nu',
+    title: '🇪🇺 ENIGMA USDT ÎN EUROPA: De ce Coinbase l-a scos, dar Binance încă nu? (Și când vine finalul)',
+    summary: 'Dacă ești utilizator crypto în UE, ai observat anomalia: Coinbase a delistat USDT, dar alții nu. Află despre "Portița de Salvare" legală și de ce 1 Iulie 2026 este data fatală.',
+    category: 'LEGISLAȚIE & MiCA',
+    image: '/usdteumicaianuarie.jpg',
+    date: '13 Jan 2026',
+    readTime: '4 min',
+    author: 'Mihai Daniel',
+    impact: 'neutral', // Informativ / Avertisment
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🇪🇺 MiCA Alert</span>
+        <span class="bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 px-3 py-1 rounded text-xs font-bold uppercase">⏳ Countdown: Iulie 2026</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Dacă ești utilizator de crypto în Uniunea Europeană, probabil ai observat o anomalie ciudată:</p>
+      
+      <ul class="list-disc pl-5 text-gray-300 mb-6 space-y-2">
+          <li><strong>Pe Coinbase:</strong> Nu mai poți tranzacționa USDT (delistat la mijlocul lui Decembrie).</li>
+          <li><strong>Pe Binance/Crypto.com:</strong> Totul pare normal, USDT funcționează.</li>
+      </ul>
+      <p class="mb-6 text-gray-300">Această discrepanță nu este o greșeală, ci o strategie de risc diferită față de regulamentul MiCA (Markets in Crypto-Assets).</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. De ce este USDT „Non-Compliant” (Tehnic)?</h3>
+      <p class="mb-4 text-gray-300">Conform MiCA, orice stablecoin vândut în UE trebuie să fie emis de o instituție de monedă electronică (EMI) autorizată în Europa.</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          <div class="bg-red-900/10 border border-red-500/20 p-4 rounded-lg">
+              <div class="font-bold text-red-400 mb-1">❌ Tether (USDT)</div>
+              <div class="text-sm text-gray-400">Nu a obținut această licență și critică regulile bancare din UE. Tehnic, nu ar trebui să fie aici.</div>
+          </div>
+          <div class="bg-green-900/10 border border-green-500/20 p-4 rounded-lg">
+              <div class="font-bold text-green-400 mb-1">✅ Circle (USDC)</div>
+              <div class="text-sm text-gray-400">S-a conformat rapid și este 100% legal și reglementat conform MiCA.</div>
+          </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. „Portița de Salvare”: Perioada de Tranziție</h3>
+      <p class="mb-4 text-gray-300">Aici intervine detaliul pe care mulți îl ignoră. Deși regulile MiCA au intrat în vigoare, există o <strong>„Clauză de Grandfathering”</strong> care permite furnizorilor existenți să opereze după vechile reguli pentru o perioadă limitată.</p>
+      
+      <div class="bg-[#0b1221] p-5 rounded-lg border border-yellow-500/30 mb-6">
+          <ul class="space-y-3 text-gray-300 text-sm">
+              <li class="flex items-start gap-2">
+                  <span class="text-yellow-400 font-bold">➢ Termenul Limită:</span> 1 Iulie 2026.
+              </li>
+              <li class="flex items-start gap-2">
+                  <span class="text-white font-bold">➢ Strategia Binance:</span> „Wait-and-See”. Folosesc perioada de tranziție la maxim, sperând că regulile se vor relaxa. Nu delistează până nu sunt obligați.
+              </li>
+              <li class="flex items-start gap-2">
+                  <span class="text-blue-400 font-bold">➢ Strategia Coinbase:</span> „Proactivă”. Fiind listată la bursă, au eliminat riscul înainte de termen pentru a nu avea probleme cu regulatorii.
+              </li>
+          </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Ce se va întâmpla în Iulie 2026?</h3>
+      <p class="mb-4 text-gray-300">Suntem în Ianuarie. Mai avem exact 6 luni până la data fatală. Dacă Tether nu obține licența EMI în UE până la 1 Iulie 2026 (improbabil acum), <strong>toate exchange-urile vor fi obligate legal să delisteze USDT</strong>. Nu va mai exista „zonă gri”.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-blue-900/20 p-6 rounded-2xl border border-blue-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-blue-300 mb-2">Sfatul lui Tati: Nu sta pe „Bomba cu Ceas”</h4>
+        <p class="text-gray-300 mb-4 leading-relaxed">
+            Faptul că USDT încă se tranzacționează în UE este o iluzie temporară dată de birocrație. Direcția este clară: Europa vrea stablecoins reglementate (USDC, EURC).
+        </p>
+        <p class="text-white font-bold">Începe să te obișnuiești cu USDC pentru tranzacțiile tale în Europa. Nu are sens să riști blocaje sau conversii forțate în iulie doar din obișnuință.</p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: ERIC ADAMS & MARKET CAP ILLUSION (13 IAN)
   {
     id: 'eric-adams-memecoin-crash-market-cap-illusion-january-2026',
