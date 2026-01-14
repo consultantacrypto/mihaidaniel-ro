@@ -1,4 +1,61 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: IRAN & BITCOIN SURVIVAL (14 IAN)
+  {
+    id: 'iran-bitcoin-inflation-hedge-survival-2653-percent',
+    slug: 'lectia-din-iran-bitcoin-crescut-2653-banii-murit',
+    title: '🇮🇷 LECȚIA DIN IRAN: BITCOIN A CRESCUT CU 2.653%. DE CE? Pentru că banii lor au murit.',
+    summary: 'În Iran, Bitcoin a explodat nu pentru că s-au îmbogățit oamenii, ci pentru că Rialul s-a prăbușit. O lecție dură despre inflație și cum crypto devine singura barcă de salvare.',
+    category: 'MACRO & EDUCAȚIE',
+    image: '/colapsiran.jpg',
+    date: '14 Jan 2026',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Bullish pe narativul "Store of Value"
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-orange-500/20 text-orange-300 border border-orange-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🛡️ Store of Value</span>
+        <span class="bg-red-500/20 text-red-300 border border-red-500/30 px-3 py-1 rounded text-xs font-bold uppercase">📉 Hiperinflație</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Când vorbim despre Bitcoin la "maxim istoric" (ATH), ne gândim de obicei la dolari sau euro. Dar în alte colțuri ale lumii, graficul Bitcoin nu arată profit, ci supraviețuire.</p>
+      
+      <p class="mb-4 text-gray-300">O știre cutremurătoare vine din Iran: Bitcoin a înregistrat o creștere de <strong>2.653%</strong> față de Rialul Iranian (moneda locală). La prima vedere, pare că toți posesorii de crypto din Iran au devenit milionari. <br/>Realitatea este mult mai tristă: ei doar și-au păstrat banii, în timp ce vecinii lor au pierdut totul.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Matematica Dezastrului: -96% vs. Conservare</h3>
+      <p class="mb-4 text-gray-300">Ce s-a întâmplat de fapt? Să ne uităm la cifrele reci:</p>
+      
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div class="bg-red-900/10 border border-red-500/20 p-4 rounded-lg">
+              <div class="font-bold text-red-400 mb-1">💸 Cei cu Rial Iranian</div>
+              <div class="text-sm text-gray-400">Puterea lor de cumpărare s-a prăbușit cu <strong>96%</strong>. Economiile de o viață nu mai ajung nici pentru alimentele de bază.</div>
+          </div>
+          <div class="bg-orange-900/10 border border-orange-500/20 p-4 rounded-lg">
+              <div class="font-bold text-orange-400 mb-1">₿ Cei cu Bitcoin</div>
+              <div class="text-sm text-gray-400">Nu au făcut neapărat un "profit" real în termeni de bunuri, dar <strong>și-au păstrat valoarea muncii</strong>. Acel +2.653% este doar oglinda inflației scăpate de sub control.</div>
+          </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Bitcoin nu este despre "A te îmbogăți", ci despre "A nu sărăci"</h3>
+      <p class="mb-4 text-gray-300">Acest caz demonstrează funcția vitală a Bitcoin: <strong>Bani pe care guvernul nu îi poate distruge.</strong></p>
+      <ul class="list-disc pl-5 text-gray-300 mb-6 space-y-2">
+        <li>Guvernele pot printa bani la infinit (cauzând inflație și devalorizare).</li>
+        <li>Pot impune controale de capital sau pot bloca conturi bancare.</li>
+        <li><strong>Bitcoin</strong>, cu oferta sa fixă de 21 de milioane, rămâne imun la deciziile politice proaste.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. "Nu se poate întâmpla la noi"?</h3>
+      <p class="mb-4 text-gray-300">Iranul este un caz extrem, dar mecanismul este același peste tot. Fie că e vorba de Lira Turcească, Peso-ul Argentinian sau chiar Euro/Dolar (care pierd 2-5% anual din putere), fiat-ul este programat să scadă. Bitcoin este programat să reziste.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-orange-900/20 p-6 rounded-2xl border border-orange-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-orange-400 mb-2">Concluzia lui Tati:</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            Pentru iranieni, Bitcoin nu a fost un "trade" norocos. A fost diferența dintre a putea pune mâncare pe masă și a ajunge la sapă de lemn. <br/><br/>
+            Toată lumea merită acces la o monedă pe care niciun politician nu o poate dilua. <span class="text-white font-bold">Astăzi e Iranul. Mâine, cine știe?</span>
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: USDT ENIGMA IN EUROPA (13 IAN)
   {
     id: 'usdt-europe-mica-coinbase-binance-delisting-mystery-july-2026',
