@@ -1,4 +1,73 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: SCOTUS TRUMP TARIFFS DECISION (14 IAN)
+  {
+    id: 'scotus-trump-tariffs-decision-january-15-2026-market-impact',
+    slug: 'ziua-judecatii-economie-sua-tarife-trump-curtea-suprema',
+    title: '🇺🇸 "ZIUA JUDECĂȚII" PENTRU ECONOMIA AMERICANĂ: Tarifele lui Trump, pe Masa Curții Supreme Mâine!',
+    summary: 'Mâine, 15 Ianuarie, Curtea Supremă decide soarta tarifelor. Un "gol" de 600 miliarde $ și o posibilă criză a dolarului. Cum va reacționa Bitcoin la ora 17:00?',
+    category: 'MACRO & POLITICĂ',
+    image: '/alerta15ianuarie.jpg',
+    date: '14 Jan 2026',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'bearish', // Volatilitate extremă / Risc Macro
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-red-500/20 text-red-300 border border-red-500/30 px-3 py-1 rounded text-xs font-bold uppercase">⚖️ Curtea Supremă</span>
+        <span class="bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 px-3 py-1 rounded text-xs font-bold uppercase">💵 Dolar vs Bitcoin</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Mâine, 15 Ianuarie 2026, ar putea fi ziua în care arhitectura financiară a lumii se zguduie din temelii.</p>
+      
+      <p class="mb-4 text-gray-300">Curtea Supremă a SUA (SCOTUS) este așteptată să pronunțe verdictul final în războiul tarifelor. Miza? Un "gol" bugetar de <strong>600 de miliarde de dolari</strong>, un președinte furios și o piață crypto gata să reacționeze violent la orice semn de slăbiciune a Dolarului.</p>
+      <p class="mb-6 text-gray-300">Iată ce trebuie să știi înainte de deschiderea piețelor de mâine (ora 17:00 ora României).</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Contextul: Trump vs. Lege</h3>
+      <p class="mb-4 text-gray-300">Totul a plecat de la decizia Președintelui Trump de a taxa masiv importurile folosind o lege de urgență din 1977 (IEEPA).</p>
+      
+      <div class="bg-[#0b1221] p-5 rounded-lg border border-blue-500/30 mb-6">
+          <ul class="space-y-3 text-gray-300 text-sm">
+              <li class="flex items-start gap-2">
+                  <span class="text-red-400 font-bold">➢ Argumentul lui Trump:</span> Deficitul comercial este o "urgență națională", deci am puteri depline.
+              </li>
+              <li class="flex items-start gap-2">
+                  <span class="text-blue-400 font-bold">➢ Argumentul Companiilor:</span> Trump abuzează de lege. IEEPA este pentru crize reale (război), nu pentru politici comerciale.
+              </li>
+          </ul>
+      </div>
+      <p class="mb-4 text-gray-300 italic">Curțile inferioare au spus deja că tarifele sunt ILEGALE. Acum, Curtea Supremă are ultimul cuvânt.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Scenariul "Apocaliptic": Dacă Trump Pierde</h3>
+      <p class="mb-4 text-gray-300">Piețele de predicție (Polymarket) dau o șansă de 76% ca Curtea să declare tarifele ilegale. Dacă se întâmplă asta mâine:</p>
+      <ul class="list-disc pl-5 text-gray-300 mb-6 space-y-2">
+          <li><strong>Haos Bugetar:</strong> SUA ar putea fi obligată să returneze taxele colectate ilegal. Vorbim de o sumă între 130 și 600 de Miliarde de Dolari.</li>
+          <li><strong>Reacția lui Trump:</strong> Președintele a fost clar: "WE'RE SCREWED" (Suntem terminați). El prezice un haos total dacă bugetul pierde acești bani.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Impactul asupra Crypto: De ce ne pasă?</h3>
+      <p class="mb-4 text-gray-300">Aici devine interesant pentru portofoliul tău.</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          <div class="bg-red-900/10 border border-red-500/20 p-4 rounded-lg">
+              <div class="font-bold text-red-400 mb-1">📉 Dolarul (USD)</div>
+              <div class="text-sm text-gray-400">Dacă tarifele sunt anulate, SUA pierde venituri -> Deficitul crește -> Dolarul se devalorizează.</div>
+          </div>
+          <div class="bg-orange-900/10 border border-orange-500/20 p-4 rounded-lg">
+              <div class="font-bold text-orange-400 mb-1">₿ Bitcoin (BTC)</div>
+              <div class="text-sm text-gray-400">Un dolar slab este combustibil pentru Bitcoin. Dacă vedem "șoc fiscal", investitorii fug spre aur și crypto. (+3-5% posibil pe termen scurt).</div>
+          </div>
+      </div>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-red-900/20 p-6 rounded-2xl border border-red-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-red-400 mb-2">Concluzie: Mâine la ora 17:00</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            Mâine, site-ul Curții Supreme va fi cel mai urmărit din lume. <br/><br/>
+            Indiferent dacă ești pe acțiuni sau pe crypto, pregătește-te pentru o zi cu lumânări lungi pe grafic. <span class="text-white font-bold">Incertitudinea este maximă, iar volatilitatea este garantată.</span>
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: IRAN & BITCOIN SURVIVAL (14 IAN)
   {
     id: 'iran-bitcoin-inflation-hedge-survival-2653-percent',
