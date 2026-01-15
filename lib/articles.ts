@@ -1,4 +1,62 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: CLARITY ACT BLOCAT DE BĂNCI (15 IAN SEARA)
+  {
+    id: 'clarity-act-blocked-banks-lobby-stablecoins-yield-war',
+    slug: 'de-ce-a-fost-blocata-legea-crypto-bancile-au-tras-frana',
+    title: '🛑 DE CE A FOST BLOCATĂ LEGEA CRYPTO? Băncile au tras frâna de mână de frică',
+    summary: 'Votul a fost amânat. Băncile au încercat să introducă clauze toxice pentru a opri stablecoin-urile să ofere dobânzi. Află cele 4 motive reale ale războiului Wall Street vs Crypto.',
+    category: 'LEGISLAȚIE & RĂZBOI BANCAR',
+    image: '/clarityactamanat.jpg',
+    date: '15 Jan 2026',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'neutral', // Am evitat o lege proastă (Long Term Bullish, Short Term Neutral)
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-red-500/20 text-red-300 border border-red-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🏦 Wall Street Attack</span>
+        <span class="bg-orange-500/20 text-orange-300 border border-orange-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🛡️ Crypto Defense</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Votul istoric programat pentru azi a fost amânat. Nu din cauza lipsei de timp, ci din cauza unui război total între Wall Street și Crypto.</p>
+      
+      <p class="mb-4 text-gray-300">Să traducem simplu ce s-a întâmplat: Băncile și-au dat seama că dacă lasă crypto să respire, ele pierd bani. Așa că au încercat să introducă „poison pills” (clauze toxice) în lege. Când Coinbase și alți giganți au văzut noua formă a legii, au spus clar: „Decât o lege proastă, mai bine nicio lege.”</p>
+      <p class="mb-6 text-gray-300">Iată cele 4 motive reale pentru care legea a fost oprită (și de ce băncile tremură):</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Miza Reală: Dobânzile la Stablecoins</h3>
+      <p class="mb-4 text-gray-300">Acesta este punctul nevralgic. Directorul Financiar (CFO) de la JPMorgan a spus-o pe șleau: <em>„Dacă lăsăm stablecoins să ofere dobândă (yield), banii vor pleca din bănci.”</em></p>
+      
+      <div class="bg-[#0b1221] p-5 rounded-lg border border-red-500/30 mb-6">
+          <ul class="space-y-3 text-gray-300 text-sm">
+              <li class="flex items-start gap-2">
+                  <span class="text-white font-bold">➢ Traducere:</span> Băncile îți dau 0.5% dobândă la depozit. Un stablecoin îți poate da 5%. Dacă legea ar permite asta oficial, cine ar mai ține banii la bancă?
+              </li>
+              <li class="flex items-start gap-2">
+                  <span class="text-red-400 font-bold">➢ Atacul:</span> Băncile au cerut ca stablecoins să le fie interzis să ofere randamente. Vor să elimine competiția prin lege, nu prin inovație.
+              </li>
+          </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. DeFi tratat ca o Bancă (Moartea Anonimității)</h3>
+      <p class="mb-4 text-gray-300">În forma propusă de lobby-ul bancar, protocoalele DeFi (Finanțe Descentralizate) ar fi fost obligate să colecteze datele utilizatorilor exact ca o bancă (KYC strict, raportare la fisc).</p>
+      <p class="text-red-400 font-bold mb-6">Efectul: Asta ar ucide ideea de descentralizare. DeFi ar deveni doar o altă ramură a sistemului bancar vechi, dar pe blockchain.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Interzicerea Acțiunilor Tokenizate</h3>
+      <p class="mb-4 text-gray-300">Legea ar fi făcut aproape imposibilă crearea de versiuni crypto ale acțiunilor (ex: să cumperi acțiuni Apple pe blockchain). De ce? Pentru că asta ar elimina intermediarii de pe bursă (brokeri, custozi) care câștigă miliarde din comisioane.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. SEC Primește Puteri Sporite</h3>
+      <p class="mb-4 text-gray-300">În loc să lase piața liberă, legea ar fi centralizat puterea la un singur regulator (SEC), crescând birocrația și costurile. Inovația ar fi fost sufocată de hârtii.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-orange-900/20 p-6 rounded-2xl border border-orange-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-orange-400 mb-2">Concluzia lui Tati:</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            Brian Armstrong (Coinbase) a avut dreptate: „Această versiune ar face crypto mai rău decât este azi.” <br/><br/>
+            Deși ne doream „claritate”, nu ne doream „capitulare”. Faptul că legea a fost amânată înseamnă că industria crypto a avut puterea să spună NU. <br/><br/>
+            <span class="text-white font-bold">Lupta continuă. Băncile vor să protejeze monopolul. Noi protejăm inovația. Pentru moment, am evitat un glonț.</span>
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: D-DAY CRYPTO CLARITY & TARIFFS (15 IAN)
   {
     id: 'd-day-crypto-clarity-act-trump-tariffs-supreme-court-impact',
