@@ -1,4 +1,77 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: D-DAY CRYPTO CLARITY & TARIFFS (15 IAN)
+  {
+    id: 'd-day-crypto-clarity-act-trump-tariffs-supreme-court-impact',
+    slug: 'd-day-crypto-clarity-act-decizia-suprema-tarife',
+    title: '🇺🇸 "D-DAY" PENTRU CRYPTO: Clarity Act și Decizia Supremă pe Tarife lovesc AZI. La ce să te aștepți?',
+    summary: 'Azi, SUA decide totul. Senatul votează Clarity Act, iar Curtea Supremă decide soarta tarifelor și a Dolarului. Află Scenariul Exploziv care ar putea propulsa Bitcoin.',
+    category: 'MACRO & LEGISLAȚIE',
+    image: '/clarityandtariffes.jpg',
+    date: '15 Jan 2026',
+    readTime: '6 min',
+    author: 'Mihai Daniel',
+    impact: 'neutral', // Volatilitate maximă (poate fi Bullish sau Bearish)
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-purple-500/20 text-purple-300 border border-purple-500/30 px-3 py-1 rounded text-xs font-bold uppercase">⚡ Volatilitate Maximă</span>
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🏛️ Washington D.C.</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Astăzi, piețele nu se mișcă la întâmplare. Astăzi se mișcă la comandă. Statele Unite sunt scena a două evenimente majore care vor dicta trendul pentru restul trimestrului.</p>
+      
+      <p class="mb-4 text-gray-300">Pe de o parte, Senatul decide regulile jocului pentru crypto. Pe de altă parte, Curtea Supremă decide soarta Dolarului. Iată cum se joacă această partidă de șah și cum îți afectează portofoliul.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Evenimentul Micro: Votul pe "CLARITY ACT" (Ora ~17:00 RO)</h3>
+      <p class="mb-4 text-gray-300">Comisia Bancară a Senatului se reunește pentru "markup-ul" final al legii care promite să scoată crypto din zona gri.</p>
+      
+      <div class="bg-[#0b1221] p-5 rounded-lg border border-green-500/30 mb-6">
+          <ul class="space-y-3 text-gray-300 text-sm">
+              <li class="flex items-start gap-2">
+                  <span class="text-green-400 font-bold">➢ Semnalele:</span> Așa cum am discutat, insiderii (Congresmenii) au cumpărat Bitcoin recent. Asta sugerează un vot pozitiv.
+              </li>
+              <li class="flex items-start gap-2">
+                  <span class="text-blue-400 font-bold">➢ Dacă trece:</span> Undă verde pentru Altcoins. Instituțiile primesc confirmarea că Solana, Polygon sau Cardano nu sunt ilegale.
+              </li>
+              <li class="flex items-start gap-2">
+                  <span class="text-red-400 font-bold">➢ Dacă se amână:</span> Dezamăgire temporară, posibil o scădere scurtă de 2-3%.
+              </li>
+          </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Evenimentul Macro: Trump vs. Curtea Supremă (Tarifele)</h3>
+      <p class="mb-4 text-gray-300">Aici este miza de <strong>600 de miliarde de dolari</strong>. Curtea Supremă (SCOTUS) decide legalitatea tarifelor.</p>
+      
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div class="bg-green-900/10 border border-green-500/20 p-4 rounded-lg">
+              <div class="font-bold text-green-400 mb-1">📉 Scenariul A: Trump Pierde</div>
+              <div class="text-sm text-gray-400"><strong>Probabilitate: 70%.</strong> SUA returnează banii -> Deficitul crește -> <strong>Dolarul scade</strong>. <br/> IMPACT CRYPTO: <strong>BULLISH</strong> (Bitcoin iubește dolarul slab).</div>
+          </div>
+          <div class="bg-red-900/10 border border-red-500/20 p-4 rounded-lg">
+              <div class="font-bold text-red-400 mb-1">📈 Scenariul B: Trump Câștigă</div>
+              <div class="text-sm text-gray-400">Dolarul se întărește. Presiune pe activele de risc.<br/> IMPACT CRYPTO: <strong>BEARISH / Neutru</strong>.</div>
+          </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. "Furtuna Perfectă": Cum interacționează cele două?</h3>
+      <p class="mb-4 text-gray-300">Cel mai exploziv scenariu pentru noi (Crypto Bulls) este combinația următoare:</p>
+      <div class="bg-gradient-to-r from-green-900/30 to-blue-900/30 p-4 rounded-xl border border-white/10 mb-6 text-center">
+          <span class="text-green-400 font-bold text-xl">🟢 Clarity Act TRECE</span> 
+          <span class="mx-2 text-white font-bold">+</span>
+          <span class="text-red-400 font-bold text-xl">🔴 Trump PIERDE (Dolar slab)</span>
+      </div>
+      <p class="text-gray-300 mb-4">Această combinație ar crea un mediu de <strong>"Risk-On" masiv</strong>: banii ar fugi din Dolarul slăbit și ar intra direct în Crypto, care tocmai a devenit reglementat și sigur.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-purple-900/20 p-6 rounded-2xl border border-purple-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-purple-300 mb-2">Concluzia lui Tati:</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            Astăzi nu e zi de pariat, e zi de reacționat. <br/><br/>
+            <strong>Ora critică:</strong> Începând cu 17:00 (ora României). <br/>
+            <strong>Ce urmărim:</strong> Indexul Dolarului (DXY) și știrile din Comisia Bancară. Dacă vezi DXY scăzând și știri pozitive din Senat, ține-te bine. 🚀
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: SCOTUS TRUMP TARIFFS DECISION (14 IAN)
   {
     id: 'scotus-trump-tariffs-decision-january-15-2026-market-impact',
