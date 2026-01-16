@@ -1,4 +1,114 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: UMBRELE ALGORITMILOR (17 IAN)
+  {
+    id: 'umbrele-algoritmilor-bot-polymarket-ianuarie-2026',
+    slug: 'umbrele-algoritmilor-bot-polymarket',
+    title: '🌑 UMBRELE ALGORITMILOR: CUM UN BOT SIMPLU TRANSFORMĂ PARIURILE CRYPTO ÎN AUR DIGITAL',
+    summary: 'O Lecție Despre Lăcomie, Tehnologie și Supraviețuire Financiară. Află cum un bot simplu "recoltează" milioane de la traderii neatenți pe Polymarket.',
+    category: 'EDUCAȚIE & TEHNOLOGIE',
+    image: '/banionlineianuarie.jpg',
+    date: '17 Jan 2026',
+    readTime: '6 min',
+    author: 'Mihai Daniel',
+    impact: 'neutral',
+    content: `
+      <p class="text-lg mb-6 text-gray-300">Ianuarie 2026. E târziu. Ecranul laptopului tău este singura sursă de lumină din cameră, pâlpâind în ritmul unui ocean digital furtunos. Pe X (fostul Twitter), un cont obscur, @browomo, postează un mesaj care îți îngheață sângele în vene:</p>
+
+      <blockquote class="border-l-4 border-purple-500 pl-4 italic my-8 bg-purple-900/10 p-6 rounded text-gray-300">
+        "Nu mai dorm noaptea. Am construit un bot care recoltează milioane din traderii neștiutori pe Polymarket. Văd traderii retail ca pe o recoltă proaspătă."
+      </blockquote>
+
+      <p class="mb-4 text-gray-300">Sună a scenariu de film Cyberpunk? Tati, e realitatea crudă a piețelor de astăzi.</p>
+      
+      <p class="mb-6 text-gray-300">În spatele acestui tweet viral se ascunde o lume invizibilă unde matematica rece întâlnește emoțiile tale fierbinți. Astăzi, coborâm în "subteranul" arbitrajului crypto pentru a înțelege cum ești vânat și, mai important, cum să nu devii prada.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6">🏛️ Capitolul 1: Colosseumul Digital (Ce Este Polymarket?)</h3>
+      
+      <p class="mb-4 text-gray-300">Polymarket nu e doar un site de pariuri. E un oracol descentralizat construit pe Polygon, unde adevărul are un preț.</p>
+      
+      <p class="mb-4 text-gray-300">În acest bull run din 2025-2026, a devenit locul unde oricine poate paria pe realitate:</p>
+      
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-300">
+        <li>"Va atinge Bitcoin 100k azi?"</li>
+        <li>"Cine câștigă alegerile?"</li>
+      </ul>
+
+      <p class="mb-2 font-bold text-white">Cum funcționează capcana?</p>
+      <p class="mb-4 text-gray-300">Fiecare întrebare are două acțiuni: YES și NO. Prețul lor combinat ar trebui să fie întotdeauna 1 USD.</p>
+      
+      <div class="bg-[#0b1221] p-4 rounded-lg border border-purple-500/20 mb-6">
+        <p class="font-mono text-sm text-green-400">Dacă YES costă $0.60 (60% șanse), NO ar trebui să fie $0.40.</p>
+      </div>
+
+      <p class="mb-8 text-gray-300">De ce ne atrage? Pentru că exploatează o slăbiciune umană veche de când lumea: Iluzia Controlului. Ne place să credem că știm viitorul. Dar când mulțimea devine emoțională, prețurile se distorsionează. Și acolo apar rechinii.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6">🤖 Capitolul 2: Matematica Rece a Profitului (Cum Te Fură Botul?)</h3>
+      
+      <p class="mb-4 text-gray-300">Arbitrajul nu e magie neagră. E matematică de clasa a doua, dar executată la viteza luminii.</p>
+      
+      <p class="mb-6 text-gray-300">Botul descris în tweet nu este un AI sofisticat care "simte" piața. Este un script Python simplu, inspirat de pionieri precum Jeremy Whittaker, care face un singur lucru: caută greșeala.</p>
+
+      <p class="mb-2 font-bold text-white">Exemplul care te va durea:</p>
+      <p class="mb-4 text-gray-300">Imaginează-ți o piață volatilă pe Bitcoin. Panica lovește.</p>
+
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-300">
+        <li>Oamenii vând disperați "YES" -> Prețul scade la $0.48.</li>
+        <li>Alții nu sunt atenți la "NO" -> Prețul stagnează la $0.49.</li>
+      </ul>
+
+      <div class="bg-gradient-to-r from-blue-900/20 to-purple-900/20 p-6 rounded-xl border border-blue-500/20 mb-8">
+        <p class="font-bold text-white mb-2">Matematica Botului:</p>
+        <p class="text-xl font-mono text-blue-300 mb-4">$0.48 + $0.49 = $0.97.</p>
+        <p class="mb-2 text-gray-300">Botul cumpără ambele opțiuni instantaneu.</p>
+        <ul class="list-none space-y-1 font-mono text-sm text-gray-300">
+          <li>Cost total: $0.97.</li>
+          <li>Câștig garantat (indiferent de rezultat): $1.00.</li>
+          <li class="text-green-400 font-bold">Profit: $0.03 fără risc.</li>
+        </ul>
+      </div>
+
+      <p class="mb-8 text-gray-300">Multiplică asta cu 10.000 de tranzacții pe oră. În timp ce tu, traderul din Voluntari, stai să analizezi graficele, un script din Singapore ți-a luat deja banii de pe masă înainte să clipești. Ești "recolta" pentru că ești lent și emoțional.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6">🌪️ Capitolul 3: Costul Nevăzut (Dramă și Riscuri)</h3>
+      
+      <p class="mb-4 text-gray-300">Dar să nu idealizăm "vânătorul". Tweet-ul lui @browomo vorbește despre insomnie și epuizare. De ce? Pentru că arbitrajul e un joc brutal de supraviețuire.</p>
+      
+      <p class="mb-2 font-bold text-white">De ce nu sunt toți bogați?</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-300">
+        <li><strong>Taxele (Fees):</strong> Polymarket ia un comision. Dacă marja ta e de 1%, dar taxa e tot 1%, muncești degeaba.</li>
+        <li><strong>Slippage:</strong> Dacă botul e cu o milisecundă prea lent, prețul se schimbă și profitul devine pierdere.</li>
+        <li><strong>Coșmarul Fiscal:</strong> În România, ANAF nu știe de "arbitraj". Orice profit e venit impozabil. Un bot care face mii de tranzacții îți poate complica viața enorm.</li>
+      </ul>
+
+      <p class="mb-8 text-gray-300">Mai presus de toate, e drama psihologică. Dezvoltatorul devine sclavul propriei creații, păzind serverele 24/7 de teama că un alt bot mai rapid îi va fura "mâncarea". E un război al mașinilor, iar oamenii din spate sunt doar victime colaterale cu ochii roșii de nesomn.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6">💡 Capitolul 4: Nu Fi "Recolta" (Lecția Finală)</h3>
+      
+      <p class="mb-4 text-gray-300">Tati, dacă ai citit până aici, inima probabil îți bate un pic mai tare. E bine. Frica te ține treaz.</p>
+      <p class="mb-4 text-gray-300">Dar hai să transformăm frica în putere. Cum supraviețuiești în 2026?</p>
+
+      <ul class="list-disc pl-6 mb-8 space-y-3 text-gray-300">
+        <li><strong>Nu paria emoțional:</strong> Boturile fac bani pe FOMO-ul tău (frica de a rata ocazia) și pe Panic Sell. Stai calm.</li>
+        <li><strong>Învață limba lor:</strong> Nu trebuie să fii programator de elită, dar înțelege bazele. Explorează tool-uri open-source. Înțelege cum funcționează "Order Book-ul".</li>
+        <li><strong>Gândește "Antifragil":</strong> Așa cum spunea Nassim Taleb, haosul distruge fragilii dar îi întărește pe cei pregătiți. Nu pune toți banii într-un singur pariu binar.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-12 mb-6">🚀 Concluzie</h3>
+      
+      <p class="mb-4 text-gray-300">Povestea lui @browomo este un avertisment. Trăim într-o eră hiper-conectată unde codul este o armă, iar lichiditatea ta este ținta.</p>
+      <p class="mb-4 text-gray-300">Piețele nu sunt juste. Nu sunt democratice. Sunt o junglă.</p>
+      
+      <p class="mb-4 font-bold text-white">Ai două opțiuni:</p>
+      <ol class="list-decimal pl-6 mb-8 space-y-2 text-gray-300">
+        <li>Rămâi "recolta" care speră la noroc.</li>
+        <li>Sau devii "fermierul" propriului tău destin, educându-te și refuzând să joci după regulile lor.</li>
+      </ol>
+
+      <p class="text-xl font-bold text-white text-center border-t border-gray-800 pt-8">Tu ce alegi în seara asta?</p>
+      <p class="text-center text-gray-400 mt-2 text-sm italic">Ți-a plăcut analiza? Dă un share dacă nu vrei ca prietenii tăi să fie "lichiditate de ieșire" pentru boți.</p>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: BURSA VS BITCOIN ROTATION (16 IAN)
   {
     id: 'stock-market-crash-vs-bitcoin-surge-rotation-january-2026',
