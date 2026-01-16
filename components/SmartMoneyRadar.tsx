@@ -1,8 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { Target, Users } from 'lucide-react';
-// Importăm acțiunea nouă
+import { Target, TrendingUp, TrendingDown, Crosshair, RefreshCw } from 'lucide-react';
 import { getSmartMoneyRadar } from '@/app/actions/getSmartMoneyRadar';
 
 interface SmartData {
@@ -29,82 +28,107 @@ export default function SmartMoneyRadar() {
 
   useEffect(() => {
     updateData();
-    const interval = setInterval(updateData, 60000); // Refresh la 1 min
+    const interval = setInterval(updateData, 60000);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="bg-[#0b1221] p-5 rounded-xl border border-white/5 relative overflow-hidden group">
-      {/* Background Effect */}
-      <div className="absolute -right-6 -top-6 w-32 h-32 bg-green-500/5 rounded-full blur-3xl group-hover:bg-green-500/10 transition-all"></div>
+    <div className="bg-[#0b1221] p-5 rounded-2xl border border-white/10 relative overflow-hidden group shadow-2xl">
+      {/* Dynamic Background */}
+      <div className="absolute top-0 right-0 w-64 h-64 bg-green-500/5 rounded-full blur-[80px] group-hover:bg-green-500/10 transition-all duration-1000"></div>
 
-      {/* Header */}
-      <div className="flex items-center gap-2 mb-5 relative z-10">
-        <div className="bg-green-500/20 p-1.5 rounded text-green-400 animate-pulse">
-            <Target size={18} />
+      {/* HEADER */}
+      <div className="flex justify-between items-start mb-6 relative z-10">
+        <div className="flex items-center gap-3">
+            <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 p-2 rounded-lg border border-green-500/30 shadow-[0_0_15px_rgba(16,185,129,0.2)]">
+                <Crosshair size={20} className="text-green-400 animate-pulse" />
+            </div>
+            <div>
+                <h3 className="text-base font-black text-white tracking-wide uppercase flex items-center gap-2">
+                    Smart Money <span className="text-green-500">Radar</span>
+                </h3>
+                <p className="text-[10px] text-gray-400 font-mono tracking-widest uppercase">
+                    Top Traderi Binance • Leverage 20x+
+                </p>
+            </div>
         </div>
-        <div>
-            <h3 className="text-sm font-bold text-white leading-none">Smart Money Radar</h3>
-            <p className="text-[10px] text-gray-400 font-mono mt-0.5">Top Traderi Binance (Long vs Short)</p>
+        
+        {/* Live Indicator */}
+        <div className="flex items-center gap-1.5 bg-white/5 px-2 py-1 rounded text-[10px] text-green-400 font-bold border border-white/5 animate-pulse">
+            <div className="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_5px_lime]"></div>
+            LIVE
         </div>
       </div>
 
-      <div className="space-y-5 relative z-10">
+      {/* CONTENT */}
+      <div className="space-y-4 relative z-10">
         {loading ? (
-           [1, 2, 3].map(i => <div key={i} className="h-10 bg-white/5 rounded animate-pulse"/>)
+           [1, 2, 3].map(i => <div key={i} className="h-16 bg-white/5 rounded-xl animate-pulse border border-white/5"/>)
         ) : (
           data.map((item) => {
             const isBullish = item.longRatio > item.shortRatio;
             const longPct = (item.longRatio * 100).toFixed(0);
             const shortPct = (item.shortRatio * 100).toFixed(0);
+            const ratioColor = isBullish ? 'text-green-400' : 'text-red-400';
+            const barColor = isBullish ? 'from-green-500 to-emerald-400' : 'from-red-500 to-orange-500';
+            const shadowColor = isBullish ? 'shadow-[0_0_20px_rgba(16,185,129,0.3)]' : 'shadow-[0_0_20px_rgba(239,68,68,0.3)]';
             
             return (
-              <div key={item.symbol} className="space-y-1.5">
-                {/* Info Bar */}
-                <div className="flex justify-between items-end px-1">
-                    <span className={`font-black text-sm ${item.symbol === 'BTC' ? 'text-yellow-500' : 'text-white'}`}>
-                        {item.symbol}
-                    </span>
-                    <span className={`text-[10px] font-bold uppercase ${isBullish ? 'text-green-400' : 'text-red-400'}`}>
-                        {isBullish ? 'Balenele Cumpără 🐂' : 'Balenele Vând 🐻'}
-                    </span>
-                </div>
-
-                {/* The Battle Bar */}
-                <div className="h-3 w-full bg-gray-800 rounded-full overflow-hidden flex relative shadow-inner">
-                    {/* Longs (Green) */}
-                    <div 
-                        style={{ width: `${longPct}%` }} 
-                        className="h-full bg-gradient-to-r from-green-600 to-green-400 flex items-center justify-start pl-1.5 transition-all duration-1000"
-                    >
-                        <span className="text-[8px] font-black text-black">{longPct}%</span>
+              <div key={item.symbol} className="bg-[#0f1629] p-4 rounded-xl border border-white/5 hover:border-white/10 transition-all">
+                
+                {/* Top Row: Symbol & Ratio */}
+                <div className="flex justify-between items-end mb-3">
+                    <div className="flex items-center gap-2">
+                        {item.symbol === 'BTC' && <div className="w-1 h-4 bg-yellow-500 rounded-full shadow-[0_0_10px_orange]"></div>}
+                        {item.symbol === 'ETH' && <div className="w-1 h-4 bg-blue-500 rounded-full shadow-[0_0_10px_blue]"></div>}
+                        {item.symbol === 'SOL' && <div className="w-1 h-4 bg-purple-500 rounded-full shadow-[0_0_10px_purple]"></div>}
+                        <span className="text-lg font-black text-white tracking-tight">{item.symbol}</span>
                     </div>
                     
-                    {/* Shorts (Red) */}
-                    <div 
-                        style={{ width: `${shortPct}%` }} 
-                        className="h-full bg-gradient-to-r from-red-400 to-red-600 flex items-center justify-end pr-1.5 transition-all duration-1000"
-                    >
-                        <span className="text-[8px] font-black text-white">{shortPct}%</span>
+                    <div className="text-right">
+                        <div className={`text-xl font-black ${ratioColor} tabular-nums leading-none mb-0.5 drop-shadow-sm`}>
+                            {item.ratio.toFixed(2)}x
+                        </div>
+                        <div className="text-[9px] font-bold text-gray-500 uppercase tracking-widest">
+                            L/S Ratio
+                        </div>
                     </div>
-
-                    {/* Middle Marker */}
-                    <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-black/50 -translate-x-1/2"></div>
                 </div>
+
+                {/* Battle Bar (Design Nou) */}
+                <div className="relative h-2 bg-gray-800/50 rounded-full overflow-hidden">
+                    {/* Indicator Bar */}
+                    <div 
+                        className={`absolute top-0 bottom-0 left-0 transition-all duration-1000 ease-out bg-gradient-to-r ${barColor} ${shadowColor}`}
+                        style={{ width: `${longPct}%` }}
+                    >
+                        {/* Glow Line at the tip */}
+                        <div className="absolute right-0 top-0 bottom-0 w-0.5 bg-white shadow-[0_0_10px_white]"></div>
+                    </div>
+                </div>
+
+                {/* Bottom Row: Percentages */}
+                <div className="flex justify-between mt-2 text-[10px] font-bold font-mono">
+                    <span className="text-green-400 flex items-center gap-1">
+                        <TrendingUp size={10}/> {longPct}% Tauri
+                    </span>
+                    <span className="text-red-400 flex items-center gap-1">
+                        {shortPct}% Urși <TrendingDown size={10}/>
+                    </span>
+                </div>
+
               </div>
             );
           })
         )}
       </div>
-
-      {/* Explicație simplă */}
-      <div className="mt-5 pt-3 border-t border-white/5 text-[10px] text-gray-500 leading-tight flex gap-2">
-        <Users size={12} className="shrink-0 mt-0.5 text-blue-400" />
-        <p>
-            Ce fac <strong className="text-gray-300">Top 20% Traderi</strong>? <br/>
-            <span className="text-green-400 font-bold">Verde</span> = Smart Money pariază pe creștere.
-        </p>
+      
+      {/* Footer Info */}
+      <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[10px] text-gray-500">
+        <span>Sursa: Binance Futures (Top Accounts)</span>
+        <span className="text-green-400 font-bold animate-pulse">● Live Data</span>
       </div>
+
     </div>
   );
 }
