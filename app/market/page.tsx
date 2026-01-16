@@ -191,9 +191,9 @@ export default async function MarketPage() {
                 
                 <div className="sticky top-24 space-y-8">
                     {/* 1. LICHIDĂRI LIVE - CU BADGE PULSÂND! 🔥 */}
-                    {/* ✅ FIX: Am schimbat link-ul să fie fără "-mihai-daniel" la final */}
+                    {/* ✅ FIX: Link corect către pagina ta existentă: /lichidari */}
                     <Link 
-                        href="/stiri/lichidari-crypto-global-live" 
+                        href="/lichidari" 
                         className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-500 hover:to-red-500 p-4 rounded-xl shadow-lg shadow-orange-900/20 transform hover:scale-[1.02] transition-all group border border-orange-400/20 relative overflow-hidden"
                     >
                         {/* ✨ BADGE LIVE PULSÂND */}
