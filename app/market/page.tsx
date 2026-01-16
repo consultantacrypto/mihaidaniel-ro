@@ -7,9 +7,9 @@ import InstitutionalTracker from '@/components/InstitutionalTracker';
 import WhaleWallWidget from '@/components/WhaleWallWidget'; 
 import SentimentPoll from '@/components/SentimentPoll';
 import AlphaStreak from '@/components/AlphaStreak'; 
-import MarketNarrative from '@/components/MarketNarrative';
+// Am scos MarketNarrative
 import { getGlobalData, getFearGreed } from '@/lib/market-api';
-import { Activity, DollarSign, Layers, BarChart3, Zap, Calendar, Flame, Clock, TrendingUp, Skull, ArrowRight } from 'lucide-react';
+import { Activity, DollarSign, Layers, BarChart3, Zap, Calendar, Flame, Clock, TrendingUp, Skull, ArrowRight, BrainCircuit, LineChart } from 'lucide-react';
 import Link from 'next/link';
 
 // --- TIPURI ---
@@ -155,8 +155,38 @@ export default async function MarketPage() {
                     </div>
                 </div>
 
-                {/* 2. NARRATIVE */}
-                <MarketNarrative />
+                {/* ✅ 2. AICI ESTE NOUL BUTON/BANNER CĂTRE PEAK SIGNALS (Înlocuiește Narrative) */}
+                <Link href="/market/peak-signals" className="block group">
+                    <div className="bg-gradient-to-r from-blue-900/40 to-indigo-900/40 border border-blue-500/20 hover:border-blue-500/50 p-6 md:p-8 rounded-2xl relative overflow-hidden transition-all hover:shadow-[0_0_30px_rgba(59,130,246,0.15)] group-hover:-translate-y-1">
+                        
+                        {/* Background Elements */}
+                        <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <BrainCircuit size={120} className="text-blue-500" />
+                        </div>
+                        <div className="absolute inset-0 bg-blue-500/5 group-hover:bg-blue-500/10 transition-colors"></div>
+
+                        <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                            <div className="space-y-2">
+                                <div className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
+                                    <LineChart size={12} />
+                                    Analiză On-Chain
+                                </div>
+                                <h2 className="text-2xl md:text-3xl font-black text-white tracking-tight">
+                                    INDICATORI <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">TOP CICLU BITCOIN</span>
+                                </h2>
+                                <p className="text-gray-400 max-w-xl text-sm md:text-base leading-relaxed">
+                                    Nu ghici vârful. Folosește matematica. Vezi exact unde ne aflăm între <span className="text-green-400 font-bold">Acumulare</span> și <span className="text-red-400 font-bold">Euforie</span> folosind "2-Year MA Multiplier".
+                                </p>
+                            </div>
+
+                            <div className="flex items-center gap-3 shrink-0">
+                                <span className="bg-white/10 text-white font-bold px-6 py-3 rounded-xl border border-white/10 group-hover:bg-blue-600 group-hover:border-blue-500 transition-all flex items-center gap-2">
+                                    Vezi Grafic Complet <ArrowRight size={18} />
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </Link>
 
                 {/* 3. INSTITUTIONAL TRACKER */}
                 <div className="space-y-6">
@@ -189,9 +219,8 @@ export default async function MarketPage() {
             {/* DREAPTA: SIDEBAR WIDGETS */}
             <div className="xl:col-span-3 flex flex-col gap-6">
                 
-                <div className="sticky top-24 space-y-8">
+                <div className="sticky top-24 space-y-6">
                     {/* 1. LICHIDĂRI LIVE - CU BADGE PULSÂND! 🔥 */}
-                    {/* ✅ FIX: Link corect către pagina ta existentă: /lichidari */}
                     <Link 
                         href="/lichidari" 
                         className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-500 hover:to-red-500 p-4 rounded-xl shadow-lg shadow-orange-900/20 transform hover:scale-[1.02] transition-all group border border-orange-400/20 relative overflow-hidden"
