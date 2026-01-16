@@ -2,12 +2,14 @@
 
 import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
-import { LineChart, RefreshCw, AlertTriangle } from 'lucide-react';
+import { LineChart, RefreshCw, AlertTriangle, Layers } from 'lucide-react';
 
-// Importăm graficul dinamic AICI, unde avem voie (în Client Component)
+// Importăm dinamic ambele grafice
 const TwoYearMAChart = dynamic(() => import('@/components/TwoYearMAChart'), { 
-  ssr: false,
-  loading: () => <div className="h-96 w-full bg-[#0b1221] rounded-2xl animate-pulse" />
+  ssr: false, loading: () => <div className="h-96 w-full bg-[#0b1221] rounded-2xl animate-pulse border border-white/5" />
+});
+const PiCycleChart = dynamic(() => import('@/components/PiCycleChart'), { 
+  ssr: false, loading: () => <div className="h-96 w-full bg-[#0b1221] rounded-2xl animate-pulse border border-white/5 mt-8" />
 });
 
 export default function PeakSignalsContainer() {
@@ -15,76 +17,110 @@ export default function PeakSignalsContainer() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
-  // Funcția de fetch
   const fetchData = async () => {
     try {
       setLoading(true);
       setError(false);
-
-      // Fetch de la Binance (Rapid)
-      const res = await fetch('https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1w&limit=500');
-      
+      // Cerem 1000 de săptămâni (aprox 19 ani) pentru a avea destul istoric pentru mediile lungi
+      const res = await fetch('https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1w&limit=1000');
       if (!res.ok) throw new Error("Binance API error");
-      
       const rawData = await res.json();
-      const processedData = processBinanceData(rawData);
-      
+      const processedData = processData(rawData);
       setData(processedData);
     } catch (err) {
-      console.error("Fetch error:", err);
+      console.error(err);
       setError(true);
     } finally {
       setLoading(false);
     }
   };
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  useEffect(() => { fetchData(); }, []);
 
-  if (error) {
-    return (
-      <div className="w-full h-96 bg-[#0b1221] border border-red-500/30 rounded-2xl flex flex-col items-center justify-center p-6 text-center">
+  if (error) return (
+    <div className="w-full h-96 bg-[#0b1221] border border-red-500/30 rounded-2xl flex flex-col items-center justify-center p-6 text-center">
         <AlertTriangle className="text-red-500 mb-4" size={48} />
-        <h3 className="text-xl font-bold text-white">Eroare conexiune date</h3>
-        <button onClick={fetchData} className="mt-4 bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-full font-bold transition flex items-center gap-2">
-          <RefreshCw size={16} /> Încearcă din nou
-        </button>
-      </div>
-    );
-  }
+        <h3 className="text-xl font-bold text-white">Eroare date</h3>
+        <button onClick={fetchData} className="mt-4 bg-red-500 text-white px-6 py-2 rounded-full font-bold flex items-center gap-2"><RefreshCw size={16} /> Retry</button>
+    </div>
+  );
 
-  if (loading) {
-    return (
-      <div className="w-full h-96 bg-[#0b1221] border border-white/10 rounded-2xl flex flex-col items-center justify-center relative">
-        <LineChart className="text-blue-500 mb-4 animate-bounce" size={48} />
-        <p className="text-blue-300 font-mono text-sm">Se analizează Blockchain-ul...</p>
-      </div>
-    );
-  }
+  if (loading) return (
+    <div className="w-full min-h-screen flex flex-col items-center justify-center gap-4">
+        <LineChart className="text-blue-500 animate-bounce" size={48} />
+        <p className="text-blue-300 font-mono text-sm">Se calculează modelele matematice...</p>
+    </div>
+  );
 
-  return <TwoYearMAChart data={data} />;
+  return (
+    <div className="space-y-12">
+        {/* GRAFIC 1: 2-Year MA Multiplier */}
+        <TwoYearMAChart data={data} />
+        
+        {/* SEPARATOR */}
+        <div className="flex items-center gap-4 py-4">
+            <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent flex-1"></div>
+            <span className="text-gray-500 text-xs font-mono uppercase tracking-widest flex items-center gap-2">
+                <Layers size={12}/> Confirmare Secundară
+            </span>
+            <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent flex-1"></div>
+        </div>
+
+        {/* GRAFIC 2: Pi Cycle Top */}
+        <PiCycleChart data={data} />
+    </div>
+  );
 }
 
-// Helper procesare date
-function processBinanceData(rawData: any[]) {
-  const windowSize = 104; // 2 ani
-  const metrics = [];
+// 🧠 LOGICA MATEMATICĂ
+function processData(rawData: any[]) {
   const prices = rawData.map((d: any) => parseFloat(d[4]));
   const dates = rawData.map((d: any) => d[0]);
+  const metrics = [];
+
+  // Configurare ferestre (Săptămâni)
+  const w2yr = 104; // ~2 Ani (pentru primul grafic)
+  const w111d = 16; // ~111 Zile (pentru Pi Cycle)
+  const w350d = 50; // ~350 Zile (pentru Pi Cycle)
 
   for (let i = 0; i < prices.length; i++) {
-    if (i >= windowSize) {
-      let sum = 0;
-      for (let j = 0; j < windowSize; j++) { sum += prices[i - j]; }
-      const ma2yr = sum / windowSize;
-      
-      metrics.push({
-        date: new Date(dates[i]).toLocaleDateString('ro-RO', { year: '2-digit', month: 'short' }),
-        price: prices[i],
-        ma2yr: ma2yr,
-        ma2yrMultiplier: ma2yr * 5
-      });
+    const date = new Date(dates[i]).toLocaleDateString('ro-RO', { year: '2-digit', month: 'short' });
+    const price = prices[i];
+    
+    // Calcul 2-Year MA
+    let ma2yr = null;
+    if (i >= w2yr) {
+       let sum = 0;
+       for (let j = 0; j < w2yr; j++) sum += prices[i - j];
+       ma2yr = sum / w2yr;
+    }
+
+    // Calcul Pi Cycle (111 DMA & 350 DMA)
+    let ma111 = null;
+    let ma350x2 = null;
+    
+    if (i >= w111d) {
+        let sum = 0;
+        for (let j = 0; j < w111d; j++) sum += prices[i - j];
+        ma111 = sum / w111d;
+    }
+    
+    if (i >= w350d) {
+        let sum = 0;
+        for (let j = 0; j < w350d; j++) sum += prices[i - j];
+        ma350x2 = (sum / w350d) * 2; // Cheia: Multiplicatorul x2
+    }
+
+    // Salvăm doar dacă avem măcar o medie calculată (ca să nu avem grafic gol la început)
+    if (i > w350d) {
+        metrics.push({
+            date,
+            price,
+            ma2yr: ma2yr,
+            ma2yrMultiplier: ma2yr ? ma2yr * 5 : null,
+            ma111: ma111,
+            ma350x2: ma350x2
+        });
     }
   }
   return metrics;
