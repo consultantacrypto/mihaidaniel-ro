@@ -1,4 +1,81 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: BURSA VS BITCOIN ROTATION (16 IAN)
+  {
+    id: 'stock-market-crash-vs-bitcoin-surge-rotation-january-2026',
+    slug: 'bursa-in-picaj-vs-bitcoin-in-forta-650-miliarde-rotatie',
+    title: '📉 BURSĂ ÎN PICAJ vs. BITCOIN ÎN FORȚĂ: $650 Miliarde au dispărut de pe Wall Street și s-au mutat în Crypto',
+    summary: 'Wall Street sângerează, pierzând 650 miliarde $, în timp ce Bitcoin crește cu 7%. Află de ce "Smart Money" vinde acțiunile scumpe și cumpără Crypto subevaluat.',
+    category: 'MACRO & ANALIZĂ',
+    image: '/bursabitcoinianuarie.jpg',
+    date: '16 Jan 2026',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Bitcoin Decoupling
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🔄 Marea Rotație</span>
+        <span class="bg-red-500/20 text-red-300 border border-red-500/30 px-3 py-1 rounded text-xs font-bold uppercase">📉 Wall Street Crash</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Săptămâna aceasta a fost un duș rece pentru investitorii tradiționali și un foc de artificii pentru noi. Cifrele de ultimă oră arată o schimbare masivă de macaz în preferințele investitorilor.</p>
+      
+      <p class="mb-4 text-gray-300">În timp ce ecranele de pe Wall Street sunt roșii, portofoliile crypto sunt verzi aprins. Nu este o coincidență. Este o <strong>rotație tactică a banilor.</strong></p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Masacrul de pe Wall Street: -650 Miliarde $</h3>
+      <p class="mb-4 text-gray-300">Într-o singură săptămână, valoarea de piață a acțiunilor americane a scăzut cu o sumă amețitoare: <strong>650 de miliarde de dolari</strong>. Banii aceștia nu s-au evaporat în neant; ei au ieșit din poziții considerate "prea scumpe".</p>
+      
+      <div class="bg-red-900/10 border border-red-500/20 p-4 rounded-xl mb-6">
+        <ul class="space-y-2">
+            <li class="flex justify-between items-center border-b border-red-500/10 pb-2">
+                <span class="text-gray-300">Nasdaq (Tech)</span>
+                <span class="text-red-400 font-bold">-1.40%</span>
+            </li>
+            <li class="flex justify-between items-center border-b border-red-500/10 pb-2">
+                <span class="text-gray-300">Dow Jones</span>
+                <span class="text-red-400 font-bold">-1.21%</span>
+            </li>
+            <li class="flex justify-between items-center">
+                <span class="text-gray-300">S&P 500</span>
+                <span class="text-red-400 font-bold">-1.00%</span>
+            </li>
+        </ul>
+        <p class="text-xs text-red-300 mt-2 italic">*Investitorii realizează că bursele sunt la Maxime Istorice (ATH) și aerul e rarefiat.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Bitcoin și Crypto: "Refugiul" Profitabil</h3>
+      <p class="mb-4 text-gray-300">În oglindă, piața crypto a avut una dintre cele mai bune săptămâni din Q1 2026.</p>
+      
+      <div class="bg-green-900/10 border border-green-500/20 p-4 rounded-xl mb-6">
+          <div class="flex items-center gap-4 mb-4">
+              <div class="bg-green-500/20 p-3 rounded-full text-green-400 font-bold text-xl">₿</div>
+              <div>
+                  <div class="text-white font-bold text-lg">Bitcoin: +7%</div>
+                  <div class="text-green-400 text-sm">A adăugat singur <strong>$130 miliarde</strong> la capitalizare.</div>
+              </div>
+          </div>
+          <div class="text-gray-300 text-sm border-t border-green-500/20 pt-2">
+            Observi simetria? O parte semnificativă din ce a ieșit din acțiuni a intrat direct în Bitcoin și Altcoins.
+          </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. De ce se întâmplă Rotația? (Teoria Sub-Evaluării)</h3>
+      <p class="mb-4 text-gray-300">Aici este cheia pe care trebuie să o înțeleagă toată lumea:</p>
+      <ul class="list-disc pl-5 text-gray-300 mb-6 space-y-2">
+          <li><strong>Acțiunile SUA:</strong> Sunt la ATH (All Time High). E greu să mai crești când ești deja în tavan.</li>
+          <li><strong>Bitcoin:</strong> Este încă la <strong>-23%</strong> față de maximul istoric de $126.000.</li>
+      </ul>
+      <p class="mb-4 text-gray-300">Traducere: Bitcoin este "ieftin". Are loc de creștere masiv doar pentru a reveni la vechiul vârf. "Smart Money" vinde ce e scump și cumpără ce e subevaluat.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-green-900/20 p-6 rounded-2xl border border-green-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-green-400 mb-2">Concluzia lui Tati:</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            Mult timp s-a spus că Bitcoin urmărește Nasdaq-ul. Săptămâna aceasta ne-a demonstrat contrariul. <br/><br/>
+            Când frica lovește bursele, Bitcoin nu mai scade odată cu ele, ci devine alternativa. <span class="text-white font-bold">Dacă trendul continuă, diferența de 23% până la ATH va fi ștearsă rapid.</span>
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: CLARITY ACT BLOCAT DE BĂNCI (15 IAN SEARA)
   {
     id: 'clarity-act-blocked-banks-lobby-stablecoins-yield-war',
