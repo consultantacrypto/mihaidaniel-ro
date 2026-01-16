@@ -6,7 +6,7 @@ export const articles = [
     title: '🌑 UMBRELE ALGORITMILOR: CUM UN BOT SIMPLU TRANSFORMĂ PARIURILE CRYPTO ÎN AUR DIGITAL',
     summary: 'O Lecție Despre Lăcomie, Tehnologie și Supraviețuire Financiară. Află cum un bot simplu "recoltează" milioane de la traderii neatenți pe Polymarket.',
     category: 'EDUCAȚIE & TEHNOLOGIE',
-    image: '/banionlineianuarie.jpg',
+    image: '/banionlineianuarie16.jpg',
     date: '17 Jan 2026',
     readTime: '6 min',
     author: 'Mihai Daniel',
