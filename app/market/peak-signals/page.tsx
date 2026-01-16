@@ -1,15 +1,25 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import TwoYearMAChart from '@/components/TwoYearMAChart';
 import { getBitcoinMetrics } from '@/lib/metrics-api';
 import { ArrowLeft, BrainCircuit, LineChart } from 'lucide-react';
 import Link from 'next/link';
+// ✅ FIX: Import Dinamic pentru a opri randarea pe server a graficului
+import dynamic from 'next/dynamic';
 
-export const revalidate = 3600; // Actualizare la fiecare oră
+const TwoYearMAChart = dynamic(() => import('@/components/TwoYearMAChart'), { 
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-96 bg-[#0b1221] rounded-2xl flex items-center justify-center border border-white/10">
+        <p className="text-gray-500 animate-pulse">Se încarcă graficul...</p>
+    </div>
+  )
+});
+
+export const revalidate = 3600;
 
 export const metadata = {
   title: 'Bitcoin Peak Signals | Analiză On-Chain Mihai Daniel',
-  description: 'Grafice avansate pentru detectarea vârfurilor de ciclu Bitcoin. 2-Year MA Multiplier și analiză matematică.',
+  description: 'Grafice avansate pentru detectarea vârfurilor de ciclu Bitcoin.',
 };
 
 export default async function PeakSignalsPage() {
@@ -29,7 +39,7 @@ export default async function PeakSignalsPage() {
             </Link>
         </div>
 
-        {/* HEADER IMPUNĂTOR */}
+        {/* HEADER */}
         <div className="text-center mb-16 relative">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-blue-500/10 rounded-full blur-[100px] -z-10"></div>
             
@@ -42,7 +52,7 @@ export default async function PeakSignalsPage() {
             </h1>
             
             <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-                Matematica nu minte. Folosim date istorice și medii mobile pentru a identifica științific când piața este <span className="text-red-400 font-bold">supraîncălzită</span> sau <span className="text-green-400 font-bold">subevaluată</span>.
+                Analiză matematică folosind <span className="text-white font-bold">2-Year MA Multiplier</span> pentru a identifica supraîncălzirea pieței.
             </p>
         </div>
 
@@ -51,43 +61,27 @@ export default async function PeakSignalsPage() {
             {metrics.length > 0 ? (
                 <TwoYearMAChart data={metrics} />
             ) : (
-                <div className="w-full h-96 bg-[#0b1221] rounded-2xl flex flex-col items-center justify-center border border-white/10 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-blue-500/5 animate-pulse"></div>
-                    <LineChart size={48} className="text-gray-600 mb-4 z-10"/>
-                    <p className="text-gray-400 font-mono z-10">Se încarcă datele complexe...</p>
-                    <p className="text-xs text-gray-600 mt-2 font-mono z-10">Fetching blockchain history (10y+)</p>
+                <div className="w-full h-96 bg-[#0b1221] rounded-2xl flex flex-col items-center justify-center border border-white/10 relative p-8 text-center">
+                    <LineChart size={48} className="text-red-500 mb-4"/>
+                    <h3 className="text-xl font-bold text-white">Datele nu pot fi încărcate</h3>
+                    <p className="text-gray-400 mt-2">API-ul Binance nu răspunde momentan. Încearcă un refresh.</p>
                 </div>
             )}
         </div>
 
-        {/* SECȚIUNE EDUCATIVĂ (HOW TO USE) */}
+        {/* SECȚIUNE EDUCATIVĂ */}
         <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-[#0b1221] p-8 rounded-2xl border border-white/5 hover:border-blue-500/20 transition-all group">
-                <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                    <span className="w-1 h-6 bg-blue-500 rounded-full"></span>
-                    Cum funcționează?
-                </h3>
+            <div className="bg-[#0b1221] p-8 rounded-2xl border border-white/5">
+                <h3 className="text-xl font-bold text-white mb-4">Cum funcționează?</h3>
                 <p className="text-gray-400 leading-relaxed">
-                    Indicatorul <strong>2-Year MA Multiplier</strong> este creat pentru a fi simplu și brutal de eficient. 
-                    <br/><br/>
-                    În loc să ghicim "cât de sus poate ajunge Bitcoin", ne uităm la media prețului din ultimii 2 ani. Istoria ne arată că atunci când prețul crește de <strong>5 ori (x5)</strong> peste această medie, piața intră în euforie maximă și urmează prăbușirea.
+                    Indicatorul urmărește media prețului pe 2 ani (Linia Verde). Când prețul crește de 5 ori peste această medie (Linia Roșie), istoric a marcat vârful ciclului.
                 </p>
             </div>
-            
-            <div className="bg-[#0b1221] p-8 rounded-2xl border border-white/5 hover:border-purple-500/20 transition-all">
-                <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                    <span className="w-1 h-6 bg-purple-500 rounded-full"></span>
-                    Cum să îl folosești?
-                </h3>
-                <ul className="space-y-4">
-                    <li className="flex gap-4 p-3 bg-white/5 rounded-xl items-center">
-                        <div className="w-8 h-8 rounded-full bg-red-500/20 text-red-500 flex items-center justify-center font-bold text-sm shrink-0 shadow-[0_0_10px_rgba(239,68,68,0.3)]">1</div>
-                        <p className="text-sm text-gray-300">Dacă linia albă atinge <span className="text-red-400 font-bold">linia roșie</span>: <br/><strong>Vinde treptat (DCA Out).</strong> Ești la vârf.</p>
-                    </li>
-                    <li className="flex gap-4 p-3 bg-white/5 rounded-xl items-center">
-                        <div className="w-8 h-8 rounded-full bg-green-500/20 text-green-500 flex items-center justify-center font-bold text-sm shrink-0 shadow-[0_0_10px_rgba(34,197,94,0.3)]">2</div>
-                        <p className="text-sm text-gray-300">Dacă linia albă cade sub <span className="text-green-400 font-bold">linia verde</span>: <br/><strong>Cumpără agresiv.</strong> Ești la fundul sacului.</p>
-                    </li>
+            <div className="bg-[#0b1221] p-8 rounded-2xl border border-white/5">
+                <h3 className="text-xl font-bold text-white mb-4">Strategie</h3>
+                <ul className="space-y-3 text-sm text-gray-300">
+                    <li className="flex gap-2"><span className="text-red-400 font-bold">Linia Roșie:</span> Vinde (DCA Out).</li>
+                    <li className="flex gap-2"><span className="text-green-400 font-bold">Linia Verde:</span> Cumpără (Acumulare).</li>
                 </ul>
             </div>
         </div>
