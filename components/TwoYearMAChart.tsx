@@ -19,12 +19,22 @@ interface Props {
 }
 
 export default function TwoYearMAChart({ data }: Props) {
-  // Luăm ultimul punct pentru a afișa prețul curent și statusul
+  // Dacă nu avem date (eroare API), afișăm un mesaj fallback
+  if (!data || data.length === 0) {
+      return (
+          <div className="w-full h-96 bg-[#0b1221] border border-red-900/30 rounded-2xl flex flex-col items-center justify-center text-red-400 p-6">
+              <AlertTriangle size={48} className="mb-4" />
+              <h3 className="text-xl font-bold">Date indisponibile momentan</h3>
+              <p className="text-sm text-gray-400 mt-2 text-center">Nu am putut conecta la Binance API. Încearcă un refresh.</p>
+          </div>
+      );
+  }
+
   const lastPoint = data[data.length - 1];
   
   // Logica de "Zonă":
-  const isDangerZone = lastPoint && lastPoint.ma2yrMultiplier && lastPoint.price > lastPoint.ma2yrMultiplier;
-  const isBuyZone = lastPoint && lastPoint.ma2yr && lastPoint.price < lastPoint.ma2yr;
+  const isDangerZone = lastPoint?.ma2yrMultiplier && lastPoint.price > lastPoint.ma2yrMultiplier;
+  const isBuyZone = lastPoint?.ma2yr && lastPoint.price < lastPoint.ma2yr;
 
   return (
     <div className="w-full bg-[#0b1221] border border-blue-900/30 rounded-2xl p-4 md:p-6 shadow-2xl relative overflow-hidden group">
@@ -41,7 +51,7 @@ export default function TwoYearMAChart({ data }: Props) {
           </h2>
           <div className="flex items-center gap-2 text-gray-400 text-xs mt-1">
             <Info size={12}/>
-            <span>Indicator istoric de ciclu ($BTC)</span>
+            <span>Sursa: Binance (Weekly Candles) • Load Time: Instant</span>
           </div>
         </div>
 
@@ -81,7 +91,7 @@ export default function TwoYearMAChart({ data }: Props) {
                 stroke="#6b7280" 
                 fontSize={10} 
                 tickMargin={10} 
-                minTickGap={60}
+                minTickGap={40} // Mai des, pentru că avem date săptămânale
             />
             
             <YAxis 
@@ -99,7 +109,6 @@ export default function TwoYearMAChart({ data }: Props) {
                 contentStyle={{ backgroundColor: '#020617', borderColor: '#1f2937', borderRadius: '8px', color: '#fff', fontSize: '12px' }}
                 itemStyle={{ fontSize: '12px', fontWeight: 'bold' }}
                 labelStyle={{ color: '#9ca3af', marginBottom: '4px' }}
-                // ✅ FIX: Folosim 'any' sau verificăm valoarea pentru a scăpa de eroarea TypeScript
                 formatter={(value: any) => [
                     value ? `$${Number(value).toLocaleString()}` : 'N/A', 
                     ''
@@ -117,6 +126,7 @@ export default function TwoYearMAChart({ data }: Props) {
                 strokeWidth={2} 
                 dot={false}
                 name="Vârf Ciclu (MA x5)"
+                connectNulls // Conectează punctele dacă lipsesc date
             />
 
             {/* 2. Prețul Bitcoin (Alb + Area) */}
@@ -140,25 +150,26 @@ export default function TwoYearMAChart({ data }: Props) {
                 strokeWidth={2} 
                 dot={false}
                 name="Suport (MA 2yr)"
+                connectNulls
             />
 
           </ComposedChart>
         </ResponsiveContainer>
       </div>
 
-      {/* LEGENDĂ EXPLICATIVĂ DETALIATĂ */}
+      {/* LEGENDĂ */}
       <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-xs border-t border-white/5 pt-4">
          <div className="flex items-start gap-2 text-gray-400">
             <div className="w-2 h-2 bg-red-500 rounded-full mt-1.5 shrink-0 shadow-[0_0_5px_red]"></div>
-            <p><strong>Linia Roșie (Rezistență):</strong> Când prețul o atinge, istoric a marcat finalul Bull Market-ului. Semnal de vânzare.</p>
+            <p><strong>Linia Roșie (Rezistență):</strong> Vârf de euforie. Istoric, marchează finalul ciclului Bull.</p>
          </div>
          <div className="flex items-start gap-2 text-gray-400">
             <div className="w-2 h-2 bg-white rounded-full mt-1.5 shrink-0"></div>
-            <p><strong>Preț BTC:</strong> Evoluția actuală. Observă cum oscilează între cele două benzi majore.</p>
+            <p><strong>Preț BTC:</strong> Prețul de închidere săptămânal.</p>
          </div>
          <div className="flex items-start gap-2 text-gray-400">
             <div className="w-2 h-2 bg-green-500 rounded-full mt-1.5 shrink-0 shadow-[0_0_5px_green]"></div>
-            <p><strong>Linia Verde (Suport):</strong> Media pe 2 ani. Când prețul cade sub ea, este o oportunitate istorică de cumpărare.</p>
+            <p><strong>Linia Verde (Suport):</strong> Media mobilă pe 2 ani. Zona ideală de acumulare.</p>
          </div>
       </div>
 

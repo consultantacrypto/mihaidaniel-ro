@@ -7,49 +7,52 @@ export interface MetricPoint {
   ma2yrMultiplier: number | null;
 }
 
-// Funcție care ia datele de pe CoinGecko și calculează indicatorii
 export async function getBitcoinMetrics(): Promise<MetricPoint[]> {
   try {
-    // 1. Luăm tot istoricul Bitcoin (gratuit de pe CoinGecko)
-    // Nota: API-ul public are limite, cache-uim rezultatul pentru 1 oră.
+    // 1. Folosim BINANCE API (Public & Foarte Rapid)
+    // Cerem lumânări SĂPTĂMÂNALE (1w) - mult mai puține date, încărcare instantă.
+    // Limit 1000 = aprox 19 ani de date săptămânale (suficient).
     const res = await fetch(
-      'https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=max&interval=daily',
-      { next: { revalidate: 3600 } } 
+      'https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1w&limit=1000',
+      { next: { revalidate: 3600 } } // Cache 1 oră
     );
     
-    if (!res.ok) throw new Error('Failed to fetch CoinGecko data');
+    if (!res.ok) throw new Error('Binance API failed');
     
-    const data = await res.json();
-    const prices: [number, number][] = data.prices; // [timestamp, price]
+    const rawData = await res.json();
+    
+    // Binance returnează array de array-uri: [openTime, open, high, low, close, ...]
+    // Noi vrem doar Close Price și Time.
+    const prices: number[] = rawData.map((d: any) => parseFloat(d[4]));
+    const dates: number[] = rawData.map((d: any) => d[0]);
 
-    // 2. Procesăm datele și calculăm Media Mobilă (Moving Average)
+    // 2. Procesăm datele
     const metrics: MetricPoint[] = [];
-    const windowSize = 730; // 2 Ani (730 zile)
+    // 2 Ani = 104 Săptămâni (aprox 730 zile)
+    const windowSize = 104; 
 
-    // Iterăm prin istoric
     for (let i = 0; i < prices.length; i++) {
-      const [timestamp, price] = prices[i];
-      const date = new Date(timestamp).toLocaleDateString('ro-RO', {
-        year: 'numeric',
+      // Data formatată scurt (ex: "Ian '24")
+      const date = new Date(dates[i]).toLocaleDateString('ro-RO', {
+        year: '2-digit',
         month: 'short',
       });
+      const price = prices[i];
 
       let ma2yr = null;
       let ma2yrMultiplier = null;
 
-      // Calculăm MA doar dacă avem destule date (730 zile în spate)
+      // Calculăm MA doar dacă avem destule săptămâni în spate
       if (i >= windowSize) {
         let sum = 0;
-        // Facem suma ultimelor 730 zile (pentru simplitate, buclă interioară)
         for (let j = 0; j < windowSize; j++) {
-          sum += prices[i - j][1];
+          sum += prices[i - j];
         }
         ma2yr = sum / windowSize;
-        ma2yrMultiplier = ma2yr * 5; // Linia Roșie (Vârf = MA x 5)
+        ma2yrMultiplier = ma2yr * 5; // Vârful de ciclu
       }
 
-      // Salvăm datele (filtrăm primii ani fără MA valid pentru a nu strica graficul)
-      // Începem să salvăm când avem date valide sau puțin înainte
+      // Salvăm datele (doar ce are sens pentru grafic)
       if (i > windowSize) { 
           metrics.push({
             date,
@@ -63,6 +66,7 @@ export async function getBitcoinMetrics(): Promise<MetricPoint[]> {
     return metrics;
   } catch (error) {
     console.error("Error fetching metrics:", error);
+    // Fallback: Returnăm un array gol ca să nu crape pagina, UI-ul va arăta un mesaj de eroare prietenos
     return [];
   }
 }
