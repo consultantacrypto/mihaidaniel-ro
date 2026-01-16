@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
-import { LineChart, RefreshCw, AlertTriangle, Layers } from 'lucide-react';
+import { LineChart, RefreshCw, AlertTriangle, Layers, Clock } from 'lucide-react';
 
 // Importăm dinamic ambele grafice
 const TwoYearMAChart = dynamic(() => import('@/components/TwoYearMAChart'), { 
@@ -16,17 +16,22 @@ export default function PeakSignalsContainer() {
   const [data, setData] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [lastUpdate, setLastUpdate] = useState<string>("");
 
   const fetchData = async () => {
     try {
-      setLoading(true);
-      setError(false);
-      // Cerem 1000 de săptămâni (aprox 19 ani) pentru a avea destul istoric pentru mediile lungi
+      // Nu punem setLoading(true) aici pentru ca refresh-ul să fie "invizibil" (fără flicker)
       const res = await fetch('https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1w&limit=1000');
       if (!res.ok) throw new Error("Binance API error");
       const rawData = await res.json();
       const processedData = processData(rawData);
       setData(processedData);
+      
+      // Actualizăm ora
+      const now = new Date();
+      setLastUpdate(now.toLocaleTimeString('ro-RO', { hour: '2-digit', minute: '2-digit' }));
+      
+      setError(false);
     } catch (err) {
       console.error(err);
       setError(true);
@@ -35,7 +40,18 @@ export default function PeakSignalsContainer() {
     }
   };
 
-  useEffect(() => { fetchData(); }, []);
+  useEffect(() => {
+    // 1. Prima încărcare
+    fetchData();
+
+    // 2. Auto-Refresh la fiecare 60 secunde (1 minut)
+    const interval = setInterval(() => {
+        fetchData();
+    }, 60000);
+
+    // Curățăm intervalul când ieși de pe pagină
+    return () => clearInterval(interval);
+  }, []);
 
   if (error) return (
     <div className="w-full h-96 bg-[#0b1221] border border-red-500/30 rounded-2xl flex flex-col items-center justify-center p-6 text-center">
@@ -54,6 +70,14 @@ export default function PeakSignalsContainer() {
 
   return (
     <div className="space-y-12">
+        {/* INFO BAR: Ultima actualizare */}
+        <div className="flex justify-end px-2">
+            <div className="flex items-center gap-2 text-[10px] text-gray-500 font-mono uppercase tracking-wider bg-white/5 px-3 py-1 rounded-full">
+                <Clock size={10} className="animate-pulse text-green-500"/>
+                Actualizat: {lastUpdate} (Auto-Refresh 60s)
+            </div>
+        </div>
+
         {/* GRAFIC 1: 2-Year MA Multiplier */}
         <TwoYearMAChart data={data} />
         
@@ -72,22 +96,20 @@ export default function PeakSignalsContainer() {
   );
 }
 
-// 🧠 LOGICA MATEMATICĂ
+// 🧠 LOGICA MATEMATICĂ (Rămâne la fel)
 function processData(rawData: any[]) {
   const prices = rawData.map((d: any) => parseFloat(d[4]));
   const dates = rawData.map((d: any) => d[0]);
   const metrics = [];
 
-  // Configurare ferestre (Săptămâni)
-  const w2yr = 104; // ~2 Ani (pentru primul grafic)
-  const w111d = 16; // ~111 Zile (pentru Pi Cycle)
-  const w350d = 50; // ~350 Zile (pentru Pi Cycle)
+  const w2yr = 104; 
+  const w111d = 16; 
+  const w350d = 50; 
 
   for (let i = 0; i < prices.length; i++) {
     const date = new Date(dates[i]).toLocaleDateString('ro-RO', { year: '2-digit', month: 'short' });
     const price = prices[i];
     
-    // Calcul 2-Year MA
     let ma2yr = null;
     if (i >= w2yr) {
        let sum = 0;
@@ -95,7 +117,6 @@ function processData(rawData: any[]) {
        ma2yr = sum / w2yr;
     }
 
-    // Calcul Pi Cycle (111 DMA & 350 DMA)
     let ma111 = null;
     let ma350x2 = null;
     
@@ -108,10 +129,9 @@ function processData(rawData: any[]) {
     if (i >= w350d) {
         let sum = 0;
         for (let j = 0; j < w350d; j++) sum += prices[i - j];
-        ma350x2 = (sum / w350d) * 2; // Cheia: Multiplicatorul x2
+        ma350x2 = (sum / w350d) * 2; 
     }
 
-    // Salvăm doar dacă avem măcar o medie calculată (ca să nu avem grafic gol la început)
     if (i > w350d) {
         metrics.push({
             date,
