@@ -5,8 +5,8 @@ import AffiliateSection from '@/components/AffiliateSection';
 import TickerTape from '@/components/TickerTape'; 
 import InstitutionalTracker from '@/components/InstitutionalTracker';
 import WhaleWallWidget from '@/components/WhaleWallWidget'; 
-// ✅ IMPORT NOU: Radarul Psihologic (Long/Short)
-import SmartMoneyRadar from '@/components/SmartMoneyRadar';
+// ✅ IMPORT NOU: Altcoin Season Widget
+import AltcoinSeasonWidget from '@/components/AltcoinSeasonWidget';
 
 import { getGlobalData, getFearGreed } from '@/lib/market-api';
 import { Activity, DollarSign, Layers, BarChart3, Zap, Calendar, Flame, Clock, TrendingUp, Skull, ArrowRight, BrainCircuit, LineChart } from 'lucide-react';
@@ -242,8 +242,8 @@ export default async function MarketPage() {
                         </div>
                     </Link>
 
-                    {/* ✅ 2. SMART MONEY RADAR (WIDGET NOU) */}
-                    <SmartMoneyRadar />
+                    {/* ✅ 2. ALTCOIN SEASON (Widget Nou) */}
+                    <AltcoinSeasonWidget />
 
                     {/* 3. WHALE WALL */}
                     <WhaleWallWidget />
