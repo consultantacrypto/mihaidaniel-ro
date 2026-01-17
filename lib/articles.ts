@@ -1,4 +1,82 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: FURTUL DE $282 MILIOANE (18 IAN SEARA)
+  {
+    id: '282-million-dollar-hardware-wallet-heist-zachxbt-monero-thorchain',
+    slug: 'furtul-secolului-282-milioane-dolari-hardware-wallet-jaf-crypto',
+    title: '🚨 FURTUL SECOLULUI: CUM SĂ PIERZI $282 MILIOANE DINTR-UN HARDWARE WALLET! JAFUL CARE A ZGUDUIT PIAȚA AZI',
+    summary: 'Credeai că hardware wallet-ul te face intangibil? O balenă a pierdut astăzi 282 milioane $ prin inginerie socială. Află cum hackerii au spălat banii instant folosind Monero și THORChain.',
+    category: 'SECURITATE & ALERTĂ',
+    image: '/furtul282.jpg',
+    date: '18 Jan 2026',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'bearish', // Frica în piață, muniție pentru bănci
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-red-900/30 text-red-400 border border-red-500/50 px-3 py-1 rounded text-xs font-bold uppercase animate-pulse">🚨 Alertă Critică</span>
+        <span class="bg-purple-500/20 text-purple-300 border border-purple-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🕵️‍♂️ ZachXBT Investigation</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Credeai că dacă ai un Ledger sau Trezor ești intangibil? Mai gândește-te. Astăzi, comunitatea crypto a primit o lovitură de grație: o singură victimă a pierdut o avere colosală de peste 282 Milioane de Dolari.</p>
+      
+      <p class="mb-6 text-gray-300">Detectivul on-chain ZachXBT a scos la iveală detaliile unui jaf care pare scenariu de film. Nu a fost un hack sofisticat de cod. A fost o manipulare psihologică (Social Engineering).</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Jaful: $282M în BTC și LTC, dispăruți într-o clipă</h3>
+      <p class="mb-4 text-gray-300">Victima (o "balenă" necunoscută încă) deținea sume enorme în Bitcoin și Litecoin. Prin metode de inginerie socială (probabil un apel fals de la "suport", un site clonă sau un email de phishing extrem de realist), atacatorul a convins victima să semneze o tranzacție sau să-și dezvăluie datele de acces.</p>
+      
+      <div class="bg-red-900/10 border border-red-500/20 p-4 rounded-xl mb-6 text-center">
+        <p class="text-xl font-black text-red-400 mb-1">REZULTATUL:</p>
+        <p class="text-white font-bold">Fondurile au fost drenate instantaneu.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Marea "Spălare": Monero (XMR) și THORChain</h3>
+      <p class="mb-4 text-gray-300">Ce faci cu 280 de milioane furați? Trebuie să-i faci nevăzuți. Hackerul a acționat profesionist și rapid:</p>
+
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div class="bg-[#0b1221] p-4 rounded-xl border border-orange-500/20">
+              <h4 class="font-bold text-orange-400 flex items-center gap-2 mb-2">🕵️ Efectul Monero (XMR)</h4>
+              <p class="text-sm text-gray-300">O parte din LTC și BTC a fost schimbată imediat în Monero, moneda care oferă anonimitate totală.</p>
+              <p class="text-xs text-orange-300 mt-2 italic"><strong>Impact:</strong> Această cerere masivă a cauzat un spike (creștere bruscă) al prețului XMR. Traderii au văzut lumânarea verde, dar era alimentată de bani furați.</p>
+          </div>
+          <div class="bg-[#0b1221] p-4 rounded-xl border border-blue-500/20">
+              <h4 class="font-bold text-blue-400 flex items-center gap-2 mb-2">⚡ Ruta THORChain</h4>
+              <p class="text-sm text-gray-300">Pentru a evita KYC-ul, hackerul a folosit THORChain – un protocol descentralizat care permite swap-uri între blockchain-uri diferite.</p>
+              <ul class="text-xs text-blue-300 mt-2 space-y-1 font-mono">
+                  <li>A schimbat 818 BTC ($78M) în:</li>
+                  <li>➢ Ethereum ($64.5M)</li>
+                  <li>➢ XRP ($6.5M)</li>
+                  <li>➢ Litecoin ($5.8M)</li>
+              </ul>
+          </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. De ce este o lovitură pentru noi toți? (Context Politic)</h3>
+      <p class="mb-4 text-gray-300">Tati, ține minte discuția de ieri cu Brian Armstrong și băncile care vor să blocheze crypto. Acest jaf este muniție gratuită pentru bănci.</p>
+
+      <div class="bg-gray-800/50 p-4 rounded-lg border border-gray-700 mb-6">
+        <p class="mb-2"><span class="text-gray-400">Argumentul Băncilor:</span> <em class="text-white">"Vedeți? Crypto e nesigur. De aia avem nevoie de bănci care să vă păzească banii."</em></p>
+        <p class="mb-0"><span class="text-green-400 font-bold">Realitatea:</span> Nu crypto e nesigur, ci educația utilizatorilor. Dar la TV, titlul va fi "Crypto Scam", nu "Eroare Umană".</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. Lecția de Supraviețuire</h3>
+      <p class="mb-4 text-gray-300 font-bold">Dacă o balenă cu $280M poate fi păcălită, oricine poate fi. Hardware wallet-ul te protejează de viruși, dar nu te protejează de tine însuți.</p>
+
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-red-300 font-bold">
+        <li>Nu-ți băga niciodată seed phrase-ul în calculator sau telefon.</li>
+        <li>Nimeni de la "Suport" nu te va suna niciodată să-ți ceară date.</li>
+        <li>Verifică de 3 ori adresa și contractul pe ecranul dispozitivului hardware, nu pe monitor.</li>
+      </ul>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-red-900/20 p-6 rounded-2xl border border-red-500/40 shadow-lg text-center">
+        <h4 class="text-xl font-bold text-red-400 mb-2">Verdictul:</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed font-bold">
+            Banii sunt probabil pierduți pentru totdeauna în mixere și Monero. <br/>
+            Pentru noi, rămâne avertismentul: <span class="text-white">În 2026, hackerii nu sparg coduri, sparg oameni.</span>
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: SCANDAL COINBASE FOX NEWS (18 IAN)
   {
     id: 'coinbase-ceo-fox-news-banks-sabotage-trump-agenda-january-2026',
