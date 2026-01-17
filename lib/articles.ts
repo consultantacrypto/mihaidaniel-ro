@@ -6,8 +6,8 @@ export const articles = [
     title: '🚨 FURTUL SECOLULUI: CUM SĂ PIERZI $282 MILIOANE DINTR-UN HARDWARE WALLET! JAFUL CARE A ZGUDUIT PIAȚA AZI',
     summary: 'Credeai că hardware wallet-ul te face intangibil? O balenă a pierdut astăzi 282 milioane $ prin inginerie socială. Află cum hackerii au spălat banii instant folosind Monero și THORChain.',
     category: 'SECURITATE & ALERTĂ',
-    image: '/furtul282.jpg',
-    date: '18 Jan 2026',
+    image: '/jaf.jpg',
+    date: '17 Jan 2026',
     readTime: '5 min',
     author: 'Mihai Daniel',
     impact: 'bearish', // Frica în piață, muniție pentru bănci
