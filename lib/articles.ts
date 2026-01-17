@@ -6,7 +6,7 @@ export const articles = [
     title: '💣 SCANDAL MONSTRU PE FOX NEWS! CEO-UL COINBASE ARUNCĂ BOMBA: "BĂNCILE ÎL SABOTEAZĂ PE TRUMP ȘI VOR SĂ VĂ CONTROLEZE BANII!"',
     summary: 'Brian Armstrong a detonat nucleara: Băncile lucrează activ în spatele cortinei pentru a bloca agenda pro-crypto a Președintelui. Află detaliile războiului civil financiar.',
     category: 'RĂZBOI BANCAR & POLITICĂ',
-    image: '/coinbaseclarity.jpg',
+    image: '/coinbasenews.jpg',
     date: '17 Jan 2026',
     readTime: '4 min',
     author: 'Mihai Daniel',
