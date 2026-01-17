@@ -1,4 +1,66 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: SCANDAL COINBASE FOX NEWS (18 IAN)
+  {
+    id: 'coinbase-ceo-fox-news-banks-sabotage-trump-agenda-january-2026',
+    slug: 'scandal-fox-news-coinbase-ceo-banci-sabotaj-trump',
+    title: '💣 SCANDAL MONSTRU PE FOX NEWS! CEO-UL COINBASE ARUNCĂ BOMBA: "BĂNCILE ÎL SABOTEAZĂ PE TRUMP ȘI VOR SĂ VĂ CONTROLEZE BANII!"',
+    summary: 'Brian Armstrong a detonat nucleara: Băncile lucrează activ în spatele cortinei pentru a bloca agenda pro-crypto a Președintelui. Află detaliile războiului civil financiar.',
+    category: 'RĂZBOI BANCAR & POLITICĂ',
+    image: '/coinbasescandal.jpg',
+    date: '17 Jan 2026',
+    readTime: '4 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Adevărul iese la iveală -> Bullish Long Term
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-red-500/20 text-red-300 border border-red-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🔥 Breaking News</span>
+        <span class="bg-orange-500/20 text-orange-300 border border-orange-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🏦 Banks vs Crypto</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">S-au scos mănușile! Brian Armstrong, șeful Coinbase, a detonat nucleara în direct la Fox News. Ceea ce trebuia să fie un interviu despre reglementare s-a transformat într-un rechizitoriu dur la adresa marilor bănci.</p>
+      
+      <p class="mb-6 text-gray-300">Mesajul a fost clar, brutal și fără echivoc: Băncile sunt terifiate și lucrează activ "în spatele cortinei" pentru a bloca agenda pro-crypto a Președintelui.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Acuzația Supremă: "Vor să oprească progresul"</h3>
+      <p class="mb-4 text-gray-300">Armstrong a dezvăluit motivul real pentru care legile crypto întârzie. Nu e vorba de protecția consumatorului, ci de protecția monopolului bancar.</p>
+      
+      <div class="bg-red-900/10 border border-red-500/20 p-4 rounded-xl mb-6">
+        <p class="mb-2"><span class="text-white font-bold">Ce fac băncile?</span> Fac lobby agresiv la senatori pentru a introduce clauze care fac imposibilă funcționarea crypto (cum ar fi interzicerea dobânzilor la stablecoins).</p>
+        <p class="mb-0"><span class="text-white font-bold">De ce?</span> Frica de a pierde controlul. Dacă tu îți poți ține banii pe blockchain și primești randament real, de ce i-ai mai ține la JP Morgan cu dobândă 0.01%?</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Sabotarea Agendei Prezidențiale</h3>
+      <p class="mb-4 text-gray-300">Aici e "carnea" subiectului. Știm că administrația actuală vrea să facă din SUA "Capitala Crypto". Dar Armstrong spune că Băncile vs. Casa Albă este noul război civil financiar.</p>
+
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-300">
+        <li>Bancherii încearcă să încetinească adopția (slow down adoption) pentru a câștiga timp să-și construiască propriile sisteme controlate.</li>
+        <li>Ei nu vor să dispară crypto, ei vor ca crypto să fie al lor.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. CONEXIUNEA CRUCIALĂ: Clarity Act (De ce a picat votul?)</h3>
+      <p class="mb-4 text-gray-300">Tati, acum se leagă totul cu știrea de ieri! <strong>Clarity Act a fost amânat pe 15 ianuarie fix din acest motiv.</strong></p>
+      
+      <p class="mb-4 text-gray-300">Cuvintele lui Armstrong confirmă analiza noastră: lobby-ul bancar a intervenit în ultima secundă pentru a bloca legea, pentru că era prea bună pentru crypto și prea periculoasă pentru profiturile lor.</p>
+
+      <div class="bg-[#0b1221] p-4 rounded-lg border border-orange-500/20 mb-6">
+         <ul class="space-y-2 text-sm text-gray-300">
+            <li>➢ <strong>Ce voiau băncile?</strong> Control total asupra DeFi și interzicerea stablecoin-urilor competitive.</li>
+            <li>➢ <strong>Ce a făcut Armstrong?</strong> A refuzat compromisul și acum a ieșit public să-i expună.</li>
+         </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. Concluzie: Lupta e Reală</h3>
+      <p class="mb-4 text-gray-300">Nu mai e teorie a conspirației. Când CEO-ul celei mai mari companii crypto din SUA spune live la TV că "Sistemul vrea să ne oprească", înseamnă că suntem în faza finală a bătăliei.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-red-900/20 p-6 rounded-2xl border border-red-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-red-400 mb-2">Verdictul:</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed font-bold">
+            Băncile știu că pierd teren. Și un animal încolțit este cel mai periculos.
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: UMBRELE ALGORITMILOR (17 IAN)
   {
     id: 'umbrele-algoritmilor-bot-polymarket-ianuarie-2026',
