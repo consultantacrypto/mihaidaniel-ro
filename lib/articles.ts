@@ -1,4 +1,99 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: RECAPITULARE SĂPTĂMÂNALĂ (19 IAN)
+  {
+    id: 'weekly-recap-rotation-wall-street-vs-crypto-jan-19-2026',
+    slug: 'saptamana-in-care-banii-s-au-mutat-wall-street-vs-bitcoin',
+    title: '🚨 SĂPTĂMÂNA ÎN CARE BANII "S-AU MUTAT": Wall Street a Pierdut $650 Miliarde, Băncile au Declarat Război, iar Bitcoin a Rămas Rege',
+    summary: 'O lecție de istorie financiară. În timp ce acțiunile au sângerat, Crypto a absorbit șocul. Vezi cele 3 evenimente cruciale care îți dictează portofoliul de mâine.',
+    category: 'WEEKLY RECAP & MACRO',
+    image: '/rotatia.jpg',
+    date: '18 Jan 2026',
+    readTime: '6 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Rotația e confirmată
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">📅 Recapitulare 12-18 Ian</span>
+        <span class="bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🔄 The Great Rotation</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Dacă te uiți în urmă la săptămâna 12-18 Ianuarie 2026, vei vedea momentul exact în care "plăcile tectonice" financiare s-au mișcat. Nu a fost o săptămână de tranzacționare, a fost o lecție de istorie.</p>
+      
+      <p class="mb-6 text-gray-300">Analizând datele, am văzut că cele mai mari temeri ale voastre sunt legate de reglementare (ANAF/MiCA) și de crash-uri. Ei bine, săptămâna asta le-am avut pe toate, dar cu un final neașteptat.</p>
+      
+      <p class="mb-8 text-white font-bold italic border-l-4 border-blue-500 pl-4">Iată cele 3 evenimente cruciale care îți vor dicta portofoliul săptămâna viitoare:</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Marea Rotație: De ce fug banii de pe Bursă?</h3>
+      <p class="mb-4 text-gray-300">În timp ce mulți așteptau un crash pe Crypto, crash-ul a venit pe... Wall Street.</p>
+
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+        <div class="bg-red-900/10 border border-red-500/20 p-4 rounded-xl">
+            <h4 class="text-red-400 font-bold mb-1">📉 Șocul (Wall Street)</h4>
+            <p class="text-sm text-gray-300">Acțiunile americane au pierdut <strong>$650 de Miliarde</strong> în valoare într-o singură săptămână.</p>
+        </div>
+        <div class="bg-green-900/10 border border-green-500/20 p-4 rounded-xl">
+            <h4 class="text-green-400 font-bold mb-1">📈 Câștigătorul (Crypto)</h4>
+            <p class="text-sm text-gray-300">Crypto a adăugat <strong>$190 de Miliarde</strong> în același interval.</p>
+        </div>
+      </div>
+
+      <p class="mb-6 text-gray-300"><strong>De ce contează?</strong> Este confirmarea teoriei despre care am scris în "Marea Evacuare". Investitorii vând activele "umflate" (acțiunile la maxim istoric) și cumpără activele "sub-evaluate" (Bitcoin, care mai are 23% până la ATH). Banii nu dispar, doar își schimbă buzunarul.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Războiul Vădit: Băncile vs. Clarity Act</h3>
+      <p class="mb-4 text-gray-300">Mulți m-ați întrebat de ce a picat legea crypto (Clarity Act) joi. Răspunsul l-am primit vineri, direct de la CEO-ul Coinbase: <strong>Băncile au blocat-o.</strong></p>
+      
+      <p class="mb-4 text-gray-300">Așa cum scriam în articolele despre MiCA și DAC8, sistemul tradițional nu vrea să-ți dea libertate. Vor să interzică stablecoins să ofere dobândă pentru ca tu să fii obligat să ții banii la ei cu 0.1%.</p>
+      
+      <div class="bg-[#0b1221] p-4 rounded-lg border border-yellow-500/20 mb-6">
+         <p class="text-yellow-400 font-bold text-sm mb-0">⚠️ Lecția: Următoarea perioadă va fi un război de gherilă legislativ. Fii pregătit pentru volatilitate politică.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Avertismentul de Securitate: $282 Milioane pierdute</h3>
+      <p class="mb-4 text-gray-300">Văd în topul citirilor articolul despre "Address Poisoning". Săptămâna asta am avut confirmarea supremă: o singură persoană a pierdut $282 Milioane dintr-un hardware wallet.</p>
+      
+      <p class="mb-6 text-gray-300">Nu a fost hack de cod, a fost "inginerie socială".</p>
+      
+      <div class="bg-red-900/20 p-4 rounded-xl border border-red-500/40 mb-8 text-center">
+         <p class="text-white font-bold mb-0">🛡️ Sfatul Tati: În 2026, cel mai mare risc nu e piața, ești TU. Verifică de 3 ori înainte să semnezi orice.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 mt-12 mb-6">🔮 Ce ne așteaptă de Luni, 19 Ianuarie?</h3>
+      <p class="mb-4 text-gray-300">Intrăm într-o nouă săptămână de foc:</p>
+
+      <ul class="space-y-4 mb-8">
+        <li class="flex items-start gap-3">
+            <span class="bg-blue-500/20 p-1 rounded text-blue-400 mt-1">⚖️</span>
+            <div>
+                <strong class="text-white block">Curtea Supremă</strong>
+                <span class="text-gray-400 text-sm">Încă așteptăm decizia pe Tarifele lui Trump (care poate prăbuși Dolarul și ridica Bitcoin).</span>
+            </div>
+        </li>
+        <li class="flex items-start gap-3">
+            <span class="bg-purple-500/20 p-1 rounded text-purple-400 mt-1">🇰🇷</span>
+            <div>
+                <strong class="text-white block">Coreea de Sud</strong>
+                <span class="text-gray-400 text-sm">Corporațiile încep să aibă acces la piață (după ridicarea ban-ului).</span>
+            </div>
+        </li>
+        <li class="flex items-start gap-3">
+            <span class="bg-orange-500/20 p-1 rounded text-orange-400 mt-1">₿</span>
+            <div>
+                <strong class="text-white block">Bitcoin</strong>
+                <span class="text-gray-400 text-sm">Se luptă să transforme rezistența în suport. Dacă Wall Street continuă să scadă luni, Bitcoin ar putea fi din nou "Safe Haven".</span>
+            </div>
+        </li>
+      </ul>
+
+      <div class="mt-8 border-t border-gray-800 pt-6">
+        <h4 class="text-xl font-bold text-white mb-2">Concluzie:</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            Nu paria împotriva banilor care fug de inflație și bănci. Săptămâna asta a dovedit că Crypto e mai rezilient decât Nasdaq-ul. <br/><br/>
+            <strong>Rămâi vigilent, rămâi on-chain.</strong>
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: FURTUL DE $282 MILIOANE (18 IAN SEARA)
   {
     id: '282-million-dollar-hardware-wallet-heist-zachxbt-monero-thorchain',
