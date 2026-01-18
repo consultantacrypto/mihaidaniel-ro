@@ -1,4 +1,75 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: STATISTICA GROAZEI - HACKS (18 IAN SEARA)
+  {
+    id: '80-percent-crypto-projects-die-after-hack-immunefi-report',
+    slug: 'statistica-groazei-80-la-suta-proiecte-hacuite-mor',
+    title: '💀 STATISTICA GROAZEI: 80% Dintre Proiectele Crypto Hăcuite MOR Definitiv. Semnele Că Trebuie Să Vinzi IMEDIAT!',
+    summary: 'Mitchell Amador (Immunefi) avertizează: Un hack este de obicei sentința la moarte. Află de ce 8 din 10 proiecte nu își mai revin și cum să eviți pierderea totală.',
+    category: 'SECURITATE & RISK MANAGEMENT',
+    image: '/nuisirevin.jpg',
+    date: '18 Jan 2026',
+    readTime: '4 min',
+    author: 'Mihai Daniel',
+    impact: 'bearish', // Adevărul doare
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-red-600/20 text-red-300 border border-red-600/30 px-3 py-1 rounded text-xs font-bold uppercase">📉 Hard Truth</span>
+        <span class="bg-gray-700/30 text-gray-300 border border-gray-600/30 px-3 py-1 rounded text-xs font-bold uppercase">🛡️ Immunefi Data</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Credeai că „Buy the Dip” e valabil și când un proiect este spart? Mai gândește-te. O nouă analiză devastatoare arată că, în majoritatea cazurilor, un hack este începutul sfârșitului.</p>
+      
+      <p class="mb-6 text-gray-300">După șocul de dimineață cu jaful de 282 de milioane, vine o veste și mai proastă de la Immunefi (gigantul de securitate Web3). CEO-ul lor, Mitchell Amador, a pus pe masă o cifră care ar trebui să fie un avertisment pentru orice investitor: <strong>Aproape 80% dintre proiectele lovite de un hack major nu își mai revin niciodată.</strong></p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. De ce mor proiectele? (Nu e doar din cauza banilor)</h3>
+      <p class="mb-4 text-gray-300">Ai crede că proiectele mor pentru că s-a golit trezoreria. Fals. Raportul arată că adevărata cauză este <strong>Colapsul Operațional</strong>.</p>
+
+      <ul class="space-y-4 mb-6">
+        <li class="bg-[#0b1221] p-4 rounded-xl border border-red-500/20">
+            <strong class="text-red-400 block mb-1">⏰ Primele ore sunt critice</strong>
+            <span class="text-gray-400 text-sm">Echipele nu au un plan de criză. În loc să oprească contractele inteligente ("Pause Contract"), fondatorii se ceartă între ei sau intră în panică.</span>
+        </li>
+        <li class="bg-[#0b1221] p-4 rounded-xl border border-orange-500/20">
+            <strong class="text-orange-400 block mb-1">😶 Tăcerea Ucigașă</strong>
+            <span class="text-gray-400 text-sm">De frica reputației, echipele aleg să tacă și să nu comunice cu utilizatorii. Această liniște alimentează panica, iar comunitatea vinde tot.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. "Fereastra Morții"</h3>
+      <p class="mb-4 text-gray-300">Raportul subliniază că primele ore după un exploit sunt cele mai destructive. Dacă echipa ezită, hackerii continuă să dreneze fonduri, iar investitorii pierd încrederea.</p>
+      
+      <div class="border-l-4 border-red-500 pl-4 py-2 my-4 bg-red-900/10">
+        <p class="text-white italic font-bold">"Odată pierdută încrederea (Trust Breakdown), lichiditatea dispare și proiectul intră în spirală descendentă."</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Lecția pentru Tine: Cum să nu rămâi cu "Punga"</h3>
+      <p class="mb-4 text-gray-300">Dacă deții un token și apare o știre despre un hack/exploit, urmează aceste reguli de aur:</p>
+
+      <div class="space-y-3 mb-8">
+        <div class="flex items-start gap-3">
+            <span class="text-red-500 font-bold">❌</span>
+            <p class="text-gray-300 text-sm"><strong>Nu aștepta anunțul oficial:</strong> Dacă vezi graficul picând vertical și zvonuri de hack, statistica spune că ai 80% șanse să pierzi tot dacă nu ieși.</p>
+        </div>
+        <div class="flex items-start gap-3">
+            <span class="text-yellow-500 font-bold">⚠️</span>
+            <p class="text-gray-300 text-sm"><strong>Verifică comunicarea:</strong> Dacă echipa tace de 2 ore, proiectul e probabil condamnat.</p>
+        </div>
+        <div class="flex items-start gap-3">
+            <span class="text-blue-500 font-bold">🧠</span>
+            <p class="text-gray-300 text-sm"><strong>Nu fi erou:</strong> Nu încerca să "susții proiectul" la greu. Istoria arată că majoritatea nu se ridică.</p>
+        </div>
+      </div>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-gray-800 p-6 rounded-2xl border border-gray-600 shadow-lg">
+        <h4 class="text-xl font-bold text-white mb-2">Concluzie:</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            Securitatea în Web3 este încă fragilă. Nu investi în proiecte care nu au un plan de urgență public.<br/><br/>
+            <span class="text-red-400 font-bold">Când auzi sirenele de hack, fugi. Nu sta să vezi dacă sting incendiul, pentru că în 8 din 10 cazuri, casa arde din temelii.</span>
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: RECAPITULARE SĂPTĂMÂNALĂ (19 IAN)
   {
     id: 'weekly-recap-rotation-wall-street-vs-crypto-jan-19-2026',
