@@ -1,4 +1,70 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: ALERTĂ MATINALĂ - TEHNIC VS MACRO (19 IAN)
+  {
+    id: 'morning-alert-smart-money-short-80k-clarity-act-jan-21',
+    slug: 'alerta-matinala-smart-money-pariaza-80k-clarity-act',
+    title: '📉 ALERTĂ MATINALĂ: Capcană pentru Tauri sau Rotație Reală? De ce "Smart Money" Pariază pe $80k și Data de FOC: 21 Ianuarie',
+    summary: 'Euforia din weekend se lovește de zidul analizei tehnice. Traderii profesioniști văd zona $97k-$107k ca o capcană. Află de ce ziua de Miercuri (21 Ian) decide totul.',
+    category: 'ANALIZĂ TEHNICĂ & MACRO',
+    image: '/21ian.jpg',
+    date: '19 Jan 2026',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'bearish', // Precauție maximă
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-orange-500/20 text-orange-300 border border-orange-500/30 px-3 py-1 rounded text-xs font-bold uppercase">⚠️ Zona de Risc</span>
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">📅 21 Ianuarie</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Este Luni, 19 Ianuarie. Piețele s-au redeschis, iar euforia din weekend se lovește de zidul de beton al analizei tehnice.</p>
+      
+      <p class="mb-6 text-gray-300">Deși am văzut o creștere recentă (acea "rotație" dinspre acțiuni), structura macro a Bitcoin rămâne, tehnic vorbind, Bearish (de scădere). Bitcoin este blocat într-o mișcare laterală (sideways) încă din Noiembrie. Și în trading, o pauză lungă după o scădere este, de obicei, doar o oprire înainte de următoarea cădere.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Zona Interzisă: $97.000 - $107.000 (Capcana de Short)</h3>
+      <p class="mb-4 text-gray-300">Sursa noastră de analiză instituțională confirmă o strategie clară: Orice urcare este o oportunitate de vânzare.</p>
+
+      <div class="bg-[#0b1221] border-l-4 border-red-500 p-5 rounded-r-xl mb-6">
+        <ul class="space-y-3">
+            <li class="text-gray-300"><strong class="text-red-400">Strategia:</strong> Traderii mari nu pariază pe un singur preț. Ei fac DCA (Dollar Cost Average) pe Short.</li>
+            <li class="text-gray-300"><strong class="text-red-400">Execuția:</strong> Între $97k și $107k, ordinele de vânzare sunt stivuite. Dacă Bitcoin urcă acolo, va întâmpina o presiune colosală.</li>
+            <li class="text-gray-300"><strong class="text-red-400">Ținta:</strong> Dacă structura nu se schimbă, direcția este clară: <strong>sub $80.000</strong>.</li>
+        </ul>
+        <p class="mt-4 text-xs text-gray-500 italic">Lecția: Nu te entuziasma la fiecare lumânare verde mică. Până nu trecem decisiv de 107k, suntem încă în teritoriul urșilor.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Calendarul Politic: 21 Ianuarie (Miercuri)</h3>
+      <p class="mb-4 text-gray-300">Aceasta este data pe care trebuie să o încercuiești cu roșu. <strong>Se publică textul oficial al CLARITY Act.</strong></p>
+      
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div class="bg-blue-900/10 p-4 rounded-xl border border-blue-500/20">
+              <h4 class="font-bold text-blue-400 mb-2">De ce contează?</h4>
+              <p class="text-sm text-gray-300">Până acum am avut doar zvonuri. Miercuri, instituțiile vor putea citi negru pe alb regulile jocului: cine reglementează, cum sunt tratate exchange-urile, ce facem cu DeFi.</p>
+          </div>
+          <div class="bg-purple-900/10 p-4 rounded-xl border border-purple-500/20">
+              <h4 class="font-bold text-purple-400 mb-2">Impactul</h4>
+              <ul class="text-sm text-gray-300 space-y-1">
+                  <li>🟢 <strong>Text favorabil:</strong> Posibil impuls de scurtă durată (Bullish).</li>
+                  <li>🔴 <strong>Text restrictiv:</strong> Confirmarea trendului de scădere spre $80k.</li>
+              </ul>
+          </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Ethereum (ETH): În Așteptarea Sentinței</h3>
+      <p class="mb-4 text-gray-300">Ethereum este cel mai sensibil la Clarity Act. Dacă legea definește clar utilitatea token-urilor, ETH ar putea primi o gură de oxigen.</p>
+      <p class="mb-6 text-gray-300">Dar, în acest moment, ETH este doar un pasager în mașina condusă de Bitcoin. Dacă BTC merge la $80k, ETH va suferi disproporționat.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-orange-900/20 p-6 rounded-2xl border border-orange-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-orange-400 mb-2">Sfatul Tati (Concluzie):</h4>
+        <p class="text-gray-300 mb-4 font-bold">Suntem prinși între două forțe: Fundamental (Bullish - rotație) vs. Tehnic (Bearish - grafic).</p>
+        <p class="text-white mb-0 leading-relaxed">
+            Dacă ești trader, <strong>zona de $97k-$100k este zona de risc maxim</strong>. <br/>
+            Dacă ești investitor, <strong>ai răbdare până Miercuri (21 Ian)</strong>. Nu te arunca în fața trenului până nu vezi textul legii.
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: STATISTICA GROAZEI - HACKS (18 IAN SEARA)
   {
     id: '80-percent-crypto-projects-die-after-hack-immunefi-report',
