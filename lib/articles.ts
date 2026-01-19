@@ -1,4 +1,75 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: TRUMP VS EUROPA & GROENLANDA (19 IAN SEARA)
+  {
+    id: 'trump-tariffs-greenland-crypto-crash-jan-19-2026',
+    slug: 'trump-vs-europa-tarife-groenlanda-crypto-crash',
+    title: '📉 TRUMP vs. EUROPA: TARIFELE PE "GROENLANDA" AU ȘTERS 3% DIN PIAȚA CRYPTO ÎN CÂTEVA ORE. ADIO, "AUR DIGITAL"?',
+    summary: 'Nu e hack, e geopolitică. Tarifele punitive anunțate de Trump au cauzat lichidări de $763M. Află de ce Bitcoin a reacționat ca un activ de risc și ce urmează.',
+    category: 'MACRO & GEOPOLITICĂ',
+    image: '/deceazi19.jpg',
+    date: '19 Jan 2026',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'bearish', // Volatilitate politică
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-red-500/20 text-red-300 border border-red-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🌍 Război Comercial</span>
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">📉 $763M Rekt</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">București, 19 Ianuarie 2026. Dacă te-ai trezit azi și ai văzut portofoliul roșu, nu e din cauza unui hack și nici pentru că s-a stricat Bitcoin. E din cauza unui război comercial care tocmai a început.</p>
+      
+      <p class="mb-6 text-gray-300">Într-o mișcare surpriză, Președintele Trump a anunțat tarife punitive pe 8 țări europene. Rezultatul? O undă de șoc care a lovit nu doar bursele, ci și piața crypto, ștergând 763 de milioane de dolari din conturile traderilor cu levier în doar 12 ore.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. De la Groenlanda la Portofelul Tău</h3>
+      <p class="mb-4 text-gray-300">Pare absurd, dar cauza scăderii tale este... Groenlanda. Trump a anunțat tarife de 10% (care vor urca la 25% din februarie) pe bunuri din Marea Britanie, Germania, Franța, Olanda și țările nordice. Motivul? Refuzul acestora de a negocia statutul Groenlandei.</p>
+
+      <div class="bg-[#0b1221] p-4 rounded-xl border border-gray-700 mb-6">
+        <ul class="space-y-3">
+            <li class="text-gray-300 text-sm">🛑 <strong>Efectul:</strong> Investitorii urăsc războaiele comerciale. Ele înseamnă inflație mai mare și creștere economică mai mică.</li>
+            <li class="text-gray-300 text-sm">🏃 <strong>Reacția:</strong> Când apare frica ("Fear"), investitorii vând activele de risc pentru a face rost de cash (Dolar). Astăzi, Bitcoin s-a comportat ca un activ de risc, nu ca un refugiu.</li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Măcelul Lichidărilor ($763 Milioane)</h3>
+      <p class="mb-4 text-gray-300">Aceasta este partea educativă dureroasă. Bitcoin a scăzut "doar" cu 2.7% (sub $93k), dar sectoarele speculative (GameFi, Layer 2) au picat cu peste 8%.</p>
+
+      <div class="bg-red-900/10 border-l-4 border-red-500 p-4 rounded-r-xl mb-6">
+        <h4 class="text-red-400 font-bold mb-2">Lichidarea în lanț:</h4>
+        <p class="text-gray-300 text-sm leading-relaxed">
+            Cei care pariau pe creștere (Long) cu bani împrumutați au fost prinși pe picior greșit. Exchange-urile au închis automat pozițiile, vânzând forțat. <br/>
+            <strong>Rezultat:</strong> $763 de milioane s-au evaporat din piață în jumătate de zi.
+        </p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Mitul "Aurului Digital" se Clatină?</h3>
+      <p class="mb-4 text-gray-300">Mulți analiști spun: <em>"Dacă Bitcoin e Aur Digital, de ce scade când e criză?"</em> Răspunsul e simplu: <strong>Încă nu suntem acolo.</strong></p>
+      <p class="mb-6 text-gray-300">În 2026, Bitcoin este încă tranzacționat de instituții ca un "Tech Stock". Când Nasdaq scade din cauza tarifelor, roboții de trading vând și Bitcoin.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. Ce Urmează? (Partea Bună)</h3>
+      <p class="mb-4 text-gray-300">Totuși, să nu disperăm. Aceasta este o reacție "la cald" (knee-jerk reaction).</p>
+
+      <div class="bg-green-900/10 border border-green-500/20 p-5 rounded-xl mb-8">
+         <div class="flex items-center gap-3 mb-2">
+            <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+            <strong class="text-green-400">Predicția Standard Chartered:</strong>
+         </div>
+         <p class="text-gray-300 text-sm">
+            Geoff Kendrick își menține predicția: <strong>Bitcoin la $150.000 până la finalul anului</strong>. <br/>
+            Tarifele slăbesc monedele fiat (Euro/Lira) pe termen lung, ceea ce, paradoxal, va împinge oamenii înapoi spre Bitcoin.
+         </p>
+      </div>
+
+      <div class="mt-8 border-t border-gray-800 pt-6">
+        <h4 class="text-xl font-bold text-white mb-2">Concluzie:</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            Azi a fost "Furtuna Perfectă": Tensiuni politice + Levier excesiv.<br/><br/>
+            Dacă ești investitor pe termen lung (Spot), acesta e doar zgomot de fundal. Dacă ești trader, azi ai primit o lecție despre de ce nu trebuie să dormi cu levier 10x când Trump are contul de X deschis.
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: ALERTĂ MATINALĂ - TEHNIC VS MACRO (19 IAN)
   {
     id: 'morning-alert-smart-money-short-80k-clarity-act-jan-21',
