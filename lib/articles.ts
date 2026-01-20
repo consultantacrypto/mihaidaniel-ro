@@ -1,4 +1,72 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: ETHEREUM EXCHANGE EXODUS (20 IAN SEARA)
+  {
+    id: 'ethereum-exchange-exodus-supply-shock-jan-20-2026',
+    slug: 'alarma-exchange-unde-dispare-ethereum-exod',
+    title: '📉 ALARMĂ PE EXCHANGE-URI: Unde Dispare Ethereum? Cel Mai Mare "Exod" din Istorie Golește Vistieriile Platformelor Centralizate!',
+    summary: 'Rezervele de ETH de pe Binance și Coinbase au atins minime istorice. Nu e panică, e o retragere strategică. Află ce este "Supply Shock" și de ce prețul poate exploda.',
+    category: 'ON-CHAIN & ETHEREUM',
+    image: '/ethexitian.jpg',
+    date: '20 Jan 2026',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Supply Shock = Preț Sus
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-blue-600/20 text-blue-300 border border-blue-600/30 px-3 py-1 rounded text-xs font-bold uppercase">🦄 Ethereum</span>
+        <span class="bg-orange-500/20 text-orange-300 border border-orange-500/30 px-3 py-1 rounded text-xs font-bold uppercase">📉 Low Balance Warning</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">București, 20 Ianuarie 2026. În timp ce prețul fluctuează din cauza știrilor politice, în "măruntaiele" blockchain-ului se desfășoară un fenomen tăcut, dar asurzitor prin implicații: Ethereum părăsește exchange-urile centralizate (CEX) într-un ritm fără precedent.</p>
+      
+      <p class="mb-6 text-gray-300">Datele on-chain confirmă o tendință care s-a accelerat în ultimele luni: rezervele de ETH de pe platforme precum Binance, Coinbase sau Kraken au atins minime istorice. Nu vorbim de vânzări de panică, ci de o retragere strategică masivă.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Datele: Marea Evacuare</h3>
+      <p class="mb-4 text-gray-300">Graficele de la firmele de analiză on-chain (precum Glassnode sau CryptoQuant) arată o pantă descendentă abruptă a balanțelor de ETH de pe exchange-uri.</p>
+      
+      <div class="bg-[#0b1221] p-4 rounded-xl border border-gray-700 mb-6">
+        <p class="text-gray-300 italic mb-0">
+            "Milioane de monede ETH au fost retrase și mutate în portofele private. În termeni simpli: <strong>'rafturile magazinelor' se golesc</strong>. Oferta lichidă, disponibilă imediat pentru vânzare, se subțiază pe zi ce trece."
+        </p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Destinația: Unde se duc banii? (Cei 3 Piloni)</h3>
+      <p class="mb-4 text-gray-300">Acest exod nu înseamnă că investitorii ies din piață. Din contră, înseamnă că se ancorează mai adânc în ecosistem:</p>
+
+      <div class="space-y-4 mb-8">
+        <div class="bg-indigo-900/10 p-4 rounded-xl border border-indigo-500/30">
+            <strong class="text-indigo-400 block mb-1">A. Staking-ul Masiv (Randament Pasiv)</strong>
+            <span class="text-gray-300 text-sm">În 2026, staking-ul de Ethereum a devenit "obligațiunea de stat" a internetului. Investitorii preferă să-și blocheze ETH-ul pentru un randament sigur, scoțându-l din circulație.</span>
+        </div>
+        <div class="bg-purple-900/10 p-4 rounded-xl border border-purple-500/30">
+            <strong class="text-purple-400 block mb-1">B. Migrația către Layer 2 (L2)</strong>
+            <span class="text-gray-300 text-sm">Utilizatorii mută ETH către Arbitrum, Optimism sau Base pentru DeFi și NFT-uri. ETH-ul devine "combustibil" activ, nu doar speculă.</span>
+        </div>
+        <div class="bg-gray-800/30 p-4 rounded-xl border border-gray-600/30">
+            <strong class="text-white block mb-1">C. Efectul Instituțional (ETF)</strong>
+            <span class="text-gray-300 text-sm">Instituțiile nu țin monedele pe Binance. Custozii lor mută acele monede în "cold storage" (seifuri digitale offline) pe termen lung.</span>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Consecința: "Supply Shock" (Șocul de Ofertă)</h3>
+      <div class="bg-yellow-900/10 border-l-4 border-yellow-500 p-5 rounded-r-xl mb-6">
+        <h4 class="text-yellow-400 font-bold mb-2">Lecția Economică:</h4>
+        <p class="text-gray-300 text-sm leading-relaxed">
+            Avem o cerere în creștere care se lovește de o ofertă în scădere pe exchange-uri.<br/>
+            Când va veni următorul val mare de cumpărare, <strong>nu va exista suficient Ethereum "la raft"</strong>. Rezultatul inevitabil este o presiune explozivă asupra prețului.
+        </p>
+      </div>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-blue-900/20 p-6 rounded-2xl border border-blue-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-blue-400 mb-2">Concluzie:</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            Exodul Ethereum de pe exchange-uri este cel mai puternic semnal "bullish" pe termen lung. Piața se maturizează.<br/><br/>
+            <strong>Când "criza de lichiditate" va lovi, prețul ETH ar putea reacționa violent.</strong>
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: PLAYBOOK-UL LUI TRUMP (20 IAN)
   {
     id: 'trump-secret-playbook-greenland-tariffs-jan-20-2026',
