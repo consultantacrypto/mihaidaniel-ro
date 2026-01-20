@@ -1,4 +1,87 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: PLAYBOOK-UL LUI TRUMP (20 IAN)
+  {
+    id: 'trump-secret-playbook-greenland-tariffs-jan-20-2026',
+    slug: 'playbook-secret-trump-tarife-groenlanda-nu-vinde',
+    title: '📖 PLAYBOOK-UL SECRET AL LUI TRUMP: Cum "Vânează" Piețele cu Tarife și De Ce Groenlanda e Doar Începutul (Nu Vinde Încă!)',
+    summary: 'Scăderea de ieri nu e o coincidență, e un algoritm politic. Descoperă cele 3 faze ale ciclului Trump și de ce suntem abia la începutul jocului.',
+    category: 'MACRO & PSIHOLOGIE',
+    image: '/deceazi20.jpg',
+    date: '20 Jan 2026',
+    readTime: '6 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Pe termen lung (Faza 3)
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-purple-500/20 text-purple-300 border border-purple-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🧠 Psihologia Pieței</span>
+        <span class="bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 px-3 py-1 rounded text-xs font-bold uppercase">📜 The Art of Deal</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">București, 20 Ianuarie 2026. Dacă ieri ai vrut să vinzi tot de frică, oprește-te. Ai căzut exact în capcana psihologică întinsă de la Casa Albă.</p>
+      
+      <p class="mb-6 text-gray-300">Scăderea de 3% a pieței crypto și lichidările de ieri nu sunt o coincidență nefericită. Sunt rezultatul unui algoritm politic pe care Donald Trump îl folosește de ani de zile. Tarifele pe Europa (cauzate de refuzul vânzării Groenlandei) urmează un scenariu predictibil pas cu pas.</p>
+      
+      <p class="mb-8 text-white font-bold italic border-l-4 border-purple-500 pl-4">Dacă înțelegi "Playbook-ul", faci bani. Dacă nu, ești lichiditate. Hai să decodificăm jocul.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. "Atacul de Weekend": Psihologia Fricii</h3>
+      <p class="mb-4 text-gray-300">Trump nu anunță tarife marți la prânz. El o face vineri seara sau în weekend, când Wall Street e închis.</p>
+
+      <div class="bg-[#0b1221] p-5 rounded-xl border border-gray-700 mb-6">
+        <ul class="space-y-3">
+            <li class="text-gray-300"><strong class="text-purple-400">De ce?</strong> Pentru a lăsa frica să fiarbă ("marinate") timp de 48 de ore.</li>
+            <li class="text-gray-300"><strong class="text-purple-400">Execuția:</strong> Pe 17 ianuarie (sâmbătă), a aruncat bomba pe Truth Social.</li>
+            <li class="text-gray-300"><strong class="text-purple-400">Rezultatul:</strong> Luni dimineață, piețele s-au deschis direct în panică, fără timp de reacție rațională.</li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. De ce Bitcoin "Sângerează" Primul? (Mecanismul de Supapă)</h3>
+      <p class="mb-4 text-gray-300">Mulți întreabă: <em>"Dacă e criză, de ce nu crește Bitcoin ca aurul?"</em> Răspunsul e dureros dar simplu: <strong>Bitcoin este singura piață liberă deschisă 24/7.</strong></p>
+      
+      <p class="mb-6 text-gray-300">Când fondurile de investiții intră în panică duminică seara, nu pot vinde acțiuni Apple (bursa e închisă). Așa că vând ce pot: Crypto. Bitcoin devine "supapa de presiune". Scăderea sub $93k nu a fost despre slăbiciunea Bitcoin, ci despre nevoia disperată de lichiditate a sistemului.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Cele 3 Faze ale Ciclului Trump (Unde suntem acum?)</h3>
+      <p class="mb-4 text-gray-300">Istoria (China, Mexic, Canada) ne arată că acest film are mereu 3 părți:</p>
+
+      <div class="space-y-4 mb-8">
+        <div class="bg-red-900/20 p-4 rounded-xl border border-red-500/50 flex gap-4">
+            <span class="text-2xl">🔴</span>
+            <div>
+                <strong class="text-red-400 block">FAZA 1: Șocul Mecanic (Suntem AICI)</strong>
+                <span class="text-gray-300 text-sm">Anunț bombastici -> Algoritmii vând automat -> Levierul este șters ($763M lichidări ieri). Cine vinde acum, vinde la fundul sacului.</span>
+            </div>
+        </div>
+        <div class="bg-yellow-900/20 p-4 rounded-xl border border-yellow-500/50 flex gap-4 opacity-75 hover:opacity-100 transition-opacity">
+            <span class="text-2xl">🟡</span>
+            <div>
+                <strong class="text-yellow-400 block">FAZA 2: "Negocieri Constructive" (Urmează)</strong>
+                <span class="text-gray-300 text-sm">Oficialii ies să calmeze apele. Volatilitatea scade. Europa vine la masă.</span>
+            </div>
+        </div>
+        <div class="bg-green-900/20 p-4 rounded-xl border border-green-500/50 flex gap-4 opacity-75 hover:opacity-100 transition-opacity">
+            <span class="text-2xl">🟢</span>
+            <div>
+                <strong class="text-green-400 block">FAZA 3: "Marea Victorie" (Rally-ul)</strong>
+                <span class="text-gray-300 text-sm">Trump anunță "cel mai bun acord". Tarifele sunt anulate. Piețele explodează în sus (Relief Rally).</span>
+            </div>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. Miza Groenlanda: Nu e o glumă</h3>
+      <div class="bg-blue-900/10 border border-blue-500/20 p-4 rounded-xl mb-6">
+        <p class="text-gray-300 mb-0">Groenlanda înseamnă <strong>Pământuri Rare</strong> (vitale pentru cipuri și baterii) și poziție strategică. Trump folosește tarifele ca o armă nucleară economică pentru a obține un activ strategic. Europa va protesta, dar istoria arată că, de obicei, ajung la un compromis.</p>
+      </div>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-gray-800 p-6 rounded-2xl border border-gray-600 shadow-lg">
+        <h4 class="text-xl font-bold text-white mb-2">Concluzie: Nu fi "Victima" Scenariului</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            Căderea de ieri a fost doar curățarea levierului (Deleverage). Fundamentalele nu s-au schimbat.<br/>
+            Dacă vinzi acum, îi dai satisfacție algoritmului.<br/><br/>
+            <strong>Sfatul Tati: Așteaptă Faza 2. Zgomotul politic trece, dar Bitcoin rămâne.</strong>
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: TRUMP VS EUROPA & GROENLANDA (19 IAN SEARA)
   {
     id: 'trump-tariffs-greenland-crypto-crash-jan-19-2026',
