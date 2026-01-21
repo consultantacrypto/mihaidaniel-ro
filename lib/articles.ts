@@ -1,4 +1,83 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: MASACRU WALL STREET - TRUMP GREENLAND (21 IAN SEARA)
+  {
+    id: 'wall-street-massacre-1-4-trillion-loss-trump-greenland-jan-21',
+    slug: 'macel-wall-street-1-4-trilioane-pierdere-trump-groenlanda',
+    title: '📉 MASACRU PE WALL STREET: 1.4 TRILIOANE $ S-AU EVAPORAT ÎNTR-O ZI! PREȚUL OBSESIEI LUI TRUMP PENTRU GROENLANDA',
+    summary: 'O zi neagră pentru bursa americană. 1.400 de Miliarde $ șterse din cauza unui tweet. De ce volatilitatea de pe Wall Street o depășește acum pe cea din Crypto?',
+    category: 'MACRO & STOCKS',
+    image: '/macelazi21.jpg',
+    date: '21 Jan 2026',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'bearish', // Sângerare pe piețele tradiționale
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-red-600/20 text-red-300 border border-red-600/30 px-3 py-1 rounded text-xs font-bold uppercase">📉 Market Crash</span>
+        <span class="bg-gray-700/50 text-gray-200 border border-gray-600/50 px-3 py-1 rounded text-xs font-bold uppercase">🏛️ Geopolitics</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Dacă credeai că piața crypto e volatilă, uită-te la ce se întâmplă pe bursa americană. Într-o mișcare seismică, investitorii au șters 1.400 de Miliarde de dolari din valoarea companiilor americane.</p>
+      
+      <p class="mb-6 text-gray-300">Motivul? Nu recesiune, nu date economice, ci un singur tweet despre tarife. Obsesia Președintelui Trump de a cumpăra Groenlanda s-a transformat dintr-o glumă geopolitică într-un coșmar financiar real.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Nota de Plată: 1.4 Trilioane de Dolari 💸</h3>
+      <p class="mb-4 text-gray-300">Să punem cifra în perspectivă:</p>
+      
+      <div class="bg-red-900/10 border border-red-500/20 p-5 rounded-xl mb-6 text-center">
+        <span class="text-4xl font-black text-red-500 block mb-2">$1,400,000,000,000</span>
+        <p class="text-white text-sm font-bold">Acești bani au dispărut din S&P 500 și Nasdaq în 24 de ore.</p>
+        <p class="text-gray-400 text-xs mt-2 italic">Este mai mult decât valoarea totală a Bitcoin la un loc (în anumite momente).</p>
+      </div>
+      
+      <p class="mb-4 text-gray-300"><strong>Mesajul Pieței:</strong> Wall Street i-a dat un vot de blam instantaneu președintelui. Investitorii spun clar: <em>"Un război comercial cu Europa va distruge profiturile companiilor americane."</em></p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Efectul de Domino: De ce au vândut?</h3>
+      <p class="mb-4 text-gray-300">Marile fonduri de investiții (BlackRock, Vanguard) urăsc incertitudinea. Tarifele pe Europa declanșează un coșmar în 3 acte:</p>
+
+      <ul class="space-y-3 mb-6 bg-[#0b1221] p-4 rounded-xl border border-gray-700">
+        <li class="flex items-start gap-2">
+            <span class="text-red-400">1.</span>
+            <span class="text-gray-300 text-sm"><strong>Costuri:</strong> Prețuri mai mari pentru companiile americane care importă din UE.</span>
+        </li>
+        <li class="flex items-start gap-2">
+            <span class="text-red-400">2.</span>
+            <span class="text-gray-300 text-sm"><strong>Represalii:</strong> Europa va taxa la rândul ei produsele SUA (Tesla, Apple).</span>
+        </li>
+        <li class="flex items-start gap-2">
+            <span class="text-red-400">3.</span>
+            <span class="text-gray-300 text-sm"><strong>Inflație:</strong> Prețurile la raft cresc, iar FED-ul nu mai poate scădea dobânzile.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Crypto vs. Stocks: Cine e mai fragil?</h3>
+      <p class="mb-4 text-gray-300">Aici e partea interesantă pentru noi.</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+         <div class="bg-gray-800/30 p-4 rounded-xl border border-gray-600/30">
+            <h4 class="text-gray-400 font-bold text-sm uppercase">Ieri pe Crypto</h4>
+            <p class="text-white text-sm">Bitcoin a scăzut cu 3% și toată lumea a țipat "CRASH!".</p>
+         </div>
+         <div class="bg-red-900/20 p-4 rounded-xl border border-red-500/30">
+            <h4 class="text-red-400 font-bold text-sm uppercase">Azi pe Bursă</h4>
+            <p class="text-white text-sm">Bursa a pierdut o sumă care ar putea cumpăra toată piața crypto de două ori.</p>
+         </div>
+      </div>
+      <p class="text-gray-300 mb-6">Acest eveniment demonstrează că, în fața riscului politic, dolarul și acțiunile sunt la fel de vulnerabile. Diferența? <strong>Bitcoin nu are CEO care să dea tweet-uri și nu are nevoie de Groenlanda.</strong></p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. Ce Urmează? (Faza de Negociere)</h3>
+      <p class="mb-4 text-gray-300">Așa cum discutam în "Playbook-ul lui Trump", acest șoc de 1.4 Trilioane este exact pârghia de care Europa are nevoie. Trump nu poate lăsa bursa să sângereze prea mult (e barometrul lui de succes).</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-gray-800 p-6 rounded-2xl border border-gray-600 shadow-lg">
+        <h4 class="text-xl font-bold text-white mb-2">Concluzie:</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            Când elefanții (SUA și UE) se bat, iarba (bursa) este călcată în picioare.<br/><br/>
+            <strong>Sfatul Tati:</strong> Nu te lăsa intimidat de roșul din portofoliu. Adevărata volatilitate e acum pe Wall Street, nu în wallet-ul tău.
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: BĂTĂLIA TITANILOR - BTC VS ETH (21 IAN DIMINEATA)
   {
     id: 'battle-of-titans-bitcoin-vs-ethereum-clarity-act-fog-lifts',
