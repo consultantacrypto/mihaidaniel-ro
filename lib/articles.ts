@@ -1,4 +1,79 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: BĂTĂLIA TITANILOR - BTC VS ETH (21 IAN DIMINEATA)
+  {
+    id: 'battle-of-titans-bitcoin-vs-ethereum-clarity-act-fog-lifts',
+    slug: 'batalia-titanilor-bitcoin-vs-ethereum-clarity-act',
+    title: '⚔️ BĂTĂLIA TITANILOR 2026: BITCOIN vs. ETHEREUM. ASTĂZI SE RIDICĂ CEAȚA (CLARITY ACT)',
+    summary: 'Azi e ziua H. Piețele sunt înmărmurite în așteptarea textului de lege. Vezi metafora "Convoiului prin Ceață" și decide: Alegi Scutul (BTC) sau Motorul (ETH)?',
+    category: 'MACRO & STRATEGIE',
+    image: '/batalia21ian.jpg',
+    date: '21 Jan 2026',
+    readTime: '6 min',
+    author: 'Mihai Daniel',
+    impact: 'neutral', // Așteptăm direcția (Volatilitate)
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-gray-700/50 text-gray-200 border border-gray-600/50 px-3 py-1 rounded text-xs font-bold uppercase">🌫️ Ceață Legislativă</span>
+        <span class="bg-blue-600/20 text-blue-300 border border-blue-600/30 px-3 py-1 rounded text-xs font-bold uppercase">⚖️ Clarity Act Day</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">București, 21 Ianuarie 2026. Piețele stau înmărmurite. Volatilitatea a scăzut, volumele sunt mici. De ce? Pentru că nimeni nu vrea să facă o mișcare greșită înainte de ora H.</p>
+      
+      <p class="mb-6 text-gray-300">Astăzi așteptăm publicarea textului <strong>Clarity Act</strong>. Această lege va decide regulile de circulație pentru autostrada crypto din SUA. Până nu vedem textul, nimeni nu apasă pedala.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Analogia Zilei: "Convoiul prin Ceață"</h3>
+      <div class="bg-[#0b1221] p-5 rounded-xl border border-gray-600 shadow-lg mb-6">
+        <p class="text-gray-300 mb-4">Imaginează-ți piața crypto ca pe un convoi uriaș de mașini sport (Altcoins), condus de două tancuri grele (Bitcoin și Ethereum). Suntem pe o autostradă montană, dar e o ceață densă.</p>
+        
+        <div class="space-y-3">
+            <div class="flex gap-3 items-start">
+                <span class="text-xl">🛑</span>
+                <p class="text-sm text-gray-400"><strong>Acum:</strong> Tot convoiul merge cu frâna de mână trasă. Nimeni nu depășește. Riscul de a cădea în prăpastie e prea mare.</p>
+            </div>
+            <div class="flex gap-3 items-start">
+                <span class="text-xl">☀️</span>
+                <p class="text-sm text-gray-400"><strong>După-amiază:</strong> Publicarea legii este momentul în care soarele risipește ceața. Dacă drumul e drept, tancurile accelerează și mașinile sport zboară.</p>
+            </div>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Bitcoin (BTC) în 2026: "Scutul" 🛡️</h3>
+      <p class="mb-4 text-gray-300">Bitcoin rămâne regele necontestat al macro-economiei. Este activul de refugiu împotriva erorilor băncilor centrale și a haosului geopolitic.</p>
+
+      <div class="bg-orange-900/10 border-l-4 border-orange-500 p-4 rounded-r-xl mb-6">
+        <strong class="text-orange-400 block mb-1">Verdictul: Pariul SIGUR</strong>
+        <p class="text-gray-300 text-sm">Bitcoin este deja clasificat ca "Mărfă" (Commodity). Clarity Act nu îl afectează negativ. Dacă vrei să dormi liniștit în timp ce Trump se ceartă cu Europa, stai în BTC.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Ethereum (ETH) în 2026: "Motorul" ⚙️</h3>
+      <p class="mb-4 text-gray-300">Aici e marea oportunitate asimetrică. Ethereum a fost "bătut" de piață, dar fundamental este un arc comprimat (Supply Shock-ul discutat ieri).</p>
+
+      <div class="bg-blue-900/10 border-l-4 border-blue-500 p-4 rounded-r-xl mb-6">
+        <strong class="text-blue-400 block mb-1">Verdictul: Pariul de PERFORMANȚĂ</strong>
+        <p class="text-gray-300 text-sm">Totul depinde de lege. Dacă Clarity Act oferă o cale clară, ETH va exploda mult mai tare decât BTC. Are șansa să ofere un ROI mai mare odată ce ceața dispare.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. Ce fac Altcoins? (Pasagerii Nervoși)</h3>
+      <p class="mb-4 text-gray-300">Altcoin-urile (Solana, XRP, AI tokens) sunt, momentan, paralizate. Ele depind 100% de lichiditatea care se varsă dinspre BTC și ETH.</p>
+      
+      <div class="bg-yellow-900/10 p-4 rounded-lg border border-yellow-500/20 text-center mb-6">
+         <p class="text-yellow-400 font-bold text-sm mb-0">⚠️ Sfat: Azi nu e zi de pariat pe Altcoins mici. Așteaptă să vezi direcția Tancurilor.</p>
+      </div>
+
+      <div class="mt-8 border-t border-gray-800 pt-6">
+        <h4 class="text-xl font-bold text-white mb-2">Concluzie: Astăzi nu pariem, astăzi citim.</h4>
+        <p class="text-gray-300 mb-4 leading-relaxed">
+            Când textul legii apare (probabil după-amiază/seară ora RO), piața va alege direcția violent.
+        </p>
+        <div class="flex justify-around font-bold text-lg font-mono bg-black/30 p-4 rounded-xl">
+            <span class="text-orange-500">Bitcoin = Apărare</span>
+            <span class="text-blue-500">Ethereum = Atac</span>
+        </div>
+        <p class="text-gray-400 text-center mt-4 text-sm">Tu ce ai nevoie în portofoliu acum?</p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: ETHEREUM EXCHANGE EXODUS (20 IAN SEARA)
   {
     id: 'ethereum-exchange-exodus-supply-shock-jan-20-2026',
