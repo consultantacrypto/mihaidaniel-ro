@@ -1,4 +1,79 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: SCANDAL NASDAQ INSIDER TRADING (22 IAN SEARA)
+  {
+    id: 'nasdaq-insider-trading-scandal-dont-token-solana-jan-22-2026',
+    slug: 'scandal-nasdaq-insider-trading-dont-token-solana',
+    title: '🚨 SCANDAL PRESUPUS PE NASDAQ: Cum un "Insider" a transformat $4.1K în $1.13 MILIOANE în 3 ore (276x ROI!)',
+    summary: 'O investigație on-chain șocantă. Un portofel "adormit" a știut viitorul înainte de anunțul oficial al unei companii listate la bursă. Vezi anatomia tranzacției de 276x.',
+    category: 'INVESTIGAȚIE & ON-CHAIN',
+    image: '/dontpump.jpg',
+    date: '22 Jan 2026',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'bearish', // Scade încrederea, atrage SEC
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-purple-600/20 text-purple-300 border border-purple-600/30 px-3 py-1 rounded text-xs font-bold uppercase">🕵️‍♂️ On-Chain Detective</span>
+        <span class="bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded text-xs font-bold uppercase">💰 276x ROI</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Credeai că bursa de pe Wall Street e curată și doar crypto e "Vestul Sălbatic"? Mai gândește-te. Astăzi, 22 Ianuarie 2026, avem suspiciuni majore de insider trading care implică o companie listată pe Nasdaq și un memecoin pe Solana.</p>
+      
+      <p class="mb-6 text-gray-300">În centrul furtunii se află compania <strong>DeFi Development Corp</strong> (Simbol: DFDV) și lansarea tokenului <strong>$DONT</strong>. Un portofel misterios a reușit imposibilul: a transformat $4.100 într-o avere de $1.13 Milioane în doar 3 ore.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. "Mortul" se Trezește: Semnalul de Alarmă 🚨</h3>
+      <p class="mb-4 text-gray-300">Portofelul cu adresa <code>6rVDzQ...q6sPqy</code> a stat inactiv timp de 3 luni. Nicio tranzacție, nicio mișcare. Un portofel "adormit".</p>
+      
+      <div class="bg-[#0b1221] p-4 rounded-xl border border-gray-700 mb-6">
+        <p class="text-gray-300 text-sm mb-2">Brusc, cu puțin timp înainte ca firma DeFi Development Corp să anunțe oficial tokenul, acest portofel se trezește.</p>
+        <ul class="space-y-2">
+            <li class="text-green-400 font-bold">➢ Miza: Cumpără agresiv 29.08 Miliarde de tokenuri $DONT folosind doar $4.100 (în SOL).</li>
+            <li class="text-red-400 font-bold">➢ Momentul: Execuția a fost chirurgicală, înainte ca publicul larg să afle știrea.</li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Anunțul și "Pompa" (276x) 🚀</h3>
+      <p class="mb-4 text-gray-300">La scurt timp după achiziție, compania listată pe Nasdaq face anunțul. Retail-ul vede știrea pe X/Twitter și apare FOMO-ul instantaneu.</p>
+      
+      <p class="mb-6 text-gray-300 italic border-l-4 border-blue-500 pl-4">
+        <strong>Întrebarea:</strong> Cine le vinde investitorilor tokenurile la prețuri astronomice când prețul crește de 276 de ori? <br/>
+        <strong>Răspunsul:</strong> Exact. Portofelul "adormit".
+      </p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Marea Vânzare: Profit de $1.13 Milioane 💸</h3>
+      <p class="mb-4 text-gray-300">În timp ce micii investitori cumpărau vârful, insider-ul a început să descarce "sacii":</p>
+
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div class="bg-green-900/10 p-4 rounded-xl border border-green-500/20">
+              <span class="text-gray-400 text-xs uppercase font-bold">Vândut Deja (Realized Profit)</span>
+              <span class="block text-2xl font-black text-white">$182,000</span>
+              <span class="text-green-400 text-xs">Și-a scos investiția de 45x</span>
+          </div>
+          <div class="bg-blue-900/10 p-4 rounded-xl border border-blue-500/20">
+              <span class="text-gray-400 text-xs uppercase font-bold">Încă în Buzunar (Unrealized)</span>
+              <span class="block text-2xl font-black text-white">~$955,000</span>
+              <span class="text-blue-400 text-xs">Valoarea tokenurilor rămase</span>
+          </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. De ce este GRAV? (Context 2026)</h3>
+      <p class="mb-4 text-gray-300">Aceasta nu este o simplă speculă. Este o suspiciune de <strong>Insider Trading</strong> legată de o companie publică din SUA. În contextul Clarity Act, SEC ar putea interveni brutal dacă se dovedește că cineva din interior a "front-run-uit" piața.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-yellow-900/20 p-6 rounded-2xl border border-yellow-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-yellow-400 mb-2">💡 Lecția Tati: Cum să nu fii "Carne de Tun"</h4>
+        <ul class="space-y-3 text-sm text-gray-300 mb-4">
+            <li>🛑 <strong>Nu Cumpăra Imediat:</strong> Insiderii au cumpărat deja cu ore înainte. Tu ești sursa lor de profit.</li>
+            <li>🔍 <strong>Verifică On-Chain:</strong> Dacă vezi un portofel care a cumpărat masiv cu 10 minute înainte de tweet și vinde acum, ești într-o capcană.</li>
+        </ul>
+        <p class="text-white mb-0 font-bold border-t border-white/10 pt-4 leading-relaxed">
+            Data viitoare când vezi un randament de 276x în 3 ore, întreabă-te: "Cine pierde ca eu să câștig?". De obicei, răspunsul ești tu.
+        </p>
+      </div>
+
+      <p class="text-[10px] text-gray-500 mt-6">Disclaimer: Aceasta este o analiză bazată pe date publice on-chain (Sursa: @lookonchain). Nu reprezintă o acuzație formală.</p>
+    `
+  }, 
+
 // ✅ 0. ARTICOL NOU: BAIA DE SÂNGE - CRASH $88K (22 IAN DIMINEATA)
   {
     id: 'bitcoin-crash-7000-greenland-tariffs-blackrock-outflow-jan-22',
