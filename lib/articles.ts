@@ -1,4 +1,77 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: BAIA DE SÂNGE - CRASH $88K (22 IAN DIMINEATA)
+  {
+    id: 'bitcoin-crash-7000-greenland-tariffs-blackrock-outflow-jan-22',
+    slug: 'baia-de-sange-bitcoin-crash-7000-groenlanda-ibit',
+    title: '🩸 BAIA DE SÂNGE DE JOI: CUM A PIERDUT BITCOIN $7.000 ÎNTR-O CLIPĂ. DE LA "GROENLANDA" LA IBIT, "FURTUNA PERFECTĂ" A LOVIT!',
+    summary: 'Bitcoin s-a prăbușit la $88k. IBIT a pierdut $523M într-o zi, iar tarifele lui Trump au declanșat panică. Vezi analiza completă a "Furtunii Perfecte".',
+    category: 'CRASH & INSTITUȚIONAL',
+    image: '/crash22.jpg',
+    date: '22 Jan 2026',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'bearish', // Panic Sell
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-red-600/20 text-red-300 border border-red-600/30 px-3 py-1 rounded text-xs font-bold uppercase">🩸 -$7,000 Crash</span>
+        <span class="bg-gray-700/50 text-gray-200 border border-gray-600/50 px-3 py-1 rounded text-xs font-bold uppercase">🏦 IBIT Outflows</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">București, 22 Ianuarie 2026. Dacă ai deschis aplicația și ai văzut Bitcoin la $88.000, nu da vina pe ecran. Este real.</p>
+      
+      <p class="mb-6 text-gray-300">După maximele recente de $95.000, piața a suferit o fractură brutală. Nu e doar o "corecție sănătoasă". Este o combinație toxică de geopolitică, frică instituțională și lichidări în lanț.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Lebăda Neagră: Tarifele "Groenlanda" și Frica de Război Comercial</h3>
+      <p class="mb-4 text-gray-300">Cine ar fi crezut că o insulă de gheață va topi portofoliile crypto? Amenințările Președintelui Trump cu tarife pe UE au declanșat un sentiment global de "Risk-Off".</p>
+
+      <div class="bg-[#0b1221] p-4 rounded-xl border border-gray-700 mb-6">
+        <strong class="text-red-400 block mb-2">Mecanismul Dezastrului:</strong>
+        <p class="text-gray-300 text-sm">Tarife -> Inflație -> Dobânzi Mari -> <strong>Banii pleacă din Bitcoin spre Aur ($4.800)</strong>.</p>
+        <p class="text-xs text-gray-500 mt-2 italic">Se repetă scenariul din 2025. Istoria rimează.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Exodul Instituțional: BlackRock a Sângerat $523 Milioane</h3>
+      <p class="mb-4 text-gray-300">Acesta este cel mai dureros punct. Până acum, ETF-urile erau plasa noastră de siguranță. Ieri, plasa s-a rupt.</p>
+
+      <div class="bg-red-900/10 border-l-4 border-red-500 p-5 rounded-r-xl mb-6">
+         <span class="text-3xl font-black text-red-500 block mb-1">-$523.2 Milioane</span>
+         <span class="text-white font-bold text-sm uppercase">Retragere Record IBIT (Într-o zi)</span>
+         <p class="text-gray-300 text-sm mt-2">"Banii deștepți" marchează profitul și trec pe cash. Acțiunile crypto (Coinbase -5.6%, MicroStrategy -7.8%) s-au prăbușit și ele.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Măcelul Lichidărilor: 1 Miliard de Dolari Șterși</h3>
+      <p class="mb-4 text-gray-300">Ca de obicei, traderii cu levier au plătit prețul suprem.</p>
+
+      <ul class="space-y-3 mb-6">
+        <li class="flex items-center justify-between bg-gray-800/30 p-3 rounded-lg border border-gray-700">
+            <span class="text-gray-400">Total Lichidat (24h)</span>
+            <span class="text-red-400 font-mono font-bold">$1.07 Miliarde</span>
+        </li>
+        <li class="flex items-center justify-between bg-gray-800/30 p-3 rounded-lg border border-gray-700">
+            <span class="text-gray-400">Poziții Long Distruse</span>
+            <span class="text-red-400 font-mono font-bold">$999 Milioane</span>
+        </li>
+      </ul>
+      <p class="text-sm text-gray-400">Piața a dat un "fake breakout" spre $95k, a atras toți taurii în capcană, apoi a picat brusc.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. Factorul "JAPANIC" și Manipularea</h3>
+      <p class="mb-4 text-gray-300">Pe lângă SUA, piața obligațiunilor din Japonia tremură ("Japanic"), strângând robinetul de lichiditate.</p>
+      <p class="text-gray-300 text-sm"><strong>Teoria Conspirației:</strong> Analiștii acuză marii Market Makers (Wintermute, Galaxy) că au "vânat lichiditatea", vânzând agresiv pentru a cumpăra mai ieftin la $87k.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-red-900/30 p-6 rounded-2xl border border-red-500/50 shadow-lg">
+        <h4 class="text-xl font-bold text-red-400 mb-2">⏳ Verdictul Tehnic: Zona $87.000 e Crucială</h4>
+        <p class="text-gray-300 mb-4 font-bold">Suntem pe marginea prăpastiei.</p>
+        <ul class="space-y-2 text-sm text-gray-300 mb-4">
+            <li>🎯 <strong>Suport Critic:</strong> $87k-$88k (Trebuie să țină!)</li>
+            <li>⚠️ <strong>Pericol:</strong> O închidere sub $87k deschide drumul spre $80.000.</li>
+        </ul>
+        <p class="text-white mb-0 leading-relaxed font-bold border-t border-white/10 pt-4">
+            Concluzie: Nu e momentul pentru eroism. Dacă $87k pică, "Reducerea" de azi s-ar putea să fie "Scumpă" mâine.
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: MASACRU WALL STREET - TRUMP GREENLAND (21 IAN SEARA)
   {
     id: 'wall-street-massacre-1-4-trillion-loss-trump-greenland-jan-21',
