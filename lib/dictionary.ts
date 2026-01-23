@@ -624,7 +624,7 @@ export const dictionary: AcademyItem[] = [
     `
   },
 
-  // === 9. ✅ ARTICOL NOU: STABLECOINS (DEFI & FUNDAMENTE) ===
+  // === 9. STABLECOINS (DEFI & FUNDAMENTE) ===
   {
     slug: "stablecoins-ghid-usdt-usdc-dai",
     term: "Stablecoins (Monede Stabile)",
@@ -692,11 +692,319 @@ export const dictionary: AcademyItem[] = [
       <p class="mb-4 text-gray-300">În Crypto, oportunitățile apar când sângele curge pe străzi (scăderi de 30-50%).</p>
       <p class="text-white font-bold border-l-4 border-yellow-500 pl-4">Dacă ești 100% investit, nu poți profita de reduceri. Profesioniștii țin mereu 20-30% din portofoliu în Stablecoins (Dry Powder) pentru a "vâna" aceste momente.</p>
     `
+  },
+
+  // === 10. RAPORT LEGISLATIV (ANALIZĂ FUNDAMENTALĂ) ===
+  {
+    slug: "legislatie-fiscalitate-crypto-romania-2026-raport-complet",
+    term: "Raport: Legislația & Fiscalitatea Crypto (2026)",
+    category: "ANALIZĂ FUNDAMENTALĂ",
+    image: "/legislatie-romania-2026.jpg", 
+    definition: "Raportul de cercetare integral privind cadrul legal și fiscal din România în 2026. Analiza exhaustivă a Legii 239/2025, MiCA, OUG 10/2025 și a impozitării de 16%.",
+    analogy: "Harta Minată vs. Drumul Asfaltat. Până în 2025, mergeam prin 'junglă' - riscant, dar fără reguli. În 2026, avem un drum asfaltat (MiCA), dar cu taxe de autostradă scumpe (16%) și radare la fiecare pas (ANAF/DAC8). Raportul acesta este 'Codul Rutier' complet pe care trebuie să-l știi ca să nu rămâi fără permis (sau bani).",
+    mihaiTake: "Tati, acesta este cel mai important document din Academie pentru siguranța ta financiară. Nu l-am rezumat pentru că fiecare paragraf contează. Citește tot, în special secțiunea despre 'Grandfathering' (dacă ai afaceri vechi) și calculul CASS. 2026 nu iartă greșelile de conformitate.",
+    fullContent: `
+      <div class="space-y-6 text-gray-300 text-justify">
+        
+        <div class="bg-blue-900/20 p-6 rounded-lg border border-blue-700/50 mb-8">
+          <h2 class="text-2xl font-bold text-blue-400 mb-4">RAPORT DE CERCETARE: Peisajul Legislativ și Fiscal al Criptoactivelor în România – Orizont Ianuarie 2026</h2>
+        </div>
+
+        <h3 class="text-2xl font-bold text-white mt-8 border-b border-gray-700 pb-2">1. Introducere</h3>
+        <p>
+          Data de 23 ianuarie 2026 marchează o etapă definitorie în evoluția pieței financiare digitale din România, caracterizată prin finalizarea tranziției de la un mediu experimental și permisiv către unul strict reglementat și instituționalizat. Ecosistemul criptoactivelor, privit istoric ca o frontieră a inovației financiare descentralizate, se află acum sub incidența directă a unor mecanisme legislative complexe, rezultate din convergența directivelor europene cu imperativul național de consolidare fiscală. Acest raport își propune să ofere o analiză exhaustivă a cadrului legal, fiscal și operațional aplicabil activelor digitale în România la începutul anului 2026, evidențiind transformările structurale generate de implementarea completă a Regulamentului privind Piețele Criptoactivelor (MiCA) și de intrarea în vigoare a Legii nr. 239/2025.
+        </p>
+        <p>
+          Contextul anului 2026 este dominat de o schimbare de paradigmă la nivelul politicii economice: statul român a abandonat neutralitatea legislativă în favoarea unei abordări duale. Pe de o parte, se urmărește protecția consumatorului și stabilitatea financiară prin mecanisme de supraveghere prudențială extrem de riguroase, implementate prin Ordonanța de Urgență nr. 10/2025. Pe de altă parte, politica fiscală a devenit un instrument activ de descurajare a speculației și de maximizare a veniturilor bugetare, prin majorarea cotei de impozitare a câștigurilor din criptomonede la 16%, aliniind acest sector cu regimul aurului de investiții și al dividendelor, dar dezavantajându-l în raport cu piața de capital tradițională.
+        </p>
+        <p>
+          Prezenta analiză depășește simpla enumerare a normelor juridice, propunându-și să investigheze profunzimea impactului acestor schimbări asupra tuturor actorilor implicați: de la investitorii de retail și "balenele" instituționale, până la furnizorii de servicii de criptoactive (CASP) și dezvoltatorii de tehnologie blockchain. Într-o perioadă în care "conformitatea" a devenit cuvântul de ordine, înțelegerea nuanțată a obligațiilor legale, a mecanismelor de raportare (DAC8/CARF) și a noilor sarcini fiscale (CASS la plafoane extinse) este esențială pentru viabilitatea economică.
+        </p>
+        <p>
+          Vom explora modul în care România, deși a adoptat o poziție pro-europeană prin transpunerea fidelă a MiCA, a ales să suprapună un strat birocratic național specific – implicând avize tehnice de la Autoritatea pentru Digitalizarea României (ADR) și o taxă de supraveghere consistentă – elemente care reconfigurează competitivitatea jurisdicției românești în raport cu alte state membre UE. De asemenea, raportul va detalia fereastra de oportunitate critică a regimului tranzitoriu ("Grandfathering"), care permite operarea temporară a entităților pre-existente doar până în iulie 2026, creând o cursă contracronometru pentru licențiere.
+        </p>
+
+        <h3 class="text-2xl font-bold text-white mt-10 border-b border-gray-700 pb-2">2. Încadrare Juridică: Arhitectura Reglementării în 2026</h3>
+        <p>
+          La începutul anului 2026, cadrul legislativ aplicabil criptoactivelor în România nu mai este fragmentat, ci constituie un sistem coerent, ierarhizat, bazat pe supremația regulamentelor europene și completat de legislația națională de punere în aplicare. Pilonul central al acestui sistem este Regulamentul (UE) 2023/1114 (MiCA), care, deși a intrat în vigoare în etape pe parcursul anilor 2024 și 2025, își produce acum efectele depline asupra tuturor categoriilor de active și furnizori de servicii.
+        </p>
+
+        <h4 class="text-xl font-bold text-blue-400 mt-6">2.1. Transpunerea MiCA și Rolul OUG 10/2025</h4>
+        <p>
+          Deși regulamentele europene sunt direct aplicabile, România a necesitat o intervenție legislativă pentru a desemna autoritățile competente și a stabili regimul sancționatoriu. Acest lucru s-a realizat prin Ordonanța de Urgență nr. 10/2025 (OUG 10/2025), un act normativ fundamental care modifică și completează Legea nr. 129/2019 pentru prevenirea și combaterea spălării banilor.
+        </p>
+        <p>
+          Importanța OUG 10/2025 rezidă în redefinirea statutului juridic al actorilor din piață. Începând cu 2026, Furnizorii de Servicii de Criptoactive (CASP – Crypto-Asset Service Providers) nu mai sunt simple entități comerciale supuse unor obligații de raportare, ci sunt asimilați instituțiilor financiare în sensul legislației AML/CFT (Anti-Money Laundering / Countering the Financing of Terrorism). Această recalificare juridică are consecințe profunde:
+        </p>
+        <ul class="list-disc pl-6 space-y-2 mt-2">
+          <li>CASP-urile intră sub supravegherea directă a Băncii Naționale a României (BNR) și a Autorității de Supraveghere Financiară (ASF) în funcție de tipul de activ.</li>
+          <li>Standardele de guvernanță corporativă, audit și control intern impuse sunt identice cu cele din sectorul bancar sau al piețelor de capital tradiționale.</li>
+          <li>S-a abrogat Articolul 301 din Legea 129/2019, care prevedea vechiul regim de avizare tehnică la Ministerul Finanțelor, marcând sfârșitul epocii "avizelor tehnice" simple și trecerea la un regim de licențiere completă.</li>
+        </ul>
+
+        <h4 class="text-xl font-bold text-blue-400 mt-6">2.2. Arhitectura Instituțională Duală: ASF și BNR</h4>
+        <p>
+          Spre deosebire de alte jurisdicții care au optat pentru o autoritate unică, România a implementat în 2026 un model de supraveghere "Twin Peaks" (vârfuri gemene), divizând competențele între ASF și BNR în funcție de natura economică a activului digital supravegheat. Această diviziune, clarificată prin legislația secundară emisă la finalul anului 2025, este esențială pentru orice entitate care dorește să se autorizeze.
+        </p>
+
+        <div class="ml-4 border-l-2 border-blue-500 pl-4 mt-4">
+          <h5 class="font-bold text-white">2.2.1. Autoritatea de Supraveghere Financiară (ASF)</h5>
+          <p>ASF a devenit autoritatea competentă principală pentru majoritatea ecosistemului cripto din România. Competențele sale acoperă:</p>
+          <ul class="list-disc pl-5 mt-2 space-y-1">
+            <li><strong>Autorizarea CASP:</strong> Toate platformele de tranzacționare (exchanges), custozii, firmele de consultanță în investiții cripto și administratorii de portofolii trebuie să obțină licența de la ASF.</li>
+            <li><strong>Supravegherea ART (Asset-Referenced Tokens):</strong> Token-urile care se raportează la un coș de active (altele decât o singură monedă fiduciară) sunt sub jurisdicția ASF.</li>
+            <li><strong>Crypto-ATM:</strong> O noutate legislativă a anului 2026 este includerea explicită a operatorilor de bancomate cripto (Crypto ATMs) sub supravegherea ASF, impunând cerințe stricte de KYC chiar și pentru tranzacțiile fizice.</li>
+            <li><strong>Punct de Contact ESMA:</strong> ASF funcționează ca interfață unică a României cu Autoritatea Europeană pentru Valori Mobiliare și Piețe (ESMA), asigurând pașaportarea licențelor către și dinspre alte state UE.</li>
+          </ul>
+        </div>
+
+        <div class="ml-4 border-l-2 border-yellow-500 pl-4 mt-4">
+          <h5 class="font-bold text-white">2.2.2. Banca Națională a României (BNR)</h5>
+          <p>BNR își păstrează rolul de gardian al stabilității monetare, având competențe exclusive asupra activelor care pot influența masa monetară sau pot funcționa ca substitute directe ale monedei naționale.</p>
+          <ul class="list-disc pl-5 mt-2 space-y-1">
+            <li><strong>Supravegherea EMT (E-Money Tokens):</strong> Așa-numitele "stablecoins" care sunt legate de o singură monedă fiduciară (ex. un token peg-uit la RON sau EUR) sunt considerate monedă electronică. Emiterea lor este permisă exclusiv instituțiilor de credit (bănci) sau instituțiilor de monedă electronică, sub supravegherea prudențială a BNR.</li>
+            <li><strong>Interfața cu EBA:</strong> BNR colaborează cu Autoritatea Bancară Europeană (EBA) pentru monitorizarea emitenților semnificativi de EMT.</li>
+          </ul>
+        </div>
+
+        <div class="ml-4 border-l-2 border-purple-500 pl-4 mt-4">
+          <h5 class="font-bold text-white">2.2.3. Autoritatea pentru Digitalizarea României (ADR)</h5>
+          <p>
+            Un element specific birocrației românești, menținut și în 2026, este implicarea ADR. Înainte ca ASF sau BNR să poată emite o licență operațională, solicitantul trebuie să obțină un aviz tehnic de la ADR. Acest aviz certifică robustețea infrastructurii IT, securitatea cibernetică și capacitatea de a rezista atacurilor informatice, aliniindu-se cu Regulamentul DORA (Digital Operational Resilience Act). Deși adaugă un pas suplimentar în procesul de autorizare, acest filtru tehnic este justificat prin riscurile operaționale ridicate specifice industriei blockchain.
+          </p>
+        </div>
+
+        <h4 class="text-xl font-bold text-blue-400 mt-6">2.3. Regimul Tranzitoriu și Clauza "Grandfathering"</h4>
+        <p>
+          Una dintre cele mai critice prevederi legale active în ianuarie 2026 este regimul tranzitoriu. Conform Articolului 143(3) din MiCA, transpus în OUG 10/2025, piața se află într-o perioadă de grație limitată.
+        </p>
+        <p class="font-bold mt-2">Mecanismul de funcționare:</p>
+        <p>
+          Entitățile care prestau servicii de criptoactive în România conform legislației anterioare (înregistrate la Ministerul Finanțelor/ONPCSB) înainte de data de 30 decembrie 2024 beneficiază de dreptul de a-și continua activitatea fără o licență MiCA completă până în iulie 2026.
+        </p>
+        <p class="font-bold mt-2">Implicații strategice:</p>
+        <ul class="list-disc pl-6 space-y-2">
+          <li><strong>Fereastra de conformare:</strong> Între ianuarie și iulie 2026, aceste entități ("Grandfathered CASPs") sunt obligate să depună dosarul complet de autorizare la ASF.</li>
+          <li><strong>Termenul limită (Cliff-edge):</strong> După iulie 2026, dreptul provizoriu de operare încetează automat. Orice entitate care nu a obținut licența MiCA până la acea dată va fi considerată că operează ilegal, riscând sancțiuni penale și blocarea accesului la sistemul bancar și de internet.</li>
+          <li><strong>Riscul de blocaj:</strong> Având în vedere complexitatea dosarelor și resursele limitate ale ASF, există un risc real de "gâtuire" a procesului de autorizare în primăvara anului 2026, ceea ce pune presiune pe operatori să acționeze rapid.</li>
+        </ul>
+
+        <h4 class="text-xl font-bold text-blue-400 mt-6">2.4. Regula de Călătorie (Travel Rule) și Supravegherea Transferurilor</h4>
+        <p>
+          România a adoptat o interpretare strictă a "Travel Rule" (Regula de Călătorie), o componentă a standardelor FATF implementată prin Regulamentul (UE) 2023/1113 și OUG 10/2025. Această normă vizează eliminarea anonimatului în tranzacțiile cripto.
+        </p>
+        <p class="font-bold mt-2">Cerințe Operaționale:</p>
+        <p>În 2026, orice transfer de criptoactive inițiat sau primit de un CASP din România trebuie să fie însoțit de date structurate despre:</p>
+        <ul class="list-disc pl-6 space-y-1">
+          <li><strong>Inițiator (Originator):</strong> Nume, adresă, număr de cont (sau wallet), și date de identificare (CNP/Pașaport).</li>
+          <li><strong>Beneficiar:</strong> Nume și număr de cont/wallet.</li>
+        </ul>
+        <p class="font-bold mt-2">Unhosted Wallets (Portofele Negăzduite):</p>
+        <p>
+          Legislația românească impune măsuri suplimentare pentru tranzacțiile care implică portofele private (self-custody, cum ar fi Ledger sau Metamask). Pentru transferurile care depășesc pragul de 1.000 EUR, CASP-ul este obligat să verifice dacă clientul său deține sau controlează efectiv acea adresă privată. Această cerință de "proof of ownership" (dovada deținerii) creează fricțiuni operaționale semnificative, obligând utilizatorii să semneze mesaje criptografice sau să efectueze micro-tranzacții de verificare ("Satoshi test").
+        </p>
+        <p class="font-bold mt-2">Relațiile de Corespondent:</p>
+        <p>
+          OUG 10/2025 introduce obligații specifice pentru CASP-urile românești care stabilesc relații de corespondent cu entități din afara UE (jurisdicții non-MiCA). Acestea trebuie să efectueze o analiză de due diligence (verificare prealabilă) aprofundată asupra partenerului străin ("Respondent"), verificând calitatea supravegherii AML din țara de origine a acestuia. Este interzisă colaborarea cu "shell banks" sau entități fără prezență fizică și conformitate verificabilă.
+        </p>
+
+        <h3 class="text-2xl font-bold text-white mt-10 border-b border-gray-700 pb-2">3. Diferențe Active: Taxonomie și Tratament Specific</h3>
+        <p>
+          Evoluția legislativă a anului 2026 a eliminat ambiguitatea terminologică. Activele digitale nu mai sunt tratate ca un bloc monolithic, ci sunt clasificate într-o taxonomie precisă care dictează regimul juridic, fiscal și obligațiile emitenților. Această distincție este vitală pentru investitori, deoarece un token poate fi un simplu activ speculativ, un instrument de plată reglementat bancar sau un titlu de valoare.
+        </p>
+
+        <h4 class="text-xl font-bold text-blue-400 mt-6">3.1. Criptoactive (Crypto-assets) – Categoria Generală</h4>
+        <p>Definite de Art. 3(1)(5) din MiCA, acestea sunt reprezentări digitale ale valorii sau drepturilor, transferabile electronic prin DLT, care nu se încadrează în alte categorii specifice.</p>
+        <p><em>Exemple:</em> Bitcoin (BTC), Ethereum (ETH) - în forma lor nativă, fără mecanisme de stabilizare.</p>
+        <p><strong>Regim 2026:</strong> Emiterea și tranzacționarea lor sunt reglementate de Titlul II din MiCA. Emitenții (dacă există o entitate centrală) trebuie să publice un "White Paper" notificat ASF, care să includă avertismente clare de risc și detalii tehnice. Pentru Bitcoin, unde nu există un emitent identificabil, responsabilitatea conformității cade pe CASP-urile care listează activul la tranzacționare.</p>
+
+        <h4 class="text-xl font-bold text-blue-400 mt-6">3.2. Token-uri Referențiate la Active (ART – Asset-Referenced Tokens)</h4>
+        <p>Aceasta este o categorie intermediară, vizând token-uri care încearcă să mențină o valoare stabilă prin raportarea la o altă valoare, un drept, sau o combinație a acestora (inclusiv un coș de monede fiduciare).</p>
+        <p><em>Caracteristici:</em> Sunt instrumente de plată hibride sau instrumente de investiții cu risc scăzut.</p>
+        <p><strong>Regim 2026:</strong> Sunt strict reglementate de Titlul III MiCA. Emitenții trebuie să fie autorizați de ASF în România (sau de autoritatea competentă din statul de origine), să dețină rezerve de active segregate de fondurile proprii și să respecte cerințe de capital prudențial. "Algorithmic stablecoins" care nu au rezerve reale sunt, în practică, interzise sau extrem de dificil de autorizat sub acest regim.</p>
+
+        <h4 class="text-xl font-bold text-blue-400 mt-6">3.3. Token-uri de Monedă Electronică (EMT – E-Money Tokens)</h4>
+        <p>Cunoscute popular ca "stablecoins fiat-backed" (ex. USDC, EURC), acestea sunt active care se raportează la valoarea unei singure monede oficiale.</p>
+        <p><strong>Regim 2026:</strong> Sunt considerate, din punct de vedere juridic, monedă electronică. Conform cadrului legal actualizat (Titlul IV MiCA), emiterea lor în România este rezervată exclusiv instituțiilor de credit (bănci) sau instituțiilor emitente de monedă electronică autorizate.</p>
+        <p><strong>Supraveghere:</strong> BNR exercită controlul direct. Emitentul trebuie să garanteze răscumpărarea la paritate (1:1) în orice moment. Această cerință a eliminat de pe piața reglementată proiectele de stablecoins emise de entități nereglementate (fără licență bancară/EMI).</p>
+
+        <h4 class="text-xl font-bold text-blue-400 mt-6">3.4. Non-Fungible Tokens (NFT) – Zona de Clarificare</h4>
+        <p>Statutul NFT-urilor a fost un subiect intens dezbătut, iar anul 2026 aduce clarificări prin practica autorităților, deși textul legii menține anumite nuanțe.</p>
+        <ul class="list-disc pl-6 space-y-2 mt-2">
+          <li><strong>NFT-uri Autentice (Artă/Colectibile):</strong> Dacă un NFT este unic și nu fungibil (nu poate fi substituit cu un altul de aceeași valoare standardizată), acesta nu intră sub incidența MiCA. Din punct de vedere juridic, este tratat ca un bun necorporal sau titlu de proprietate intelectuală.</li>
+          <li><strong>NFT-uri Fracționate sau Colecții Mari:</strong> Autoritățile române și europene aplică principiul "substance over form" (fondul prevalează asupra formei). Dacă o colecție de 10.000 de NFT-uri este emisă într-o serie standardizată, iar token-urile au caracteristici similare și sunt tranzacționate pe piețe secundare pentru profit, acestea sunt reclasificate ca criptoactive sub MiCA. Aceasta obligă creatorii colecției să redacteze un White Paper și să respecte normele de protecție a consumatorului.</li>
+        </ul>
+
+        <h4 class="text-xl font-bold text-blue-400 mt-6">3.5. Instrumente Financiare Tokenizate (Security Tokens)</h4>
+        <p>
+          Este esențială distincția dintre criptoactivele MiCA și "Security Tokens". Dacă un token acordă drepturi similare acțiunilor (dividende, vot în companie) sau obligațiunilor, acesta este exclus din MiCA și intră sub incidența legislației pieței de capital (MiFID II), supravegheată de ASF.
+        </p>
+        <p><strong>Regim 2026:</strong> Tranzacționarea lor se poate face doar pe platforme autorizate sub Regimul Pilot DLT (Distributed Ledger Technology Pilot Regime), un cadru de testare reglementat la nivel UE, la care România participă activ.</p>
+
+        <h3 class="text-2xl font-bold text-white mt-10 border-b border-gray-700 pb-2">4. Impozitare: Șocul Fiscal al Anului 2026</h3>
+        <p>
+          Anul 2026 reprezintă un moment de cotitură în fiscalitatea românească, marcat de intrarea în vigoare a Legii nr. 239/2025 (cunoscută ca Pachetul Fiscal 2 sau "Legea Austerității"), care a modificat substanțial Codul Fiscal (Legea 227/2015). Scopul declarat al acestor modificări este creșterea veniturilor bugetare și descurajarea investițiilor speculative în detrimentul celor productive.
+        </p>
+
+        <h4 class="text-xl font-bold text-blue-400 mt-6">4.1. Impozitul pe Venit: Majorarea la 16%</h4>
+        <p>Cea mai importantă modificare, aplicabilă veniturilor realizate începând cu 1 ianuarie 2026, este creșterea cotei de impozitare pentru veniturile din transferul de monedă virtuală de la 10% la 16%.</p>
+        <p><strong>Baza de Calcul:</strong> Impozitul se aplică asupra câștigului net anual. Acesta se calculează ca diferență pozitivă între prețul de vânzare și prețul de achiziție, din care se pot scădea costurile directe legate de tranzacție (comisioane de exchange, taxe de rețea/gas fees).</p>
+        <p class="bg-gray-800 p-2 rounded border border-gray-600 font-mono text-sm mt-2">Formula: (Preț Vânzare - Preț Achiziție - Costuri Directe) x 16%.</p>
+        <p class="mt-2"><strong>Determinarea Câștigului:</strong> În lipsa unor norme specifice contrare, se aplică în general metoda FIFO (First-In, First-Out) sau metoda prețului mediu ponderat pentru determinarea costului de achiziție, responsabilitatea calculului revenind investitorului.</p>
+        <p><strong>Scutiri Minime:</strong> Se menține un prag de neimpozitare simbolic. Câștigurile sub 200 RON per tranzacție nu se impozitează, cu condiția ca totalul câștigurilor din anul fiscal să nu depășească 600 RON. Depășirea acestui plafon anual atrage impozitarea întregii sume (sau a diferenței, în funcție de interpretarea normelor metodologice actualizate ale ANAF).</p>
+
+        <h4 class="text-xl font-bold text-blue-400 mt-6">4.2. Contribuția de Asigurări Sociale de Sănătate (CASS)</h4>
+        <p>Pe lângă impozitul de 16%, investitorii datorează CASS dacă veniturile lor extrasalariale cumulate (inclusiv crypto, dividende, dobânzi, chirii) depășesc plafoanele legale. În 2026, calculul CASS devine mai complex din cauza modificării salariului minim brut în timpul anului.</p>
+        <p class="font-bold mt-2">Salariul Minim în 2026:</p>
+        <ul class="list-disc pl-6">
+          <li>1 Ianuarie - 30 Iunie: 4.050 RON</li>
+          <li>1 Iulie - 31 Decembrie: 4.325 RON.</li>
+        </ul>
+        <p class="font-bold mt-2">Plafoanele CASS (pentru venituri din investiții):</p>
+        <p>Sistemul de plafoane (6, 12 și 24 de salarii) se raportează la salariul minim în vigoare la data depunerii Declarației Unice (25 mai), însă baza de calcul efectivă ține cont de valoarea salariului la momentul realizării sau declarării. Pentru simplificare, în 2026, plafoanele uzuale de referință sunt calculate la valoarea salariului minim de la începutul anului fiscal sau o medie, conform normelor ANAF. Presupunând menținerea structurii pe 3 trepte pentru venituri din investiții:</p>
+        <ul class="list-disc pl-6 mt-1">
+          <li><strong>6 Salarii:</strong> Dacă veniturile sunt între 6 și 12 salarii minime.</li>
+          <li><strong>12 Salarii:</strong> Dacă veniturile sunt între 12 și 24 salarii minime.</li>
+          <li><strong>24 Salarii:</strong> Dacă veniturile depășesc 24 salarii minime.</li>
+        </ul>
+
+        <div class="bg-gray-800/80 p-4 rounded-lg border border-red-500/30 mt-4">
+          <p class="font-bold text-red-400">Exemplu de Impact:</p>
+          <p>Un investitor care realizează un câștig net din cripto de 100.000 RON în 2026 (peste plafonul de 24 salarii: 24 x 4.050 = 97.200 RON) va plăti:</p>
+          <ul class="list-decimal pl-6 mt-2">
+            <li>Impozit: 100.000 x 16% = 16.000 RON.</li>
+            <li>CASS (la nivelul a 24 salarii): 24 x 4.050 x 10% = 9.720 RON.</li>
+            <li><strong>Total Taxe: 25.720 RON</strong> (Rata efectivă de impozitare: 25,72%).</li>
+          </ul>
+        </div>
+        <p class="mt-2 text-sm text-gray-400">Pentru activitățile independente (PFA), plafoanele au fost extinse până la 60-72 de salarii, dar pentru veniturile din investiții "pure" (fără formă juridică de PFA), plafonul maxim rămâne de regulă la 24 de salarii, deși legislația este fluidă și trebuie monitorizată Declarația Unică.</p>
+
+        <h4 class="text-xl font-bold text-blue-400 mt-6">4.3. Regimul NFT-urilor: Drepturi de Autor vs. Cripto</h4>
+        <p>Tratamentul fiscal al NFT-urilor în 2026 depinde strict de natura activității:</p>
+        <ul class="list-disc pl-6 space-y-2 mt-2">
+          <li><strong>Creatori (Artiști):</strong> Veniturile obținute din vânzarea inițială a NFT-urilor create sunt considerate venituri din drepturi de proprietate intelectuală. Acestea beneficiază de o cotă forfetară de cheltuieli deductibile (40%), aplicându-se impozitul de 10% (sau 16% dacă legea drepturilor de autor nu prevede excepții specifice în noua lege fiscală) asupra venitului net.</li>
+          <li><strong>Investitori/Traderi:</strong> Câștigul din revânzarea unui NFT este tratat similar criptomonedelor: venit din alte surse, impozitat cu 16% pe diferența dintre prețul de vânzare și cel de achiziție.</li>
+          <li><strong>Royalties (Redevențe):</strong> Veniturile recurente (royalties) primite de creatori la revânzările ulterioare sunt taxate tot ca drepturi de proprietate intelectuală.</li>
+        </ul>
+
+        <h4 class="text-xl font-bold text-blue-400 mt-6">4.4. Obligații de Raportare și Transparență (DAC8/CARF)</h4>
+        <p>Anul 2026 aduce operaționalizarea deplină a schimbului de informații.</p>
+        <ul class="list-disc pl-6 space-y-2 mt-2">
+          <li><strong>DAC8:</strong> Directiva UE obligă toți furnizorii de servicii cripto (chiar și cei din afara UE care au clienți în România) să raporteze tranzacțiile utilizatorilor către autoritățile fiscale.</li>
+          <li><strong>ANAF:</strong> Primește automat date despre portofoliile și tranzacțiile rezidenților români. Capacitatea de a încrucișa aceste date cu Declarația Unică este acum automatizată. Riscul nedeclarării este critic, deoarece ANAF poate impozita din oficiu veniturile nedeclarate, aplicând și penalități de nedeclarare.</li>
+        </ul>
+
+        <h3 class="text-2xl font-bold text-white mt-10 border-b border-gray-700 pb-2">5. Comparații cu Alte Tipuri de Active</h3>
+        <p>Politica fiscală a anului 2026 creează un peisaj investițional distorsionat, favorizând anumite clase de active în detrimentul altora. Următoarea analiză comparativă evidențiază poziția dezavantajoasă a criptoactivelor.</p>
+
+        <h4 class="text-xl font-bold text-blue-400 mt-6">5.1. Criptoactive vs. Piața de Capital (BVB/Acțiuni)</h4>
+        <p>Cea mai mare discrepanță se observă între investițiile în cripto și cele pe bursă.</p>
+        <ul class="list-disc pl-6 mt-2">
+          <li><strong>Cripto:</strong> Impozit 16%. Pierderile nu se pot compensa cu alte tipuri de venituri.</li>
+          <li><strong>Acțiuni (BVB):</strong>
+            <ul class="list-circle pl-6 mt-1">
+              <li>Dețineri pe termen lung (> 365 zile): Impozit 3% (majorat de la 1%).</li>
+              <li>Dețineri pe termen scurt (< 365 zile): Impozit 6% (majorat de la 3%).</li>
+              <li>Impozitul este reținut la sursă de brokerii rezidenți, simplificând birocrația.</li>
+            </ul>
+          </li>
+        </ul>
+        <p class="mt-2 text-sm italic">Insight: Un investitor care păstrează acțiuni la o companie românească timp de un an plătește de peste 5 ori mai puțin impozit decât un investitor cripto (3% vs 16%). Aceasta este o formă de politică industrială prin fiscalitate, statul direcționând capitalul populației către companiile locale listate.</p>
+
+        <h4 class="text-xl font-bold text-blue-400 mt-6">5.2. Criptoactive vs. Aur de Investiții</h4>
+        <p>Tratamentul fiscal al acestor două clase a fost unificat în 2026.</p>
+        <p><strong>Aur:</strong> Impozitul pe câștigul din aur de investiții a crescut de la 10% la 16% prin Legea 239/2025.</p>
+        <p><em>Analiză:</em> Statul consideră ambele active ca fiind "tezaurizări speculative" sau rezerve de valoare pasive, care nu contribuie direct la rulajul economic productiv (spre deosebire de companii), justificând astfel o taxare mai aspră.</p>
+
+        <h4 class="text-xl font-bold text-blue-400 mt-6">5.3. Criptoactive vs. Titluri de Stat (Fidelis/Tezaur)</h4>
+        <p><strong>Titluri de Stat:</strong> Rămân neimpozabile (0% impozit, 0 CASS).</p>
+        <p><em>Analiză:</em> Titlurile de stat reprezintă "refugiul fiscal" suprem în 2026. Pentru investitorii conservatori, diferența dintre 0% taxe și 25.7% (cripto cu CASS) este un argument decisiv pentru realocarea portofoliului.</p>
+
+        <h4 class="text-xl font-bold text-blue-400 mt-6">5.4. Tabel Comparativ Sintetic (Fiscalitate 2026)</h4>
+        <div class="overflow-x-auto mt-4">
+          <table class="min-w-full text-sm text-left text-gray-300 border border-gray-700">
+            <thead class="text-xs text-blue-400 uppercase bg-gray-800">
+              <tr>
+                <th class="px-4 py-3 border-r border-gray-700">Clasa de Active</th>
+                <th class="px-4 py-3 border-r border-gray-700">Cota Impozit 2026</th>
+                <th class="px-4 py-3 border-r border-gray-700">Reținere la Sursă</th>
+                <th class="px-4 py-3 border-r border-gray-700">CASS Aplicabil</th>
+                <th class="px-4 py-3">Avantaj Competitiv</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-gray-700">
+                <td class="px-4 py-3 font-bold border-r border-gray-700">Criptoactive</td>
+                <td class="px-4 py-3 border-r border-gray-700">16%</td>
+                <td class="px-4 py-3 border-r border-gray-700">Nu (Autoimpunere)</td>
+                <td class="px-4 py-3 border-r border-gray-700">Da (Plafonat)</td>
+                <td class="px-4 py-3">Potențial de randament ridicat, acces global.</td>
+              </tr>
+              <tr class="border-b border-gray-700">
+                <td class="px-4 py-3 font-bold border-r border-gray-700">Acțiuni BVB (>1 an)</td>
+                <td class="px-4 py-3 border-r border-gray-700">3%</td>
+                <td class="px-4 py-3 border-r border-gray-700">Da</td>
+                <td class="px-4 py-3 border-r border-gray-700">Da (Plafonat)</td>
+                <td class="px-4 py-3">Cel mai mic impozit pentru active de risc.</td>
+              </tr>
+              <tr class="border-b border-gray-700">
+                <td class="px-4 py-3 font-bold border-r border-gray-700">Acțiuni BVB (<1 an)</td>
+                <td class="px-4 py-3 border-r border-gray-700">6%</td>
+                <td class="px-4 py-3 border-r border-gray-700">Da</td>
+                <td class="px-4 py-3 border-r border-gray-700">Da (Plafonat)</td>
+                <td class="px-4 py-3">Lichiditate și taxe reduse.</td>
+              </tr>
+              <tr class="border-b border-gray-700">
+                <td class="px-4 py-3 font-bold border-r border-gray-700">Aur Fizic</td>
+                <td class="px-4 py-3 border-r border-gray-700">16%</td>
+                <td class="px-4 py-3 border-r border-gray-700">Nu</td>
+                <td class="px-4 py-3 border-r border-gray-700">Da (Plafonat)</td>
+                <td class="px-4 py-3">Activ de refugiu tangibil.</td>
+              </tr>
+              <tr class="border-b border-gray-700">
+                <td class="px-4 py-3 font-bold border-r border-gray-700">Dividende</td>
+                <td class="px-4 py-3 border-r border-gray-700">16%</td>
+                <td class="px-4 py-3 border-r border-gray-700">Da</td>
+                <td class="px-4 py-3 border-r border-gray-700">Da (Plafonat)</td>
+                <td class="px-4 py-3">Venit pasiv, dar dublu impozitat economic.</td>
+              </tr>
+              <tr class="border-b border-gray-700">
+                <td class="px-4 py-3 font-bold border-r border-gray-700">Titluri de Stat</td>
+                <td class="px-4 py-3 border-r border-gray-700 text-green-400">0%</td>
+                <td class="px-4 py-3 border-r border-gray-700">N/A</td>
+                <td class="px-4 py-3 border-r border-gray-700">Nu</td>
+                <td class="px-4 py-3">Eficiență fiscală maximă.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="text-2xl font-bold text-white mt-10 border-b border-gray-700 pb-2">6. Impactul MiCA și Concluzii</h3>
+        
+        <h4 class="text-xl font-bold text-blue-400 mt-6">6.1. Impactul MiCA asupra Pieței Locale</h4>
+        <p>Implementarea MiCA a generat în România o "selecție naturală" accelerată a furnizorilor de servicii.</p>
+        <ul class="list-disc pl-6 space-y-2 mt-2">
+          <li><strong>Costuri de Conformare:</strong> Obligația de a menține fonduri proprii (50.000 – 150.000 EUR), de a plăti taxa de supraveghere ASF (0,5% din venituri lunar) și de a angaja personal specializat (ofițeri AML, directori locali) a eliminat micii jucători.</li>
+          <li><strong>Protecția Consumatorului:</strong> Investitorii români beneficiază acum de protecție împotriva insolvenței CASP-ului (segregarea fondurilor) și de transparență obligatorie prin White Papers. Riscul de "rug pull" pe proiecte reglementate a scăzut semnificativ.</li>
+          <li><strong>Inovație:</strong> Deși barierele de intrare sunt mari, cadrul clar atrage investitori instituționali (bănci, fonduri) care anterior evitau zona gri. Băncile românești încep să exploreze emiterea de EMT (stablecoins) sau servicii de custodie, având cadrul legal BNR deja setat.</li>
+        </ul>
+
+        <h4 class="text-xl font-bold text-blue-400 mt-6">6.2. Concluzii și Perspective</h4>
+        <p>La data de 23 ianuarie 2026, România a finalizat integrarea criptoactivelor în curentul financiar principal (mainstream), dar cu un cost semnificativ pentru utilizator.</p>
+        <ul class="list-disc pl-6 space-y-2 mt-2">
+          <li><strong>Sfârșitul "Vestului Sălbatic":</strong> Epoca tranzacțiilor anonime și a platformelor nereglementate s-a încheiat. Prin OUG 10/2025 și Travel Rule, fiecare satoshi este monitorizat.</li>
+          <li><strong>Povara Fiscală:</strong> Creșterea impozitului la 16% și extinderea bazelor de calcul pentru CASS transformă cripto într-o clasă de active scumpă fiscal. Aceasta poate reduce atractivitatea pentru micii investitori, care s-ar putea reorienta spre BVB (impozite de 3-6%) sau Titluri de Stat.</li>
+          <li><strong>Presiunea Timpului:</strong> Următoarele 6 luni (până în iulie 2026) sunt critice. Entitățile care operează sub regimul tranzitoriu ("Grandfathering") trebuie să obțină licența MiCA sau să iasă de pe piață. Ne așteptăm la o consolidare a pieței în jurul a 3-4 jucători majori autorizați.</li>
+          <li><strong>Supravegherea Agresivă:</strong> Cu ASF și BNR având puteri depline și cu ANAF conectat la fluxurile de date europene (DAC8), conformitatea nu mai este opțională. Strategia optimă pentru 2026 este transparența totală și optimizarea portofoliului ținând cont de noile realități fiscale.</li>
+        </ul>
+        <p class="font-bold text-white mt-4">În esență, piața cripto din România a devenit mai sigură, mai transparentă, dar semnificativ mai puțin profitabilă din punct de vedere fiscal și mai complexă birocratic. Viitorul aparține entităților care pot naviga acest labirint de reglementări și investitorilor care își pot asuma costurile de conformitate.</p>
+
+      </div>
+    `
   }
 ];
 
 // --- 3. LISTA TERMENI & LINK-URI (INTERCONECTARE) ---
-// Aici definim termenul, explicația scurtă (tooltip) și link-ul către articolul mare (dacă există)
 export const terms: Record<string, { def: string, url?: string }> = {
   "Bitcoin": {
     def: "Aur Digital. Rețea descentralizată, limitată la 21 milioane unități.",
@@ -798,4 +1106,4 @@ export function enhanceContent(content: string): string {
   });
   
   return enhancedContent;
-}
+} 
