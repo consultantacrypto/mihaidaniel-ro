@@ -699,7 +699,7 @@ export const dictionary: AcademyItem[] = [
     slug: "legislatie-fiscalitate-crypto-romania-2026-raport-complet",
     term: "Raport: Legislația & Fiscalitatea Crypto (2026)",
     category: "ANALIZĂ FUNDAMENTALĂ",
-    image: "/legecryptoro.jpg",  
+    image: "/cryptoromanialege.jpg",  
     definition: "Raportul de cercetare integral privind cadrul legal și fiscal din România în 2026. Analiza exhaustivă a Legii 239/2025, MiCA, OUG 10/2025 și a impozitării de 16%.",
     analogy: "Harta Minată vs. Drumul Asfaltat. Până în 2025, mergeam prin 'junglă' - riscant, dar fără reguli. În 2026, avem un drum asfaltat (MiCA), dar cu taxe de autostradă scumpe (16%) și radare la fiecare pas (ANAF/DAC8). Raportul acesta este 'Codul Rutier' complet pe care trebuie să-l știi ca să nu rămâi fără permis (sau bani).",
     mihaiTake: "Tati, acesta este cel mai important document din Academie pentru siguranța ta financiară. Nu l-am rezumat pentru că fiecare paragraf contează. Citește tot, în special secțiunea despre 'Grandfathering' (dacă ai afaceri vechi) și calculul CASS. 2026 nu iartă greșelile de conformitate.",
