@@ -1,4 +1,72 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: JP MORGAN PE ETHEREUM (23 IAN DIMINEATA)
+  {
+    id: 'jpmorgan-launches-ethereum-fund-mony-jan-23-2026',
+    slug: 'bomba-financiara-jpmorgan-ethereum-oficial',
+    title: '🏛️ BOMBA FINANCIARĂ: J.P. MORGAN (CEA MAI MARE BANCĂ DIN LUME) A INTRAT OFICIAL PE ETHEREUM!',
+    summary: 'Nu mai e zvon. J.P. Morgan a lansat fondul "MONY" direct pe Ethereum Mainnet. Validarea supremă a blockchain-ului ca standard global.',
+    category: 'INSTITUȚIONAL & RWA',
+    image: '/jpmorgan23.jpg',
+    date: '23 Jan 2026',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Validare masivă pentru Ethereum
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-blue-600/20 text-blue-300 border border-blue-600/30 px-3 py-1 rounded text-xs font-bold uppercase">💎 Ethereum Mainnet</span>
+        <span class="bg-gray-700/50 text-gray-200 border border-gray-600/50 px-3 py-1 rounded text-xs font-bold uppercase">🏦 J.P. Morgan</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">București, 23 Ianuarie 2026. Imaginează-ți că îți savurezi cafeaua în Voluntari sau în orice colț al țării și primești notificarea care schimbă istoria financiară.</p>
+      
+      <p class="mb-6 text-gray-300">Nu este un test. Nu este un zvon. Este oficial. <strong>J.P. Morgan</strong>, gigantul cu active de 4 trilioane de dolari (de zeci de ori cât PIB-ul României), a spart bariera. Banca a lansat Live pe Ethereum Mainnet fondul său tokenizat.</p>
+      
+      <p class="mb-6 text-gray-300 italic border-l-4 border-blue-500 pl-4">Dacă până ieri Wall Street-ul doar "flirta" cu blockchain-ul, azi s-a căsătorit cu el.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Momentul Zero: Proiectul "MONY"</h3>
+      <p class="mb-4 text-gray-300">Ieri, platforma de date RWA.xyz a confirmat tranzacțiile. J.P. Morgan a activat fondul numit <strong>MONY (My OnChain Net Yield Fund)</strong>.</p>
+
+      <div class="bg-[#0b1221] p-5 rounded-xl border border-gray-700 mb-6">
+        <ul class="space-y-3">
+            <li class="text-gray-300"><strong class="text-blue-400">Ce este?</strong> Un fond care tokenizează obligațiuni guvernamentale americane (US Treasuries).</li>
+            <li class="text-gray-300"><strong class="text-blue-400">Unde rulează?</strong> Nu pe un blockchain privat și obscur, ci direct pe <strong>Ethereum</strong>.</li>
+            <li class="text-gray-300"><strong class="text-blue-400">De ce contează?</strong> Este semnalul suprem că TradFi (Finanțele Tradiționale) acceptă Ethereum ca standardul global pentru transferul de valoare, la fel cum au acceptat internetul pentru transferul de informație.</li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. De ce Ethereum? (Și nu Solana sau altceva)</h3>
+      <p class="mb-4 text-gray-300">J.P. Morgan nu se joacă. Au ales Ethereum pentru <strong>Securitate și Lichiditate</strong>. Prin divizia lor blockchain, JPM Kinexys (fosta Onyx), banca aduce active reale (RWA) în lumea DeFi.</p>
+      <p class="mb-6 text-gray-300">Asta înseamnă că, în curând, miliarde de dolari din economia reală vor curge prin "țevile" Ethereum. Vitalik Buterin a avut dreptate: viitorul nu este doar despre speculă, ci despre tokenizarea activelor reale.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Ce înseamnă asta pentru Tine, Investitorul Român?</h3>
+      <p class="mb-4 text-gray-300">Tati, fii atent aici. Barierele dispar. Până acum, ca să cumperi obligațiuni americane, îți trebuia un broker, conturi complicate și birocrație. Acum, cu giganții intrând pe chain:</p>
+
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div class="bg-green-900/10 p-4 rounded-xl border border-green-500/20">
+              <h4 class="font-bold text-green-400 mb-2">Acces Democratizat</h4>
+              <p class="text-sm text-gray-300">Vei putea accesa yield-uri (randamente) sigure, în dolari, direct din portofelul tău MetaMask, garantate de J.P. Morgan.</p>
+          </div>
+          <div class="bg-purple-900/10 p-4 rounded-xl border border-purple-500/20">
+              <h4 class="font-bold text-purple-400 mb-2">Competiție pentru Bănci</h4>
+              <p class="text-sm text-gray-300">De ce să ții banii la o bancă locală cu dobândă de 3% în RON (care se devalorizează), când poți avea acces la "dolarul tokenizat" cu randament de 4-5% pe blockchain?</p>
+          </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. Contextul 2026: "Capitala Crypto"</h3>
+      <p class="mb-4 text-gray-300">Această mișcare vine la fix, imediat după discursul de la Davos și în mijlocul dezbaterilor pe Clarity Act. J.P. Morgan știe ceva ce noi bănuiam: Reglementarea vine, iar ei vor să fie primii la masă.</p>
+      <p class="mb-6 text-gray-300">Dacă JPM a făcut pasul, așteaptă-te ca Goldman Sachs și BlackRock să anunțe mișcări similare în Q1 2026.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-blue-900/20 p-6 rounded-2xl border border-blue-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-blue-400 mb-2">Concluzie:</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            Pariul pe Ethereum nu a fost greșit.<br/>
+            Azi, un investitor din Voluntari are acces la aceleași instrumente financiare ca un bancher de pe Wall Street, grație blockchain-ului.<br/><br/>
+            <strong>"Zidul" dintre lumea veche și lumea nouă a căzut. Ești pregătit pentru ce urmează?</strong>
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: SCANDAL NASDAQ INSIDER TRADING (22 IAN SEARA)
   {
     id: 'nasdaq-insider-trading-scandal-dont-token-solana-jan-22-2026',
