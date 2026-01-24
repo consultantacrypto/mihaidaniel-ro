@@ -1,4 +1,90 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: SMART MONEY ALL-IN (24 IAN DIMINEATA)
+  {
+    id: 'smart-money-all-in-cash-low-bofa-jan-24-2026',
+    slug: 'alerta-investitori-smart-money-all-in-cash-minim-istoric',
+    title: '🚨 ALERTĂ PENTRU INVESTITORI: "Smart Money" este ALL-IN. Cash-ul Fondurilor Globale a atins MINIMUL ISTORIC. Ce urmează?',
+    summary: 'Sondajul BofA arată că fondurile globale au doar 3.2% cash, minim istoric. Suntem în zona "Hyper-Bull". Află de ce lipsa de cash este un pericol mortal pentru piață.',
+    category: 'MACRO & INSTITUȚIONAL',
+    image: '/allin24.jpg',
+    date: '24 Jan 2026',
+    readTime: '6 min',
+    author: 'Mihai Daniel',
+    impact: 'bearish', // Semnal de supraîncălzire (Contrarian Sell Signal)
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-red-600/20 text-red-300 border border-red-600/30 px-3 py-1 rounded text-xs font-bold uppercase">⚠️ Cash Record Low: 3.2%</span>
+        <span class="bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🚀 Hyper-Bull Sentiment</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Ianuarie 2026. Piețele sunt pe maxime. Toată lumea e fericită. Dar în spatele graficelor verzi, se ascunde o statistică terifiantă.</p>
+      
+      <p class="mb-6 text-gray-300">Cel mai nou sondaj <strong>Bank of America (BofA) Global Fund Manager Survey</strong> – care chestionează manageri ce controlează peste 600 de miliarde de dolari – a lansat un avertisment masiv. Investitorii instituționali sunt într-o stare de "optimism extrem" (Hyper-Bull), dar sunt mai vulnerabili ca niciodată.</p>
+      
+      <p class="mb-6 text-gray-300 italic border-l-4 border-red-500 pl-4">Iată de ce acest raport ar trebui să te pună pe gânduri, Tati, și să te facă să îți verifici centura de siguranță.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Semnalul Roșu: Cash-ul la Minim Istoric (3.2%) 📉</h3>
+      <p class="mb-4 text-gray-300">Aceasta este bomba raportului. Alocarea de cash (bani lichizi) în portofoliile marilor fonduri a scăzut la 3.2%.</p>
+
+      <div class="bg-red-900/10 border border-red-500/20 p-5 rounded-xl mb-6">
+        <div class="flex items-center gap-4 mb-3">
+             <span class="text-4xl font-black text-red-500">3.2%</span>
+             <span class="text-gray-400 text-sm uppercase font-bold">Cash Level</span>
+        </div>
+        <ul class="space-y-3">
+            <li class="text-gray-300"><strong class="text-red-400">Ce înseamnă asta?</strong> Este cel mai scăzut nivel din istoria sondajului (din anii '90 încoace!).</li>
+            <li class="text-gray-300"><strong class="text-red-400">De ce e periculos?</strong> Cash-ul este "amortizorul" pieței. Când bursele scad, managerii folosesc cash-ul ca să cumpere la reducere și să stabilizeze piața.</li>
+            <li class="text-gray-300"><strong class="text-red-400">Realitatea 2026:</strong> Acum nu mai au cash. Sunt investiti 100%. Dacă apare un șoc (geopolitic, economic), singurul mod în care pot face rost de bani este SĂ VINDĂ. Asta poate transforma o corecție mică într-o cascadă de lichidări.</li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Optimism "Hyper-Bull": Capcana din 2021 se repetă? 🐂</h3>
+      <p class="mb-4 text-gray-300">Indicatorul Bull & Bear al BofA a sărit la 9.4. Asta înseamnă euforie maximă. Ultima dată când managerii au fost atât de optimiști a fost în Iulie 2021. Îți amintești ce a urmat? Vârful pieței și apoi brutalul an 2022.</p>
+
+      <div class="bg-[#0b1221] p-4 rounded-xl border border-gray-700 mb-6">
+        <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+                <span class="text-green-400">●</span>
+                <span class="text-gray-300 text-sm"><strong>Alocarea pe Acțiuni:</strong> Este la maximul ultimilor ani (48% overweight).</span>
+            </li>
+            <li class="flex items-start gap-2">
+                <span class="text-red-400">●</span>
+                <span class="text-gray-300 text-sm"><strong>Protecția (Hedging):</strong> Este la minimul din 2018. Nimeni nu cumpără asigurări de scădere (Put Options), pentru că toți cred că "piața poate merge doar în sus".</span>
+            </li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Ce înseamnă asta pentru Tine? 🫵</h3>
+      <p class="mb-4 text-gray-300">Când "Smart Money" este All-In fără protecție, piața devine un castel de cărți de joc. Dacă ești investitor român cu expunere pe US (S&P500, Nasdaq) sau Crypto:</p>
+
+      <div class="space-y-4 mb-6">
+          <div class="bg-yellow-900/10 p-4 rounded-xl border border-yellow-500/20">
+              <strong class="text-yellow-400 block mb-1">Nu fi "Exit Liquidity"</strong>
+              <span class="text-gray-300 text-sm">Fondurile nu mai au bani de cumpărat. Ele așteaptă ca retail-ul (tu) să cumpere acum, ca ele să poată marca profitul.</span>
+          </div>
+          <div class="bg-orange-900/10 p-4 rounded-xl border border-orange-500/20">
+              <strong class="text-orange-400 block mb-1">Volatilitate Extremă</strong>
+              <span class="text-gray-300 text-sm">Fără tampon de cash, orice știre negativă va provoca mișcări violente.</span>
+          </div>
+          <div class="bg-blue-900/10 p-4 rounded-xl border border-blue-500/20">
+              <strong class="text-blue-400 block mb-1">Contrarian Thinking</strong>
+              <span class="text-gray-300 text-sm">Istoria ne spune: "Fii fricos când alții sunt lacomi". Acum, lăcomia instituțională este la cote istorice.</span>
+          </div>
+      </div>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-gray-800 p-6 rounded-2xl border border-gray-600 shadow-lg">
+        <h4 class="text-xl font-bold text-white mb-2">Concluzie:</h4>
+        <p class="text-gray-300 mb-4 leading-relaxed">
+            Nu spun să vinzi tot și să fugi în munți. Spun doar că nu e momentul să fii erou.
+        </p>
+        <p class="text-white font-bold mb-0 leading-relaxed border-t border-white/10 pt-4">
+            Dacă Bank of America ne arată că "balenele" nu mai au cash și nici protecție, poate e momentul ca tu să faci opusul: <strong>crește-ți rezervele de cash (USDT/Fiat) și nu te împrumuta (Leverage) acum.</strong><br/><br/>
+            Petrecerea e în toi, dar cineva tocmai a încuiat ieșirile de urgență.
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: JP MORGAN PE ETHEREUM (23 IAN DIMINEATA)
   {
     id: 'jpmorgan-launches-ethereum-fund-mony-jan-23-2026',
