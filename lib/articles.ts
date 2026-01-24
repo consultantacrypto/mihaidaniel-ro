@@ -1,4 +1,94 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: TRUMP VS CANADA 100% TARIFE (24 IAN SEARA)
+  {
+    id: 'trump-canada-100-percent-tariffs-usmca-china-jan-24-2026',
+    slug: 'trump-ameninta-canada-tarife-100-razboi-comercial',
+    title: '🚨 BREAKING: TRUMP AMENINȚĂ CANADA CU TARIFE DE 100%. ÎNCEPE RĂZBOIUL PENTRU "FORTĂREAȚA AMERICA"?',
+    summary: 'Nu e glumă. Trump amenință cu tarife de 100% pe toate bunurile canadiene. Află ce este "Articolul 32.10" și cum vizita lui Carney la Beijing a declanșat războiul.',
+    category: 'GEOPOLITICĂ & MACRO',
+    image: '/canada100.jpg',
+    date: '24 Jan 2026',
+    readTime: '6 min',
+    author: 'Mihai Daniel',
+    impact: 'bearish', // Război comercial = Inflație & Volatilitate
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-red-600/20 text-red-300 border border-red-600/30 px-3 py-1 rounded text-xs font-bold uppercase">🇨🇦 vs 🇺🇸 Trade War</span>
+        <span class="bg-gray-700/50 text-gray-200 border border-gray-600/50 px-3 py-1 rounded text-xs font-bold uppercase">💣 100% Tariffs</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Credeai că războiul comercial e doar cu China? Mai gândește-te. Astăzi, Donald Trump a aruncat "bomba nucleară" economică peste cel mai vechi aliat al Americii: Canada.</p>
+      
+      <p class="mb-6 text-gray-300">Nu 25%. Nu 35%. <strong>100% Tarife pe TOATE bunurile canadiene.</strong></p>
+      
+      <p class="mb-6 text-gray-300">Aceasta este cea mai severă amenințare comercială emisă vreodată împotriva unui aliat din grupul "Five Eyes". Dar presa mainstream îți spune doar jumătate de poveste ("Trump e nebun"). Hai să-ți spun ce NU ți se zice la știri și de ce acest moment schimbă totul pentru piețele globale în 2026.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. "Trădarea" de la Beijing 🇨🇳</h3>
+      <p class="mb-4 text-gray-300">Acum 8 zile, Mark Carney (liderul canadian) a stat în Marea Sală a Poporului din Beijing și a făcut ceva ce niciun lider occidental nu a îndrăznit recent:</p>
+
+      <div class="bg-[#0b1221] p-4 rounded-xl border border-gray-700 mb-6">
+        <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+                <span class="text-red-400">●</span>
+                <span class="text-gray-300 text-sm">A tăiat tarifele Canadei pentru mașinile electrice chinezești (EV) de la <strong>100% la doar 6.1%</strong>.</span>
+            </li>
+            <li class="flex items-start gap-2">
+                <span class="text-red-400">●</span>
+                <span class="text-gray-300 text-sm">A semnat <strong>8 memorandumuri</strong> cu Beijingul.</span>
+            </li>
+            <li class="flex items-start gap-2">
+                <span class="text-red-400">●</span>
+                <span class="text-gray-300 text-sm">A declarat la Davos că <em>"Ordinea bazată pe reguli dispare... și nu se mai întoarce."</em></span>
+            </li>
+        </ul>
+        <p class="text-gray-300 text-sm mt-4 border-t border-gray-600 pt-2 italic">
+            <strong>Reacția lui Trump de azi?</strong> "Dacă Guvernatorul Carney crede că va transforma Canada într-un 'Port de Descărcare' pentru ca China să trimită produse în SUA, se înșală amarnic."
+        </p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Arma Secretă: Articolul 32.10 ("Pilula Otrăvită") ☠️</h3>
+      <p class="mb-4 text-gray-300">Aici e cheia pe care analiștii o ratează. Acordul USMCA (noul NAFTA) are o clauză numită <strong>Articolul 32.10</strong>.</p>
+
+      <div class="bg-red-900/10 border-l-4 border-red-500 p-4 rounded-r-xl mb-6">
+        <strong class="text-red-400 block mb-2">Ce face clauza?</strong>
+        <p class="text-gray-300 text-sm">Aceasta dă Statelor Unite dreptul de a <strong>EXPULZA Canada</strong> din acordul de liber schimb dacă Ottawa semnează un acord cu o "țară non-piață" (adică China).</p>
+        <p class="text-white text-sm mt-2 font-bold">Canada tocmai a semnat pactul cu diavolul (în ochii SUA). Trump nu blufează. El activează clauza creată EXACT pentru acest scenariu.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Paradoxul Strategic: Canada a ales China?</h3>
+      <p class="mb-4 text-gray-300">Washington-ul a încercat să forțeze mâna Canadei prin amenințări ("deveniți al 51-lea stat"). Rezultatul?</p>
+      
+      <div class="space-y-2 mb-6 font-mono text-sm bg-black/30 p-4 rounded-lg">
+        <p class="text-yellow-400">Amenințare cu tarife 35% -> Carney s-a dus la Beijing.</p>
+        <p class="text-red-500 font-bold">Amenințare cu tarife 100% -> Canada nu mai are nimic de pierdut.</p>
+      </div>
+      
+      <p class="mb-6 text-gray-300">Când ameninți un aliat cu anihilarea economică, el nu devine mai obedient. Devine mai diversificat. Trump nu a împins Canada spre China. <strong>Trump a LIVRAT Canada Chinei.</strong></p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. Ce înseamnă asta pentru Tine (Investitorul)? 📉</h3>
+      <p class="mb-4 text-gray-300">Ușa din spate a Americii s-a deschis. 49.000 de mașini electrice chinezești (BYD, Nio) intră acum în Canada cu taxe minime.</p>
+
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div class="bg-blue-900/10 p-4 rounded-xl border border-blue-500/20">
+              <strong class="text-blue-400 block mb-1">USDCAD (Dolarul Canadian)</strong>
+              <span class="text-gray-300 text-sm">Va fi măcelărit. Volatilitate extremă.</span>
+          </div>
+          <div class="bg-orange-900/10 p-4 rounded-xl border border-orange-500/20">
+              <strong class="text-orange-400 block mb-1">Bitcoin</strong>
+              <span class="text-gray-300 text-sm">Într-o lume unde aliații se bombardează economic și dolarul este folosit ca armă, Bitcoin rămâne singurul activ "nealiniat".</span>
+          </div>
+      </div>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-red-900/20 p-6 rounded-2xl border border-red-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-red-400 mb-2">Concluzie:</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            America construiește singură lumea multipolară de care se teme. Un aliat pe rând.<br/><br/>
+            <strong>Review-ul USMCA (Iulie 2026) va fi momentul critic. Dacă SUA rupe acordul, inflația în America de Nord va exploda.</strong>
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: SMART MONEY ALL-IN (24 IAN DIMINEATA)
   {
     id: 'smart-money-all-in-cash-low-bofa-jan-24-2026',
