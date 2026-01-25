@@ -1,4 +1,74 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: VOLUM INTERN BITCOIN MINIM 2022 (25 IAN SEARA)
+  {
+    id: 'bitcoin-internal-volume-low-liquidity-crunch-jan-25-2026',
+    slug: 'linistea-dinaintea-furtunii-volum-bitcoin-minim-2022',
+    title: '📉 LINIȘTEA DINAINTEA FURTUNII: VOLUMUL INTERN PE BITCOIN A CĂZUT LA MINIMUL DIN 2022. URMEAZĂ VOLATILITATE EXTREMĂ?',
+    summary: 'Anomalie on-chain critică. Fluxurile interne pe Binance au atins un minim istoric. Află ce este "Liquidity Crunch" și de ce piața este ca un arc comprimat gata să explodeze.',
+    category: 'ON-CHAIN & ANALIZĂ TEHNICĂ',
+    image: '/volummic25.jpg',
+    date: '25 Jan 2026',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'volatile', // Volatilitate extremă iminentă
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-purple-600/20 text-purple-300 border border-purple-600/30 px-3 py-1 rounded text-xs font-bold uppercase">📉 Low Liquidity</span>
+        <span class="bg-orange-500/20 text-orange-300 border border-orange-500/30 px-3 py-1 rounded text-xs font-bold uppercase">⚠️ Volatility Alert</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Datele on-chain din 25 Ianuarie 2026 arată o anomalie pe care nu am mai văzut-o de la "Iarna Crypto" din 2022.</p>
+      
+      <p class="mb-6 text-gray-300">Volumul tranzacțiilor interne pe Bitcoin (între portofelele exchange-urilor) a scăzut la doar 14.000 BTC. Pe Binance, situația este și mai drastică, fluxurile interne atingând un minim istoric de aproximativ 2.700 BTC. Ce înseamnă acest blocaj tehnic și de ce ar trebui să fii pregătit pentru o mișcare violentă a prețului?</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Ce înseamnă, de fapt, "Volum Intern"? 🔧</h3>
+      <p class="mb-4 text-gray-300">Nu vorbim despre volumul de tranzacționare al utilizatorilor obișnuiți, ci despre "instalația sanitară" a bursei.</p>
+
+      <div class="bg-[#0b1221] p-4 rounded-xl border border-gray-700 mb-6">
+        <p class="text-gray-300 text-sm">Faptul că aceste fluxuri sunt la un minim istoric indică un singur lucru: <strong>Market Makerii</strong> (cei care asigură lichiditatea și stabilitatea prețului) au luat o pauză. Nu își rebalansează portofoliile agresiv și stau pe margine. Este o stare de așteptare tensionată.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Pericolul: "Liquidity Crunch" (Criza de Lichiditate) ❄️</h3>
+      <p class="mb-4 text-gray-300">Când volumele interne scad atât de mult, apare fenomenul de <strong>"Thin Order Book"</strong> (Carnet de Ordine Subțire).</p>
+      
+      <div class="bg-blue-900/10 border-l-4 border-blue-500 p-4 rounded-r-xl mb-6">
+        <strong class="text-blue-400 block mb-2">Analogia Lacului Înghețat:</strong>
+        <p class="text-gray-300 text-sm">Când lichiditatea e mare, gheața e groasă și susține orice greutate. Când lichiditatea e mică (ca acum), gheața e subțire.</p>
+        <p class="text-white text-sm mt-2 font-bold">Mecanismul de șoc: O comandă care normal nu ar conta, acum poate mișca prețul cu procente semnificative. Nu există suficienți vânzători sau cumpărători pentru a absorbi șocurile.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Istoria se repetă: Volatilitate Direcțională 🌪️</h3>
+      <p class="mb-4 text-gray-300">Istoria ne învață că perioadele de acalmie extremă sunt urmate aproape întotdeauna de o mișcare violentă. Piața este ca un arc comprimat la maximum.</p>
+      <p class="mb-6 text-gray-300">Datele on-chain nu ne spun direcția (sus sau jos), dar ne spun clar <strong>Magnitudinea</strong>. Urmează o mișcare mare.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. Cum te protejezi în fața furtunii? 🛡️</h3>
+      <p class="mb-4 text-gray-300">Într-un mediu cu lichiditate scăzută ("Low Liquidity Environment"), regulile de supraviețuire se schimbă:</p>
+
+      <ul class="space-y-3 mb-6 bg-gray-900/50 p-5 rounded-xl border border-gray-800">
+        <li class="flex items-start gap-3">
+            <span class="text-red-500 font-bold">❌</span>
+            <span class="text-gray-300 text-sm"><strong>NU folosi Leverage mare:</strong> Apar frecvent "wick-uri" (umbre lungi) care lichidează pozițiile stop-loss înainte de mișcarea reală.</span>
+        </li>
+        <li class="flex items-start gap-3">
+            <span class="text-yellow-500 font-bold">⚠️</span>
+            <span class="text-gray-300 text-sm"><strong>Așteaptă Confirmarea:</strong> Nu încerca să ghicești direcția exploziei. Așteaptă ca prețul să rupă structura.</span>
+        </li>
+        <li class="flex items-start gap-3">
+            <span class="text-green-500 font-bold">🧘</span>
+            <span class="text-gray-300 text-sm"><strong>Răbdare:</strong> Această liniște este o capcană psihologică. Nu intra în tranzacții din plictiseală.</span>
+        </li>
+      </ul>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-orange-900/20 p-6 rounded-2xl border border-orange-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-orange-400 mb-2">Concluzie:</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            Sistemul este în "Standby". Marii jucători și-au retras muniția pentru moment. Când vor reintra în piață, impactul va fi seismic.<br/><br/>
+            <strong>Până atunci, cel mai bun trade poate fi să stai pe mâini și să păstrezi capitalul intact.</strong>
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: SUA SALVEAZA JAPONIA - CRASH DOLAR (25 IAN DIMINEATA)
   {
     id: 'us-dollar-devaluation-save-japan-yen-crisis-jan-25-2026',
