@@ -1,4 +1,74 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: SUA SALVEAZA JAPONIA - CRASH DOLAR (25 IAN DIMINEATA)
+  {
+    id: 'us-dollar-devaluation-save-japan-yen-crisis-jan-25-2026',
+    slug: 'sua-salveaza-japonia-crash-dolar-analiza-macro',
+    title: '📉 SUA VA SALVA JAPONIA PRIN "CRASH-UL" DOLARULUI? ANALIZA UNEI STRATEGII MONETARE CARE AR PUTEA SCHIMBA PIEȚELE GLOBALE ÎN 2026',
+    summary: 'Un scenariu de thriller financiar: SUA ar putea devaloriza intenționat dolarul pentru a salva Yen-ul. Află ce înseamnă asta pentru Gold, Crypto și portofoliul tău.',
+    category: 'MACRO & FOREX',
+    image: '/suajapan25.jpg',
+    date: '25 Jan 2026',
+    readTime: '7 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Dolar slab = Active (Gold/Crypto) Sus
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-blue-600/20 text-blue-300 border border-blue-600/30 px-3 py-1 rounded text-xs font-bold uppercase">🇯🇵 JPY Crisis</span>
+        <span class="bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded text-xs font-bold uppercase">💵 DXY Crash Theory</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Imaginează-ți un scenariu demn de un thriller financiar: cea mai mare economie a lumii, SUA, decide să devalorizeze intenționat dolarul pentru a salva un aliat cheie, Japonia, de la un colaps monetar.</p>
+      
+      <p class="mb-6 text-gray-300">Sună a ficțiune? Nu chiar – semnale recente de la New York Fed sugerează o intervenție potențială. În acest articol, disecăm faptele reale din spatele speculațiilor și ce înseamnă asta pentru investitori ca tine din România.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Criza Yen-ului: De Ce Japonia Are Nevoie de "Salvare"? 🇯🇵</h3>
+      <p class="mb-4 text-gray-300">Japonia, a treia economie mondială, se confruntă cu o anomalie periculoasă: randamentele (yields) cresc, dar yen-ul (JPY) se prăbușește vs. dolar (la ~160 JPY/USD, minim istoric).</p>
+
+      <div class="bg-[#0b1221] p-4 rounded-xl border border-gray-700 mb-6">
+        <strong class="text-red-400 block mb-2">Vinovatul: "Carry Trade" Masiv</strong>
+        <p class="text-gray-300 text-sm">Fed ține ratele la 5.5% (anti-inflație), în timp ce Bank of Japan abia a urcat la 0.25%. Investitorii împrumută ieftin în JPY și investesc în USD, slăbind yen-ul.</p>
+        <p class="text-yellow-400 text-xs mt-2 italic font-bold">⚠️ Semnal de Alarmă: Pe 20 ianuarie 2026, NY Fed a publicat un raport care "monitorizează activ" piețele FX.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Strategia SUA: Intervenție prin Devalorizarea Dolarului? 📉</h3>
+      <p class="mb-4 text-gray-300">Ultima intervenție majoră US a fost în 2011. Acum, cu Trump la putere și focus pe "America First", o devalorizare controlată ar servi interese naționale.</p>
+      
+      <p class="mb-4 text-gray-300"><strong>Cum Ar Funcționa?</strong> US Treasury ar vinde rezerve USD pentru JPY. Rezultat: USD mai slab (ex: de la 1.05 EUR la 1.15 EUR).</p>
+
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div class="bg-green-900/10 p-4 rounded-xl border border-green-500/20">
+              <strong class="text-green-400 block mb-1">Cine Câștigă?</strong>
+              <ul class="text-gray-300 text-sm list-disc pl-4">
+                  <li>Guvernul US: Datoria de 34 trilioane devine mai ușor de plătit.</li>
+                  <li>Exporturile US: Produse americane mai ieftine global.</li>
+                  <li>Deținătorii de Active: Stocks și Gold urcă în USD slab.</li>
+              </ul>
+          </div>
+          <div class="bg-red-900/10 p-4 rounded-xl border border-red-500/20">
+              <strong class="text-red-400 block mb-1">Riscuri</strong>
+              <p class="text-gray-300 text-sm">O intervenție ar putea declanșa euforie scurtă, dar și inflație importată în SUA și Europa.</p>
+          </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Implicații Globale și pentru România 🇷🇴</h3>
+      <p class="mb-4 text-gray-300">Pentru tine în România, un USD slab înseamnă un Euro mai puternic (la care e legat RON-ul), deci importuri mai scumpe.</p>
+
+      <div class="bg-yellow-900/10 border-l-4 border-yellow-500 p-4 rounded-r-xl mb-6">
+        <strong class="text-yellow-400 block mb-1">💡 Oportunitatea (Lecția Practică)</strong>
+        <p class="text-gray-300 text-sm">Dacă USD slăbește, <strong>Crypto (BTC/ETH) și Gold urcă</strong> – sunt activele perfecte pentru diversificare împotriva devalorizării fiat.</p>
+        <p class="text-white text-sm mt-2 font-bold">Monitorizează FX: USD/JPY sub 150 ar semnala intervenția.</p>
+      </div>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-blue-900/20 p-6 rounded-2xl border border-blue-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-blue-400 mb-2">Concluzie: Speculație sau Realitate?</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            Intervenția nu e confirmată, dar semnalele Fed/BoJ o fac probabilă. Istoria (Plaza Accord) arată că astfel de mișcări schimbă lumea.<br/><br/>
+            <strong>Dacă vine "crash-ul" dolarului, fii poziționat pe active reale (Gold/Crypto). Nu reacționa la panică, fii pregătit.</strong>
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: TRUMP VS CANADA 100% TARIFE (24 IAN SEARA)
   {
     id: 'trump-canada-100-percent-tariffs-usmca-china-jan-24-2026',
