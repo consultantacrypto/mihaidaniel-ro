@@ -1,4 +1,95 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: BITCOIN VS AUR 2024-2026 (26 IAN)
+  {
+    id: 'bitcoin-vs-gold-store-of-value-analysis-2024-2026',
+    slug: 'bitcoin-vs-aur-analiza-rece-2024-2026-store-of-value',
+    title: 'BITCOIN VS. AUR: O ANALIZĂ RECE A ULTIMILOR 2 ANI (2024-2026). CINE A CÂȘTIGAT RĂZBOIUL PENTRU "STORE OF VALUE"?',
+    summary: 'Aurul a fost scutul, Bitcoin a fost sabia. O analiză detaliată a performanței din ultimii 2 ani și de ce strategia corectă pentru 2026 este "Ambele".',
+    category: 'MACRO & EDUCAȚIE',
+    image: '/bitcoinvsgold.jpg',
+    date: '26 Jan 2026',
+    readTime: '6 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Validare pentru ambele active
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🥇 Gold (Scutul)</span>
+        <span class="bg-orange-500/20 text-orange-300 border border-orange-500/30 px-3 py-1 rounded text-xs font-bold uppercase">₿ Bitcoin (Sabia)</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Suntem în Ianuarie 2026. Dacă privim în oglinda retrovizoare către ultimii doi ani, vedem o perioadă marcată de inflație persistentă, conflicte geopolitice și o explozie a datoriilor guvernamentale.</p>
+      
+      <p class="mb-6 text-gray-300">În acest climat haotic, investitorii au căutat disperați un refugiu. Cele două opțiuni majore au fost Aurul (vechiul gardian) și Bitcoin (noul pretendent). Dar cifrele nu mint. Hai să analizăm evoluția lor din 2024 până astăzi și să vedem ce lecții putem extrage pentru portofoliul tău.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Performanța Pură: Viteză vs. Stabilitate 🏎️ vs 🏰</h3>
+      <p class="mb-4 text-gray-300">În ultimii doi ani, ambele active au performat excelent, dar în moduri complet diferite.</p>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div class="bg-yellow-900/10 p-5 rounded-xl border border-yellow-500/20">
+              <strong class="text-yellow-400 block mb-2 text-xl">Aurul</strong>
+              <p class="text-sm text-gray-300">A avut o creștere constantă, metodică. Impulsionat de băncile centrale (în special China și Rusia) care au cumpărat masiv pentru a se diversifica de dolar, Aurul a spart maxime istorice repetate. A oferit protecție, dar nu a oferit multiplicatori de avere.</p>
+          </div>
+          <div class="bg-orange-900/10 p-5 rounded-xl border border-orange-500/20">
+              <strong class="text-orange-400 block mb-2 text-xl">Bitcoin</strong>
+              <p class="text-sm text-gray-300">A fost "calul de curse". După aprobarea ETF-urilor Spot în Ianuarie 2024 și Halving-ul din primăvara aceluiași an, Bitcoin a depășit Aurul la capitolul ROI (Return on Investment) cu o marjă semnificativă. Volatilitatea a fost prețul plătit, dar pentru cei care au făcut HODL, recompensa a fost pe măsură.</p>
+          </div>
+      </div>
+      <p class="mb-6 text-gray-300 italic border-l-4 border-gray-500 pl-4">Concluzie: Aurul ți-a păstrat averea. Bitcoin ți-a crescut-o.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Maturizarea Instituțională: Momentul "Sputnik" al Bitcoin 🚀</h3>
+      <p class="mb-4 text-gray-300">Diferența majoră față de ciclurile trecute este accesul. În 2024-2025, Bitcoin a încetat să mai fie un activ "de nișă".</p>
+      
+      <ul class="space-y-3 mb-6 bg-[#0b1221] p-4 rounded-xl border border-gray-700">
+        <li class="text-gray-300">🏛️ <strong>Aurul</strong> este deținut de secole în seifurile băncilor.</li>
+        <li class="text-gray-300">💻 <strong>Bitcoin</strong> a intrat în portofoliile fondurilor de pensii și ale marilor administratori de active (BlackRock, Fidelity) abia în ultimii doi ani.</li>
+      </ul>
+      
+      <p class="mb-6 text-gray-300">Această "instituționalizare" a redus ușor volatilitatea extremă a Bitcoinului (față de 2017 sau 2021), făcându-l să se comporte tot mai mult ca un "Aur Digital" cu levier. Corelația dintre cele două active a crescut în momentele de devalorizare a dolarului.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Factorul "Debasement" (Devalorizarea Fiat) 💸</h3>
+      <p class="mb-4 text-gray-300">Adevăratul inamic al ultimilor doi ani nu a fost volatilitatea crypto, ci devalorizarea banilor fiduciari (Fiat). Atât Aurul, cât și Bitcoin au crescut simultan în momentele în care SUA a printat bani sau a crescut deficitul.</p>
+
+      <div class="space-y-2 mb-6">
+        <div class="flex items-center gap-3">
+            <span class="text-yellow-500 font-bold">● Aurul</span>
+            <span class="text-gray-400 text-sm">reacționează mai bine la "Frică" (Război, Panică).</span>
+        </div>
+        <div class="flex items-center gap-3">
+            <span class="text-orange-500 font-bold">● Bitcoin</span>
+            <span class="text-gray-400 text-sm">reacționează mai bine la "Lichiditate" (Relaxare monetară, scăderea dobânzilor).</span>
+        </div>
+      </div>
+      <p class="mb-6 text-gray-300">Analiza arată că, în 2026, granița dintre ele se estompează. Ambele sunt pariuri împotriva sistemului monetar actual.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. Ce alegi pentru 2026? 🤔</h3>
+      <p class="mb-4 text-gray-300">Analiza riscurilor indică o strategie hibridă:</p>
+
+      <div class="bg-blue-900/10 border border-blue-500/20 p-5 rounded-xl mb-6">
+        <ul class="space-y-4">
+            <li>
+                <strong class="text-blue-400 block">🛡️ Pentru conservare (Defensive): Aurul</strong>
+                <span class="text-sm text-gray-300">Rămâne neînvins. Are zero risc de contrapartidă (dacă îl deții fizic) și o istorie de 5000 de ani.</span>
+            </li>
+            <li>
+                <strong class="text-blue-400 block">⚔️ Pentru asimetrie (Offensive): Bitcoin</strong>
+                <span class="text-sm text-gray-300">Este singurul activ care oferă șansa unui randament exponențial într-o lume cu creștere economică lentă.</span>
+            </li>
+        </ul>
+        <p class="text-white font-bold mt-4 pt-4 border-t border-blue-500/30">
+            Dacă în 2024 întrebarea era "Bitcoin SAU Aur?", în 2026 răspunsul corect pentru un investitor sofisticat este "Bitcoin ȘI Aur".
+        </p>
+      </div>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-gray-800 p-6 rounded-2xl border border-gray-600 shadow-lg">
+        <h4 class="text-xl font-bold text-white mb-2">Concluzie:</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            Bătălia ultimilor doi ani ne-a arătat că nu este un joc de sumă nulă. Bitcoin nu a "ucis" Aurul, ci l-a completat.<br/><br/>
+            <strong>Aurul este scutul, Bitcoin este sabia. Într-un mediu economic ostil, ai nevoie de ambele arme în arsenal.</strong>
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: VOLUM INTERN BITCOIN MINIM 2022 (25 IAN SEARA)
   {
     id: 'bitcoin-internal-volume-low-liquidity-crunch-jan-25-2026',
