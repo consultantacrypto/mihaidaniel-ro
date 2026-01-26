@@ -1,4 +1,95 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: WHALE ALERT ETHEREUM (26 IAN SEARA)
+  {
+    id: 'whale-alert-ethereum-short-to-long-pivot-jan-26-2026',
+    slug: 'alerta-whale-investitor-major-acumuleaza-ethereum-dupa-short',
+    title: '🚨 ALERTĂ WHALE: UN INVESTITOR MAJOR CARE A SHORTAT ETH ÎNAINTE DE CRASH-UL DIN OCTOMBRIE ACUMULEAZĂ SUTE DE MILIOANE ÎN ETHEREUM – SEMNAL DE REVERSARE SAU CAPCANĂ PENTRU PIAȚĂ?',
+    summary: 'A anticipat prăbușirea din octombrie, iar acum cumpără masiv. Un whale a mutat 300 Milioane USD în ETH. Află ce văd datele on-chain și dacă e momentul să intri.',
+    category: 'ON-CHAIN & WHALE WATCH',
+    image: '/eth26alerta.jpg',
+    date: '26 Jan 2026',
+    readTime: '6 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Smart Money Accumulation
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-blue-600/20 text-blue-300 border border-blue-600/30 px-3 py-1 rounded text-xs font-bold uppercase">🐋 Whale Move</span>
+        <span class="bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded text-xs font-bold uppercase">💰 $700M Exposure</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Hei, Pray (@ProofOfPray)! Ca un investitor pasionat din Voluntari, Ilfov, știi că piețele crypto sunt un adevărat rollercoaster, unde mișcările marilor jucători pot dicta trend-uri întregi.</p>
+      
+      <p class="mb-6 text-gray-300">Recent, un investitor instituțional major – cunoscut pentru pozițiile sale agresive – a atras atenția comunității prin transferuri masive de ETH de la un exchange de top. Asta vine după ce același jucător a profitat de pe urma unui short masiv înainte de crash-ul din octombrie 2025, când ETH a pierdut peste 25% într-o zi.</p>
+
+      <p class="mb-6 text-gray-300 italic border-l-4 border-blue-500 pl-4">Acum pare să inverseze direcția, acumulând poziții long – un pivot care ridică întrebări: e un semn de încredere în ETH sau o strategie mai complexă?</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Fundalul: De la Short la Acumulări Masive 🔄</h3>
+      <p class="mb-4 text-gray-300">Acest investitor a făcut valuri anul trecut prin anticiparea unui declin major în ETH, deschizând poziții short chiar înainte de "Flash Crash-ul" din octombrie. Rezultatul? Profituri de milioane când piața era în panică.</p>
+
+      <div class="bg-[#0b1221] p-4 rounded-xl border border-gray-700 mb-6">
+        <strong class="text-blue-400 block mb-2">Schimbarea de strategie:</strong>
+        <p class="text-gray-300 text-sm">În ultimele 24 de ore, portofelul a primit influxuri de peste <strong>100.000 ETH</strong> (sute de milioane $). Aceste transferuri sugerează o strategie de "doubling down" pe ETH, trecând de la pariu contra la unul pro-creștere.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Detaliile Transferurilor: Ce Arată Datele On-Chain? 📊</h3>
+      <p class="mb-4 text-gray-300">Analizele recente arată o serie de inflows repetate, tipice pentru balenele care își construiesc poziții:</p>
+
+      <ul class="space-y-3 mb-6 bg-blue-900/10 p-4 rounded-xl border border-blue-500/20">
+        <li class="flex items-start gap-2">
+            <span class="text-green-400 font-bold">●</span>
+            <span class="text-gray-300 text-sm"><strong>Metoda:</strong> Transferuri mici, dar frecvente (loturi de 10-40k ETH) pentru a nu alerta imediat piața.</span>
+        </li>
+        <li class="flex items-start gap-2">
+            <span class="text-green-400 font-bold">●</span>
+            <span class="text-gray-300 text-sm"><strong>Volum:</strong> Aproape $300 Milioane mutați recent.</span>
+        </li>
+        <li class="flex items-start gap-2">
+            <span class="text-green-400 font-bold">●</span>
+            <span class="text-gray-300 text-sm"><strong>Expunere Totală:</strong> Peste $700 Milioane în ETH.</span>
+        </li>
+      </ul>
+      <p class="text-gray-300 text-sm mb-6">Prețul ETH azi e stabil la ~2.850 USD, dar acumularea vine după un dip, sugerând că investitorul vede valoare – poate anticipând un rebound spre 3.500 USD.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. De Ce Acum? Motivele din Spatele Pivotului 🧠</h3>
+      <p class="mb-4 text-gray-300">Piața crypto din 2026 e plină de catalizatori care ar putea explica această schimbare:</p>
+
+      <div class="space-y-4 mb-6">
+         <div class="bg-gray-800/30 p-3 rounded-lg border border-gray-700">
+            <strong class="text-white block">Adopție Instituțională:</strong>
+            <span class="text-gray-400 text-sm">Cu giganți ca JP Morgan intrând pe Ethereum, ETH devine un activ "sigur" (Safe Haven) pentru instituționali.</span>
+         </div>
+         <div class="bg-gray-800/30 p-3 rounded-lg border border-gray-700">
+            <strong class="text-white block">Macro-Economie:</strong>
+            <span class="text-gray-400 text-sm">Tensiuni globale și devalorizarea dolarului fac ETH un hedge anti-inflație atractiv.</span>
+         </div>
+         <div class="bg-gray-800/30 p-3 rounded-lg border border-gray-700">
+            <strong class="text-white block">Tehnic:</strong>
+            <span class="text-gray-400 text-sm">După short-ul câștigător, acum e momentul "Buy Low".</span>
+         </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. Implicații pentru Piață și pentru Tine 🇷🇴</h3>
+      <p class="mb-4 text-gray-300">Dacă acumulările continuă, ar putea declanșa un rally, mai ales cu reglementări pozitive ca Clarity Act.</p>
+
+      <div class="bg-yellow-900/10 border-l-4 border-yellow-500 p-4 rounded-r-xl mb-6">
+        <strong class="text-yellow-400 block mb-2">Sfatul Tati pentru Portofoliul Tău:</strong>
+        <ul class="text-gray-300 text-sm list-disc pl-4 space-y-1">
+            <li><strong>Oportunitate:</strong> Dacă ești bullish, e un semnal de diversificare (10-20% în ETH).</li>
+            <li><strong>Risc:</strong> Volatilitate. O balenă își poate schimba direcția rapid.</li>
+            <li><strong>Fiscalitate:</strong> Nu uita de taxele ANAF (10% pe câștig).</li>
+        </ul>
+      </div>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-green-900/20 p-6 rounded-2xl border border-green-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-green-400 mb-2">Concluzie: Pivot Bullish sau Joc de Putere?</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            Acest investitor trece de la short la long agresiv – un semn potențial de încredere în 2026.<br/><br/>
+            <strong>Ca Pray (@ProofOfPray), rămâi informat și prudent. Dacă vine rally-ul, fii pregătit – dacă nu, ai protecție.</strong>
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: BITCOIN VS AUR 2024-2026 (26 IAN)
   {
     id: 'bitcoin-vs-gold-store-of-value-analysis-2024-2026',
