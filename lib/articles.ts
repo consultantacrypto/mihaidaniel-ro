@@ -1,4 +1,79 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: GHID SUPRAVIEȚUIRE BEAR MARKET (27 IAN)
+  {
+    id: 'crypto-bear-market-survival-guide-jan-27-2026',
+    slug: 'ghid-supravietuire-bear-market-iarna-crypto',
+    title: '🛡️ GHID DE SUPRAVIEȚUIRE: CUM SĂ NU MORI ÎN IARNA CRYPTO',
+    summary: 'Bear Market-ul nu e sfârșitul, e oportunitatea vieții tale. Învață regulile de aur: Cum să faci DCA, de ce Bitcoin e regele și cum să eviți greșelile care te falimentează.',
+    category: 'EDUCAȚIE & PSIHOLOGIE',
+    image: '/safebearmarket.jpg',
+    date: '27 Jan 2026',
+    readTime: '6 min',
+    author: 'Mihai Daniel',
+    impact: 'neutral', // Educație atemporală
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-blue-600/20 text-blue-300 border border-blue-600/30 px-3 py-1 rounded text-xs font-bold uppercase">❄️ Winter is Here</span>
+        <span class="bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🧠 Mindset</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Bear Market-ul nu este o anomalie, este o necesitate. Este modul pieței de a curăța excesele, lăcomia și proiectele fără valoare (scam-uri, meme-uri inutile). Doar cei puternici supraviețuiesc.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Cât durează "Iarna"? ⏳</h3>
+      <p class="mb-4 text-gray-300">În Crypto, ciclurile sunt dictate de Halving-ul Bitcoin (la fiecare 4 ani). Istoric, un Bear Market tipic arată așa:</p>
+
+      <div class="bg-[#0b1221] p-5 rounded-xl border border-gray-700 mb-6">
+        <ul class="space-y-3">
+            <li class="text-gray-300"><strong class="text-blue-400">Durata:</strong> Între 12 și 18 luni de scădere pură sau stagnare dureroasă (Crab Market).</li>
+            <li class="text-gray-300"><strong class="text-blue-400">Magnitudinea:</strong> Bitcoin scade de obicei cu 70-85% de la vârful anterior (ATH). Altcoin-urile pot scădea cu 95-99%.</li>
+            <li class="text-gray-300"><strong class="text-blue-400">Semnalul de Final:</strong> Când nimeni nu mai vorbește despre crypto, știrile sunt doar negative ("Bitcoin a murit a 400-a oară") și volumul dispare. Acela este fundul (Bottom).</li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. CE SĂ FACI (Strategia Câștigătoare) ✅</h3>
+      
+      <div class="space-y-4 mb-6">
+          <div class="bg-green-900/10 p-4 rounded-xl border border-green-500/20">
+              <strong class="text-green-400 block mb-1">Acumulare (DCA)</strong>
+              <span class="text-gray-300 text-sm">Nu încerca să prinzi minimul absolut (Catching the falling knife). Cumpără sume fixe, constant, indiferent de preț. Asta îți va media prețul de intrare.</span>
+          </div>
+          <div class="bg-green-900/10 p-4 rounded-xl border border-green-500/20">
+              <strong class="text-green-400 block mb-1">Bitcoin First</strong>
+              <span class="text-gray-300 text-sm">În Bear Market, lichiditatea se retrage spre siguranță. Bitcoin este regele. Construiește fundația portofoliului în BTC și ETH.</span>
+          </div>
+          <div class="bg-green-900/10 p-4 rounded-xl border border-green-500/20">
+              <strong class="text-green-400 block mb-1">Educație (Skill Up)</strong>
+              <span class="text-gray-300 text-sm">Când prețurile stagnează, tu trebuie să crești. Bear Market este pentru învățat, Bull Market este pentru executat.</span>
+          </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. CE SĂ NU FACI (Greșeli Fatale) ❌</h3>
+
+      <div class="space-y-4 mb-6">
+          <div class="bg-red-900/10 p-4 rounded-xl border border-red-500/20">
+              <strong class="text-red-400 block mb-1">Nu Vinde în Panică</strong>
+              <span class="text-gray-300 text-sm">Dacă nu ai vândut la vârf, nu vinde la fund. Dacă vinzi pe minus, ai marcat pierderea. Istoria arată că BTC/ETH își revin.</span>
+          </div>
+          <div class="bg-red-900/10 p-4 rounded-xl border border-red-500/20">
+              <strong class="text-red-400 block mb-1">Nu folosi Leverage</strong>
+              <span class="text-gray-300 text-sm">Să încerci să ghicești fundul cu x10 Leverage este suicid financiar. Bear Market-ul are multe "capcane" care lichidează pozițiile Long.</span>
+          </div>
+          <div class="bg-red-900/10 p-4 rounded-xl border border-red-500/20">
+              <strong class="text-red-400 block mb-1">Nu te îndrăgosti de Altcoins</strong>
+              <span class="text-gray-300 text-sm">Multe proiecte din top 100 nu vor supraviețui iernii. Nu face "DCA" într-un proiect mort doar pentru că a scăzut 99%. Verifică dacă echipa mai lucrează.</span>
+          </div>
+      </div>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-gray-800 p-6 rounded-2xl border border-gray-600 shadow-lg">
+        <h4 class="text-xl font-bold text-white mb-2">Concluzie: Testul Caracterului</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            Bear Market-ul este plictisitor, dureros și lung. Dar ține minte regula de aur:<br/><br/>
+            <strong>Cei care cumpără când toți plâng, vor vinde când toți râd. Rezistă.</strong>
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: WHALE ALERT ETHEREUM (26 IAN SEARA)
   {
     id: 'whale-alert-ethereum-short-to-long-pivot-jan-26-2026',
