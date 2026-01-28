@@ -1,4 +1,75 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: INFLATIE SUA 1.16% - FED PIVOT (28 IAN DIMINEATA)
+  {
+    id: 'us-inflation-cpi-drop-1-16-percent-fed-pivot-jan-28-2026',
+    slug: 'breaking-inflatie-sua-prabusire-fed-taieri-dobanzi',
+    title: '🚨 BREAKING: INFLAȚIA SUA S-A PRĂBUȘIT LA 1.16%. FED-UL A PIERDUT CONTROLUL, URMEAZĂ TĂIERI URGENTE DE DOBÂNZI?',
+    summary: 'Datele oficiale șochează: CPI 1.16%. Jerome Powell a strâns șurubul prea tare. Află de ce acest nivel este periculos pentru economie și de ce Bitcoin este marele câștigător al pivotului iminent.',
+    category: 'MACRO & FED',
+    image: '/fedcpi28.jpg',
+    date: '28 Jan 2026',
+    readTime: '4 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Pivotul Fed = Lichiditate = Bullish
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-blue-600/20 text-blue-300 border border-blue-600/30 px-3 py-1 rounded text-xs font-bold uppercase">📉 CPI 1.16%</span>
+        <span class="bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded text-xs font-bold uppercase">💵 Money Printer ON</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Datele oficiale arată o scădere șocantă a inflației (CPI) la 1.16%, mult sub ținta oficială de 2%. Jerome Powell a comis greșeala de care se temeau toți analiștii: "Over-tightening" (a strâns șurubul prea tare).</p>
+      
+      <p class="mb-6 text-gray-300">Ar putea părea o veste bună pentru consumatori, dar pentru sistemul financiar bazat pe datorie, este un semnal de alarmă critic.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. De ce Fed-ul intră în panică la inflație mică? 😱</h3>
+      <div class="bg-red-900/10 border-l-4 border-red-500 p-4 rounded-r-xl mb-6">
+        <strong class="text-red-400 block mb-2">Capcana Datoriei ($35 Trilioane)</strong>
+        <p class="text-gray-300 text-sm">SUA are o datorie colosală. Într-un mediu deflaționist (sau cu inflație foarte mică), valoarea reală a datoriei crește, iar PIB-ul nominal scade. Practic, datoria devine imposibil de plătit.</p>
+        <p class="text-white text-sm mt-2 font-bold">Spirala Deflaționistă: Când prețurile scad, economia îngheață. Fed-ul urăște deflația mai mult decât inflația.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Reacția Obligatorie: PIVOTUL URGENT 🔄</h3>
+      <p class="mb-4 text-gray-300">Jerome Powell nu mai are luxul de a spune "așteptăm și vedem". El este forțat să acționeze acum pentru a stimula economia înainte de o prăbușire totală ("Hard Landing").</p>
+
+      <ul class="space-y-3 mb-6 bg-[#0b1221] p-4 rounded-xl border border-gray-700">
+        <li class="flex items-start gap-2">
+            <span class="text-green-400 font-bold">●</span>
+            <span class="text-gray-300 text-sm"><strong>Rate Cuts (Tăieri de Dobânzi):</strong> Nu cu 0.25%, ci probabil tăieri agresive de urgență.</span>
+        </li>
+        <li class="flex items-start gap-2">
+            <span class="text-green-400 font-bold">●</span>
+            <span class="text-gray-300 text-sm"><strong>Sfârșitul QT:</strong> Oprirea retragerii banilor din piață.</span>
+        </li>
+        <li class="flex items-start gap-2">
+            <span class="text-green-400 font-bold">●</span>
+            <span class="text-gray-300 text-sm"><strong>QE (Quantitative Easing):</strong> Inundarea pieței cu lichiditate pentru a forța inflația să urce înapoi spre 2%.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Bitcoin: Beneficiarul Suprem 🚀</h3>
+      <p class="mb-4 text-gray-300">Bitcoin a fost creat ca răspuns la politicile monetare iresponsabile, dar paradoxal, prețul lui explodează exact când acele politici devin "loose" (relaxate).</p>
+
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div class="bg-green-900/10 p-4 rounded-xl border border-green-500/20">
+              <strong class="text-green-400 block mb-1">Costul Banilor Scade</strong>
+              <span class="text-gray-300 text-sm">Când dobânzile scad, banii devin ieftini. Investitorii nu mai țin dolari (care nu produc nimic) și caută risc: Tech Stocks și Crypto.</span>
+          </div>
+          <div class="bg-orange-900/10 p-4 rounded-xl border border-orange-500/20">
+              <strong class="text-orange-400 block mb-1">Dolarul Slab (DXY)</strong>
+              <span class="text-gray-300 text-sm">Tăierile de dobânzi vor slăbi Dolarul. Bitcoin și Dolarul sunt într-un balansoar: când unul scade, celălalt urcă.</span>
+          </div>
+      </div>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-green-900/20 p-6 rounded-2xl border border-green-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-green-400 mb-2">Concluzie: Pistolul de Start 🔫</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            Inflația de 1.16% este startul pentru următoarea fază a Bull Run-ului. Fed-ul a pierdut controlul și trebuie să inunde piața cu lichiditate.<br/><br/>
+            <strong>Fii poziționat înainte să anunțe tăierile oficiale.</strong>
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: GHID SUPRAVIEȚUIRE BEAR MARKET (27 IAN)
   {
     id: 'crypto-bear-market-survival-guide-jan-27-2026',
