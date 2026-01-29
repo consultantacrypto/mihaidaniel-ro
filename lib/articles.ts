@@ -1,4 +1,85 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: RAPORT PIATA 29 IAN (WAIT AND SEE)
+  {
+    id: 'market-report-silence-before-storm-jan-29-2026',
+    slug: 'raport-piata-29-ianuarie-linistea-dinaintea-furtunii',
+    title: '📊 RAPORT DE PIAȚĂ 29 IANUARIE: LINIȘTEA DINAINTEA FURTUNII. DE CE BITCOIN STĂ PE LOC ÎN TIMP CE MACROECONOMIA FIERBE?',
+    summary: 'Bitcoin stagnează, dar inflația de 1.16% forțează mâna Fed-ului. Află ce este "Compresia Maximă" și de ce răbdarea este singurul tău avantaj acum.',
+    category: 'ANALIZĂ DE PIAȚĂ',
+    image: '/raport29.jpg',
+    date: '29 Jan 2026',
+    readTime: '4 min',
+    author: 'Mihai Daniel',
+    impact: 'neutral', // Wait and See / Consolidare
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 px-3 py-1 rounded text-xs font-bold uppercase">⏳ Wait & See</span>
+        <span class="bg-gray-700/50 text-gray-200 border border-gray-600/50 px-3 py-1 rounded text-xs font-bold uppercase">📉 Volatility Compression</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Suntem pe 29 Ianuarie 2026. Dacă te uiți la grafice, pare că pulsul pieței a murit. Bitcoin se mișcă lateral, Altcoin-urile așteaptă, iar volatilitatea este la minime.</p>
+      
+      <p class="mb-6 text-gray-300">Dar, paradoxal, fundamentele macroeconomice nu au fost niciodată mai "zgomotoase". Avem o inflație prăbușită la 1.16%, o Japonie în criză și un Fed "încolțit". De ce nu explodează prețul ACUM? Răspunsul stă în fenomenul de <strong>"Compresie Maximă"</strong>.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Starea Națiunii: Așteptare Tensionată 😐</h3>
+      <p class="mb-4 text-gray-300">Piața este prinsă într-un război psihologic între două forțe gigantice:</p>
+
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div class="bg-red-900/10 p-4 rounded-xl border border-red-500/20">
+              <strong class="text-red-400 block mb-1">Forța Deflaționistă</strong>
+              <span class="text-gray-300 text-sm">Economia reală încetinește. Inflația de 1.16% sperie investitorii tradiționali, care se tem de recesiune și țin banii la saltea (Cash is King).</span>
+          </div>
+          <div class="bg-green-900/10 p-4 rounded-xl border border-green-500/20">
+              <strong class="text-green-400 block mb-1">Forța Anticipării</strong>
+              <span class="text-gray-300 text-sm">Investitorii speculativi știu că Fed-ul nu are de ales. Trebuie să pornească imprimanta (Rate Cuts) pentru a evita colapsul datoriilor.</span>
+          </div>
+      </div>
+      <p class="text-gray-400 text-sm italic">Piața stagnează pentru că așteaptă confirmarea oficială. Nimeni nu vrea să facă prima mutare greșită.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Bitcoin (BTC): Arcul Comprimat 🏹</h3>
+      <p class="mb-4 text-gray-300">Tehnic, Bitcoin consolidează într-un range extrem de strâns. Volatilitatea minimă confirmă datele on-chain: volumele interne sunt la minime istorice.</p>
+
+      <div class="bg-[#0b1221] p-4 rounded-xl border border-gray-700 mb-6">
+        <ul class="space-y-3">
+            <li class="text-gray-300"><strong class="text-blue-400">Ce înseamnă asta?</strong> Balenele nu vând, dar nici nu cumpără agresiv "la vedere". Acumularea se face discret, prin OTC (Over-The-Counter).</li>
+            <li class="text-gray-300"><strong class="text-blue-400">Semnalul:</strong> Bitcoin așteaptă ca DXY (Indexul Dolarului) să piardă suportul cheie. Corelația inversă a revenit: Dolar Jos = Bitcoin Sus.</li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Ethereum (ETH): Trezirea Gigantului? 💎</h3>
+      <p class="mb-4 text-gray-300">Pentru prima dată în ultimele luni, vedem o rotație subtilă de capital către Ethereum. Într-o lume cu dobânzi în scădere, randamentul din Staking pe ETH (3-4%) devine brusc un magnet pentru capitalul instituțional.</p>
+      <p class="text-gray-300 text-sm font-bold border-l-4 border-indigo-500 pl-4">Monitorizați paritatea ETH/BTC – un bottom aici ar semnala startul real al sezonului de Altcoins.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. Planul de Acțiune: "Nu face nimic" este un Trade ♟️</h3>
+      <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-600 mb-6">
+        <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+                <span class="text-yellow-500 font-bold">⚠️</span>
+                <div>
+                    <strong class="text-gray-200 block">Nu vâna lumânări verzi</strong>
+                    <span class="text-gray-400 text-sm">Volumul fiind mic, orice creștere bruscă poate fi un "fakeout" (capcană) pentru a atrage și lichida târziu cumpărătorii.</span>
+                </div>
+            </li>
+            <li class="flex items-start gap-3">
+                <span class="text-green-500 font-bold">💰</span>
+                <div>
+                    <strong class="text-gray-200 block">Păstrează Cash (Dry Powder)</strong>
+                    <span class="text-gray-400 text-sm">Dacă avem o ultimă sperietură (un "flush" final) înainte de anunțul Fed, vei vrea să ai USDT pregătit pentru a cumpăra frica.</span>
+                </div>
+            </li>
+        </ul>
+      </div>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-gray-800 p-6 rounded-2xl border border-gray-600 shadow-lg">
+        <h4 class="text-xl font-bold text-white mb-2">Concluzie: Șah, nu Ruletă</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            Astăzi este o zi de șah. Marii jucători își așează piesele pentru luna Februarie. Direcția se va clarifica în curând, iar când compresia se va elibera, mișcarea va fi violentă.<br/><br/>
+            <strong>Răbdarea este singurul avantaj pe care îl ai față de algoritmi.</strong>
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: INFLATIE SUA 1.16% - FED PIVOT (28 IAN DIMINEATA)
   {
     id: 'us-inflation-cpi-drop-1-16-percent-fed-pivot-jan-28-2026',
