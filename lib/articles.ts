@@ -1,4 +1,61 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: ANATOMIA UNUI CRASH (30 IAN)
+  {
+    id: 'crypto-market-crash-analysis-jan-30-2026',
+    slug: 'anatomia-unui-crash-de-ce-a-sangerat-piata-29-ianuarie',
+    title: '🩸 ANATOMIA UNUI CRASH: DE CE A SÂNGERAT PIAȚA CRYPTO PE 29 IANUARIE? (ȘI CE URMEAZĂ)',
+    summary: 'Portofoliul e roșu? Respiră. Nu e sfârșitul, e o curățenie de primăvară. Analizăm cele 3 cauze: Frica de Recesiune, Lichidările de $300M și De-risking-ul instituțional.',
+    category: 'CRASH & PSIHOLOGIE',
+    image: '/30crash.jpg',
+    date: '30 Jan 2026',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'bearish', // Short-term pain
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-red-600/20 text-red-300 border border-red-600/30 px-3 py-1 rounded text-xs font-bold uppercase">📉 Flash Crash</span>
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🧠 Market Psychology</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Dacă te-ai trezit azi dimineață și portofoliul arată ca după război, respiră. Ceea ce vedem este o "curățenie de primăvară" dureroasă, dar necesară.</p>
+      
+      <p class="mb-6 text-gray-300">Ieri, 29 Ianuarie, Bitcoin și întreaga piață crypto au suferit o corecție violentă. Dar prețul nu scade niciodată "din senin". Există trei cauze clare care au declanșat furtuna perfectă. Să le disecăm.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. "Recession Scare": Când Vestea Bună devine Veste Proastă 📉</h3>
+      <p class="mb-4 text-gray-300">Ironia sorții: Inflația scăzută (1.16%), care inițial părea motiv de sărbătoare, s-a întors împotriva pieței.</p>
+
+      <div class="bg-[#0b1221] p-4 rounded-xl border border-gray-700 mb-6">
+        <strong class="text-red-400 block mb-2">Interpretarea Algoritmilor:</strong>
+        <p class="text-gray-300 text-sm">Wall Street a văzut scăderea abruptă a inflației nu ca pe o victorie, ci ca pe un semnal de alarmă: <strong>Economia a frânat prea tare</strong>.</p>
+        <p class="text-gray-400 text-xs mt-2 italic">Practic, piața a trecut de la "Yey, vin tăieri de dobânzi!" la "Aoleu, vine criza!". Fondurile mari au vândut activele de risc pentru a se refugia în Cash.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Capcana de Lichiditate (The Leverage Flush) 🚽</h3>
+      <p class="mb-4 text-gray-300">Avertismentul nostru de zilele trecute s-a confirmat. Volumele interne erau mici, iar carnetul de ordine gol.</p>
+
+      <div class="bg-red-900/10 border-l-4 border-red-500 p-5 rounded-r-xl mb-6">
+         <span class="text-3xl font-black text-red-500 block mb-1">-$300 Milioane</span>
+         <span class="text-white font-bold text-sm uppercase">Lichidări Long în câteva ore</span>
+         <p class="text-gray-300 text-sm mt-2">Traderii de retail au pariat Long cu leverage mare. Scăderea inițială a declanșat o cascadă de lichidări (vânzări forțate), împingând prețul și mai jos.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. "De-Risking" înainte de Fed 🏦</h3>
+      <p class="mb-4 text-gray-300">Suntem la câteva ore/zile distanță de reacția oficială a Rezervei Federale. Smart Money (Banii Deștepți) urăsc incertitudinea.</p>
+      <p class="mb-6 text-gray-300">Ei au preferat să vândă ieri, să stea pe margine și să reintre în piață <strong>DOAR după ce Powell confirmă</strong> tăierile de dobânzi și pornirea imprimantei. Vânzarea de ieri nu a fost o ieșire definitivă, ci o "parcare" temporară.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-blue-900/20 p-6 rounded-2xl border border-blue-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-blue-400 mb-2">Concluzie: Ce faci acum?</h4>
+        <p class="text-gray-300 mb-4 leading-relaxed">
+            Acesta este clasicul "Shakeout". Piața transferă monedele din mâinile "slabe" în mâinile "tari".<br/>
+            Dacă teza noastră macro rămâne valabilă – că Fed-ul VA trebui să printeze bani – atunci prețurile de azi sunt un cadou.
+        </p>
+        <p class="text-white font-bold mb-0 border-t border-white/10 pt-4 text-center text-lg">
+            Nu vinde panica. Cumpără frica.
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: RAPORT PIATA 29 IAN (WAIT AND SEE)
   {
     id: 'market-report-silence-before-storm-jan-29-2026',
