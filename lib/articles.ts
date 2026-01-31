@@ -1,4 +1,59 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: MAREA ROTAȚIE AUR -> CRYPTO (31 IAN)
+  {
+    id: 'great-rotation-gold-silver-to-bitcoin-ethereum-jan-31-2026',
+    slug: 'marea-rotatie-bani-aur-argint-in-bitcoin-ethereum',
+    title: '🔄 MAREA ROTAȚIE: VOR FUGI BANII DIN AUR ȘI ARGINT ÎN BITCOIN ȘI ETHEREUM? (ANALIZĂ STRATEGICĂ 2026)',
+    summary: 'Ieri Aurul a pierdut $300 Miliarde. Mitul scutului s-a spulberat. De ce "Smart Money" pregătește migrația istorică spre Bitcoin (viteză) și Ethereum (randament).',
+    category: 'MACRO & STRATEGIE',
+    image: '/aurbtc26.jpg',
+    date: '31 Jan 2026',
+    readTime: '6 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Rotație de capital = Bullish pentru Crypto
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 px-3 py-1 rounded text-xs font-bold uppercase">📉 Aurul Scade</span>
+        <span class="bg-orange-500/20 text-orange-300 border border-orange-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🚀 Bitcoin Accelerează</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Suntem pe 31 Ianuarie 2026, la o zi după "Măcelul de 500 Miliarde $". Ieri am învățat o lecție dură: într-o criză acută de lichiditate (lipsă de dolari), se vinde TOT, inclusiv Aurul și Bitcoinul.</p>
+      
+      <p class="mb-6 text-gray-300">Dar astăzi, praful se așează. Întrebarea de 1 trilion de dolari este: Cum se vor repoziționa marii investitori pentru revenire? Există semnale puternice că ne pregătim pentru o rotație istorică de capital dinspre metalele prețioase tradiționale către echivalentele lor digitale.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Eșecul "Scutului" și Nevoia de Viteză 🏎️</h3>
+      <p class="mb-4 text-gray-300">Ieri, Aurul a pierdut 300 de Miliarde $ din capitalizare într-o singură zi. Asta a spulberat mitul că Aurul este imun la șocurile de piață.</p>
+
+      <div class="bg-[#0b1221] p-4 rounded-xl border border-gray-700 mb-6">
+        <strong class="text-orange-400 block mb-2">Logica Rotației:</strong>
+        <p class="text-gray-300 text-sm">Aurul este excelent pentru conservare, dar lent. Când Fed-ul pornește imprimanta, investitorii vor "cel mai rapid cal". Istoric, Bitcoin reacționează de <strong>5x-10x mai violent</strong> la injecțiile de lichiditate decât Aurul.</p>
+        <p class="text-gray-400 text-xs mt-2 italic">Argumentul: "Dacă tot îmi asum risc de volatilitate și cu Aurul, mai bine îmi asum riscul cu Bitcoin care are un potențial de creștere asimetric."</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Ethereum (ETH) devine "Aurul cu Randament" 💎</h3>
+      <p class="mb-4 text-gray-300">Într-un mediu macroeconomic în care Fed-ul taie dobânzile, randamentele titlurilor de stat (Bonds) scad spre zero. Aici intră în scenă Ethereum.</p>
+
+      <div class="bg-indigo-900/10 border-l-4 border-indigo-500 p-5 rounded-r-xl mb-6">
+         <p class="text-gray-300 text-sm">
+            Spre deosebire de Aur, care costă bani pentru depozitare, <strong>Ethereum oferă un randament nativ (Staking Yield) de 3-4%</strong>.<br/><br/>
+            Pentru fonduri, ETH devine un "bond digital" superior. De ce să ții lingouri care nu produc nimic, când poți ține ETH care îți plătește "chirie"?
+         </p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Demografia și Accesibilitatea 🌍</h3>
+      <p class="mb-4 text-gray-300">Nu putem ignora schimbul generațional. Generațiile tinere (Millennials, Gen Z) nu au aceeași afinitate pentru lingourile fizice. Pentru ei, "Aurul Digital" (Bitcoin) este standardul.</p>
+      <p class="mb-6 text-gray-300">În plus, ETF-urile Bitcoin și Ethereum au făcut ca mutarea miliardelor din ETF-uri de Aur (ex: GLD) în ETF-uri Crypto (ex: IBIT) să fie la fel de simplă ca un click. Bariera logistică a dispărut.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-gray-800 p-6 rounded-2xl border border-gray-600 shadow-lg">
+        <h4 class="text-xl font-bold text-white mb-2">Concluzie: Balanța se înclină</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            Nu spunem că Aurul va muri. Va rămâne ancora sistemului. Dar în 2026, după ce am văzut că și "ancora" se poate clătina, capitalul speculativ va migra agresiv.<br/><br/>
+            <strong>Când Fed-ul va deschide robinetul cu bani, metalele vor merge la pas, dar crypto va alerga. Marea Rotație abia începe.</strong>
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: ANATOMIA UNUI CRASH (30 IAN)
   {
     id: 'crypto-market-crash-analysis-jan-30-2026',
