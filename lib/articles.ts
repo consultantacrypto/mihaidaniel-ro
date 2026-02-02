@@ -1,4 +1,67 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: ADIO ALTSEASON (02 FEB)
+  {
+    id: 'end-of-altseason-bitcoin-only-cycle-feb-2026',
+    slug: 'adio-altseason-ciclul-bitcoin-only',
+    title: '📉 ADIO, ALTSEASON! DE CE CICLUL 2024-2026 A FOST PRIMUL BULL RUN "BITCOIN ONLY"',
+    summary: 'Milioane de investitori așteaptă încă magia din 2021. Am o veste proastă: Nu mai vine. Află de ce "Zidul ETF-urilor" și diluarea au ucis Marea Rotație.',
+    category: 'ANALIZĂ DE PIAȚĂ & STRATEGIE',
+    image: '/noaltcoin2.jpg',
+    date: '02 Feb 2026',
+    readTime: '6 min',
+    author: 'Mihai Daniel',
+    impact: 'bearish', // Pentru Altcoins
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-orange-500/20 text-orange-300 border border-orange-500/30 px-3 py-1 rounded text-xs font-bold uppercase">₿ Bitcoin Only</span>
+        <span class="bg-red-600/20 text-red-300 border border-red-600/30 px-3 py-1 rounded text-xs font-bold uppercase">⚰️ RIP Altseason</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Suntem în Februarie 2026. Dacă te uiți în portofoliul tău de Altcoins (excluzând Ethereum), probabil ești încă pe minus sau la break-even, deși Bitcoin a spart maxime istorice repetate în ultimii doi ani.</p>
+      
+      <p class="mb-6 text-gray-300">Milioane de investitori de retail așteaptă încă "Altseason-ul" magic, acel moment din 2017 sau 2021 când totul creștea cu 50-100% pe zi. Am o veste proastă: <strong>Nu mai vine.</strong></p>
+      
+      <p class="mb-6 text-gray-300">Datele confirmă că am traversat primul ciclu de Bull Market structural diferit. Iată de ce "marea rotație" a murit și ce înseamnă asta pentru strategia ta.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Zidul Instituțional (The ETF Firewall) 🧱</h3>
+      <p class="mb-4 text-gray-300">În ciclurile trecute, banii intrau în Bitcoin prin retail, iar retailul se plictisea și muta banii în Altcoins pentru risc mai mare.</p>
+
+      <div class="bg-[#0b1221] p-5 rounded-xl border border-gray-700 mb-6">
+        <strong class="text-blue-400 block mb-2">Realitatea 2026:</strong>
+        <p class="text-gray-300 text-sm">În acest ciclu, banii au intrat prin ETF-uri (BlackRock, Fidelity). Un fond de pensii care cumpără ETF-ul Bitcoin NU are voie și nici nu are cum să "rotească" profitul în Solana sau monede meme.</p>
+        <p class="text-white text-sm mt-3 font-bold border-l-2 border-blue-500 pl-3">Banii instituționali sunt "lipiciosi" (Sticky). Ei intră în Bitcoin și rămân acolo. Zidul ETF-urilor a oprit cascada de lichiditate.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Diluarea și Fragmentarea Pieței 💧</h3>
+      <p class="mb-4 text-gray-300">În 2021 existau câteva mii de criptomonede. În 2026 sunt milioane.</p>
+      
+      <div class="bg-red-900/10 border-l-4 border-red-500 p-4 rounded-r-xl mb-6">
+         <p class="text-gray-300 text-sm">
+            Lichiditatea disponibilă (banii retailului) nu a crescut proporțional cu numărul de tokenuri. Banii s-au fragmentat în mii de direcții: Memecoins, Ordinals, L2s, AI.<br/><br/>
+            <strong>Rezultatul?</strong> Nu am avut un "Altseason" generalizat, ci doar mici "bule" izolate (PvP - Player vs Player), unde un sector creștea 2 zile și apoi se prăbușea.
+         </p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Reglementarea și "Utility Token" Trap ⚖️</h3>
+      <p class="mb-4 text-gray-300">MiCA în Europa și SEC în SUA au făcut extrem de dificilă existența "Utility Tokens". Majoritatea Altcoin-urilor vechi (Dino Coins) au fost clasificate drept securities.</p>
+      <p class="mb-6 text-gray-300">Fără Market Makeri care să pompeze prețul fără frică de pușcărie, multe proiecte "serioase" au devenit orașe fantomă.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. Excepția: ETH și "Blue Chips" 💎</h3>
+      <p class="mb-4 text-gray-300">Trebuie să facem distincția clară. <strong>Ethereum</strong> (și poate 2-3 alți giganți) nu mai sunt "Altcoins". Ele au intrat în coșul instituțional. Dar restul de 99% din piață? Sunt Venture Capital lichid.</p>
+      <div class="bg-gray-800/30 p-4 rounded-xl border border-gray-600/50 mb-6">
+        <p class="text-gray-300 text-sm italic">"Dacă în 2021 strategia era 'Cumpără orice că va crește', în 2026 strategia câștigătoare a fost 'Bitcoin Maximism + ETH Yield'."</p>
+      </div>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-red-900/20 p-6 rounded-2xl border border-red-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-red-400 mb-2">Concluzie: Adaptează-te sau Pierzi</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            Așteptarea unui Altseason clasic este capcana care a ruinat cele mai multe portofolii în acest ciclu. Piața s-a maturizat.<br/><br/>
+            <strong>Banii deștepți nu mai caută x100 în gunoaie, ci caută x3 în siguranță. Adaptează-te sau vei rămâne "Exit Liquidity".</strong>
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: MAREA ROTAȚIE AUR -> CRYPTO (31 IAN)
   {
     id: 'great-rotation-gold-silver-to-bitcoin-ethereum-jan-31-2026',
