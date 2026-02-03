@@ -1,4 +1,75 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: ISM PMI 52.6 - SEMNAL MACRO (03 FEB)
+  {
+    id: 'ism-manufacturing-pmi-52-6-expansion-bitcoin-bull-run-feb-2026',
+    slug: 'semnal-macro-final-ism-pmi-economie-americana-faza-parabolica',
+    title: '🚀 SEMNALUL MACRO FINAL: MOTORUL ECONOMIEI AMERICANE A REPORNIT (ISM > 52.6). ISTORIC, ASTA ÎNSEAMNĂ CĂ UMEAZĂ FAZA PARABOLICĂ.',
+    summary: 'Dezbaterea s-a încheiat. ISM a explodat la 52.6. Suntem oficial în expansiune economică. Vezi corelația istorică dintre acest indicator și Bull Run-urile Bitcoin.',
+    category: 'MACRO & ON-CHAIN',
+    image: '/ism52feb.jpg',
+    date: '03 Feb 2026',
+    readTime: '4 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Expansiune economică = Risk On
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded text-xs font-bold uppercase">📈 ISM > 50 (Expansiune)</span>
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🏭 Economia Duduie</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Suntem în Februarie 2026. De luni de zile vorbim despre "recesiune", "soft landing" sau "hard landing". Azi, datele au pus capăt dezbaterii.</p>
+      
+      <p class="mb-6 text-gray-300">Indicatorul <strong>ISM Manufacturing PMI</strong> (pulsul industriei americane) a explodat la <strong>52.6</strong>, venind de la 47.9. Aceasta este cea mai mare creștere bruscă din acest ciclu.</p>
+      
+      <p class="mb-6 text-gray-300">De ce este acest grafic cel mai important semnal pentru portofoliul tău Crypto? Să explicăm mecanismul.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Ce este ISM și de ce "50" este numărul magic? 🪄</h3>
+      <p class="mb-4 text-gray-300">ISM Manufacturing PMI măsoară sănătatea economiei productive.</p>
+
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div class="bg-red-900/10 p-4 rounded-xl border border-red-500/20">
+              <strong class="text-red-400 block mb-1">Sub 50: Contracție</strong>
+              <span class="text-gray-300 text-sm">Economia încetinește, fabricile produc mai puțin, frica domină. Din 2022 până acum, am stat aici ("iarnă economică").</span>
+          </div>
+          <div class="bg-green-900/10 p-4 rounded-xl border border-green-500/20">
+              <strong class="text-green-400 block mb-1">Peste 50: Expansiune</strong>
+              <span class="text-gray-300 text-sm">Economia accelerează, fabricile cumpără materie primă, lichiditatea curge. Aici suntem AZI.</span>
+          </div>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Corelația Istorică: Bitcoin iubește Expansiunea 🧡</h3>
+      <p class="mb-4 text-gray-300">Dacă suprapui graficul Bitcoin peste graficul ISM, vei vedea o corelație înfricoșătoare:</p>
+
+      <ul class="space-y-3 mb-6 bg-[#0b1221] p-4 rounded-xl border border-gray-700">
+        <li class="flex items-center gap-2">
+            <span class="text-green-400 font-bold">2013:</span>
+            <span class="text-gray-300 text-sm">ISM a spart 50 și a urcat -> <strong>Bull Run</strong>.</span>
+        </li>
+        <li class="flex items-center gap-2">
+            <span class="text-green-400 font-bold">2017:</span>
+            <span class="text-gray-300 text-sm">ISM a stat constant peste 50 (zona 55-60) -> <strong>Mega Bull Run</strong>.</span>
+        </li>
+        <li class="flex items-center gap-2">
+            <span class="text-green-400 font-bold">2021:</span>
+            <span class="text-gray-300 text-sm">ISM a explodat după Covid la 60+ -> <strong>ATH</strong>.</span>
+        </li>
+      </ul>
+      <p class="mb-6 text-gray-300 font-bold border-l-4 border-orange-500 pl-4">Concluzie: Toate ciclurile majore de creștere Crypto au avut loc când ISM era în zona de expansiune (>50). Bitcoin este un activ "Risk-On". Când economia crește, Bitcoin zboară.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Ianuarie 2026: The "V-Shape" Recovery 🚀</h3>
+      <p class="mb-4 text-gray-300">Uită-te la graficul de azi. Saltul de la 47.9 (Contracție) la 52.6 (Expansiune solidă) într-o singură lună este violent.</p>
+      <p class="mb-6 text-gray-300">Asta ne spune că economia SUA nu doar că nu intră în recesiune, dar <strong>Re-accelerează</strong>. Combinat cu inflația scăzută (1.16%) despre care am vorbit ieri, avem scenariul "Goldilocks": Economie puternică + Inflație mică = Paradis pentru activele financiare.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-green-900/20 p-6 rounded-2xl border border-green-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-green-400 mb-2">Verdictul: Run it hot 🔥</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            Perioada de stagnare și frică s-a terminat. Motorul industrial a pornit. Lichiditatea va începe să curgă din economia reală în piețele financiare.<br/><br/>
+            <strong>Dacă istoria rimează, tocmai am primit "unda verde" pentru continuarea Bull Run-ului.</strong>
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: ADIO ALTSEASON (02 FEB)
   {
     id: 'end-of-altseason-bitcoin-only-cycle-feb-2026',
