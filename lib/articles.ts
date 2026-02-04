@@ -1,4 +1,62 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: PARADOXUL SOLANA (04 FEB)
+  {
+    id: 'solana-paradox-price-down-activity-up-feb-2026',
+    slug: 'paradoxul-solana-pret-minim-activitate-record',
+    title: '🟣 PARADOXUL SOLANA 2026: PREȚ LA MINIME, ACTIVITATE LA RECORDURI ISTORICE. DE CE NU CREȘTE PREȚUL DACĂ REȚEAUA E PLINĂ?',
+    summary: 'Numărul de utilizatori e la maxim istoric, dar prețul scade. Nu e un mister, e economie. Află de ce "Viteza banilor" și Boții țin prețul jos.',
+    category: 'ON-CHAIN & ALTCOINS',
+    image: '/solana4feb.jpg',
+    date: '04 Feb 2026',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'neutral', // Analiză structurală (Bearish short term, Bullish utility)
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-purple-600/20 text-purple-300 border border-purple-600/30 px-3 py-1 rounded text-xs font-bold uppercase">📉 Price Low</span>
+        <span class="bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🚀 Activity ATH</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Suntem în Februarie 2026. Solana (SOL) a atins noi minime locale de preț pentru acest an, testând răbdarea investitorilor.</p>
+      
+      <p class="mb-6 text-gray-300">Însă, dacă te uiți pe datele On-Chain, ești șocat: Numărul de adrese active zilnice, volumul tranzacțiilor și taxele colectate sunt la maxim istoric. Cum este posibil ca un activ să fie mai folosit ca niciodată, dar prețul să scadă?</p>
+      
+      <p class="mb-6 text-gray-300">Acesta nu este un mister, este o lecție de economie comportamentală. Iată cele 3 cauze reale ale acestui fenomen.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. "Viteza de Circulație" (Velocity of Money) 💸</h3>
+      <p class="mb-4 text-gray-300">Solana a devenit victima propriului succes. Utilizatorii cumpără SOL nu pentru a-l ține (Store of Value), ci pentru a-l folosi imediat.</p>
+
+      <div class="bg-[#0b1221] p-4 rounded-xl border border-gray-700 mb-6">
+        <strong class="text-purple-400 block mb-2">Traseul Banilor:</strong>
+        <p class="text-gray-300 text-sm">Userul cumpără SOL -> Schimbă imediat în Memecoin sau USDC -> Când face profit, schimbă înapoi în USDC, nu în SOL.</p>
+        <p class="text-gray-400 text-xs mt-3 italic border-l-2 border-purple-500 pl-3">SOL este folosit doar ca "combustibil". SOL a devenit un "hot potato" – toată lumea îl atinge, nimeni nu îl ține.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Inflația vs. Burn (Războiul Botilor) 🤖</h3>
+      <p class="mb-4 text-gray-300">"Activitatea record" pe care o vedem este, în proporție de 70-80%, activitate de boți.</p>
+      
+      <div class="bg-red-900/10 border-l-4 border-red-500 p-4 rounded-r-xl mb-6">
+         <p class="text-gray-300 text-sm">
+            Boții de arbitraj și MEV spammează rețeaua. Da, arată bine în statistici. Dar, Solana are inflație (tokeni noi emiși).<br/><br/>
+            Dacă presiunea de cumpărare din partea investitorilor reali (HODLers) scade din cauza fricii macro, iar boții doar "rulează" banii, atunci <strong>inflația depășește cererea reală de stocare</strong>. Oferta crește, prețul scade.
+         </p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Beta-ul Negativ în Bear/Chop Market 📉</h3>
+      <p class="mb-4 text-gray-300">Solana este un activ cu "High Beta" față de Bitcoin. Asta înseamnă că atunci când Bitcoin strănută, Solana face pneumonie.</p>
+      <p class="mb-6 text-gray-300">Chiar dacă rețeaua duduie, într-un mediu macro incert, fondurile își reduc riscul. Solana, având câștiguri masive în trecut, este prima pe lista de "De-risking".</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-purple-900/20 p-6 rounded-2xl border border-purple-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-purple-400 mb-2">Concluzie: Criză de Identitate</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            Este Solana moartă? Categoric nu. Utilizarea masivă e cel mai bun semnal pe termen lung.<br/><br/>
+            Dar pe termen scurt, Solana trebuie să facă tranziția de la "Cazinoul lumii crypto" la "Banca lumii crypto".<br/>
+            <strong>Până când investitorii nu vor avea un motiv să blocheze SOL pe termen lung, prețul va suferi această divergență.</strong>
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: ISM PMI 52.6 - SEMNAL MACRO (03 FEB)
   {
     id: 'ism-manufacturing-pmi-52-6-expansion-bitcoin-bull-run-feb-2026',
