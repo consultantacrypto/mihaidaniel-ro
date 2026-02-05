@@ -1,4 +1,75 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: 5 TRILIOANE CRASH (05 FEB)
+  {
+    id: 'silent-crash-5-trillion-liquidity-crisis-feb-5-2026',
+    slug: 'macelul-silentios-5-trilioane-evaporate-fara-stiri',
+    title: '🩸 MĂCELUL SILENȚIOS: CUM S-AU EVAPORAT 5 TRILIOANE DE DOLARI ÎN 24H FĂRĂ NICIO ȘTIRE NEGATIVĂ?',
+    summary: 'O zi istorică. Argintul a picat 19%, Aurul 5.5%. Nu a fost război, a fost o criză de lichiditate structurală. Află de ce "Cash is King" momentan.',
+    category: 'MACRO & CRASH',
+    image: '/5tcrash.jpg',
+    date: '05 Feb 2026',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'bearish', // Liquidity Crunch
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-red-600/20 text-red-300 border border-red-600/30 px-3 py-1 rounded text-xs font-bold uppercase">🩸 -$5 Trilioane</span>
+        <span class="bg-gray-700/50 text-gray-200 border border-gray-600/50 px-3 py-1 rounded text-xs font-bold uppercase">📉 Liquidity Crisis</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Suntem pe 5 Februarie 2026. Istoria financiară va consemna această zi nu prin prisma unui eveniment extern, ci prin prisma unui colaps intern.</p>
+      
+      <p class="mb-6 text-gray-300">Piețele globale au suferit o "baie de sânge" absolută. Nu a fost un atac cibernetic, nu a început un nou război major. A fost doar liniște... și apoi prăbușire. Avem cifrele dezastrului și ele pictează tabloul unei <strong>Crize Acute de Lichiditate</strong>.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Nota de Plată a Dezastrului ($5 Trilioane) 💸</h3>
+      <p class="mb-4 text-gray-300">Să privim realitatea în față. Într-o singură rotație a Pământului, averea globală s-a micșorat cu o sumă egală cu PIB-ul Japoniei:</p>
+
+      <div class="bg-red-900/10 border-l-4 border-red-500 p-5 rounded-r-xl mb-6 space-y-3">
+        <div class="flex justify-between items-center border-b border-red-500/20 pb-2">
+            <span class="text-gray-300">📉 <strong>Argint (Silver)</strong></span>
+            <span class="text-red-400 font-bold">-19% ($980 Mld)</span>
+        </div>
+        <div class="flex justify-between items-center border-b border-red-500/20 pb-2">
+            <span class="text-gray-300">📉 <strong>Aur (Gold)</strong></span>
+            <span class="text-red-400 font-bold">-5.5% ($1.94 Tril)</span>
+        </div>
+        <div class="flex justify-between items-center border-b border-red-500/20 pb-2">
+            <span class="text-gray-300">📉 <strong>Tech (Nasdaq)</strong></span>
+            <span class="text-red-400 font-bold">-2.5% ($1 Tril)</span>
+        </div>
+        <div class="flex justify-between items-center">
+            <span class="text-gray-300">📉 <strong>Crypto (Total)</strong></span>
+            <span class="text-red-400 font-bold">-7% ($184 Mld)</span>
+        </div>
+        <p class="text-xs text-gray-400 mt-2 italic">Paradoxal, Crypto a rezistat mai bine procentual decât Argintul!</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. De ce s-a întâmplat "Fără Știri"? (The Silent Crash) 🤫</h3>
+      <p class="mb-4 text-gray-300">Investitorii de retail caută mereu un motiv la știri. Dar ieri nu s-a întâmplat nimic vizibil. Acest tip de crash este <strong>STRUCTURAL</strong>.</p>
+      
+      <div class="bg-[#0b1221] p-4 rounded-xl border border-gray-700 mb-6">
+        <strong class="text-blue-400 block mb-2">Mecanismul de Domino:</strong>
+        <p class="text-gray-300 text-sm">Când piețele sunt supra-îndatorate, o mică scânteie declanșează algoritmul:</p>
+        <p class="text-white text-sm mt-3 font-mono bg-black/30 p-3 rounded">Margin Call Fond -> Vinde Aur/Argint (lichiditate) -> Preț Scade -> Roboții vând Acțiuni -> Bitcoin scade pe corelație -> TOTUL SE VINDE.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. "Cash is King" (Momentan) 👑</h3>
+      <p class="mb-4 text-gray-300">Corelația de 100% (toate activele scad împreună) ne arată că există un singur activ pe care îl vrea toată lumea acum: <strong>DOLARUL AMERICAN</strong>.</p>
+      <p class="mb-6 text-gray-300">Lichiditatea a secat. Banii s-au evaporat din piețe și s-au dus în stingerea datoriilor. <strong>Argintul la -19% este "canarul din mină"</strong>. Indică faptul că speculația a fost curățată violent.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-red-900/20 p-6 rounded-2xl border border-red-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-red-400 mb-2">Concluzie: Ce urmează?</h4>
+        <p class="text-gray-300 mb-4 leading-relaxed">
+            Nu poți șterge 5 Trilioane de dolari din sistem fără consecințe. Piața a țipat: "Nu avem bani!". Fed-ul va trebui să răspundă: "Poftiți bani!".<br/>
+            Paradoxal, acest "Bloodbath" este cel mai puternic argument pentru o intervenție de urgență.
+        </p>
+        <p class="text-white font-bold mb-0 border-t border-white/10 pt-4 text-center">
+            Până atunci, stai pe mâini. Când furtuna trece, activele reale (Aur, BTC) vor fi primele care își revin, dar momentan, cash-ul este rege.
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: PARADOXUL SOLANA (04 FEB)
   {
     id: 'solana-paradox-price-down-activity-up-feb-2026',
