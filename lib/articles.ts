@@ -1,4 +1,73 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: BITCOIN BOTTOM VS TOP ANALYSIS (06 FEB)
+  {
+    id: 'bitcoin-closer-to-bottom-than-top-feb-6-2026',
+    slug: 'analiza-piata-bitcoin-matematic-aproape-bottom',
+    title: '📉 ANALIZĂ DE PIAȚĂ: DE CE BITCOIN ESTE MATEMATIC MAI APROAPE DE "BOTTOM" DECÂT DE "TOP" (FEBRUARIE 2026)',
+    summary: 'Frica e mare după crash, dar matematica ne contrazice emoțiile. 3 argumente structurale care arată că suntem la baza muntelui, nu pe vârf.',
+    category: 'ANALIZĂ TEHNICĂ & MACRO',
+    image: '/6febbtc.jpg',
+    date: '06 Feb 2026',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Strong Buy Signal
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded text-xs font-bold uppercase">📊 Risc Asimetric</span>
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🧠 Smart Money View</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Suntem pe 6 Februarie 2026. Frica în piață este palpabilă după lichidarea de 5 Trilioane de dolari de zilele trecute. Mulți investitori se întreabă: "S-a terminat? Am atins vârful ciclului și urmează Bear Market?"</p>
+      
+      <p class="mb-6 text-gray-300">Răspunsul, bazat pe date macroeconomice și structură de piață, este un NU categoric. Dimpotrivă. Datele indică faptul că, la prețul actual, suntem mult mai aproape de podea (Bottom) decât de tavanul acestui ciclu (Cycle Top).</p>
+      
+      <p class="mb-6 text-gray-300 italic border-l-4 border-blue-500 pl-4">Nu este o opinie optimistă, este o deducție logică bazată pe trei piloni fundamentali.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. "Resetarea" Levierului: Semnalul de Capitulare 🧹</h3>
+      <p class="mb-4 text-gray-300">Vârfurile de piață se formează în Euforie. Fundurile locale se formează în Panică.</p>
+
+      <div class="bg-red-900/10 border-l-4 border-red-500 p-4 rounded-r-xl mb-6">
+        <strong class="text-red-400 block mb-2">Definiția Capitulării:</strong>
+        <p class="text-gray-300 text-sm">Ceea ce am văzut săptămâna aceasta (Argintul -19%, Bitcoin -8%) este definiția manuală a unei curățări. Riscul de downside s-a diminuat drastic pentru simplul motiv că... <strong>nu mai are cine să vândă</strong>. Vânzătorii forțați au ieșit deja.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Ciclul Economic abia a început (Factorul ISM) 🏭</h3>
+      <p class="mb-4 text-gray-300">Așa cum am documentat recent, indicatorul ISM Manufacturing PMI a trecut pragul critic de 52.6 în Ianuarie 2026, intrând în zonă de Expansiune.</p>
+      
+      <div class="bg-[#0b1221] p-4 rounded-xl border border-gray-700 mb-6">
+        <ul class="space-y-3">
+            <li class="text-gray-300"><strong class="text-blue-400">Istoric:</strong> Bitcoin atinge vârful ciclului doar după o perioadă lungă de expansiune economică (12-18 luni).</li>
+            <li class="text-gray-300"><strong class="text-green-400">Prezent:</strong> Noi suntem în <strong>Luna 1</strong> de expansiune.</li>
+        </ul>
+        <p class="text-gray-400 text-sm mt-3 italic">Să crezi că Bull Market-ul s-a terminat exact când motorul economic al SUA a pornit este o eroare fundamentală. Suntem la baza muntelui, nu pe vârf.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Asimetria Risc/Recompensă (Matematica) 🧮</h3>
+      <p class="mb-4 text-gray-300">Să privim rece graficul:</p>
+
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div class="bg-red-900/10 p-4 rounded-xl border border-red-500/20">
+              <strong class="text-red-400 block mb-1">Downside (Riscul)</strong>
+              <span class="text-gray-300 text-sm">Suporturile structurale majore (Smart Money) sunt la doar <strong>10-15%</strong> distanță. Acolo este "podeaua" de beton.</span>
+          </div>
+          <div class="bg-green-900/10 p-4 rounded-xl border border-green-500/20">
+              <strong class="text-green-400 block mb-1">Upside (Potențialul)</strong>
+              <span class="text-gray-300 text-sm">Țintele pentru vârful acestui ciclu sunt proiectate la <strong>+100% sau +150%</strong> (zona $150k - $200k+).</span>
+          </div>
+      </div>
+      <p class="mb-6 text-gray-300 font-bold">Concluzie: Când ai un risc de scădere de 15% și un potențial de creștere de 150%, ești, prin definiție, mai aproape de Bottom.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-blue-900/20 p-6 rounded-2xl border border-blue-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-blue-400 mb-2">Verdict: Oportunitate Generațională</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            În investiții, momentul în care te simți cel mai rău este, de obicei, momentul în care faci cea mai bună afacere.<br/><br/>
+            "Top-ul" va veni când șoferul de Uber îți va da sfaturi crypto. Azi, când vedem "Bloodbath", suntem în zona de acumulare.<br/>
+            <strong>Nu lăsa volatilitatea de moment să te scuture din tren exact înainte ca acesta să prindă viteza maximă.</strong>
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: 5 TRILIOANE CRASH (05 FEB)
   {
     id: 'silent-crash-5-trillion-liquidity-crisis-feb-5-2026',
