@@ -1,4 +1,60 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: BITCOIN PRODUCTION COST (07 FEB)
+  {
+    id: 'bitcoin-production-cost-floor-67k-analysis-feb-7-2026',
+    slug: 'graficul-secret-cost-productie-bitcoin-suport-67k',
+    title: '⛏️ GRAFICUL SECRET PE CARE NIMENI NU ȚI-L ARATĂ: CÂT COSTĂ, DE FAPT, SĂ PRODUCI UN BITCOIN ȘI DE CE ASTA NE PROTEJEAZĂ DE PRĂBUȘIRE',
+    summary: 'Suportul real nu e o linie pe grafic, e costul energiei. Află de ce zona de $67,000 este un "Zid de Beton" matematic pentru mineri și pentru preț.',
+    category: 'ON-CHAIN & MINING',
+    image: '/btccost.jpg',
+    date: '07 Feb 2026',
+    readTime: '4 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Cost Floor = Strong Support
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-orange-500/20 text-orange-300 border border-orange-500/30 px-3 py-1 rounded text-xs font-bold uppercase">⚡ Energy Floor</span>
+        <span class="bg-red-600/20 text-red-300 border border-red-600/30 px-3 py-1 rounded text-xs font-bold uppercase">🛑 $67k Cost Basis</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Suntem pe 7 Februarie 2026. După volatilitatea din ultimele zile, toată lumea caută un "suport" pe grafic. Unii trasează linii, alții se uită la medii mobile.</p>
+      
+      <p class="mb-6 text-gray-300">Dar suportul real nu este o linie desenată de un trader, ci o realitate economică dură: <strong>Costul de Producție al Minerilor</strong>. Astăzi analizăm un grafic ignorat de 99% din retail, dar monitorizat atent de giganți.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Bitcoin este o Marfă (Commodity), nu o Acțiune 🛢️</h3>
+      <p class="mb-4 text-gray-300">Spre deosebire de o companie care poate da faliment, Bitcoin funcționează ca Aurul sau Petrolul. Are un cost fizic de extracție (Hardware + Electricitate + Opex).</p>
+
+      <div class="bg-[#0b1221] p-4 rounded-xl border border-gray-700 mb-6">
+        <strong class="text-yellow-400 block mb-2">Regula de Aur:</strong>
+        <p class="text-gray-300 text-sm">Prețul scade extrem de rar sub costul de producție. De ce? Pentru că dacă prețul scade sub cost, minerii opresc mașinile. Oferta scade instantaneu, dificultatea se ajustează, iar prețul își găsește un planșeu natural.</p>
+        <p class="text-gray-400 text-xs mt-2 italic">Minerii nu sunt filantropi; nu vor vinde BTC la $60k dacă îi costă $67k să-l producă.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Linia Roșie: $67,000 🛑</h3>
+      <p class="mb-4 text-gray-300">Conform modelului actual, costul mediu de producție pentru 1 BTC se situează astăzi la aproximativ <strong>$67,000</strong>.</p>
+      
+      <div class="bg-red-900/10 border-l-4 border-red-500 p-4 rounded-r-xl mb-6">
+         <p class="text-gray-300 text-sm">
+            Istoric, de fiecare dată când prețul Bitcoin a atins această linie roșie (2020, 2022, 2023), acela a fost <strong>Bottom-ul Generațional</strong>. A fost momentul de maximă oportunitate.<br/><br/>
+            Faptul că prețul de piață este peste acest nivel, în timp ce economia SUA a repornit (ISM > 52.6), ne arată că suntem într-o zonă de siguranță fundamentală.
+         </p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Centura de Siguranță într-o Piață Volatilă 🛡️</h3>
+      <p class="mb-4 text-gray-300">Acest grafic ne spune că, din punct de vedere matematic, zona de $67,000 este un "Zid de Beton".</p>
+      <p class="mb-6 text-gray-300">Pentru ca prețul să scadă sub acest nivel și să rămână acolo, ar fi nevoie ca rețeaua energetică globală sau industria de mining să intre în colaps, ceea ce este imposibil în 2026, cu BlackRock și state naționale implicate.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-orange-900/20 p-6 rounded-2xl border border-orange-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-orange-400 mb-2">Concluzie: Matematica Industrială</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            Nu paria împotriva matematicii. Avem un planșeu solid la $67,000 (Costul) și avem combustibil macro (ISM 52.6).<br/><br/>
+            <strong>Orice apropiere de această zonă de cost nu este un motiv de panică, ci un cadou din partea pieței.</strong>
+        </p>
+        <p class="text-gray-500 text-xs mt-4 text-right">Credit grafic: @paulewaulpaul</p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: BITCOIN BOTTOM VS TOP ANALYSIS (06 FEB)
   {
     id: 'bitcoin-closer-to-bottom-than-top-feb-6-2026',
