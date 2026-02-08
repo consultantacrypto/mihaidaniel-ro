@@ -1,4 +1,101 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: MATEMATICA INDUSTRIALA - COST PRODUCTIE (08 FEB)
+  {
+    id: 'industrial-math-bitcoin-gold-silver-aisc-cost-comparison-feb-8-2026',
+    slug: 'matematica-industriala-bitcoin-aur-argint-cost-productie',
+    title: '🏭 MATEMATICA INDUSTRIALĂ: DE CE BITCOIN ESTE SINGURA "MARFĂ" SUBEVALUATĂ ÎN RAPORT CU COSTUL DE PRODUCȚIE (ANALIZĂ COMPARATIVĂ 2026)',
+    summary: 'Aurul se vinde cu 225% peste cost. Argintul cu 350%. Bitcoin se luptă în tranșee la nivelul costului. O analiză a cifrelor reale (AISC) care demontează mitul valorii intrinseci.',
+    category: 'MACRO & MINING',
+    image: '/auragbtc.jpg',
+    date: '08 Feb 2026',
+    readTime: '6 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Undervalued Asset
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🥇 Gold Premium</span>
+        <span class="bg-orange-500/20 text-orange-300 border border-orange-500/30 px-3 py-1 rounded text-xs font-bold uppercase">⚡ BTC at Cost</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Suntem în Februarie 2026. Într-o lume financiară haotică, singura ancoră reală rămâne Costul de Producție.</p>
+      
+      <p class="mb-6 text-gray-300">Mulți critici spun că Bitcoin "nu are valoare intrinsecă". Această analiză demontează mitul, punând Bitcoin față în față cu mărfurile milenare: Aurul și Argintul. Toate trei respectă aceeași lege economică dură: <strong>Prețul nu poate sta mult timp sub costul de producție.</strong> Dacă o face, minerii dau faliment, oferta scade, iar prețul explodează.</p>
+      
+      <p class="mb-6 text-gray-300">Astăzi, analizăm datele reale de producție (AISC - All-In Sustaining Cost) pentru a vedea care activ este "scump" și care este "la discount".</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. LEGEA SUPORTULUI NATURAL ⚖️</h3>
+      <p class="mb-4 text-gray-300">Înainte de cifre, principiul:</p>
+
+      <div class="bg-[#0b1221] p-4 rounded-xl border border-gray-700 mb-6">
+        <ul class="space-y-3">
+            <li class="text-gray-300">🛠️ Dacă extragi Aur și te costă $1,500/uncie, iar prețul pieței e $1,400, <strong>închizi mina</strong>.</li>
+            <li class="text-gray-300">⚡ Dacă minezi Bitcoin și te costă $90,000/BTC, iar prețul e $85,000, <strong>oprești ASIC-urile</strong>.</li>
+        </ul>
+        <p class="text-gray-400 text-sm mt-3 italic">Această "grevă a producătorilor" creează un planșeu (Floor) sub care prețul nu poate scădea pe termen lung. Este plasa de siguranță a investitorului.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. AURUL (GOLD): Regele Confortabil 👑</h3>
+      
+      <div class="bg-yellow-900/10 border-l-4 border-yellow-500 p-5 rounded-r-xl mb-6">
+         <div class="grid grid-cols-1 gap-2 mb-2">
+            <div class="flex justify-between border-b border-yellow-500/20 pb-1">
+                <span class="text-gray-400">Cost de Producție (AISC 2026):</span>
+                <span class="text-yellow-400 font-mono">~$1,521 / uncie</span>
+            </div>
+            <div class="flex justify-between border-b border-yellow-500/20 pb-1">
+                <span class="text-gray-400">Preț de Piață:</span>
+                <span class="text-white font-bold font-mono">~$4,950 / uncie</span>
+            </div>
+         </div>
+         <p class="text-gray-300 text-sm mt-3"><strong>Analiza:</strong> Aurul se tranzacționează cu o marjă de profit de 225% peste cost. Aceasta este o "primă de siguranță". Investitorii plătesc de trei ori costul de extracție pentru siguranța geopolitică. Este un activ defensiv, dar scump fundamental.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. ARGINTUL (SILVER): Hibridul Industrial 🥈</h3>
+
+      <div class="bg-gray-800/30 border-l-4 border-gray-400 p-5 rounded-r-xl mb-6">
+         <div class="grid grid-cols-1 gap-2 mb-2">
+            <div class="flex justify-between border-b border-gray-500/20 pb-1">
+                <span class="text-gray-400">Cost de Producție (AISC 2026):</span>
+                <span class="text-gray-300 font-mono">~$17 / uncie</span>
+            </div>
+            <div class="flex justify-between border-b border-gray-500/20 pb-1">
+                <span class="text-gray-400">Preț de Piață:</span>
+                <span class="text-white font-bold font-mono">~$77 / uncie</span>
+            </div>
+         </div>
+         <p class="text-gray-300 text-sm mt-3"><strong>Analiza:</strong> Argintul are o marjă colosală de 350% peste cost. De ce? Pentru că deficitul structural este imens (panouri solare, electronică). Minerii de argint tipăresc bani în 2026.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">4. BITCOIN: Arcul Comprimat (Anomalia) 🏹</h3>
+      <p class="mb-4 text-gray-300">Aici devine interesant.</p>
+
+      <div class="bg-orange-900/10 border-l-4 border-orange-500 p-5 rounded-r-xl mb-6">
+         <div class="grid grid-cols-1 gap-2 mb-2">
+            <div class="flex justify-between border-b border-orange-500/20 pb-1">
+                <span class="text-gray-400">Cost de Producție (Estimare):</span>
+                <span class="text-orange-400 font-mono">Zona $87,000 - $96,000</span>
+            </div>
+            <div class="flex justify-between border-b border-orange-500/20 pb-1">
+                <span class="text-gray-400">Preț de Piață:</span>
+                <span class="text-white font-bold font-mono">Zona actuală de corecție</span>
+            </div>
+         </div>
+         <p class="text-gray-300 text-sm mt-3"><strong>Analiza:</strong> Spre deosebire de Aur și Argint, care zboară la altitudini de 200-300% peste cost, Bitcoin se luptă în tranșee, chiar la nivelul costului de producție.</p>
+      </div>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-gray-800 p-6 rounded-2xl border border-gray-600 shadow-lg">
+        <h4 class="text-xl font-bold text-white mb-2">CONCLUZIE: CE ÎNSEAMNĂ ASTA PENTRU PORTOFOLIUL TĂU?</h4>
+        <p class="text-gray-300 mb-4 leading-relaxed">
+            Avem o divergență masivă. Aurul și Argintul sunt investiții de "momentum" (scumpe față de cost).<br/><br/>
+            <strong>Bitcoin este singurul activ major care se tranzacționează aproape de "valoarea sa de cost".</strong>
+        </p>
+        <p class="text-white font-bold mb-0 border-t border-white/10 pt-4">
+            Istoric, cumpărarea unui activ aproape de costul său de producție este cea mai profitabilă strategie posibilă. În timp ce Aurul stă confortabil în palat, Bitcoin se călește în furnal. Și oțelul cel mai tare iese din cel mai încins foc.
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: BITCOIN PRODUCTION COST (07 FEB)
   {
     id: 'bitcoin-production-cost-floor-67k-analysis-feb-7-2026',
