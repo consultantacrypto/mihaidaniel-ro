@@ -1,4 +1,79 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: ON-CHAIN INDICATORS FAILED? (09 FEB)
+  {
+    id: 'on-chain-data-indicators-failed-crash-analysis-feb-9-2026',
+    slug: 'de-ce-datele-on-chain-nu-au-functionat-crash',
+    title: '📉 DE CE DATELE ON-CHAIN "NU AU FUNCȚIONAT" LA ACEST CRASH? ADEVĂRUL DESPRE BORDUL DE COMANDĂ CARE A RĂMAS STINS.',
+    summary: 'Crash-ul a venit, dar indicatorii de "Top" (Pi Cycle, Rainbow, MVRV) au tăcut mâlc. Află de ce On-Chain-ul nu vede cutremurele macro și de ce acesta este un semnal Bullish masiv.',
+    category: 'ON-CHAIN & ANALIZĂ TEHNICĂ',
+    image: '/faratop9.jpg',
+    date: '09 Feb 2026',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Indicators say "Not the Top"
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded text-xs font-bold uppercase">✅ MVRV Low</span>
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">📊 No Top Signal</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Suntem în Februarie 2026. Tocmai am trecut printr-un crash violent, dar dacă te uiți la "Bordul de Comandă" al Bitcoin, e liniște totală.</p>
+      
+      <p class="mb-6 text-gray-300">O analiză a celor mai importanți indicatori de vârf (Cycle Top Indicators) arată o anomalie istorică: Aproape niciun semnal mainstream nu a prezis corecția. Să privim datele reci de pe dashboard:</p>
+
+      <ul class="space-y-3 mb-6 bg-[#0b1221] p-4 rounded-xl border border-gray-700">
+        <li class="flex items-center gap-2">
+            <span class="text-green-400 font-bold">● Pi Cycle Top:</span>
+            <span class="text-gray-300 text-sm">Nu a fost atins. (Distanță imensă până la semnal).</span>
+        </li>
+        <li class="flex items-center gap-2">
+            <span class="text-green-400 font-bold">● Rainbow Chart:</span>
+            <span class="text-gray-300 text-sm">Suntem în zona "Buy/Accumulate", nici pe departe în zona de vânzare.</span>
+        </li>
+        <li class="flex items-center gap-2">
+            <span class="text-green-400 font-bold">● MVRV Z-Score:</span>
+            <span class="text-gray-300 text-sm">La <strong>0.60</strong>. Vârfurile se fac la scoruri de peste 7-8. Suntem la podea.</span>
+        </li>
+        <li class="flex items-center gap-2">
+            <span class="text-green-400 font-bold">● RSI:</span>
+            <span class="text-gray-300 text-sm">La <strong>22.4 (Oversold)</strong>, nu Overbought.</span>
+        </li>
+      </ul>
+      
+      <p class="mb-6 text-gray-300">Așadar, de ce a picat piața dacă indicatorii spuneau că "e loc de creștere"? Avem trei explicații critice.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. On-Chain-ul măsoară "Febra", nu "Cutremurul" 🌡️</h3>
+      <p class="mb-4 text-gray-300">Indicatorii on-chain sunt termometre pentru euforia investitorilor. Ei îți spun când oamenii sunt prea lacomi.</p>
+
+      <div class="bg-gray-800/50 p-4 rounded-xl border border-gray-600 mb-6">
+        <p class="text-gray-300 text-sm">Dar crash-ul recent (acel wipeout de 5 Trilioane $) NU a fost cauzat de lăcomia crypto. A fost un Eveniment de Lichiditate Externă (Macro).<br/><br/>
+        <strong>Analogia:</strong> Este ca și cum te-ai uita la termometrul din casă ca să vezi dacă vine uraganul. Termometrul arată 22 de grade (perfect), dar acoperișul zboară. Indicatorii nu au fost "inutili", ci au măsurat sănătatea rețelei, care era bună, în timp ce furtuna a venit din macroeconomie.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Ipoteza Bullish: Indicatorii au avut dreptate. Acesta NU a fost Vârful. 🐂</h3>
+      <p class="mb-4 text-gray-300">Cea mai optimistă interpretare este că indicatorii nu au greșit deloc. Ei nu au semnalat "Cycle Top" pentru simplul motiv că... <strong>nu am atins Cycle Top</strong>.</p>
+      
+      <div class="bg-green-900/10 border-l-4 border-green-500 p-4 rounded-r-xl mb-6">
+         <p class="text-gray-300 text-sm">
+            Faptul că toți indicatorii sunt pe "Verde" (zona de jos) chiar și înainte de crash, sugerează că suntem într-o <strong>corecție de mijloc de ciclu (Mid-Cycle Correction)</strong>, nu la final de Bull Run.<br/><br/>
+            Cine a vândut crezând că "gata, s-a terminat ciclul" a pariat împotriva datelor. Dacă MVRV e jos și prețul e la Costul de Producție, matematic nu ai cum să fii la vârf.
+         </p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. "Zgomotul" ETF-urilor 📢</h3>
+      <p class="mb-4 text-gray-300">Trebuie să acceptăm că vechii indicatori sunt mai puțin preciși în Era BlackRock.</p>
+      <p class="mb-6 text-gray-300">Multe tranzacții se întâmplă acum "Off-Chain" (în bilanțurile ETF-urilor), fără să miște monedele pe blockchain în timp real. Asta face ca semnalele on-chain să fie ușor întârziate sau atenuate.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-blue-900/20 p-6 rounded-2xl border border-blue-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-blue-400 mb-2">Concluzie: NU VINDE!</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            Combinând dashboard-ul "gol" cu explozia ISM la 52.6 (Economie în Expansiune) și prețul care stă pe Costul de Producție, avem imaginea completă:<br/><br/>
+            <strong>Piața a fost lovită de un șoc extern, dar motorul intern este intact și abia se încălzește. Indicatorii ne-au urlat: "NU VINDE! ÎNCĂ NU AM AJUNS ACOLO!"</strong>
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: MATEMATICA INDUSTRIALA - COST PRODUCTIE (08 FEB)
   {
     id: 'industrial-math-bitcoin-gold-silver-aisc-cost-comparison-feb-8-2026',
