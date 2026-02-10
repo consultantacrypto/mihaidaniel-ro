@@ -1,4 +1,70 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: BITCOIN VS PETROL SUPPLY SQUEEZE (10 FEB)
+  {
+    id: 'bitcoin-oil-reserves-production-ratio-supply-squeeze-feb-10-2026',
+    slug: 'raportul-de-seceta-bitcoin-vs-petrol-analiza',
+    title: '🛢️ DE CE UN SINGUR NUMĂR CONTEAZĂ AZI MAI MULT DECÂT ORICE GRAFIC DE PREȚ: "RAPORTUL DE SECETĂ"',
+    summary: 'La petrol, prețul mare aduce foraje noi. La Bitcoin, oferta e fixă. Analiza "Raportului de Secetă" arată o compresie a ofertei de 7.9x cauzată de ETF-uri.',
+    category: 'MACRO & ON-CHAIN',
+    image: '/btcvsgaz.jpg',
+    date: '10 Feb 2026',
+    readTime: '5 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Supply Squeeze
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-orange-500/20 text-orange-300 border border-orange-500/30 px-3 py-1 rounded text-xs font-bold uppercase">🛢️ Supply Squeeze</span>
+        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded text-xs font-bold uppercase">📊 Ratio 7.9x</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">În lumea ingineriei petroliere, totul se reduce la un raport simplu: Reserves-to-Production Ratio. Cât ai în pământ versus cât extragi. Când raportul scade, te pregătești de secetă, iar prețul explodează.</p>
+      
+      <p class="mb-6 text-gray-300">Am aplicat aceeași logică pe Bitcoin în 2026 — doar că aici regulile fizicii sunt mult mai dure. La petrol, prețul mare aduce foraje noi. La Bitcoin, nu există "foraje noi". Sunt 21 de milioane și atât. Nu se descoperă zăcăminte în Alaska, nu se revizuiește nimic. Oferta este perfect inelastică.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Matematica din Spatele "Secetei": Raportul 7.9x 🧮</h3>
+      <p class="mb-4 text-gray-300">Să ne uităm la cifrele reci de astăzi:</p>
+
+      <div class="bg-[#0b1221] p-5 rounded-xl border border-gray-700 mb-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div>
+                <span class="text-gray-400 text-xs uppercase">Stoc Instituțional (ETF)</span>
+                <strong class="text-white block text-xl">~1,300,000 BTC</strong>
+            </div>
+            <div>
+                <span class="text-gray-400 text-xs uppercase">Flux Nou (Mining/An)</span>
+                <strong class="text-white block text-xl">~164,000 BTC</strong>
+            </div>
+        </div>
+        <div class="border-t border-gray-600 pt-4">
+            <span class="text-blue-400 text-sm uppercase font-bold">Rezultatul: Raport de acoperire</span>
+            <strong class="text-blue-300 block text-3xl">~7.9x</strong>
+        </div>
+        <p class="text-gray-300 text-sm mt-3"><strong>Traducere:</strong> Cererea instituțională pasivă (doar prin ETF-uri) a absorbit deja echivalentul a aproape 8 ani de producție nouă. Aceasta este o "compresie a ofertei" (Supply Squeeze) unică în istorie.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. Realitatea Dură: Nu e totul Roz ⚠️</h3>
+      <div class="bg-yellow-900/10 border-l-4 border-yellow-500 p-4 rounded-r-xl mb-6">
+         <p class="text-gray-300 text-sm">
+            Hai să fim onești și să nu cădem în capcana "Moon Boys". Acest raport are o fisură. Spre deosebire de petrolul care odată ars dispare, <strong>BTC-ul din ETF-uri nu dispare</strong>. El stă în custodie și poate reveni pe piață oricând.<br/><br/>
+            O răscumpărare masivă de la BlackRock poate inunda piața. Să tratăm cererea ca pe o constantă infinită în timp ce doar supply-ul e fix — înseamnă să ne uităm la ecuație cu un singur ochi.
+         </p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Semnalul Instituțional: Dominanța la 60% 📈</h3>
+      <p class="mb-4 text-gray-300">Totuși, o tendință de fond este imposibil de ignorat. <strong>Bitcoin Dominance a crescut de la ~38% la ~60% astăzi.</strong></p>
+      <p class="mb-6 text-gray-300">Ce ne spune asta? Că banii mari nu sunt proști. Capitalul nu intră "orb" în crypto, sperând la x100 pe meme-uri. Intră chirurgical în Bitcoin. Aceasta nu este euforie de retail. Este convingere instituțională.</p>
+
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-blue-900/20 p-6 rounded-2xl border border-blue-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-blue-400 mb-2">Concluzie: Probabilitate, nu Garanție</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            Pe termen scurt, volatilitatea nu întreabă pe nimeni dacă e pregătit.<br/><br/>
+            Dar pe termen lung, mecanica pieței este clară: <strong>Dacă absorbția netă rămâne deasupra emisiei noi (acel raport de 7.9x), presiunea se acumulează într-o singură direcție: În Sus.</strong><br/>
+            În investiții, nu există garanții. Există doar probabilități asimetrice. Iar matematica favorizează Bitcoin.
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: ON-CHAIN INDICATORS FAILED? (09 FEB)
   {
     id: 'on-chain-data-indicators-failed-crash-analysis-feb-9-2026',
