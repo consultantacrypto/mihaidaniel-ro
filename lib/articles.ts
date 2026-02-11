@@ -1,4 +1,83 @@
 export const articles = [
+// ✅ 0. ARTICOL NOU: PERSPECTIVA ISTORICĂ FEAR & GREED (11 FEB)
+  {
+    id: 'fear-and-greed-history-perspective-score-5-feb-11-2026',
+    slug: 'perspectiva-fear-greed-istorie-score-5-analiza',
+    title: '🧠 PERSPECTIVA ESTE TOTUL: DE CE FRICA DE AZI (SCOR 5) LA $60K ESTE CEA MAI BUNĂ VESTE POSIBILĂ',
+    summary: 'Suntem mai speriați acum la $60k decât eram la FTX la $15k. Imaginea care demonstrează că "Podeaua" pieței a crescut exponențial, chiar dacă moralul e la pământ.',
+    category: 'PSIHOLOGIE DE PIAȚĂ',
+    image: '/xx.jpg',
+    date: '11 Feb 2026',
+    readTime: '4 min',
+    author: 'Mihai Daniel',
+    impact: 'bullish', // Extreme Fear = Buy Signal
+    content: `
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="bg-red-600/20 text-red-300 border border-red-600/30 px-3 py-1 rounded text-xs font-bold uppercase">😱 Extreme Fear: 5</span>
+        <span class="bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded text-xs font-bold uppercase">💎 Higher Lows</span>
+      </div>
+
+      <p class="mb-4 text-gray-300 font-bold text-lg">Suntem pe 11 Februarie 2026. Dacă deschizi Twitter sau YouTube, ai zice că Bitcoin se duce la zero. Frica este palpabilă, investitorii capitulează, iar sentimentul general este de dezastru.</p>
+      
+      <p class="mb-6 text-gray-300">Dar am o imagine pentru tine care valorează mai mult decât 1000 de analize tehnice. Ea arată evoluția indexului "Fear & Greed" (Frică și Lăcomie) la fiecare mare crash din istorie.</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">1. Paradoxul Fricii: Scor 5 (Istoric) 📉</h3>
+      <p class="mb-4 text-gray-300">Priviți ultima cadran din imagine (2026 Crash). Indexul arată cifra <strong>5</strong>. Aceasta este "Frică Extremă", aproape de minimul absolut posibil (0).</p>
+
+      <div class="bg-[#0b1221] p-5 rounded-xl border border-gray-700 mb-6">
+        <strong class="text-white block mb-2">Comparația Șocantă:</strong>
+        <ul class="space-y-2 text-sm text-gray-300">
+            <li>• La <strong>FTX Crash</strong> (unul din cele mai negre evenimente), frica era la nivelul <strong>12</strong>.</li>
+            <li>• La <strong>Covid Crash</strong> (când lumea se oprea), frica era la nivelul <strong>9</strong>.</li>
+            <li>• Azi, fără război mondial și fără exchange-uri falimentare, frica este la <strong>5</strong>.</li>
+        </ul>
+        <p class="text-red-400 text-xs mt-3 italic border-l-2 border-red-500 pl-3">Suntem psihologic mai dărâmați acum decât în cele mai mari crize reale ale industriei. De ce? Pentru că așteptările au fost prea mari.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">2. "Podeaua" de Beton: Evoluția Prețului 🚀</h3>
+      <p class="mb-4 text-gray-300">Aici este secretul pe care îl ratează 99% din oameni. Uitați-vă la prețul asociat cu "Frica Extremă" de-a lungul anilor:</p>
+      
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
+         <div class="bg-gray-800 p-3 rounded text-center">
+            <span class="text-gray-400 text-xs">2012</span>
+            <strong class="block text-white">$7</strong>
+         </div>
+         <div class="bg-gray-800 p-3 rounded text-center">
+            <span class="text-gray-400 text-xs">Mt. Gox</span>
+            <strong class="block text-white">$421</strong>
+         </div>
+         <div class="bg-gray-800 p-3 rounded text-center">
+            <span class="text-gray-400 text-xs">2018</span>
+            <strong class="block text-white">$3,129</strong>
+         </div>
+         <div class="bg-gray-800 p-3 rounded text-center">
+            <span class="text-gray-400 text-xs">Covid</span>
+            <strong class="block text-white">$3,852</strong>
+         </div>
+         <div class="bg-gray-800 p-3 rounded text-center">
+            <span class="text-gray-400 text-xs">FTX</span>
+            <strong class="block text-white">$15,642</strong>
+         </div>
+         <div class="bg-blue-600/20 border border-blue-500 p-3 rounded text-center transform scale-105">
+            <span class="text-blue-300 text-xs font-bold">2026 (AZI)</span>
+            <strong class="block text-white text-lg">~$60,000</strong>
+         </div>
+      </div>
+
+      <p class="mb-6 text-gray-300">Înțelegi ce se întâmplă? Astăzi, "panica totală" și "sfârșitul lumii" se întâmplă la prețul de <strong>$60,000</strong>. Un preț care acum câțiva ani era vârful absolut al euforiei (ATH).</p>
+
+      <h3 class="text-2xl font-bold text-white mt-8 mb-4">3. Concluzie: Cel mai Bullish Semnal 🐂</h3>
+      <div class="mt-8 bg-gradient-to-br from-[#0a0f1e] to-green-900/20 p-6 rounded-2xl border border-green-500/40 shadow-lg">
+        <h4 class="text-xl font-bold text-green-400 mb-2">Cumpără când sângele e pe străzi</h4>
+        <p class="text-gray-300 mb-0 leading-relaxed">
+            Dacă piața este la pământ psihologic (Scor 5), dar prețul refuză să scadă sub zona de $60k (suportul structural), asta înseamnă că vânzătorii s-au epuizat.<br/><br/>
+            Cine a avut de vândut de frică, a vândut deja. Când un activ este urât de toată lumea, dar se tranzacționează la prețuri istorice mari, urmează explozia.<br/>
+            <strong>Nu lăsa emoția de moment (Scorul 5) să te facă să ignori realitatea de pe grafic ($60k Floor).</strong>
+        </p>
+      </div>
+    `
+  },
+
 // ✅ 0. ARTICOL NOU: BITCOIN VS PETROL SUPPLY SQUEEZE (10 FEB)
   {
     id: 'bitcoin-oil-reserves-production-ratio-supply-squeeze-feb-10-2026',
