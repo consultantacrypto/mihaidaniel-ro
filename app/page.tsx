@@ -31,8 +31,8 @@ export default function Home() {
       <Hero />
       <SocialStats />
       <CelebrityInterviews />
-      <Course />
       <Consultancy />
+      <Course />
       <Footer />
     </main>
   );
