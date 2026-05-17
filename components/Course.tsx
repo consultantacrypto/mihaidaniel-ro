@@ -1,28 +1,17 @@
 'use client';
 
-import { useState } from 'react';
-import { Play, Lock, CheckCircle2, MonitorPlay, Smartphone, Infinity, Star, ChevronRight, BarChart2, ShieldCheck, BrainCircuit, TrendingUp, AlertTriangle } from 'lucide-react';
-import CryptoPaymentModal from './CryptoPaymentModal';
+import Link from 'next/link';
+import { Play, Lock, CheckCircle2, MonitorPlay, Smartphone, Infinity, ChevronRight, BarChart2, TrendingUp, AlertTriangle } from 'lucide-react';
+
+const CONTACT_EMAIL = 'consultantacrypto.ro@gmail.com';
+const COURSE_MAILTO = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Curs Complet Trading — rezervare')}`;
 
 export default function Course() {
-  const [isPaymentOpen, setPaymentOpen] = useState(false);
-
   return (
     <section id="curs" className="py-24 container mx-auto px-6 relative overflow-hidden">
-        {/* MODALUL DE PLATĂ - ACUM ESTE CORECT */}
-        <CryptoPaymentModal 
-            isOpen={isPaymentOpen} 
-            onClose={() => setPaymentOpen(false)} 
-            title="Curs Complet Trading" 
-            price={300} 
-            type="course" // <--- AICI ERA EROAREA, AM ADĂUGAT TIPUL
-        />
-
-        {/* Background Atmosphere */}
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-900/10 blur-[150px] -z-10 pointer-events-none"></div>
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-900/10 blur-[150px] -z-10 pointer-events-none"></div>
 
-        {/* --- HEADER --- */}
         <div className="text-center mb-20 relative z-10">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-red-500/30 bg-red-500/10 text-red-400 text-xs font-bold mb-6 uppercase tracking-widest">
                  <AlertTriangle size={14}/> Stop Pierderilor
@@ -36,10 +25,7 @@ export default function Course() {
             </p>
         </div>
 
-        {/* --- CONTENT --- */}
         <div className="grid lg:grid-cols-12 gap-12 items-center mb-24">
-            
-            {/* Left: The Promise */}
             <div className="lg:col-span-5 space-y-8">
                 <h3 className="text-3xl font-bold text-white">Ce primești în <span className="text-blue-500">Sistemul Meu?</span></h3>
                 <p className="text-gray-400 leading-relaxed">
@@ -65,19 +51,16 @@ export default function Course() {
                 </div>
             </div>
 
-            {/* Right: Video Mockup */}
-            <div className="lg:col-span-7 relative group cursor-pointer" onClick={() => setPaymentOpen(true)}>
+            <div className="lg:col-span-7 relative group">
                 <div className="absolute -inset-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition duration-1000"></div>
                 
                 <div className="relative bg-[#0a0f1e] rounded-xl overflow-hidden border border-white/10 shadow-2xl aspect-video flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1642790106117-e829e14a795f?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center">
                     <div className="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-all"></div>
                     
-                    {/* Big Play Button */}
                     <div className="w-24 h-24 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform z-10 shadow-[0_0_50px_rgba(255,255,255,0.2)]">
                         <Play size={40} className="text-white fill-white ml-2"/>
                     </div>
 
-                    {/* Bottom Bar Info */}
                     <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end">
                         <div>
                             <div className="flex gap-2 mb-2">
@@ -91,7 +74,6 @@ export default function Course() {
             </div>
         </div>
 
-        {/* --- CTA --- */}
         <div className="mt-12 text-center pt-8 border-t border-white/10">
             <div className="flex flex-col items-center justify-center mb-6">
                 <span className="text-sm text-gray-400 line-through mb-1">Valoare Reală: $600</span>
@@ -101,18 +83,18 @@ export default function Course() {
                 </div>
             </div>
             
-            <button 
-                onClick={() => setPaymentOpen(true)}
+            <Link 
+                href={COURSE_MAILTO}
                 className="group relative inline-flex items-center justify-center gap-3 px-12 py-5 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xl rounded-xl transition-all shadow-[0_0_30px_rgba(37,99,235,0.3)] hover:shadow-[0_0_50px_rgba(37,99,235,0.5)] hover:-translate-y-1 w-full md:w-auto"
             >
-                <Lock size={20} className="text-blue-200"/> Vreau Acces Instant
+                <Lock size={20} className="text-blue-200"/> Solicită acces la curs
                 <ChevronRight size={24} className="group-hover:translate-x-1 transition-transform"/>
-            </button>
+            </Link>
             
             <div className="mt-6 flex flex-wrap justify-center gap-6 text-xs text-gray-500 font-medium uppercase tracking-wider">
                 <span className="flex items-center gap-1"><Infinity size={14} className="text-blue-500"/> Acces pe viață</span>
                 <span className="flex items-center gap-1"><Smartphone size={14} className="text-blue-500"/> Disponibil pe Mobil</span>
-                <span className="flex items-center gap-1"><CheckCircle2 size={14} className="text-green-500"/> Plată Crypto Securizată</span>
+                <span className="flex items-center gap-1"><CheckCircle2 size={14} className="text-green-500"/> Plată securizată (în curând Stripe)</span>
             </div>
         </div>
     </section>

@@ -8,39 +8,34 @@ export default function Footer() {
     <footer className="bg-[#020617] border-t border-white/5 pt-16 pb-8 font-[var(--font-inter)] mt-auto">
       <div className="container mx-auto px-6">
         
-        {/* === GRID PRINCIPAL === */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           
-          {/* 1. BRAND & SOCIAL */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-2 group">
                <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold group-hover:rotate-12 transition-transform">MD</div>
                <span className="text-xl font-black text-white font-[var(--font-space)]">MIHAI DANIEL</span>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Analiză tehnică, educație financiară și strategii crypto. Transformăm complexitatea pieței în decizii clare.
+              Consultanță crypto, mentorat și educație financiară. Strategii clare pentru investitori serioși.
             </p>
             <div className="flex gap-4">
               <SocialLink href="https://www.youtube.com/@DanielMihaiCrypto" icon={<Youtube size={20} />} label="YouTube" />
               <SocialLink href="https://x.com/MIhaiDanielWeb3" icon={<Twitter size={20} />} label="Twitter/X" />
-              <SocialLink href="https://www.linkedin.com/" icon={<Linkedin size={20} />} label="LinkedIn" />
+              <SocialLink href="https://www.linkedin.com/in/mihaidanielmarius/" icon={<Linkedin size={20} />} label="LinkedIn" />
             </div>
           </div>
 
-          {/* 2. PLATFORMĂ */}
           <div>
             <h3 className="text-white font-bold mb-6 flex items-center gap-2">
                 <Globe size={18} className="text-blue-500"/> Platformă
             </h3>
             <ul className="space-y-4 text-sm text-gray-400">
-                <li><Link href="/market" className="hover:text-blue-400 transition-colors">Market Data (Live)</Link></li>
-                <li><Link href="/stiri" className="hover:text-blue-400 transition-colors">Știri & Analize</Link></li>
+                <li><Link href="/curs" className="hover:text-blue-400 transition-colors">Curs Trading</Link></li>
+                <li><Link href="/#consultanta" className="hover:text-blue-400 transition-colors">Consultanță VIP</Link></li>
                 <li><Link href="/academie" className="hover:text-blue-400 transition-colors">Academia Crypto</Link></li>
-                <li><Link href="/#newsletter" className="hover:text-blue-400 transition-colors">Newsletter</Link></li>
             </ul>
           </div>
 
-          {/* 3. COMPANIE */}
           <div>
             <h3 className="text-white font-bold mb-6 flex items-center gap-2">
                 <ShieldCheck size={18} className="text-green-500"/> Companie
@@ -56,12 +51,11 @@ export default function Footer() {
                         Contact & Suport
                     </Link>
                 </li>
-                <li><Link href="/despre" className="hover:text-green-400 transition-colors">Politică Editorială</Link></li>
-                <li><Link href="/despre" className="hover:text-green-400 transition-colors">Termeni & Condiții</Link></li>
+                <li><Link href="/termeni" className="hover:text-green-400 transition-colors">Termeni & Condiții</Link></li>
+                <li><Link href="/confidentialitate" className="hover:text-green-400 transition-colors">Confidențialitate</Link></li>
             </ul>
           </div>
 
-          {/* 4. CONTACT RAPID */}
           <div>
             <h3 className="text-white font-bold mb-6 flex items-center gap-2">
                 <MapPin size={18} className="text-purple-500"/> Sediu
@@ -73,7 +67,6 @@ export default function Footer() {
                 </li>
                 <li className="flex items-center gap-3">
                     <Mail className="text-gray-600 shrink-0" size={16} />
-                    {/* ✅ EMAIL ACTUALIZAT AICI */}
                     <a href="mailto:consultantacrypto.ro@gmail.com" className="hover:text-white transition-colors">consultantacrypto.ro@gmail.com</a>
                 </li>
                 <li className="flex items-center gap-3">
@@ -85,7 +78,6 @@ export default function Footer() {
 
         </div>
 
-        {/* DISCLAIMER */}
         <div className="border-t border-white/5 pt-8 mb-8">
             <p className="text-xs text-gray-500 leading-relaxed text-justify opacity-70 hover:opacity-100 transition-opacity">
                 Informațiile de pe mihaidaniel.ro au caracter educativ și NU reprezintă sfaturi financiare. 
@@ -93,7 +85,6 @@ export default function Footer() {
             </p>
         </div>
 
-        {/* COPYRIGHT */}
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-gray-600">
             &copy; {currentYear} Mihai Daniel. Toate drepturile rezervate.
@@ -109,7 +100,6 @@ export default function Footer() {
   );
 }
 
-// Componentă Helper (o las la fel)
 function SocialLink({ href, icon, label }: { href: string, icon: React.ReactNode, label: string }) {
     return (
         <a 

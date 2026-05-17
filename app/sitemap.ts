@@ -1,32 +1,28 @@
 import { MetadataRoute } from 'next';
-import { articles } from '@/lib/articles';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.mihaidaniel.ro';
+  const now = new Date();
 
-  // 1. Pagini statice
-  const staticPages = [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'daily' as const,
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/stiri`,
-      lastModified: new Date(),
-      changeFrequency: 'daily' as const,
-      priority: 0.9,
-    },
+  const routes: Array<{
+    path: string;
+    changeFrequency: 'daily' | 'weekly' | 'monthly' | 'yearly';
+    priority: number;
+  }> = [
+    { path: '', changeFrequency: 'daily', priority: 1 },
+    { path: '/curs', changeFrequency: 'weekly', priority: 0.9 },
+    { path: '/contact', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/despre', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/academie', changeFrequency: 'weekly', priority: 0.8 },
+    { path: '/termeni', changeFrequency: 'yearly', priority: 0.3 },
+    { path: '/cookies', changeFrequency: 'yearly', priority: 0.3 },
+    { path: '/confidentialitate', changeFrequency: 'yearly', priority: 0.3 },
   ];
 
-  // 2. Pagini dinamice (Articolele)
-  const articlePages = articles.map((article) => ({
-    url: `${baseUrl}/stiri/${article.slug}`,
-    lastModified: new Date(article.date), // Sau data curentă
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
+  return routes.map(({ path, changeFrequency, priority }) => ({
+    url: `${baseUrl}${path}`,
+    lastModified: now,
+    changeFrequency,
+    priority,
   }));
-
-  return [...staticPages, ...articlePages];
 }

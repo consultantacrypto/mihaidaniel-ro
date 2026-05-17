@@ -8,13 +8,7 @@ const nextConfig: NextConfig = {
 
   // 1. Optimizare Pachete (Tree-Shaking)
   experimental: {
-    optimizePackageImports: [
-      'lucide-react', 
-      'framer-motion', 
-      '@rainbow-me/rainbowkit', 
-      'wagmi', 
-      'viem'
-    ],
+    optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
 
   // 2. Optimizare Imagini
@@ -46,27 +40,7 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
   
-  // 3. FIX CAPITAL PENTRU EROAREA METAMASK
-  webpack: (config: any) => {
-    config.externals.push(
-      "pino-pretty",
-      "lokijs",
-      "encoding",
-      "tap",
-      "desm",
-      "fastbench",
-      "why-is-node-running"
-    );
-
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@react-native-async-storage/async-storage': false,
-    };
-
-    return config;
-  },
-
-  // ✅ 4. FIX NOU: Redirect-uri pentru a salva traficul vechi (Erorile 404)
+  // Redirect-uri pentru trafic vechi
   async redirects() {
     return [
       {
@@ -75,13 +49,13 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: '/pages/cursuri',
-        destination: '/#curs',
+        source: '/blogs/crypto-news',
+        destination: '/',
         permanent: true,
       },
       {
-        source: '/blogs/crypto-news',
-        destination: '/stiri',
+        source: '/pages/cursuri',
+        destination: '/#curs',
         permanent: true,
       },
       {

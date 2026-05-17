@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google"; 
 import "./globals.css";
-import { Providers } from "./providers";
 import Script from "next/script";
 // ✅ IMPORT Componenta Structurată
 import StructuredData from "@/components/StructuredData";
@@ -23,19 +22,19 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.mihaidaniel.ro'),
   title: {
-    default: "Mihai Daniel | Web3 Investor & Crypto Mentor",
+    default: "Mihai Daniel | Consultanță Crypto & Mentorat",
     template: "%s | Mihai Daniel"
   },
-  description: "Învață trading și investiții crypto de la Mihai Daniel. Cursuri premium, consultanță 1-la-1 și analiză de piață cu AI. 280K+ followers pe social media.",
+  description: "Mihai Daniel — consultanță crypto premium, mentorat 1-la-1 și cursuri de trading. Strategii validate pentru investitori serioși. 280K+ urmăritori.",
   keywords: [
-    "crypto romania", 
-    "trading crypto", 
-    "curs bitcoin", 
-    "mihai daniel crypto",
-    "investitii blockchain",
+    "mihai daniel",
     "consultanta crypto",
-    "analiza tehnica",
-    "educatie financiara"
+    "mentor crypto romania",
+    "curs trading crypto",
+    "curs bitcoin",
+    "investitii crypto",
+    "educatie financiara",
+    "trading crypto",
   ],
   
   authors: [{ name: "Mihai Daniel", url: "https://www.mihaidaniel.ro" }],
@@ -57,9 +56,9 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'ro_RO',
     url: 'https://www.mihaidaniel.ro',
-    siteName: 'Mihai Daniel - Crypto Expert',
-    title: 'Mihai Daniel | Web3 Investor & Crypto Mentor',
-    description: 'Scapă de mentalitatea de parior. Învață trading instituțional și strategii crypto validate.',
+    siteName: 'Mihai Daniel — Consultanță Crypto & Mentorat',
+    title: 'Mihai Daniel | Consultanță Crypto & Mentorat',
+    description: 'Consultanță crypto premium, mentorat 1-la-1 și cursuri de trading. Strategii validate pentru investitori serioși.',
     images: [
       {
         url: '/mihai-daniel-consultanta.jpg', // Folosim imaginea existentă
@@ -75,8 +74,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@MIhaiDanielWeb3',
     creator: '@MIhaiDanielWeb3',
-    title: 'Mihai Daniel | Web3 Investor & Crypto Mentor',
-    description: 'Învață trading și investiții crypto. 280K+ followers pe social media.',
+    title: 'Mihai Daniel | Consultanță Crypto & Mentorat',
+    description: 'Consultanță crypto, mentorat și cursuri premium. 280K+ urmăritori pe social media.',
     images: ['/mihai-daniel-consultanta.jpg'],
   },
 
@@ -119,7 +118,7 @@ export default function RootLayout({
           `}
         </Script>
 
-        <Providers>{children}</Providers>
+        {children}
       </body>
     </html>
   );
