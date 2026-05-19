@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import {
   stripe,
-  CHECKOUT_PRODUCTS,
+  buildCheckoutLineItem,
   type CheckoutProductType,
 } from '@/lib/stripe';
 
@@ -40,23 +40,10 @@ export async function POST(request: Request) {
       );
     }
 
-    const product = CHECKOUT_PRODUCTS[type];
-
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
       allow_promotion_codes: true,
-      line_items: [
-        {
-          quantity: 1,
-          price_data: {
-            currency: 'usd',
-            unit_amount: product.unitAmount,
-            product_data: {
-              name: product.name,
-            },
-          },
-        },
-      ],
+      line_items: [buildCheckoutLineItem(type)],
       success_url: `${baseUrl}/?success=true&type=${type}`,
       cancel_url: `${baseUrl}/?canceled=true`,
       metadata: {
