@@ -9,6 +9,9 @@ export type SitemapRouteConfig = {
 export const STATIC_ROUTES: SitemapRouteConfig[] = [
   { path: '', changeFrequency: 'daily', priority: 1 },
   { path: '/curs', changeFrequency: 'weekly', priority: 0.9 },
+  { path: '/consultanta-crypto', changeFrequency: 'weekly', priority: 0.95 },
+  { path: '/audit-portofoliu', changeFrequency: 'weekly', priority: 0.85 },
+  { path: '/strategie-exit', changeFrequency: 'weekly', priority: 0.85 },
   { path: '/contact', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/despre', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/academie', changeFrequency: 'weekly', priority: 0.8 },

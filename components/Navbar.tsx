@@ -40,9 +40,9 @@ export default function Navbar() {
             <GraduationCap size={18}/> Curs
           </Link>
 
-          <a href="/#consultanta" className="flex items-center gap-2 bg-white text-black border border-white px-5 py-2.5 rounded-xl font-bold hover:bg-gray-200 transition-all hover:scale-105">
+          <Link href="/consultanta-crypto" className="flex items-center gap-2 bg-white text-black border border-white px-5 py-2.5 rounded-xl font-bold hover:bg-gray-200 transition-all hover:scale-105">
             <Coins size={16}/> Consultanță
-          </a>
+          </Link>
           
           <a href="https://www.youtube.com/@DanielMihaiCrypto" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-500 transition-colors ml-2" aria-label="YouTube">
               <Youtube size={20}/> 
@@ -65,9 +65,9 @@ export default function Navbar() {
                 <Link href="/curs" onClick={() => setMobileMenuOpen(false)} className="bg-blue-600 text-white py-3 rounded-lg font-bold text-center flex justify-center items-center gap-2">
                     <GraduationCap size={18}/> Curs
                 </Link>
-                <a href="/#consultanta" onClick={() => setMobileMenuOpen(false)} className="bg-white text-black py-3 rounded-lg font-bold text-center flex justify-center items-center gap-2">
+                <Link href="/consultanta-crypto" onClick={() => setMobileMenuOpen(false)} className="bg-white text-black py-3 rounded-lg font-bold text-center flex justify-center items-center gap-2">
                     <Coins size={18}/> Consultanță
-                </a>
+                </Link>
              </div>
         </div>
       )}

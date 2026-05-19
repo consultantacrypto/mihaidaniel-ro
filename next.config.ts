@@ -61,12 +61,12 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/products/consultanta-crypto',
-        destination: '/#consultanta',
+        destination: '/consultanta-crypto',
         permanent: true,
       },
       {
         source: '/products/consultanta',
-        destination: '/#consultanta',
+        destination: '/consultanta-crypto',
         permanent: true,
       },
     ];

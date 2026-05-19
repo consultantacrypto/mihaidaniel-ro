@@ -40,12 +40,14 @@ export async function POST(request: Request) {
       );
     }
 
+    const successPath =
+      type === 'consultancy' ? '/consultanta-crypto' : '/';
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
       allow_promotion_codes: true,
       line_items: [buildCheckoutLineItem(type)],
-      success_url: `${baseUrl}/?success=true&type=${type}`,
-      cancel_url: `${baseUrl}/?canceled=true`,
+      success_url: `${baseUrl}${successPath}?success=true&type=${type}`,
+      cancel_url: `${baseUrl}${successPath}?canceled=true`,
       metadata: {
         type,
       },

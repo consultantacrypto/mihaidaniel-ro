@@ -31,7 +31,7 @@ export default function Footer() {
             </h3>
             <ul className="space-y-4 text-sm text-gray-400">
                 <li><Link href="/curs" className="hover:text-blue-400 transition-colors">Curs Trading</Link></li>
-                <li><Link href="/#consultanta" className="hover:text-blue-400 transition-colors">Consultanță VIP</Link></li>
+                <li><Link href="/consultanta-crypto" className="hover:text-blue-400 transition-colors">Consultanță VIP</Link></li>
                 <li><Link href="/academie" className="hover:text-blue-400 transition-colors">Academia Crypto</Link></li>
             </ul>
           </div>
