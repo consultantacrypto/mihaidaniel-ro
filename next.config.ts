@@ -43,11 +43,12 @@ const nextConfig: NextConfig = {
   // Redirect-uri pentru trafic vechi
   async redirects() {
     return [
-      {
-        source: '/en',
-        destination: '/',
-        permanent: true,
-      },
+      // Dezactivat pentru Faza 3 (portal /en) — nu redirecta /en către home
+      // {
+      //   source: '/en',
+      //   destination: '/',
+      //   permanent: true,
+      // },
       {
         source: '/blogs/crypto-news',
         destination: '/',

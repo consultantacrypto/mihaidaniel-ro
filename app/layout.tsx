@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google"; 
 import "./globals.css";
 import Script from "next/script";
-// ✅ IMPORT Componenta Structurată
-import StructuredData from "@/components/StructuredData";
+import GlobalJsonLd from '@/components/GlobalJsonLd';
 
 const spaceGrotesk = Space_Grotesk({ 
   subsets: ["latin"],
@@ -101,8 +100,7 @@ export default function RootLayout({
     <html lang="ro">
       <body className={`${spaceGrotesk.variable} ${inter.variable} font-sans antialiased`}>
         
-        {/* ✅ Date Structurate pentru Google */}
-        <StructuredData />
+        <GlobalJsonLd />
 
         {/* Google Analytics */}
         <Script

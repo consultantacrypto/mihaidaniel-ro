@@ -1,7 +1,10 @@
-import { dictionary, enhanceContent } from '@/lib/dictionary'; // ✅ Am importat enhanceContent
+import { dictionary, enhanceContent } from '@/lib/dictionary';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import ArticleTracker from '@/components/ArticleTracker'; // ✅ Am importat Senzorul
+import ArticleTracker from '@/components/ArticleTracker';
+import JsonLd from '@/components/JsonLd';
+import { buildArticleSchema } from '@/lib/seo/schemas/article';
+import { SITE_URL } from '@/lib/seo/constants';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowLeft, Lightbulb, Zap, Clock } from 'lucide-react';
@@ -9,9 +12,14 @@ import { ArrowLeft, Lightbulb, Zap, Clock } from 'lucide-react';
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const term = dictionary.find((t) => t.slug === slug);
+  const canonical = `${SITE_URL}/academie/${slug}`;
+
   return {
     title: term ? `${term.term} - Explicație Completă | Academia Crypto` : 'Termen Necunoscut',
     description: term?.definition,
+    alternates: {
+      canonical,
+    },
   };
 }
 
@@ -26,7 +34,7 @@ export default async function TermPage({ params }: { params: Promise<{ slug: str
 
   return (
     <main className="min-h-screen bg-[#020617] text-white selection:bg-cyan-500/30 flex flex-col">
-      {/* ✅ Activăm Senzorul Invizibil */}
+      <JsonLd data={buildArticleSchema(term)} />
       <ArticleTracker slug={term.slug} />
       
       <Navbar />
