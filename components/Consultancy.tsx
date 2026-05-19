@@ -1,13 +1,14 @@
 'use client';
 
-import { Crown, ArrowRight, FileText, Zap, BookOpen, Star } from 'lucide-react';
+import { useState } from 'react';
+import { Crown, ArrowRight, FileText, Zap, BookOpen, Star, Loader2 } from 'lucide-react';
 import Image from 'next/image';
-
-const CONTACT_EMAIL = 'consultantacrypto.ro@gmail.com';
-const CONSULTANCY_MAILTO = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Consultanță VIP 1 la 1 — rezervare')}`;
+import { startCheckout } from '@/lib/checkout';
 
 export default function Consultancy() {
-  const handleOpenBooking = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleOpenBooking = async () => {
     if (typeof window !== 'undefined' && (window as Window & { gtag?: (...args: unknown[]) => void }).gtag) {
       (window as Window & { gtag: (...args: unknown[]) => void }).gtag('event', 'begin_checkout', {
         currency: 'USD',
@@ -15,7 +16,19 @@ export default function Consultancy() {
         items: [{ item_name: 'Consultanta VIP 1 la 1', item_id: 'consultancy_vip' }],
       });
     }
-    window.location.href = CONSULTANCY_MAILTO;
+
+    setIsLoading(true);
+    try {
+      await startCheckout('consultancy');
+    } catch (error) {
+      console.error('[Consultancy] Checkout error:', error);
+      alert(
+        error instanceof Error
+          ? error.message
+          : 'Plata nu a putut fi inițiată. Încearcă din nou.'
+      );
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -61,11 +74,22 @@ export default function Consultancy() {
 
                     <div className="pt-4">
                         <button 
+                            type="button"
                             onClick={handleOpenBooking}
+                            disabled={isLoading}
                             aria-label="Rezervă sesiunea de consultanță"
-                            className="w-full sm:w-auto px-12 py-5 bg-gradient-to-r from-yellow-600 to-yellow-500 hover:from-yellow-500 hover:to-yellow-400 text-black font-black text-lg rounded-xl shadow-[0_0_40px_rgba(234,179,8,0.3)] hover:scale-105 transition-transform flex items-center justify-center gap-3 cursor-pointer"
+                            className="w-full sm:w-auto px-12 py-5 bg-gradient-to-r from-yellow-600 to-yellow-500 hover:from-yellow-500 hover:to-yellow-400 disabled:opacity-70 disabled:cursor-not-allowed text-black font-black text-lg rounded-xl shadow-[0_0_40px_rgba(234,179,8,0.3)] hover:scale-105 disabled:hover:scale-100 transition-transform flex items-center justify-center gap-3 cursor-pointer"
                         >
-                            Rezervă Sesiunea - $250 <ArrowRight size={20}/>
+                            {isLoading ? (
+                              <>
+                                <Loader2 size={20} className="animate-spin" />
+                                Se procesează...
+                              </>
+                            ) : (
+                              <>
+                                Rezervă Sesiunea - $250 <ArrowRight size={20}/>
+                              </>
+                            )}
                         </button>
                         <p className="text-sm text-gray-400 mt-3 pl-2 flex items-center gap-2">
                             <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span> Maxim 2 locuri pe zi.

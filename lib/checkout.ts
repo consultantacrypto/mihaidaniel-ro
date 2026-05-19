@@ -1,0 +1,29 @@
+import type { CheckoutProductType } from '@/lib/stripe';
+
+type CheckoutResponse = { url: string };
+type CheckoutErrorResponse = { error: string };
+
+export async function startCheckout(type: CheckoutProductType): Promise<void> {
+  const response = await fetch('/api/checkout', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ type }),
+  });
+
+  let data: CheckoutResponse | CheckoutErrorResponse;
+  try {
+    data = await response.json();
+  } catch {
+    throw new Error('Răspuns invalid de la server.');
+  }
+
+  if (!response.ok || !('url' in data) || !data.url) {
+    const message =
+      'error' in data && data.error
+        ? data.error
+        : 'Nu am putut porni plata. Încearcă din nou.';
+    throw new Error(message);
+  }
+
+  window.location.href = data.url;
+}

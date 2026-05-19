@@ -1,7 +1,9 @@
 'use client';
 
+import { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 import Navbar from '@/components/Navbar';
+import PaymentFeedback from '@/components/PaymentFeedback';
 import Hero from '@/components/Hero';
 import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
@@ -26,6 +28,9 @@ const Consultancy = dynamic(() => import('@/components/Consultancy'), {
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col bg-[#020617] text-white font-sans selection:bg-blue-500/30 overflow-x-hidden">
+      <Suspense fallback={null}>
+        <PaymentFeedback />
+      </Suspense>
       <ScrollProgress />
       <Navbar />
       <Hero />

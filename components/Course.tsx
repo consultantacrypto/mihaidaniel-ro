@@ -1,12 +1,39 @@
 'use client';
 
-import Link from 'next/link';
-import { Play, Lock, CheckCircle2, MonitorPlay, Smartphone, Infinity, ChevronRight, BarChart2, TrendingUp, AlertTriangle } from 'lucide-react';
-
-const CONTACT_EMAIL = 'consultantacrypto.ro@gmail.com';
-const COURSE_MAILTO = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Curs Complet Trading — rezervare')}`;
+import { useState } from 'react';
+import {
+  Play,
+  Lock,
+  CheckCircle2,
+  MonitorPlay,
+  Smartphone,
+  Infinity,
+  ChevronRight,
+  BarChart2,
+  TrendingUp,
+  AlertTriangle,
+  Loader2,
+} from 'lucide-react';
+import { startCheckout } from '@/lib/checkout';
 
 export default function Course() {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleCheckout = async () => {
+    setIsLoading(true);
+    try {
+      await startCheckout('course');
+    } catch (error) {
+      console.error('[Course] Checkout error:', error);
+      alert(
+        error instanceof Error
+          ? error.message
+          : 'Plata nu a putut fi inițiată. Încearcă din nou.'
+      );
+      setIsLoading(false);
+    }
+  };
+
   return (
     <section id="curs" className="py-24 container mx-auto px-6 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-900/10 blur-[150px] -z-10 pointer-events-none"></div>
@@ -83,18 +110,29 @@ export default function Course() {
                 </div>
             </div>
             
-            <Link 
-                href={COURSE_MAILTO}
-                className="group relative inline-flex items-center justify-center gap-3 px-12 py-5 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xl rounded-xl transition-all shadow-[0_0_30px_rgba(37,99,235,0.3)] hover:shadow-[0_0_50px_rgba(37,99,235,0.5)] hover:-translate-y-1 w-full md:w-auto"
+            <button
+                type="button"
+                onClick={handleCheckout}
+                disabled={isLoading}
+                className="group relative inline-flex items-center justify-center gap-3 px-12 py-5 bg-blue-600 hover:bg-blue-500 disabled:opacity-70 disabled:cursor-not-allowed text-white font-bold text-xl rounded-xl transition-all shadow-[0_0_30px_rgba(37,99,235,0.3)] hover:shadow-[0_0_50px_rgba(37,99,235,0.5)] hover:-translate-y-1 disabled:hover:translate-y-0 w-full md:w-auto"
             >
-                <Lock size={20} className="text-blue-200"/> Solicită acces la curs
-                <ChevronRight size={24} className="group-hover:translate-x-1 transition-transform"/>
-            </Link>
+                {isLoading ? (
+                  <>
+                    <Loader2 size={20} className="animate-spin text-blue-200" />
+                    Se procesează...
+                  </>
+                ) : (
+                  <>
+                    <Lock size={20} className="text-blue-200"/> Vreau Acces Instant
+                    <ChevronRight size={24} className="group-hover:translate-x-1 transition-transform"/>
+                  </>
+                )}
+            </button>
             
             <div className="mt-6 flex flex-wrap justify-center gap-6 text-xs text-gray-500 font-medium uppercase tracking-wider">
                 <span className="flex items-center gap-1"><Infinity size={14} className="text-blue-500"/> Acces pe viață</span>
                 <span className="flex items-center gap-1"><Smartphone size={14} className="text-blue-500"/> Disponibil pe Mobil</span>
-                <span className="flex items-center gap-1"><CheckCircle2 size={14} className="text-green-500"/> Plată securizată (în curând Stripe)</span>
+                <span className="flex items-center gap-1"><CheckCircle2 size={14} className="text-green-500"/> Plată securizată Stripe</span>
             </div>
         </div>
     </section>
