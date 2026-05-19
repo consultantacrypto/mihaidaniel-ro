@@ -70,8 +70,9 @@ async function sendPurchaseEmail(
     : buildCourseEmailHtml(customerName);
 
   const { error } = await resend.emails.send({
-    from: 'Mihai Daniel <onboarding@resend.dev>',
+    from: 'Mihai Daniel <contact@mihaidaniel.ro>',
     to,
+    replyTo: CONTACT_EMAIL,
     subject,
     html,
   });
