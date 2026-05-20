@@ -1,10 +1,10 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import { CONTACT_EMAIL } from '@/lib/seo/constants';
 
 export const dynamic = 'force-dynamic';
 
 const FROM_EMAIL = 'Mihai Daniel <contact@mihaidaniel.ro>';
-const TO_EMAIL = 'contact@mihaidaniel.ro';
 
 function getResendClient(): Resend | null {
   const apiKey = process.env.RESEND_API_KEY;
@@ -87,7 +87,7 @@ export async function POST(request: Request) {
 
     const { error } = await resend.emails.send({
       from: FROM_EMAIL,
-      to: TO_EMAIL,
+      to: CONTACT_EMAIL,
       replyTo: payload.email,
       subject: `Partnership inquiry: ${payload.agencyName}`,
       html: buildInquiryEmailHtml(payload),
