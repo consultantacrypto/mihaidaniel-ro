@@ -18,6 +18,7 @@ export const STATIC_ROUTES: SitemapRouteConfig[] = [
   { path: '/termeni', changeFrequency: 'yearly', priority: 0.3 },
   { path: '/cookies', changeFrequency: 'yearly', priority: 0.3 },
   { path: '/confidentialitate', changeFrequency: 'yearly', priority: 0.3 },
+  { path: '/en/partnerships', changeFrequency: 'monthly', priority: 0.9 },
 ];
 
 export function getAcademySitemapEntries(baseUrl: string) {

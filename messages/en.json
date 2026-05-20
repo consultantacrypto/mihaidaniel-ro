@@ -1,0 +1,23 @@
+{
+  "nav": {
+    "academy": "Academy",
+    "course": "Course",
+    "consultancy": "Consulting",
+    "partnerships": "Media Kit",
+    "home": "Home",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "language": {
+    "ro": "RO",
+    "en": "EN",
+    "switch": "Switch language"
+  },
+  "footer": {
+    "tagline": "Crypto consulting, mentorship, and financial education. Clear strategies for serious investors.",
+    "platform": "Platform",
+    "course": "Trading Course",
+    "consultancy": "VIP Consulting",
+    "academy": "Crypto Academy"
+  }
+}

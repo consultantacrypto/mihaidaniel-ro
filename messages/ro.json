@@ -1,0 +1,23 @@
+{
+  "nav": {
+    "academy": "Academia",
+    "course": "Curs",
+    "consultancy": "Consultanță",
+    "partnerships": "Media Kit",
+    "home": "Acasă",
+    "openMenu": "Deschide meniul",
+    "closeMenu": "Închide meniul"
+  },
+  "language": {
+    "ro": "RO",
+    "en": "EN",
+    "switch": "Schimbă limba"
+  },
+  "footer": {
+    "tagline": "Consultanță crypto, mentorat și educație financiară. Strategii clare pentru investitori serioși.",
+    "platform": "Platformă",
+    "course": "Curs Trading",
+    "consultancy": "Consultanță VIP",
+    "academy": "Academia Crypto"
+  }
+}

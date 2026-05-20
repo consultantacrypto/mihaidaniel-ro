@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Link as LocaleLink } from '@/i18n/navigation';
 import { Youtube, Twitter, Linkedin, Mail, MapPin, ShieldCheck, Globe, Clock } from 'lucide-react';
 
 export default function Footer() {
@@ -11,10 +12,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           
           <div className="space-y-6">
-            <Link href="/" className="flex items-center gap-2 group">
+            <LocaleLink href="/" className="flex items-center gap-2 group">
                <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold group-hover:rotate-12 transition-transform">MD</div>
                <span className="text-xl font-black text-white font-[var(--font-space)]">MIHAI DANIEL</span>
-            </Link>
+            </LocaleLink>
             <p className="text-gray-400 text-sm leading-relaxed">
               Consultanță crypto, mentorat și educație financiară. Strategii clare pentru investitori serioși.
             </p>
@@ -30,9 +31,9 @@ export default function Footer() {
                 <Globe size={18} className="text-blue-500"/> Platformă
             </h3>
             <ul className="space-y-4 text-sm text-gray-400">
-                <li><Link href="/curs" className="hover:text-blue-400 transition-colors">Curs Trading</Link></li>
-                <li><Link href="/consultanta-crypto" className="hover:text-blue-400 transition-colors">Consultanță VIP</Link></li>
-                <li><Link href="/academie" className="hover:text-blue-400 transition-colors">Academia Crypto</Link></li>
+                <li><LocaleLink href="/curs" className="hover:text-blue-400 transition-colors">Curs Trading</LocaleLink></li>
+                <li><LocaleLink href="/consultanta-crypto" className="hover:text-blue-400 transition-colors">Consultanță VIP</LocaleLink></li>
+                <li><LocaleLink href="/academie" className="hover:text-blue-400 transition-colors">Academia Crypto</LocaleLink></li>
             </ul>
           </div>
 
