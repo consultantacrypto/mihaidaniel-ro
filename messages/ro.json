@@ -18,6 +18,103 @@
     "platform": "Platformă",
     "course": "Curs Trading",
     "consultancy": "Consultanță VIP",
-    "academy": "Academia Crypto"
+    "academy": "Academia Crypto",
+    "company": "Companie",
+    "about": "Despre Noi",
+    "aboutBadge": "Info",
+    "contact": "Contact & Suport",
+    "terms": "Termeni & Condiții",
+    "privacy": "Confidențialitate",
+    "office": "Sediu",
+    "address": "București, România",
+    "addressLine2": "Piața Victoriei, Sector 1",
+    "hours": "Luni - Vineri: 09:00 - 18:00",
+    "disclaimer": "Informațiile de pe mihaidaniel.ro au caracter educativ și NU reprezintă sfaturi financiare. Investițiile crypto implică riscuri majore. Performanțele trecute nu garantează rezultatele viitoare.",
+    "copyright": "Mihai Daniel. Toate drepturile rezervate.",
+    "status": "SYSTEMS OPERATIONAL"
+  },
+  "common": {
+    "processing": "Se procesează...",
+    "checkoutError": "Plata nu a putut fi inițiată. Încearcă din nou."
+  },
+  "home": {
+    "metadata": {
+      "title": "Mihai Daniel | Consultanță Crypto & Mentorat",
+      "description": "Mihai Daniel — consultanță crypto premium, mentorat 1-la-1 și cursuri de trading. Strategii validate pentru investitori serioși. 280K+ urmăritori."
+    },
+    "hero": {
+      "badgeCount": "280.000+",
+      "badgeLabel": "Urmăritori pe Social Media",
+      "titleLine1": "Trading-ul nu este",
+      "titleHighlight": "Joc de Noroc.",
+      "introBefore": "Sunt ",
+      "introName": "Mihai Daniel",
+      "introAfter": ". Transform haosul din piață în strategii matematice. Te învăț să gândești ca un investitor instituțional, nu ca un parior.",
+      "ctaSystem": "Sistemul Meu",
+      "ctaYoutube": "Canal YouTube",
+      "trustStrategies": "Strategii Validate",
+      "trustNoHype": "Fără Promisiuni False",
+      "cardName": "Mihai Daniel",
+      "cardRole": "Mentor & Investitor",
+      "imageAlt": "Mihai Daniel"
+    },
+    "socialStats": {
+      "youtubeLabel": "Subscribers",
+      "tiktokLabel": "Followers",
+      "twitterLabel": "Twitter (X)",
+      "linkedinLabel": "LinkedIn"
+    },
+    "interviews": {
+      "badge": "Hall of Fame Interviews",
+      "titleBefore": "Discuții cu",
+      "titleHighlight": "Giganții Industriei",
+      "description": "Nu vorbesc din cărți. Am acces direct la masa deciziilor.",
+      "descriptionNames": "De la CEO-ul Bybit și Executivii Binance, la fondatorul Ether.fi și Dmitry Buterin.",
+      "playLabel": "Redă video: {title}",
+      "cta": "Vezi toate interviurile pe YouTube"
+    },
+    "consultancy": {
+      "badge": "Inner Circle",
+      "titleBefore": "Consultanță",
+      "titleHighlight": "VIP 1 la 1",
+      "description": "O oră intensivă. Audităm portofoliul, corectăm greșelile și setăm strategia de Exit.",
+      "descriptionBold": "Nu discutăm teorie. Discutăm banii tăi.",
+      "bonusTag": "BONUS GRATUIT ($200)",
+      "packageTitle": "Pachet Investitor Premium",
+      "bonus1Title": "PDF: Audit ca un VC",
+      "bonus1Desc": "Framework de analiză profesională.",
+      "bonus2Title": "PDF: Ghid Investitor Avansat",
+      "bonus2Desc": "20 pagini de strategie aplicată.",
+      "cta": "Rezervă Sesiunea - $250",
+      "ctaAria": "Rezervă sesiunea de consultanță",
+      "slots": "Maxim 2 locuri pe zi.",
+      "detailsLink": "Vezi pagina completă",
+      "testimonial": "Cea mai bună oră de consultanță. Mi-a salvat portofoliul de o greșeală majoră.",
+      "imageAlt": "Consultanță Mihai Daniel"
+    },
+    "course": {
+      "badge": "Stop Pierderilor",
+      "titleBefore": "De ce 90% din traderi",
+      "titleHighlight": "pierd bani?",
+      "subtitle": "Pentru că tratează piața ca pe un cazinou.",
+      "subtitleBold": "Dacă vrei să faci din asta o profesie, ai nevoie de un Sistem. Nu de noroc.",
+      "benefitsTitleBefore": "Ce primești în",
+      "benefitsTitleHighlight": "Sistemul Meu?",
+      "benefitsIntro": "Am condensat 5 ani de experiență și greșeli costisitoare într-un program intensiv de 4 ore. Este \"scurtătura\" ta către profitabilitate consistentă.",
+      "benefit1Title": "Analiză Tehnică Reală",
+      "benefit1Desc": "Nu desene pe grafic. Înțelegi structura pieței și lichiditatea.",
+      "benefit2Title": "20+ Strategii Validate",
+      "benefit2Desc": "Setup-uri clare de intrare și ieșire. Scalp, Day Trading, Swing.",
+      "videoTagMasterclass": "Masterclass",
+      "videoTag4k": "4K VIDEO",
+      "videoTitle": "Arta Tranzacționării",
+      "priceWas": "Valoare Reală: $600",
+      "priceNow": "$300",
+      "priceBadge": "PREȚ UNIC",
+      "cta": "Vreau Acces Instant",
+      "perkLifetime": "Acces pe viață",
+      "perkMobile": "Disponibil pe Mobil",
+      "perkStripe": "Plată securizată Stripe"
+    }
   }
 }

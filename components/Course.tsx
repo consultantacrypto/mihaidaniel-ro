@@ -14,10 +14,13 @@ import {
   AlertTriangle,
   Loader2,
 } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { startCheckout } from '@/lib/checkout';
 
 export default function Course() {
   const [isLoading, setIsLoading] = useState(false);
+  const t = useTranslations('home.course');
+  const tCommon = useTranslations('common');
 
   const handleCheckout = async () => {
     setIsLoading(true);
@@ -26,9 +29,7 @@ export default function Course() {
     } catch (error) {
       console.error('[Course] Checkout error:', error);
       alert(
-        error instanceof Error
-          ? error.message
-          : 'Plata nu a putut fi inițiată. Încearcă din nou.'
+        error instanceof Error ? error.message : tCommon('checkoutError')
       );
       setIsLoading(false);
     }
@@ -41,38 +42,37 @@ export default function Course() {
 
         <div className="text-center mb-20 relative z-10">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-red-500/30 bg-red-500/10 text-red-400 text-xs font-bold mb-6 uppercase tracking-widest">
-                 <AlertTriangle size={14}/> Stop Pierderilor
+                 <AlertTriangle size={14}/> {t('badge')}
             </div>
             <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight">
-                De ce 90% din traderi <span className="text-red-500">pierd bani?</span>
+                {t('titleBefore')} <span className="text-red-500">{t('titleHighlight')}</span>
             </h2>
             <p className="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed">
-                Pentru că tratează piața ca pe un cazinou. <br className="hidden md:block"/>
-                Dacă vrei să faci din asta o profesie, ai nevoie de un <b>Sistem</b>. Nu de noroc.
+                {t('subtitle')} <br className="hidden md:block"/>
+                <b>{t('subtitleBold')}</b>
             </p>
         </div>
 
         <div className="grid lg:grid-cols-12 gap-12 items-center mb-24">
             <div className="lg:col-span-5 space-y-8">
-                <h3 className="text-3xl font-bold text-white">Ce primești în <span className="text-blue-500">Sistemul Meu?</span></h3>
+                <h3 className="text-3xl font-bold text-white">{t('benefitsTitleBefore')} <span className="text-blue-500">{t('benefitsTitleHighlight')}</span></h3>
                 <p className="text-gray-400 leading-relaxed">
-                    Am condensat 5 ani de experiență și greșeli costisitoare într-un program intensiv de 4 ore. 
-                    Este "scurtătura" ta către profitabilitate consistentă.
+                    {t('benefitsIntro')}
                 </p>
                 
                 <div className="space-y-4">
                     <div className="flex gap-4">
                         <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 shrink-0 border border-blue-500/20"><BarChart2 size={24}/></div>
                         <div>
-                            <h4 className="text-white font-bold">Analiză Tehnică Reală</h4>
-                            <p className="text-sm text-gray-500">Nu desene pe grafic. Înțelegi structura pieței și lichiditatea.</p>
+                            <h4 className="text-white font-bold">{t('benefit1Title')}</h4>
+                            <p className="text-sm text-gray-500">{t('benefit1Desc')}</p>
                         </div>
                     </div>
                     <div className="flex gap-4">
                         <div className="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center text-green-400 shrink-0 border border-green-500/20"><TrendingUp size={24}/></div>
                         <div>
-                            <h4 className="text-white font-bold">20+ Strategii Validate</h4>
-                            <p className="text-sm text-gray-500">Setup-uri clare de intrare și ieșire. Scalp, Day Trading, Swing.</p>
+                            <h4 className="text-white font-bold">{t('benefit2Title')}</h4>
+                            <p className="text-sm text-gray-500">{t('benefit2Desc')}</p>
                         </div>
                     </div>
                 </div>
@@ -91,10 +91,10 @@ export default function Course() {
                     <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end">
                         <div>
                             <div className="flex gap-2 mb-2">
-                                <span className="bg-blue-600 text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Masterclass</span>
-                                <span className="bg-white/20 text-white text-[10px] font-bold px-2 py-1 rounded flex items-center gap-1"><MonitorPlay size={10}/> 4K VIDEO</span>
+                                <span className="bg-blue-600 text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">{t('videoTagMasterclass')}</span>
+                                <span className="bg-white/20 text-white text-[10px] font-bold px-2 py-1 rounded flex items-center gap-1"><MonitorPlay size={10}/> {t('videoTag4k')}</span>
                             </div>
-                            <h3 className="text-2xl font-bold text-white">Arta Tranzacționării</h3>
+                            <h3 className="text-2xl font-bold text-white">{t('videoTitle')}</h3>
                         </div>
                     </div>
                 </div>
@@ -103,10 +103,10 @@ export default function Course() {
 
         <div className="mt-12 text-center pt-8 border-t border-white/10">
             <div className="flex flex-col items-center justify-center mb-6">
-                <span className="text-sm text-gray-400 line-through mb-1">Valoare Reală: $600</span>
+                <span className="text-sm text-gray-400 line-through mb-1">{t('priceWas')}</span>
                 <div className="flex items-center gap-3">
-                    <span className="text-5xl font-bold text-white">$300</span>
-                    <span className="bg-green-500/20 text-green-400 text-xs font-bold px-2 py-1 rounded border border-green-500/50">PREȚ UNIC</span>
+                    <span className="text-5xl font-bold text-white">{t('priceNow')}</span>
+                    <span className="bg-green-500/20 text-green-400 text-xs font-bold px-2 py-1 rounded border border-green-500/50">{t('priceBadge')}</span>
                 </div>
             </div>
             
@@ -119,20 +119,20 @@ export default function Course() {
                 {isLoading ? (
                   <>
                     <Loader2 size={20} className="animate-spin text-blue-200" />
-                    Se procesează...
+                    {tCommon('processing')}
                   </>
                 ) : (
                   <>
-                    <Lock size={20} className="text-blue-200"/> Vreau Acces Instant
+                    <Lock size={20} className="text-blue-200"/> {t('cta')}
                     <ChevronRight size={24} className="group-hover:translate-x-1 transition-transform"/>
                   </>
                 )}
             </button>
-            
+
             <div className="mt-6 flex flex-wrap justify-center gap-6 text-xs text-gray-500 font-medium uppercase tracking-wider">
-                <span className="flex items-center gap-1"><Infinity size={14} className="text-blue-500"/> Acces pe viață</span>
-                <span className="flex items-center gap-1"><Smartphone size={14} className="text-blue-500"/> Disponibil pe Mobil</span>
-                <span className="flex items-center gap-1"><CheckCircle2 size={14} className="text-green-500"/> Plată securizată Stripe</span>
+                <span className="flex items-center gap-1"><Infinity size={14} className="text-blue-500"/> {t('perkLifetime')}</span>
+                <span className="flex items-center gap-1"><Smartphone size={14} className="text-blue-500"/> {t('perkMobile')}</span>
+                <span className="flex items-center gap-1"><CheckCircle2 size={14} className="text-green-500"/> {t('perkStripe')}</span>
             </div>
         </div>
     </section>

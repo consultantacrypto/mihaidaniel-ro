@@ -18,6 +18,103 @@
     "platform": "Platform",
     "course": "Trading Course",
     "consultancy": "VIP Consulting",
-    "academy": "Crypto Academy"
+    "academy": "Crypto Academy",
+    "company": "Company",
+    "about": "About",
+    "aboutBadge": "Info",
+    "contact": "Contact & Support",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "office": "Office",
+    "address": "Bucharest, Romania",
+    "addressLine2": "Victoriei Square, District 1",
+    "hours": "Mon – Fri: 09:00 – 18:00 EET",
+    "disclaimer": "Content on mihaidaniel.ro is educational only and does NOT constitute financial advice. Crypto investments carry significant risk. Past performance does not guarantee future results.",
+    "copyright": "Mihai Daniel. All rights reserved.",
+    "status": "SYSTEMS OPERATIONAL"
+  },
+  "common": {
+    "processing": "Processing...",
+    "checkoutError": "Payment could not be started. Please try again."
+  },
+  "home": {
+    "metadata": {
+      "title": "Mihai Daniel | Crypto Mentor & VIP Consulting",
+      "description": "Mihai Daniel — premium crypto mentorship, 1-on-1 portfolio strategy, and proven trading systems. 280K+ audience. Book your VIP session in USD."
+    },
+    "hero": {
+      "badgeCount": "280,000+",
+      "badgeLabel": "Social Media Followers",
+      "titleLine1": "Trading is not",
+      "titleHighlight": "Gambling.",
+      "introBefore": "I'm ",
+      "introName": "Mihai Daniel",
+      "introAfter": ". I turn market chaos into mathematical strategy. I teach you to think like an institutional investor — not a gambler.",
+      "ctaSystem": "Explore My System",
+      "ctaYoutube": "YouTube Channel",
+      "trustStrategies": "Battle-Tested Strategies",
+      "trustNoHype": "No False Promises",
+      "cardName": "Mihai Daniel",
+      "cardRole": "Mentor & Investor",
+      "imageAlt": "Mihai Daniel"
+    },
+    "socialStats": {
+      "youtubeLabel": "Subscribers",
+      "tiktokLabel": "Followers",
+      "twitterLabel": "Twitter (X)",
+      "linkedinLabel": "LinkedIn"
+    },
+    "interviews": {
+      "badge": "Hall of Fame Interviews",
+      "titleBefore": "Conversations with",
+      "titleHighlight": "Industry Giants",
+      "description": "I don't speak from textbooks. I sit at the decision table.",
+      "descriptionNames": "From the CEO of Bybit and Binance executives to the founder of Ether.fi and Dmitry Buterin.",
+      "playLabel": "Play video: {title}",
+      "cta": "Watch all interviews on YouTube"
+    },
+    "consultancy": {
+      "badge": "Inner Circle",
+      "titleBefore": "VIP 1-on-1",
+      "titleHighlight": "Crypto Consulting",
+      "description": "One intensive hour. We audit your portfolio, fix critical mistakes, and define your exit strategy.",
+      "descriptionBold": "No theory. Your capital. Your decisions — clarified.",
+      "bonusTag": "FREE BONUS ($200)",
+      "packageTitle": "Premium Investor Pack",
+      "bonus1Title": "PDF: VC-Grade Portfolio Audit",
+      "bonus1Desc": "Professional analysis framework.",
+      "bonus2Title": "PDF: Advanced Investor Guide",
+      "bonus2Desc": "20 pages of applied strategy.",
+      "cta": "Book Session — $250 USD",
+      "ctaAria": "Book VIP consulting session",
+      "slots": "Maximum 2 sessions per day.",
+      "detailsLink": "Full consulting page",
+      "testimonial": "The best hour of consulting I've had. It saved my portfolio from a major mistake.",
+      "imageAlt": "Mihai Daniel VIP consulting"
+    },
+    "course": {
+      "badge": "Stop Bleeding Capital",
+      "titleBefore": "Why 90% of traders",
+      "titleHighlight": "lose money",
+      "subtitle": "Because they treat the market like a casino.",
+      "subtitleBold": "If you want a profession, you need a System — not luck.",
+      "benefitsTitleBefore": "What's inside",
+      "benefitsTitleHighlight": "My System?",
+      "benefitsIntro": "Five years of experience and costly mistakes — condensed into a focused 4-hour program. Your shortcut to consistent profitability.",
+      "benefit1Title": "Real Technical Analysis",
+      "benefit1Desc": "No random chart drawings. You understand market structure and liquidity.",
+      "benefit2Title": "20+ Proven Strategies",
+      "benefit2Desc": "Clear entry and exit setups. Scalp, day trading, swing.",
+      "videoTagMasterclass": "Masterclass",
+      "videoTag4k": "4K VIDEO",
+      "videoTitle": "The Art of Trading",
+      "priceWas": "Real value: $600",
+      "priceNow": "$300",
+      "priceBadge": "ONE-TIME PRICE",
+      "cta": "Get Instant Access",
+      "perkLifetime": "Lifetime access",
+      "perkMobile": "Mobile-friendly",
+      "perkStripe": "Secure Stripe checkout"
+    }
   }
 }

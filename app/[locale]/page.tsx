@@ -1,23 +1,51 @@
 import type { Metadata } from 'next';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { SITE_URL } from '@/lib/seo/constants';
+import { routing, type Locale } from '@/i18n/routing';
 import HomeClient from './home-client';
 
-export const metadata: Metadata = {
-  title: 'Mihai Daniel | Consultanță Crypto & Mentorat',
-  description:
-    'Mihai Daniel — consultanță crypto premium, mentorat 1-la-1 și cursuri de trading. Strategii validate pentru investitori serioși. 280K+ urmăritori.',
-  alternates: {
-    canonical: 'https://www.mihaidaniel.ro/',
-  },
-  openGraph: {
-    title: 'Mihai Daniel | Consultanță Crypto & Mentorat',
-    description:
-      'Consultanță crypto premium, mentorat 1-la-1 și cursuri de trading pentru investitori serioși din România.',
-    url: 'https://www.mihaidaniel.ro/',
-    locale: 'ro_RO',
-    type: 'website',
-  },
-};
+function localePath(locale: Locale): string {
+  return locale === routing.defaultLocale ? '/' : '/en';
+}
 
-export default function HomePage() {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'home.metadata' });
+  const path = localePath(locale as Locale);
+  const isEn = locale === 'en';
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    alternates: {
+      canonical: `${SITE_URL}${path === '/' ? '' : path}`,
+      languages: {
+        ro: `${SITE_URL}/`,
+        en: `${SITE_URL}/en`,
+        'x-default': `${SITE_URL}/`,
+      },
+    },
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+      url: `${SITE_URL}${path === '/' ? '' : path}`,
+      locale: isEn ? 'en_US' : 'ro_RO',
+      type: 'website',
+    },
+  };
+}
+
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return <HomeClient />;
 }
