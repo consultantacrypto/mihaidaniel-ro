@@ -9,20 +9,33 @@ import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
 
 const SocialStats = dynamic(() => import('@/components/SocialStats'), {
-  ssr: true,
+  loading: () => (
+    <div className="h-24 w-full bg-white/[0.02] border-y border-white/5 animate-pulse" />
+  ),
 });
 
-const CelebrityInterviews = dynamic(() => import('@/components/CelebrityInterviews'), {
-  ssr: true,
-  loading: () => <div className="h-96 w-full bg-[#020617]/50 animate-pulse rounded-3xl" />,
+const CelebrityInterviews = dynamic(
+  () => import('@/components/CelebrityInterviews'),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="h-96 w-full bg-[#020617]/50 animate-pulse rounded-3xl" />
+    ),
+  }
+);
+
+const Consultancy = dynamic(() => import('@/components/Consultancy'), {
+  ssr: false,
+  loading: () => (
+    <div className="h-[520px] w-full bg-[#050b1d] animate-pulse border-t border-white/5" />
+  ),
 });
 
 const Course = dynamic(() => import('@/components/Course'), {
-  ssr: true,
-});
-
-const Consultancy = dynamic(() => import('@/components/Consultancy'), {
-  ssr: true,
+  ssr: false,
+  loading: () => (
+    <div className="h-[480px] w-full container mx-auto px-6 animate-pulse" />
+  ),
 });
 
 export default function HomeClient() {

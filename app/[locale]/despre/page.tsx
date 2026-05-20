@@ -16,10 +16,12 @@ export default function AboutPage() {
                 <div className="relative w-full aspect-square md:aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
                     {/* ✅ IMAGINE ACTUALIZATĂ: mihai-daniel-consultanta.jpg */}
                     <div className="absolute inset-0 bg-gradient-to-t from-[#02050a] via-transparent to-transparent z-10"></div>
-                    <img 
-                        src="/mihai-daniel-consultanta.jpg" 
-                        alt="Mihai Daniel" 
-                        className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-500"
+                    <Image
+                        src="/mihai-daniel-consultanta.jpg"
+                        alt="Mihai Daniel"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
                     />
                 </div>
             </div>

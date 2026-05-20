@@ -4,30 +4,19 @@ import Footer from '@/components/Footer';
 import MoneyPageHero from '@/components/landing/MoneyPageHero';
 import LeadMagnetForm from '@/components/LeadMagnetForm';
 import ConsultancyPitch from '@/components/landing/ConsultancyPitch';
-import { SITE_URL } from '@/lib/seo/constants';
+import { buildPageMetadata } from '@/lib/seo/metadata';
 
-const PAGE_URL = `${SITE_URL}/audit-portofoliu`;
-
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: 'Audit Portofoliu Crypto — Ghid Gratuit + Consultanță | Mihai Daniel',
   description:
     'Descarcă gratuit ghidul de audit portofoliu crypto. Apoi rezervă o sesiune 1-la-1 pentru analiză aplicată pe pozițiile tale.',
+  path: '/audit-portofoliu',
   keywords: [
     'audit portofoliu crypto',
     'analiză portofoliu bitcoin',
     'consultanță crypto românia',
   ],
-  alternates: {
-    canonical: PAGE_URL,
-  },
-  openGraph: {
-    title: 'Audit Portofoliu Crypto | Mihai Daniel',
-    description:
-      'Framework gratuit de audit + opțiune de sesiune VIP aplicată pe portofoliul tău.',
-    url: PAGE_URL,
-    type: 'website',
-  },
-};
+});
 
 export default function AuditPortofoliuPage() {
   return (

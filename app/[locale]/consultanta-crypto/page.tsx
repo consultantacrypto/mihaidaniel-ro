@@ -10,25 +10,25 @@ import PaymentFeedback from '@/components/PaymentFeedback';
 import { buildConsultancyServiceSchema } from '@/lib/seo/schemas/service';
 import { buildFaqPageSchema, CONSULTANCY_FAQ } from '@/lib/seo/schemas/faq';
 import { SITE_URL } from '@/lib/seo/constants';
+import { buildPageMetadata } from '@/lib/seo/metadata';
 
 const PAGE_PATH = '/consultanta-crypto';
 const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: 'Consultanță Crypto VIP 1-la-1 | Mihai Daniel',
   description:
     'Sesiune privată de 60 min: audit portofoliu crypto, corecție greșeli și strategie de exit. $250 — rezervă acum cu Mihai Daniel.',
-  alternates: {
-    canonical: PAGE_URL,
-  },
-  openGraph: {
-    title: 'Consultanță Crypto VIP — Mihai Daniel',
-    description:
-      'Audit portofoliu, strategie exit și decizii clare într-o sesiune 1-la-1 de o oră.',
-    url: PAGE_URL,
-    type: 'website',
-  },
-};
+  path: PAGE_PATH,
+  locale: 'ro_RO',
+  image: '/mihai-daniel-consultanta.jpg',
+  keywords: [
+    'consultanta crypto',
+    'mentor crypto romania',
+    'audit portofoliu',
+    'strategie exit bitcoin',
+  ],
+});
 
 export default function ConsultantaCryptoPage() {
   return (

@@ -7,9 +7,11 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PartnershipInquiryForm from '@/components/partnerships/PartnershipInquiryForm';
 import { AUDIENCE_STATS, SITE_URL } from '@/lib/seo/constants';
+import { buildPageMetadata } from '@/lib/seo/metadata';
 import JsonLd from '@/components/JsonLd';
 
-const PAGE_URL = `${SITE_URL}/en/partnerships`;
+const PAGE_PATH = '/en/partnerships';
+const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
 
 const SPONSORS = ['Binance', 'Bybit', 'OKX'] as const;
 
@@ -21,10 +23,13 @@ const STATS = [
   { label: 'Total reach', value: '280K+' },
 ] as const;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: 'Partnerships & Media Kit | Mihai Daniel',
   description:
     'Partner with Mihai Daniel — crypto KOL & educator. 280K+ audience. Past sponsorships: Binance, Bybit, OKX. Request media kit & campaign brief.',
+  path: PAGE_PATH,
+  locale: 'en_US',
+  image: '/mihai-daniel-consultanta.jpg',
   alternates: {
     canonical: PAGE_URL,
     languages: {
@@ -33,15 +38,7 @@ export const metadata: Metadata = {
       'x-default': `${SITE_URL}/`,
     },
   },
-  openGraph: {
-    title: 'Mihai Daniel — Crypto KOL & Educator | Media Kit',
-    description:
-      'Premium crypto partnerships for exchanges and Web3 brands. Audience overview, stats, and agency inquiry form.',
-    url: PAGE_URL,
-    locale: 'en_US',
-    type: 'website',
-  },
-};
+});
 
 function buildPersonMediaSchema() {
   return {
@@ -202,6 +199,7 @@ export default async function PartnershipsPage({
                   src="/mihai-daniel-consultanta.jpg"
                   alt="Mihai Daniel — Crypto KOL"
                   fill
+                  loading="lazy"
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 480px"
                 />

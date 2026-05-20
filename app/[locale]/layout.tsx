@@ -7,6 +7,7 @@ import Script from 'next/script';
 import GlobalJsonLd from '@/components/GlobalJsonLd';
 import { routing, type Locale } from '@/i18n/routing';
 import { SITE_URL } from '@/lib/seo/constants';
+import { DEFAULT_OG_IMAGE, TWITTER_SITE } from '@/lib/seo/metadata';
 import '../globals.css';
 
 const spaceGrotesk = Space_Grotesk({
@@ -14,12 +15,16 @@ const spaceGrotesk = Space_Grotesk({
   weight: ['300', '400', '500', '600', '700'],
   variable: '--font-space',
   display: 'swap',
+  preload: true,
+  adjustFontFallback: true,
 });
 
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
   display: 'swap',
+  preload: true,
+  adjustFontFallback: true,
 });
 
 export function generateStaticParams() {
@@ -66,6 +71,13 @@ export async function generateMetadata({
       locale: isEn ? 'en_US' : 'ro_RO',
       url: `${SITE_URL}${localePath(locale as Locale)}`,
       siteName: 'Mihai Daniel',
+      images: [DEFAULT_OG_IMAGE],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      site: TWITTER_SITE,
+      creator: TWITTER_SITE,
+      images: [DEFAULT_OG_IMAGE.url],
     },
     robots: {
       index: true,
@@ -110,9 +122,9 @@ export default async function LocaleLayout({
 
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-ZYYJ251HYH"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

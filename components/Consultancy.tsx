@@ -113,8 +113,9 @@ export default function Consultancy() {
                             src="/mihai-daniel-consultanta.jpg" 
                             alt={t('imageAlt')}
                             fill
+                            loading="lazy"
                             className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-1000"
-                            sizes="(max-width: 768px) 100vw, 500px"
+                            sizes="(max-width: 1024px) 100vw, 480px"
                         />
                         <div className="absolute bottom-6 right-6 left-6 bg-[#0a0f1e]/90 backdrop-blur-md p-4 rounded-xl border border-yellow-500/20">
                             <div className="flex text-yellow-500 mb-1">

@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import ArticleTracker from '@/components/ArticleTracker';
 import JsonLd from '@/components/JsonLd';
 import { buildArticleSchema } from '@/lib/seo/schemas/article';
-import { SITE_URL } from '@/lib/seo/constants';
+import { buildPageMetadata } from '@/lib/seo/metadata';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowLeft, Lightbulb, Zap, Clock } from 'lucide-react';
@@ -12,15 +12,21 @@ import { ArrowLeft, Lightbulb, Zap, Clock } from 'lucide-react';
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const term = dictionary.find((t) => t.slug === slug);
-  const canonical = `${SITE_URL}/academie/${slug}`;
 
-  return {
-    title: term ? `${term.term} - Explicație Completă | Academia Crypto` : 'Termen Necunoscut',
-    description: term?.definition,
-    alternates: {
-      canonical,
-    },
-  };
+  if (!term) {
+    return buildPageMetadata({
+      title: 'Termen Necunoscut | Academia Crypto',
+      description: 'Articol negăsit în Academia Crypto Mihai Daniel.',
+      path: `/academie/${slug}`,
+    });
+  }
+
+  return buildPageMetadata({
+    title: `${term.term} — Explicație Completă | Academia Crypto`,
+    description: term.definition,
+    path: `/academie/${slug}`,
+    image: term.image,
+  });
 }
 
 export default async function TermPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -49,7 +55,7 @@ export default async function TermPage({ params }: { params: Promise<{ slug: str
                 fill 
                 className="object-cover opacity-50"
                 priority
-                unoptimized={true}
+                sizes="100vw"
             />
           )}
           <div className="container mx-auto px-6 relative z-20 h-full flex flex-col justify-end pb-12">

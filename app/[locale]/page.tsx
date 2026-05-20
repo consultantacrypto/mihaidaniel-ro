@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { SITE_URL } from '@/lib/seo/constants';
+import { buildPageMetadata } from '@/lib/seo/metadata';
 import { routing, type Locale } from '@/i18n/routing';
 import HomeClient from './home-client';
 
@@ -18,25 +19,23 @@ export async function generateMetadata({
   const path = localePath(locale as Locale);
   const isEn = locale === 'en';
 
-  return {
+  const canonicalPath = path === '/' ? '' : path;
+
+  return buildPageMetadata({
     title: t('title'),
     description: t('description'),
+    path: canonicalPath || '/',
+    locale: isEn ? 'en_US' : 'ro_RO',
+    image: isEn ? '/mihai-daniel-icon.jpg' : '/mihai-daniel-consultanta.jpg',
     alternates: {
-      canonical: `${SITE_URL}${path === '/' ? '' : path}`,
+      canonical: `${SITE_URL}${canonicalPath}`,
       languages: {
         ro: `${SITE_URL}/`,
         en: `${SITE_URL}/en`,
         'x-default': `${SITE_URL}/`,
       },
     },
-    openGraph: {
-      title: t('title'),
-      description: t('description'),
-      url: `${SITE_URL}${path === '/' ? '' : path}`,
-      locale: isEn ? 'en_US' : 'ro_RO',
-      type: 'website',
-    },
-  };
+  });
 }
 
 export default async function HomePage({

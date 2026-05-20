@@ -4,31 +4,20 @@ import Footer from '@/components/Footer';
 import MoneyPageHero from '@/components/landing/MoneyPageHero';
 import LeadMagnetForm from '@/components/LeadMagnetForm';
 import ConsultancyPitch from '@/components/landing/ConsultancyPitch';
-import { SITE_URL } from '@/lib/seo/constants';
+import { buildPageMetadata } from '@/lib/seo/metadata';
 
-const PAGE_URL = `${SITE_URL}/strategie-exit`;
-
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: 'Strategie Exit Bitcoin — Ghid Gratuit + Plan Personalizat | Mihai Daniel',
   description:
     'Descarcă ghidul gratuit de strategie exit bitcoin. Apoi rezervă consultanță 1-la-1 pentru un plan aplicat pe portofoliul tău.',
+  path: '/strategie-exit',
   keywords: [
     'strategie exit bitcoin',
     'când să vinzi bitcoin',
     'plan exit crypto',
     'take profit bitcoin',
   ],
-  alternates: {
-    canonical: PAGE_URL,
-  },
-  openGraph: {
-    title: 'Strategie Exit Bitcoin | Mihai Daniel',
-    description:
-      'Ghid gratuit de exit + sesiune VIP pentru plan personalizat cu Mihai Daniel.',
-    url: PAGE_URL,
-    type: 'website',
-  },
-};
+});
 
 export default function StrategieExitPage() {
   return (

@@ -195,8 +195,9 @@ function ArticleCard({ item, isRead }: { item: AcademyItem, isRead: boolean }) {
                     src={item.image} 
                     alt={item.term} 
                     fill 
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    loading="lazy"
                     className={`object-cover transition-transform duration-700 ${isRead ? 'grayscale group-hover:grayscale-0' : 'group-hover:scale-105'}`}
-                    unoptimized={true}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1e] to-transparent opacity-60"></div>
                 
