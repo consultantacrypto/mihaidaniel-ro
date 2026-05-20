@@ -3,12 +3,17 @@
 import { useState } from 'react';
 import { Link } from '@/i18n/navigation';
 import { ArrowRight, Crown, Loader2 } from 'lucide-react';
+import { trackBuyConsultancy } from '@/lib/analytics';
 import { startCheckout } from '@/lib/checkout';
 
 type ConsultancyPitchProps = {
   title?: string;
   description?: string;
   showPageLink?: boolean;
+  /** GA4 event_label for Stripe CTA (e.g. audit-portofoliu_stripe) */
+  trackingLabel?: string;
+  /** GA4 event_label for link to /consultanta-crypto */
+  pageLinkTrackingLabel?: string;
 };
 
 export default function ConsultancyPitch({
@@ -16,13 +21,15 @@ export default function ConsultancyPitch({
   description =
     'Rezervă o sesiune VIP 1-la-1 de 60 de minute. Audităm pozițiile, stabilim strategia de exit și iei decizii cu claritate — nu cu emoție.',
   showPageLink = true,
+  trackingLabel = 'money_page_stripe',
+  pageLinkTrackingLabel = 'money_page_consultanta',
 }: ConsultancyPitchProps) {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleCheckout = async () => {
     setIsLoading(true);
     try {
-      await startCheckout('consultancy');
+      await startCheckout('consultancy', trackingLabel);
     } catch (error) {
       console.error('[ConsultancyPitch]', error);
       alert(
@@ -69,6 +76,7 @@ export default function ConsultancyPitch({
               {showPageLink && (
                 <Link
                   href="/consultanta-crypto"
+                  onClick={() => trackBuyConsultancy(pageLinkTrackingLabel)}
                   className="text-yellow-400 hover:text-yellow-300 font-semibold text-sm underline-offset-4 hover:underline"
                 >
                   Vezi detalii complete

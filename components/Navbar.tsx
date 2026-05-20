@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import { trackBuyConsultancy, trackBuyCourse } from '@/lib/analytics';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -46,11 +47,19 @@ export default function Navbar() {
 
           <div className="w-px h-8 bg-white/10 mx-1"></div>
 
-          <Link href="/curs" className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white border border-blue-400/20 px-5 py-2.5 rounded-xl font-bold transition-all hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:-translate-y-0.5">
+          <Link
+            href="/curs"
+            onClick={() => trackBuyCourse('navbar_curs_page')}
+            className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white border border-blue-400/20 px-5 py-2.5 rounded-xl font-bold transition-all hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:-translate-y-0.5"
+          >
             <GraduationCap size={18}/> {t('course')}
           </Link>
 
-          <Link href="/consultanta-crypto" className="flex items-center gap-2 bg-white text-black border border-white px-5 py-2.5 rounded-xl font-bold hover:bg-gray-200 transition-all hover:scale-105">
+          <Link
+            href="/consultanta-crypto"
+            onClick={() => trackBuyConsultancy('navbar_consultanta_page')}
+            className="flex items-center gap-2 bg-white text-black border border-white px-5 py-2.5 rounded-xl font-bold hover:bg-gray-200 transition-all hover:scale-105"
+          >
             <Coins size={16}/> {t('consultancy')}
           </Link>
 
@@ -82,10 +91,24 @@ export default function Navbar() {
              )}
              
              <div className="grid grid-cols-2 gap-4 mt-2">
-                <Link href="/curs" onClick={() => setMobileMenuOpen(false)} className="bg-blue-600 text-white py-3 rounded-lg font-bold text-center flex justify-center items-center gap-2">
+                <Link
+                  href="/curs"
+                  onClick={() => {
+                    trackBuyCourse('navbar_mobile_curs_page');
+                    setMobileMenuOpen(false);
+                  }}
+                  className="bg-blue-600 text-white py-3 rounded-lg font-bold text-center flex justify-center items-center gap-2"
+                >
                     <GraduationCap size={18}/> {t('course')}
                 </Link>
-                <Link href="/consultanta-crypto" onClick={() => setMobileMenuOpen(false)} className="bg-white text-black py-3 rounded-lg font-bold text-center flex justify-center items-center gap-2">
+                <Link
+                  href="/consultanta-crypto"
+                  onClick={() => {
+                    trackBuyConsultancy('navbar_mobile_consultanta_page');
+                    setMobileMenuOpen(false);
+                  }}
+                  className="bg-white text-black py-3 rounded-lg font-bold text-center flex justify-center items-center gap-2"
+                >
                     <Coins size={18}/> {t('consultancy')}
                 </Link>
              </div>

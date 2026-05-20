@@ -18,7 +18,7 @@ export default function CursPage() {
     <main className="min-h-screen flex flex-col bg-[#020617] text-white font-sans selection:bg-blue-500/30">
       <Navbar />
       <div className="pt-20">
-        <Course />
+        <Course stripeTrackingLabel="curs_page_stripe" />
       </div>
       <Footer />
     </main>

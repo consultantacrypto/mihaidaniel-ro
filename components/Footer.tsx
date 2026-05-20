@@ -2,6 +2,7 @@
 
 import { Link as LocaleLink } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
+import { trackBuyConsultancy, trackBuyCourse } from '@/lib/analytics';
 import { Youtube, Twitter, Linkedin, Mail, MapPin, ShieldCheck, Globe, Clock } from 'lucide-react';
 
 export default function Footer() {
@@ -34,8 +35,24 @@ export default function Footer() {
                 <Globe size={18} className="text-blue-500"/> {t('platform')}
             </h3>
             <ul className="space-y-4 text-sm text-gray-400">
-                <li><LocaleLink href="/curs" className="hover:text-blue-400 transition-colors">{t('course')}</LocaleLink></li>
-                <li><LocaleLink href="/consultanta-crypto" className="hover:text-blue-400 transition-colors">{t('consultancy')}</LocaleLink></li>
+                <li>
+                  <LocaleLink
+                    href="/curs"
+                    onClick={() => trackBuyCourse('footer_curs_page')}
+                    className="hover:text-blue-400 transition-colors"
+                  >
+                    {t('course')}
+                  </LocaleLink>
+                </li>
+                <li>
+                  <LocaleLink
+                    href="/consultanta-crypto"
+                    onClick={() => trackBuyConsultancy('footer_consultanta_page')}
+                    className="hover:text-blue-400 transition-colors"
+                  >
+                    {t('consultancy')}
+                  </LocaleLink>
+                </li>
                 <li><LocaleLink href="/academie" className="hover:text-blue-400 transition-colors">{t('academy')}</LocaleLink></li>
             </ul>
           </div>

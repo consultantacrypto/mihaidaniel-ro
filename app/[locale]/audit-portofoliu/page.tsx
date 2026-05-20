@@ -43,6 +43,8 @@ export default function AuditPortofoliuPage() {
       <ConsultancyPitch
         title="Vrei o analiză aplicată pe portofoliul tău?"
         description="Rezervă o sesiune VIP 1-la-1 de 60 de minute. Parcurgem pozițiile tale reale, identificăm riscurile și iei decizii cu claritate."
+        trackingLabel="audit-portofoliu_stripe"
+        pageLinkTrackingLabel="audit-portofoliu_consultanta_page"
       />
 
       <Footer />

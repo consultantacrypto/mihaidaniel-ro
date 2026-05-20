@@ -17,7 +17,13 @@ import {
 import { useTranslations } from 'next-intl';
 import { startCheckout } from '@/lib/checkout';
 
-export default function Course() {
+type CourseProps = {
+  stripeTrackingLabel?: string;
+};
+
+export default function Course({
+  stripeTrackingLabel = 'home_stripe',
+}: CourseProps = {}) {
   const [isLoading, setIsLoading] = useState(false);
   const t = useTranslations('home.course');
   const tCommon = useTranslations('common');
@@ -25,7 +31,7 @@ export default function Course() {
   const handleCheckout = async () => {
     setIsLoading(true);
     try {
-      await startCheckout('course');
+      await startCheckout('course', stripeTrackingLabel);
     } catch (error) {
       console.error('[Course] Checkout error:', error);
       alert(

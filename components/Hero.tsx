@@ -4,6 +4,7 @@ import { ArrowRight, PlayCircle, TrendingUp, ShieldCheck, Users } from 'lucide-r
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { trackBuyCourse } from '@/lib/analytics';
 
 export default function Hero() {
   const t = useTranslations('home.hero');
@@ -37,7 +38,11 @@ export default function Hero() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
-                    <a href="#curs" className="px-8 py-4 bg-white text-black font-bold rounded-xl hover:bg-gray-200 transition-all flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(255,255,255,0.15)] transform hover:-translate-y-1">
+                    <a
+                      href="#curs"
+                      onClick={() => trackBuyCourse('hero_curs_section')}
+                      className="px-8 py-4 bg-white text-black font-bold rounded-xl hover:bg-gray-200 transition-all flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(255,255,255,0.15)] transform hover:-translate-y-1"
+                    >
                         {t('ctaSystem')} <ArrowRight size={18}/>
                     </a>
                     <a href="https://www.youtube.com/@DanielMihaiCrypto" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-xl hover:bg-white/10 transition-all flex items-center justify-center gap-2 backdrop-blur-md group">

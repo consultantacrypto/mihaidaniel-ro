@@ -1,9 +1,19 @@
+import { trackBuyConsultancy, trackBuyCourse } from '@/lib/analytics';
 import type { CheckoutProductType } from '@/lib/stripe';
 
 type CheckoutResponse = { url: string };
 type CheckoutErrorResponse = { error: string };
 
-export async function startCheckout(type: CheckoutProductType): Promise<void> {
+export async function startCheckout(
+  type: CheckoutProductType,
+  trackingLabel = 'Stripe'
+): Promise<void> {
+  if (type === 'consultancy') {
+    trackBuyConsultancy(trackingLabel);
+  } else {
+    trackBuyCourse(trackingLabel);
+  }
+
   const response = await fetch('/api/checkout', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },

@@ -6,6 +6,7 @@ import JsonLd from '@/components/JsonLd';
 import { buildArticleSchema } from '@/lib/seo/schemas/article';
 import { buildPageMetadata } from '@/lib/seo/metadata';
 import Link from 'next/link';
+import AcademieCourseCta from '@/components/AcademieCourseCta';
 import Image from 'next/image';
 import { ArrowLeft, Lightbulb, Zap, Clock } from 'lucide-react';
 
@@ -107,9 +108,9 @@ export default async function TermPage({ params }: { params: Promise<{ slug: str
              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-500 to-orange-500"></div>
              <h4 className="text-2xl font-bold text-white mb-2">Vrei să treci de la teorie la profit?</h4>
              <p className="text-gray-400 mb-6 max-w-lg mx-auto">Învață cum să tranzacționezi {term.term} corect, fără să pierzi bani din greșeli de începător.</p>
-             <Link href="/#curs" className="inline-block bg-yellow-500 hover:bg-yellow-400 text-black font-black py-4 px-10 rounded-xl transition-all shadow-[0_0_20px_rgba(234,179,8,0.3)] hover:scale-105">
+             <AcademieCourseCta className="inline-block bg-yellow-500 hover:bg-yellow-400 text-black font-black py-4 px-10 rounded-xl transition-all shadow-[0_0_20px_rgba(234,179,8,0.3)] hover:scale-105">
                 Accesează Cursul Complet
-             </Link>
+             </AcademieCourseCta>
         </div>
 
       </div>

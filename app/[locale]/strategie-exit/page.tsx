@@ -44,6 +44,8 @@ export default function StrategieExitPage() {
       <ConsultancyPitch
         title="Vrei un plan de exit personalizat?"
         description="În sesiunea VIP stabilim nivelurile tale de take-profit, scenariile de bear market și regulile clare — ca să nu mai vinzi din emoție."
+        trackingLabel="strategie-exit_stripe"
+        pageLinkTrackingLabel="strategie-exit_consultanta_page"
       />
 
       <Footer />

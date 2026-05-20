@@ -5,25 +5,26 @@ import { Crown, ArrowRight, FileText, Zap, BookOpen, Star, Loader2 } from 'lucid
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import { trackBuyConsultancy } from '@/lib/analytics';
 import { startCheckout } from '@/lib/checkout';
 
-export default function Consultancy() {
+type ConsultancyProps = {
+  stripeTrackingLabel?: string;
+  pageTrackingLabel?: string;
+};
+
+export default function Consultancy({
+  stripeTrackingLabel = 'home_stripe',
+  pageTrackingLabel = 'home_consultanta_page',
+}: ConsultancyProps = {}) {
   const [isLoading, setIsLoading] = useState(false);
   const t = useTranslations('home.consultancy');
   const tCommon = useTranslations('common');
 
   const handleOpenBooking = async () => {
-    if (typeof window !== 'undefined' && (window as Window & { gtag?: (...args: unknown[]) => void }).gtag) {
-      (window as Window & { gtag: (...args: unknown[]) => void }).gtag('event', 'begin_checkout', {
-        currency: 'USD',
-        value: 250,
-        items: [{ item_name: 'Consultancy VIP 1-on-1', item_id: 'consultancy_vip' }],
-      });
-    }
-
     setIsLoading(true);
     try {
-      await startCheckout('consultancy');
+      await startCheckout('consultancy', stripeTrackingLabel);
     } catch (error) {
       console.error('[Consultancy] Checkout error:', error);
       alert(
@@ -99,6 +100,7 @@ export default function Consultancy() {
                             </span>
                             <Link
                               href="/consultanta-crypto"
+                              onClick={() => trackBuyConsultancy(pageTrackingLabel)}
                               className="text-yellow-400 hover:text-yellow-300 font-semibold underline-offset-4 hover:underline"
                             >
                               {t('detailsLink')}

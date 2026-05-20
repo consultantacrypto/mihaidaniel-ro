@@ -54,7 +54,10 @@ export default function ConsultantaCryptoPage() {
         accent="yellow"
       />
 
-      <Consultancy />
+      <Consultancy
+        stripeTrackingLabel="consultanta_page_stripe"
+        pageTrackingLabel="consultanta_page_details"
+      />
       <FaqSection items={CONSULTANCY_FAQ} />
       <Footer />
     </main>
