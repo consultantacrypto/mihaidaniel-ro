@@ -115,6 +115,23 @@
       "perkLifetime": "Acces pe viață",
       "perkMobile": "Disponibil pe Mobil",
       "perkStripe": "Plată securizată Stripe"
+    },
+    "vipEvent": {
+      "badgeEvent": "Eveniment Exclusiv",
+      "badgeLimited": "Locuri Limitate",
+      "spots": "Doar 2–3 locuri disponibile",
+      "title": "Mastermind & Cină VIP: Consultanță Crypto Privată",
+      "locationLabel": "Locație",
+      "location": "Restaurant PAJ, Sinaia",
+      "dateLabel": "Data & ora",
+      "date": "Marți, 26 Mai, ora 18:30",
+      "priceLabel": "Investiție",
+      "price": "250 Euro",
+      "priceNote": "Include cina premium + 2 ghiduri PDF (valoare $200)",
+      "includes": "Sesiune mastermind privată, cină premium la PAJ și pachetul complet de ghiduri PDF pentru investitori serioși.",
+      "cta": "Rezervă locul acum",
+      "ctaEmail": "Sau pe email",
+      "paymentNote": "Plata se face direct (Transfer bancar ING / Crypto / Cash)."
     }
   }
 }

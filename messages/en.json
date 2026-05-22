@@ -115,6 +115,23 @@
       "perkLifetime": "Lifetime access",
       "perkMobile": "Mobile-friendly",
       "perkStripe": "Secure Stripe checkout"
+    },
+    "vipEvent": {
+      "badgeEvent": "Exclusive Event",
+      "badgeLimited": "Limited Seats",
+      "spots": "Only 2–3 spots available",
+      "title": "Mastermind & VIP Dinner: Private Crypto Consulting",
+      "locationLabel": "Location",
+      "location": "PAJ Restaurant, Sinaia",
+      "dateLabel": "Date & time",
+      "date": "Tuesday, 26 May, 6:30 PM",
+      "priceLabel": "Investment",
+      "price": "€250",
+      "priceNote": "Includes premium dinner + 2 PDF guides ($200 value)",
+      "includes": "Private mastermind session, premium dinner at PAJ, and the full PDF investor guide pack.",
+      "cta": "Reserve your seat",
+      "ctaEmail": "Or by email",
+      "paymentNote": "Payment is direct (ING bank transfer / Crypto / Cash)."
     }
   }
 }
