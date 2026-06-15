@@ -8,7 +8,6 @@ import Footer from '@/components/Footer';
 import PartnershipInquiryForm from '@/components/partnerships/PartnershipInquiryForm';
 import { AUDIENCE_STATS, SITE_URL } from '@/lib/seo/constants';
 import { buildPageMetadata } from '@/lib/seo/metadata';
-import JsonLd from '@/components/JsonLd';
 
 const PAGE_PATH = '/en/partnerships';
 const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
@@ -40,21 +39,6 @@ export const metadata: Metadata = buildPageMetadata({
   },
 });
 
-function buildPersonMediaSchema() {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Person',
-    name: 'Mihai Daniel',
-    jobTitle: 'Crypto KOL & Educator',
-    url: SITE_URL,
-    sameAs: [
-      'https://www.youtube.com/@DanielMihaiCrypto',
-      'https://x.com/MIhaiDanielWeb3',
-      'https://www.tiktok.com/@mihaidanielmarius',
-    ],
-  };
-}
-
 export default async function PartnershipsPage({
   params,
 }: {
@@ -70,7 +54,6 @@ export default async function PartnershipsPage({
 
   return (
     <main className="min-h-screen flex flex-col bg-[#020617] text-white font-sans selection:bg-purple-500/30">
-      <JsonLd data={buildPersonMediaSchema()} />
       <Navbar />
 
       <section className="relative pt-28 pb-16 overflow-hidden border-b border-white/5">

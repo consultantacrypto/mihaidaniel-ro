@@ -5,7 +5,8 @@ import dynamic from 'next/dynamic';
 import Navbar from '@/components/Navbar';
 import PaymentFeedback from '@/components/PaymentFeedback';
 import Hero from '@/components/Hero';
-import VipEventBanner from '@/components/VipEventBanner';
+// Eveniment temporar (cina VIP Sinaia) — dezactivat. Reactivează la urmatorul eveniment.
+// import VipEventBanner from '@/components/VipEventBanner';
 import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
 
@@ -48,7 +49,9 @@ export default function HomeClient() {
       <ScrollProgress />
       <Navbar />
       <Hero />
-      <VipEventBanner />
+      {/* Banner eveniment temporar (cina VIP business — Restaurant PAJ, Sinaia).
+          Dezactivat dupa eveniment. Decomenteaza pentru urmatorul eveniment. */}
+      {/* <VipEventBanner /> */}
       <SocialStats />
       <CelebrityInterviews />
       <Consultancy />

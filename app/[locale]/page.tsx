@@ -2,7 +2,9 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { SITE_URL } from '@/lib/seo/constants';
 import { buildPageMetadata } from '@/lib/seo/metadata';
+import { buildCourseSchema } from '@/lib/seo/schemas/course';
 import { routing, type Locale } from '@/i18n/routing';
+import JsonLd from '@/components/JsonLd';
 import HomeClient from './home-client';
 
 function localePath(locale: Locale): string {
@@ -46,5 +48,10 @@ export default async function HomePage({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <HomeClient />;
+  return (
+    <>
+      <JsonLd data={buildCourseSchema(locale === 'en' ? 'en' : 'ro')} />
+      <HomeClient />
+    </>
+  );
 }

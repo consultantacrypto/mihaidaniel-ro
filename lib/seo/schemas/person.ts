@@ -39,6 +39,23 @@ export function buildPersonSchema() {
     worksFor: {
       '@id': ORGANIZATION_ID,
     },
+    hasCredential: [
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'Expertise',
+        name: 'Expert în analiză tehnică crypto',
+      },
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'Expertise',
+        name: 'Expert în management de risc',
+      },
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'Expertise',
+        name: 'Expert în strategii de exit',
+      },
+    ],
     sameAs: [...SAME_AS],
     email: CONTACT_EMAIL,
     audience: {
@@ -61,6 +78,18 @@ export function buildPersonSchema() {
         interactionType: 'https://schema.org/FollowAction',
         userInteractionCount: AUDIENCE_STATS.tiktok,
         name: 'TikTok Followers',
+      },
+      {
+        '@type': 'InteractionCounter',
+        interactionType: 'https://schema.org/FollowAction',
+        userInteractionCount: AUDIENCE_STATS.twitter,
+        name: 'X (Twitter) Followers',
+      },
+      {
+        '@type': 'InteractionCounter',
+        interactionType: 'https://schema.org/FollowAction',
+        userInteractionCount: AUDIENCE_STATS.linkedin,
+        name: 'LinkedIn Followers',
       },
     ],
   };
