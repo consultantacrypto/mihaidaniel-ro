@@ -8,10 +8,15 @@ export async function startCheckout(
   type: CheckoutProductType,
   trackingLabel = 'Stripe'
 ): Promise<void> {
-  if (type === 'consultancy') {
-    trackBuyConsultancy(trackingLabel);
-  } else {
-    trackBuyCourse(trackingLabel);
+  // Fire-and-forget analytics — NEVER allow it to block the Stripe redirect.
+  try {
+    if (type === 'consultancy') {
+      trackBuyConsultancy(trackingLabel);
+    } else {
+      trackBuyCourse(trackingLabel);
+    }
+  } catch (error) {
+    console.error('[checkout] Tracking failed (ignored):', error);
   }
 
   const response = await fetch('/api/checkout', {

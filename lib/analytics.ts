@@ -7,10 +7,16 @@ declare global {
 }
 
 function trackEvent(eventName: string, params?: GtagParams): void {
-  if (typeof window === 'undefined' || typeof window.gtag !== 'function') {
-    return;
+  // Analytics must never block business-critical flows (e.g. Stripe redirect).
+  // Any failure (undefined gtag, ad-blocker, proxy error) is ignored silently.
+  try {
+    if (typeof window === 'undefined' || typeof window.gtag !== 'function') {
+      return;
+    }
+    window.gtag('event', eventName, params);
+  } catch (error) {
+    console.error('[analytics] gtag event failed (ignored):', error);
   }
-  window.gtag('event', eventName, params);
 }
 
 /** Stripe / Calendly / purchase intent — consultanță VIP */
