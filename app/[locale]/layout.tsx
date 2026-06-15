@@ -115,7 +115,7 @@ export default async function LocaleLayout({
       <body
         className={`${spaceGrotesk.variable} ${inter.variable} font-sans antialiased`}
       >
-        <GlobalJsonLd />
+        <GlobalJsonLd locale={locale === 'en' ? 'en' : 'ro'} />
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

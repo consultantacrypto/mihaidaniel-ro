@@ -3,9 +3,13 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useLocale } from 'next-intl';
 import { dictionary, AcademyItem } from '@/lib/dictionary';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import JsonLd from '@/components/JsonLd';
+import { buildBreadcrumbSchema } from '@/lib/seo/schemas/breadcrumb';
+import type { SchemaLocale } from '@/lib/seo/constants';
 import { Search, X, ArrowUpRight, ShieldCheck, BookOpen, Activity, BrainCircuit, Database, Zap, Brain, TrendingUp, CheckCircle2 } from 'lucide-react';
 
 // Categorii pentru tab-uri (Navigare clară stil Binance)
@@ -23,6 +27,8 @@ export default function AcademyPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeFilter, setActiveFilter] = useState<string>('TOATE');
   const [readArticles, setReadArticles] = useState<string[]>([]);
+  const locale = useLocale();
+  const schemaLocale: SchemaLocale = locale === 'en' ? 'en' : 'ro';
 
   // === 🧠 GAME MECHANICS: MEMORIA LOCALĂ ===
   
@@ -64,6 +70,12 @@ export default function AcademyPage() {
 
   return (
     <main className="min-h-screen bg-[#020617] text-white font-[var(--font-inter)] selection:bg-blue-500/30">
+      <JsonLd
+        data={buildBreadcrumbSchema(
+          [{ name: schemaLocale === 'en' ? 'Academy' : 'Academie', path: '/academie' }],
+          schemaLocale
+        )}
+      />
       <Navbar />
       
       {/* === HERO SECTION === */}

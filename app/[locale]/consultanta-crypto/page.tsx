@@ -9,7 +9,8 @@ import JsonLd from '@/components/JsonLd';
 import PaymentFeedback from '@/components/PaymentFeedback';
 import { buildConsultancyServiceSchema } from '@/lib/seo/schemas/service';
 import { buildFaqPageSchema, CONSULTANCY_FAQ } from '@/lib/seo/schemas/faq';
-import { SITE_URL } from '@/lib/seo/constants';
+import { buildBreadcrumbSchema } from '@/lib/seo/schemas/breadcrumb';
+import { SITE_URL, type SchemaLocale } from '@/lib/seo/constants';
 import { buildPageMetadata } from '@/lib/seo/metadata';
 
 const PAGE_PATH = '/consultanta-crypto';
@@ -30,13 +31,24 @@ export const metadata: Metadata = buildPageMetadata({
   ],
 });
 
-export default function ConsultantaCryptoPage() {
+export default async function ConsultantaCryptoPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const schemaLocale: SchemaLocale = locale === 'en' ? 'en' : 'ro';
+
   return (
     <main className="min-h-screen flex flex-col bg-[#020617] text-white font-sans selection:bg-yellow-500/30">
       <JsonLd
         data={[
-          buildConsultancyServiceSchema(PAGE_URL),
-          buildFaqPageSchema(CONSULTANCY_FAQ, PAGE_URL),
+          buildConsultancyServiceSchema(PAGE_URL, schemaLocale),
+          buildFaqPageSchema(CONSULTANCY_FAQ, PAGE_URL, schemaLocale),
+          buildBreadcrumbSchema(
+            [{ name: schemaLocale === 'en' ? 'Consulting' : 'Consultanță', path: PAGE_PATH }],
+            schemaLocale
+          ),
         ]}
       />
 

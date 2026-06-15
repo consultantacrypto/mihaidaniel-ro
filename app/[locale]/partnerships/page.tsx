@@ -8,6 +8,8 @@ import Footer from '@/components/Footer';
 import PartnershipInquiryForm from '@/components/partnerships/PartnershipInquiryForm';
 import { AUDIENCE_STATS, SITE_URL } from '@/lib/seo/constants';
 import { buildPageMetadata } from '@/lib/seo/metadata';
+import { buildBreadcrumbSchema } from '@/lib/seo/schemas/breadcrumb';
+import JsonLd from '@/components/JsonLd';
 
 const PAGE_PATH = '/en/partnerships';
 const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
@@ -54,6 +56,12 @@ export default async function PartnershipsPage({
 
   return (
     <main className="min-h-screen flex flex-col bg-[#020617] text-white font-sans selection:bg-purple-500/30">
+      <JsonLd
+        data={buildBreadcrumbSchema(
+          [{ name: 'Partnerships', path: PAGE_PATH }],
+          'en'
+        )}
+      />
       <Navbar />
 
       <section className="relative pt-28 pb-16 overflow-hidden border-b border-white/5">

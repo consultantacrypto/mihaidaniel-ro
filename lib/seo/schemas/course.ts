@@ -3,6 +3,7 @@ import {
   PERSON_ID,
   SITE_URL,
 } from '@/lib/seo/constants';
+import { buildCourseReviews } from '@/lib/seo/schemas/reviews';
 
 const COURSE_ID = `${SITE_URL}/#course`;
 
@@ -89,5 +90,6 @@ export function buildCourseSchema(locale: CourseLocale = 'ro') {
       bestRating: '5',
       worstRating: '1',
     },
+    review: buildCourseReviews(locale),
   };
 }

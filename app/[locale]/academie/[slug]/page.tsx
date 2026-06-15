@@ -4,6 +4,8 @@ import Footer from '@/components/Footer';
 import ArticleTracker from '@/components/ArticleTracker';
 import JsonLd from '@/components/JsonLd';
 import { buildArticleSchema } from '@/lib/seo/schemas/article';
+import { buildBreadcrumbSchema } from '@/lib/seo/schemas/breadcrumb';
+import type { SchemaLocale } from '@/lib/seo/constants';
 import { buildPageMetadata } from '@/lib/seo/metadata';
 import Link from 'next/link';
 import AcademieCourseCta from '@/components/AcademieCourseCta';
@@ -30,18 +32,31 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   });
 }
 
-export default async function TermPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+export default async function TermPage({ params }: { params: Promise<{ slug: string; locale: string }> }) {
+  const { slug, locale } = await params;
   const term = dictionary.find((t) => t.slug === slug);
 
   if (!term) return null;
+
+  const schemaLocale: SchemaLocale = locale === 'en' ? 'en' : 'ro';
 
   // ✅ Transformăm textul simplu în text cu Link-uri Inteligente
   const processedContent = enhanceContent(term.fullContent || '');
 
   return (
     <main className="min-h-screen bg-[#020617] text-white selection:bg-cyan-500/30 flex flex-col">
-      <JsonLd data={buildArticleSchema(term)} />
+      <JsonLd
+        data={[
+          buildArticleSchema(term, schemaLocale),
+          buildBreadcrumbSchema(
+            [
+              { name: schemaLocale === 'en' ? 'Academy' : 'Academie', path: '/academie' },
+              { name: term.term, path: `/academie/${term.slug}` },
+            ],
+            schemaLocale
+          ),
+        ]}
+      />
       <ArticleTracker slug={term.slug} />
       
       <Navbar />

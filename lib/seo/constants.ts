@@ -20,3 +20,10 @@ export const AUDIENCE_STATS = {
   twitter: 56700,
   linkedin: 13200,
 } as const;
+
+export type SchemaLocale = 'ro' | 'en';
+
+/** Mapează locale-ul aplicației la codul BCP-47 folosit în schemele JSON-LD. */
+export function inLanguageFor(locale: SchemaLocale = 'ro'): 'ro-RO' | 'en-US' {
+  return locale === 'en' ? 'en-US' : 'ro-RO';
+}

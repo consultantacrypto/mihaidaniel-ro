@@ -1,13 +1,20 @@
+import { inLanguageFor, type SchemaLocale } from '@/lib/seo/constants';
+
 export type FaqItem = {
   question: string;
   answer: string;
 };
 
-export function buildFaqPageSchema(items: FaqItem[], pageUrl: string) {
+export function buildFaqPageSchema(
+  items: FaqItem[],
+  pageUrl: string,
+  locale: SchemaLocale = 'ro'
+) {
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     '@id': `${pageUrl}#faq`,
+    inLanguage: inLanguageFor(locale),
     mainEntity: items.map((item) => ({
       '@type': 'Question',
       name: item.question,
@@ -16,6 +23,10 @@ export function buildFaqPageSchema(items: FaqItem[], pageUrl: string) {
         text: item.answer,
       },
     })),
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', 'h2'],
+    },
   };
 }
 

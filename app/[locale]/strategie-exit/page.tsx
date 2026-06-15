@@ -4,6 +4,8 @@ import Footer from '@/components/Footer';
 import MoneyPageHero from '@/components/landing/MoneyPageHero';
 import LeadMagnetForm from '@/components/LeadMagnetForm';
 import ConsultancyPitch from '@/components/landing/ConsultancyPitch';
+import JsonLd from '@/components/JsonLd';
+import { buildBreadcrumbSchema } from '@/lib/seo/schemas/breadcrumb';
 import { buildPageMetadata } from '@/lib/seo/metadata';
 
 export const metadata: Metadata = buildPageMetadata({
@@ -22,6 +24,11 @@ export const metadata: Metadata = buildPageMetadata({
 export default function StrategieExitPage() {
   return (
     <main className="min-h-screen flex flex-col bg-[#020617] text-white font-sans selection:bg-green-500/30">
+      <JsonLd
+        data={buildBreadcrumbSchema([
+          { name: 'Strategie Exit Bitcoin', path: '/strategie-exit' },
+        ])}
+      />
       <Navbar />
 
       <MoneyPageHero

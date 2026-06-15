@@ -5,9 +5,15 @@ import {
   PERSON_ID,
   SAME_AS,
   SITE_URL,
+  type SchemaLocale,
 } from '@/lib/seo/constants';
 
-export function buildPersonSchema() {
+const DESCRIPTION: Record<SchemaLocale, string> = {
+  ro: 'Antreprenor și KOL crypto din România. Consultanță premium, mentorat 1-la-1 și educație financiară pentru investitori serioși.',
+  en: 'Romanian crypto entrepreneur and KOL. Premium consulting, 1-on-1 mentorship and financial education for serious investors.',
+};
+
+export function buildPersonSchema(locale: SchemaLocale = 'ro') {
   return {
     '@context': 'https://schema.org',
     '@type': 'Person',
@@ -22,8 +28,7 @@ export function buildPersonSchema() {
       'KOL',
       'Investment Mentor',
     ],
-    description:
-      'Antreprenor și KOL crypto din România. Consultanță premium, mentorat 1-la-1 și educație financiară pentru investitori serioși.',
+    description: DESCRIPTION[locale],
     nationality: {
       '@type': 'Country',
       name: 'Romania',
