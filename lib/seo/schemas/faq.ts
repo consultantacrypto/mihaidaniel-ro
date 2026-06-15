@@ -23,7 +23,7 @@ export const CONSULTANCY_FAQ: FaqItem[] = [
   {
     question: 'Ce include sesiunea de consultanță crypto de 1 oră?',
     answer:
-      'Audit complet al portofoliului tău, identificarea riscurilor majore, corecția pozițiilor greșite și un plan concret de exit. Primești și bonusuri digitale (framework-uri PDF) în valoare de $200.',
+      'Audit complet al portofoliului tău, identificarea riscurilor majore, corecția pozițiilor greșite și un plan concret de exit. Primești și bonusuri digitale (framework-uri PDF) în valoare de 200 €.',
   },
   {
     question: 'Pentru cine este consultanța VIP?',

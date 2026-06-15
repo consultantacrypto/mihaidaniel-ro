@@ -40,7 +40,7 @@
   "home": {
     "metadata": {
       "title": "Mihai Daniel | Crypto Mentor & VIP Consulting",
-      "description": "Mihai Daniel — premium crypto mentorship, 1-on-1 portfolio strategy, and proven trading systems. 280K+ audience. Book your VIP session in USD."
+      "description": "Mihai Daniel — premium crypto mentorship, 1-on-1 portfolio strategy, and proven trading systems. 280K+ audience. Book your VIP session in EUR."
     },
     "hero": {
       "badgeCount": "280,000+",
@@ -79,13 +79,13 @@
       "titleHighlight": "Crypto Consulting",
       "description": "One intensive hour. We audit your portfolio, fix critical mistakes, and define your exit strategy.",
       "descriptionBold": "No theory. Your capital. Your decisions — clarified.",
-      "bonusTag": "FREE BONUS ($200)",
+      "bonusTag": "FREE BONUS (€200)",
       "packageTitle": "Premium Investor Pack",
       "bonus1Title": "PDF: VC-Grade Portfolio Audit",
       "bonus1Desc": "Professional analysis framework.",
       "bonus2Title": "PDF: Advanced Investor Guide",
       "bonus2Desc": "20 pages of applied strategy.",
-      "cta": "Book Session — $250 USD",
+      "cta": "Book Session — €200",
       "ctaAria": "Book VIP consulting session",
       "slots": "Maximum 2 sessions per day.",
       "detailsLink": "Full consulting page",
@@ -108,8 +108,8 @@
       "videoTagMasterclass": "Masterclass",
       "videoTag4k": "4K VIDEO",
       "videoTitle": "The Art of Trading",
-      "priceWas": "Real value: $600",
-      "priceNow": "$300",
+      "priceWas": "Real value: €500",
+      "priceNow": "€250",
       "priceBadge": "ONE-TIME PRICE",
       "cta": "Get Instant Access",
       "perkLifetime": "Lifetime access",
@@ -127,7 +127,7 @@
       "date": "Tuesday, 26 May, 6:30 PM",
       "priceLabel": "Investment",
       "price": "€250",
-      "priceNote": "Includes premium dinner + 2 PDF guides ($200 value)",
+      "priceNote": "Includes premium dinner + 2 PDF guides (€200 value)",
       "includes": "Private mastermind session, premium dinner at PAJ, and the full PDF investor guide pack.",
       "cta": "Reserve your seat",
       "ctaEmail": "Or by email",

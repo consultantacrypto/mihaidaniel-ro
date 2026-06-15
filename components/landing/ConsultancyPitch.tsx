@@ -68,7 +68,7 @@ export default function ConsultancyPitch({
                   </>
                 ) : (
                   <>
-                    Rezervă sesiunea — $250
+                    Rezervă sesiunea — 200 €
                     <ArrowRight size={20} />
                   </>
                 )}

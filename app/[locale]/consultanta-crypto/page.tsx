@@ -18,7 +18,7 @@ const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
 export const metadata: Metadata = buildPageMetadata({
   title: 'Consultanță Crypto VIP 1-la-1 | Mihai Daniel',
   description:
-    'Sesiune privată de 60 min: audit portofoliu crypto, corecție greșeli și strategie de exit. $250 — rezervă acum cu Mihai Daniel.',
+    'Sesiune privată de 60 min: audit portofoliu crypto, corecție greșeli și strategie de exit. 200 € — rezervă acum cu Mihai Daniel.',
   path: PAGE_PATH,
   locale: 'ro_RO',
   image: '/mihai-daniel-consultanta.jpg',

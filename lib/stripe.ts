@@ -6,18 +6,20 @@ export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
 
 export type CheckoutProductType = 'course' | 'consultancy';
 
+export const CHECKOUT_CURRENCY = 'eur';
+
 export const CHECKOUT_PRODUCTS: Record<
   CheckoutProductType,
   { name: string; unitAmount: number; priceIdEnv: string }
 > = {
   course: {
     name: 'Curs Trading Crypto Premium',
-    unitAmount: 30000,
+    unitAmount: 25000, // 250 EUR
     priceIdEnv: 'STRIPE_PRICE_ID_COURSE',
   },
   consultancy: {
     name: 'Consultanță Crypto VIP (1h)',
-    unitAmount: 25000,
+    unitAmount: 20000, // 200 EUR
     priceIdEnv: 'STRIPE_PRICE_ID_CONSULTANCY',
   },
 };
@@ -43,7 +45,7 @@ export function buildCheckoutLineItem(
   return {
     quantity: 1,
     price_data: {
-      currency: 'usd',
+      currency: CHECKOUT_CURRENCY,
       unit_amount: product.unitAmount,
       product_data: {
         name: product.name,

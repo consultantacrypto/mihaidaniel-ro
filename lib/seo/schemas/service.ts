@@ -21,8 +21,8 @@ export function buildConsultancyServiceSchema(
     },
     offers: {
       '@type': 'Offer',
-      price: '250',
-      priceCurrency: 'USD',
+      price: '200',
+      priceCurrency: 'EUR',
       availability: 'https://schema.org/LimitedAvailability',
       url: pageUrl,
     },

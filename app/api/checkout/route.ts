@@ -63,7 +63,22 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ url: session.url });
   } catch (error) {
-    console.error('[checkout] Eroare Stripe:', error);
+    // Expunem mesajul real de la Stripe in log-urile serverului pentru debug.
+    const stripeError = error as {
+      type?: string;
+      code?: string;
+      statusCode?: number;
+      message?: string;
+      raw?: { message?: string };
+    };
+    console.error('[Stripe Checkout Error]:', {
+      message: stripeError?.message,
+      type: stripeError?.type,
+      code: stripeError?.code,
+      statusCode: stripeError?.statusCode,
+      raw: stripeError?.raw?.message,
+      error,
+    });
     return NextResponse.json(
       { error: 'Plata nu a putut fi inițiată. Încearcă din nou.' },
       { status: 500 }
