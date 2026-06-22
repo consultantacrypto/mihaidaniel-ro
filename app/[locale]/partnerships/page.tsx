@@ -6,6 +6,7 @@ import { Youtube, Twitter, TrendingUp, Users, Globe2 } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PartnershipInquiryForm from '@/components/partnerships/PartnershipInquiryForm';
+import OwnedMediaSection from '@/components/partnerships/OwnedMediaSection';
 import { AUDIENCE_STATS, SITE_URL } from '@/lib/seo/constants';
 import { buildPageMetadata } from '@/lib/seo/metadata';
 import { buildBreadcrumbSchema } from '@/lib/seo/schemas/breadcrumb';
@@ -22,6 +23,12 @@ const STATS = [
   { label: 'X (Twitter)', value: '56.7K' },
   { label: 'LinkedIn', value: '13.2K' },
   { label: 'Total reach', value: '280K+' },
+] as const;
+
+const CONVERSION_STATS = [
+  { value: '1,391', label: 'New Users' },
+  { value: '655', label: 'FTDs — First Time Deposits' },
+  { value: '~47.1%', label: 'Conversion Rate' },
 ] as const;
 
 export const metadata: Metadata = buildPageMetadata({
@@ -104,6 +111,8 @@ export default async function PartnershipsPage({
         </div>
       </section>
 
+      <OwnedMediaSection />
+
       <section className="py-20">
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -135,6 +144,33 @@ export default async function PartnershipsPage({
                     reach).
                   </li>
                 </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                  <TrendingUp className="text-green-400" size={22} />
+                  Proven Conversion Power (Case Study)
+                </h3>
+                <div className="grid grid-cols-3 gap-3">
+                  {CONVERSION_STATS.map((stat) => (
+                    <div
+                      key={stat.label}
+                      className="rounded-xl border border-green-500/20 bg-green-500/10 p-4 text-center"
+                    >
+                      <p className="text-xl md:text-2xl font-black text-white mb-1">
+                        {stat.value}
+                      </p>
+                      <p className="text-[10px] md:text-xs text-gray-400 uppercase tracking-wider leading-tight">
+                        {stat.label}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-xs text-gray-500 mt-3">
+                  *Organic conversion results achieved during bear market
+                  conditions (Aug 2025 – Jun 2026), proving highly qualified
+                  and action-driven audience intent.
+                </p>
               </div>
 
               <div>
