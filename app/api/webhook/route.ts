@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import { Resend } from 'resend';
-import { stripe } from '@/lib/stripe';
+import { getStripe } from '@/lib/stripe';
 import type { CheckoutProductType } from '@/lib/stripe';
 
 export const runtime = 'nodejs';
@@ -105,7 +105,7 @@ export async function POST(request: Request) {
 
   try {
     const rawBody = await request.text();
-    event = stripe.webhooks.constructEvent(rawBody, signature, webhookSecret);
+    event = getStripe().webhooks.constructEvent(rawBody, signature, webhookSecret);
   } catch (error) {
     console.error('[webhook] Verificare semnătură eșuată:', error);
     return NextResponse.json(

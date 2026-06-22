@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import {
-  stripe,
+  getStripe,
   buildCheckoutLineItem,
   type CheckoutProductType,
 } from '@/lib/stripe';
@@ -42,7 +42,7 @@ export async function POST(request: Request) {
 
     const successPath =
       type === 'consultancy' ? '/consultanta-crypto' : '/';
-    const session = await stripe.checkout.sessions.create({
+    const session = await getStripe().checkout.sessions.create({
       mode: 'payment',
       allow_promotion_codes: true,
       line_items: [buildCheckoutLineItem(type)],

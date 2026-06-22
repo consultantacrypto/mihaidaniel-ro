@@ -1,8 +1,20 @@
 import Stripe from 'stripe';
 
-export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2025-04-30.basil',
-});
+const STRIPE_API_VERSION = '2025-04-30.basil' as const;
+
+let stripeClient: Stripe | undefined;
+
+/** Lazy init — evită evaluarea cheii Stripe la build-time (Vercel). */
+export function getStripe(): Stripe {
+  const key = process.env.STRIPE_SECRET_KEY;
+  if (!key) {
+    throw new Error('STRIPE_SECRET_KEY is not configured');
+  }
+  if (!stripeClient) {
+    stripeClient = new Stripe(key, { apiVersion: STRIPE_API_VERSION });
+  }
+  return stripeClient;
+}
 
 export type CheckoutProductType = 'course' | 'consultancy';
 
