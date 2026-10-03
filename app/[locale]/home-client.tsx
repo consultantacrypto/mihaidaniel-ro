@@ -53,8 +53,8 @@ export default function HomeClient() {
           Dezactivat dupa eveniment. Decomenteaza pentru urmatorul eveniment. */}
       {/* <VipEventBanner /> */}
       <SocialStats />
-      <CelebrityInterviews />
       <Consultancy />
+      <CelebrityInterviews />
       <Course />
       <Footer />
     </main>

@@ -4,21 +4,20 @@ import {
   inLanguageFor,
   type SchemaLocale,
 } from '@/lib/seo/constants';
-import { buildConsultancyReviews } from '@/lib/seo/schemas/reviews';
 
 const COPY: Record<
   SchemaLocale,
   { name: string; description: string }
 > = {
   ro: {
-    name: 'Consultanță VIP Crypto 1 la 1',
+    name: 'Consultanță crypto 1 la 1',
     description:
-      'Sesiune privată de o oră cu Mihai Daniel: audit portofoliu crypto, corecție greșeli și strategie de exit personalizată.',
+      'Sesiune privată online de 60 de minute cu Mihai Daniel: întrebări despre portofoliu crypto, riscuri și deciziile pe care le ai de luat — 200 EUR.',
   },
   en: {
-    name: 'VIP 1-on-1 Crypto Consulting',
+    name: '1-on-1 crypto consulting',
     description:
-      'A private one-hour session with Mihai Daniel: crypto portfolio audit, mistake correction and a personalized exit strategy.',
+      'A private 60-minute online session with Mihai Daniel: your questions about crypto portfolio, risks, and the decisions you need to make — €200.',
   },
 };
 
@@ -47,17 +46,9 @@ export function buildConsultancyServiceSchema(
       '@type': 'Offer',
       price: '200',
       priceCurrency: 'EUR',
-      availability: 'https://schema.org/LimitedAvailability',
+      availability: 'https://schema.org/InStock',
       url: pageUrl,
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5',
-      reviewCount: '38',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: buildConsultancyReviews(locale),
     inLanguage: inLanguageFor(locale),
   };
 }

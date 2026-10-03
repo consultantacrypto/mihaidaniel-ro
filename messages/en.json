@@ -45,14 +45,12 @@
     "hero": {
       "badgeCount": "280,000+",
       "badgeLabel": "Social Media Followers",
-      "titleLine1": "Trading is not",
-      "titleHighlight": "Gambling.",
-      "introBefore": "I'm ",
-      "introName": "Mihai Daniel",
-      "introAfter": ". I turn market chaos into mathematical strategy. I teach you to think like an institutional investor — not a gambler.",
-      "ctaSystem": "Explore My System",
+      "title": "Let's talk about your crypto portfolio.",
+      "description": "A private 60-minute session with Mihai Daniel, focused on your questions about portfolio, risks, and the decisions you need to make.",
+      "ctaConsultancy": "Discover consulting — €200",
+      "ctaCourse": "Discover the course",
       "ctaYoutube": "YouTube Channel",
-      "trustStrategies": "Battle-Tested Strategies",
+      "trustStrategies": "Over 500 individual sessions",
       "trustNoHype": "No False Promises",
       "cardName": "Mihai Daniel",
       "cardRole": "Mentor & Investor",
@@ -74,23 +72,13 @@
       "cta": "Watch all interviews on YouTube"
     },
     "consultancy": {
-      "badge": "Inner Circle",
-      "titleBefore": "VIP 1-on-1",
-      "titleHighlight": "Crypto Consulting",
-      "description": "One intensive hour. We audit your portfolio, fix critical mistakes, and define your exit strategy.",
-      "descriptionBold": "No theory. Your capital. Your decisions — clarified.",
-      "bonusTag": "FREE BONUS (€200)",
-      "packageTitle": "Premium Investor Pack",
-      "bonus1Title": "PDF: VC-Grade Portfolio Audit",
-      "bonus1Desc": "Professional analysis framework.",
-      "bonus2Title": "PDF: Advanced Investor Guide",
-      "bonus2Desc": "20 pages of applied strategy.",
-      "cta": "Book Session — €200",
-      "ctaAria": "Book VIP consulting session",
-      "slots": "Maximum 2 sessions per day.",
+      "title": "1-on-1 crypto consulting",
+      "description": "Already have a portfolio, capital to invest, or questions after market drops? We discuss your situation in a private 60-minute session.",
+      "details": "60 minutes · Online · €200",
+      "cta": "Book the session — €200",
+      "ctaAria": "Book the crypto consulting session — 200 euro",
       "detailsLink": "Full consulting page",
-      "testimonial": "The best hour of consulting I've had. It saved my portfolio from a major mistake.",
-      "imageAlt": "Mihai Daniel VIP consulting"
+      "imageAlt": "Mihai Daniel crypto consulting"
     },
     "course": {
       "badge": "Stop Bleeding Capital",
@@ -132,6 +120,55 @@
       "cta": "Reserve your seat",
       "ctaEmail": "Or by email",
       "paymentNote": "Payment is direct (ING bank transfer / Crypto / Cash)."
+    }
+  },
+  "consultancyPage": {
+    "faqTitle": "Frequently asked questions",
+    "metadata": {
+      "title": "1-on-1 crypto consulting",
+      "description": "A private 60-minute online session with Mihai Daniel about your crypto portfolio, risks, and the decisions you need to make. €200 — book now."
+    },
+    "hero": {
+      "title": "Let's talk about your crypto portfolio.",
+      "description": "A private 60-minute session with Mihai Daniel, focused on your questions about portfolio, risks, and the decisions you need to make.",
+      "details": "60 minutes · Online · €200",
+      "sessions": "Over 500 one-on-one sessions in 6 years",
+      "cta": "Book the session — €200",
+      "ctaAria": "Book the crypto consulting session — 200 euro",
+      "imageAlt": "Mihai Daniel — crypto consulting"
+    },
+    "topics": {
+      "title": "What questions can you bring?",
+      "intro": "The session adapts to your questions. These are the most common situations.",
+      "portfolio": {
+        "title": "You already have a portfolio",
+        "body": "Am I too exposed on a few coins? Which risks are worth understanding better? We discuss the structure and concentration of your portfolio."
+      },
+      "capital": {
+        "title": "You have available capital",
+        "body": "How should I prepare to enter the market? We discuss your goals, time horizon, and risks before you invest."
+      },
+      "losses": {
+        "title": "You have losses in your portfolio",
+        "body": "What options do I have after a portfolio drop? We discuss your current situation and the implications of the decisions you're considering."
+      }
+    },
+    "process": {
+      "title": "How it works",
+      "intro": "From booking to our discussion, in three steps.",
+      "pay": {
+        "title": "Pay for the session",
+        "body": "Book online through Stripe, securely, in euro. The price is €200 for 60 minutes."
+      },
+      "schedule": {
+        "title": "We set a date",
+        "body": "After payment you receive a confirmation email. Message us on WhatsApp or email to fix the day and time."
+      },
+      "session": {
+        "title": "Online session",
+        "body": "We meet one-on-one online for 60 minutes, based on your questions and situation."
+      },
+      "prepare": "You can prepare a list of questions in advance that you want to cover in the hour."
     }
   }
 }

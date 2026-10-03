@@ -45,14 +45,12 @@
     "hero": {
       "badgeCount": "280.000+",
       "badgeLabel": "Urmăritori pe Social Media",
-      "titleLine1": "Trading-ul nu este",
-      "titleHighlight": "Joc de Noroc.",
-      "introBefore": "Sunt ",
-      "introName": "Mihai Daniel",
-      "introAfter": ". Transform haosul din piață în strategii matematice. Te învăț să gândești ca un investitor instituțional, nu ca un parior.",
-      "ctaSystem": "Sistemul Meu",
+      "title": "Hai să discutăm despre portofoliul tău crypto.",
+      "description": "O sesiune privată de 60 de minute cu Mihai Daniel, dedicată întrebărilor tale despre portofoliu, riscuri și deciziile pe care le ai de luat.",
+      "ctaConsultancy": "Descoperă consultanța — 200\u00a0€",
+      "ctaCourse": "Descoperă cursul",
       "ctaYoutube": "Canal YouTube",
-      "trustStrategies": "Strategii Validate",
+      "trustStrategies": "Peste 500 de sesiuni individuale",
       "trustNoHype": "Fără Promisiuni False",
       "cardName": "Mihai Daniel",
       "cardRole": "Mentor & Investitor",
@@ -74,22 +72,12 @@
       "cta": "Vezi toate interviurile pe YouTube"
     },
     "consultancy": {
-      "badge": "Inner Circle",
-      "titleBefore": "Consultanță",
-      "titleHighlight": "VIP 1 la 1",
-      "description": "O oră intensivă. Audităm portofoliul, corectăm greșelile și setăm strategia de Exit.",
-      "descriptionBold": "Nu discutăm teorie. Discutăm banii tăi.",
-      "bonusTag": "BONUS GRATUIT (200 €)",
-      "packageTitle": "Pachet Investitor Premium",
-      "bonus1Title": "PDF: Audit ca un VC",
-      "bonus1Desc": "Framework de analiză profesională.",
-      "bonus2Title": "PDF: Ghid Investitor Avansat",
-      "bonus2Desc": "20 pagini de strategie aplicată.",
-      "cta": "Rezervă Sesiunea - 200 €",
-      "ctaAria": "Rezervă sesiunea de consultanță",
-      "slots": "Maxim 2 locuri pe zi.",
+      "title": "Consultanță crypto 1 la 1",
+      "description": "Ai deja un portofoliu, capital de investit sau întrebări după scăderile din piață? Discutăm situația ta într-o sesiune privată de 60 de minute.",
+      "details": "60 de minute · Online · 200\u00a0€",
+      "cta": "Rezervă sesiunea — 200\u00a0€",
+      "ctaAria": "Rezervă sesiunea de consultanță crypto — 200 euro",
       "detailsLink": "Vezi pagina completă",
-      "testimonial": "Cea mai bună oră de consultanță. Mi-a salvat portofoliul de o greșeală majoră.",
       "imageAlt": "Consultanță Mihai Daniel"
     },
     "course": {
@@ -132,6 +120,55 @@
       "cta": "Rezervă locul acum",
       "ctaEmail": "Sau pe email",
       "paymentNote": "Plata se face direct (Transfer bancar ING / Crypto / Cash)."
+    }
+  },
+  "consultancyPage": {
+    "faqTitle": "Întrebări frecvente",
+    "metadata": {
+      "title": "Consultanță crypto 1 la 1",
+      "description": "Sesiune privată online de 60 de minute cu Mihai Daniel despre portofoliul tău crypto, riscuri și deciziile pe care le ai de luat. 200\u00a0€ — rezervă acum."
+    },
+    "hero": {
+      "title": "Hai să discutăm despre portofoliul tău crypto.",
+      "description": "O sesiune privată de 60 de minute cu Mihai Daniel, dedicată întrebărilor tale despre portofoliu, riscuri și deciziile pe care le ai de luat.",
+      "details": "60 de minute · Online · 200\u00a0€",
+      "sessions": "Peste 500 de sesiuni individuale în 6 ani",
+      "cta": "Rezervă sesiunea — 200\u00a0€",
+      "ctaAria": "Rezervă sesiunea de consultanță crypto — 200 euro",
+      "imageAlt": "Mihai Daniel — consultanță crypto"
+    },
+    "topics": {
+      "title": "Cu ce întrebări poți veni?",
+      "intro": "Sesiunea se adaptează întrebărilor tale. Iată cele mai frecvente situații.",
+      "portfolio": {
+        "title": "Ai deja un portofoliu",
+        "body": "Sunt prea expus pe câteva monede? Ce riscuri merită să înțeleg mai bine? Discutăm structura și concentrarea portofoliului tău."
+      },
+      "capital": {
+        "title": "Ai capital disponibil",
+        "body": "Cum îmi pregătesc intrarea în piață? Discutăm obiectivele, orizontul de timp și riscurile înainte de a investi."
+      },
+      "losses": {
+        "title": "Ai pierderi în portofoliu",
+        "body": "Ce opțiuni am după scăderea portofoliului? Discutăm situația actuală și implicațiile deciziilor pe care le ai în vedere."
+      }
+    },
+    "process": {
+      "title": "Cum se desfășoară",
+      "intro": "De la rezervare la discuția noastră, în trei pași.",
+      "pay": {
+        "title": "Plătești sesiunea",
+        "body": "Rezervi online prin Stripe, securizat, în euro. Prețul este 200\u00a0€ pentru 60 de minute."
+      },
+      "schedule": {
+        "title": "Stabilim data",
+        "body": "După plată primești un email de confirmare. Ne scrii pe WhatsApp sau email ca să fixăm ziua și ora."
+      },
+      "session": {
+        "title": "Sesiunea online",
+        "body": "Ne întâlnim 1 la 1, online, timp de 60 de minute, pe baza întrebărilor și situației tale."
+      },
+      "prepare": "Poți pregăti dinainte lista de întrebări pe care vrei să le acoperim în oră."
     }
   }
 }

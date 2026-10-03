@@ -4,7 +4,8 @@ import { ArrowRight, PlayCircle, TrendingUp, ShieldCheck, Users } from 'lucide-r
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { trackBuyCourse } from '@/lib/analytics';
+import { Link } from '@/i18n/navigation';
+import { trackBuyConsultancy, trackBuyCourse } from '@/lib/analytics';
 
 export default function Hero() {
   const t = useTranslations('home.hero');
@@ -27,23 +28,27 @@ export default function Hero() {
                 </motion.div>
 
                 <h1 className="text-5xl lg:text-7xl font-bold leading-[1.1] mb-8 tracking-tight">
-                    {t('titleLine1')} <br/>
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-white">
-                        {t('titleHighlight')}
-                    </span>
+                    {t('title')}
                 </h1>
 
                 <p className="text-xl text-gray-400 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0 pl-6 border-l-2 border-blue-500/30">
-                    {t('introBefore')}<b>{t('introName')}</b>{t('introAfter')}
+                    {t('description')}
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
+                    <Link
+                      href="/consultanta-crypto"
+                      onClick={() => trackBuyConsultancy('hero_consultanta_page')}
+                      className="px-8 py-4 bg-white text-black font-bold rounded-xl hover:bg-gray-200 transition-all flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(255,255,255,0.15)] transform hover:-translate-y-1"
+                    >
+                        {t('ctaConsultancy')} <ArrowRight size={18}/>
+                    </Link>
                     <a
                       href="#curs"
                       onClick={() => trackBuyCourse('hero_curs_section')}
-                      className="px-8 py-4 bg-white text-black font-bold rounded-xl hover:bg-gray-200 transition-all flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(255,255,255,0.15)] transform hover:-translate-y-1"
+                      className="px-8 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-xl hover:bg-white/10 transition-all flex items-center justify-center gap-2 backdrop-blur-md"
                     >
-                        {t('ctaSystem')} <ArrowRight size={18}/>
+                        {t('ctaCourse')}
                     </a>
                     <a href="https://www.youtube.com/@DanielMihaiCrypto" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-xl hover:bg-white/10 transition-all flex items-center justify-center gap-2 backdrop-blur-md group">
                         <PlayCircle size={20} className="text-red-500 group-hover:scale-110 transition-transform"/> {t('ctaYoutube')}

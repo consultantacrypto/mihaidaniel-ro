@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Crown, ArrowRight, FileText, Zap, BookOpen, Star, Loader2 } from 'lucide-react';
+import { ArrowRight, Loader2 } from 'lucide-react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
@@ -42,40 +42,19 @@ export default function Consultancy({
             <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
                 
                 <div className="flex-1 space-y-8">
-                    <div className="inline-flex items-center gap-2 text-yellow-500 border border-yellow-500/30 bg-yellow-500/10 px-4 py-2 rounded-lg uppercase tracking-widest text-xs font-bold shadow-[0_0_20px_rgba(234,179,8,0.1)]">
-                        <Crown size={14}/> {t('badge')}
-                    </div>
                     <h2 className="text-4xl md:text-6xl font-bold leading-tight text-white">
-                        {t('titleBefore')} <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">{t('titleHighlight')}</span>
+                        {t('title')}
                     </h2>
                     
                     <p className="text-xl text-gray-300 leading-relaxed border-l-4 border-yellow-500/50 pl-6">
                         {t('description')}
-                        <span className="block mt-2 text-white font-bold">{t('descriptionBold')}</span>
                     </p>
-                    
-                    <div className="bg-gradient-to-br from-[#1a1500] to-black border border-yellow-500/30 p-6 rounded-2xl relative group hover:border-yellow-500/60 transition-colors">
-                        <div className="absolute top-0 right-0 bg-yellow-600 text-black text-[10px] font-bold px-3 py-1 rounded-bl-xl">{t('bonusTag')}</div>
-                        <h3 className="font-bold text-lg text-white mb-4 flex items-center gap-2">
-                            <Zap size={18} className="text-yellow-500"/> {t('packageTitle')}
-                        </h3>
-                        <ul className="space-y-3">
-                            <li className="flex items-start gap-3">
-                                <FileText size={18} className="text-yellow-600 mt-0.5"/>
-                                <div className="text-sm">
-                                    <span className="text-white font-bold">{t('bonus1Title')}</span> — {t('bonus1Desc')}
-                                </div>
-                            </li>
-                            <li className="flex items-start gap-3">
-                                <BookOpen size={18} className="text-yellow-600 mt-0.5"/>
-                                <div className="text-sm">
-                                    <span className="text-white font-bold">{t('bonus2Title')}</span> — {t('bonus2Desc')}
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
 
-                    <div className="pt-4">
+                    <p className="text-sm md:text-base font-medium text-yellow-500/90 tracking-wide">
+                        {t('details')}
+                    </p>
+
+                    <div className="pt-2">
                         <button 
                             type="button"
                             onClick={handleOpenBooking}
@@ -94,10 +73,7 @@ export default function Consultancy({
                               </>
                             )}
                         </button>
-                        <p className="text-sm text-gray-400 mt-3 pl-2 flex flex-wrap items-center gap-x-4 gap-y-2">
-                            <span className="flex items-center gap-2">
-                              <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span> {t('slots')}
-                            </span>
+                        <p className="text-sm text-gray-400 mt-3 pl-2">
                             <Link
                               href="/consultanta-crypto"
                               onClick={() => trackBuyConsultancy(pageTrackingLabel)}
@@ -110,27 +86,15 @@ export default function Consultancy({
                 </div>
 
                 <div className="flex-1 relative w-full lg:max-w-[480px]">
-                    <div className="relative rounded-2xl overflow-hidden border border-yellow-500/30 shadow-2xl group aspect-[3/4]">
+                    <div className="relative rounded-2xl overflow-hidden border border-yellow-500/30 shadow-2xl aspect-[3/4]">
                         <Image 
                             src="/mihai-daniel-consultanta.jpg" 
                             alt={t('imageAlt')}
                             fill
                             loading="lazy"
-                            className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-1000"
+                            className="object-cover object-top w-full h-full"
                             sizes="(max-width: 1024px) 100vw, 480px"
                         />
-                        <div className="absolute bottom-6 right-6 left-6 bg-[#0a0f1e]/90 backdrop-blur-md p-4 rounded-xl border border-yellow-500/20">
-                            <div className="flex text-yellow-500 mb-1">
-                                <Star size={14} fill="currentColor"/>
-                                <Star size={14} fill="currentColor"/>
-                                <Star size={14} fill="currentColor"/>
-                                <Star size={14} fill="currentColor"/>
-                                <Star size={14} fill="currentColor"/>
-                            </div>
-                            <p className="text-xs text-gray-300 italic">
-                                &quot;{t('testimonial')}&quot;
-                            </p>
-                        </div>
                     </div>
                 </div>
 
