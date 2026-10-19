@@ -96,9 +96,9 @@ export default async function TermPage({ params }: { params: Promise<{ slug: str
         {/* MIHAI'S TAKE - PRIMUL LUCRU PE CARE ÎL VEZI */}
         <div className="relative bg-gradient-to-r from-blue-900/20 to-black border-l-4 border-cyan-500 rounded-r-xl p-8 mb-12 shadow-2xl">
             <div className="absolute -top-3 -left-3 bg-cyan-500 text-black p-1 rounded-full"><Zap size={20}/></div>
-            <h3 className="text-cyan-400 font-black text-xs uppercase tracking-[0.2em] mb-3">Mihai's Take</h3>
+            <h3 className="text-cyan-400 font-black text-xs uppercase tracking-[0.2em] mb-3">Mihai&apos;s Take</h3>
             <p className="text-xl text-white font-medium italic leading-relaxed">
-                "{term.mihaiTake}"
+                &quot;{term.mihaiTake}&quot;
             </p>
         </div>
 

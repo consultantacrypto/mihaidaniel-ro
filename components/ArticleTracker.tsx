@@ -6,7 +6,7 @@ export default function ArticleTracker({ slug }: { slug: string }) {
   useEffect(() => {
     // 1. Citim lista actuală de articole citite
     const saved = localStorage.getItem('mihai_academy_progress');
-    let readArticles = saved ? JSON.parse(saved) : [];
+    const readArticles = saved ? JSON.parse(saved) : [];
 
     // 2. Dacă articolul curent nu e în listă, îl adăugăm
     if (!readArticles.includes(slug)) {

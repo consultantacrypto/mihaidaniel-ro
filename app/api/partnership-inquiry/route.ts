@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
-import { CONTACT_EMAIL } from '@/lib/seo/constants';
+import { getContactChannels } from '@/lib/contact-channels';
+import { inboxEmail } from '@/lib/scheduling';
 
 export const dynamic = 'force-dynamic';
 
@@ -87,7 +88,7 @@ export async function POST(request: Request) {
 
     const { error } = await resend.emails.send({
       from: FROM_EMAIL,
-      to: CONTACT_EMAIL,
+      to: inboxEmail(getContactChannels()),
       replyTo: payload.email,
       subject: `Partnership inquiry: ${payload.agencyName}`,
       html: buildInquiryEmailHtml(payload),

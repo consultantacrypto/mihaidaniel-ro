@@ -1,7 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
-import { CheckCircle2, Award, ShieldCheck, Users } from 'lucide-react';
+import { Award, ShieldCheck, Users } from 'lucide-react';
 
 export default function AboutPage() {
   return (
@@ -38,7 +38,7 @@ export default function AboutPage() {
                     Salut, sunt <strong>Mihai Daniel</strong>. Platforma aceasta a luat naștere dintr-o frustrare personală: zgomotul asurzitor din piața crypto.
                 </p>
                 <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-                    Într-o lume plină de "experți" care îți promit îmbogățirea peste noapte, misiunea mea este diferită: <strong>Educație Financiară Brută & Analiză Instituțională.</strong> Nu vând vise, vând claritate.
+                    Într-o lume plină de &quot;experți&quot; care îți promit îmbogățirea peste noapte, misiunea mea este diferită: <strong>Educație Financiară Brută & Analiză Instituțională.</strong> Nu vând vise, vând claritate.
                 </p>
                 
                 <div className="grid grid-cols-2 gap-4">
@@ -62,7 +62,7 @@ export default function AboutPage() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Integritate Editorială</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
-                    Nu acceptăm plăți pentru a promova proiecte "pump & dump". Analizele noastre se bazează pe date on-chain, macroeconomie și realități legislative, nu pe hype plătit.
+                    Nu acceptăm plăți pentru a promova proiecte &quot;pump & dump&quot;. Analizele noastre se bazează pe date on-chain, macroeconomie și realități legislative, nu pe hype plătit.
                 </p>
             </div>
 
@@ -72,7 +72,7 @@ export default function AboutPage() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Educație, nu Ponturi</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
-                    Nu îți voi spune "cumpără asta acum". Îți voi explica mecanismele din spate, ca să poți lua singur decizia corectă. Scopul este autonomia ta financiară.
+                    Nu îți voi spune &quot;cumpără asta acum&quot;. Îți voi explica mecanismele din spate, ca să poți lua singur decizia corectă. Scopul este autonomia ta financiară.
                 </p>
             </div>
 

@@ -1,7 +1,9 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { LEAD_MAGNET } from '@/lib/lead-magnets';
-import { CONTACT_EMAIL, SITE_URL } from '@/lib/seo/constants';
+import { getContactChannels } from '@/lib/contact-channels';
+import { inboxEmail } from '@/lib/scheduling';
+import { SITE_URL } from '@/lib/seo/constants';
 
 export const dynamic = 'force-dynamic';
 
@@ -66,7 +68,7 @@ export async function POST(request: Request) {
     const { error } = await resend.emails.send({
       from: FROM_EMAIL,
       to: normalizedEmail,
-      replyTo: CONTACT_EMAIL,
+      replyTo: inboxEmail(getContactChannels()),
       subject: LEAD_MAGNET.subject,
       html: buildLeadMagnetEmailHtml(),
     });
