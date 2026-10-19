@@ -1,12 +1,18 @@
 import assert from 'node:assert/strict';
-import { describe, it } from 'node:test';
+import { afterEach, describe, it } from 'node:test';
+import { writeStoredConsent } from './consent';
+import { installTestBrowser, type TestBrowser } from './test-dom';
 import {
   ATTRIBUTION_COOKIE,
   attributionFromCookieHeader,
+  captureAttributionFromLocation,
   hasAttribution,
   parseAttributionValue,
+  persistAttribution,
+  readStoredAttribution,
   resolveRequestAttribution,
   sanitizeAttribution,
+  syncAttributionWithConsent,
   toClientReferenceId,
 } from './attribution';
 
@@ -70,6 +76,44 @@ describe('attribution cookies', () => {
     );
     assert.equal(fromCookie.utm_medium, 'bio');
     assert.equal(hasAttribution(resolveRequestAttribution(null, '')), false);
+  });
+});
+
+describe('campaign cookie consent', () => {
+  let browser: TestBrowser;
+
+  afterEach(() => {
+    browser.restore();
+  });
+
+  it('keeps the campaign in memory and does not write a cookie before Accept', () => {
+    browser = installTestBrowser();
+    browser.location.search = '?utm_source=x&utm_medium=bio';
+    const attr = captureAttributionFromLocation();
+    assert.equal(attr.utm_source, 'x');
+    assert.equal(browser.cookies.has(ATTRIBUTION_COOKIE), false);
+    assert.equal(browser.storage.has('md_utm'), false);
+
+    browser.location.search = '';
+    assert.equal(readStoredAttribution().utm_medium, 'bio');
+    assert.equal(browser.cookies.has(ATTRIBUTION_COOKIE), false);
+  });
+
+  it('writes the campaign cookie only after Accept and deletes it on Refuz', () => {
+    browser = installTestBrowser();
+    persistAttribution({ utm_source: 'x', utm_medium: 'bio' });
+    assert.equal(browser.cookies.has(ATTRIBUTION_COOKIE), false);
+
+    writeStoredConsent('granted', 1_779_000_000_000);
+    syncAttributionWithConsent();
+    assert.match(browser.cookies.get(ATTRIBUTION_COOKIE) ?? '', /utm_source/);
+    assert.match(browser.storage.get('md_utm') ?? '', /utm_medium/);
+
+    writeStoredConsent('denied', 1_779_000_000_001);
+    syncAttributionWithConsent();
+    assert.equal(browser.cookies.has(ATTRIBUTION_COOKIE), false);
+    assert.equal(browser.storage.has('md_utm'), false);
+    assert.equal(readStoredAttribution().utm_source, 'x');
   });
 });
 

@@ -1,3 +1,5 @@
+import { hasAnalyticsConsent, onConsentChange, readStoredConsent } from '@/lib/consent';
+
 type GtagParamValue =
   | string
   | number
@@ -8,44 +10,69 @@ type GtagParamValue =
 
 type GtagParams = Record<string, GtagParamValue>;
 
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void;
-    dataLayer?: unknown[];
-  }
+const purchasePending = new Set<string>();
+const pendingRuns: Array<() => void> = [];
+
+function analyticsAllowed(): boolean {
+  return hasAnalyticsConsent(readStoredConsent());
 }
 
-const purchasePending = new Set<string>();
-
-function trackEvent(eventName: string, params?: GtagParams): void {
-  // Analytics must never block business-critical flows (e.g. Stripe redirect).
-  // Any failure (undefined gtag, ad-blocker, proxy error) is ignored silently.
+function deliver(eventName: string, params?: GtagParams): void {
+  // No consent, no hit. A stub gtag must not queue events that would
+  // flush later when the library finally loads.
+  if (!analyticsAllowed()) return;
   try {
-    if (typeof window === 'undefined' || typeof window.gtag !== 'function') {
-      return;
-    }
+    if (typeof window === 'undefined' || typeof window.gtag !== 'function') return;
     window.gtag('event', eventName, params);
   } catch (error) {
     console.error('[analytics] gtag event failed (ignored):', error);
   }
 }
 
-function whenGtagReady(run: () => void): void {
+/** Run only after the GA4 library has loaded and consent is granted. */
+function whenGaReady(run: () => void): void {
+  if (typeof window === 'undefined' || !analyticsAllowed()) return;
+  if (window.__mdGaReady) {
+    run();
+    return;
+  }
+  pendingRuns.push(run);
+}
+
+/** Called from the GA4 script onload, after `config`. */
+export function markGoogleAnalyticsReady(): void {
   if (typeof window === 'undefined') return;
-  const started = Date.now();
-  const attempt = () => {
-    if (typeof window.gtag === 'function') {
-      run();
-      return;
-    }
-    if (Date.now() - started > 12000) return;
-    window.setTimeout(attempt, 250);
-  };
-  attempt();
+  window.__mdGaReady = true;
+  const runs = pendingRuns.splice(0, pendingRuns.length);
+  for (const run of runs) run();
+}
+
+function trackEvent(eventName: string, params?: GtagParams): void {
+  try {
+    whenGaReady(() => deliver(eventName, params));
+  } catch (error) {
+    console.error('[analytics] gtag event failed (ignored):', error);
+  }
 }
 
 export function purchaseStorageKey(transactionId: string): string {
   return `md_purchase_${transactionId}`;
+}
+
+function purchaseAlreadySent(transactionId: string): boolean {
+  try {
+    return window.localStorage.getItem(purchaseStorageKey(transactionId)) === '1';
+  } catch {
+    return false;
+  }
+}
+
+function rememberPurchase(transactionId: string): void {
+  try {
+    window.localStorage.setItem(purchaseStorageKey(transactionId), '1');
+  } catch {
+    // Still send once for this page view.
+  }
 }
 
 /** Stripe / Calendly / purchase intent — consultanță VIP */
@@ -66,8 +93,8 @@ export function trackBuyCourse(label: string): void {
 
 /**
  * GA4 purchase, once per Stripe Checkout session on this browser.
- * Waits until the existing gtag snippet has loaded so the event is queued
- * after `config` and is not dropped.
+ * Does not call gtag, and does not mark the purchase as sent, until the
+ * visitor has accepted analytics and the GA4 library has loaded.
  */
 export function trackPurchaseOnce(input: {
   transactionId: string;
@@ -79,34 +106,38 @@ export function trackPurchaseOnce(input: {
   if (typeof window === 'undefined') return;
   const { transactionId } = input;
   if (!transactionId || purchasePending.has(transactionId)) return;
-
-  const storageKey = purchaseStorageKey(transactionId);
-  try {
-    if (window.localStorage.getItem(storageKey) === '1') return;
-  } catch {
-    // Continue with the in-memory guard when storage is blocked.
-  }
+  if (purchaseAlreadySent(transactionId)) return;
 
   purchasePending.add(transactionId);
-  whenGtagReady(() => {
-    try {
-      if (window.localStorage.getItem(storageKey) === '1') return;
-      window.localStorage.setItem(storageKey, '1');
-    } catch {
-      // Still send once for this page view.
-    }
-    trackEvent('purchase', {
-      transaction_id: transactionId,
-      value: input.value,
-      currency: input.currency,
-      items: [
-        {
-          item_id: input.productType,
-          item_name: input.itemName,
-          price: input.value,
-          quantity: 1,
-        },
-      ],
+
+  const send = () => {
+    whenGaReady(() => {
+      if (!analyticsAllowed() || purchaseAlreadySent(transactionId)) return;
+      rememberPurchase(transactionId);
+      deliver('purchase', {
+        transaction_id: transactionId,
+        value: input.value,
+        currency: input.currency,
+        items: [
+          {
+            item_id: input.productType,
+            item_name: input.itemName,
+            price: input.value,
+            quantity: 1,
+          },
+        ],
+      });
     });
+  };
+
+  if (analyticsAllowed()) {
+    send();
+    return;
+  }
+
+  const stop = onConsentChange((consent) => {
+    if (consent.analytics !== 'granted') return;
+    stop();
+    send();
   });
 }
