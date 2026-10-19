@@ -1,4 +1,6 @@
 import { NextResponse } from 'next/server';
+import { resolveRequestAttribution } from '@/lib/attribution';
+import { buildCheckoutSessionCreateParams } from '@/lib/checkout-session';
 import {
   getStripe,
   buildCheckoutLineItem,
@@ -31,7 +33,10 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json();
-    const { type } = body as { type?: unknown };
+    const { type, attribution: rawAttribution } = body as {
+      type?: unknown;
+      attribution?: unknown;
+    };
 
     if (!isCheckoutProductType(type)) {
       return NextResponse.json(
@@ -40,18 +45,24 @@ export async function POST(request: Request) {
       );
     }
 
-    const successPath =
-      type === 'consultancy' ? '/consultanta-crypto' : '/';
-    const session = await getStripe().checkout.sessions.create({
-      mode: 'payment',
-      allow_promotion_codes: true,
-      line_items: [buildCheckoutLineItem(type)],
-      success_url: `${baseUrl}${successPath}?success=true&type=${type}`,
-      cancel_url: `${baseUrl}${successPath}?canceled=true`,
-      metadata: {
+    let attribution = {};
+    try {
+      attribution = resolveRequestAttribution(
+        rawAttribution,
+        request.headers.get('cookie')
+      );
+    } catch (error) {
+      console.error('[checkout] Atribuirea UTM a fost ignorată:', error);
+    }
+
+    const session = await getStripe().checkout.sessions.create(
+      buildCheckoutSessionCreateParams({
         type,
-      },
-    });
+        baseUrl,
+        lineItem: buildCheckoutLineItem(type),
+        attribution,
+      })
+    );
 
     if (!session.url) {
       console.error('[checkout] Sesiunea Stripe nu a returnat URL');

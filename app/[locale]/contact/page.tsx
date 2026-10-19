@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import ContactForm from '@/components/ContactForm';
 import { Mail, MapPin, MessageSquare, Clock } from 'lucide-react';
 
 export default function ContactPage() {
@@ -63,41 +64,7 @@ export default function ContactPage() {
 
           {/* Formular Contact */}
           <div className="bg-[#0b1221] p-8 rounded-2xl border border-white/5">
-            <form className="space-y-6">
-              <div>
-                <label className="block text-sm font-bold text-gray-300 mb-2">Numele Tău</label>
-                <input type="text" className="w-full bg-[#02050a] border border-gray-800 rounded-lg p-3 text-white focus:border-blue-500 outline-none transition-colors" placeholder="Ex: Alex Popescu" />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-bold text-gray-300 mb-2">Adresa de Email</label>
-                <input type="email" className="w-full bg-[#02050a] border border-gray-800 rounded-lg p-3 text-white focus:border-blue-500 outline-none transition-colors" placeholder="alex@email.com" />
-              </div>
-
-              <div>
-                <label className="block text-sm font-bold text-gray-300 mb-2">Subiect</label>
-                <select className="w-full bg-[#02050a] border border-gray-800 rounded-lg p-3 text-white focus:border-blue-500 outline-none transition-colors">
-                  <option>Suport General</option>
-                  <option>Consultanță 1-la-1</option>
-                  <option>Problemă Acces Academie</option>
-                  <option>Propunere Parteneriat</option>
-                  <option>Presă / Media</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="block text-sm font-bold text-gray-300 mb-2">Mesaj</label>
-                <textarea rows={4} className="w-full bg-[#02050a] border border-gray-800 rounded-lg p-3 text-white focus:border-blue-500 outline-none transition-colors" placeholder="Salut Mihai, aș vrea să știu..."></textarea>
-              </div>
-
-              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition-all shadow-lg shadow-blue-900/20">
-                Trimite Mesajul
-              </button>
-              
-              <p className="text-xs text-center text-gray-500 mt-4">
-                *Datele tale sunt protejate conform politicii GDPR. Nu trimitem spam.
-              </p>
-            </form>
+            <ContactForm />
           </div>
         </div>
       </main>

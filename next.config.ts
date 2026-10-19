@@ -4,7 +4,7 @@ import createNextIntlPlugin from 'next-intl/plugin';
 const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 const nextConfig: NextConfig = {
-  // @ts-ignore - Ignorăm eroarea de tip, proprietatea e validă pentru Next.js 16+
+  // @ts-expect-error - Ignorăm eroarea de tip, proprietatea e validă pentru Next.js 16+
   turbopack: {},
 
 

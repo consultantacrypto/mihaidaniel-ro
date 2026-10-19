@@ -45,7 +45,7 @@ const CONSULTANCY_FAQ_BY_LOCALE: Record<SchemaLocale, FaqItem[]> = {
     {
       question: 'Cum se desfășoară sesiunea după plată?',
       answer:
-        'După checkout primești un email de confirmare. Ne contactezi pe WhatsApp sau email pentru a stabili data. Sesiunea durează 60 de minute, online. Poți pregăti dinainte lista de întrebări pe care vrei să le acoperim.',
+        'După plată rămâi pe pagina de confirmare și primești un email. De acolo îmi scrii pe WhatsApp sau pe email ca să stabilim data. Sesiunea durează 60 de minute, online. Poți pregăti dinainte lista de întrebări pe care vrei să le acoperim.',
     },
     {
       question: 'Pot plăti cu cardul sau există cod promoțional?',
@@ -72,7 +72,7 @@ const CONSULTANCY_FAQ_BY_LOCALE: Record<SchemaLocale, FaqItem[]> = {
     {
       question: 'What happens after payment?',
       answer:
-        'After checkout you receive a confirmation email. Contact us on WhatsApp or email to set a date. The session lasts 60 minutes online. You can prepare a list of questions in advance.',
+        'After payment you stay on the confirmation page and you receive an email. From there you message me on WhatsApp or email to set a date. The session lasts 60 minutes online. You can prepare a list of questions in advance.',
     },
     {
       question: 'Can I pay by card, and are promo codes accepted?',

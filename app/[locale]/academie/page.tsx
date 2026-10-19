@@ -42,6 +42,7 @@ export default function AcademyPage() {
 
   useEffect(() => {
     // 1. Citim la încărcarea paginii
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- localStorage is read once after mount
     refreshProgress();
 
     // 2. Ascultăm evenimentul de "focus" (când utilizatorul revine în tab/pagină după ce a citit)

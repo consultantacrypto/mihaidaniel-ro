@@ -1,3 +1,4 @@
+import { captureAttributionFromLocation } from '@/lib/attribution';
 import { trackBuyConsultancy, trackBuyCourse } from '@/lib/analytics';
 import type { CheckoutProductType } from '@/lib/stripe';
 
@@ -19,10 +20,17 @@ export async function startCheckout(
     console.error('[checkout] Tracking failed (ignored):', error);
   }
 
+  let attribution = {};
+  try {
+    attribution = captureAttributionFromLocation();
+  } catch (error) {
+    console.error('[checkout] UTM capture failed (ignored):', error);
+  }
+
   const response = await fetch('/api/checkout', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ type }),
+    body: JSON.stringify({ type, attribution }),
   });
 
   let data: CheckoutResponse | CheckoutErrorResponse;

@@ -35,7 +35,7 @@ export default function Termeni() {
             <p>Toate articolele, analizele, datele din Terminalul Market și materialele video reprezintă opiniile personale ale autorului sau date agregate de la terți. Ele nu constituie o ofertă de vânzare sau o solicitare de a cumpăra orice instrument financiar.</p>
 
             <h3>3. Drepturi de Proprietate Intelectuală</h3>
-            <p>Conținutul acestui site (texte, logo-uri, elemente de design, structura "MD Terminal") este protejat de legea drepturilor de autor. Este interzisă reproducerea integrală sau parțială fără acordul scris al proprietarului.</p>
+            <p>Conținutul acestui site (texte, logo-uri, elemente de design, structura &quot;MD Terminal&quot;) este protejat de legea drepturilor de autor. Este interzisă reproducerea integrală sau parțială fără acordul scris al proprietarului.</p>
 
             <h3>4. Limitarea Răspunderii</h3>
             <p>Echipa Mihai Daniel nu va fi răspunzătoare pentru nicio pierdere financiară sau daune directe/indirecte rezultate din utilizarea informațiilor prezente pe acest site. Utilizatorul își asumă întreaga responsabilitate pentru propriile decizii de investiții.</p>

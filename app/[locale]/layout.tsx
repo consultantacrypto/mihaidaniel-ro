@@ -4,6 +4,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Space_Grotesk, Inter } from 'next/font/google';
 import Script from 'next/script';
+import AttributionCapture from '@/components/AttributionCapture';
 import GlobalJsonLd from '@/components/GlobalJsonLd';
 import { routing, type Locale } from '@/i18n/routing';
 import { SITE_URL } from '@/lib/seo/constants';
@@ -116,6 +117,7 @@ export default async function LocaleLayout({
         className={`${spaceGrotesk.variable} ${inter.variable} font-sans antialiased`}
       >
         <GlobalJsonLd locale={locale === 'en' ? 'en' : 'ro'} />
+        <AttributionCapture />
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

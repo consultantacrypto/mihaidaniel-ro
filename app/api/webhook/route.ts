@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import { Resend } from 'resend';
+import { getContactChannels } from '@/lib/contact-channels';
+import { buildConsultancyEmailHtml, buildCourseEmailHtml } from '@/lib/purchase-email';
+import { inboxEmail } from '@/lib/scheduling';
 import { getStripe } from '@/lib/stripe';
 import type { CheckoutProductType } from '@/lib/stripe';
 
@@ -11,43 +14,6 @@ function getResendClient(): Resend | null {
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) return null;
   return new Resend(apiKey);
-}
-
-const WHATSAPP_DISPLAY = '+40731490099';
-const WHATSAPP_URL = 'https://wa.me/40731490099';
-const CONTACT_EMAIL = 'consultantacrypto.ro@gmail.com';
-
-function buildConsultancyEmailHtml(customerName?: string | null): string {
-  const greeting = customerName ? `Bună, ${customerName},` : 'Bună,';
-  return `
-    <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #111;">
-      <p>${greeting}</p>
-      <p>Îți mulțumim pentru achiziția sesiunii de <strong>Consultanță VIP Crypto</strong>.</p>
-      <p>Pentru a fixa data și ora sesiunii noastre, te rog să îmi trimiți un mesaj pe WhatsApp la
-        <a href="${WHATSAPP_URL}">${WHATSAPP_DISPLAY}</a>
-        sau să răspunzi la acest email pe adresa
-        <a href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a>.
-      </p>
-      <p>Cu respect,<br/><strong>Mihai Daniel</strong></p>
-    </div>
-  `;
-}
-
-function buildCourseEmailHtml(customerName?: string | null): string {
-  const greeting = customerName ? `Bună, ${customerName},` : 'Bună,';
-  return `
-    <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #111;">
-      <p>${greeting}</p>
-      <p>Îți mulțumim pentru achiziția <strong>Cursului Trading Crypto Premium</strong>.</p>
-      <p>Cursul este găzduit privat pe YouTube. Pentru a-ți acorda accesul, te rog să îmi trimiți adresa ta de Gmail
-        (asociată contului tău de YouTube) printr-un mesaj pe WhatsApp la
-        <a href="${WHATSAPP_URL}">${WHATSAPP_DISPLAY}</a>
-        sau răspunzând la acest email
-        (<a href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a>).
-      </p>
-      <p>Cu respect,<br/><strong>Mihai Daniel</strong></p>
-    </div>
-  `;
 }
 
 async function sendPurchaseEmail(
@@ -61,18 +27,19 @@ async function sendPurchaseEmail(
     return;
   }
 
+  const channels = getContactChannels();
   const isConsultancy = productType === 'consultancy';
   const subject = isConsultancy
     ? 'Confirmare Consultanță VIP - Mihai Daniel'
     : 'Acces Curs Trading Crypto Premium - Mihai Daniel';
   const html = isConsultancy
-    ? buildConsultancyEmailHtml(customerName)
-    : buildCourseEmailHtml(customerName);
+    ? buildConsultancyEmailHtml(channels, customerName)
+    : buildCourseEmailHtml(channels, customerName);
 
   const { error } = await resend.emails.send({
     from: 'Mihai Daniel <contact@mihaidaniel.ro>',
     to,
-    replyTo: CONTACT_EMAIL,
+    replyTo: inboxEmail(channels),
     subject,
     html,
   });
@@ -128,6 +95,11 @@ export async function POST(request: Request) {
     customerEmail,
     customerName,
     productType,
+    clientReferenceId: session.client_reference_id,
+    utm_source: session.metadata?.utm_source,
+    utm_medium: session.metadata?.utm_medium,
+    utm_campaign: session.metadata?.utm_campaign,
+    utm_content: session.metadata?.utm_content,
   });
 
   if (

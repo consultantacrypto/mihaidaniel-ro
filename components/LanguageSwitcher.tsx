@@ -13,12 +13,13 @@ export default function LanguageSwitcher() {
 
   const switchLocale = (nextLocale: Locale) => {
     if (nextLocale === locale) return;
+    const query = Object.fromEntries(new URLSearchParams(window.location.search));
     // Media kit is EN-only — switching to RO goes home
     if (pathname === '/partnerships' && nextLocale === 'ro') {
-      router.replace('/', { locale: 'ro' });
+      router.replace({ pathname: '/', query }, { locale: 'ro' });
       return;
     }
-    router.replace(pathname, { locale: nextLocale });
+    router.replace({ pathname, query }, { locale: nextLocale });
   };
 
   return (

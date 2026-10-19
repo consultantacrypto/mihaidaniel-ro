@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# mihaidaniel.ro
 
-## Getting Started
+Site-ul lui Mihai Daniel. Pagina care vinde este consultanța 1 la 1: 60 de minute, online, 200 EUR, pe `/consultanta-crypto`, plătită prin Stripe.
 
-First, run the development server:
+## Rulare locală
 
 ```bash
+npm install
+cp .env.example .env.local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Deschide [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm test
+npm run lint
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Variabile de mediu
 
-## Learn More
+Setează-le în Vercel pe proiectul de producție și fă redeploy. Nu redenumi variabilele Stripe deja folosite.
 
-To learn more about Next.js, take a look at the following resources:
+| Variabilă | Obligatoriu | Exemplu | Ce face |
+|---|---|---|---|
+| `NEXT_PUBLIC_BASE_URL` | da | `https://www.mihaidaniel.ro` | URL-ul de success/cancel la Stripe. Fără slash la final. |
+| `STRIPE_SECRET_KEY` | da | `sk_live_...` | Cheia secretă Stripe. Deja setată în producție. |
+| `STRIPE_WEBHOOK_SECRET` | da | `whsec_...` | Semnătura webhook-ului `checkout.session.completed`. |
+| `STRIPE_PRICE_ID_CONSULTANCY` | nu | `price_...` | Prețul din catalog. Dacă lipsește, rămâne 200 EUR în cod. |
+| `STRIPE_PRICE_ID_COURSE` | nu | `price_...` | Prețul din catalog. Dacă lipsește, rămâne 250 EUR în cod. |
+| `RESEND_API_KEY` | da, pentru email | `re_...` | Email după plată, ghid, parteneriate și formularul de contact. |
+| `BOOKING_URL` | nu | `https://cal.com/mihai/consultanta` | Calendar după plată. Dacă lipsește sau nu e https, butonul și embed-ul nu apar. |
+| `WHATSAPP_NUMBER` | nu | `40731490099` | Număr pentru linkul `wa.me`, doar cifre. Dacă lipsește, se folosește `40731490099`. |
+| `CONTACT_EMAIL` | nu | `consultantacrypto.ro@gmail.com` | Inbox pentru formular, reply-to la emailuri. Dacă lipsește, se folosește adresa de mai sus. |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Adresa afișată în footer și în cardul de pe `/contact` rămâne `consultantacrypto.ro@gmail.com` (textul paginii). `CONTACT_EMAIL` schimbă unde ajung mesajele, nu textul acela.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Un `BOOKING_URL` sau un număr greșit nu produce un link stricat: opțiunea respectivă e ascunsă. WhatsApp-ul și emailul au valorile de mai sus ca rezervă doar când variabila lipsește, nu când e setată greșit.
 
-## Deploy on Vercel
+## După plată
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Stripe rămâne pe același checkout: aceleași produse, prețuri, `mode: payment`, coduri promo, același `cancel_url`. La success se păstrează `success=true` și `type`, și se adaugă `session_id={CHECKOUT_SESSION_ID}` ca să putem verifica plata.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Cumpărătorul rămâne pe pagină. Fără `BOOKING_URL`, butonul mare este WhatsApp, cu un mesaj în română gata scris. Emailul de confirmare (webhook-ul existent) spune același lucru și adaugă calendarul doar dacă `BOOKING_URL` e setat.
+
+## Măsurare
+
+UTM-urile `utm_source`, `utm_medium`, `utm_campaign`, `utm_content` se salvează în `localStorage` și în cookie-ul `md_utm` (90 de zile, last touch). La checkout intră în `metadata` pe sesiunea Stripe și în `client_reference_id` (`source:x|medium:bio|campaign:consult|content:pin-v1`). Webhook-ul le are pe `session.metadata` și le scrie în log.
+
+Evenimentul GA4 `purchase` pleacă doar după `GET /api/checkout/verify`, când Stripe spune că sesiunea e `paid`. `value` este suma încasată (200 pentru consultanță la preț întreg, mai puțin dacă există cupon), `currency` EUR, `transaction_id` este id-ul sesiunii. Se trimite o singură dată per sesiune în browser (`localStorage`). O vizită la `?success=true` fără sesiune plătită nu trimite evenimentul.
+
+GA4 (`G-ZYYJ251HYH`) se încarcă și acum fără banner de consimțământ și fără Consent Mode. Asta rămâne de verificat juridic; bannerul nu e în acest schimb.
+
+Limba implicită este româna. `Accept-Language: en` nu mai redirecționează spre `/en`. Comutatorul RO/EN rămâne și păstrează query string-ul, inclusiv UTM.
