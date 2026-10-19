@@ -123,8 +123,8 @@ export default async function LocaleLayout({
         <GlobalJsonLd locale={locale === 'en' ? 'en' : 'ro'} />
         <AttributionCapture />
         <NextIntlClientProvider messages={messages}>
-          {children}
           <CookieConsent />
+          {children}
         </NextIntlClientProvider>
       </body>
     </html>

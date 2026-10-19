@@ -25,13 +25,15 @@ html.consent-unknown .cookie-banner,
 html.consent-open .cookie-banner {
   display: block;
 }
-html.consent-unknown,
-html.consent-open {
-  scroll-padding-bottom: var(--cookie-banner-offset, 13rem);
-}
-html.consent-unknown body,
-html.consent-open body {
-  padding-bottom: var(--cookie-banner-offset, 13rem);
+@media (min-width: 640px) {
+  html.consent-unknown,
+  html.consent-open {
+    scroll-padding-bottom: var(--cookie-banner-offset, 13rem);
+  }
+  html.consent-unknown body,
+  html.consent-open body {
+    padding-bottom: var(--cookie-banner-offset, 13rem);
+  }
 }
 
 /* GRILA MATEMATICA V2 (Foarte subtilă) */

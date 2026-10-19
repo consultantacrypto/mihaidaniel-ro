@@ -78,7 +78,12 @@ export default function CookieConsent() {
       return;
     }
     if (view === 'banner') root.classList.add('consent-unknown');
-    if (view === 'settings') root.classList.add('consent-open');
+    if (view === 'settings') {
+      root.classList.add('consent-open');
+      if (window.matchMedia('(max-width: 639px)').matches) {
+        el.scrollIntoView({ block: 'start' });
+      }
+    }
 
     const apply = () => {
       root.style.setProperty('--cookie-banner-offset', `${el.offsetHeight}px`);
@@ -107,13 +112,13 @@ export default function CookieConsent() {
   return (
     <div
       ref={rootRef}
-      className="cookie-banner fixed inset-x-0 bottom-0 z-40 px-3 pt-2 pb-[max(0.75rem,env(safe-area-inset-bottom))] sm:px-4"
+      className="cookie-banner relative z-40 sm:fixed sm:inset-x-0 sm:bottom-0 sm:px-4 sm:pt-2 sm:pb-[max(0.75rem,env(safe-area-inset-bottom))]"
     >
       <div
         role="dialog"
         aria-modal="false"
         aria-labelledby="cookie-consent-title"
-        className="mx-auto max-h-[42vh] max-w-3xl overflow-y-auto rounded-2xl border border-white/10 bg-[#0a0f1e]/95 p-4 shadow-[0_-12px_40px_rgba(0,0,0,0.45)] backdrop-blur-md sm:max-h-none sm:p-5"
+        className="border-b border-white/10 bg-[#0a0f1e]/95 px-3 py-2.5 backdrop-blur-md sm:mx-auto sm:max-w-3xl sm:rounded-2xl sm:border sm:p-5 sm:shadow-[0_-12px_40px_rgba(0,0,0,0.45)]"
       >
         {view === 'settings' ? (
           <Settings
@@ -129,19 +134,19 @@ export default function CookieConsent() {
             } : undefined}
           />
         ) : (
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between sm:gap-3">
             <div className="min-w-0 sm:max-w-xl">
               <h2 id="cookie-consent-title" className="text-sm font-bold text-white">
                 {t('title')}
               </h2>
-              <p className="mt-1 text-sm leading-snug text-gray-300">
+              <p className="mt-0.5 text-[13px] leading-snug text-gray-300 sm:mt-1 sm:text-sm">
                 {t('body')}{' '}
                 <Link href="/confidentialitate#cookie-uri" className="text-blue-300 underline underline-offset-2 hover:text-white">
                   {t('privacy')}
                 </Link>
               </p>
             </div>
-            <div className="flex shrink-0 flex-col gap-2 sm:w-64">
+            <div className="flex shrink-0 flex-col gap-1 sm:w-64 sm:gap-2">
               <Choices onAccept={() => choose('granted')} onRefuse={() => choose('denied')} />
               <button
                 type="button"

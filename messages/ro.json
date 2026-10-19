@@ -36,7 +36,7 @@
   },
   "consent": {
     "title": "Cookie-uri",
-    "body": "Cookie-urile necesare sunt doar pentru plată prin Stripe. Google Analytics nu se încarcă și nu trimite evenimente până nu apeși Accept.",
+    "body": "Cookie-uri necesare doar pentru plata Stripe. Google Analytics nu pornește până nu apeși Accept.",
     "accept": "Accept",
     "refuse": "Refuz",
     "settings": "Setări",

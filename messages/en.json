@@ -36,7 +36,7 @@
   },
   "consent": {
     "title": "Cookies",
-    "body": "Necessary cookies are only for Stripe checkout. Google Analytics does not load or send any events until you press Accept.",
+    "body": "Necessary cookies are only for Stripe checkout. Google Analytics stays off until you press Accept.",
     "accept": "Accept",
     "refuse": "Refuse",
     "settings": "Settings",
