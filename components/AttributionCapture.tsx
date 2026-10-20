@@ -2,13 +2,18 @@
 
 import { Suspense, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { captureAttributionFromLocation } from '@/lib/attribution';
+import { captureAttributionFromLocation, syncAttributionWithConsent } from '@/lib/attribution';
+import { onConsentChange } from '@/lib/consent';
 
 function Capture() {
   const searchParams = useSearchParams();
 
   useEffect(() => {
     captureAttributionFromLocation();
+    syncAttributionWithConsent();
+    return onConsentChange(() => {
+      syncAttributionWithConsent();
+    });
   }, [searchParams]);
 
   return null;

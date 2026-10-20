@@ -25,6 +25,7 @@
     "contact": "Contact & Suport",
     "terms": "Termeni & Condiții",
     "privacy": "Confidențialitate",
+    "cookieSettings": "Setări cookie",
     "office": "Sediu",
     "address": "București, România",
     "addressLine2": "Piața Victoriei, Sector 1",
@@ -32,6 +33,22 @@
     "disclaimer": "Informațiile de pe mihaidaniel.ro au caracter educativ și NU reprezintă sfaturi financiare. Investițiile crypto implică riscuri majore. Performanțele trecute nu garantează rezultatele viitoare.",
     "copyright": "Mihai Daniel. Toate drepturile rezervate.",
     "status": "SYSTEMS OPERATIONAL"
+  },
+  "consent": {
+    "title": "Cookie-uri",
+    "body": "Cookie-uri necesare doar pentru plata Stripe. Google Analytics nu pornește până nu apeși Accept.",
+    "accept": "Accept",
+    "refuse": "Refuz",
+    "settings": "Setări",
+    "save": "Salvează",
+    "close": "Închide",
+    "privacy": "Confidențialitate",
+    "policy": "Politica de cookies",
+    "necessary": "Necesare",
+    "necessaryHelp": "Stripe, doar în timpul plății. Mereu active.",
+    "analytics": "Statistici",
+    "analyticsHelp": "Google Analytics. Oprit până apeși Accept.",
+    "alwaysOn": "Mereu active"
   },
   "common": {
     "processing": "Se procesează...",

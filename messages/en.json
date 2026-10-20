@@ -25,6 +25,7 @@
     "contact": "Contact & Support",
     "terms": "Terms & Conditions",
     "privacy": "Privacy Policy",
+    "cookieSettings": "Cookie settings",
     "office": "Office",
     "address": "Bucharest, Romania",
     "addressLine2": "Victoriei Square, District 1",
@@ -32,6 +33,22 @@
     "disclaimer": "Content on mihaidaniel.ro is educational only and does NOT constitute financial advice. Crypto investments carry significant risk. Past performance does not guarantee future results.",
     "copyright": "Mihai Daniel. All rights reserved.",
     "status": "SYSTEMS OPERATIONAL"
+  },
+  "consent": {
+    "title": "Cookies",
+    "body": "Necessary cookies are only for Stripe checkout. Google Analytics stays off until you press Accept.",
+    "accept": "Accept",
+    "refuse": "Refuse",
+    "settings": "Settings",
+    "save": "Save",
+    "close": "Close",
+    "privacy": "Privacy",
+    "policy": "Cookie policy",
+    "necessary": "Necessary",
+    "necessaryHelp": "Stripe, only during checkout. Always on.",
+    "analytics": "Analytics",
+    "analyticsHelp": "Google Analytics. Off until you press Accept.",
+    "alwaysOn": "Always on"
   },
   "common": {
     "processing": "Processing...",

@@ -16,6 +16,26 @@ body {
   overflow-x: hidden;
 }
 
+/* Bannerul e în DOM de la primul HTML, dar invizibil până știm că lipsește consimțământul.
+   Padding-ul lasă butoanele de checkout deasupra lui pe mobil. */
+.cookie-banner {
+  display: none;
+}
+html.consent-unknown .cookie-banner,
+html.consent-open .cookie-banner {
+  display: block;
+}
+@media (min-width: 640px) {
+  html.consent-unknown,
+  html.consent-open {
+    scroll-padding-bottom: var(--cookie-banner-offset, 13rem);
+  }
+  html.consent-unknown body,
+  html.consent-open body {
+    padding-bottom: var(--cookie-banner-offset, 13rem);
+  }
+}
+
 /* GRILA MATEMATICA V2 (Foarte subtilă) */
 body::before {
   content: "";

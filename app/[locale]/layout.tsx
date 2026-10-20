@@ -3,9 +3,11 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Space_Grotesk, Inter } from 'next/font/google';
-import Script from 'next/script';
 import AttributionCapture from '@/components/AttributionCapture';
+import CookieConsent from '@/components/CookieConsent';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 import GlobalJsonLd from '@/components/GlobalJsonLd';
+import { buildConsentDefaultScript } from '@/lib/consent';
 import { routing, type Locale } from '@/i18n/routing';
 import { SITE_URL } from '@/lib/seo/constants';
 import { DEFAULT_OG_IMAGE, TWITTER_SITE } from '@/lib/seo/metadata';
@@ -112,28 +114,18 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body
         className={`${spaceGrotesk.variable} ${inter.variable} font-sans antialiased`}
       >
+        <script id="consent-default" dangerouslySetInnerHTML={{ __html: buildConsentDefaultScript() }} />
+        <GoogleAnalytics />
         <GlobalJsonLd locale={locale === 'en' ? 'en' : 'ro'} />
         <AttributionCapture />
         <NextIntlClientProvider messages={messages}>
+          <CookieConsent />
           {children}
         </NextIntlClientProvider>
-
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-ZYYJ251HYH"
-          strategy="lazyOnload"
-        />
-        <Script id="google-analytics" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-ZYYJ251HYH');
-          `}
-        </Script>
       </body>
     </html>
   );

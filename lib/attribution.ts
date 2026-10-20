@@ -1,3 +1,5 @@
+import { hasAnalyticsConsent, readStoredConsent } from '@/lib/consent';
+
 export const UTM_KEYS = [
   'utm_source',
   'utm_medium',
@@ -98,8 +100,31 @@ export function toClientReferenceId(attr: Attribution | undefined): string | und
   return compact || undefined;
 }
 
+function readMemoryAttribution(): Attribution {
+  if (typeof window === 'undefined' || !window.__mdAttribution) return {};
+  return sanitizeAttribution(window.__mdAttribution);
+}
+
+function rememberAttribution(attr: Attribution): void {
+  window.__mdAttribution = { ...attr };
+}
+
+/** Drops the campaign cookie and localStorage copy. Keeps the in-tab value. */
+export function clearPersistedAttribution(): void {
+  if (typeof window === 'undefined') return;
+  try {
+    window.localStorage.removeItem(ATTRIBUTION_STORAGE_KEY);
+  } catch {
+    // Storage can be blocked. The cookie clear below still runs.
+  }
+  const secure = window.location.protocol === 'https:' ? '; Secure' : '';
+  window.document.cookie = `${ATTRIBUTION_COOKIE}=; Path=/; Max-Age=0; SameSite=Lax${secure}`;
+}
+
 export function readStoredAttribution(): Attribution {
   if (typeof window === 'undefined') return {};
+  const memory = readMemoryAttribution();
+  if (hasAttribution(memory)) return memory;
   try {
     const stored = parseAttributionValue(
       window.localStorage.getItem(ATTRIBUTION_STORAGE_KEY)
@@ -114,6 +139,9 @@ export function readStoredAttribution(): Attribution {
 export function persistAttribution(attr: Attribution): void {
   if (typeof window === 'undefined') return;
   if (!hasAttribution(attr)) return;
+  rememberAttribution(attr);
+  // Campaign storage is not required for Stripe. Write it only after Accept.
+  if (!hasAnalyticsConsent(readStoredConsent())) return;
   const value = serializeAttribution(attr);
   try {
     window.localStorage.setItem(ATTRIBUTION_STORAGE_KEY, value);
@@ -122,6 +150,18 @@ export function persistAttribution(attr: Attribution): void {
   }
   const secure = window.location.protocol === 'https:' ? '; Secure' : '';
   window.document.cookie = `${ATTRIBUTION_COOKIE}=${encodeURIComponent(value)}; Path=/; Max-Age=${ATTRIBUTION_MAX_AGE_SECONDS}; SameSite=Lax${secure}`;
+}
+
+/** Persist after Accept, or delete the campaign cookie after Refuz. */
+export function syncAttributionWithConsent(): void {
+  const consent = readStoredConsent();
+  if (!consent) return;
+  if (consent.analytics === 'denied') {
+    clearPersistedAttribution();
+    return;
+  }
+  const memory = readMemoryAttribution();
+  if (hasAttribution(memory)) persistAttribution(memory);
 }
 
 /**

@@ -3,6 +3,7 @@
 import { Link as LocaleLink } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { trackBuyConsultancy, trackBuyCourse } from '@/lib/analytics';
+import { openConsentSettings } from '@/lib/consent';
 import { Youtube, Twitter, Linkedin, Mail, MapPin, ShieldCheck, Globe, Clock } from 'lucide-react';
 
 export default function Footer() {
@@ -74,6 +75,15 @@ export default function Footer() {
                 </li>
                 <li><LocaleLink href="/termeni" className="hover:text-green-400 transition-colors">{t('terms')}</LocaleLink></li>
                 <li><LocaleLink href="/confidentialitate" className="hover:text-green-400 transition-colors">{t('privacy')}</LocaleLink></li>
+                <li>
+                  <button
+                    type="button"
+                    onClick={openConsentSettings}
+                    className="text-left text-sm text-gray-400 hover:text-green-400 transition-colors"
+                  >
+                    {t('cookieSettings')}
+                  </button>
+                </li>
             </ul>
           </div>
 
