@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/verifica-adresa/cron",
+      "schedule": "20 5 * * *"
+    }
+  ]
+}

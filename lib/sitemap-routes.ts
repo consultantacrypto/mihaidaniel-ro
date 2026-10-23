@@ -13,6 +13,7 @@ export const STATIC_ROUTES: SitemapRouteConfig[] = [
   { path: '/audit-portofoliu', changeFrequency: 'weekly', priority: 0.85 },
   { path: '/strategie-exit', changeFrequency: 'weekly', priority: 0.85 },
   { path: '/contact', changeFrequency: 'monthly', priority: 0.8 },
+  { path: '/verifica-adresa', changeFrequency: 'weekly', priority: 0.7 },
   { path: '/despre', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/academie', changeFrequency: 'weekly', priority: 0.8 },
   { path: '/termeni', changeFrequency: 'yearly', priority: 0.3 },

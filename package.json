@@ -7,7 +7,8 @@
     "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint .",
-    "test": "node --import tsx --test lib/*.test.ts"
+    "test": "node --import tsx --test lib/*.test.ts",
+    "sanctions:refresh": "tsx lib/verifica-adresa/build-snapshot.ts"
   },
   "dependencies": {
     "@stripe/stripe-js": "^9.5.0",
