@@ -1,13 +1,13 @@
 import { OPERATOR_LINE } from './sources';
 import type { Network } from './networks';
 
-export const PAGE_TITLE = 'Verifică adresa înainte să trimiți';
+export const PAGE_TITLE = 'Verifică adresa crypto înainte să trimiți banii';
 
 export const PAGE_DESCRIPTION =
-  'Raport plătit de risc pentru o adresă BTC, ETH, TRON sau SOL: listele OFAC și UE, scor de risc și expunere la mixere, hack-uri și scheme de fraudă. Informativ, fără garanție.';
+  'Raport plătit de risc pentru o adresă crypto (BTC, ETH, TRON sau SOL): listele OFAC și UE, scor de risc și expunere la mixere, hack-uri și scheme de fraudă. Informativ, fără garanție.';
 
 export const PAGE_LEAD =
-  'Un raport pentru o singură adresă, înainte să trimiți fonduri. Înainte de plată vezi doar dacă formatul este valid și pe ce rețea se află.';
+  'Un raport pentru o singură adresă crypto. Înainte de plată vezi doar dacă formatul portofelului crypto este valid și pe ce rețea se află.';
 
 export const PAGE_LEAD_NOTE =
   'Listele de sancțiuni și scorul de risc se livrează după plată, pe ecran și într-un PDF.';
@@ -109,7 +109,7 @@ export const PAYMENT_SUCCESS = 'Plata este confirmată. Raportul este mai jos.';
 
 export const PAYMENT_CANCELLED = 'Plata a fost anulată. Nu s-a încasat nimic.';
 
-export const EMBED_ATTRIBUTION = 'Verificare găzduită de mihaidaniel.ro';
+export const EMBED_ATTRIBUTION = 'Verificare de adresă crypto găzduită de mihaidaniel.ro';
 
 export const LEGAL_TITLE = 'Notă legală';
 

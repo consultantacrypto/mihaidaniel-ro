@@ -280,9 +280,35 @@ describe('paid fulfillment', () => {
 });
 
 describe('sample pdf', () => {
-  it('builds a branded example document', async () => {
+  it('embeds Inter and keeps Romanian text readable', async () => {
+    const { execFileSync } = await import('node:child_process');
+    const { mkdtempSync, writeFileSync } = await import('node:fs');
+    const { tmpdir } = await import('node:os');
+    const { join } = await import('node:path');
+    const fontkit = (await import('@pdf-lib/fontkit')).default;
+    const { readFileSync } = await import('node:fs');
+    const face = fontkit.create(readFileSync(join(process.cwd(), 'lib/verifica-adresa/fonts/Inter-Regular.ttf')));
+    for (const ch of ['A', 'a', 'ă', 'â', 'î', 'ș', 'ț', 'Ă', 'Â', 'Î', 'Ș', 'Ț']) {
+      const glyph = face.glyphForCodePoint(ch.codePointAt(0) ?? 0);
+      assert.ok(glyph.path.commands.length > 0, ch);
+    }
+
     const pdf = await buildReportPdf(sampleReport());
     assert.equal(Buffer.from(pdf.subarray(0, 5)).toString(), '%PDF-');
+    assert.ok(pdf.byteLength > 1000);
+    const dir = mkdtempSync(join(tmpdir(), 'verifica-pdf-'));
+    const file = join(dir, 'report.pdf');
+    writeFileSync(file, pdf);
+    const text = execFileSync('pdftotext', ['-layout', file, '-'], { encoding: 'utf8' });
+    assert.match(text, /Adresă crypto/);
+    assert.match(text, /QuickExit, LLC/);
+    assert.match(text, /Sancționată/);
+    assert.match(text, /PÂNĂ/);
+    assert.match(text, /Cifrele și/);
+    assert.match(text, /într-o/);
+    assert.match(text, /QE-EXEMPLU/);
+    assert.match(text, /Schemă de fraudă/);
+    assert.doesNotMatch(text, /\bscam\b/i);
   });
 });
 

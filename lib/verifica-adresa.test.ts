@@ -244,6 +244,15 @@ describe('paid flow stays disabled', () => {
     assert.equal(params.payment_intent_data?.metadata?.product, 'address_checker');
     assert.equal(params.line_items?.[0]?.price_data?.currency, 'usd');
     assert.equal(params.line_items?.[0]?.price_data?.unit_amount, 1000);
+    assert.equal(params.line_items?.[0]?.price_data?.product_data?.name, 'Raport complet de risc — adresă crypto');
+    const pack = buildCheckoutSessionParams({
+      offer: { id: 'pack_5', credits: 5, priceUsd: 40, label: 'Pachet 5 adrese crypto' },
+      returnOrigin: 'https://www.mihaidaniel.ro',
+      source: 'mihaidaniel.ro',
+      checkoutNonce: 'nonce-pack',
+      consentAt: '2026-10-23T12:00:00.000Z',
+    });
+    assert.equal(pack.line_items?.[0]?.price_data?.product_data?.name, 'Raport complet de risc — pachet 5 adrese crypto');
     assert.equal(
       params.success_url,
       'https://www.stirilecrypto.ro/verifica-adresa/plata/succes?session_id={CHECKOUT_SESSION_ID}',

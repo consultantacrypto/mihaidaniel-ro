@@ -86,7 +86,7 @@ export function buildCheckoutSessionParams(input: {
   const name =
     input.offer.credits === 1
       ? 'Raport complet de risc — adresă crypto'
-      : `Raport complet de risc — pachet ${input.offer.credits} verificări`;
+      : `Raport complet de risc — pachet ${input.offer.credits} adrese crypto`;
 
   return {
     mode: 'payment',
