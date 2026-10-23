@@ -162,6 +162,7 @@ describe('checkAddress', () => {
     assert.equal(result.verdict, 'NU');
     assert.equal(result.sanctioned, false);
     assert.match(result.explanation, /nu exclude expunere/i);
+    assert.match(result.explanation, /OFAC SDN \(Trezoreria SUA\) și Lista consolidată/);
     assert.doesNotMatch(`${result.headline} ${result.explanation}`, BANNED);
   });
 

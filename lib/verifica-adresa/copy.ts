@@ -139,12 +139,18 @@ export function formatUsd(amount: number): string {
   return `${text} USD`;
 }
 
+function joinNames(names: string[]): string {
+  if (names.length <= 1) return names[0] ?? '';
+  if (names.length === 2) return `${names[0]} și ${names[1]}`;
+  return `${names.slice(0, -1).join(', ')} și ${names[names.length - 1]}`;
+}
+
 export function verdictCopy(input: {
   sanctioned: boolean;
   sourceNames: string[];
   checkedOn: string;
 }): { verdict: 'DA' | 'NU'; headline: string; explanation: string } {
-  const sources = input.sourceNames.join(', ');
+  const sources = joinNames(input.sourceNames);
   if (input.sanctioned) {
     return {
       verdict: 'DA',
