@@ -128,7 +128,7 @@ export function PurchaseForm({
         if (canPay) void pay();
       }}
     >
-      <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-amber-200/90">Raport plătit</p>
+      <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-amber-200/90">Adresă crypto</p>
       <h2 className="mt-2 text-2xl font-semibold tracking-tight text-white">Alege verificarea</h2>
       <p className="mt-2 text-sm leading-relaxed text-slate-400">{PREVIEW_ONLY}</p>
 
@@ -153,7 +153,7 @@ export function PurchaseForm({
               <span>
                 <span className="block text-sm font-medium text-white">{item.label}</span>
                 <span className="mt-0.5 block text-xs text-slate-400">
-                  {item.credits === 1 ? 'O adresă, livrat imediat' : `${item.credits} verificări · ${formatUsd(unit)} / raport`}
+                  {item.credits === 1 ? 'O adresă crypto, livrat imediat' : `${item.credits} adrese crypto · ${formatUsd(unit)} / raport`}
                 </span>
               </span>
               <span className="text-sm font-semibold text-white">{formatUsd(item.priceUsd)}</span>

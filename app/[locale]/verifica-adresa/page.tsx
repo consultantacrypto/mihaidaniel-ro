@@ -153,7 +153,7 @@ export default async function VerificaAdresaPage({ params, searchParams }: PageP
       <div className="mx-auto max-w-6xl">
         <header className="max-w-3xl">
           <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-sky-200/80">
-            QuickExit, LLC · raport de risc
+            QuickExit, LLC · adresă crypto
           </p>
           <h1
             className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-6xl sm:leading-[1.05]"
@@ -162,7 +162,7 @@ export default async function VerificaAdresaPage({ params, searchParams }: PageP
             {PAGE_TITLE}
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-300">{PAGE_LEAD}</p>
-          <p className="mt-4 text-sm font-medium text-white">De la {formatUsd(price)} pentru un raport.</p>
+          <p className="mt-4 text-sm font-medium text-white">De la {formatUsd(price)} pentru o adresă crypto.</p>
         </header>
 
         <div className="mt-10 grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_400px]">

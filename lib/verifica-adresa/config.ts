@@ -22,8 +22,8 @@ export type CheckerEnv = Record<string, string | undefined>;
 export const DEFAULT_SINGLE_PRICE_USD = 10;
 
 export const DEFAULT_CREDIT_PACKS: ReportOffer[] = [
-  { id: 'pack_5', credits: 5, priceUsd: 40, label: 'Pachet 5 rapoarte' },
-  { id: 'pack_20', credits: 20, priceUsd: 140, label: 'Pachet 20 rapoarte' },
+  { id: 'pack_5', credits: 5, priceUsd: 40, label: 'Pachet 5 adrese crypto' },
+  { id: 'pack_20', credits: 20, priceUsd: 140, label: 'Pachet 20 adrese crypto' },
 ];
 
 export function singleReportPrice(env: CheckerEnv = process.env): number {
@@ -75,7 +75,7 @@ export function reportOffers(env: CheckerEnv = process.env): ReportOffer[] {
       id: 'single',
       credits: 1,
       priceUsd: singleReportPrice(env),
-      label: 'Raport complet',
+      label: 'Raport adresă crypto',
     },
     ...creditPacks(env),
   ];
