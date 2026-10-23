@@ -3,10 +3,11 @@ import { loadBundledSnapshot } from './bundled';
 import type { SanctionsSnapshot } from './snapshot';
 
 /**
- * Storage: a normalized JSON snapshot committed in the repo, plus the Next.js
- * data cache. The project has no Blob, KV, or database, and Vercel cannot
- * write back to the repo. The cron publishes a fresh snapshot into the data
- * cache; checks read that cache and fall back to the committed file.
+ * Sanctions storage: a normalized JSON snapshot committed in the repo, plus the
+ * Next.js data cache. Vercel cannot write the snapshot back to the repo, so the
+ * cron publishes a fresh copy into the data cache and checks fall back to the
+ * committed file. Paid orders and delivered reports are separate: they use
+ * Upstash Redis or Vercel KV when those env vars are set.
  * The cached value stays under the 2MB data-cache limit (the snapshot is ~200KB).
  */
 

@@ -72,6 +72,28 @@ function presentSource(source: SanctionsSource, matched: boolean): CheckedSource
   };
 }
 
+export type PreviewResult =
+  | { ok: true; network: Network; networkLabel: string; address: string }
+  | CheckFailure;
+
+/** Public, pre-payment result. Network only. Never a sanctions verdict. */
+export function previewAddress(raw: string): PreviewResult {
+  if (typeof raw !== 'string' || !raw.trim()) {
+    return { ok: false, error: EMPTY_ADDRESS };
+  }
+  if (raw.trim().length > 256) {
+    return { ok: false, error: INVALID_ADDRESS };
+  }
+  const detected = detectNetwork(raw);
+  if (!detected) return { ok: false, error: INVALID_ADDRESS };
+  return {
+    ok: true,
+    network: detected.network,
+    networkLabel: NETWORK_LABELS[detected.network],
+    address: detected.address,
+  };
+}
+
 export function checkAddress(raw: string, snapshot: SanctionsSnapshot, now = new Date()): CheckResult {
   if (typeof raw !== 'string' || !raw.trim()) {
     return { ok: false, error: EMPTY_ADDRESS };

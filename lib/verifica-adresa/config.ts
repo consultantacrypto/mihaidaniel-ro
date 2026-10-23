@@ -90,11 +90,44 @@ export function isPaymentsEnabled(env: CheckerEnv = process.env): boolean {
   return env.ADDRESS_CHECKER_PAYMENTS_ENABLED === 'true';
 }
 
+/**
+ * Orders and reports live in Upstash Redis or Vercel KV (same REST API).
+ * Either pair is enough. No store is shipped with the repo.
+ */
+export function storeCredentials(env: CheckerEnv = process.env): { url: string; token: string } | null {
+  const url = (env.UPSTASH_REDIS_REST_URL || env.KV_REST_API_URL || '').trim().replace(/\/$/, '');
+  const token = (env.UPSTASH_REDIS_REST_TOKEN || env.KV_REST_API_TOKEN || '').trim();
+  if (!url || !token) return null;
+  if (!/^https:\/\//i.test(url)) return null;
+  return { url, token };
+}
+
+export function reportTtlHours(env: CheckerEnv = process.env): number {
+  const value = Number(env.REPORT_TTL_HOURS);
+  if (!Number.isFinite(value) || value < 1 || value > 24 * 30) return 72;
+  return Math.round(value);
+}
+
+export function creditPassTtlDays(env: CheckerEnv = process.env): number {
+  const value = Number(env.CREDIT_PASS_TTL_DAYS);
+  if (!Number.isFinite(value) || value < 1 || value > 365) return 180;
+  return Math.round(value);
+}
+
+export type PaymentsBlockReason = 'disabled' | 'missing_key' | 'missing_store' | 'missing_provider';
+
+/**
+ * Checkout stays closed until Stripe, the order store, and MistTrack are all set.
+ * Taking payment without a place to save the report, or without the risk provider,
+ * would charge the buyer for a report we cannot deliver.
+ */
 export function paymentsReady(
   env: CheckerEnv = process.env,
-): { ok: true } | { ok: false; reason: 'disabled' | 'missing_key' } {
+): { ok: true } | { ok: false; reason: PaymentsBlockReason } {
   if (!isPaymentsEnabled(env)) return { ok: false, reason: 'disabled' };
   if (!env.QUICKEXIT_STRIPE_SECRET_KEY?.trim()) return { ok: false, reason: 'missing_key' };
+  if (!storeCredentials(env)) return { ok: false, reason: 'missing_store' };
+  if (!isRiskProviderEnabled(env)) return { ok: false, reason: 'missing_provider' };
   return { ok: true };
 }
 
@@ -129,7 +162,7 @@ export type PublicCheckerConfig = {
 
 export function publicCheckerConfig(env: CheckerEnv = process.env): PublicCheckerConfig {
   return {
-    paymentsEnabled: isPaymentsEnabled(env),
+    paymentsEnabled: paymentsReady(env).ok,
     offers: reportOffers(env),
     sponsor: getSponsorConfig(env),
     operatorLine: OPERATOR_LINE,

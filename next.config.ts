@@ -42,6 +42,12 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+
+  // The paid-report PDF reads these fonts from disk at runtime.
+  outputFileTracingIncludes: {
+    '/api/verifica-adresa/raport/[token]/pdf': ['./lib/verifica-adresa/fonts/**/*'],
+    '/api/verifica-adresa/exemplu/pdf': ['./lib/verifica-adresa/fonts/**/*'],
+  },
   
   // Redirect-uri pentru trafic vechi
   async redirects() {

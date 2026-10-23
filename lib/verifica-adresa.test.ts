@@ -203,6 +203,17 @@ describe('paid flow stays disabled', () => {
         ADDRESS_CHECKER_PAYMENTS_ENABLED: 'true',
         QUICKEXIT_STRIPE_SECRET_KEY: 'sk_test_example',
       }),
+      { ok: false, reason: 'missing_store' },
+    );
+    assert.deepEqual(
+      paymentsReady({
+        ADDRESS_CHECKER_PAYMENTS_ENABLED: 'true',
+        QUICKEXIT_STRIPE_SECRET_KEY: 'sk_test_example',
+        UPSTASH_REDIS_REST_URL: 'https://example.upstash.io',
+        UPSTASH_REDIS_REST_TOKEN: 'token',
+        RISK_REPORT_PROVIDER_ENABLED: 'true',
+        MISTTRACK_API_KEY: 'key',
+      }),
       { ok: true },
     );
     const blocked = assertCheckoutAllowed({});
@@ -218,42 +229,52 @@ describe('paid flow stays disabled', () => {
   it('builds Stripe metadata without the raw address', () => {
     const params = buildCheckoutSessionParams({
       offer: { id: 'single', credits: 1, priceUsd: 10, label: 'Raport complet' },
-      origin: 'https://www.mihaidaniel.ro',
+      returnOrigin: 'https://www.stirilecrypto.ro',
+      source: 'stirilecrypto.ro',
+      checkoutNonce: 'nonce',
+      consentAt: '2026-10-23T12:00:00.000Z',
       addressSha256: 'abc123',
     });
     assert.equal(params.mode, 'payment');
     assert.equal(params.metadata?.product, 'address_checker');
-    assert.equal(params.metadata?.source, 'mihaidaniel.ro');
+    assert.equal(params.metadata?.source, 'stirilecrypto.ro');
     assert.equal(params.metadata?.address_sha256, 'abc123');
+    assert.equal(params.metadata?.immediate_delivery_consent, 'yes');
     assert.equal(Object.hasOwn(params.metadata ?? {}, 'address'), false);
     assert.equal(params.payment_intent_data?.metadata?.product, 'address_checker');
     assert.equal(params.line_items?.[0]?.price_data?.currency, 'usd');
     assert.equal(params.line_items?.[0]?.price_data?.unit_amount, 1000);
-    assert.match(params.success_url ?? '', /\/verifica-adresa\?plata=succes/);
-    assert.match(params.success_url ?? '', /\{CHECKOUT_SESSION_ID\}/);
+    assert.equal(
+      params.success_url,
+      'https://www.stirilecrypto.ro/verifica-adresa/plata/succes?session_id={CHECKOUT_SESSION_ID}',
+    );
+    assert.equal(params.cancel_url, 'https://www.stirilecrypto.ro/verifica-adresa/plata/anulata');
   });
 
-  it('stubs fulfillment and ignores other products', () => {
+  it('plans fulfillment and ignores other products', () => {
     const plan = planAddressCheckerFulfillment({
       type: 'checkout.session.completed',
       data: {
         object: {
-          id: 'cs_test',
+          id: 'cs_test_abc',
           payment_status: 'paid',
+          payment_intent: 'pi_test_abc',
           metadata: {
             product: 'address_checker',
-            source: 'mihaidaniel.ro',
+            source: 'stirilecrypto.ro',
             offer_id: 'single',
             credits: '1',
             address_sha256: 'abc',
+            checkout_nonce: 'nonce',
           },
         },
       },
     });
-    assert.equal(plan.action, 'stub');
-    if (plan.action !== 'stub') return;
-    assert.equal(plan.fulfilled, false);
-    assert.equal(plan.source, 'mihaidaniel.ro');
+    assert.equal(plan.action, 'fulfill');
+    if (plan.action !== 'fulfill') return;
+    assert.equal(plan.source, 'stirilecrypto.ro');
+    assert.equal(plan.checkoutNonce, 'nonce');
+    assert.equal(plan.paymentIntentId, 'pi_test_abc');
 
     const ignored = planAddressCheckerFulfillment({
       type: 'checkout.session.completed',
