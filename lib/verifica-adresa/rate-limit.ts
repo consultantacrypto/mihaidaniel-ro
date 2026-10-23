@@ -39,5 +39,4 @@ export function createRateLimiter(options: { limit: number; windowMs: number }):
 }
 
 export const checkRateLimiter = createRateLimiter({ limit: 30, windowMs: 10 * 60 * 1000 });
-export const waitlistRateLimiter = createRateLimiter({ limit: 5, windowMs: 60 * 60 * 1000 });
 export const checkoutRateLimiter = createRateLimiter({ limit: 8, windowMs: 60 * 60 * 1000 });

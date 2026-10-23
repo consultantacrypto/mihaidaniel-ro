@@ -1,16 +1,16 @@
 import { OPERATOR_LINE } from './sources';
 import type { Network } from './networks';
 
-export const PAGE_TITLE = 'Verifică adresa crypto înainte să trimiți';
+export const PAGE_TITLE = 'Verifică adresa înainte să trimiți';
 
 export const PAGE_DESCRIPTION =
-  'Verifică gratuit dacă o adresă BTC, ETH, TRON sau SOL apare pe listele publice de sancțiuni OFAC și UE înainte să trimiți fonduri. Rezultat informativ, fără garanție.';
+  'Raport plătit de risc pentru o adresă BTC, ETH, TRON sau SOL: listele OFAC și UE, scor de risc și expunere la mixere, hack-uri și scheme de fraudă. Informativ, fără garanție.';
 
 export const PAGE_LEAD =
-  'Introdu o adresă de portofel. Îți spunem dacă apare, exact, în listele publice de sancțiuni consultate — înainte să trimiți fonduri.';
+  'Un raport pentru o singură adresă, înainte să trimiți fonduri. Înainte de plată vezi doar dacă formatul este valid și pe ce rețea se află.';
 
 export const PAGE_LEAD_NOTE =
-  'Verificarea gratuită acoperă doar listele de sancțiuni. Nu măsoară expunerea la mixere, incidente sau scheme de fraudă.';
+  'Listele de sancțiuni și scorul de risc se livrează după plată, pe ecran și într-un PDF.';
 
 export const INPUT_LABEL = 'Adresă de portofel';
 
@@ -19,7 +19,7 @@ export const INPUT_HINT =
 
 export const INPUT_PLACEHOLDER = 'bc1… / 0x… / T… / adresă Solana';
 
-export const SUBMIT_LABEL = 'Verifică adresa';
+export const SUBMIT_LABEL = 'Continuă către plată';
 
 export const SUBMIT_PENDING = 'Se verifică…';
 
@@ -55,55 +55,59 @@ export const SAFETY_TITLE = 'Înainte să trimiți';
 export const DISCLAIMER =
   'Rezultatul este informativ și probabilistic. Nu garantează că o adresă este sau nu este implicată într-o activitate restricționată și nu constituie consultanță financiară, juridică sau de conformitate. Listele pot fi incomplete, iar actualizarea lor poate întârzia.';
 
-export const OPERATOR_NOTE = `Operatorul acestui instrument și comerciantul pentru raportul complet de risc (când plata este activată) este ${OPERATOR_LINE}. Pagina este găzduită pe mihaidaniel.ro.`;
+export const OPERATOR_NOTE = `Operatorul și comerciantul este ${OPERATOR_LINE}. Pagina este găzduită pe mihaidaniel.ro și poate fi încorporată pe stirilecrypto.ro. Plata se face prin Stripe Checkout, pe contul QuickExit, LLC.`;
 
 export const PRIVACY_NOTE =
-  'Adresele verificate nu sunt stocate legate de adresa IP. Limitarea de trafic păstrează doar un hash al IP-ului, pentru câteva minute. Cache-ul listelor conține datele publice ale listelor, nu interogările vizitatorilor.';
+  'Adresa nu este stocată împreună cu adresa IP. În Stripe trimitem doar un hash al adresei, nu adresa în clar. Pentru scorul de risc, adresa este transmisă furnizorului. Raportul rămâne disponibil printr-un link care nu poate fi ghicit, pentru o perioadă limitată, apoi este șters. Dacă lași un email, îl folosim doar ca să îți trimitem linkul.';
 
 export const OFAC_LICENSE_NOTE =
   'Lista OFAC SDN este o lucrare a guvernului SUA și este în domeniul public. Lista UE este fișierul public consolidat al Comisiei Europene.';
 
-export const FULL_REPORT_TITLE = 'Raport complet de risc (în curând)';
+export const PAY_BUTTON = 'Plătește și primește raportul';
 
-export const FULL_REPORT_BODY =
-  'Verificarea de mai sus spune doar dacă adresa apare pe listele de sancțiuni. Raportul complet va arăta expunerea la mixere, la incidente de tip hack și la scheme de fraudă, printr-un furnizor specializat. Prețul se stabilește din configurare.';
+export const PAY_UNAVAILABLE = 'Plata nu este disponibilă pe acest mediu.';
 
-export const FULL_REPORT_PRICE_NOTE =
-  'Sugestia de preț este orientativă. Plata prin Stripe Checkout, pe contul QuickExit, LLC, este dezactivată în această versiune.';
+export const CONSENT_LABEL =
+  'Solicit livrarea imediată a raportului digital și confirm că îmi pierd dreptul de retragere în 14 zile, conform OUG nr. 34/2014 art. 16 lit. m, din momentul în care livrarea începe.';
 
-export const FULL_REPORT_PAYMENT_ON =
-  'Plata se face prin Stripe Checkout, pe contul QuickExit, LLC. După plată, sesiunea este înregistrată; generarea automată a raportului rămâne oprită în această versiune.';
+export const CONSENT_REQUIRED =
+  'Bifează consimțământul pentru livrarea imediată a conținutului digital înainte de plată.';
 
-export const FULL_REPORT_PACKS_NOTE =
-  'Pachetele de credite sunt opționale și rămân inactive până când plata este pornită.';
+export const ADDRESS_REQUIRED = 'Introdu adresa pentru care vrei raportul. Un raport acoperă o singură adresă.';
 
-export const WAITLIST_TITLE = 'Anunță-mă când apare raportul complet';
+export const EMAIL_INVALID = 'Emailul nu pare valid. Lasă câmpul gol dacă nu vrei să primești linkul pe email.';
 
-export const WAITLIST_LABEL = 'Email';
+export const EMAIL_HINT = 'Opțional. Îl folosim doar ca să îți trimitem linkul raportului.';
 
-export const WAITLIST_BUTTON = 'Vreau să fiu anunțat';
+export const PACK_ADDRESS_REJECTED =
+  'Pachetul nu verifică o adresă la plată. După plată primești un link privat, iar fiecare verificare consumă un credit doar dacă raportul este gata.';
 
-export const WAITLIST_PENDING = 'Se trimite…';
+export const PACK_NOTE =
+  'Pachetul îți dă un link privat cu mai multe verificări. Un credit se consumă doar după ce raportul este livrat.';
 
-export const WAITLIST_SUCCESS = 'Te-am notat. Îți scriem când raportul complet este disponibil.';
+export const PREVIEW_ONLY =
+  'Înainte de plată nu există verdict de sancțiuni și nici scor de risc. Primești doar rețeaua detectată.';
 
-export const WAITLIST_INVALID = 'Introdu o adresă de email validă.';
+export const REFUND_PENDING_MESSAGE =
+  'Raportul nu a putut fi generat. Furnizorul de risc nu a răspuns după mai multe încercări. Plata este marcată pentru rambursare. Nu am livrat un rezultat parțial.';
 
-export const WAITLIST_FAIL = 'Nu am putut înregistra emailul acum.';
+export const REFUNDED_MESSAGE =
+  'Raportul nu a putut fi generat. Rambursarea a fost inițiată către metoda de plată folosită în Stripe.';
 
-export const WAITLIST_MAILTO = 'Trimite emailul direct';
+export const PAYMENTS_STORE_ERROR =
+  'Plata este marcată activă, dar stocarea comenzilor nu este configurată.';
 
-export const PAY_BUTTON = 'Continuă către plată';
+export const PAYMENTS_PROVIDER_ERROR =
+  'Plata este marcată activă, dar furnizorul de risc nu este configurat.';
 
 export const PAYMENTS_DISABLED_ERROR = 'Plata pentru raportul complet este dezactivată.';
 
 export const PAYMENTS_UNAVAILABLE_ERROR =
   'Plata este marcată activă, dar contul Stripe QuickExit nu este configurat.';
 
-export const PAYMENT_SUCCESS =
-  'Stripe a înregistrat sesiunea. Generarea automată a raportului complet nu este încă pornită în această versiune.';
+export const PAYMENT_SUCCESS = 'Plata este confirmată. Raportul este mai jos.';
 
-export const PAYMENT_CANCELLED = 'Plata a fost anulată. Nu s-a încasat nimic prin acest flux.';
+export const PAYMENT_CANCELLED = 'Plata a fost anulată. Nu s-a încasat nimic.';
 
 export const EMBED_ATTRIBUTION = 'Verificare găzduită de mihaidaniel.ro';
 
@@ -132,6 +136,21 @@ export function formatRoDate(iso: string): string {
     year: 'numeric',
     timeZone: 'UTC',
   }).format(date);
+}
+
+export function formatRoDateTime(iso: string): string {
+  const date = new Date(iso);
+  if (Number.isNaN(date.getTime())) return iso;
+  const text = new Intl.DateTimeFormat('ro-RO', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    timeZone: 'UTC',
+    hourCycle: 'h23',
+  }).format(date);
+  return `${text} UTC`;
 }
 
 export function formatUsd(amount: number): string {

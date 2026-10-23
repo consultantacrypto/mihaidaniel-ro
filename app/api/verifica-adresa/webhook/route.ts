@@ -1,23 +1,21 @@
 import { NextResponse } from 'next/server';
 import type Stripe from 'stripe';
+import { fulfillPaidOrder } from '@/lib/verifica-adresa/fulfillment';
+import { productionFulfillDeps } from '@/lib/verifica-adresa/runtime';
 import { getQuickexitStripe, planAddressCheckerFulfillment } from '@/lib/verifica-adresa/payments';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
 /**
- * Stub. Verifies the QuickExit Stripe signature and recognises
- * product=address_checker. It does not deliver a report and does not
- * call MistTrack. Point Stripe at this URL only after setting
- * QUICKEXIT_STRIPE_SECRET_KEY and QUICKEXIT_STRIPE_WEBHOOK_SECRET.
+ * QuickExit Stripe webhook. Verifies the signature, then delivers the report
+ * or the credit pass. A second delivery of the same session does not call
+ * MistTrack again and does not create a second refund.
  */
 export async function POST(request: Request) {
   const webhookSecret = process.env.QUICKEXIT_STRIPE_WEBHOOK_SECRET?.trim();
   if (!webhookSecret || !process.env.QUICKEXIT_STRIPE_SECRET_KEY?.trim()) {
-    return NextResponse.json(
-      { ok: false, error: 'Webhook-ul QuickExit nu este configurat.', stub: true, fulfilled: false },
-      { status: 503 },
-    );
+    return NextResponse.json({ ok: false, error: 'Webhook-ul QuickExit nu este configurat.' }, { status: 503 });
   }
 
   const signature = request.headers.get('stripe-signature');
@@ -36,23 +34,38 @@ export async function POST(request: Request) {
 
   const plan = planAddressCheckerFulfillment({
     type: event.type,
-    data: { object: event.data.object as { id?: string; payment_status?: string | null; metadata?: Record<string, string> | null } },
+    data: {
+      object: event.data.object as {
+        id?: string;
+        payment_status?: string | null;
+        metadata?: Record<string, string> | null;
+        payment_intent?: string | { id?: string | null } | null;
+      },
+    },
   });
 
-  if (plan.action === 'stub') {
-    console.log('[verifica-adresa] Webhook stub, fără livrare.', {
-      sessionId: plan.sessionId,
-      offerId: plan.offerId,
-      credits: plan.credits,
-      source: plan.source,
-      addressSha256: plan.addressSha256,
-    });
+  if (plan.action !== 'fulfill') {
+    return NextResponse.json({ received: true, fulfilled: false, action: plan.action });
   }
 
-  return NextResponse.json({
-    received: true,
-    stub: true,
-    fulfilled: false,
-    action: plan.action,
-  });
+  try {
+    const deps = await productionFulfillDeps();
+    const order = await fulfillPaidOrder(
+      {
+        nonce: plan.checkoutNonce,
+        stripeSessionId: plan.sessionId,
+        paymentIntentId: plan.paymentIntentId,
+      },
+      deps,
+    );
+    return NextResponse.json({
+      received: true,
+      fulfilled: order.status !== 'pending',
+      status: order.status,
+      source: order.source,
+    });
+  } catch (error) {
+    console.error('[verifica-adresa] Webhook-ul nu a putut livra raportul.', error);
+    return NextResponse.json({ ok: false, error: 'Livrarea nu a putut fi finalizată.' }, { status: 500 });
+  }
 }

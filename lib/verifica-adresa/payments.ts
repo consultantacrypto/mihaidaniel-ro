@@ -1,15 +1,21 @@
 import Stripe from 'stripe';
-import { PAYMENTS_DISABLED_ERROR, PAYMENTS_UNAVAILABLE_ERROR } from './copy';
+import {
+  PAYMENTS_DISABLED_ERROR,
+  PAYMENTS_PROVIDER_ERROR,
+  PAYMENTS_STORE_ERROR,
+  PAYMENTS_UNAVAILABLE_ERROR,
+} from './copy';
 import { findOffer, paymentsReady, type CheckerEnv, type ReportOffer } from './config';
-import { PRODUCT_CODE, SOURCE_SITE } from './sources';
+import { checkoutReturnUrls } from './embed';
+import { PRODUCT_CODE } from './sources';
 
 /**
  * Paid full-report checkout for QuickExit, LLC.
  * Uses QUICKEXIT_STRIPE_* only. Never reads STRIPE_SECRET_KEY (that key belongs
  * to the consultancy / course checkout on mihaidaniel.ro).
  *
- * Disabled unless ADDRESS_CHECKER_PAYMENTS_ENABLED=true.
- * The webhook acknowledges paid sessions and does not deliver a report.
+ * Disabled unless ADDRESS_CHECKER_PAYMENTS_ENABLED=true and the order store
+ * plus MistTrack are configured. The webhook delivers the report idempotently.
  */
 
 let stripeClient: Stripe | undefined;
@@ -36,6 +42,12 @@ export function assertCheckoutAllowed(
   if (ready.reason === 'disabled') {
     return { ok: false, status: 403, error: PAYMENTS_DISABLED_ERROR };
   }
+  if (ready.reason === 'missing_store') {
+    return { ok: false, status: 503, error: PAYMENTS_STORE_ERROR };
+  }
+  if (ready.reason === 'missing_provider') {
+    return { ok: false, status: 503, error: PAYMENTS_PROVIDER_ERROR };
+  }
   return {
     ok: false,
     status: 503,
@@ -50,19 +62,26 @@ export function resolveOffer(offerId: unknown, env: CheckerEnv = process.env): R
 
 export function buildCheckoutSessionParams(input: {
   offer: ReportOffer;
-  origin: string;
+  returnOrigin: string;
+  source: string;
+  checkoutNonce: string;
+  consentAt: string;
   addressSha256?: string;
+  customerEmail?: string;
 }): Stripe.Checkout.SessionCreateParams {
+  const { successUrl, cancelUrl } = checkoutReturnUrls(input.returnOrigin);
   const metadata: Record<string, string> = {
     product: PRODUCT_CODE,
-    source: SOURCE_SITE,
+    source: input.source,
     offer_id: input.offer.id,
     credits: String(input.offer.credits),
     price_usd: String(input.offer.priceUsd),
+    checkout_nonce: input.checkoutNonce,
+    return_origin: input.returnOrigin,
+    immediate_delivery_consent: 'yes',
+    consent_at: input.consentAt,
   };
-  if (input.addressSha256) {
-    metadata.address_sha256 = input.addressSha256;
-  }
+  if (input.addressSha256) metadata.address_sha256 = input.addressSha256;
 
   const name =
     input.offer.credits === 1
@@ -72,9 +91,10 @@ export function buildCheckoutSessionParams(input: {
   return {
     mode: 'payment',
     locale: 'ro',
-    success_url: `${input.origin}/verifica-adresa?plata=succes&session_id={CHECKOUT_SESSION_ID}`,
-    cancel_url: `${input.origin}/verifica-adresa?plata=anulata`,
-    client_reference_id: `${SOURCE_SITE}:${PRODUCT_CODE}:${input.offer.id}`.slice(0, 200),
+    success_url: successUrl,
+    cancel_url: cancelUrl,
+    ...(input.customerEmail ? { customer_email: input.customerEmail } : {}),
+    client_reference_id: `${input.source}:${PRODUCT_CODE}:${input.offer.id}`.slice(0, 200),
     metadata,
     payment_intent_data: { metadata },
     line_items: [
@@ -87,7 +107,7 @@ export function buildCheckoutSessionParams(input: {
             name,
             metadata: {
               product: PRODUCT_CODE,
-              source: SOURCE_SITE,
+              source: input.source,
             },
           },
         },
@@ -99,25 +119,30 @@ export function buildCheckoutSessionParams(input: {
 export type FulfillmentPlan =
   | { action: 'ignore'; reason: string }
   | {
-      action: 'stub';
-      fulfilled: false;
+      action: 'fulfill';
       offerId: string | null;
       credits: number;
       source: string | null;
       addressSha256: string | null;
-      sessionId: string | null;
+      sessionId: string;
+      checkoutNonce: string;
+      paymentIntentId: string | null;
     };
 
 type SessionLike = {
   id?: string;
   payment_status?: string | null;
   metadata?: Record<string, string> | null;
+  payment_intent?: string | { id?: string | null } | null;
 };
 
-/**
- * Stub fulfillment. Recognises a paid address-checker session and stops.
- * It does not grant credits and does not call the risk provider.
- */
+export function paymentIntentIdOf(value: SessionLike['payment_intent']): string | null {
+  if (typeof value === 'string' && value) return value;
+  if (value && typeof value === 'object' && typeof value.id === 'string' && value.id) return value.id;
+  return null;
+}
+
+/** Recognises a paid address-checker session. Delivery happens in fulfillPaidOrder. */
 export function planAddressCheckerFulfillment(event: {
   type: string;
   data: { object: SessionLike };
@@ -141,17 +166,30 @@ export function planAddressCheckerFulfillment(event: {
   ) {
     return { action: 'ignore', reason: 'unpaid' };
   }
+  if (!session.id || !metadata.checkout_nonce) {
+    return { action: 'ignore', reason: 'missing_checkout' };
+  }
 
   const credits = Number(metadata.credits ?? 0);
   return {
-    action: 'stub',
-    fulfilled: false,
+    action: 'fulfill',
     offerId: metadata.offer_id ?? null,
     credits: Number.isFinite(credits) ? credits : 0,
     source: metadata.source ?? null,
     addressSha256: metadata.address_sha256 ?? null,
-    sessionId: session.id ?? null,
+    sessionId: session.id,
+    checkoutNonce: metadata.checkout_nonce,
+    paymentIntentId: paymentIntentIdOf(session.payment_intent),
   };
+}
+
+export async function refundQuickexitPayment(
+  paymentIntentId: string | null,
+  env: CheckerEnv = process.env,
+): Promise<string | null> {
+  if (!paymentIntentId) return null;
+  const refund = await getQuickexitStripe(env).refunds.create({ payment_intent: paymentIntentId });
+  return refund.id;
 }
 
 export function siteOrigin(request: Request, env: CheckerEnv = process.env): string {

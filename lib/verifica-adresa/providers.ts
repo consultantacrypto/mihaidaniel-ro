@@ -22,6 +22,8 @@ export type RiskExposure = {
   category: string;
   detail: string;
   exposure: 'direct' | 'indirect' | 'unknown';
+  hops: number | null;
+  percent: number | null;
 };
 
 export type PaidRiskReport = {
@@ -31,6 +33,7 @@ export type PaidRiskReport = {
   score: number | null;
   level: string | null;
   summary: string;
+  labels: string[];
   exposures: RiskExposure[];
   generatedAt: string;
 };
@@ -84,6 +87,10 @@ export class MistTrackProvider implements RiskReportProvider {
       throw new Error(`MistTrack a răspuns cu HTTP ${response.status}.`);
     }
     const payload: unknown = await response.json();
+    const root = asRecord(payload);
+    if (root?.success === false) {
+      throw new Error('MistTrack a refuzat cererea.');
+    }
     return normalizeMistTrack(payload, input);
   }
 }
@@ -107,10 +114,14 @@ function normalizeMistTrack(payload: unknown, input: RiskReportRequest): PaidRis
   const exposures: RiskExposure[] = riskDetail.map((item) => {
     const record = asRecord(item);
     const exposure = record?.exposure_type;
+    const hops = typeof record?.hop_num === 'number' ? record.hop_num : null;
+    const percent = typeof record?.percent === 'number' ? record.percent : null;
     return {
       category: typeof record?.risk_type === 'string' ? record.risk_type : 'unknown',
       detail: typeof record?.entity === 'string' ? record.entity : '',
       exposure: exposure === 'direct' || exposure === 'indirect' ? exposure : 'unknown',
+      hops,
+      percent,
     };
   });
 
@@ -121,6 +132,7 @@ function normalizeMistTrack(payload: unknown, input: RiskReportRequest): PaidRis
     score,
     level,
     summary: details.join(', '),
+    labels: details,
     exposures,
     generatedAt: new Date().toISOString(),
   };
