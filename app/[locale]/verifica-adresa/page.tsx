@@ -16,6 +16,7 @@ import {
   OPERATOR_NOTE,
   PAGE_DESCRIPTION,
   PAGE_LEAD,
+  NAV_LABEL,
   PAGE_TITLE,
   PRIVACY_NOTE,
   formatUsd,
@@ -96,7 +97,7 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
       description: PAGE_DESCRIPTION,
       path: '/verifica-adresa',
       locale: 'ro_RO',
-      keywords: ['anti-țeapă', 'verificare portofel crypto', 'adresă crypto', 'sancțiuni OFAC', 'TRON', 'ETH', 'BTC'],
+      keywords: ['verificare portofel crypto', 'adresă crypto', 'sancțiuni OFAC', 'TRON', 'ETH', 'BTC'],
     }),
     robots: embed ? { index: false, follow: false } : { index: true, follow: true },
     alternates: {
@@ -159,7 +160,7 @@ export default async function VerificaAdresaPage({ params, searchParams }: PageP
       <div className="mx-auto max-w-6xl">
         <header className="max-w-3xl">
           <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-sky-200/80">
-            QuickExit, LLC · Anti-țeapă
+            QuickExit, LLC · {NAV_LABEL}
           </p>
           <h1
             className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-6xl sm:leading-[1.05]"

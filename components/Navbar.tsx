@@ -49,7 +49,7 @@ export default function Navbar() {
           </a>
 
           <Link href="/verifica-adresa" className="hover:text-sky-300 transition-colors flex items-center gap-2 group px-3 py-2 rounded-full border border-sky-400/20 bg-sky-400/5">
-              <Shield size={16} className="text-sky-300"/> {t('antiScam')}
+              <Shield size={16} className="shrink-0 text-sky-300"/> {t('walletCheck')}
           </Link>
 
           {locale === 'en' && (
@@ -98,7 +98,7 @@ export default function Navbar() {
         <div className="absolute top-full left-0 w-full bg-[#020617] border-b border-white/10 p-6 flex flex-col gap-4 lg:hidden shadow-2xl">
              <Link href="/academie" onClick={() => setMobileMenuOpen(false)} className="text-cyan-400 py-2 border-b border-white/5 font-bold flex items-center gap-2"><Book size={18}/> {t('academy')}</Link>
              <a href="https://www.stirilecrypto.ro/analiza-tehnica?src=mihaidaniel" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="text-cyan-300 py-2 border-b border-white/5 font-bold flex items-center gap-2"><LineChart size={18}/> {t('analysis')}</a>
-             <Link href="/verifica-adresa" onClick={() => setMobileMenuOpen(false)} className="text-sky-300 py-2 border-b border-white/5 font-bold flex items-center gap-2"><Shield size={18}/> {t('antiScam')}</Link>
+             <Link href="/verifica-adresa" onClick={() => setMobileMenuOpen(false)} className="text-sky-300 py-2 border-b border-white/5 font-bold flex items-center gap-2"><Shield size={18} className="shrink-0"/> {t('walletCheck')}</Link>
              {locale === 'en' && (
                <Link href="/partnerships" onClick={() => setMobileMenuOpen(false)} className="text-purple-400 py-2 border-b border-white/5 font-bold flex items-center gap-2">
                  <Briefcase size={18}/> {t('partnerships')}

@@ -8,6 +8,7 @@ import {
   INPUT_HINT,
   INPUT_LABEL,
   INPUT_PLACEHOLDER,
+  NAV_LABEL,
   PACK_NOTE,
   PAY_BUTTON,
   PAY_UNAVAILABLE,
@@ -128,7 +129,7 @@ export function PurchaseForm({
         if (canPay) void pay();
       }}
     >
-      <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-amber-200/90">Anti-țeapă</p>
+      <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-amber-200/90">{NAV_LABEL}</p>
       <h2 className="mt-2 text-2xl font-semibold tracking-tight text-white">Alege verificarea</h2>
       <p className="mt-2 text-sm leading-relaxed text-slate-400">{PREVIEW_ONLY}</p>
 
