@@ -105,7 +105,7 @@ function paintHeader(ctx: Ctx): void {
     font: bold,
     color: WHITE,
   });
-  page.drawText('Anti-țeapă', {
+  page.drawText('Verificare portofel crypto', {
     x: MARGIN,
     y: PAGE_HEIGHT - 54,
     size: 9,
@@ -293,7 +293,7 @@ export async function buildReportPdf(report: ReportDocument): Promise<Uint8Array
 
   const doc = await PDFDocument.create();
   doc.registerFontkit(fontkit);
-  doc.setTitle(`Anti-țeapă ${report.publicId}`);
+  doc.setTitle(`Verificare portofel crypto ${report.publicId}`);
   doc.setAuthor('QuickExit, LLC');
   doc.setCreator('mihaidaniel.ro');
   doc.setSubject('Raport de risc pentru adresă crypto');

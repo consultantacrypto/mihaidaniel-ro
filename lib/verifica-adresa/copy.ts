@@ -9,12 +9,12 @@ export const PAGE_DESCRIPTION =
 export const PAGE_LEAD =
   'Afli dacă adresa crypto e legată de țepe, hackuri sau fonduri furate.';
 
-export const NAV_LABEL = 'Anti-țeapă';
+export const NAV_LABEL = 'Verificare portofel crypto';
 
 export const BEGINNER_TITLE = 'Pe înțelesul tuturor';
 
 export const BEGINNER_BODY =
-  'Anti-țeapă este o verificare pentru o adresă de portofel crypto, înainte să trimiți bani. Nu trebuie să înțelegi blockchain. Lipești adresa, vezi pe ce rețea este, iar după plată primești un raport: dacă apare pe liste de sancțiuni și dacă are legătură cu țepe, hackuri sau fonduri furate.';
+  'Verificare portofel crypto este pentru o adresă de portofel, înainte să trimiți bani. Nu trebuie să înțelegi blockchain. Lipești adresa, vezi pe ce rețea este, iar după plată primești un raport: dacă apare pe liste de sancțiuni și dacă are legătură cu țepe, hackuri sau fonduri furate.';
 
 export const HOW_TITLE = 'Cum funcționează';
 
@@ -138,7 +138,7 @@ export const PAYMENT_SUCCESS = 'Plata este confirmată. Raportul este mai jos.';
 
 export const PAYMENT_CANCELLED = 'Plata a fost anulată. Nu s-a încasat nimic.';
 
-export const EMBED_ATTRIBUTION = 'Anti-țeapă găzduită de mihaidaniel.ro';
+export const EMBED_ATTRIBUTION = 'Verificare portofel crypto, găzduită de mihaidaniel.ro';
 
 export const LEGAL_TITLE = 'Notă legală';
 

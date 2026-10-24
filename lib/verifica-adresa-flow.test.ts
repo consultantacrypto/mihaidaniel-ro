@@ -300,7 +300,7 @@ describe('sample pdf', () => {
     const file = join(dir, 'report.pdf');
     writeFileSync(file, pdf);
     const text = execFileSync('pdftotext', ['-layout', file, '-'], { encoding: 'utf8' });
-    assert.match(text, /Anti-țeapă/);
+    assert.match(text, /Verificare portofel crypto/);
     assert.match(text, /Verifică portofelul/);
     assert.match(text, /ADRESĂ CRYPTO/);
     assert.match(text, /QuickExit, LLC/);
