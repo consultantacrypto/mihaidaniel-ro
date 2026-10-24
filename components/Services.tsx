@@ -53,10 +53,10 @@ export default function Services() {
           </article>
 
           <article className="flex flex-col rounded-3xl border border-sky-400/20 bg-sky-400/[0.04] p-6" data-testid="wallet-service">
-            <div className="flex items-center justify-between gap-3">
-              <div className="flex items-center gap-2 text-sky-300">
-                <Shield size={18} />
-                <p className="text-[11px] font-semibold uppercase tracking-[0.18em]">{t('walletTitle')}</p>
+            <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
+              <div className="flex min-w-0 items-center gap-2 text-sky-300">
+                <Shield size={18} className="shrink-0" />
+                <p className="text-[11px] font-semibold uppercase leading-snug tracking-[0.14em]">{t('walletTitle')}</p>
               </div>
               {WALLET_CHECK_LIVE ? null : (
                 <p className="rounded-full border border-amber-300/40 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-amber-200">
