@@ -1,6 +1,6 @@
 'use client';
 
-import { Youtube, Menu, X, Book, GraduationCap, Coins, Briefcase } from 'lucide-react';
+import { Youtube, Menu, X, Book, GraduationCap, Coins, Briefcase, LineChart } from 'lucide-react';
 import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
@@ -38,6 +38,15 @@ export default function Navbar() {
           <Link href="/academie" className="hover:text-cyan-400 transition-colors flex items-center gap-2 group bg-white/5 px-4 py-2 rounded-full border border-white/5">
               <Book size={16} className="group-hover:scale-110 transition-transform"/> {t('academy')}
           </Link>
+
+          <a
+            href="https://www.stirilecrypto.ro/analiza-tehnica?src=mihaidaniel"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-cyan-300 transition-colors flex items-center gap-2 px-3 py-2 rounded-full border border-white/10"
+          >
+              <LineChart size={16} /> {t('analysis')}
+          </a>
 
           {locale === 'en' && (
             <Link href="/partnerships" className="hover:text-purple-400 transition-colors flex items-center gap-2 px-3 py-2 rounded-full border border-purple-500/20 bg-purple-500/5">
@@ -84,6 +93,7 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-[#020617] border-b border-white/10 p-6 flex flex-col gap-4 lg:hidden shadow-2xl">
              <Link href="/academie" onClick={() => setMobileMenuOpen(false)} className="text-cyan-400 py-2 border-b border-white/5 font-bold flex items-center gap-2"><Book size={18}/> {t('academy')}</Link>
+             <a href="https://www.stirilecrypto.ro/analiza-tehnica?src=mihaidaniel" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="text-cyan-300 py-2 border-b border-white/5 font-bold flex items-center gap-2"><LineChart size={18}/> {t('analysis')}</a>
              {locale === 'en' && (
                <Link href="/partnerships" onClick={() => setMobileMenuOpen(false)} className="text-purple-400 py-2 border-b border-white/5 font-bold flex items-center gap-2">
                  <Briefcase size={18}/> {t('partnerships')}

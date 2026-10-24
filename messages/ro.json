@@ -3,6 +3,7 @@
     "academy": "Academia",
     "course": "Curs",
     "consultancy": "Consultanță",
+    "analysis": "Analiză tehnică",
     "partnerships": "Media Kit",
     "home": "Acasă",
     "openMenu": "Deschide meniul",
@@ -96,6 +97,25 @@
       "ctaAria": "Rezervă sesiunea de consultanță crypto — 200 euro",
       "detailsLink": "Vezi pagina completă",
       "imageAlt": "Consultanță Mihai Daniel"
+    },
+    "services": {
+      "kicker": "Servicii",
+      "title": "Alege cum lucrezi cu mine",
+      "lead": "Consultanța rămâne aici. Analiza tehnică și verificarea portofelului sunt servicii separate.",
+      "consultTitle": "Consultanță",
+      "consultPrice": "200 € / oră",
+      "consultBody": "Sesiune privată de 60 de minute despre portofoliul tău crypto. Aceeași consultanță, neschimbată.",
+      "consultCta": "Vezi consultanța",
+      "analysisTitle": "Analiză tehnică",
+      "analysisPrice": "49 lei",
+      "analysisBody": "Șapte intervale, de la 1h la 1M, plus o secțiune de risc pentru token. Livrare în cel mult 24 de ore lucrătoare.",
+      "analysisCta": "Cere analiza",
+      "walletTitle": "Anti-țeapă",
+      "walletName": "Verifică portofelul",
+      "walletPrice": "10 USD",
+      "walletBody": "Afli dacă adresa crypto e legată de țepe, hackuri sau fonduri furate.",
+      "walletCta": "Verifică portofelul",
+      "walletSoon": "Disponibil în curând"
     },
     "course": {
       "badge": "Stop Pierderilor",

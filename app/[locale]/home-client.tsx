@@ -8,6 +8,7 @@ import Hero from '@/components/Hero';
 // Eveniment temporar (cina VIP Sinaia) — dezactivat. Reactivează la urmatorul eveniment.
 // import VipEventBanner from '@/components/VipEventBanner';
 import Footer from '@/components/Footer';
+import Services from '@/components/Services';
 import ScrollProgress from '@/components/ScrollProgress';
 
 const SocialStats = dynamic(() => import('@/components/SocialStats'), {
@@ -53,6 +54,7 @@ export default function HomeClient() {
           Dezactivat dupa eveniment. Decomenteaza pentru urmatorul eveniment. */}
       {/* <VipEventBanner /> */}
       <SocialStats />
+      <Services />
       <Consultancy />
       <CelebrityInterviews />
       <Course />
