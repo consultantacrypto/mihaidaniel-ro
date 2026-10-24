@@ -105,7 +105,7 @@ function paintHeader(ctx: Ctx): void {
     font: bold,
     color: WHITE,
   });
-  page.drawText('Adresă crypto', {
+  page.drawText('Anti-țeapă', {
     x: MARGIN,
     y: PAGE_HEIGHT - 54,
     size: 9,
@@ -293,7 +293,7 @@ export async function buildReportPdf(report: ReportDocument): Promise<Uint8Array
 
   const doc = await PDFDocument.create();
   doc.registerFontkit(fontkit);
-  doc.setTitle(`Raport adresă crypto ${report.publicId}`);
+  doc.setTitle(`Anti-țeapă ${report.publicId}`);
   doc.setAuthor('QuickExit, LLC');
   doc.setCreator('mihaidaniel.ro');
   doc.setSubject('Raport de risc pentru adresă crypto');
@@ -333,7 +333,7 @@ export async function buildReportPdf(report: ReportDocument): Promise<Uint8Array
     ctx.y = bottom - 16;
   }
 
-  text(ctx, 'Raport de risc pentru adresă crypto', { size: 18, bold: true, gap: 4 });
+  text(ctx, 'Verifică portofelul înainte să trimiți bani', { size: 18, bold: true, gap: 4 });
   text(ctx, report.sample ? 'Document ilustrativ' : 'Livrat după plată', { size: 10, color: MUTED, gap: 14 });
 
   metaGrid(ctx, [

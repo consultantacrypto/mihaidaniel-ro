@@ -1,13 +1,42 @@
 import { OPERATOR_LINE } from './sources';
 import type { Network } from './networks';
 
-export const PAGE_TITLE = 'Verifică adresa crypto înainte să trimiți banii';
+export const PAGE_TITLE = 'Verifică portofelul înainte să trimiți bani';
 
 export const PAGE_DESCRIPTION =
-  'Raport plătit de risc pentru o adresă crypto (BTC, ETH, TRON sau SOL): listele OFAC și UE, scor de risc și expunere la mixere, hack-uri și scheme de fraudă. Informativ, fără garanție.';
+  'Afli dacă adresa crypto e legată de țepe, hackuri sau fonduri furate. Raport pentru un portofel BTC, ETH, TRON sau SOL. Informativ, fără garanție.';
 
 export const PAGE_LEAD =
-  'Un raport pentru o singură adresă crypto. Înainte de plată vezi doar dacă formatul portofelului crypto este valid și pe ce rețea se află.';
+  'Afli dacă adresa crypto e legată de țepe, hackuri sau fonduri furate.';
+
+export const NAV_LABEL = 'Anti-țeapă';
+
+export const BEGINNER_TITLE = 'Pe înțelesul tuturor';
+
+export const BEGINNER_BODY =
+  'Anti-țeapă este o verificare pentru o adresă de portofel crypto, înainte să trimiți bani. Nu trebuie să înțelegi blockchain. Lipești adresa, vezi pe ce rețea este, iar după plată primești un raport: dacă apare pe liste de sancțiuni și dacă are legătură cu țepe, hackuri sau fonduri furate.';
+
+export const HOW_TITLE = 'Cum funcționează';
+
+export const HOW_STEPS = [
+  {
+    title: 'Pui adresa',
+    body: 'Copiezi adresa portofelului către care urmează să trimiți. Înainte de plată vezi doar dacă formatul este valid și pe ce rețea se află.',
+  },
+  {
+    title: 'Plătești raportul',
+    body: 'Un raport acoperă o singură adresă crypto. Îl primești pe ecran și într-un PDF, pe un link care nu poate fi ghicit.',
+  },
+  {
+    title: 'Citești înainte să trimiți',
+    body: 'Raportul arată potrivirea cu listele consultate, scorul și expunerea la țepe, hackuri sau fonduri furate. Este informativ, nu o garanție.',
+  },
+] as const;
+
+export const EXAMPLE_TITLE = 'Un exemplu';
+
+export const EXAMPLE_BODY =
+  'Cineva pe Telegram îți cere să trimiți 2.000 USDT pentru o mașină, un job sau o tranzacție OTC. Înainte de transfer, verifici adresa portofelului. Dacă raportul arată legături cu țepe, hackuri sau fonduri furate, te oprești și nu trimiți.';
 
 export const PAGE_LEAD_NOTE =
   'Listele de sancțiuni și scorul de risc se livrează după plată, pe ecran și într-un PDF.';
@@ -109,7 +138,7 @@ export const PAYMENT_SUCCESS = 'Plata este confirmată. Raportul este mai jos.';
 
 export const PAYMENT_CANCELLED = 'Plata a fost anulată. Nu s-a încasat nimic.';
 
-export const EMBED_ATTRIBUTION = 'Verificare de adresă crypto găzduită de mihaidaniel.ro';
+export const EMBED_ATTRIBUTION = 'Anti-țeapă găzduită de mihaidaniel.ro';
 
 export const LEGAL_TITLE = 'Notă legală';
 

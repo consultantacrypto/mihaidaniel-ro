@@ -6,7 +6,13 @@ import { buildPageMetadata } from '@/lib/seo/metadata';
 import { publicCheckerConfig, singleReportPrice } from '@/lib/verifica-adresa/config';
 import {
   DISCLAIMER,
+  BEGINNER_BODY,
+  BEGINNER_TITLE,
   EMBED_ATTRIBUTION,
+  EXAMPLE_BODY,
+  EXAMPLE_TITLE,
+  HOW_STEPS,
+  HOW_TITLE,
   OPERATOR_NOTE,
   PAGE_DESCRIPTION,
   PAGE_LEAD,
@@ -90,7 +96,7 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
       description: PAGE_DESCRIPTION,
       path: '/verifica-adresa',
       locale: 'ro_RO',
-      keywords: ['verificare adresă crypto', 'raport risc wallet', 'sancțiuni OFAC', 'TRON', 'ETH', 'BTC'],
+      keywords: ['anti-țeapă', 'verificare portofel crypto', 'adresă crypto', 'sancțiuni OFAC', 'TRON', 'ETH', 'BTC'],
     }),
     robots: embed ? { index: false, follow: false } : { index: true, follow: true },
     alternates: {
@@ -153,7 +159,7 @@ export default async function VerificaAdresaPage({ params, searchParams }: PageP
       <div className="mx-auto max-w-6xl">
         <header className="max-w-3xl">
           <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-sky-200/80">
-            QuickExit, LLC · adresă crypto
+            QuickExit, LLC · Anti-țeapă
           </p>
           <h1
             className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-6xl sm:leading-[1.05]"
@@ -162,7 +168,7 @@ export default async function VerificaAdresaPage({ params, searchParams }: PageP
             {PAGE_TITLE}
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-300">{PAGE_LEAD}</p>
-          <p className="mt-4 text-sm font-medium text-white">De la {formatUsd(price)} pentru o adresă crypto.</p>
+          <p className="mt-4 text-sm font-medium text-white">De la {formatUsd(price)} pentru verificarea unui portofel.</p>
         </header>
 
         <div className="mt-10 grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_400px]">
@@ -206,6 +212,28 @@ export default async function VerificaAdresaPage({ params, searchParams }: PageP
 
             {embed ? null : (
               <>
+                <section className="rounded-[28px] border border-white/10 bg-white/[0.03] p-5 sm:p-6" data-testid="beginner">
+                  <h2 className="text-2xl font-semibold text-white">{BEGINNER_TITLE}</h2>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-300">{BEGINNER_BODY}</p>
+                </section>
+                <section data-testid="how-it-works">
+                  <h2 className="text-2xl font-semibold text-white">{HOW_TITLE}</h2>
+                  <ol className="mt-4 grid gap-3 sm:grid-cols-3">
+                    {HOW_STEPS.map((step, index) => (
+                      <li key={step.title} className="rounded-2xl border border-white/10 px-4 py-4">
+                        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-sky-200/80">
+                          {String(index + 1).padStart(2, '0')}
+                        </p>
+                        <h3 className="mt-2 text-sm font-semibold text-white">{step.title}</h3>
+                        <p className="mt-2 text-sm leading-relaxed text-slate-400">{step.body}</p>
+                      </li>
+                    ))}
+                  </ol>
+                </section>
+                <section className="rounded-[28px] border border-amber-300/30 bg-amber-300/10 p-5 sm:p-6" data-testid="telegram-example">
+                  <h2 className="text-2xl font-semibold text-white">{EXAMPLE_TITLE}</h2>
+                  <p className="mt-3 text-sm leading-relaxed text-amber-50">{EXAMPLE_BODY}</p>
+                </section>
                 <section>
                   <h2 className="text-2xl font-semibold text-white">Ce conține raportul</h2>
                   <ul className="mt-4 grid gap-3 sm:grid-cols-2">

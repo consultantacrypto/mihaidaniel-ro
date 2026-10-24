@@ -1,6 +1,6 @@
 'use client';
 
-import { Youtube, Menu, X, Book, GraduationCap, Coins, Briefcase } from 'lucide-react';
+import { Youtube, Menu, X, Book, GraduationCap, Coins, Briefcase, Shield } from 'lucide-react';
 import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
@@ -37,6 +37,10 @@ export default function Navbar() {
       <div className="hidden lg:flex items-center gap-3 text-sm font-medium text-gray-300">
           <Link href="/academie" className="hover:text-cyan-400 transition-colors flex items-center gap-2 group bg-white/5 px-4 py-2 rounded-full border border-white/5">
               <Book size={16} className="group-hover:scale-110 transition-transform"/> {t('academy')}
+          </Link>
+
+          <Link href="/verifica-adresa" className="hover:text-sky-300 transition-colors flex items-center gap-2 group px-3 py-2 rounded-full border border-sky-400/20 bg-sky-400/5">
+              <Shield size={16} className="text-sky-300"/> {t('antiScam')}
           </Link>
 
           {locale === 'en' && (
@@ -84,6 +88,7 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-[#020617] border-b border-white/10 p-6 flex flex-col gap-4 lg:hidden shadow-2xl">
              <Link href="/academie" onClick={() => setMobileMenuOpen(false)} className="text-cyan-400 py-2 border-b border-white/5 font-bold flex items-center gap-2"><Book size={18}/> {t('academy')}</Link>
+             <Link href="/verifica-adresa" onClick={() => setMobileMenuOpen(false)} className="text-sky-300 py-2 border-b border-white/5 font-bold flex items-center gap-2"><Shield size={18}/> {t('antiScam')}</Link>
              {locale === 'en' && (
                <Link href="/partnerships" onClick={() => setMobileMenuOpen(false)} className="text-purple-400 py-2 border-b border-white/5 font-bold flex items-center gap-2">
                  <Briefcase size={18}/> {t('partnerships')}
