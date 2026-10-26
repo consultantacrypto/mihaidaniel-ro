@@ -6,8 +6,8 @@ import { Link } from '@/i18n/navigation';
 
 const ANALYSIS_URL = 'https://www.stirilecrypto.ro/analiza-tehnica?src=mihaidaniel';
 
-/** Flip when /verifica-adresa is deployed. The card still links there. */
-const WALLET_CHECK_LIVE = false;
+/** The paid checker at /verifica-adresa is live, so the coming-soon badge stays off. */
+const WALLET_CHECK_LIVE = true;
 
 export default function Services() {
   const t = useTranslations('home.services');
