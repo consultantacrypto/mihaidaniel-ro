@@ -3,6 +3,7 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Space_Grotesk, Inter } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 import AttributionCapture from '@/components/AttributionCapture';
 import CookieConsent from '@/components/CookieConsent';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
@@ -126,6 +127,7 @@ export default async function LocaleLayout({
           <CookieConsent />
           {children}
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
