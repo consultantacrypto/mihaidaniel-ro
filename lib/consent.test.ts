@@ -102,4 +102,13 @@ describe('Consent Mode v2 defaults', () => {
     assert.match(layout, /buildConsentDefaultScript/);
     assert.match(layout, /GoogleAnalytics/);
   });
+
+  it('mounts Vercel Web Analytics in the document layout', () => {
+    const layout = readFileSync(
+      join(dirname(fileURLToPath(import.meta.url)), '../app/[locale]/layout.tsx'),
+      'utf8'
+    );
+    assert.match(layout, /import \{ Analytics \} from '@vercel\/analytics\/next'/);
+    assert.match(layout, /<Analytics \/>/);
+  });
 });
