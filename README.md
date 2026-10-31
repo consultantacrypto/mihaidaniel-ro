@@ -33,6 +33,8 @@ Setează-le în Vercel pe proiectul de producție și fă redeploy. Nu redenumi 
 | `BOOKING_URL` | nu | `https://cal.com/mihai/consultanta` | Calendar după plată. Dacă lipsește sau nu e https, butonul și embed-ul nu apar. |
 | `WHATSAPP_NUMBER` | nu | `40731490099` | Număr pentru linkul `wa.me`, doar cifre. Dacă lipsește, se folosește `40731490099`. |
 | `CONTACT_EMAIL` | nu | `consultantacrypto.ro@gmail.com` | Inbox pentru formular, reply-to la emailuri. Dacă lipsește, se folosește adresa de mai sus. |
+| `AFF_STATS_KEY` | nu, pentru citire | secret lung | Protejează `GET /api/r/stats`. Fără ea, ruta răspunde 404. |
+| `KV_REST_API_URL` / `KV_REST_API_TOKEN` | nu, pentru log durabil | URL + token | Clickurile `/r/{slug}`. Pe proiectul Vercel sunt deja setate. Merge și perechea `UPSTASH_REDIS_REST_*`. |
 
 Adresa afișată în footer și în cardul de pe `/contact` rămâne `consultantacrypto.ro@gmail.com` (textul paginii). `CONTACT_EMAIL` schimbă unde ajung mesajele, nu textul acela.
 
@@ -53,3 +55,7 @@ Evenimentul GA4 `purchase` pleacă doar după `GET /api/checkout/verify`, când 
 GA4 (`G-ZYYJ251HYH`) se încarcă și acum fără banner de consimțământ și fără Consent Mode. Asta rămâne de verificat juridic; bannerul nu e în acest schimb.
 
 Limba implicită este româna. `Accept-Language: en` nu mai redirecționează spre `/en`. Comutatorul RO/EN rămâne și păstrează query string-ul, inclusiv UTM.
+
+## Linkuri de afiliat
+
+`/r/bybit`, `/r/okx` și `/r/redotpay` înregistrează clickul și răspund cu 302 către partener. Taxonomia UTM, exemplele și pașii din Vercel (proiectul `mihaidaniel-ro`) sunt în [docs/affiliate-attribution.md](docs/affiliate-attribution.md).
