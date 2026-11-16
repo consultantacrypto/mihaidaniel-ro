@@ -8,6 +8,7 @@ import Hero from '@/components/Hero';
 // Eveniment temporar (cina VIP Sinaia) — dezactivat. Reactivează la urmatorul eveniment.
 // import VipEventBanner from '@/components/VipEventBanner';
 import Footer from '@/components/Footer';
+import StirileCryptoAffiliation from '@/components/StirileCryptoAffiliation';
 import Services from '@/components/Services';
 import ScrollProgress from '@/components/ScrollProgress';
 
@@ -58,6 +59,9 @@ export default function HomeClient() {
       <Consultancy />
       <CelebrityInterviews />
       <Course />
+      <section className="container mx-auto px-6 py-10">
+        <StirileCryptoAffiliation className="text-sm text-gray-400 leading-relaxed max-w-3xl" />
+      </section>
       <Footer />
     </main>
   );

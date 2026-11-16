@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import { trackBuyConsultancy, trackBuyCourse } from '@/lib/analytics';
 import { openConsentSettings } from '@/lib/consent';
 import { Youtube, Twitter, Linkedin, Mail, MapPin, ShieldCheck, Globe, Clock } from 'lucide-react';
+import StirileCryptoAffiliation from '@/components/StirileCryptoAffiliation';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -110,6 +111,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/5 pt-8 mb-8">
+            <StirileCryptoAffiliation className="text-sm text-gray-400 leading-relaxed mb-6" />
             <p className="text-xs text-gray-500 leading-relaxed text-justify opacity-70 hover:opacity-100 transition-opacity">
                 {t('disclaimer')}
             </p>
