@@ -19,7 +19,7 @@ export function buildPersonSchema(locale: SchemaLocale = 'ro') {
     '@type': 'Person',
     '@id': PERSON_ID,
     name: 'Mihai Daniel',
-    alternateName: 'Mihai Daniel Marius',
+    alternateName: ['Mihai Daniel Marius', 'Daniel Mihai'],
     url: SITE_URL,
     image: `${SITE_URL}/mihai-daniel-consultanta.jpg`,
     jobTitle: [
@@ -44,6 +44,12 @@ export function buildPersonSchema(locale: SchemaLocale = 'ro') {
     worksFor: {
       '@id': ORGANIZATION_ID,
     },
+    affiliation: {
+      '@type': 'NewsMediaOrganization',
+      '@id': 'https://www.stirilecrypto.ro/#organization',
+      name: 'Știrile Crypto',
+      url: 'https://www.stirilecrypto.ro/',
+    },
     hasCredential: [
       {
         '@type': 'EducationalOccupationalCredential',
@@ -61,7 +67,10 @@ export function buildPersonSchema(locale: SchemaLocale = 'ro') {
         name: 'Expert în strategii de exit',
       },
     ],
-    sameAs: [...SAME_AS],
+    sameAs: [
+      ...SAME_AS,
+      'https://www.stirilecrypto.ro/autori/daniel-mihai',
+    ],
     email: CONTACT_EMAIL,
     audience: {
       '@type': 'Audience',

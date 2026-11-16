@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import StirileCryptoAffiliation from '@/components/StirileCryptoAffiliation';
 import Image from 'next/image';
 import { Award, ShieldCheck, Users } from 'lucide-react';
 
@@ -40,6 +41,7 @@ export default function AboutPage() {
                 <p className="text-gray-400 text-lg mb-8 leading-relaxed">
                     Într-o lume plină de &quot;experți&quot; care îți promit îmbogățirea peste noapte, misiunea mea este diferită: <strong>Educație Financiară Brută & Analiză Instituțională.</strong> Nu vând vise, vând claritate.
                 </p>
+                <StirileCryptoAffiliation className="text-gray-400 text-lg mb-8 leading-relaxed" />
                 
                 <div className="grid grid-cols-2 gap-4">
                     <div className="bg-[#0b1221] p-4 rounded-xl border border-white/5">
