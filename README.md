@@ -32,11 +32,11 @@ Setează-le în Vercel pe proiectul de producție și fă redeploy. Nu redenumi 
 | `RESEND_API_KEY` | da, pentru email | `re_...` | Email după plată, ghid, parteneriate și formularul de contact. |
 | `BOOKING_URL` | nu | `https://cal.com/mihai/consultanta` | Calendar după plată. Dacă lipsește sau nu e https, butonul și embed-ul nu apar. |
 | `WHATSAPP_NUMBER` | nu | `40731490099` | Număr pentru linkul `wa.me`, doar cifre. Dacă lipsește, se folosește `40731490099`. |
-| `CONTACT_EMAIL` | nu | `consultantacrypto.ro@gmail.com` | Inbox pentru formular, reply-to la emailuri. Dacă lipsește, se folosește adresa de mai sus. |
+| `CONTACT_EMAIL` | nu | `contact@stirilecrypto.ro` | Inbox pentru formular, reply-to la emailuri. Dacă lipsește, se folosește adresa de mai sus. |
 | `AFF_STATS_KEY` | nu, pentru citire | secret lung | Protejează `GET /api/r/stats`. Fără ea, ruta răspunde 404. |
 | `KV_REST_API_URL` / `KV_REST_API_TOKEN` | nu, pentru log durabil | URL + token | Clickurile `/r/{slug}`. Pe proiectul Vercel sunt deja setate. Merge și perechea `UPSTASH_REDIS_REST_*`. |
 
-Adresa afișată în footer și în cardul de pe `/contact` rămâne `consultantacrypto.ro@gmail.com` (textul paginii). `CONTACT_EMAIL` schimbă unde ajung mesajele, nu textul acela.
+Adresa afișată în footer, pe `/contact` și în datele structurate este `contact@stirilecrypto.ro`. Dacă `CONTACT_EMAIL` este setată, ea schimbă inbox-ul formularului, reply-to și adresa din mesajul de după plată. Dacă lipsește, se folosește aceeași adresă.
 
 Un `BOOKING_URL` sau un număr greșit nu produce un link stricat: opțiunea respectivă e ascunsă. WhatsApp-ul și emailul au valorile de mai sus ca rezervă doar când variabila lipsește, nu când e setată greșit.
 

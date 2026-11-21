@@ -7,7 +7,7 @@ describe('purchase emails', () => {
   it('includes WhatsApp and email, and hides the calendar until a booking URL exists', () => {
     const html = buildConsultancyEmailHtml(resolveContactChannels({}), 'Ana');
     assert.match(html, /wa\.me\/40731490099/);
-    assert.match(html, /consultantacrypto\.ro@gmail\.com/);
+    assert.match(html, /contact@stirilecrypto\.ro/);
     assert.doesNotMatch(html, /Deschide calendarul/);
     assert.match(html, /Bună, Ana/);
   });

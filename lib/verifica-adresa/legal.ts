@@ -1,3 +1,5 @@
+import { CONTACT_EMAIL } from '@/lib/seo/constants';
+
 export type LegalSection = { heading: string; paragraphs: string[] };
 
 export const TERMS_SECTIONS: LegalSection[] = [
@@ -81,7 +83,7 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
   {
     heading: 'Cereri',
     paragraphs: [
-      'Pentru acces sau ștergere scrie la consultantacrypto.ro@gmail.com și include ID-ul raportului. Putem șterge linkul înainte de expirare. Ștergerea nu acoperă înregistrările pe care Stripe este obligat să le păstreze pentru plată.',
+      `Pentru acces sau ștergere scrie la ${CONTACT_EMAIL} și include ID-ul raportului. Putem șterge linkul înainte de expirare. Ștergerea nu acoperă înregistrările pe care Stripe este obligat să le păstreze pentru plată.`,
     ],
   },
 ];

@@ -10,7 +10,7 @@ export default function ConsultancyAnalysisOption() {
 
   return (
     <section className="py-20 md:py-24 border-b border-white/5 bg-[#0a0f1e]/40">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto max-w-3xl px-6">
         <p className="text-center text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-300/80">
           {t('kicker')}
         </p>
@@ -18,7 +18,7 @@ export default function ConsultancyAnalysisOption() {
           {t('note')}
         </p>
 
-        <article className="mx-auto mt-10 flex max-w-md flex-col rounded-3xl border border-white/10 bg-white/[0.03] p-6">
+        <article className="mt-10 flex flex-col rounded-3xl border border-white/10 bg-white/[0.03] p-6 md:p-8">
           <div className="flex items-center gap-2 text-cyan-300">
             <LineChart size={18} aria-hidden />
             <h2 className="text-[11px] font-semibold uppercase tracking-[0.18em]">{t('title')}</h2>
