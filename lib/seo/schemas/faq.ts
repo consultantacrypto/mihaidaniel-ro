@@ -33,9 +33,14 @@ export function buildFaqPageSchema(
 const CONSULTANCY_FAQ_BY_LOCALE: Record<SchemaLocale, FaqItem[]> = {
   ro: [
     {
-      question: 'Ce include sesiunea de consultanță crypto de 1 oră?',
+      question: 'Ce include pachetul de consultanță?',
       answer:
-        'O sesiune privată online de 60 de minute, 1 la 1 cu Mihai Daniel, dedicată întrebărilor tale despre portofoliu, riscuri și deciziile pe care le ai de luat. Conversația se adaptează situației tale — nu este un audit exhaustiv scris și nu include un raport livrat ulterior.',
+        'O sesiune privată online de 60 de minute, 1 la 1 cu Mihai Daniel, plus 2 analize tehnice premium (șapte grafice și secțiunea Risc token, pentru două active alese de tine). Analizele pleacă pe email, de regulă în 24 de ore lucrătoare. Conversația se adaptează situației tale; nu este un audit scris al întregului portofoliu.',
+    },
+    {
+      question: 'Cum rezerv sesiunea?',
+      answer:
+        'Poți plăti pachetul prin butonul de pe pagină (Stripe) sau îmi scrii pe contact@stirilecrypto.ro. Stabilim data împreună. Prețul pachetului este 200 €.',
     },
     {
       question: 'Pentru cine este această sesiune?',
@@ -60,9 +65,14 @@ const CONSULTANCY_FAQ_BY_LOCALE: Record<SchemaLocale, FaqItem[]> = {
   ],
   en: [
     {
-      question: 'What does the one-hour crypto consulting session include?',
+      question: 'What does the consulting package include?',
       answer:
-        'A private 60-minute online session, one-on-one with Mihai Daniel, focused on your questions about portfolio, risks, and the decisions you need to make. The conversation adapts to your situation — it is not an exhaustive written audit and does not include a follow-up report.',
+        'A private 60-minute online session, one-on-one with Mihai Daniel, plus 2 premium technical analyses (seven charts and the token-risk section, for two assets you choose). The analyses are sent by email, usually within 24 working hours. The conversation adapts to your situation; it is not a written audit of the entire portfolio.',
+    },
+    {
+      question: 'How do I book the session?',
+      answer:
+        'You can pay for the package with the button on this page (Stripe), or email me at contact@stirilecrypto.ro. We set the date together. The package price is €200.',
     },
     {
       question: 'Who is this session for?',

@@ -1,23 +1,19 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import ConsultancyCheckoutButton from '@/components/consultancy/ConsultancyCheckoutButton';
+import ConsultancyBookingActions from '@/components/consultancy/ConsultancyBookingActions';
 
-const STEP_KEYS = ['pay', 'schedule', 'session'] as const;
+const STEP_KEYS = ['write', 'meet', 'delivery'] as const;
 
 export default function ConsultancyProcess() {
   const t = useTranslations('consultancyPage.process');
-  const tHero = useTranslations('consultancyPage.hero');
 
   return (
     <section className="py-20 md:py-24 border-b border-white/5">
       <div className="container mx-auto px-6 max-w-3xl">
-        <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
           {t('title')}
         </h2>
-        <p className="text-gray-400 text-center mb-12 leading-relaxed">
-          {t('intro')}
-        </p>
 
         <ol className="space-y-6 mb-10">
           {STEP_KEYS.map((key, index) => (
@@ -46,11 +42,7 @@ export default function ConsultancyProcess() {
         </p>
 
         <div className="flex justify-center">
-          <ConsultancyCheckoutButton
-            label={tHero('cta')}
-            ariaLabel={tHero('ctaAria')}
-            trackingLabel="consultanta_page_process_stripe"
-          />
+          <ConsultancyBookingActions trackingLabel="consultanta_page_process_stripe" />
         </div>
       </div>
     </section>

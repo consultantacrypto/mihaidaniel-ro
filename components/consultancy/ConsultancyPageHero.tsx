@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import ConsultancyCheckoutButton from '@/components/consultancy/ConsultancyCheckoutButton';
+import ConsultancyBookingActions from '@/components/consultancy/ConsultancyBookingActions';
 
 export default function ConsultancyPageHero() {
   const t = useTranslations('consultancyPage.hero');
@@ -30,11 +30,7 @@ export default function ConsultancyPageHero() {
             </div>
 
             <div className="pt-2">
-              <ConsultancyCheckoutButton
-                label={t('cta')}
-                ariaLabel={t('ctaAria')}
-                trackingLabel="consultanta_page_stripe"
-              />
+              <ConsultancyBookingActions trackingLabel="consultanta_page_stripe" />
             </div>
           </div>
 
