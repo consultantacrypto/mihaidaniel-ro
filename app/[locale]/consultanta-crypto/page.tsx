@@ -7,8 +7,9 @@ import FaqSection from '@/components/landing/FaqSection';
 import JsonLd from '@/components/JsonLd';
 import PaymentFeedback from '@/components/PaymentFeedback';
 import ConsultancyPageHero from '@/components/consultancy/ConsultancyPageHero';
-import ConsultancyTopics from '@/components/consultancy/ConsultancyTopics';
+import ConsultancyIncluded from '@/components/consultancy/ConsultancyIncluded';
 import ConsultancyProcess from '@/components/consultancy/ConsultancyProcess';
+import ConsultancyAnalysisOption from '@/components/consultancy/ConsultancyAnalysisOption';
 import { buildConsultancyServiceSchema } from '@/lib/seo/schemas/service';
 import { buildFaqPageSchema, getConsultancyFaq } from '@/lib/seo/schemas/faq';
 import { buildBreadcrumbSchema } from '@/lib/seo/schemas/breadcrumb';
@@ -103,8 +104,9 @@ export default async function ConsultantaCryptoPage({
 
       <Navbar />
       <ConsultancyPageHero />
-      <ConsultancyTopics />
+      <ConsultancyIncluded />
       <ConsultancyProcess />
+      <ConsultancyAnalysisOption />
       <FaqSection title={t('faqTitle')} items={faqItems} />
       <Footer />
     </main>

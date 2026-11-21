@@ -4,7 +4,7 @@ export const PERSON_ID = `${SITE_URL}/#person`;
 export const ORGANIZATION_ID = `${SITE_URL}/#organization`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;
 
-export const CONTACT_EMAIL = 'consultantacrypto.ro@gmail.com';
+export const CONTACT_EMAIL = 'contact@stirilecrypto.ro';
 
 export const SAME_AS = [
   'https://www.youtube.com/@DanielMihaiCrypto',

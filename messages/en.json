@@ -164,49 +164,53 @@
     "faqTitle": "Frequently asked questions",
     "metadata": {
       "title": "1-on-1 crypto consulting",
-      "description": "A private 60-minute online session with Mihai Daniel about your crypto portfolio, risks, and the decisions you need to make. €200 — book now."
+      "description": "A private 60-minute one-on-one session, plus 2 premium technical analyses delivered by email. €200."
     },
     "hero": {
       "title": "Let's talk about your crypto portfolio.",
-      "description": "A private 60-minute session with Mihai Daniel, focused on your questions about portfolio, risks, and the decisions you need to make.",
-      "details": "60 minutes · Online · €200",
+      "description": "A private 60-minute one-on-one session, plus 2 premium technical analyses, delivered by email.",
+      "details": "60 minutes · Online · €200, with 2 analyses included",
       "sessions": "Over 500 one-on-one sessions in 6 years",
       "cta": "Book the session — €200",
       "ctaAria": "Book the crypto consulting session — 200 euro",
       "imageAlt": "Mihai Daniel — crypto consulting"
     },
-    "topics": {
-      "title": "What questions can you bring?",
-      "intro": "The session adapts to your questions. These are the most common situations.",
-      "portfolio": {
-        "title": "You already have a portfolio",
-        "body": "Am I too exposed on a few coins? Which risks are worth understanding better? We discuss the structure and concentration of your portfolio."
-      },
-      "capital": {
-        "title": "You have available capital",
-        "body": "How should I prepare to enter the market? We discuss your goals, time horizon, and risks before you invest."
-      },
-      "losses": {
-        "title": "You have losses in your portfolio",
-        "body": "What options do I have after a portfolio drop? We discuss your current situation and the implications of the decisions you're considering."
-      }
+    "emailCta": {
+      "label": "Email me at contact@stirilecrypto.ro",
+      "aria": "Email contact@stirilecrypto.ro to book the consulting session"
+    },
+    "included": {
+      "title": "What the package includes",
+      "session": "A private one-on-one 60-minute online session with Mihai Daniel, about your portfolio, risks, and the decisions you need to make.",
+      "analyses": "2 premium technical analyses, the same product as on Știrile Crypto: seven charts (1h, 4h, 12h, 1D, 3D, 1W, 1M) and the token-risk section, for two assets you choose.",
+      "delivery": "The analyses are sent by email, from contact@stirilecrypto.ro. Indicative delivery: 24 hours on working days.",
+      "scope": "The session adapts to your questions. It is not a written audit of the entire portfolio and it does not replace regulated financial advice.",
+      "educational": "The analyses are educational material. They do not contain calls to buy or sell.",
+      "listPrice": "The list price of an analysis bought separately stays 79 RON (large coin, top 30) and 139 RON (altcoin). In the consulting package, the two analyses are included in the €200."
     },
     "process": {
-      "title": "How it works",
-      "intro": "From booking to our discussion, in three steps.",
-      "pay": {
-        "title": "Pay for the session",
-        "body": "Book online through Stripe, securely, in euro. The price is €200 for 60 minutes."
+      "title": "How it works, in 3 steps",
+      "write": {
+        "title": "You write to me.",
+        "body": "An email to contact@stirilecrypto.ro is enough. Tell me briefly what you want to discuss and, if you already know, the two assets for the analyses."
       },
-      "schedule": {
-        "title": "We set a date",
-        "body": "After payment you stay on the page and you get an email. From there you message me on WhatsApp or email and we set the day and time."
+      "meet": {
+        "title": "We set the date and hold the session.",
+        "body": "We meet one-on-one, online, for 60 minutes, based on your questions and your situation."
       },
-      "session": {
-        "title": "Online session",
-        "body": "We meet one-on-one online for 60 minutes, based on your questions and situation."
+      "delivery": {
+        "title": "You receive the analyses by email.",
+        "body": "The two premium technical analyses are sent from contact@stirilecrypto.ro, usually within 24 hours on working days."
       },
-      "prepare": "You can prepare a list of questions in advance that you want to cover in the hour."
+      "prepare": "You can prepare in advance the list of questions you want to cover in the hour."
+    },
+    "analysis": {
+      "kicker": "Separate option",
+      "title": "Technical analysis",
+      "price": "from 79 lei",
+      "body": "One analysis for a single asset: seven timeframes, from 1h to 1M, plus the token-risk section. 79 lei for large coins, 139 lei for an altcoin. Indicative delivery within 24 working hours, by email.",
+      "cta": "Request the analysis",
+      "note": "If you take the consulting package, the two analyses are already included. If you only want the analysis, you order it separately on Știrile Crypto."
     }
   }
 }

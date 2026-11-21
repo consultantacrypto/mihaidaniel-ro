@@ -6,6 +6,7 @@ import { trackBuyConsultancy, trackBuyCourse } from '@/lib/analytics';
 import { openConsentSettings } from '@/lib/consent';
 import { Youtube, Twitter, Linkedin, Mail, MapPin, ShieldCheck, Globe, Clock } from 'lucide-react';
 import StirileCryptoAffiliation from '@/components/StirileCryptoAffiliation';
+import { CONTACT_EMAIL } from '@/lib/seo/constants';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -99,7 +100,7 @@ export default function Footer() {
                 </li>
                 <li className="flex items-center gap-3">
                     <Mail className="text-gray-600 shrink-0" size={16} />
-                    <a href="mailto:consultantacrypto.ro@gmail.com" className="hover:text-white transition-colors">consultantacrypto.ro@gmail.com</a>
+                    <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-white transition-colors">{CONTACT_EMAIL}</a>
                 </li>
                 <li className="flex items-center gap-3">
                     <Clock className="text-gray-600 shrink-0" size={16} />

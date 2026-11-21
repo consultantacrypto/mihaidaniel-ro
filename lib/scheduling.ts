@@ -1,5 +1,5 @@
 export const DEFAULT_WHATSAPP_NUMBER = '40731490099';
-export const DEFAULT_CONTACT_EMAIL = 'consultantacrypto.ro@gmail.com';
+export const DEFAULT_CONTACT_EMAIL = 'contact@stirilecrypto.ro';
 
 export const WHATSAPP_MESSAGES = {
   consultancy: {

@@ -12,12 +12,12 @@ const COPY: Record<
   ro: {
     name: 'Consultanță crypto 1 la 1',
     description:
-      'Sesiune privată online de 60 de minute cu Mihai Daniel: întrebări despre portofoliu crypto, riscuri și deciziile pe care le ai de luat — 200 EUR.',
+      'Sesiune privată de 60 de minute, 1 la 1, online, plus 2 analize tehnice premium livrate pe email — 200 EUR.',
   },
   en: {
     name: '1-on-1 crypto consulting',
     description:
-      'A private 60-minute online session with Mihai Daniel: your questions about crypto portfolio, risks, and the decisions you need to make — €200.',
+      'A private 60-minute one-on-one online session, plus 2 premium technical analyses delivered by email — €200.',
   },
 };
 
