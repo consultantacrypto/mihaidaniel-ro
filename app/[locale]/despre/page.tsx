@@ -1,8 +1,57 @@
+import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import StirileCryptoAffiliation from '@/components/StirileCryptoAffiliation';
 import Image from 'next/image';
 import { Award, ShieldCheck, Users } from 'lucide-react';
+import { SITE_URL } from '@/lib/seo/constants';
+import { buildPageMetadata } from '@/lib/seo/metadata';
+import { routing, type Locale } from '@/i18n/routing';
+
+const PAGE_PATH = '/despre';
+
+function localePath(locale: Locale): string {
+  return locale === routing.defaultLocale ? PAGE_PATH : `/en${PAGE_PATH}`;
+}
+
+const COPY = {
+  ro: {
+    title: 'Despre Mihai Daniel, consultant crypto',
+    description:
+      'Cine este Mihai Daniel (Daniel Mihai): analist și consultant crypto în România, mentorat 1-la-1 și educație de piață.',
+  },
+  en: {
+    title: 'About Mihai Daniel, crypto consultant',
+    description:
+      'Who Mihai Daniel (Daniel Mihai) is: a crypto analyst and consultant in Romania, 1-on-1 mentoring, and market education.',
+  },
+} as const;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isEn = locale === 'en';
+  const path = localePath(isEn ? 'en' : 'ro');
+  const copy = isEn ? COPY.en : COPY.ro;
+
+  return buildPageMetadata({
+    title: copy.title,
+    description: copy.description,
+    path,
+    locale: isEn ? 'en_US' : 'ro_RO',
+    alternates: {
+      canonical: `${SITE_URL}${path}`,
+      languages: {
+        ro: `${SITE_URL}${PAGE_PATH}`,
+        en: `${SITE_URL}/en${PAGE_PATH}`,
+        'x-default': `${SITE_URL}${PAGE_PATH}`,
+      },
+    },
+  });
+}
 
 export default function AboutPage() {
   return (
