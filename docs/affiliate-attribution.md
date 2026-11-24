@@ -24,6 +24,18 @@ Un link gol primește, la log și pe URL-ul de ieșire:
 
 Valorile primite pe link le păstrăm. Completăm doar câmpurile lipsă dintre cele trei. `utm_content` și `utm_term` rămân goale dacă nu le pui.
 
+`s` ține loc de `utm_source` când `utm_source` lipsește. Valorile acceptate pentru canalele scurte sunt `x`, `yt` și `tt`:
+
+```text
+https://mihaidaniel.ro/r/bybit?s=x
+https://mihaidaniel.ro/r/bybit?s=yt
+https://mihaidaniel.ro/r/bybit?s=tt
+```
+
+`utm_source` câștigă dacă ambele sunt pe link. `s` trece prin aceeași curățare ca `utm_source`: caracterele de control se scot, spațiile de la capete se taie, lungimea maximă este 120. Gol sau invalid după curățare, sursa rămâne `mihaidaniel`.
+
+`s` nu se copiază pe URL-ul partenerului. Valoarea pleacă mai departe ca `utm_source`, la fel ca un `utm_source` pus explicit. `utm_medium` și `utm_campaign` rămân cele implicite dacă nu le trimiți.
+
 ### Canale (`utm_source`)
 
 | Canal | `utm_source` | Unde stă linkul |

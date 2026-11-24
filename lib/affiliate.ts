@@ -107,11 +107,17 @@ export type ResolvedAffiliateQuery = {
   sid?: string;
 };
 
-/** Inbound utm_* win. Missing source, medium, and campaign get the defaults. */
+/**
+ * Inbound utm_* win. `s` fills utm_source only when that key is missing or empty.
+ * `s` uses the same value sanitizer as utm_source (control characters stripped,
+ * trimmed, max 120). An empty result is ignored. Missing source, medium, and
+ * campaign then get the defaults. `s` itself is not an outbound parameter.
+ */
 export function resolveAffiliateQuery(searchParams: URLSearchParams): ResolvedAffiliateQuery {
   const utm: Record<string, string> = {};
   let ref: string | undefined;
   let sid: string | undefined;
+  let shortSource: string | undefined;
 
   for (const [rawKey, rawValue] of searchParams.entries()) {
     const key = rawKey.toLowerCase();
@@ -125,9 +131,15 @@ export function resolveAffiliateQuery(searchParams: URLSearchParams): ResolvedAf
       if (!sid) sid = value;
       continue;
     }
+    if (key === 's') {
+      if (!shortSource) shortSource = value;
+      continue;
+    }
     if (!UTM_KEY.test(key) || utm[key] || Object.keys(utm).length >= MAX_UTM_KEYS) continue;
     utm[key] = value;
   }
+
+  if (!utm.utm_source && shortSource) utm.utm_source = shortSource;
 
   for (const [key, value] of Object.entries(DEFAULT_UTM)) {
     if (!utm[key]) utm[key] = value;
@@ -150,7 +162,8 @@ function orderedUtmEntries(utm: Record<string, string>): Array<[string, string]>
 
 /**
  * Appends utm_* that the destination does not already set.
- * Does not append ref or sid: those names collide with partner codes.
+ * Does not append ref, sid, or the short source alias s: those names collide
+ * with partner codes. A source that arrived as s is already utm_source here.
  */
 export function buildOutboundUrl(destination: string, utm: Record<string, string>): string {
   const url = new URL(destination);
