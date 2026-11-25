@@ -40,6 +40,9 @@ describe('consultancy package config', () => {
       CONSULTANCY_PACKAGES.sesiune.checkoutName,
       CHECKOUT_PRODUCTS.consultancy.name
     );
+    assert.equal(CONSULTANCY_PACKAGES.sesiune.includedAnalyses, 2);
+    assert.equal(CONSULTANCY_PACKAGES['pachet-3'].includedAnalyses, 3);
+    assert.equal(CONSULTANCY_PACKAGES['mentorat-6'].includedAnalyses, 5);
     assert.equal(CONSULTANCY_PACKAGES.sesiune.useCatalogPrice, true);
     assert.equal(CONSULTANCY_PACKAGES['pachet-3'].useCatalogPrice, false);
     assert.equal(CONSULTANCY_PACKAGES['mentorat-6'].useCatalogPrice, false);
@@ -117,6 +120,7 @@ describe('resolveCheckoutSelection', () => {
     assert.equal(selected.lineItem.price, undefined);
     assert.equal(selected.lineItem.price_data?.currency, 'eur');
     assert.equal(selected.lineItem.price_data?.unit_amount, 54000);
+    assert.equal(selected.lineItem.price_data?.product_data?.metadata?.included_analyses, '3');
     assert.equal(
       selected.lineItem.price_data?.product_data?.name,
       'Pachet 3 sesiuni — Consultanță Crypto'
@@ -137,6 +141,7 @@ describe('resolveCheckoutSelection', () => {
     if (!selected.ok) return;
     assert.equal(selected.type, 'consultancy');
     assert.equal(selected.lineItem.price_data?.unit_amount, 150000);
+    assert.equal(selected.lineItem.price_data?.product_data?.metadata?.included_analyses, '5');
     assert.equal(selected.lineItem.price_data?.currency, 'eur');
     assert.equal(
       selected.lineItem.price_data?.product_data?.name,
@@ -215,6 +220,7 @@ describe('checkout session metadata', () => {
     });
     assert.equal(params.line_items?.[0], lineItem);
     assert.equal(params.metadata.package_id, 'pachet-3');
+    assert.equal(params.metadata.included_analyses, '3');
     assert.equal(params.metadata.type, 'consultancy');
     assert.equal(params.success_url.includes('type=consultancy'), true);
     assert.equal(JSON.stringify(params).includes('123'), false);
@@ -233,6 +239,14 @@ describe('consultancy offers in structured data and copy', () => {
         ['Sesiune 1:1', '200', 'EUR'],
         ['Pachet 3 sesiuni', '540', 'EUR'],
         ['Mentorat 6 săptămâni', '1500', 'EUR'],
+      ]
+    );
+    assert.deepEqual(
+      schema.offers.map((offer) => offer.description),
+      [
+        '60 de minute, 1 la 1, cu 2 analize tehnice.',
+        '3 × 60 min, cu 3 analize tehnice.',
+        '6 × 60 min, chat între sesiuni și 5 analize tehnice.',
       ]
     );
     const serialized = JSON.stringify(schema);
@@ -300,6 +314,15 @@ describe('follow-up copy', () => {
   it('names the hour only for the 1:1 purchase and otherwise says to set the dates', () => {
     const single = CONSULTANCY_PACKAGES.sesiune.checkoutName;
     assert.match(consultancySuccessMessage('ro', single), /data și ora sesiunii/);
+    assert.match(consultancySuccessMessage('ro', single), /Sunt incluse 2 analize tehnice/);
+    assert.match(
+      consultancySuccessMessage('ro', CONSULTANCY_PACKAGES['pachet-3'].checkoutName),
+      /Sunt incluse 3 analize tehnice/
+    );
+    assert.match(
+      consultancySuccessMessage('ro', CONSULTANCY_PACKAGES['mentorat-6'].checkoutName),
+      /Sunt incluse 5 analize tehnice/
+    );
     assert.match(
       consultancySuccessMessage('ro', CONSULTANCY_PACKAGES['pachet-3'].checkoutName),
       /să stabilim datele/

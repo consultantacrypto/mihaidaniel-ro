@@ -164,7 +164,7 @@
     "faqTitle": "Întrebări frecvente",
     "metadata": {
       "title": "Consultanță crypto: sesiune, pachet, mentorat",
-      "description": "Sesiune 1:1, 60 min, 200 €, cu 2 analize tehnice. Pachet 3 sesiuni, 540 €. Mentorat 6 săptămâni, 1.500 €. Nu este sfat financiar."
+      "description": "Sesiune 1:1, 60 min, 200 €, cu 2 analize tehnice. Pachet 3 sesiuni, 540 €, cu 3 analize. Mentorat 6 săptămâni, 1.500 €, cu chat și 5 analize. Nu este sfat financiar."
     },
     "hero": {
       "title": "Hai să vorbim despre crypto, pe situația ta.",
@@ -205,37 +205,37 @@
       "sesiune": {
         "duration": "60 min",
         "point1": "O oră, 1 la 1, online",
-        "point2": "2 analize tehnice premium, pe email"
+        "point2": "{count} analize tehnice premium, pe email"
       },
       "pack3": {
         "duration": "3 × 60 min",
         "forWho": "Pentru cine vrea continuitate, nu o singură oră.",
         "point1": "Inclus: 3 × 60 min, 1 la 1, online",
         "point2": "Le programăm împreună, pe rând",
-        "notIncluded": "Nu include cele 2 analize tehnice. Ele rămân la sesiunea de 200 €."
+        "point3": "{count} analize tehnice premium, pe email"
       },
       "mentor": {
         "duration": "6 × 60 min",
         "point1": "Inclus: 6 × 60 min, 1 la 1, pe șase săptămâni",
         "point2": "Chat între sesiuni",
-        "notIncluded": "Nu include cele 2 analize tehnice. Chat-ul e între sesiuni și nu înlocuiește ora."
+        "point3": "{count} analize tehnice premium, pe email"
       }
     },
     "included": {
-      "title": "Ce include sesiunea de 60 de minute",
-      "lead": "Cele 2 analize tehnice sunt la sesiunea de 200 €. La pachetul de 3 sesiuni și la mentorat lucrăm pe ore și, la mentorat, pe chat. Nu multiplic analizele.",
+      "title": "Analizele incluse",
+      "lead": "Fiecare variantă include analize tehnice premium: 2 la sesiunea de 200 €, 3 la pachetul de 540 € și 5 la mentoratul de 1.500 €. O analiză înseamnă șapte grafice și secțiunea Risc token, pentru un activ ales de tine.",
       "session": "O sesiune privată, 1 la 1, de 60 de minute, online, cu Mihai Daniel, despre situația ta, riscuri și deciziile pe care le ai de luat.",
-      "analyses": "2 analize tehnice premium, același produs ca pe Știrile Crypto: șapte grafice (1h, 4h, 12h, 1D, 3D, 1W, 1M) și secțiunea Risc token, pentru două active alese de tine.",
+      "analyses": "Analize tehnice premium, același produs ca pe Știrile Crypto: șapte grafice (1h, 4h, 12h, 1D, 3D, 1W, 1M) și secțiunea Risc token, pentru fiecare activ ales de tine.",
       "delivery": "Analizele pleacă pe email, de la contact@stirilecrypto.ro. Livrare orientativă: 24 de ore lucrătoare.",
       "scope": "Sesiunea se adaptează întrebărilor tale. Nu este un audit scris al întregului portofoliu și nu înlocuiește un sfat financiar reglementat.",
       "educational": "Analizele sunt material educațional. Nu conțin apeluri de cumpărare sau de vânzare.",
-      "listPrice": "Tarifele de listă ale unei analize luate separat rămân 79 RON (monedă mare, top 30) și 139 RON (altcoin). În sesiunea de 200 €, cele două analize sunt incluse."
+      "listPrice": "Tarifele de listă ale unei analize luate separat rămân 79 RON (monedă mare, top 30) și 139 RON (altcoin). În consultanță sunt incluse: 2, 3 sau 5, după variantă."
     },
     "process": {
       "title": "Cum se desfășoară, în 3 pași",
       "write": {
         "title": "Plătești întâi.",
-        "body": "Alegi varianta de pe pagină și plătești. Apoi îmi scrii pe contact@stirilecrypto.ro: ce vrei să discutăm și, dacă ai luat sesiunea cu analize, cele două active."
+        "body": "Alegi varianta de pe pagină și plătești. Apoi îmi scrii pe contact@stirilecrypto.ro: ce vrei să discutăm și activele pentru analizele incluse."
       },
       "meet": {
         "title": "Stabilim datele.",
@@ -243,7 +243,7 @@
       },
       "delivery": {
         "title": "Rămânem pe ce am stabilit.",
-        "body": "La sesiunea de 200 €, cele două analize pleacă pe email, de regulă în 24 de ore lucrătoare. La mentorat, rămânem pe chat între întâlniri."
+        "body": "Analizele incluse pleacă pe email, de regulă în 24 de ore lucrătoare. La mentorat, rămânem și pe chat între întâlniri."
       },
       "prepare": "Poți pregăti dinainte o listă scurtă de întrebări.",
       "cta": "Alege un pachet",
@@ -255,7 +255,7 @@
       "price": "de la 79 lei",
       "body": "O analiză pentru un singur activ: șapte intervale, de la 1h la 1M, plus secțiunea de risc token. 79 lei pentru monedele mari, 139 lei pentru altcoin. Livrare orientativă în 24 de ore lucrătoare, pe email.",
       "cta": "Cere analiza",
-      "note": "Dacă iei sesiunea de 200 €, cele două analize sunt deja incluse. Dacă vrei doar analiza, o comanzi separat de pe Știrile Crypto."
+      "note": "Dacă iei o variantă de consultanță, analizele din pachet sunt deja incluse. Dacă vrei doar analiza, o comanzi separat de pe Știrile Crypto."
     }
   }
 }

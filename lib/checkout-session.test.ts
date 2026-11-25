@@ -27,7 +27,7 @@ describe('buildCheckoutSessionCreateParams', () => {
       params.success_url,
       `${BASE}/consultanta-crypto?success=true&type=consultancy&session_id={CHECKOUT_SESSION_ID}`
     );
-    assert.deepEqual(params.metadata, { type: 'consultancy' });
+    assert.deepEqual(params.metadata, { type: 'consultancy', included_analyses: '2' });
     assert.equal(params.client_reference_id, undefined);
     assert.deepEqual(Object.keys(params).sort(), [
       'allow_promotion_codes',
@@ -104,6 +104,7 @@ describe('buildCheckoutSessionCreateParams', () => {
 
     assert.deepEqual(params.metadata, {
       type: 'consultancy',
+      included_analyses: '2',
       utm_source: 'x',
       utm_medium: 'bio',
       utm_campaign: 'consult',

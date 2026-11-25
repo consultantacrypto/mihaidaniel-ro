@@ -17,6 +17,8 @@ export type ConsultancyPackage = {
    * The other packages always use inline price_data.
    */
   useCatalogPrice: boolean;
+  /** Premium technical analyses included with this purchase. Server-side only. */
+  includedAnalyses: number;
 };
 
 export const CONSULTANCY_PACKAGES: Record<ConsultancyPackageId, ConsultancyPackage> = {
@@ -27,6 +29,7 @@ export const CONSULTANCY_PACKAGES: Record<ConsultancyPackageId, ConsultancyPacka
     unitAmount: 20000,
     currency: 'eur',
     useCatalogPrice: true,
+    includedAnalyses: 2,
   },
   'pachet-3': {
     id: 'pachet-3',
@@ -35,6 +38,7 @@ export const CONSULTANCY_PACKAGES: Record<ConsultancyPackageId, ConsultancyPacka
     unitAmount: 54000,
     currency: 'eur',
     useCatalogPrice: false,
+    includedAnalyses: 3,
   },
   'mentorat-6': {
     id: 'mentorat-6',
@@ -43,6 +47,7 @@ export const CONSULTANCY_PACKAGES: Record<ConsultancyPackageId, ConsultancyPacka
     unitAmount: 150000,
     currency: 'eur',
     useCatalogPrice: false,
+    includedAnalyses: 5,
   },
 };
 
@@ -65,6 +70,41 @@ export function consultancyPackageById(
 ): ConsultancyPackage | null {
   if (!value || !isConsultancyPackageId(value)) return null;
   return CONSULTANCY_PACKAGES[value];
+}
+
+/** Missing package id is the original 1:1 session, which includes 2 analyses. */
+export function includedAnalysesFor(packageId: string | null | undefined): number {
+  return consultancyPackageById(packageId)?.includedAnalyses
+    ?? CONSULTANCY_PACKAGES.sesiune.includedAnalyses;
+}
+
+export function includedAnalysesClause(
+  count: number,
+  locale: SchedulingLocale
+): string {
+  if (locale === 'en') {
+    return count === 1
+      ? '1 technical analysis is included.'
+      : `${count} technical analyses are included.`;
+  }
+  return count === 1
+    ? 'Este inclusă 1 analiză tehnică.'
+    : `Sunt incluse ${count} analize tehnice.`;
+}
+
+export function consultancyOfferDescription(
+  id: ConsultancyPackageId,
+  locale: SchedulingLocale
+): string {
+  const count = CONSULTANCY_PACKAGES[id].includedAnalyses;
+  if (locale === 'en') {
+    if (id === 'sesiune') return `60 minutes, 1:1, with ${count} technical analyses.`;
+    if (id === 'pachet-3') return `3 × 60 min, with ${count} technical analyses.`;
+    return `6 × 60 min, chat between sessions, and ${count} technical analyses.`;
+  }
+  if (id === 'sesiune') return `60 de minute, 1 la 1, cu ${count} analize tehnice.`;
+  if (id === 'pachet-3') return `3 × 60 min, cu ${count} analize tehnice.`;
+  return `6 × 60 min, chat între sesiuni și ${count} analize tehnice.`;
 }
 
 /** 200 stays "200". Romanian groups thousands with a dot: "1.500". English uses a comma. */
@@ -123,27 +163,37 @@ export function consultancySuccessMessage(
   const pack = CONSULTANCY_PACKAGES['pachet-3'].checkoutName;
   const mentor = CONSULTANCY_PACKAGES['mentorat-6'].checkoutName;
 
+  const known =
+    itemName === single
+      ? CONSULTANCY_PACKAGES.sesiune
+      : itemName === pack
+        ? CONSULTANCY_PACKAGES['pachet-3']
+        : itemName === mentor
+          ? CONSULTANCY_PACKAGES['mentorat-6']
+          : null;
+  const analyses = known ? ` ${includedAnalysesClause(known.includedAnalyses, locale)}` : '';
+
   if (locale === 'en') {
     if (itemName === single) {
-      return 'To set the day and time of the session, message me on WhatsApp. You also get a confirmation email.';
+      return `To set the day and time of the session, message me on WhatsApp. You also get a confirmation email.${analyses}`;
     }
     if (itemName === pack) {
-      return 'To set the dates for the three sessions, message me on WhatsApp. You also get a confirmation email.';
+      return `To set the dates for the three sessions, message me on WhatsApp. You also get a confirmation email.${analyses}`;
     }
     if (itemName === mentor) {
-      return 'To set the dates across the six weeks, message me on WhatsApp. You also get a confirmation email.';
+      return `To set the dates across the six weeks, message me on WhatsApp. You also get a confirmation email.${analyses}`;
     }
     return 'Message me on WhatsApp so we can set the dates. You also get a confirmation email.';
   }
 
   if (itemName === single) {
-    return 'Pentru a stabili data și ora sesiunii, scrie-mi pe WhatsApp. Primești și un email de confirmare.';
+    return `Pentru a stabili data și ora sesiunii, scrie-mi pe WhatsApp. Primești și un email de confirmare.${analyses}`;
   }
   if (itemName === pack) {
-    return 'Ca să stabilim datele celor trei sesiuni, scrie-mi pe WhatsApp. Primești și un email de confirmare.';
+    return `Ca să stabilim datele celor trei sesiuni, scrie-mi pe WhatsApp. Primești și un email de confirmare.${analyses}`;
   }
   if (itemName === mentor) {
-    return 'Ca să stabilim datele celor șase săptămâni, scrie-mi pe WhatsApp. Primești și un email de confirmare.';
+    return `Ca să stabilim datele celor șase săptămâni, scrie-mi pe WhatsApp. Primești și un email de confirmare.${analyses}`;
   }
   return 'Ca să stabilim datele, scrie-mi pe WhatsApp. Primești și un email de confirmare.';
 }

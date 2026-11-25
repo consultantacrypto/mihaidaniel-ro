@@ -35,7 +35,7 @@ const CONSULTANCY_FAQ_BY_LOCALE: Record<SchemaLocale, FaqItem[]> = {
     {
       question: 'Ce variante există?',
       answer:
-        'Trei. Sesiune 1:1: 60 de minute, 200 €, cu 2 analize tehnice premium. Pachet 3 sesiuni: 540 €, cu 10% mai puțin decât 3 × 200 €. Mentorat 6 săptămâni: 6 sesiuni plus chat între sesiuni, 1.500 €. Plata se face în euro, prin Stripe.',
+        'Trei. Sesiune 1:1: 60 de minute, 200 €, cu 2 analize tehnice premium. Pachet 3 sesiuni: 540 €, 3 × 60 min, cu 3 analize tehnice. Mentorat 6 săptămâni: 6 × 60 min, chat între sesiuni și 5 analize tehnice, 1.500 €. Plata se face în euro, prin Stripe.',
     },
     {
       question: 'Pentru cine este?',
@@ -45,7 +45,7 @@ const CONSULTANCY_FAQ_BY_LOCALE: Record<SchemaLocale, FaqItem[]> = {
     {
       question: 'Ce include sesiunea de 200 €?',
       answer:
-        'O sesiune privată online de 60 de minute, 1 la 1, plus 2 analize tehnice premium (șapte grafice și secțiunea Risc token, pentru două active alese de tine). Analizele pleacă pe email, de regulă în 24 de ore lucrătoare. Cele 2 analize sunt la această sesiune. Nu le înmulțesc automat la pachetul de 3 sesiuni sau la mentorat.',
+        'O sesiune privată online de 60 de minute, 1 la 1, plus 2 analize tehnice premium (șapte grafice și secțiunea Risc token, pentru fiecare activ ales de tine). Analizele pleacă pe email, de regulă în 24 de ore lucrătoare. Pachetul de 3 sesiuni include 3 analize, iar mentoratul de 6 săptămâni include 5, plus chat între sesiuni.',
     },
     {
       question: 'Cum rezerv?',
@@ -72,7 +72,7 @@ const CONSULTANCY_FAQ_BY_LOCALE: Record<SchemaLocale, FaqItem[]> = {
     {
       question: 'What are the options?',
       answer:
-        'Three. 1:1 session: 60 minutes, €200, with 2 premium technical analyses. 3-session pack: €540, which is 10% less than 3 × €200. 6-week mentoring: 6 sessions plus chat between sessions, €1,500. You pay in euro, through Stripe.',
+        'Three. 1:1 session: 60 minutes, €200, with 2 premium technical analyses. 3-session pack: €540, 3 × 60 min, with 3 technical analyses. 6-week mentoring: 6 × 60 min, chat between sessions, and 5 technical analyses, €1,500. You pay in euro, through Stripe.',
     },
     {
       question: 'Who is it for?',
@@ -82,7 +82,7 @@ const CONSULTANCY_FAQ_BY_LOCALE: Record<SchemaLocale, FaqItem[]> = {
     {
       question: 'What does the €200 session include?',
       answer:
-        'A private 60-minute online session, one-on-one, plus 2 premium technical analyses (seven charts and the token-risk section, for two assets you choose). The analyses are sent by email, usually within 24 working hours. Those 2 analyses belong to this session. I do not automatically multiply them on the 3-session pack or on mentoring.',
+        'A private 60-minute online session, one-on-one, plus 2 premium technical analyses (seven charts and the token-risk section, for each asset you choose). The analyses are sent by email, usually within 24 working hours. The 3-session pack includes 3 analyses, and the 6-week mentoring includes 5, plus chat between sessions.',
     },
     {
       question: 'How do I book?',

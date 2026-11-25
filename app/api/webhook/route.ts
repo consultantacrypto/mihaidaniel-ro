@@ -102,6 +102,7 @@ export async function POST(request: Request) {
     customerName,
     productType,
     packageId,
+    includedAnalyses: session.metadata?.included_analyses,
     clientReferenceId: session.client_reference_id,
     utm_source: session.metadata?.utm_source,
     utm_medium: session.metadata?.utm_medium,

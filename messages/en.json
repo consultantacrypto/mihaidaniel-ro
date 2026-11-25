@@ -164,7 +164,7 @@
     "faqTitle": "Frequently asked questions",
     "metadata": {
       "title": "Crypto consulting: session, pack, mentoring",
-      "description": "1:1 session, 60 min, €200, with 2 technical analyses. 3-session pack, €540. 6-week mentoring, €1,500. Not financial advice."
+      "description": "1:1 session, 60 min, €200, with 2 technical analyses. 3-session pack, €540, with 3 analyses. 6-week mentoring, €1,500, with chat and 5 analyses. Not financial advice."
     },
     "hero": {
       "title": "Let's talk about crypto, for your situation.",
@@ -205,37 +205,37 @@
       "sesiune": {
         "duration": "60 min",
         "point1": "One hour, 1:1, online",
-        "point2": "2 premium technical analyses, by email"
+        "point2": "{count} premium technical analyses, by email"
       },
       "pack3": {
         "duration": "3 × 60 min",
         "forWho": "For people who want continuity, not a single hour.",
         "point1": "Included: 3 × 60 min, 1:1, online",
         "point2": "We schedule them together, one by one",
-        "notIncluded": "Does not include the 2 technical analyses. Those stay with the €200 session."
+        "point3": "{count} premium technical analyses, by email"
       },
       "mentor": {
         "duration": "6 × 60 min",
         "point1": "Included: 6 × 60 min, 1:1, across six weeks",
         "point2": "Chat between sessions",
-        "notIncluded": "Does not include the 2 technical analyses. Chat sits between sessions and does not replace the hour."
+        "point3": "{count} premium technical analyses, by email"
       }
     },
     "included": {
-      "title": "What the 60-minute session includes",
-      "lead": "The 2 technical analyses belong to the €200 session. The 3-session pack and mentoring are hours of work, and mentoring includes chat. I don't multiply the analyses.",
+      "title": "The included analyses",
+      "lead": "Every option includes premium technical analyses: 2 with the €200 session, 3 with the €540 pack, and 5 with the €1,500 mentoring. One analysis is seven charts and the token-risk section, for one asset you choose.",
       "session": "A private one-on-one 60-minute online session with Mihai Daniel, about your situation, the risks, and the decisions you need to make.",
-      "analyses": "2 premium technical analyses, the same product as on Știrile Crypto: seven charts (1h, 4h, 12h, 1D, 3D, 1W, 1M) and the token-risk section, for two assets you choose.",
+      "analyses": "Premium technical analyses, the same product as on Știrile Crypto: seven charts (1h, 4h, 12h, 1D, 3D, 1W, 1M) and the token-risk section, for each asset you choose.",
       "delivery": "The analyses are sent by email, from contact@stirilecrypto.ro. Indicative delivery: 24 working hours.",
       "scope": "The session adapts to your questions. It is not a written audit of the entire portfolio and it does not replace regulated financial advice.",
       "educational": "The analyses are educational material. They do not contain calls to buy or sell.",
-      "listPrice": "The list price of an analysis bought separately stays 79 RON (large coin, top 30) and 139 RON (altcoin). In the €200 session, the two analyses are included."
+      "listPrice": "The list price of an analysis bought separately stays 79 RON (large coin, top 30) and 139 RON (altcoin). Consulting includes 2, 3, or 5, depending on the option."
     },
     "process": {
       "title": "How it works, in 3 steps",
       "write": {
         "title": "You pay first.",
-        "body": "Pick an option on this page and pay. Then email me at contact@stirilecrypto.ro: what you want to discuss and, if you took the session with analyses, the two assets."
+        "body": "Pick an option on this page and pay. Then email me at contact@stirilecrypto.ro: what you want to discuss and the assets for the included analyses."
       },
       "meet": {
         "title": "We set the dates.",
@@ -243,7 +243,7 @@
       },
       "delivery": {
         "title": "We stay with what we decided.",
-        "body": "On the €200 session, the two analyses go out by email, usually within 24 working hours. On mentoring, we stay in chat between meetings."
+        "body": "The included analyses go out by email, usually within 24 working hours. On mentoring, we also stay in chat between meetings."
       },
       "prepare": "You can prepare a short list of questions in advance.",
       "cta": "Choose a package",
@@ -255,7 +255,7 @@
       "price": "from 79 lei",
       "body": "One analysis for a single asset: seven timeframes, from 1h to 1M, plus the token-risk section. 79 lei for large coins, 139 lei for an altcoin. Indicative delivery within 24 working hours, by email.",
       "cta": "Request the analysis",
-      "note": "If you take the €200 session, the two analyses are already included. If you only want the analysis, you order it separately on Știrile Crypto."
+      "note": "If you take a consulting option, the analyses in that package are already included. If you only want the analysis, you order it separately on Știrile Crypto."
     }
   }
 }

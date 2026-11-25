@@ -43,7 +43,11 @@ export default function ConsultancyPackages() {
             const price = formatEurPrice(pkg.unitAmount, locale);
             const name = pkg.offerName[locale];
             const highlighted = id === 'pachet-3';
-            const points = [t(`${key}.point1`), t(`${key}.point2`)] as const;
+            const points = [
+              t(`${key}.point1`),
+              id === 'sesiune' ? t(`${key}.point2`, { count: pkg.includedAnalyses }) : t(`${key}.point2`),
+              id === 'sesiune' ? null : t(`${key}.point3`, { count: pkg.includedAnalyses }),
+            ].filter((point): point is string => Boolean(point));
 
             return (
               <article
@@ -92,10 +96,6 @@ export default function ConsultancyPackages() {
                     </li>
                   ))}
                 </ul>
-
-                {id !== 'sesiune' ? (
-                  <p className="mt-4 text-sm leading-relaxed text-gray-500">{t(`${key}.notIncluded`)}</p>
-                ) : null}
 
                 <div className="mt-8">
                   <ConsultancyCheckoutButton

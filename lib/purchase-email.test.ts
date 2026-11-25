@@ -47,7 +47,11 @@ describe('purchase emails', () => {
       null,
       'mentorat-6'
     );
+    assert.match(single, /Sunt incluse 2 analize tehnice/);
     assert.match(mentoring, /Mentorat 6 săptămâni — Consultanță Crypto/);
+    assert.match(mentoring, /Sunt incluse 5 analize tehnice/);
+    const pack = buildConsultancyEmailHtml(resolveContactChannels({}), null, 'pachet-3');
+    assert.match(pack, /Sunt incluse 3 analize tehnice/);
     assert.match(mentoring, /Pentru a fixa datele/);
     assert.doesNotMatch(mentoring, /profit garantat/);
     assert.doesNotMatch(mentoring, /Deschide calendarul/);

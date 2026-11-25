@@ -1,4 +1,9 @@
-import { consultancyFollowupMessage, consultancyPackageById } from './consultancy-packages';
+import {
+  consultancyFollowupMessage,
+  consultancyPackageById,
+  includedAnalysesClause,
+  includedAnalysesFor,
+} from './consultancy-packages';
 import { escapeHtml } from './html';
 import {
   WHATSAPP_MESSAGES,
@@ -54,11 +59,13 @@ export function buildConsultancyEmailHtml(
     pkg && !pkg.useCatalogPrice
       ? `Îți mulțumim pentru achiziția <strong>${escapeHtml(pkg.checkoutName)}</strong>.`
       : 'Îți mulțumim pentru achiziția sesiunii de <strong>Consultanță VIP Crypto</strong>.';
+  const analysesLine = includedAnalysesClause(includedAnalysesFor(pkg?.id), 'ro');
 
   return `
     <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #111;">
       <p>${greeting(customerName)}</p>
       <p>${purchaseLine}</p>
+      <p>${analysesLine}</p>
       <p>${contact}</p>
       <p>Cu respect,<br/><strong>Mihai Daniel</strong></p>
     </div>

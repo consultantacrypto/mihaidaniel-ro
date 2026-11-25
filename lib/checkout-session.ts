@@ -4,6 +4,7 @@ import {
   toClientReferenceId,
   type Attribution,
 } from './attribution';
+import { includedAnalysesFor } from './consultancy-packages';
 import type { CheckoutProductType } from './stripe';
 
 type CheckoutLineItem = {
@@ -57,6 +58,10 @@ export function buildCheckoutSessionCreateParams(input: {
   const metadata: Record<string, string> = { type: input.type };
 
   if (input.packageId) metadata.package_id = input.packageId;
+  if (input.type === 'consultancy') {
+    const packageId = input.packageId || 'sesiune';
+    metadata.included_analyses = String(includedAnalysesFor(packageId));
+  }
 
   if (attribution.utm_source) metadata.utm_source = attribution.utm_source;
   if (attribution.utm_medium) metadata.utm_medium = attribution.utm_medium;

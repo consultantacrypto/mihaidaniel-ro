@@ -37,6 +37,7 @@ function inlinePackageLineItem(pkg: ConsultancyPackage): CheckoutLineItem {
         metadata: {
           checkout_type: 'consultancy',
           package_id: pkg.id,
+          included_analyses: String(pkg.includedAnalyses),
         },
       },
     },
