@@ -7,6 +7,7 @@ import {
   CONSULTANCY_PACKAGE_ORDER,
   CONSULTANCY_PACKAGES,
   consultancyFollowupMessage,
+  consultancySuccessMessage,
   formatEurAmount,
   formatEurPrice,
   threeSessionCompare,
@@ -245,6 +246,8 @@ describe('consultancy offers in structured data and copy', () => {
     );
     assert.equal(english.offers[2].name, '6-week mentoring');
     assert.equal(english.offers[2].priceCurrency, 'EUR');
+    assert.equal(schema.serviceType, 'Educational Consulting');
+    assert.equal(english.serviceType, 'Educational Consulting');
   });
 
   it('says Dani works with beginners and traders, and that this is not financial advice', () => {
@@ -292,6 +295,22 @@ describe('follow-up copy', () => {
       consultancyFollowupMessage('ro', CONSULTANCY_PACKAGES.sesiune.checkoutName),
       WHATSAPP_MESSAGES.consultancy.ro
     );
+  });
+
+  it('names the hour only for the 1:1 purchase and otherwise says to set the dates', () => {
+    const single = CONSULTANCY_PACKAGES.sesiune.checkoutName;
+    assert.match(consultancySuccessMessage('ro', single), /data și ora sesiunii/);
+    assert.match(
+      consultancySuccessMessage('ro', CONSULTANCY_PACKAGES['pachet-3'].checkoutName),
+      /să stabilim datele/
+    );
+    assert.match(
+      consultancySuccessMessage('ro', CONSULTANCY_PACKAGES['mentorat-6'].checkoutName),
+      /să stabilim datele/
+    );
+    assert.match(consultancySuccessMessage('ro', null), /să stabilim datele/);
+    assert.doesNotMatch(consultancySuccessMessage('ro', null), /data și ora sesiunii/);
+    assert.match(consultancySuccessMessage('en', null), /set the dates/);
   });
 
   it('does not call a 6-week purchase a single hour', () => {

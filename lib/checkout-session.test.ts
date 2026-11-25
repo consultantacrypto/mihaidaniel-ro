@@ -1,6 +1,9 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
-import { buildCheckoutSessionCreateParams } from './checkout-session';
+import {
+  buildCheckoutSessionCreateParams,
+  checkoutAllowsPromotionCodes,
+} from './checkout-session';
 
 const BASE = 'https://www.mihaidaniel.ro';
 const lineItem = { quantity: 1, price: 'price_consultancy' };
@@ -48,6 +51,27 @@ describe('buildCheckoutSessionCreateParams', () => {
     );
     assert.equal(params.cancel_url, `${BASE}/?canceled=true`);
     assert.deepEqual(params.metadata, { type: 'course' });
+  });
+
+  it('allows a promo code on the 200 € session and not on the other packages', () => {
+    assert.equal(checkoutAllowsPromotionCodes('consultancy', null), true);
+    assert.equal(checkoutAllowsPromotionCodes('consultancy', 'sesiune'), true);
+    assert.equal(checkoutAllowsPromotionCodes('course', null), true);
+
+    const pack = buildCheckoutSessionCreateParams({
+      type: 'consultancy',
+      baseUrl: BASE,
+      lineItem,
+      packageId: 'pachet-3',
+    });
+    const mentoring = buildCheckoutSessionCreateParams({
+      type: 'consultancy',
+      baseUrl: BASE,
+      lineItem,
+      packageId: 'mentorat-6',
+    });
+    assert.equal(pack.allow_promotion_codes, false);
+    assert.equal(mentoring.allow_promotion_codes, false);
   });
 
   it('adds a package id without changing the success URL or the line item', () => {

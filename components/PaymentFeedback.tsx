@@ -5,7 +5,7 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useLocale } from 'next-intl';
 import { CheckCircle2, X } from 'lucide-react';
 import { trackPurchaseOnce } from '@/lib/analytics';
-import { consultancyFollowupMessage } from '@/lib/consultancy-packages';
+import { consultancyFollowupMessage, consultancySuccessMessage } from '@/lib/consultancy-packages';
 import {
   WHATSAPP_MESSAGES,
   coercePublicContactChannels,
@@ -21,8 +21,6 @@ type FeedbackStatus = 'success' | 'canceled' | null;
 const COPY = {
   ro: {
     successTitle: 'Plată Confirmată! 🎉',
-    consultancy:
-      'Pentru a stabili data și ora sesiunii, scrie-mi pe WhatsApp. Primești și un email de confirmare.',
     whatsapp: 'Scrie-mi pe WhatsApp',
     emailLead: 'Sau scrie-mi pe email la',
     close: 'Închide',
@@ -37,8 +35,6 @@ const COPY = {
   },
   en: {
     successTitle: 'Payment confirmed',
-    consultancy:
-      'To set the day and time, message me on WhatsApp. You also get a confirmation email.',
     whatsapp: 'Message me on WhatsApp',
     emailLead: 'Or email me at',
     close: 'Close',
@@ -217,6 +213,7 @@ export default function PaymentFeedback() {
           productType={productType}
           channels={channels}
           whatsappLink={whatsappLink}
+          itemName={itemName}
         />
 
         <button
@@ -236,18 +233,22 @@ function SuccessBody({
   productType,
   channels,
   whatsappLink,
+  itemName,
 }: {
   locale: SchedulingLocale;
   productType: CheckoutProductType | null;
   channels: PublicContactChannels;
   whatsappLink: string | null;
+  itemName: string | null;
 }) {
   const copy = COPY[locale];
 
   if (productType === 'consultancy') {
     return (
       <div className="space-y-4 text-left">
-        <p className="leading-relaxed text-gray-300">{copy.consultancy}</p>
+        <p className="leading-relaxed text-gray-300">
+          {consultancySuccessMessage(locale, itemName)}
+        </p>
         {whatsappLink && (
           <div className="space-y-1">
             <WhatsAppButton href={whatsappLink} label={copy.whatsapp} />

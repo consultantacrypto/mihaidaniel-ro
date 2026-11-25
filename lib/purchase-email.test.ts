@@ -1,6 +1,10 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
-import { buildConsultancyEmailHtml, buildCourseEmailHtml } from './purchase-email';
+import {
+  buildConsultancyEmailHtml,
+  buildCourseEmailHtml,
+  consultancyPurchaseSubject,
+} from './purchase-email';
 import { resolveContactChannels } from './scheduling';
 
 describe('purchase emails', () => {
@@ -11,6 +15,20 @@ describe('purchase emails', () => {
     assert.doesNotMatch(html, /calendar/);
     assert.doesNotMatch(html, /cal\.com/);
     assert.match(html, /Bună, Ana/);
+  });
+
+  it('uses a subject per package instead of one VIP subject', () => {
+    assert.equal(consultancyPurchaseSubject(null), 'Confirmare sesiune 1:1 - Mihai Daniel');
+    assert.equal(consultancyPurchaseSubject('sesiune'), 'Confirmare sesiune 1:1 - Mihai Daniel');
+    assert.equal(
+      consultancyPurchaseSubject('pachet-3'),
+      'Confirmare pachet 3 sesiuni - Mihai Daniel'
+    );
+    assert.equal(
+      consultancyPurchaseSubject('mentorat-6'),
+      'Confirmare mentorat 6 săptămâni - Mihai Daniel'
+    );
+    assert.doesNotMatch(consultancyPurchaseSubject('pachet-3'), /VIP/);
   });
 
   it('escapes the buyer name', () => {

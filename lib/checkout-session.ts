@@ -21,13 +21,22 @@ type CheckoutLineItem = {
 
 export type CheckoutSessionCreateParams = {
   mode: 'payment';
-  allow_promotion_codes: true;
+  allow_promotion_codes: boolean;
   line_items: CheckoutLineItem[];
   success_url: string;
   cancel_url: string;
   metadata: Record<string, string>;
   client_reference_id?: string;
 };
+
+/** Promo codes stay on the course and on the 200 € session. The other packages are fixed prices. */
+export function checkoutAllowsPromotionCodes(
+  type: CheckoutProductType,
+  packageId?: string | null
+): boolean {
+  if (type !== 'consultancy') return true;
+  return !packageId || packageId === 'sesiune';
+}
 
 /**
  * Additive wrapper around the existing Checkout session.
@@ -56,7 +65,7 @@ export function buildCheckoutSessionCreateParams(input: {
 
   const params: CheckoutSessionCreateParams = {
     mode: 'payment',
-    allow_promotion_codes: true,
+    allow_promotion_codes: checkoutAllowsPromotionCodes(input.type, input.packageId),
     line_items: [input.lineItem],
     success_url: `${input.baseUrl}${successPath}?success=true&type=${input.type}&session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${input.baseUrl}${successPath}?canceled=true`,

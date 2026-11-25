@@ -64,6 +64,9 @@ export default function ConsultancyPackages() {
                 </div>
 
                 <p className="mt-2 text-sm text-gray-400">{t(`${key}.duration`)}</p>
+                {id === 'pachet-3' ? (
+                  <p className="mt-3 text-sm leading-relaxed text-gray-300">{t(`${key}.forWho`)}</p>
+                ) : null}
 
                 <p className="mt-6 flex items-baseline gap-3 text-white">
                   <span className="text-4xl font-bold tracking-tight">
@@ -89,6 +92,10 @@ export default function ConsultancyPackages() {
                     </li>
                   ))}
                 </ul>
+
+                {id !== 'sesiune' ? (
+                  <p className="mt-4 text-sm leading-relaxed text-gray-500">{t(`${key}.notIncluded`)}</p>
+                ) : null}
 
                 <div className="mt-8">
                   <ConsultancyCheckoutButton

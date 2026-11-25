@@ -110,3 +110,40 @@ export function consultancyFollowupMessage(
   }
   return WHATSAPP_MESSAGES.consultancy[locale];
 }
+
+/**
+ * Success-modal copy. The 60-minute session names the hour.
+ * Anything else, including a package we have not identified yet, uses «să stabilim datele».
+ */
+export function consultancySuccessMessage(
+  locale: SchedulingLocale,
+  itemName: string | null | undefined
+): string {
+  const single = CONSULTANCY_PACKAGES.sesiune.checkoutName;
+  const pack = CONSULTANCY_PACKAGES['pachet-3'].checkoutName;
+  const mentor = CONSULTANCY_PACKAGES['mentorat-6'].checkoutName;
+
+  if (locale === 'en') {
+    if (itemName === single) {
+      return 'To set the day and time of the session, message me on WhatsApp. You also get a confirmation email.';
+    }
+    if (itemName === pack) {
+      return 'To set the dates for the three sessions, message me on WhatsApp. You also get a confirmation email.';
+    }
+    if (itemName === mentor) {
+      return 'To set the dates across the six weeks, message me on WhatsApp. You also get a confirmation email.';
+    }
+    return 'Message me on WhatsApp so we can set the dates. You also get a confirmation email.';
+  }
+
+  if (itemName === single) {
+    return 'Pentru a stabili data și ora sesiunii, scrie-mi pe WhatsApp. Primești și un email de confirmare.';
+  }
+  if (itemName === pack) {
+    return 'Ca să stabilim datele celor trei sesiuni, scrie-mi pe WhatsApp. Primești și un email de confirmare.';
+  }
+  if (itemName === mentor) {
+    return 'Ca să stabilim datele celor șase săptămâni, scrie-mi pe WhatsApp. Primești și un email de confirmare.';
+  }
+  return 'Ca să stabilim datele, scrie-mi pe WhatsApp. Primești și un email de confirmare.';
+}

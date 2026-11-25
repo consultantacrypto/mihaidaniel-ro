@@ -2,7 +2,11 @@ import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import { Resend } from 'resend';
 import { getContactChannels } from '@/lib/contact-channels';
-import { buildConsultancyEmailHtml, buildCourseEmailHtml } from '@/lib/purchase-email';
+import {
+  buildConsultancyEmailHtml,
+  buildCourseEmailHtml,
+  consultancyPurchaseSubject,
+} from '@/lib/purchase-email';
 import { inboxEmail } from '@/lib/scheduling';
 import { getStripe } from '@/lib/stripe';
 import type { CheckoutProductType } from '@/lib/stripe';
@@ -31,7 +35,7 @@ async function sendPurchaseEmail(
   const channels = getContactChannels();
   const isConsultancy = productType === 'consultancy';
   const subject = isConsultancy
-    ? 'Confirmare Consultanță VIP - Mihai Daniel'
+    ? consultancyPurchaseSubject(packageId)
     : 'Acces Curs Trading Crypto Premium - Mihai Daniel';
   const html = isConsultancy
     ? buildConsultancyEmailHtml(channels, customerName, packageId)

@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 import {
+  CONSULTING_EMAIL_SUBJECT,
   CONSULTING_WHATSAPP_TEXT,
   consultingContactLinks,
   visibleContactHref,
@@ -14,7 +15,10 @@ describe('consultingContactLinks', () => {
       WHATSAPP_NUMBER: '+40 731-490-099',
     });
 
-    assert.equal(links.emailHref, 'mailto:Dani@Example.com');
+    assert.equal(
+      links.emailHref,
+      `mailto:Dani@Example.com?subject=${encodeURIComponent(CONSULTING_EMAIL_SUBJECT)}`
+    );
     assert.ok(links.whatsappHref);
     const whatsapp = new URL(links.whatsappHref!);
     assert.equal(whatsapp.protocol, 'https:');
@@ -28,7 +32,10 @@ describe('consultingContactLinks', () => {
 
   it('shows only the email button when the number is missing', () => {
     const links = consultingContactLinks({ CONTACT_EMAIL: 'contact@stirilecrypto.ro' });
-    assert.equal(links.emailHref, 'mailto:contact@stirilecrypto.ro');
+    assert.equal(
+      links.emailHref,
+      `mailto:contact@stirilecrypto.ro?subject=${encodeURIComponent(CONSULTING_EMAIL_SUBJECT)}`
+    );
     assert.equal(links.whatsappHref, null);
   });
 

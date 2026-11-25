@@ -19,6 +19,13 @@ function emailAnchor(email: string): string {
   return `<a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a>`;
 }
 
+export function consultancyPurchaseSubject(packageId?: string | null): string {
+  const pkg = consultancyPackageById(packageId);
+  if (pkg?.id === 'pachet-3') return 'Confirmare pachet 3 sesiuni - Mihai Daniel';
+  if (pkg?.id === 'mentorat-6') return 'Confirmare mentorat 6 săptămâni - Mihai Daniel';
+  return 'Confirmare sesiune 1:1 - Mihai Daniel';
+}
+
 export function buildConsultancyEmailHtml(
   channels: PublicContactChannels,
   customerName?: string | null,

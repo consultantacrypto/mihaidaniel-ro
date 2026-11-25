@@ -3,6 +3,8 @@ import { isEmail, normalizeWhatsappNumber, whatsappHref } from './scheduling';
 /** Prefilled text on the consulting-page WhatsApp button. */
 export const CONSULTING_WHATSAPP_TEXT = 'Salut Dani, vreau o consultanță crypto';
 
+export const CONSULTING_EMAIL_SUBJECT = 'Rezervare consultanță crypto';
+
 export type ConsultingContactLinks = {
   emailHref: string | null;
   whatsappHref: string | null;
@@ -33,7 +35,9 @@ export function consultingContactLinks(env: ConsultingContactEnv = {}): Consulti
     : null;
 
   return {
-    emailHref: email ? `mailto:${email}` : null,
+    emailHref: email
+      ? `mailto:${email}?subject=${encodeURIComponent(CONSULTING_EMAIL_SUBJECT)}`
+      : null,
     whatsappHref: whatsapp,
   };
 }

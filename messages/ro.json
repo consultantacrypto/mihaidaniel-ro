@@ -209,13 +209,16 @@
       },
       "pack3": {
         "duration": "3 × 60 min",
-        "point1": "Trei sesiuni de 60 de minute",
-        "point2": "Le programăm împreună, pe rând"
+        "forWho": "Pentru cine vrea continuitate, nu o singură oră.",
+        "point1": "Inclus: 3 × 60 min, 1 la 1, online",
+        "point2": "Le programăm împreună, pe rând",
+        "notIncluded": "Nu include cele 2 analize tehnice. Ele rămân la sesiunea de 200 €."
       },
       "mentor": {
-        "duration": "6 săptămâni",
-        "point1": "6 sesiuni, pe parcursul a șase săptămâni",
-        "point2": "Chat între sesiuni"
+        "duration": "6 × 60 min",
+        "point1": "Inclus: 6 × 60 min, 1 la 1, pe șase săptămâni",
+        "point2": "Chat între sesiuni",
+        "notIncluded": "Nu include cele 2 analize tehnice. Chat-ul e între sesiuni și nu înlocuiește ora."
       }
     },
     "included": {
@@ -223,7 +226,7 @@
       "lead": "Cele 2 analize tehnice sunt la sesiunea de 200 €. La pachetul de 3 sesiuni și la mentorat lucrăm pe ore și, la mentorat, pe chat. Nu multiplic analizele.",
       "session": "O sesiune privată, 1 la 1, de 60 de minute, online, cu Mihai Daniel, despre situația ta, riscuri și deciziile pe care le ai de luat.",
       "analyses": "2 analize tehnice premium, același produs ca pe Știrile Crypto: șapte grafice (1h, 4h, 12h, 1D, 3D, 1W, 1M) și secțiunea Risc token, pentru două active alese de tine.",
-      "delivery": "Analizele pleacă pe email, de la contact@stirilecrypto.ro. Livrare orientativă: 24 de ore în zilele lucrătoare.",
+      "delivery": "Analizele pleacă pe email, de la contact@stirilecrypto.ro. Livrare orientativă: 24 de ore lucrătoare.",
       "scope": "Sesiunea se adaptează întrebărilor tale. Nu este un audit scris al întregului portofoliu și nu înlocuiește un sfat financiar reglementat.",
       "educational": "Analizele sunt material educațional. Nu conțin apeluri de cumpărare sau de vânzare.",
       "listPrice": "Tarifele de listă ale unei analize luate separat rămân 79 RON (monedă mare, top 30) și 139 RON (altcoin). În sesiunea de 200 €, cele două analize sunt incluse."
@@ -231,8 +234,8 @@
     "process": {
       "title": "Cum se desfășoară, în 3 pași",
       "write": {
-        "title": "Alegi și îmi scrii.",
-        "body": "Plătești varianta de pe pagină, apoi un email pe contact@stirilecrypto.ro e de ajuns. Spune-mi pe scurt ce vrei să discutăm și, dacă ai luat sesiunea cu analize, cele două active."
+        "title": "Plătești întâi.",
+        "body": "Alegi varianta de pe pagină și plătești. Apoi îmi scrii pe contact@stirilecrypto.ro: ce vrei să discutăm și, dacă ai luat sesiunea cu analize, cele două active."
       },
       "meet": {
         "title": "Stabilim datele.",

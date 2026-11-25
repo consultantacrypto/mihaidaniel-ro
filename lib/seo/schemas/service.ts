@@ -35,7 +35,7 @@ export function buildConsultancyServiceSchema(
     name: copy.name,
     description: copy.description,
     url: pageUrl,
-    serviceType: 'Financial Consulting',
+    serviceType: 'Educational Consulting',
     provider: {
       '@id': PERSON_ID,
     },
