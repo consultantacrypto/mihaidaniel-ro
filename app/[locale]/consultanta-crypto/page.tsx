@@ -12,7 +12,7 @@ import ConsultancyPackages from '@/components/consultancy/ConsultancyPackages';
 import ConsultancyIncluded from '@/components/consultancy/ConsultancyIncluded';
 import ConsultancyProcess from '@/components/consultancy/ConsultancyProcess';
 import ConsultancyAnalysisOption from '@/components/consultancy/ConsultancyAnalysisOption';
-import { bookingAnchorHref } from '@/lib/consultancy-packages';
+import { consultingContactLinks } from '@/lib/consulting-contact';
 import { buildConsultancyServiceSchema } from '@/lib/seo/schemas/service';
 import { buildFaqPageSchema, getConsultancyFaq } from '@/lib/seo/schemas/faq';
 import { buildBreadcrumbSchema } from '@/lib/seo/schemas/breadcrumb';
@@ -79,7 +79,10 @@ export default async function ConsultantaCryptoPage({
   const schemaLocale: SchemaLocale = locale === 'en' ? 'en' : 'ro';
   const t = await getTranslations({ locale, namespace: 'consultancyPage' });
   const faqItems = getConsultancyFaq(schemaLocale);
-  const bookingHref = bookingAnchorHref(process.env.BOOKING_URL);
+  const contact = consultingContactLinks({
+    CONTACT_EMAIL: process.env.CONTACT_EMAIL,
+    WHATSAPP_NUMBER: process.env.WHATSAPP_NUMBER,
+  });
   const pageUrl =
     schemaLocale === 'en'
       ? `${SITE_URL}/en${PAGE_PATH}`
@@ -108,7 +111,10 @@ export default async function ConsultantaCryptoPage({
       </Suspense>
 
       <Navbar />
-      <ConsultancyPageHero bookingHref={bookingHref} />
+      <ConsultancyPageHero
+        emailHref={contact.emailHref}
+        whatsappHref={contact.whatsappHref}
+      />
       <ConsultancyLevels />
       <ConsultancyPackages />
       <ConsultancyIncluded />

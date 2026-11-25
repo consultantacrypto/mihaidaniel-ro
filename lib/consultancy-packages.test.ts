@@ -6,7 +6,6 @@ import { resolveCheckoutSelection } from './consultancy-checkout';
 import {
   CONSULTANCY_PACKAGE_ORDER,
   CONSULTANCY_PACKAGES,
-  bookingAnchorHref,
   consultancyFollowupMessage,
   formatEurAmount,
   formatEurPrice,
@@ -218,26 +217,6 @@ describe('checkout session metadata', () => {
     assert.equal(params.metadata.type, 'consultancy');
     assert.equal(params.success_url.includes('type=consultancy'), true);
     assert.equal(JSON.stringify(params).includes('123'), false);
-  });
-});
-
-describe('booking button href', () => {
-  it('hides the button when BOOKING_URL is empty, a hash, or not https', () => {
-    assert.equal(bookingAnchorHref(undefined), null);
-    assert.equal(bookingAnchorHref(null), null);
-    assert.equal(bookingAnchorHref(''), null);
-    assert.equal(bookingAnchorHref('   '), null);
-    assert.equal(bookingAnchorHref('#'), null);
-    assert.equal(bookingAnchorHref('#pachete'), null);
-    assert.equal(bookingAnchorHref('javascript:alert(1)'), null);
-    assert.equal(bookingAnchorHref('http://cal.com/mihai'), null);
-  });
-
-  it('keeps a real https calendar link', () => {
-    assert.equal(
-      bookingAnchorHref('https://cal.com/mihai/consultanta'),
-      'https://cal.com/mihai/consultanta'
-    );
   });
 });
 

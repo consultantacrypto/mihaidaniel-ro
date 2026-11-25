@@ -43,10 +43,6 @@ export function buildConsultancyEmailHtml(
     contact = `Pentru a fixa ${when}, te rog să răspunzi la acest email pe adresa ${emailAnchor(channels.email)}.`;
   }
 
-  const calendar = channels.bookingUrl
-    ? `<p>Poți alege ora direct în calendar: <a href="${escapeHtml(channels.bookingUrl)}">Deschide calendarul</a>.</p>`
-    : '';
-
   const purchaseLine =
     pkg && !pkg.useCatalogPrice
       ? `Îți mulțumim pentru achiziția <strong>${escapeHtml(pkg.checkoutName)}</strong>.`
@@ -57,7 +53,6 @@ export function buildConsultancyEmailHtml(
       <p>${greeting(customerName)}</p>
       <p>${purchaseLine}</p>
       <p>${contact}</p>
-      ${calendar}
       <p>Cu respect,<br/><strong>Mihai Daniel</strong></p>
     </div>
   `;

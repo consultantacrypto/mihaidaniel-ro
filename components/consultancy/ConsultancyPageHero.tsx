@@ -5,11 +5,13 @@ import { useTranslations } from 'next-intl';
 import ConsultancyBookingActions from '@/components/consultancy/ConsultancyBookingActions';
 
 type ConsultancyPageHeroProps = {
-  bookingHref?: string | null;
+  emailHref?: string | null;
+  whatsappHref?: string | null;
 };
 
 export default function ConsultancyPageHero({
-  bookingHref = null,
+  emailHref = null,
+  whatsappHref = null,
 }: ConsultancyPageHeroProps) {
   const t = useTranslations('consultancyPage.hero');
 
@@ -36,7 +38,7 @@ export default function ConsultancyPageHero({
             </div>
 
             <div className="pt-2">
-              <ConsultancyBookingActions bookingHref={bookingHref} />
+              <ConsultancyBookingActions emailHref={emailHref} whatsappHref={whatsappHref} />
             </div>
           </div>
 

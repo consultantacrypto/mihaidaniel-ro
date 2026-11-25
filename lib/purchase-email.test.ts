@@ -4,21 +4,17 @@ import { buildConsultancyEmailHtml, buildCourseEmailHtml } from './purchase-emai
 import { resolveContactChannels } from './scheduling';
 
 describe('purchase emails', () => {
-  it('includes WhatsApp and email, and hides the calendar until a booking URL exists', () => {
+  it('includes WhatsApp and email and does not add a calendar link', () => {
     const html = buildConsultancyEmailHtml(resolveContactChannels({}), 'Ana');
     assert.match(html, /wa\.me\/40731490099/);
     assert.match(html, /contact@stirilecrypto\.ro/);
-    assert.doesNotMatch(html, /Deschide calendarul/);
+    assert.doesNotMatch(html, /calendar/);
+    assert.doesNotMatch(html, /cal\.com/);
     assert.match(html, /Bună, Ana/);
   });
 
-  it('adds the calendar link when BOOKING_URL is set and escapes the name', () => {
-    const html = buildConsultancyEmailHtml(
-      resolveContactChannels({ BOOKING_URL: 'https://cal.com/mihai/consultanta' }),
-      '<script>'
-    );
-    assert.match(html, /https:\/\/cal\.com\/mihai\/consultanta/);
-    assert.match(html, /Deschide calendarul/);
+  it('escapes the buyer name', () => {
+    const html = buildConsultancyEmailHtml(resolveContactChannels({}), '<script>');
     assert.match(html, /&lt;script&gt;/);
     assert.doesNotMatch(html, /<script>/);
   });
@@ -40,10 +36,7 @@ describe('purchase emails', () => {
   });
 
   it('does not put a consultancy calendar on the course email', () => {
-    const html = buildCourseEmailHtml(
-      resolveContactChannels({ BOOKING_URL: 'https://cal.com/mihai/consultanta' }),
-      null
-    );
+    const html = buildCourseEmailHtml(resolveContactChannels({}), null);
     assert.match(html, /wa\.me\/40731490099/);
     assert.doesNotMatch(html, /Deschide calendarul/);
   });

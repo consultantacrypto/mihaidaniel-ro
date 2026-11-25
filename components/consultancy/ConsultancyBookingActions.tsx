@@ -1,27 +1,23 @@
 'use client';
 
-import { Calendar, Mail } from 'lucide-react';
+import { Mail, MessageCircle } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import { bookingAnchorHref } from '@/lib/consultancy-packages';
-
-const BOOKING_EMAIL = 'contact@stirilecrypto.ro';
-const BOOKING_SUBJECT = 'Rezervare consultație 1 la 1';
-
-export function consultancyBookingMailto(): string {
-  return `mailto:${BOOKING_EMAIL}?subject=${encodeURIComponent(BOOKING_SUBJECT)}`;
-}
+import { visibleContactHref } from '@/lib/consulting-contact';
 
 type ConsultancyBookingActionsProps = {
-  bookingHref?: string | null;
+  emailHref?: string | null;
+  whatsappHref?: string | null;
 };
 
 export default function ConsultancyBookingActions({
-  bookingHref = null,
+  emailHref = null,
+  whatsappHref = null,
 }: ConsultancyBookingActionsProps) {
   const t = useTranslations('consultancyPage.hero');
   const tEmail = useTranslations('consultancyPage.emailCta');
-  const tBooking = useTranslations('consultancyPage.bookingCta');
-  const calendarHref = bookingAnchorHref(bookingHref);
+  const tWhatsapp = useTranslations('consultancyPage.whatsappCta');
+  const email = visibleContactHref('email', emailHref);
+  const whatsapp = visibleContactHref('whatsapp', whatsappHref);
 
   return (
     <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center">
@@ -32,26 +28,28 @@ export default function ConsultancyBookingActions({
       >
         {t('cta')}
       </a>
-      {calendarHref ? (
+      {whatsapp ? (
         <a
-          href={calendarHref}
+          href={whatsapp}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={tBooking('aria')}
-          className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/[0.04] px-6 py-4 text-base font-semibold text-white transition-colors hover:border-white/25 hover:bg-white/[0.08] sm:w-auto"
+          aria-label={tWhatsapp('aria')}
+          className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-green-600 px-6 py-4 text-base font-semibold text-white transition-colors hover:bg-green-500 sm:w-auto"
         >
-          <Calendar size={18} className="shrink-0 text-yellow-300" aria-hidden />
-          {tBooking('label')}
+          <MessageCircle size={18} className="shrink-0" aria-hidden />
+          {tWhatsapp('label')}
         </a>
       ) : null}
-      <a
-        href={consultancyBookingMailto()}
-        aria-label={tEmail('aria')}
-        className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/[0.04] px-6 py-4 text-base font-semibold leading-snug text-white transition-colors hover:border-white/25 hover:bg-white/[0.08] sm:w-auto"
-      >
-        <Mail size={18} className="shrink-0 text-yellow-300" aria-hidden />
-        <span className="text-left">{tEmail('label')}</span>
-      </a>
+      {email ? (
+        <a
+          href={email}
+          aria-label={tEmail('aria')}
+          className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/[0.04] px-6 py-4 text-base font-semibold leading-snug text-white transition-colors hover:border-white/25 hover:bg-white/[0.08] sm:w-auto"
+        >
+          <Mail size={18} className="shrink-0 text-yellow-300" aria-hidden />
+          <span className="text-left">{tEmail('label')}</span>
+        </a>
+      ) : null}
     </div>
   );
 }

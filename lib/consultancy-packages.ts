@@ -1,8 +1,4 @@
-import {
-  parseBookingUrl,
-  WHATSAPP_MESSAGES,
-  type SchedulingLocale,
-} from './scheduling';
+import { WHATSAPP_MESSAGES, type SchedulingLocale } from './scheduling';
 
 export const CONSULTANCY_PACKAGE_ORDER = ['sesiune', 'pachet-3', 'mentorat-6'] as const;
 
@@ -96,16 +92,6 @@ export function threeSessionCompare(): {
   const payCents = CONSULTANCY_PACKAGES['pachet-3'].unitAmount;
   const percentOff = Math.round((1 - payCents / fullCents) * 100);
   return { fullCents, payCents, percentOff };
-}
-
-/**
- * Href for the calendar button.
- * Empty, "#", and any non-https value must not render a link.
- */
-export function bookingAnchorHref(raw: string | null | undefined): string | null {
-  const href = parseBookingUrl(raw);
-  if (!href || href === '#' || href.startsWith('#')) return null;
-  return href;
 }
 
 /**

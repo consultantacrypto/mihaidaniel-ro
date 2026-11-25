@@ -18,12 +18,9 @@ export type PublicContactChannels = {
   whatsappDisplay: string | null;
   whatsappUrl: string | null;
   email: string | null;
-  bookingUrl: string | null;
-  bookingEmbedUrl: string | null;
 };
 
 export type SchedulingEnv = {
-  BOOKING_URL?: string;
   WHATSAPP_NUMBER?: string;
   CONTACT_EMAIL?: string;
 };
@@ -40,34 +37,6 @@ export function normalizeWhatsappNumber(raw: string | undefined | null): string 
   const digits = raw.replace(/\D/g, '');
   if (digits.length < 8 || digits.length > 15) return null;
   return digits;
-}
-
-export function parseBookingUrl(raw: string | undefined | null): string | null {
-  if (!raw?.trim()) return null;
-  try {
-    const url = new URL(raw.trim());
-    if (url.protocol !== 'https:') return null;
-    if (url.username || url.password) return null;
-    if (!url.hostname || !url.hostname.includes('.')) return null;
-    return url.toString();
-  } catch {
-    return null;
-  }
-}
-
-export function isEmbeddableBookingUrl(raw: string | null | undefined): boolean {
-  if (!raw) return false;
-  try {
-    const host = new URL(raw).hostname.toLowerCase();
-    return (
-      host === 'cal.com' ||
-      host.endsWith('.cal.com') ||
-      host === 'calendly.com' ||
-      host.endsWith('.calendly.com')
-    );
-  } catch {
-    return false;
-  }
 }
 
 export function parseWhatsappBase(raw: string | null | undefined): string | null {
@@ -91,19 +60,6 @@ export function whatsappHref(baseUrl: string, message: string): string | null {
   return url.toString();
 }
 
-export function withBookingPrefill(bookingUrl: string, email?: string | null): string {
-  try {
-    const url = new URL(bookingUrl);
-    if (url.protocol !== 'https:') return bookingUrl;
-    if (email && isEmail(email) && !url.searchParams.has('email')) {
-      url.searchParams.set('email', email);
-    }
-    return url.toString();
-  } catch {
-    return bookingUrl;
-  }
-}
-
 export function resolveContactChannels(env: SchedulingEnv): PublicContactChannels {
   const whatsappRaw = env.WHATSAPP_NUMBER?.trim()
     ? env.WHATSAPP_NUMBER
@@ -115,14 +71,10 @@ export function resolveContactChannels(env: SchedulingEnv): PublicContactChannel
     : DEFAULT_CONTACT_EMAIL;
   const email = isEmail(emailRaw) ? emailRaw : null;
 
-  const bookingUrl = parseBookingUrl(env.BOOKING_URL);
-
   return {
     whatsappDisplay: whatsappNumber ? `+${whatsappNumber}` : null,
     whatsappUrl: whatsappNumber ? `https://wa.me/${whatsappNumber}` : null,
     email,
-    bookingUrl,
-    bookingEmbedUrl: bookingUrl && isEmbeddableBookingUrl(bookingUrl) ? bookingUrl : null,
   };
 }
 
@@ -152,18 +104,9 @@ export function coercePublicContactChannels(value: unknown): PublicContactChanne
   const email =
     typeof candidate.email === 'string' && isEmail(candidate.email) ? candidate.email : null;
 
-  const bookingUrl =
-    typeof candidate.bookingUrl === 'string' ? parseBookingUrl(candidate.bookingUrl) : null;
-
-  const embedSource =
-    typeof candidate.bookingEmbedUrl === 'string' ? parseBookingUrl(candidate.bookingEmbedUrl) : null;
-  const bookingEmbedUrl = embedSource && isEmbeddableBookingUrl(embedSource) ? embedSource : null;
-
   return {
     whatsappDisplay: whatsappNumber ? `+${whatsappNumber}` : null,
     whatsappUrl,
     email,
-    bookingUrl,
-    bookingEmbedUrl,
   };
 }

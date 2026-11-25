@@ -176,12 +176,12 @@
       "imageAlt": "Mihai Daniel — crypto consulting"
     },
     "emailCta": {
-      "label": "Email me at contact@stirilecrypto.ro",
-      "aria": "Email contact@stirilecrypto.ro to book the consulting session"
+      "label": "Email me",
+      "aria": "Send an email about crypto consulting"
     },
-    "bookingCta": {
-      "label": "Choose a time",
-      "aria": "Open the booking calendar"
+    "whatsappCta": {
+      "label": "Message me on WhatsApp",
+      "aria": "Message on WhatsApp about crypto consulting"
     },
     "levels": {
       "kicker": "Who it's for",

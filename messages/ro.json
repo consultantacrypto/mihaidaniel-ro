@@ -176,12 +176,12 @@
       "imageAlt": "Mihai Daniel — consultanță crypto"
     },
     "emailCta": {
-      "label": "Scrie-mi pe contact@stirilecrypto.ro",
-      "aria": "Scrie pe email la contact@stirilecrypto.ro pentru rezervarea consultației"
+      "label": "Scrie-mi pe email",
+      "aria": "Trimite un email pentru consultanță crypto"
     },
-    "bookingCta": {
-      "label": "Alege ora în calendar",
-      "aria": "Deschide calendarul de programare"
+    "whatsappCta": {
+      "label": "Scrie-mi pe WhatsApp",
+      "aria": "Scrie pe WhatsApp pentru o consultanță crypto"
     },
     "levels": {
       "kicker": "Pentru cine",
