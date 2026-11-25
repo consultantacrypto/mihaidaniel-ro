@@ -1,3 +1,4 @@
+import { consultancyPackageById } from './consultancy-packages';
 import { CHECKOUT_PRODUCTS, type CheckoutProductType } from './stripe';
 
 export type PurchaseEventPayload = {
@@ -15,7 +16,7 @@ export type CheckoutSessionLike = {
   amount_total?: number | null;
   currency?: string | null;
   customer_details?: { email?: string | null } | null;
-  metadata?: { type?: string | null } | null;
+  metadata?: { type?: string | null; package_id?: string | null } | null;
 };
 
 const SESSION_ID_RE = /^cs_(test|live)_[A-Za-z0-9]+$/;
@@ -42,13 +43,17 @@ export function purchaseEventFromSession(
   if (productType !== 'consultancy' && productType !== 'course') return null;
 
   const email = session.customer_details?.email?.trim() || null;
+  const packaged =
+    productType === 'consultancy'
+      ? consultancyPackageById(session.metadata?.package_id)
+      : null;
 
   return {
     transactionId: session.id,
     value: session.amount_total / 100,
     currency: session.currency.toUpperCase(),
     productType,
-    itemName: CHECKOUT_PRODUCTS[productType].name,
+    itemName: packaged?.checkoutName ?? CHECKOUT_PRODUCTS[productType].name,
     customerEmail: email,
   };
 }

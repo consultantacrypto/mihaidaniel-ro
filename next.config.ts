@@ -4,7 +4,6 @@ import createNextIntlPlugin from 'next-intl/plugin';
 const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 const nextConfig: NextConfig = {
-  // @ts-expect-error - Ignorăm eroarea de tip, proprietatea e validă pentru Next.js 16+
   turbopack: {},
 
 
@@ -163,6 +162,16 @@ const nextConfig: NextConfig = {
       {
         source: '/pages/cursuri',
         destination: '/#curs',
+        permanent: true,
+      },
+      {
+        source: '/consultanta',
+        destination: '/consultanta-crypto',
+        permanent: true,
+      },
+      {
+        source: '/en/consultanta',
+        destination: '/en/consultanta-crypto',
         permanent: true,
       },
       {

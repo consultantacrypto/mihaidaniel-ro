@@ -4,7 +4,13 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import ConsultancyBookingActions from '@/components/consultancy/ConsultancyBookingActions';
 
-export default function ConsultancyPageHero() {
+type ConsultancyPageHeroProps = {
+  bookingHref?: string | null;
+};
+
+export default function ConsultancyPageHero({
+  bookingHref = null,
+}: ConsultancyPageHeroProps) {
   const t = useTranslations('consultancyPage.hero');
 
   return (
@@ -30,7 +36,7 @@ export default function ConsultancyPageHero() {
             </div>
 
             <div className="pt-2">
-              <ConsultancyBookingActions trackingLabel="consultanta_page_stripe" />
+              <ConsultancyBookingActions bookingHref={bookingHref} />
             </div>
           </div>
 

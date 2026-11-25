@@ -40,10 +40,14 @@ export function buildCheckoutSessionCreateParams(input: {
   baseUrl: string;
   lineItem: CheckoutLineItem;
   attribution?: Attribution;
+  /** Set only after the server has accepted the package id. Never a client amount. */
+  packageId?: string | null;
 }): CheckoutSessionCreateParams {
   const successPath = input.type === 'consultancy' ? '/consultanta-crypto' : '/';
   const attribution = sanitizeAttribution(input.attribution);
   const metadata: Record<string, string> = { type: input.type };
+
+  if (input.packageId) metadata.package_id = input.packageId;
 
   if (attribution.utm_source) metadata.utm_source = attribution.utm_source;
   if (attribution.utm_medium) metadata.utm_medium = attribution.utm_medium;

@@ -163,46 +163,88 @@
   "consultancyPage": {
     "faqTitle": "Întrebări frecvente",
     "metadata": {
-      "title": "Consultanță crypto 1 la 1",
-      "description": "O sesiune privată de 60 de minute, 1 la 1, plus 2 analize tehnice premium, livrate pe email. 200 €."
+      "title": "Consultanță crypto: sesiune, pachet, mentorat",
+      "description": "Sesiune 1:1, 60 min, 200 €, cu 2 analize tehnice. Pachet 3 sesiuni, 540 €. Mentorat 6 săptămâni, 1.500 €. Nu este sfat financiar."
     },
     "hero": {
-      "title": "Hai să discutăm despre portofoliul tău crypto.",
-      "description": "O sesiune privată de 60 de minute, 1 la 1, plus 2 analize tehnice premium, livrate pe email.",
-      "details": "60 de minute · Online · 200 €, cu 2 analize incluse",
+      "title": "Hai să vorbim despre crypto, pe situația ta.",
+      "description": "O oră, trei sesiuni sau șase săptămâni. Îți spun cum aș proceda eu, fără să-ți promit că faci profit.",
+      "details": "Online · în euro · Stripe",
       "sessions": "Peste 500 de sesiuni individuale în 6 ani",
-      "cta": "Rezervă sesiunea — 200\u00a0€",
-      "ctaAria": "Rezervă sesiunea de consultanță crypto — 200 euro",
+      "cta": "Vezi pachetele",
+      "ctaAria": "Vezi pachetele de consultanță crypto",
       "imageAlt": "Mihai Daniel — consultanță crypto"
     },
     "emailCta": {
       "label": "Scrie-mi pe contact@stirilecrypto.ro",
       "aria": "Scrie pe email la contact@stirilecrypto.ro pentru rezervarea consultației"
     },
+    "bookingCta": {
+      "label": "Alege ora în calendar",
+      "aria": "Deschide calendarul de programare"
+    },
+    "levels": {
+      "kicker": "Pentru cine",
+      "title": "Lucrez cu plăcere cu oricine, de la începători la traderi.",
+      "lead": "Alegi nivelul. Apoi alegi cât de des ne vedem.",
+      "beginnerKicker": "Începător",
+      "beginnerTitle": "Să nu pierzi bani",
+      "beginnerBody": "Securitate, exchange, primii pași. Unde îți stau monedele, cum deschizi un cont și ce verifici înainte să muți bani. Întâi să nu pierzi ce ai.",
+      "traderKicker": "Trader",
+      "traderTitle": "Plan de trading și management al riscului",
+      "traderBody": "Un plan pe care îl poți urma și o regulă clară pentru pierdere: cât riști pe o idee și unde te oprești. Fără semnale de cumpărare și fără ținte promise."
+    },
+    "packages": {
+      "kicker": "Pachete",
+      "title": "Alege cum lucrăm",
+      "lead": "Trei variante. Alegi, plătești în euro prin Stripe, apoi stabilim zilele.",
+      "pay": "Plătește",
+      "payAria": "Plătește {name}, {price}, prin Stripe",
+      "was": "față de 3 × {price}",
+      "disclaimer": "Nu este sfat financiar. Nu garantez profit. Decizia și riscul rămân ale tale.",
+      "sesiune": {
+        "duration": "60 min",
+        "point1": "O oră, 1 la 1, online",
+        "point2": "2 analize tehnice premium, pe email"
+      },
+      "pack3": {
+        "duration": "3 × 60 min",
+        "point1": "Trei sesiuni de 60 de minute",
+        "point2": "Le programăm împreună, pe rând"
+      },
+      "mentor": {
+        "duration": "6 săptămâni",
+        "point1": "6 sesiuni, pe parcursul a șase săptămâni",
+        "point2": "Chat între sesiuni"
+      }
+    },
     "included": {
-      "title": "Ce include pachetul",
-      "session": "O sesiune privată, 1 la 1, de 60 de minute, online, cu Mihai Daniel, despre portofoliul tău, riscuri și deciziile pe care le ai de luat.",
+      "title": "Ce include sesiunea de 60 de minute",
+      "lead": "Cele 2 analize tehnice sunt la sesiunea de 200 €. La pachetul de 3 sesiuni și la mentorat lucrăm pe ore și, la mentorat, pe chat. Nu multiplic analizele.",
+      "session": "O sesiune privată, 1 la 1, de 60 de minute, online, cu Mihai Daniel, despre situația ta, riscuri și deciziile pe care le ai de luat.",
       "analyses": "2 analize tehnice premium, același produs ca pe Știrile Crypto: șapte grafice (1h, 4h, 12h, 1D, 3D, 1W, 1M) și secțiunea Risc token, pentru două active alese de tine.",
       "delivery": "Analizele pleacă pe email, de la contact@stirilecrypto.ro. Livrare orientativă: 24 de ore în zilele lucrătoare.",
       "scope": "Sesiunea se adaptează întrebărilor tale. Nu este un audit scris al întregului portofoliu și nu înlocuiește un sfat financiar reglementat.",
       "educational": "Analizele sunt material educațional. Nu conțin apeluri de cumpărare sau de vânzare.",
-      "listPrice": "Tarifele de listă ale unei analize luate separat rămân 79 RON (monedă mare, top 30) și 139 RON (altcoin). În pachetul de consultanță, cele două analize sunt incluse în cei 200 €."
+      "listPrice": "Tarifele de listă ale unei analize luate separat rămân 79 RON (monedă mare, top 30) și 139 RON (altcoin). În sesiunea de 200 €, cele două analize sunt incluse."
     },
     "process": {
       "title": "Cum se desfășoară, în 3 pași",
       "write": {
-        "title": "Îmi scrii.",
-        "body": "Un email pe contact@stirilecrypto.ro e de ajuns. Spune-mi pe scurt ce vrei să discutăm și, dacă știi deja, cele două active pentru analize."
+        "title": "Alegi și îmi scrii.",
+        "body": "Plătești varianta de pe pagină, apoi un email pe contact@stirilecrypto.ro e de ajuns. Spune-mi pe scurt ce vrei să discutăm și, dacă ai luat sesiunea cu analize, cele două active."
       },
       "meet": {
-        "title": "Stabilim data și facem sesiunea.",
-        "body": "Ne întâlnim 1 la 1, online, 60 de minute, pe baza întrebărilor și a situației tale."
+        "title": "Stabilim datele.",
+        "body": "O sesiune, trei, sau câte una pe săptămână, șase săptămâni. Ne vedem 1 la 1, online, pe baza întrebărilor și a situației tale."
       },
       "delivery": {
-        "title": "Primești analizele pe email.",
-        "body": "Cele două analize tehnice premium pleacă de la contact@stirilecrypto.ro, de regulă în 24 de ore în zilele lucrătoare."
+        "title": "Rămânem pe ce am stabilit.",
+        "body": "La sesiunea de 200 €, cele două analize pleacă pe email, de regulă în 24 de ore lucrătoare. La mentorat, rămânem pe chat între întâlniri."
       },
-      "prepare": "Poți pregăti dinainte lista de întrebări pe care vrei să le acoperim în oră."
+      "prepare": "Poți pregăti dinainte o listă scurtă de întrebări.",
+      "cta": "Alege un pachet",
+      "ctaAria": "Mergi la pachetele de consultanță"
     },
     "analysis": {
       "kicker": "Opțiune separată",
@@ -210,7 +252,7 @@
       "price": "de la 79 lei",
       "body": "O analiză pentru un singur activ: șapte intervale, de la 1h la 1M, plus secțiunea de risc token. 79 lei pentru monedele mari, 139 lei pentru altcoin. Livrare orientativă în 24 de ore lucrătoare, pe email.",
       "cta": "Cere analiza",
-      "note": "Dacă iei pachetul de consultanță, cele două analize sunt deja incluse. Dacă vrei doar analiza, o comanzi separat de pe Știrile Crypto."
+      "note": "Dacă iei sesiunea de 200 €, cele două analize sunt deja incluse. Dacă vrei doar analiza, o comanzi separat de pe Știrile Crypto."
     }
   }
 }

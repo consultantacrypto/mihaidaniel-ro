@@ -19,7 +19,8 @@ function getResendClient(): Resend | null {
 async function sendPurchaseEmail(
   to: string,
   productType: CheckoutProductType,
-  customerName?: string | null
+  customerName?: string | null,
+  packageId?: string | null
 ): Promise<void> {
   const resend = getResendClient();
   if (!resend) {
@@ -33,7 +34,7 @@ async function sendPurchaseEmail(
     ? 'Confirmare Consultanță VIP - Mihai Daniel'
     : 'Acces Curs Trading Crypto Premium - Mihai Daniel';
   const html = isConsultancy
-    ? buildConsultancyEmailHtml(channels, customerName)
+    ? buildConsultancyEmailHtml(channels, customerName, packageId)
     : buildCourseEmailHtml(channels, customerName);
 
   const { error } = await resend.emails.send({
@@ -89,12 +90,14 @@ export async function POST(request: Request) {
   const customerEmail = session.customer_details?.email;
   const customerName = session.customer_details?.name;
   const productType = session.metadata?.type as CheckoutProductType | undefined;
+  const packageId = session.metadata?.package_id;
 
   console.log('[webhook] Plată finalizată:', {
     sessionId: session.id,
     customerEmail,
     customerName,
     productType,
+    packageId,
     clientReferenceId: session.client_reference_id,
     utm_source: session.metadata?.utm_source,
     utm_medium: session.metadata?.utm_medium,
@@ -107,7 +110,7 @@ export async function POST(request: Request) {
     (productType === 'course' || productType === 'consultancy')
   ) {
     try {
-      await sendPurchaseEmail(customerEmail, productType, customerName);
+      await sendPurchaseEmail(customerEmail, productType, customerName, packageId);
     } catch (error) {
       console.error('[webhook] Excepție la trimiterea emailului:', error);
     }

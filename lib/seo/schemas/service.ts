@@ -1,23 +1,24 @@
 import {
+  CONSULTANCY_PACKAGE_ORDER,
+  CONSULTANCY_PACKAGES,
+} from '@/lib/consultancy-packages';
+import {
   PERSON_ID,
   SITE_URL,
   inLanguageFor,
   type SchemaLocale,
 } from '@/lib/seo/constants';
 
-const COPY: Record<
-  SchemaLocale,
-  { name: string; description: string }
-> = {
+const COPY: Record<SchemaLocale, { name: string; description: string }> = {
   ro: {
-    name: 'Consultanță crypto 1 la 1',
+    name: 'Consultanță crypto',
     description:
-      'Sesiune privată de 60 de minute, 1 la 1, online, plus 2 analize tehnice premium livrate pe email — 200 EUR.',
+      'Consultanță crypto online cu Mihai Daniel: sesiune 1:1 de 60 de minute (200 EUR, cu 2 analize tehnice), pachet de 3 sesiuni (540 EUR) sau mentorat de 6 săptămâni (1500 EUR). Nu este sfat financiar.',
   },
   en: {
-    name: '1-on-1 crypto consulting',
+    name: 'Crypto consulting',
     description:
-      'A private 60-minute one-on-one online session, plus 2 premium technical analyses delivered by email — €200.',
+      'Online crypto consulting with Mihai Daniel: a 60-minute 1:1 session (€200, with 2 technical analyses), a 3-session pack (€540), or 6-week mentoring (€1500). Not financial advice.',
   },
 };
 
@@ -42,13 +43,17 @@ export function buildConsultancyServiceSchema(
       '@type': 'Country',
       name: 'Romania',
     },
-    offers: {
-      '@type': 'Offer',
-      price: '200',
-      priceCurrency: 'EUR',
-      availability: 'https://schema.org/InStock',
-      url: pageUrl,
-    },
+    offers: CONSULTANCY_PACKAGE_ORDER.map((id) => {
+      const pkg = CONSULTANCY_PACKAGES[id];
+      return {
+        '@type': 'Offer' as const,
+        name: pkg.offerName[locale],
+        price: String(pkg.unitAmount / 100),
+        priceCurrency: 'EUR',
+        availability: 'https://schema.org/InStock',
+        url: pageUrl,
+      };
+    }),
     inLanguage: inLanguageFor(locale),
   };
 }

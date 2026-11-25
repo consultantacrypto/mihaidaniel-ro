@@ -1,7 +1,6 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import ConsultancyBookingActions from '@/components/consultancy/ConsultancyBookingActions';
 
 const STEP_KEYS = ['write', 'meet', 'delivery'] as const;
 
@@ -42,7 +41,13 @@ export default function ConsultancyProcess() {
         </p>
 
         <div className="flex justify-center">
-          <ConsultancyBookingActions trackingLabel="consultanta_page_process_stripe" />
+          <a
+            href="#pachete"
+            aria-label={t('ctaAria')}
+            className="text-sm font-semibold text-yellow-400 underline-offset-4 hover:text-yellow-300 hover:underline"
+          >
+            {t('cta')}
+          </a>
         </div>
       </div>
     </section>

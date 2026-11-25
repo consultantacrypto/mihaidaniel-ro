@@ -7,9 +7,12 @@ import FaqSection from '@/components/landing/FaqSection';
 import JsonLd from '@/components/JsonLd';
 import PaymentFeedback from '@/components/PaymentFeedback';
 import ConsultancyPageHero from '@/components/consultancy/ConsultancyPageHero';
+import ConsultancyLevels from '@/components/consultancy/ConsultancyLevels';
+import ConsultancyPackages from '@/components/consultancy/ConsultancyPackages';
 import ConsultancyIncluded from '@/components/consultancy/ConsultancyIncluded';
 import ConsultancyProcess from '@/components/consultancy/ConsultancyProcess';
 import ConsultancyAnalysisOption from '@/components/consultancy/ConsultancyAnalysisOption';
+import { bookingAnchorHref } from '@/lib/consultancy-packages';
 import { buildConsultancyServiceSchema } from '@/lib/seo/schemas/service';
 import { buildFaqPageSchema, getConsultancyFaq } from '@/lib/seo/schemas/faq';
 import { buildBreadcrumbSchema } from '@/lib/seo/schemas/breadcrumb';
@@ -45,14 +48,15 @@ export async function generateMetadata({
       ? [
           'crypto consulting',
           '1 on 1 crypto mentor',
-          'portfolio discussion',
-          'bitcoin consulting',
+          'crypto mentoring',
+          'crypto consulting package',
         ]
       : [
           'consultanta crypto',
           'mentor crypto romania',
-          'discutie portofoliu',
-          'consultanta bitcoin',
+          'sesiune crypto 1 la 1',
+          'pachet consultanta crypto',
+          'mentorat crypto',
         ],
     alternates: {
       canonical: `${SITE_URL}${path === PAGE_PATH ? PAGE_PATH : path}`,
@@ -75,6 +79,7 @@ export default async function ConsultantaCryptoPage({
   const schemaLocale: SchemaLocale = locale === 'en' ? 'en' : 'ro';
   const t = await getTranslations({ locale, namespace: 'consultancyPage' });
   const faqItems = getConsultancyFaq(schemaLocale);
+  const bookingHref = bookingAnchorHref(process.env.BOOKING_URL);
   const pageUrl =
     schemaLocale === 'en'
       ? `${SITE_URL}/en${PAGE_PATH}`
@@ -103,7 +108,9 @@ export default async function ConsultantaCryptoPage({
       </Suspense>
 
       <Navbar />
-      <ConsultancyPageHero />
+      <ConsultancyPageHero bookingHref={bookingHref} />
+      <ConsultancyLevels />
+      <ConsultancyPackages />
       <ConsultancyIncluded />
       <ConsultancyProcess />
       <ConsultancyAnalysisOption />

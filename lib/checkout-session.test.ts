@@ -50,6 +50,21 @@ describe('buildCheckoutSessionCreateParams', () => {
     assert.deepEqual(params.metadata, { type: 'course' });
   });
 
+  it('adds a package id without changing the success URL or the line item', () => {
+    const params = buildCheckoutSessionCreateParams({
+      type: 'consultancy',
+      baseUrl: BASE,
+      lineItem,
+      packageId: 'sesiune',
+    });
+    assert.equal(params.line_items?.[0], lineItem);
+    assert.equal(params.metadata.package_id, 'sesiune');
+    assert.equal(
+      params.success_url,
+      `${BASE}/consultanta-crypto?success=true&type=consultancy&session_id={CHECKOUT_SESSION_ID}`
+    );
+  });
+
   it('adds UTM metadata and a client reference without touching the price', () => {
     const params = buildCheckoutSessionCreateParams({
       type: 'consultancy',

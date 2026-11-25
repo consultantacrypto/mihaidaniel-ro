@@ -5,6 +5,7 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useLocale } from 'next-intl';
 import { CheckCircle2, X } from 'lucide-react';
 import { trackPurchaseOnce } from '@/lib/analytics';
+import { consultancyFollowupMessage } from '@/lib/consultancy-packages';
 import {
   WHATSAPP_MESSAGES,
   coercePublicContactChannels,
@@ -90,6 +91,7 @@ export default function PaymentFeedback() {
   const [cancelVisible, setCancelVisible] = useState(false);
   const [channels, setChannels] = useState<PublicContactChannels>(defaultPublicChannels);
   const [buyerEmail, setBuyerEmail] = useState<string | null>(null);
+  const [itemName, setItemName] = useState<string | null>(null);
 
   if (isCanceled && !cancelVisible) {
     setCancelVisible(true);
@@ -145,6 +147,7 @@ export default function PaymentFeedback() {
         };
         if (cancelled || !response.ok || data.paid !== true) return;
         if (typeof data.customerEmail === 'string') setBuyerEmail(data.customerEmail);
+        if (typeof data.itemName === 'string') setItemName(data.itemName);
         if (
           typeof data.transactionId !== 'string' ||
           typeof data.value !== 'number' ||
@@ -193,7 +196,7 @@ export default function PaymentFeedback() {
 
   const isConsultancy = productType === 'consultancy';
   const message = isConsultancy
-    ? WHATSAPP_MESSAGES.consultancy[locale]
+    ? consultancyFollowupMessage(locale, itemName)
     : WHATSAPP_MESSAGES.course[locale];
   const whatsappLink = channels.whatsappUrl
     ? whatsappHref(channels.whatsappUrl, message)
