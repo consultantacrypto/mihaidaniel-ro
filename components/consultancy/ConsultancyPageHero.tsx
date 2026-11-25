@@ -4,7 +4,15 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import ConsultancyBookingActions from '@/components/consultancy/ConsultancyBookingActions';
 
-export default function ConsultancyPageHero() {
+type ConsultancyPageHeroProps = {
+  emailHref?: string | null;
+  whatsappHref?: string | null;
+};
+
+export default function ConsultancyPageHero({
+  emailHref = null,
+  whatsappHref = null,
+}: ConsultancyPageHeroProps) {
   const t = useTranslations('consultancyPage.hero');
 
   return (
@@ -30,7 +38,7 @@ export default function ConsultancyPageHero() {
             </div>
 
             <div className="pt-2">
-              <ConsultancyBookingActions trackingLabel="consultanta_page_stripe" />
+              <ConsultancyBookingActions emailHref={emailHref} whatsappHref={whatsappHref} />
             </div>
           </div>
 

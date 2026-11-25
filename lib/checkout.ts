@@ -1,5 +1,6 @@
 import { captureAttributionFromLocation } from '@/lib/attribution';
 import { trackBuyConsultancy, trackBuyCourse } from '@/lib/analytics';
+import type { ConsultancyPackageId } from '@/lib/consultancy-packages';
 import type { CheckoutProductType } from '@/lib/stripe';
 
 type CheckoutResponse = { url: string };
@@ -7,7 +8,8 @@ type CheckoutErrorResponse = { error: string };
 
 export async function startCheckout(
   type: CheckoutProductType,
-  trackingLabel = 'Stripe'
+  trackingLabel = 'Stripe',
+  packageId?: ConsultancyPackageId
 ): Promise<void> {
   // Fire-and-forget analytics — NEVER allow it to block the Stripe redirect.
   try {
@@ -30,7 +32,11 @@ export async function startCheckout(
   const response = await fetch('/api/checkout', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ type, attribution }),
+    body: JSON.stringify({
+      type,
+      attribution,
+      ...(packageId ? { packageId } : {}),
+    }),
   });
 
   let data: CheckoutResponse | CheckoutErrorResponse;

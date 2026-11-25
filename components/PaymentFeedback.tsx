@@ -5,12 +5,12 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useLocale } from 'next-intl';
 import { CheckCircle2, X } from 'lucide-react';
 import { trackPurchaseOnce } from '@/lib/analytics';
+import { consultancyFollowupMessage, consultancySuccessMessage } from '@/lib/consultancy-packages';
 import {
   WHATSAPP_MESSAGES,
   coercePublicContactChannels,
   defaultPublicChannels,
   whatsappHref,
-  withBookingPrefill,
   type PublicContactChannels,
   type SchedulingLocale,
 } from '@/lib/scheduling';
@@ -21,15 +21,9 @@ type FeedbackStatus = 'success' | 'canceled' | null;
 const COPY = {
   ro: {
     successTitle: 'Plată Confirmată! 🎉',
-    consultancy:
-      'Pentru a stabili data și ora sesiunii, scrie-mi pe WhatsApp. Primești și un email de confirmare.',
-    consultancyCalendar:
-      'Pentru a stabili data și ora, alege un loc în calendar. Dacă nu merge, scrie-mi pe WhatsApp.',
-    book: 'Alege ora',
     whatsapp: 'Scrie-mi pe WhatsApp',
     emailLead: 'Sau scrie-mi pe email la',
     close: 'Închide',
-    calendarTitle: 'Calendar pentru programare',
     course:
       'Pentru a primi accesul la cursul privat, te rugăm să ne scrii un mesaj cu adresa ta de Gmail (folosită pentru contul de YouTube)',
     courseVia: 'pe WhatsApp la',
@@ -41,15 +35,9 @@ const COPY = {
   },
   en: {
     successTitle: 'Payment confirmed',
-    consultancy:
-      'To set the day and time, message me on WhatsApp. You also get a confirmation email.',
-    consultancyCalendar:
-      'Pick a time in the calendar. If that does not work, message me on WhatsApp.',
-    book: 'Choose a time',
     whatsapp: 'Message me on WhatsApp',
     emailLead: 'Or email me at',
     close: 'Close',
-    calendarTitle: 'Booking calendar',
     course:
       'To get access to the private course, send the Gmail address you use for YouTube',
     courseVia: 'on WhatsApp at',
@@ -89,7 +77,7 @@ export default function PaymentFeedback() {
   const [successHidden, setSuccessHidden] = useState(false);
   const [cancelVisible, setCancelVisible] = useState(false);
   const [channels, setChannels] = useState<PublicContactChannels>(defaultPublicChannels);
-  const [buyerEmail, setBuyerEmail] = useState<string | null>(null);
+  const [itemName, setItemName] = useState<string | null>(null);
 
   if (isCanceled && !cancelVisible) {
     setCancelVisible(true);
@@ -141,10 +129,9 @@ export default function PaymentFeedback() {
           currency?: string;
           productType?: string;
           itemName?: string;
-          customerEmail?: string | null;
         };
         if (cancelled || !response.ok || data.paid !== true) return;
-        if (typeof data.customerEmail === 'string') setBuyerEmail(data.customerEmail);
+        if (typeof data.itemName === 'string') setItemName(data.itemName);
         if (
           typeof data.transactionId !== 'string' ||
           typeof data.value !== 'number' ||
@@ -193,19 +180,11 @@ export default function PaymentFeedback() {
 
   const isConsultancy = productType === 'consultancy';
   const message = isConsultancy
-    ? WHATSAPP_MESSAGES.consultancy[locale]
+    ? consultancyFollowupMessage(locale, itemName)
     : WHATSAPP_MESSAGES.course[locale];
   const whatsappLink = channels.whatsappUrl
     ? whatsappHref(channels.whatsappUrl, message)
     : null;
-  const bookingLink =
-    isConsultancy && channels.bookingUrl
-      ? withBookingPrefill(channels.bookingUrl, buyerEmail)
-      : null;
-  const embedLink =
-    isConsultancy && channels.bookingEmbedUrl
-      ? withBookingPrefill(channels.bookingEmbedUrl, buyerEmail)
-      : null;
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
@@ -234,16 +213,8 @@ export default function PaymentFeedback() {
           productType={productType}
           channels={channels}
           whatsappLink={whatsappLink}
-          bookingLink={bookingLink}
+          itemName={itemName}
         />
-
-        {embedLink && (
-          <iframe
-            src={embedLink}
-            title={copy.calendarTitle}
-            className="mt-4 h-[520px] w-full rounded-xl border border-white/10 bg-white"
-          />
-        )}
 
         <button
           type="button"
@@ -262,13 +233,13 @@ function SuccessBody({
   productType,
   channels,
   whatsappLink,
-  bookingLink,
+  itemName,
 }: {
   locale: SchedulingLocale;
   productType: CheckoutProductType | null;
   channels: PublicContactChannels;
   whatsappLink: string | null;
-  bookingLink: string | null;
+  itemName: string | null;
 }) {
   const copy = COPY[locale];
 
@@ -276,18 +247,8 @@ function SuccessBody({
     return (
       <div className="space-y-4 text-left">
         <p className="leading-relaxed text-gray-300">
-          {bookingLink ? copy.consultancyCalendar : copy.consultancy}
+          {consultancySuccessMessage(locale, itemName)}
         </p>
-        {bookingLink && (
-          <a
-            href={bookingLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex w-full items-center justify-center rounded-xl bg-yellow-500 py-3 text-center font-bold text-black transition-colors hover:bg-yellow-400"
-          >
-            {copy.book}
-          </a>
-        )}
         {whatsappLink && (
           <div className="space-y-1">
             <WhatsAppButton href={whatsappLink} label={copy.whatsapp} />

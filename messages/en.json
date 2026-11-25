@@ -109,7 +109,7 @@
       "consultCta": "View consulting",
       "analysisTitle": "Technical analysis",
       "analysisPrice": "from 79 lei",
-      "analysisBody": "79 lei for big coins, 139 lei for altcoins. Seven timeframes, from 1h to 1M, plus a token risk section. Delivered within 24 business hours.",
+      "analysisBody": "79 lei for big coins, 139 lei for altcoins. Seven timeframes, from 1h to 1M, plus a token risk section. Delivered within 24 working hours.",
       "analysisCta": "Request the analysis",
       "walletTitle": "Verificare portofel crypto",
       "walletName": "Check the wallet",
@@ -163,46 +163,91 @@
   "consultancyPage": {
     "faqTitle": "Frequently asked questions",
     "metadata": {
-      "title": "1-on-1 crypto consulting",
-      "description": "A private 60-minute one-on-one session, plus 2 premium technical analyses delivered by email. €200."
+      "title": "Crypto consulting: session, pack, mentoring",
+      "description": "1:1 session, 60 min, €200, with 2 technical analyses. 3-session pack, €540, with 3 analyses. 6-week mentoring, €1,500, with chat and 5 analyses. Not financial advice."
     },
     "hero": {
-      "title": "Let's talk about your crypto portfolio.",
-      "description": "A private 60-minute one-on-one session, plus 2 premium technical analyses, delivered by email.",
-      "details": "60 minutes · Online · €200, with 2 analyses included",
+      "title": "Let's talk about crypto, for your situation.",
+      "description": "One hour, three sessions, or six weeks. I'll tell you how I would handle it, without promising you a profit.",
+      "details": "Online · euro · Stripe",
       "sessions": "Over 500 one-on-one sessions in 6 years",
-      "cta": "Book the session — €200",
-      "ctaAria": "Book the crypto consulting session — 200 euro",
+      "cta": "See the packages",
+      "ctaAria": "See the crypto consulting packages",
       "imageAlt": "Mihai Daniel — crypto consulting"
     },
     "emailCta": {
-      "label": "Email me at contact@stirilecrypto.ro",
-      "aria": "Email contact@stirilecrypto.ro to book the consulting session"
+      "label": "Email me",
+      "aria": "Send an email about crypto consulting"
+    },
+    "whatsappCta": {
+      "label": "Message me on WhatsApp",
+      "aria": "Message on WhatsApp about crypto consulting"
+    },
+    "levels": {
+      "kicker": "Who it's for",
+      "title": "I enjoy working with anyone, from beginners to traders.",
+      "lead": "You pick the level. Then you pick how often we meet.",
+      "beginnerKicker": "Beginner",
+      "beginnerTitle": "Don't lose money",
+      "beginnerBody": "Security, the exchange, the first steps. Where the coins sit, how you open an account, and what you check before you move money. First, don't lose what you have.",
+      "traderKicker": "Trader",
+      "traderTitle": "Trading plan and risk management",
+      "traderBody": "A plan you can follow and a clear rule for loss: how much you risk on one idea and where you stop. No buy signals and no promised targets."
+    },
+    "packages": {
+      "kicker": "Packages",
+      "title": "Choose how we work",
+      "lead": "Three options. You choose, you pay in euro through Stripe, then we set the days.",
+      "pay": "Pay",
+      "payAria": "Pay for {name}, {price}, with Stripe",
+      "was": "versus 3 × {price}",
+      "disclaimer": "Not financial advice. I don't guarantee a profit. The decision and the risk stay yours.",
+      "sesiune": {
+        "duration": "60 min",
+        "point1": "One hour, 1:1, online",
+        "point2": "{count} premium technical analyses, by email"
+      },
+      "pack3": {
+        "duration": "3 × 60 min",
+        "forWho": "For people who want continuity, not a single hour.",
+        "point1": "Included: 3 × 60 min, 1:1, online",
+        "point2": "We schedule them together, one by one",
+        "point3": "{count} premium technical analyses, by email"
+      },
+      "mentor": {
+        "duration": "6 × 60 min",
+        "point1": "Included: 6 × 60 min, 1:1, across six weeks",
+        "point2": "Chat between sessions",
+        "point3": "{count} premium technical analyses, by email"
+      }
     },
     "included": {
-      "title": "What the package includes",
-      "session": "A private one-on-one 60-minute online session with Mihai Daniel, about your portfolio, risks, and the decisions you need to make.",
-      "analyses": "2 premium technical analyses, the same product as on Știrile Crypto: seven charts (1h, 4h, 12h, 1D, 3D, 1W, 1M) and the token-risk section, for two assets you choose.",
-      "delivery": "The analyses are sent by email, from contact@stirilecrypto.ro. Indicative delivery: 24 hours on working days.",
+      "title": "The included analyses",
+      "lead": "Every option includes premium technical analyses: 2 with the €200 session, 3 with the €540 pack, and 5 with the €1,500 mentoring. One analysis is seven charts and the token-risk section, for one asset you choose.",
+      "session": "A private one-on-one 60-minute online session with Mihai Daniel, about your situation, the risks, and the decisions you need to make.",
+      "analyses": "Premium technical analyses, the same product as on Știrile Crypto: seven charts (1h, 4h, 12h, 1D, 3D, 1W, 1M) and the token-risk section, for each asset you choose.",
+      "delivery": "The analyses are sent by email, from contact@stirilecrypto.ro. Indicative delivery: 24 working hours.",
       "scope": "The session adapts to your questions. It is not a written audit of the entire portfolio and it does not replace regulated financial advice.",
       "educational": "The analyses are educational material. They do not contain calls to buy or sell.",
-      "listPrice": "The list price of an analysis bought separately stays 79 RON (large coin, top 30) and 139 RON (altcoin). In the consulting package, the two analyses are included in the €200."
+      "listPrice": "The list price of an analysis bought separately stays 79 RON (large coin, top 30) and 139 RON (altcoin). Consulting includes 2, 3, or 5, depending on the option."
     },
     "process": {
       "title": "How it works, in 3 steps",
       "write": {
-        "title": "You write to me.",
-        "body": "An email to contact@stirilecrypto.ro is enough. Tell me briefly what you want to discuss and, if you already know, the two assets for the analyses."
+        "title": "You pay first.",
+        "body": "Pick an option on this page and pay. Then email me at contact@stirilecrypto.ro: what you want to discuss and the assets for the included analyses."
       },
       "meet": {
-        "title": "We set the date and hold the session.",
-        "body": "We meet one-on-one, online, for 60 minutes, based on your questions and your situation."
+        "title": "We set the dates.",
+        "body": "One session, three, or one a week for six weeks. We meet one-on-one, online, based on your questions and your situation."
       },
       "delivery": {
-        "title": "You receive the analyses by email.",
-        "body": "The two premium technical analyses are sent from contact@stirilecrypto.ro, usually within 24 hours on working days."
+        "title": "We stay with what we decided.",
+        "body": "The included analyses go out by email, usually within 24 working hours. On mentoring, we also stay in chat between meetings."
       },
-      "prepare": "You can prepare in advance the list of questions you want to cover in the hour."
+      "prepare": "You can prepare a short list of questions in advance.",
+      "cta": "Choose a package",
+      "ctaAria": "Go to the consulting packages"
     },
     "analysis": {
       "kicker": "Separate option",
@@ -210,7 +255,7 @@
       "price": "from 79 lei",
       "body": "One analysis for a single asset: seven timeframes, from 1h to 1M, plus the token-risk section. 79 lei for large coins, 139 lei for an altcoin. Indicative delivery within 24 working hours, by email.",
       "cta": "Request the analysis",
-      "note": "If you take the consulting package, the two analyses are already included. If you only want the analysis, you order it separately on Știrile Crypto."
+      "note": "If you take a consulting option, the analyses in that package are already included. If you only want the analysis, you order it separately on Știrile Crypto."
     }
   }
 }

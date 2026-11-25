@@ -144,21 +144,28 @@ describe('embed checkout', () => {
     if (!parsed.ok) return;
     assert.equal(parsed.source, 'stirilecrypto.ro');
 
-    let captured: { metadata?: Record<string, string>; success_url?: string } | null = null;
+    const captured: { metadata: Record<string, string>; successUrl: string } = {
+      metadata: {},
+      successUrl: '',
+    };
     const store = createMemoryStore();
     const created = await createPaidCheckout(parsed, {
       store,
       orderTtlSeconds: 3600,
       createSession: async (params) => {
-        captured = params;
+        captured.metadata = {};
+        for (const [key, value] of Object.entries(params.metadata ?? {})) {
+          if (typeof value === 'string') captured.metadata[key] = value;
+        }
+        captured.successUrl = params.success_url ?? '';
         return { id: 'cs_test_session123', url: 'https://checkout.stripe.com/c/pay/cs_test_session123' };
       },
     });
     assert.equal(created.url.startsWith('https://checkout.stripe.com/'), true);
-    assert.equal(captured?.metadata?.source, 'stirilecrypto.ro');
-    assert.equal(captured?.metadata?.product, 'address_checker');
-    assert.equal(Object.hasOwn(captured?.metadata ?? {}, 'address'), false);
-    assert.match(captured?.success_url ?? '', /^https:\/\/www\.stirilecrypto\.ro\//);
+    assert.equal(captured.metadata.source, 'stirilecrypto.ro');
+    assert.equal(captured.metadata.product, 'address_checker');
+    assert.equal(Object.hasOwn(captured.metadata, 'address'), false);
+    assert.match(captured.successUrl, /^https:\/\/www\.stirilecrypto\.ro\//);
     const saved = await store.getOrderByNonce(created.nonce);
     assert.equal(saved?.address, RANDOM_EVM);
     assert.equal(saved?.source, 'stirilecrypto.ro');
@@ -290,7 +297,8 @@ describe('sample pdf', () => {
     const face = fontkit.create(readFileSync(join(process.cwd(), 'lib/verifica-adresa/fonts/Inter-Regular.ttf')));
     for (const ch of ['A', 'a', 'ă', 'â', 'î', 'ș', 'ț', 'Ă', 'Â', 'Î', 'Ș', 'Ț']) {
       const glyph = face.glyphForCodePoint(ch.codePointAt(0) ?? 0);
-      assert.ok(glyph.path.commands.length > 0, ch);
+      const commands = (glyph.path as { commands?: unknown[] }).commands ?? [];
+      assert.ok(commands.length > 0, ch);
     }
 
     const pdf = await buildReportPdf(sampleReport());

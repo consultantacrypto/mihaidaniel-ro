@@ -24,6 +24,25 @@ describe('purchaseEventFromSession', () => {
     });
   });
 
+  it('names the package Stripe actually sold', () => {
+    const pack = purchaseEventFromSession({
+      ...paidConsultancy,
+      amount_total: 54000,
+      metadata: { type: 'consultancy', package_id: 'pachet-3' },
+    });
+    assert.equal(pack?.value, 540);
+    assert.equal(pack?.currency, 'EUR');
+    assert.equal(pack?.itemName, 'Pachet 3 sesiuni — Consultanță Crypto');
+
+    const mentoring = purchaseEventFromSession({
+      ...paidConsultancy,
+      amount_total: 150000,
+      metadata: { type: 'consultancy', package_id: 'mentorat-6' },
+    });
+    assert.equal(mentoring?.value, 1500);
+    assert.equal(mentoring?.itemName, 'Mentorat 6 săptămâni — Consultanță Crypto');
+  });
+
   it('uses the amount Stripe collected when a coupon changes the total', () => {
     const event = purchaseEventFromSession({
       ...paidConsultancy,

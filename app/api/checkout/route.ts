@@ -1,17 +1,10 @@
 import { NextResponse } from 'next/server';
 import { resolveRequestAttribution } from '@/lib/attribution';
+import { resolveCheckoutSelection } from '@/lib/consultancy-checkout';
 import { buildCheckoutSessionCreateParams } from '@/lib/checkout-session';
-import {
-  getStripe,
-  buildCheckoutLineItem,
-  type CheckoutProductType,
-} from '@/lib/stripe';
+import { getStripe } from '@/lib/stripe';
 
 export const dynamic = 'force-dynamic';
-
-function isCheckoutProductType(value: unknown): value is CheckoutProductType {
-  return value === 'course' || value === 'consultancy';
-}
 
 export async function POST(request: Request) {
   try {
@@ -32,18 +25,19 @@ export async function POST(request: Request) {
       );
     }
 
-    const body = await request.json();
-    const { type, attribution: rawAttribution } = body as {
-      type?: unknown;
-      attribution?: unknown;
-    };
-
-    if (!isCheckoutProductType(type)) {
+    const body: unknown = await request.json();
+    const selection = resolveCheckoutSelection(body);
+    if (!selection.ok) {
       return NextResponse.json(
-        { error: 'Tip de produs invalid.' },
-        { status: 400 }
+        { error: selection.error },
+        { status: selection.status }
       );
     }
+
+    const rawAttribution =
+      body && typeof body === 'object' && !Array.isArray(body)
+        ? (body as { attribution?: unknown }).attribution
+        : undefined;
 
     let attribution = {};
     try {
@@ -57,9 +51,10 @@ export async function POST(request: Request) {
 
     const session = await getStripe().checkout.sessions.create(
       buildCheckoutSessionCreateParams({
-        type,
+        type: selection.type,
         baseUrl,
-        lineItem: buildCheckoutLineItem(type),
+        lineItem: selection.lineItem,
+        packageId: selection.packageId,
         attribution,
       })
     );

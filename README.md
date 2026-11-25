@@ -1,6 +1,6 @@
 # mihaidaniel.ro
 
-Site-ul lui Mihai Daniel. Pagina care vinde este consultanța 1 la 1: 60 de minute, online, 200 EUR, pe `/consultanta-crypto`, plătită prin Stripe.
+Site-ul lui Mihai Daniel. Pagina care vinde consultanța este `/consultanta-crypto`, plătită prin Stripe: sesiune 1:1 de 60 de minute, 200 EUR (cu 2 analize tehnice), pachet de 3 sesiuni, 540 EUR, și mentorat de 6 săptămâni, 1.500 EUR. `/consultanta` redirecționează permanent aici.
 
 ## Rulare locală
 
@@ -27,24 +27,23 @@ Setează-le în Vercel pe proiectul de producție și fă redeploy. Nu redenumi 
 | `NEXT_PUBLIC_BASE_URL` | da | `https://www.mihaidaniel.ro` | URL-ul de success/cancel la Stripe. Fără slash la final. |
 | `STRIPE_SECRET_KEY` | da | `sk_live_...` | Cheia secretă Stripe. Deja setată în producție. |
 | `STRIPE_WEBHOOK_SECRET` | da | `whsec_...` | Semnătura webhook-ului `checkout.session.completed`. |
-| `STRIPE_PRICE_ID_CONSULTANCY` | nu | `price_...` | Prețul din catalog. Dacă lipsește, rămâne 200 EUR în cod. |
+| `STRIPE_PRICE_ID_CONSULTANCY` | nu | `price_...` | Prețul din catalog, doar pentru sesiunea de 200 EUR. Dacă lipsește, rămâne 200 EUR în cod. Pachetul de 540 EUR și mentoratul de 1.500 EUR folosesc `price_data` din cod, nu un Price ID. |
 | `STRIPE_PRICE_ID_COURSE` | nu | `price_...` | Prețul din catalog. Dacă lipsește, rămâne 250 EUR în cod. |
 | `RESEND_API_KEY` | da, pentru email | `re_...` | Email după plată, ghid, parteneriate și formularul de contact. |
-| `BOOKING_URL` | nu | `https://cal.com/mihai/consultanta` | Calendar după plată. Dacă lipsește sau nu e https, butonul și embed-ul nu apar. |
-| `WHATSAPP_NUMBER` | nu | `40731490099` | Număr pentru linkul `wa.me`, doar cifre. Dacă lipsește, se folosește `40731490099`. |
-| `CONTACT_EMAIL` | nu | `contact@stirilecrypto.ro` | Inbox pentru formular, reply-to la emailuri. Dacă lipsește, se folosește adresa de mai sus. |
+| `WHATSAPP_NUMBER` | nu | `40731490099` | Butonul WhatsApp de pe `/consultanta-crypto`, `https://wa.me/` cu textul „Salut Dani, vreau o consultanță crypto”. Doar dacă e setat și valid. `+`, spațiile și liniuțele se scot. |
+| `CONTACT_EMAIL` | nu | `contact@stirilecrypto.ro` | Butonul de email de pe `/consultanta-crypto` (`mailto:`). Doar dacă e setat și valid. Inbox pentru formular și reply-to. |
 | `AFF_STATS_KEY` | nu, pentru citire | secret lung | Protejează `GET /api/r/stats`. Fără ea, ruta răspunde 404. |
 | `KV_REST_API_URL` / `KV_REST_API_TOKEN` | nu, pentru log durabil | URL + token | Clickurile `/r/{slug}`. Pe proiectul Vercel sunt deja setate. Merge și perechea `UPSTASH_REDIS_REST_*`. |
 
-Adresa afișată în footer, pe `/contact` și în datele structurate este `contact@stirilecrypto.ro`. Dacă `CONTACT_EMAIL` este setată, ea schimbă inbox-ul formularului, reply-to și adresa din mesajul de după plată. Dacă lipsește, se folosește aceeași adresă.
+Adresa afișată în footer, pe `/contact` și în datele structurate este `contact@stirilecrypto.ro`. Dacă `CONTACT_EMAIL` este setată, ea schimbă inbox-ul formularului, reply-to și adresa din mesajul de după plată. Dacă lipsește, mesajul de după plată folosește aceeași adresă. Butoanele de pe pagina de consultanță nu folosesc rezerva: fără variabilă validă, butonul nu apare.
 
-Un `BOOKING_URL` sau un număr greșit nu produce un link stricat: opțiunea respectivă e ascunsă. WhatsApp-ul și emailul au valorile de mai sus ca rezervă doar când variabila lipsește, nu când e setată greșit.
+Un număr sau un email greșit nu produce un link stricat: butonul respectiv rămâne ascuns.
 
 ## După plată
 
-Stripe rămâne pe același checkout: aceleași produse, prețuri, `mode: payment`, coduri promo, același `cancel_url`. La success se păstrează `success=true` și `type`, și se adaugă `session_id={CHECKOUT_SESSION_ID}` ca să putem verifica plata.
+Checkout-ul rămâne `mode: payment`, cu coduri promo și același `cancel_url`. Sesiunea de 200 EUR folosește în continuare `STRIPE_PRICE_ID_CONSULTANCY` când există, altfel `price_data` de 20000 cenți. Pachetul și mentoratul pornesc o sesiune Stripe cu `price_data` (cenți, EUR, numele produsului) luată din configurația de pe server, după id-ul pachetului. Un id necunoscut răspunde 400. Clientul nu trimite suma. La success se păstrează `success=true` și `type`, și se adaugă `session_id={CHECKOUT_SESSION_ID}`.
 
-Cumpărătorul rămâne pe pagină. Fără `BOOKING_URL`, butonul mare este WhatsApp, cu un mesaj în română gata scris. Emailul de confirmare (webhook-ul existent) spune același lucru și adaugă calendarul doar dacă `BOOKING_URL` e setat.
+Cumpărătorul rămâne pe pagină. După plată, butonul mare este WhatsApp, cu un mesaj în română gata scris, iar emailul de confirmare spune același lucru. Nu există link de calendar.
 
 ## Măsurare
 

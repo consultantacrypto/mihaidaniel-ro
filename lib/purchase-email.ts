@@ -1,3 +1,9 @@
+import {
+  consultancyFollowupMessage,
+  consultancyPackageById,
+  includedAnalysesClause,
+  includedAnalysesFor,
+} from './consultancy-packages';
 import { escapeHtml } from './html';
 import {
   WHATSAPP_MESSAGES,
@@ -18,33 +24,49 @@ function emailAnchor(email: string): string {
   return `<a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a>`;
 }
 
+export function consultancyPurchaseSubject(packageId?: string | null): string {
+  const pkg = consultancyPackageById(packageId);
+  if (pkg?.id === 'pachet-3') return 'Confirmare pachet 3 sesiuni - Mihai Daniel';
+  if (pkg?.id === 'mentorat-6') return 'Confirmare mentorat 6 săptămâni - Mihai Daniel';
+  return 'Confirmare sesiune 1:1 - Mihai Daniel';
+}
+
 export function buildConsultancyEmailHtml(
   channels: PublicContactChannels,
-  customerName?: string | null
+  customerName?: string | null,
+  packageId?: string | null
 ): string {
+  const pkg = consultancyPackageById(packageId);
+  const multiSession = Boolean(pkg && !pkg.useCatalogPrice);
+  const when = multiSession ? 'datele' : 'data și ora sesiunii noastre';
   const whatsapp = channels.whatsappUrl
-    ? whatsappHref(channels.whatsappUrl, WHATSAPP_MESSAGES.consultancy.ro)
+    ? whatsappHref(
+        channels.whatsappUrl,
+        consultancyFollowupMessage('ro', multiSession ? pkg?.checkoutName : null)
+      )
     : null;
 
-  let contact = 'Pentru a fixa data și ora sesiunii noastre, te rog să răspunzi la acest email.';
+  let contact = `Pentru a fixa ${when}, te rog să răspunzi la acest email.`;
   if (whatsapp && channels.whatsappDisplay && channels.email) {
-    contact = `Pentru a fixa data și ora sesiunii noastre, te rog să îmi trimiți un mesaj pe WhatsApp la ${whatsappAnchor(whatsapp, channels.whatsappDisplay)} sau să răspunzi la acest email pe adresa ${emailAnchor(channels.email)}.`;
+    contact = `Pentru a fixa ${when}, te rog să îmi trimiți un mesaj pe WhatsApp la ${whatsappAnchor(whatsapp, channels.whatsappDisplay)} sau să răspunzi la acest email pe adresa ${emailAnchor(channels.email)}.`;
   } else if (whatsapp && channels.whatsappDisplay) {
-    contact = `Pentru a fixa data și ora sesiunii noastre, te rog să îmi trimiți un mesaj pe WhatsApp la ${whatsappAnchor(whatsapp, channels.whatsappDisplay)}.`;
+    contact = `Pentru a fixa ${when}, te rog să îmi trimiți un mesaj pe WhatsApp la ${whatsappAnchor(whatsapp, channels.whatsappDisplay)}.`;
   } else if (channels.email) {
-    contact = `Pentru a fixa data și ora sesiunii noastre, te rog să răspunzi la acest email pe adresa ${emailAnchor(channels.email)}.`;
+    contact = `Pentru a fixa ${when}, te rog să răspunzi la acest email pe adresa ${emailAnchor(channels.email)}.`;
   }
 
-  const calendar = channels.bookingUrl
-    ? `<p>Poți alege ora direct în calendar: <a href="${escapeHtml(channels.bookingUrl)}">Deschide calendarul</a>.</p>`
-    : '';
+  const purchaseLine =
+    pkg && !pkg.useCatalogPrice
+      ? `Îți mulțumim pentru achiziția <strong>${escapeHtml(pkg.checkoutName)}</strong>.`
+      : 'Îți mulțumim pentru achiziția sesiunii de <strong>Consultanță VIP Crypto</strong>.';
+  const analysesLine = includedAnalysesClause(includedAnalysesFor(pkg?.id), 'ro');
 
   return `
     <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #111;">
       <p>${greeting(customerName)}</p>
-      <p>Îți mulțumim pentru achiziția sesiunii de <strong>Consultanță VIP Crypto</strong>.</p>
+      <p>${purchaseLine}</p>
+      <p>${analysesLine}</p>
       <p>${contact}</p>
-      ${calendar}
       <p>Cu respect,<br/><strong>Mihai Daniel</strong></p>
     </div>
   `;

@@ -1,23 +1,25 @@
 import {
+  CONSULTANCY_PACKAGE_ORDER,
+  CONSULTANCY_PACKAGES,
+  consultancyOfferDescription,
+} from '@/lib/consultancy-packages';
+import {
   PERSON_ID,
   SITE_URL,
   inLanguageFor,
   type SchemaLocale,
 } from '@/lib/seo/constants';
 
-const COPY: Record<
-  SchemaLocale,
-  { name: string; description: string }
-> = {
+const COPY: Record<SchemaLocale, { name: string; description: string }> = {
   ro: {
-    name: 'Consultanță crypto 1 la 1',
+    name: 'Consultanță crypto',
     description:
-      'Sesiune privată de 60 de minute, 1 la 1, online, plus 2 analize tehnice premium livrate pe email — 200 EUR.',
+      `Consultanță crypto online cu Mihai Daniel: sesiune 1:1, 200 EUR, cu ${CONSULTANCY_PACKAGES.sesiune.includedAnalyses} analize tehnice; pachet 3 sesiuni, 540 EUR, cu ${CONSULTANCY_PACKAGES['pachet-3'].includedAnalyses} analize; mentorat 6 săptămâni, 1500 EUR, cu chat și ${CONSULTANCY_PACKAGES['mentorat-6'].includedAnalyses} analize. Nu este sfat financiar.`,
   },
   en: {
-    name: '1-on-1 crypto consulting',
+    name: 'Crypto consulting',
     description:
-      'A private 60-minute one-on-one online session, plus 2 premium technical analyses delivered by email — €200.',
+      `Online crypto consulting with Mihai Daniel: 1:1 session, €200, with ${CONSULTANCY_PACKAGES.sesiune.includedAnalyses} technical analyses; 3-session pack, €540, with ${CONSULTANCY_PACKAGES['pachet-3'].includedAnalyses} analyses; 6-week mentoring, €1500, with chat and ${CONSULTANCY_PACKAGES['mentorat-6'].includedAnalyses} analyses. Not financial advice.`,
   },
 };
 
@@ -34,7 +36,7 @@ export function buildConsultancyServiceSchema(
     name: copy.name,
     description: copy.description,
     url: pageUrl,
-    serviceType: 'Financial Consulting',
+    serviceType: 'Educational Consulting',
     provider: {
       '@id': PERSON_ID,
     },
@@ -42,13 +44,18 @@ export function buildConsultancyServiceSchema(
       '@type': 'Country',
       name: 'Romania',
     },
-    offers: {
-      '@type': 'Offer',
-      price: '200',
-      priceCurrency: 'EUR',
-      availability: 'https://schema.org/InStock',
-      url: pageUrl,
-    },
+    offers: CONSULTANCY_PACKAGE_ORDER.map((id) => {
+      const pkg = CONSULTANCY_PACKAGES[id];
+      return {
+        '@type': 'Offer' as const,
+        name: pkg.offerName[locale],
+        description: consultancyOfferDescription(id, locale),
+        price: String(pkg.unitAmount / 100),
+        priceCurrency: 'EUR',
+        availability: 'https://schema.org/InStock',
+        url: pageUrl,
+      };
+    }),
     inLanguage: inLanguageFor(locale),
   };
 }

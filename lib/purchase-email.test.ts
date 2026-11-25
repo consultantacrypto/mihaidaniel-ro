@@ -1,33 +1,64 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
-import { buildConsultancyEmailHtml, buildCourseEmailHtml } from './purchase-email';
+import {
+  buildConsultancyEmailHtml,
+  buildCourseEmailHtml,
+  consultancyPurchaseSubject,
+} from './purchase-email';
 import { resolveContactChannels } from './scheduling';
 
 describe('purchase emails', () => {
-  it('includes WhatsApp and email, and hides the calendar until a booking URL exists', () => {
+  it('includes WhatsApp and email and does not add a calendar link', () => {
     const html = buildConsultancyEmailHtml(resolveContactChannels({}), 'Ana');
     assert.match(html, /wa\.me\/40731490099/);
     assert.match(html, /contact@stirilecrypto\.ro/);
-    assert.doesNotMatch(html, /Deschide calendarul/);
+    assert.doesNotMatch(html, /calendar/);
+    assert.doesNotMatch(html, /cal\.com/);
     assert.match(html, /Bună, Ana/);
   });
 
-  it('adds the calendar link when BOOKING_URL is set and escapes the name', () => {
-    const html = buildConsultancyEmailHtml(
-      resolveContactChannels({ BOOKING_URL: 'https://cal.com/mihai/consultanta' }),
-      '<script>'
+  it('uses a subject per package instead of one VIP subject', () => {
+    assert.equal(consultancyPurchaseSubject(null), 'Confirmare sesiune 1:1 - Mihai Daniel');
+    assert.equal(consultancyPurchaseSubject('sesiune'), 'Confirmare sesiune 1:1 - Mihai Daniel');
+    assert.equal(
+      consultancyPurchaseSubject('pachet-3'),
+      'Confirmare pachet 3 sesiuni - Mihai Daniel'
     );
-    assert.match(html, /https:\/\/cal\.com\/mihai\/consultanta/);
-    assert.match(html, /Deschide calendarul/);
+    assert.equal(
+      consultancyPurchaseSubject('mentorat-6'),
+      'Confirmare mentorat 6 săptămâni - Mihai Daniel'
+    );
+    assert.doesNotMatch(consultancyPurchaseSubject('pachet-3'), /VIP/);
+  });
+
+  it('escapes the buyer name', () => {
+    const html = buildConsultancyEmailHtml(resolveContactChannels({}), '<script>');
     assert.match(html, /&lt;script&gt;/);
     assert.doesNotMatch(html, /<script>/);
   });
 
-  it('does not put a consultancy calendar on the course email', () => {
-    const html = buildCourseEmailHtml(
-      resolveContactChannels({ BOOKING_URL: 'https://cal.com/mihai/consultanta' }),
-      null
+  it('names the mentoring purchase and keeps the 1:1 email on the old sentence', () => {
+    const single = buildConsultancyEmailHtml(resolveContactChannels({}), null, 'sesiune');
+    assert.match(single, /Consultanță VIP Crypto/);
+    assert.doesNotMatch(single, /Mentorat 6 săptămâni/);
+
+    const mentoring = buildConsultancyEmailHtml(
+      resolveContactChannels({}),
+      null,
+      'mentorat-6'
     );
+    assert.match(single, /Sunt incluse 2 analize tehnice/);
+    assert.match(mentoring, /Mentorat 6 săptămâni — Consultanță Crypto/);
+    assert.match(mentoring, /Sunt incluse 5 analize tehnice/);
+    const pack = buildConsultancyEmailHtml(resolveContactChannels({}), null, 'pachet-3');
+    assert.match(pack, /Sunt incluse 3 analize tehnice/);
+    assert.match(mentoring, /Pentru a fixa datele/);
+    assert.doesNotMatch(mentoring, /profit garantat/);
+    assert.doesNotMatch(mentoring, /Deschide calendarul/);
+  });
+
+  it('does not put a consultancy calendar on the course email', () => {
+    const html = buildCourseEmailHtml(resolveContactChannels({}), null);
     assert.match(html, /wa\.me\/40731490099/);
     assert.doesNotMatch(html, /Deschide calendarul/);
   });
