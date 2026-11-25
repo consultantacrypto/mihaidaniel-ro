@@ -18,7 +18,9 @@ import {
   resolveAffiliateQuery,
   rowsFromHashes,
   statsAccess,
+  type AffiliateClick,
 } from './affiliate';
+import { clickCommands } from './affiliate-store';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const NOW = new Date('2026-01-15T12:00:00.000Z');
@@ -52,6 +54,45 @@ describe('resolveAffiliateQuery', () => {
     assert.equal(query.utm.utm_term, 'card');
     assert.equal(query.ref, 'abc');
     assert.equal(query.sid, '9');
+  });
+
+  it('accepts s=x, s=yt, and s=tt as utm_source', () => {
+    for (const source of ['x', 'yt', 'tt']) {
+      const query = resolveAffiliateQuery(new URLSearchParams(`s=${source}`));
+      assert.equal(query.utm.utm_source, source);
+      assert.equal(query.utm.utm_medium, 'referral');
+      assert.equal(query.utm.utm_campaign, 'affiliate');
+      assert.equal(query.utm.s, undefined);
+    }
+  });
+
+  it('lets utm_source win over s, in either order', () => {
+    for (const raw of ['utm_source=email&s=x', 's=x&utm_source=email']) {
+      const query = resolveAffiliateQuery(new URLSearchParams(raw));
+      assert.equal(query.utm.utm_source, 'email');
+    }
+  });
+
+  it('ignores an empty or invalid s and keeps the default source', () => {
+    for (const raw of ['', '   ', '\n\t', '\u0000\u007F']) {
+      const query = resolveAffiliateQuery(new URLSearchParams([['s', raw]]));
+      assert.equal(query.utm.utm_source, 'mihaidaniel');
+      assert.equal(query.utm.utm_medium, 'referral');
+      assert.equal(query.utm.utm_campaign, 'affiliate');
+    }
+  });
+
+  it('sanitizes s with the same trim, control-strip, and length cap as utm_source', () => {
+    const dirty = `  yt\u0000${'a'.repeat(200)}`;
+    const fromShort = resolveAffiliateQuery(new URLSearchParams([['s', dirty]])).utm.utm_source;
+    const fromUtm = resolveAffiliateQuery(new URLSearchParams([['utm_source', dirty]])).utm.utm_source;
+    assert.equal(fromShort, fromUtm);
+    assert.equal(fromShort, `yt${'a'.repeat(118)}`);
+  });
+
+  it('uses s when utm_source is present but empty', () => {
+    const query = resolveAffiliateQuery(new URLSearchParams([['utm_source', ' \u0000 '], ['s', 'tt']]));
+    assert.equal(query.utm.utm_source, 'tt');
   });
 });
 
@@ -108,6 +149,37 @@ describe('performAffiliateRedirect', () => {
       assert.equal(outcome.status, 302);
       if (outcome.status === 302) assert.equal(outcome.location, expected[slug]);
       assert.deepEqual(recorded, [slug]);
+    }
+  });
+
+  it('records s as the source counter and forwards it only as utm_source', async () => {
+    let recorded: AffiliateClick | undefined;
+    const outcome = await performAffiliateRedirect({
+      slug: 'bybit',
+      searchParams: new URLSearchParams('s=x&utm_content=bio&ref=abc'),
+      referrer: null,
+      userAgent: null,
+      now: NOW,
+      newId: () => 'click-s',
+      record: async (click) => {
+        recorded = click;
+      },
+    });
+    assert.ok(recorded);
+    assert.equal(recorded.utm.utm_source, 'x');
+    const sourceCounter = clickCommands(recorded).find(
+      (command) => command[0] === 'HINCRBY' && command[2]?.startsWith('s|'),
+    );
+    assert.equal(sourceCounter?.[2], 's|bybit|x');
+    assert.equal(outcome.status, 302);
+    if (outcome.status === 302) {
+      const url = new URL(outcome.location);
+      assert.equal(url.searchParams.get('utm_source'), 'x');
+      assert.equal(url.searchParams.get('utm_medium'), 'referral');
+      assert.equal(url.searchParams.get('utm_campaign'), 'affiliate');
+      assert.equal(url.searchParams.get('utm_content'), 'bio');
+      assert.equal(url.searchParams.get('s'), null);
+      assert.equal(url.searchParams.get('ref'), null);
     }
   });
 
