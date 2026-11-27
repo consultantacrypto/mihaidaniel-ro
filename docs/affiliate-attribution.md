@@ -11,8 +11,25 @@ Folosește domeniul fără prefix de limbă: `https://mihaidaniel.ro/r/{slug}` (
 | `bybit` | `https://mihaidaniel.ro/r/bybit` | `https://partner.bybit.eu/eusot138528` |
 | `okx` | `https://mihaidaniel.ro/r/okx` | `https://my.okx.com/join/77249876` |
 | `redotpay` | `https://mihaidaniel.ro/r/redotpay` | `https://url.hk/i/en/kqz74` |
+| `tangem` | `https://mihaidaniel.ro/r/tangem` | vezi Tangem, mai jos |
 
-Doar aceste trei URL-uri sunt în hartă. Un slug necunoscut primește 404. Nu se inventează alte destinații.
+Doar aceste URL-uri sunt în hartă. Un slug necunoscut primește 404. Nu se inventează alte destinații.
+
+### Tangem
+
+Până la `2026-11-30T23:59:59Z` inclusiv (și tot restul acelei secunde, până la miezul nopții), `/r/tangem` răspunde cu 302 către exact:
+
+```text
+https://tangem.com/invite/DanielMihai&promocode=BF2026
+```
+
+De la `2026-12-01T00:00:00Z`, destinația este `https://tangem.com/invite/DanielMihai`. Trecerea se face la cerere, după ceasul requestului, fără redeploy.
+
+`&` din URL-ul de promoție rămâne literă. Nu se înlocuiește cu `?` și nu se encodează ca `%26`. Varianta cu `?` pierde `BF2026`.
+
+Pe Tangem nu se adaugă `utm_*` la `Location`. Un `?utm_source` sau `&utm_source` pe URL-ul Tangem strică promocode-ul. Clickul se numără totuși pe slug și pe sursă. Intră ambele forme: `?s=qe`, `?s=sc`, `?s=yt` și `?utm_source=x` (regula folosită pe X). Dacă sunt amândouă, `utm_source` câștigă, la fel ca la celelalte slug-uri. Valoarea rămâne doar în contor, nu pe `Location`.
+
+Răspunsul are `Cache-Control: private, no-store, max-age=0, must-revalidate`, plus `CDN-Cache-Control: no-store` și `Vercel-CDN-Cache-Control: no-store`. Handlerul este `force-dynamic` cu `revalidate = 0`, ca un 302 din promoție să nu rămână în cache după cutoff.
 
 ## UTM
 
@@ -62,7 +79,7 @@ https://mihaidaniel.ro/r/redotpay?utm_source=tt&utm_content=bio
 https://mihaidaniel.ro/r/redotpay?utm_source=yt&utm_medium=referral&utm_campaign=redotpay-card&utm_content=descriere
 ```
 
-`ref` și `sid`, dacă vin pe linkul nostru, se salvează în click. Nu se adaugă pe URL-ul Bybit, OKX sau RedotPay, ca să nu se calce pe codul lor.
+`ref` și `sid`, dacă vin pe linkul nostru, se salvează în click. Nu se adaugă pe URL-ul Bybit, OKX, RedotPay sau Tangem, ca să nu se calce pe codul lor.
 
 Pe hop-ul următor, observat la verificarea linkurilor:
 
@@ -96,7 +113,7 @@ curl -sS -H "x-aff-stats-key: $AFF_STATS_KEY" \
 ```
 
 - `days` — fereastra, implicit 30, maxim 366. Ziua este în Europe/Bucharest.
-- `slug` — `bybit`, `okx` sau `redotpay`.
+- `slug` — `bybit`, `okx`, `redotpay` sau `tangem`.
 - `format=csv` — `date,slug,utm_source,clicks`. Cu `events=1`, CSV-ul este lista de clickuri.
 - `events=1` — în JSON adaugă ultimele clickuri (max 100).
 - `partners` în JSON este totalul ferestrei pentru fiecare slug live, inclusiv 0.

@@ -5,11 +5,13 @@ import { describe, it } from 'node:test';
 import { fileURLToPath } from 'node:url';
 import {
   AFFILIATE_DESTINATIONS,
+  AFFILIATE_REDIRECT_HEADERS,
   bucharestDayList,
   bucharestStamp,
   buildOutboundUrl,
   clicksToCsv,
   dailyClicksToCsv,
+  destinationFor,
   hashToRecord,
   isAffiliateRedirectPath,
   partnerTotals,
@@ -25,12 +27,24 @@ import { clickCommands } from './affiliate-store';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const NOW = new Date('2026-01-15T12:00:00.000Z');
 
+const TANGEM_PROMO = 'https://tangem.com/invite/DanielMihai&promocode=BF2026';
+const TANGEM_BASE = 'https://tangem.com/invite/DanielMihai';
+
 describe('affiliate destinations', () => {
   it('maps only the confirmed partner URLs', () => {
-    assert.deepEqual(Object.keys(AFFILIATE_DESTINATIONS).sort(), ['bybit', 'okx', 'redotpay']);
+    assert.deepEqual(Object.keys(AFFILIATE_DESTINATIONS).sort(), ['bybit', 'okx', 'redotpay', 'tangem']);
     assert.equal(AFFILIATE_DESTINATIONS.bybit, 'https://partner.bybit.eu/eusot138528');
     assert.equal(AFFILIATE_DESTINATIONS.okx, 'https://my.okx.com/join/77249876');
     assert.equal(AFFILIATE_DESTINATIONS.redotpay, 'https://url.hk/i/en/kqz74');
+    assert.equal(AFFILIATE_DESTINATIONS.tangem, TANGEM_BASE);
+  });
+
+  it('keeps the Tangem promo URL through 2026-11-30T23:59:59Z and switches at midnight', () => {
+    assert.equal(destinationFor('tangem', new Date('2026-11-27T10:00:00.000Z')), TANGEM_PROMO);
+    assert.equal(destinationFor('tangem', new Date('2026-11-30T23:59:59.000Z')), TANGEM_PROMO);
+    assert.equal(destinationFor('tangem', new Date('2026-11-30T23:59:59.999Z')), TANGEM_PROMO);
+    assert.equal(destinationFor('tangem', new Date('2026-12-01T00:00:00.000Z')), TANGEM_BASE);
+    assert.equal(destinationFor('bybit', new Date('2026-12-01T00:00:00.000Z')), AFFILIATE_DESTINATIONS.bybit);
   });
 });
 
@@ -244,6 +258,134 @@ describe('performAffiliateRedirect', () => {
     }
   });
 
+  it('sends the exact Tangem URL for the injected clock and never appends utm', async () => {
+    const cases = [
+      ['2026-11-27T10:35:00.000Z', TANGEM_PROMO],
+      ['2026-11-30T23:59:58.000Z', TANGEM_PROMO],
+      ['2026-11-30T23:59:59.000Z', TANGEM_PROMO],
+      ['2026-11-30T23:59:59.999Z', TANGEM_PROMO],
+      ['2026-12-01T00:00:00.000Z', TANGEM_BASE],
+      ['2026-12-01T00:00:01.000Z', TANGEM_BASE],
+    ] as const;
+
+    for (const [iso, location] of cases) {
+      let recorded: AffiliateClick | undefined;
+      const outcome = await performAffiliateRedirect({
+        slug: 'Tangem',
+        searchParams: new URLSearchParams('utm_source=qe&utm_medium=social&utm_campaign=bf&ref=abc'),
+        referrer: null,
+        userAgent: null,
+        now: new Date(iso),
+        newId: () => 'tangem-clock',
+        record: async (click) => {
+          recorded = click;
+        },
+      });
+      assert.equal(outcome.status, 302, iso);
+      if (outcome.status !== 302) continue;
+      assert.equal(outcome.location, location, iso);
+      assert.equal(outcome.location.includes('utm_'), false, iso);
+      assert.equal(outcome.location.includes('?'), false, iso);
+      assert.equal(outcome.location.includes('%'), false, iso);
+      assert.ok(recorded, iso);
+      assert.equal(recorded.destination, location, iso);
+      assert.equal(recorded.outbound, location, iso);
+      assert.equal(recorded.utm.utm_source, 'qe', iso);
+      assert.equal(recorded.ref, 'abc', iso);
+    }
+  });
+
+  it('records ?s=qe and ?s=sc on Tangem without leaking them onto the partner URL', async () => {
+    const windows = [
+      ['2026-11-30T23:59:59.000Z', TANGEM_PROMO],
+      ['2026-12-01T00:00:00.000Z', TANGEM_BASE],
+    ] as const;
+
+    for (const source of ['qe', 'sc', 'x', 'yt']) {
+      for (const [iso, location] of windows) {
+        let recorded: AffiliateClick | undefined;
+        const outcome = await performAffiliateRedirect({
+          slug: 'tangem',
+          searchParams: new URLSearchParams(`s=${source}&utm_content=bio`),
+          referrer: null,
+          userAgent: null,
+          now: new Date(iso),
+          newId: () => `tangem-${source}`,
+          record: async (click) => {
+            recorded = click;
+          },
+        });
+        assert.equal(outcome.status, 302);
+        if (outcome.status !== 302) continue;
+        assert.equal(outcome.location, location);
+        assert.equal(outcome.location.includes('utm_'), false);
+        assert.equal(outcome.location.includes(source), false);
+        assert.ok(recorded);
+        assert.equal(recorded.utm.utm_source, source);
+        assert.equal(recorded.utm.utm_content, 'bio');
+        assert.equal(recorded.outbound, location);
+        const sourceCounter = clickCommands(recorded).find(
+          (command) => command[0] === 'HINCRBY' && command[2]?.startsWith('s|'),
+        );
+        assert.equal(sourceCounter?.[2], `s|tangem|${source}`);
+      }
+    }
+  });
+
+  it('records ?utm_source=x on Tangem and lets utm_source win over s', async () => {
+    const cases = [
+      ['utm_source=x', 'x', TANGEM_PROMO, '2026-11-30T23:59:59.000Z'],
+      ['utm_source=x', 'x', TANGEM_BASE, '2026-12-01T00:00:00.000Z'],
+      ['s=qe&utm_source=x', 'x', TANGEM_PROMO, '2026-11-30T23:59:59.000Z'],
+      ['utm_source=x&s=sc', 'x', TANGEM_PROMO, '2026-11-30T23:59:59.000Z'],
+    ] as const;
+
+    for (const [search, source, location, iso] of cases) {
+      let recorded: AffiliateClick | undefined;
+      const outcome = await performAffiliateRedirect({
+        slug: 'tangem',
+        searchParams: new URLSearchParams(search),
+        referrer: null,
+        userAgent: null,
+        now: new Date(iso),
+        newId: () => 'tangem-utm-x',
+        record: async (click) => {
+          recorded = click;
+        },
+      });
+      assert.equal(outcome.status, 302, search);
+      if (outcome.status !== 302) continue;
+      assert.equal(outcome.location, location, search);
+      assert.equal(outcome.location.includes('utm_'), false, search);
+      assert.equal(outcome.location.includes('?'), false, search);
+      assert.ok(recorded, search);
+      assert.equal(recorded.utm.utm_source, source, search);
+      assert.equal(recorded.outbound, location, search);
+      const sourceCounter = clickCommands(recorded).find(
+        (command) => command[0] === 'HINCRBY' && command[2]?.startsWith('s|'),
+      );
+      assert.equal(sourceCounter?.[2], `s|tangem|${source}`, search);
+    }
+  });
+
+  it('still appends UTMs for the other slugs after the Tangem cutoff', async () => {
+    const outcome = await performAffiliateRedirect({
+      slug: 'bybit',
+      searchParams: new URLSearchParams('s=qe'),
+      referrer: null,
+      userAgent: null,
+      now: new Date('2026-12-01T00:00:00.000Z'),
+      record: async () => {},
+    });
+    assert.equal(outcome.status, 302);
+    if (outcome.status === 302) {
+      assert.equal(
+        outcome.location,
+        'https://partner.bybit.eu/eusot138528?utm_source=qe&utm_medium=referral&utm_campaign=affiliate',
+      );
+    }
+  });
+
   it('does not log a prefetch', async () => {
     let called = false;
     const outcome = await performAffiliateRedirect({
@@ -317,6 +459,21 @@ describe('stats shaping', () => {
       ),
       ['night-key', 'query-key'],
     );
+  });
+});
+
+describe('redirect caching', () => {
+  it('opts the short-link route out of caches that could outlive the Tangem cutoff', () => {
+    assert.equal(AFFILIATE_REDIRECT_HEADERS['Cache-Control'], 'private, no-store, max-age=0, must-revalidate');
+    assert.equal(AFFILIATE_REDIRECT_HEADERS['CDN-Cache-Control'], 'no-store');
+    assert.equal(AFFILIATE_REDIRECT_HEADERS['Vercel-CDN-Cache-Control'], 'no-store');
+    assert.equal(AFFILIATE_REDIRECT_HEADERS['Cache-Control'].includes('s-maxage'), false);
+    const route = readFileSync(join(root, 'app/r/[slug]/route.ts'), 'utf8');
+    assert.match(route, /export const dynamic = 'force-dynamic'/);
+    assert.match(route, /export const revalidate = 0/);
+    assert.match(route, /AFFILIATE_REDIRECT_HEADERS/);
+    assert.match(route, /headers\.set\('Location', outcome\.location\)/);
+    assert.doesNotMatch(route, /s-maxage/);
   });
 });
 
