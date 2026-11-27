@@ -136,7 +136,8 @@ export async function readAffiliateStats(
     };
   }
 
-  const stamp = bucharestStamp(options.now ?? new Date());
+  const now = options.now ?? new Date();
+  const stamp = bucharestStamp(now);
   const dates = bucharestDayList(stamp.day, options.days);
   const commands: string[][] = [];
   if (options.includeEvents) {
@@ -166,7 +167,7 @@ export async function readAffiliateStats(
       timezone: AFFILIATE_TIMEZONE,
       generatedAt: stamp.iso,
       windowDays: dates.length,
-      partners: partnerTotals(rows, slugs),
+      partners: partnerTotals(rows, slugs, now),
       rows,
       ...(events ? { events } : {}),
     },

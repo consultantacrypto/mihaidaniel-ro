@@ -58,4 +58,4 @@ Limba implicită este româna. `Accept-Language: en` nu mai redirecționează sp
 
 ## Linkuri de afiliat
 
-`/r/bybit`, `/r/okx` și `/r/redotpay` înregistrează clickul și răspund cu 302 către partener. Canalul scurt `?s=x`, `?s=yt` sau `?s=tt` ține loc de `utm_source` când acesta lipsește. Taxonomia UTM, exemplele și pașii din Vercel (proiectul `mihaidaniel-ro`) sunt în [docs/affiliate-attribution.md](docs/affiliate-attribution.md).
+`/r/bybit`, `/r/okx`, `/r/redotpay` și `/r/tangem` înregistrează clickul și răspund cu 302 către partener. Canalul scurt `?s=` (de exemplu `x`, `yt`, `tt`, `qe`, `sc`) ține loc de `utm_source` când acesta lipsește. Tangem nu primește `utm_*` pe URL-ul de ieșire și schimbă destinația la `2026-12-01T00:00:00Z`, fără redeploy. Taxonomia UTM, exemplele și pașii din Vercel (proiectul `mihaidaniel-ro`) sunt în [docs/affiliate-attribution.md](docs/affiliate-attribution.md).

@@ -105,9 +105,29 @@ describe('affiliate store', () => {
         ['bybit', 'https://partner.bybit.eu/eusot138528', 2],
         ['okx', 'https://my.okx.com/join/77249876', 1],
         ['redotpay', 'https://url.hk/i/en/kqz74', 3],
+        ['tangem', 'https://tangem.com/invite/DanielMihai&promocode=BF2026', 0],
       ],
     );
     assert.equal(result.stats.events?.[0]?.slug, 'redotpay');
+  });
+
+  it('uses the injected clock for the Tangem destination in the partner list', async () => {
+    const result = await readAffiliateStats({
+      env: ENV,
+      now: new Date('2026-12-01T00:00:00.000Z'),
+      days: 1,
+      fetchImpl: async () => jsonResponse([{ result: [] }]),
+    });
+    assert.equal(result.ok, true);
+    if (!result.ok) return;
+    assert.equal(
+      result.stats.partners.find((partner) => partner.slug === 'tangem')?.destination,
+      'https://tangem.com/invite/DanielMihai',
+    );
+    assert.equal(
+      result.stats.partners.find((partner) => partner.slug === 'bybit')?.destination,
+      'https://partner.bybit.eu/eusot138528',
+    );
   });
 
   it('reports a missing store instead of an empty report', async () => {

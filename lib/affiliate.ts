@@ -9,11 +9,46 @@ export const AFFILIATE_DESTINATIONS = {
   bybit: 'https://partner.bybit.eu/eusot138528',
   okx: 'https://my.okx.com/join/77249876',
   redotpay: 'https://url.hk/i/en/kqz74',
+  tangem: 'https://tangem.com/invite/DanielMihai',
 } as const;
 
 export type AffiliateSlug = keyof typeof AFFILIATE_DESTINATIONS;
 
 export const AFFILIATE_SLUGS = Object.keys(AFFILIATE_DESTINATIONS) as AffiliateSlug[];
+
+/**
+ * Promo target for /r/tangem. The "&" is part of the path Tangem tested.
+ * Do not replace it with "?" and do not percent-encode it.
+ */
+const TANGEM_PROMO_DESTINATION = 'https://tangem.com/invite/DanielMihai&promocode=BF2026';
+
+/**
+ * Base Tangem URL starts at this instant (2026-12-01T00:00:00.000Z).
+ * 2026-11-30T23:59:59.000Z through 2026-11-30T23:59:59.999Z still use the promo URL.
+ */
+const TANGEM_PROMO_ENDS_AT = Date.parse('2026-12-01T00:00:00.000Z');
+
+/**
+ * These partner URLs are copied verbatim into the Location header.
+ * Appending utm_* would add "?" or "&" and, on the Tangem promo URL, drop BF2026.
+ * The click still stores utm_source from ?utm_source= or, if that is absent, from ?s=.
+ * When both are present, utm_source wins, same as the other slugs.
+ */
+const EXACT_OUTBOUND: Partial<Record<AffiliateSlug, true>> = {
+  tangem: true,
+};
+
+/**
+ * Per-request redirects. Tangem's target flips at TANGEM_PROMO_ENDS_AT with no
+ * deploy, and every non-prefetch hit increments a counter. no-store covers the
+ * browser, shared caches, and the Vercel CDN so a promo 302 cannot outlive the cutoff.
+ */
+export const AFFILIATE_REDIRECT_HEADERS: Record<string, string> = {
+  'Cache-Control': 'private, no-store, max-age=0, must-revalidate',
+  'CDN-Cache-Control': 'no-store',
+  'Vercel-CDN-Cache-Control': 'no-store',
+  'X-Robots-Tag': 'noindex, nofollow',
+};
 
 const DEFAULT_UTM = {
   utm_source: 'mihaidaniel',
@@ -82,8 +117,9 @@ export function normalizeSlug(raw: string): string | null {
   return slug;
 }
 
-export function destinationFor(slug: string): string | undefined {
+export function destinationFor(slug: string, now: Date = new Date()): string | undefined {
   if (!isAffiliateSlug(slug)) return undefined;
+  if (slug === 'tangem' && now.getTime() < TANGEM_PROMO_ENDS_AT) return TANGEM_PROMO_DESTINATION;
   return AFFILIATE_DESTINATIONS[slug];
 }
 
@@ -252,10 +288,12 @@ export async function performAffiliateRedirect(input: {
 }): Promise<{ status: 302; location: string } | { status: 404 }> {
   const slug = normalizeSlug(input.slug);
   if (!slug || !isAffiliateSlug(slug)) return { status: 404 };
-  const destination = AFFILIATE_DESTINATIONS[slug];
+  const now = input.now ?? new Date();
+  const destination = destinationFor(slug, now);
+  if (!destination) return { status: 404 };
   const query = resolveAffiliateQuery(input.searchParams);
-  const outbound = buildOutboundUrl(destination, query.utm);
-  const stamp = bucharestStamp(input.now ?? new Date());
+  const outbound = EXACT_OUTBOUND[slug] ? destination : buildOutboundUrl(destination, query.utm);
+  const stamp = bucharestStamp(now);
   const click: AffiliateClick = {
     id: input.newId?.() ?? 'unassigned',
     ts: stamp.iso,
@@ -336,10 +374,14 @@ function parseSourceField(field: string): { slug: string; source: string } | nul
   return { slug, source };
 }
 
-export function partnerTotals(rows: DailyClickRow[], slugs: readonly string[]): AffiliatePartnerTotal[] {
+export function partnerTotals(
+  rows: DailyClickRow[],
+  slugs: readonly string[],
+  now: Date = new Date(),
+): AffiliatePartnerTotal[] {
   return slugs.map((slug) => ({
     slug,
-    destination: destinationFor(slug) ?? '',
+    destination: destinationFor(slug, now) ?? '',
     clicks: rows.reduce((sum, row) => (row.slug === slug ? sum + row.clicks : sum), 0),
   }));
 }

@@ -1,15 +1,11 @@
 import { randomBytes } from 'node:crypto';
 import { NextRequest, NextResponse } from 'next/server';
-import { isPrefetchRequest, performAffiliateRedirect } from '@/lib/affiliate';
+import { AFFILIATE_REDIRECT_HEADERS, isPrefetchRequest, performAffiliateRedirect } from '@/lib/affiliate';
 import { recordAffiliateClick } from '@/lib/affiliate-store';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
-
-const PRIVATE_HEADERS: Record<string, string> = {
-  'Cache-Control': 'private, no-store, max-age=0',
-  'X-Robots-Tag': 'noindex, nofollow',
-};
+export const revalidate = 0;
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -29,13 +25,16 @@ async function redirectSlug(request: NextRequest, slug: string) {
       status: 404,
       headers: {
         'Content-Type': 'text/plain; charset=utf-8',
-        ...PRIVATE_HEADERS,
+        ...AFFILIATE_REDIRECT_HEADERS,
       },
     });
   }
 
   const response = NextResponse.redirect(outcome.location, 302);
-  for (const [key, value] of Object.entries(PRIVATE_HEADERS)) response.headers.set(key, value);
+  // Set the exact string. validateURL() currently keeps Tangem's literal "&",
+  // and this assignment keeps it that way if the URL serializer later encodes it.
+  response.headers.set('Location', outcome.location);
+  for (const [key, value] of Object.entries(AFFILIATE_REDIRECT_HEADERS)) response.headers.set(key, value);
   return response;
 }
 
